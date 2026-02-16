@@ -1,0 +1,105 @@
+# Machine-readable release metadata.
+# Updated by gogogo during the release procedure.
+# Consumed by LLMs, CI systems, and tooling.
+
+[release]
+version = "0.2.0"
+date = "2026-02-16"
+commit = "a44ddb2"
+
+# Human-written summary of what changed - the story, not the log.
+# Written by Claude during gogogo, reviewed by the developer.
+summary = """
+First public release of TayPE. The multitrack engine is solid: transport with \
+fade ramps, punch-in recording, clip editing, bus cascade routing, and a \
+channel strip mixer with volume/pan/mute/solo. Channel preamp adds analogue \
+warmth with soft-sine clipping and 4x oversampled saturation. VST3 plugin \
+hosting runs in a sandboxed subprocess with 4-slot mixer inserts per channel. \
+The MCP server exposes the full DAW state to Claude via the Tape Protocol. \
+Two-branch release governance (unstable/main) with automated DMG packaging. \
+258 functional tests cover the engine end-to-end.
+"""
+
+# Verbatim git log from previous release tag to this release.
+# Raw commit history for traceability.
+git_log = """
+a44ddb2 Bump version to 0.2.0
+cb7e149 Unify version strings: all targets read from VERSION file
+ae93a49 Harden gogogo: two-branch release model with full governance
+0bbc587 Add DMG packaging tool and release shorthand
+cd59503 Fix 3 JUCE 8 deprecation warnings, add gregism
+367ab64 Deepthroat audit remediation: 19 fixes across engine, security, MCP, docs, and tests
+9621864 Add 4-slot mixer inserts with Logic-style interactions
+23233d2 Mark plugins that crash or timeout during scanning
+b378e73 Fix plugin loading: PluginDescription, engine/model sync, editor windows
+27b9def Bundle sandbox in app, sign per-binary, add editor button, sort plugins, suppress dock icon
+286f592 Add sandboxed plugin inserts with channel strip UI
+958c964 Move scan progress percentage to same line as progress bar
+2eaa434 Add hash-based plugin scanning, scan splash, ubet++ pre-release vetting
+cd5e766 Add dual-personality gain/drive knob with input trim stage
+6d821d3 Add Phase 3 channel preamp: mixer UI controls on channel strip
+09fe4d6 Add 5ms transport fade ramp to eliminate play/stop clicks
+6011f5c Add Phase 2 channel preamp: reusable Oversampler + safe mode (4x oversampling)
+a2f5743 Add Phase 1 channel preamp: soft-sine clipper with parallel saturation filters
+43082fb Add build bootstrap docs, fix stale references, rename IDE config
+32d52bb Remove tracked __pycache__ files (now gitignored)
+f633358 Add JUCE as git submodule, fix JUCE 8.0.12 API compat, clean up gitignore
+fe0f3dd Add VST3 plugin scanner with Plugin Manager dialog and taype-releases submodule
+6525f0e Add Phase 1 peak meters: per-channel peaks on audio thread, channel strip + track header meters, MCP exposure
+74cdc0c Add channel strip panel: docked mixer inspector with +12dB fader, pan knob, 40 tests
+4e517af Audit sweep part 2: fixes C5, W2-W3, W6, W8, W10, W12-W18 + refactor + tests
+93bb34b Audit remediation: 9 fixes (C1-C4, W1, W5, W7, W9, W11) + ROE §16 teams
+1c1a22a Help menu, gregisms, keyboard shortcuts dialog, deepthroat audit process
+6196fc2 Splash ownership fix, 5s duration, ccache, dev-setup doc
+3bfe970 Grid tuning, splash fix, track selection, code signing, zero warnings
+5b76f93 Fix grid update, compound meter metronome, no grid in time mode, disable splash, RMS waveform roadmap
+154d1b5 Metronome audio, time sig picker, transport layout, playhead snap, splash screen, roadmap docs
+19fc4d2 Bus cascade, orphan cleanup, master track protection, UI icon overhaul
+6cc203e Spatial routing, track reorder, TimelineCanvas refactor, uncapped zoom
+4568723 end of sprint
+1e4543e Visibility model, I/O routing, bus tracks, transport icons, view state MCP tools
+bf35fdd Vertical zoom, track selection, overlay scrollbars, sample-level zoom
+e9324ec Live recording ghost clip with incremental waveform
+02278c9 Clean up audio engine nits: atomic source pointer, stale comments
+aabe670 Fix audio buzz root cause, clean up engine architecture, keyboard shortcuts
+4d558c9 Edit menu, clipboard ops, undo/redo, S-key split, audio buzz fix
+fb02c1e Colour swatch picker, track tinting, About dialog, IdGenerator sync
+33be31b Switchable theme system, splash screen, app icon, input buzz fix
+cb5f315 Clip dragging - horizontal repositioning and cross-track moves
+096e19e Reel headroom, recording extension, clip label fix
+a5303d7 Decompose MCPServer dispatch and extract PersonalityManager
+04e6304 Keyboard shortcuts, transport state machine, record auto-arm
+b2ee14e Waveform clips, track headers, play/pause toggle, punch-in record
+4afe088 SR mismatch warning banner, tempo display in transport bar
+d8e807d Transport: play/pause/stop with play-origin, click-to-seek timeline
+e603f60 Tools menu: one-click Install Claude Connector
+cf7939f Read-only tape timeline: canvas, snapshot pattern, playhead animation
+2abe734 Add TayPE doctrine and repo README
+764e9d4 Semantic theme tokens, prefs overhaul, custom personality CRUD
+80c98e8 Fixed sample rate per reel: resample at import, block on device mismatch
+49addd2 ROE §14: mandate WCAG 2.2 AA compliance for all UI work
+30757d6 added tests
+73ddbd7 Enforce stop-to-edit and transaction-required guards on MCP commands
+e93702c Add Tape Protocol: transactions, call sign, status MCP tools
+58f8d04 Add MCP recording: capture audio input to track via record_start/record_stop
+cf46776 Fix seek clamp, update ubet procedure in ROE
+ddd2a51 ROE §11: add developer shorthand commands (cap it, ubet)
+9f9c094 Apply ROE compliance across codebase: security hardening, why-comments, docs
+9742970 stuff
+ac705ef ROE §12: code philosophy - essential complexity, clarity, security, concurrency
+861f2d8 Add technical documentation and update ROE with docs requirement
+2086ca1 ROE: commit always means push
+2587589 Add CLAUDE.md rules of engagement for Claude Code instances
+42d4c4b Add snapshot undo/redo system and centralize all UI strings in i18n header
+42c5faf Move Preferences to macOS app menu and add tabbed MCP personality picker
+a623422 Add personality system, functional test framework, and media store naming fix
+db0a770 Remove legacy open_file/loadFile in favour of multitrack clip model
+b95964f Add multitrack audio engine with clip placement, seek, and real-time mixer
+49bc7d7 Add CLion project files to repo
+0dd05b3 Add DawProject object model and expose to MCP API
+daf6da3 Restructure source into App, Audio, Model, UI, MCP folders
+79c0948 Add reel (project) file system with DawProject-compatible XML
+6cf52d9 Rename project from Taaaape to Taype (Taylors Audio Performance Environment)
+dccf0b0 Add preferences dialog with audio device selection and persistence
+bb36e73 Initial commit: JUCE audio player with MCP server
+"""
