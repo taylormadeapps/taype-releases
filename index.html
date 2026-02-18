@@ -282,6 +282,16 @@ h2 {
     font-size: 0.95rem;
     margin-bottom: 0.75rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mcp-logo-inline {
+    height: 1.2em;
+    width: auto;
+    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
+    vertical-align: middle;
 }
 
 .feature-card p {
@@ -620,6 +630,18 @@ footer {
 
     <div class="features-grid">
         <div class="feature-card">
+            <h3>Accessible by Design</h3>
+            <p>WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. Screen-reader
+               compatible labels. Designed for every musician, not just the ones who
+               can see 12px text on a dark background.</p>
+        </div>
+        <div class="feature-card">
+            <h3><img src="assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"> MCP Native</h3>
+            <p>Full Model Context Protocol integration. Connect any MCP client and
+               collaborate with your session - hands-free mixing, track management,
+               creative production.</p>
+        </div>
+        <div class="feature-card">
             <h3>Multitrack Truth</h3>
             <p>Record, arrange, and mix with a clean signal path. Real-time safe audio engine.
                No hidden latency, no surprise. What you hear is what you get.</p>
@@ -638,18 +660,6 @@ footer {
             <h3>Console Channel Strip</h3>
             <p>Neve-style 3-band EQ, HP/LP filters, compressor with log release, and
                4 VST3 insert slots per track. Everything you need, nothing you don't.</p>
-        </div>
-        <div class="feature-card">
-            <h3>AI-Native via MCP</h3>
-            <p>Full Model Context Protocol integration. Connect Claude Desktop, Claude Code,
-               or any MCP client and let AI assist your session - hands-free mixing,
-               track management, creative collaboration.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Accessible by Design</h3>
-            <p>WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. Screen-reader
-               compatible labels. Designed for every musician, not just the ones who
-               can see 12px text on a dark background.</p>
         </div>
     </div>
 </section>
