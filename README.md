@@ -27,10 +27,10 @@ Full user guide and reference at [taype-kb.ruminantaudioworks.com](https://taype
 
 | License | Price | Who |
 |---------|-------|-----|
-| Personal / Small Business | $60 | Individuals and businesses under $20k annual revenue |
-| Commercial | $225 | Businesses and organisations $20k+ annual revenue |
+| Personal / Small Business | TBC | Individuals and small businesses |
+| Commercial | TBC | Businesses and organisations |
 
-All licenses include 2 major versions of free updates. Renewals are 25% of the current RRP.
+All licenses include 2 major versions of free updates.
 
 **Accessibility discount:** We believe cost should never be a barrier to accessible tools. [Get in touch](https://github.com/taylormadeapps/taype-releases/issues/new?template=accessibility-discount.md).
 
