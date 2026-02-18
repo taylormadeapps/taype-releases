@@ -32,7 +32,7 @@ Full user guide and reference at [taype-kb.ruminantaudioworks.com](https://taype
 
 All licenses include 2 major versions of free updates.
 
-**Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantrecords) or [Reddit](https://www.reddit.com/r/taype/).
+**Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantrecords) or [Reddit DM](https://www.reddit.com/message/compose/?to=ruminantrecords).
 
 ## About
 
