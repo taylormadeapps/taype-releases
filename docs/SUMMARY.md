@@ -6,6 +6,7 @@
 * [The Mixer](mixer.md)
 * [Channel Strip](channel-strip.md)
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [Licensing](licensing.md)
 * [Roadmap](roadmap.md)
 * [MCP Integration](mcp/README.md)
   * [Tool Reference](mcp/tools.md)
