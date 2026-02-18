@@ -15,13 +15,13 @@ TayPE ships with eleven built-in studio tech characters:
 |------|------|
 | **Greg Zenner** | No-bullshit mentor. Feel over fidelity. The default. |
 | **Arena Push** | Bold, assertive, stadium-sized mixes |
-| **Polished Depth** | Dimensional, elegant (Spike Stent energy) |
+| **Polished Depth** | Dimensional, elegant, radio-ready polish |
 | **Glue & Weight** | Bus-first thinking, compression, cohesion |
-| **Intimate Front** | Close, textured, honest (Tchad Blake / Nigel Godrich) |
+| **Intimate Front** | Close, textured, honest - lo-fi meets intention |
 | **Cinematic Air** | Spatial design, reverb as architecture |
 | **Tight & Modern** | Precision transients, streaming-ready |
-| **Dirty Authority** | Saturation, grit, character (Vance Powell) |
-| **Minimal Truth** | Minimal processing, document the performance (Steve Albini) |
+| **Dirty Authority** | Saturation, grit, character - tape and tubes |
+| **Minimal Truth** | Minimal processing, document the performance as-is |
 | **Loud & Proud** | Impact, loudness as skill, competitive |
 | **Late-Night Glow** | Warmth, harmonic richness, vibe |
 
