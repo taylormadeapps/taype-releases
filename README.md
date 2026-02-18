@@ -14,14 +14,14 @@ TayPE is fully functional demoware - download it, use it, make records. When you
 
 ## Documentation
 
-Full user guide and reference at [taype-kb.ruminantaudioworks.com](https://taype-kb.ruminantaudioworks.com)
+Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https://ruminant-audio-works.gitbook.io/taype/)
 
 ## Community
 
-- **Questions and discussion:** [GitHub Discussions](https://github.com/taylormadeapps/taype-releases/discussions)
+- **Community:** [r/taype](https://www.reddit.com/r/taype/)
 - **Bug reports:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=bug-report.md)
 - **Feature requests:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=feature-request.md)
-- **Follow along:** [Instagram](https://instagram.com/ruminantrecords) / [Reddit](https://reddit.com/u/ruminantrecords)
+- **Follow along:** [Instagram](https://instagram.com/ruminantrecords) / [Reddit](https://www.reddit.com/r/taype/)
 
 ## Pricing
 
