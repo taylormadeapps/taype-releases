@@ -7,3 +7,6 @@
 * [Channel Strip](channel-strip.md)
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
 * [Roadmap](roadmap.md)
+* [MCP Integration](mcp/README.md)
+  * [Tool Reference](mcp/tools.md)
+  * [Personalities](mcp/personalities.md)

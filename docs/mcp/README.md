@@ -1,0 +1,108 @@
+# MCP Integration
+
+TayPE exposes its engine over the Model Context Protocol (MCP), an open
+standard for connecting AI assistants to tools and applications. Any MCP
+client - Claude Desktop, custom agents, or your own tools - can connect
+to a running TayPE instance and control it programmatically.
+
+This means you can talk to your DAW. Ask it to add tracks, move clips,
+set levels, load plugins, start recording - all through natural language
+via an AI assistant, or through direct tool calls from your own code.
+
+## How It Works
+
+TayPE ships with a companion process called `taype-mcp` that acts as a
+bridge between your MCP client and the running app. The bridge speaks
+standard MCP (JSON-RPC 2.0 over stdio) on one side and talks to TayPE's
+engine on the other.
+
+```
+Your MCP Client (Claude Desktop, etc.)
+    |
+    |  JSON-RPC 2.0 over stdio
+    v
+taype-mcp (bridge process)
+    |
+    |  Internal protocol over localhost
+    v
+TayPE (running app)
+```
+
+## Connecting
+
+### Claude Desktop (recommended)
+
+In TayPE, go to **Tools > Install Claude Connector**. This automatically
+configures Claude Desktop to connect to TayPE - no manual editing needed.
+Restart Claude Desktop after installing, and TayPE must be running before
+you start a conversation.
+
+### Manual Configuration
+
+If you prefer to set it up yourself, or you're using a different MCP
+client, add TayPE to your MCP configuration:
+
+```json
+{
+  "mcpServers": {
+    "taype": {
+      "command": "/Applications/Taype.app/Contents/MacOS/taype-mcp"
+    }
+  }
+}
+```
+
+### Other MCP Clients
+
+Any client that supports the MCP stdio transport can connect by launching
+`taype-mcp` as a subprocess. The bridge handles the handshake and exposes
+all available tools.
+
+## What You Get
+
+On connection, the MCP handshake returns:
+
+- **Server info** - app name and version
+- **Tool list** - all available tools (see [Tool Reference](tools.md))
+- **Instructions** - a preamble with links to these docs, plus the active
+  studio tech personality if one is set (see [Personalities](personalities.md))
+
+## Concepts
+
+### Stop to Edit
+
+TayPE follows a strict "stop to edit" rule. Structural changes - adding
+tracks, loading plugins, removing clips - can only happen when transport
+is stopped. Playback is for listening and performing. This keeps the
+engine predictable and prevents the kind of race conditions that crash
+other DAWs.
+
+Tools that require stopped transport will return an error if you call them
+during playback. The `status` tool tells you the current transport state.
+
+### Transactions
+
+When you need to make multiple changes as a single undo step, wrap them
+in a transaction using `tx_begin` and `tx_commit`. While a transaction
+is active, the UI locks structural edits to prevent the human user from
+interfering with your edit sequence. Mute, solo, and transport controls
+remain available.
+
+If the connection drops mid-transaction, TayPE automatically aborts and
+rolls back to the pre-transaction state. The user can also manually
+release the lock from the Edit menu.
+
+### Feedback and Problem Reporting
+
+The `submit_feedback` tool lets you file bug reports and feedback on behalf
+of the user. It collects system info (version, OS, CPU, audio config,
+plugins, license tier) and posts it to the TayPE team.
+
+Before submitting, you must show the user everything that will be sent
+and get their explicit approval. Nothing leaves the machine without
+consent.
+
+## Next Steps
+
+- [Tool Reference](tools.md) - every MCP tool, its parameters, and examples
+- [Personalities](personalities.md) - studio tech characters that shape the AI interaction
