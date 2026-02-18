@@ -1,0 +1,31 @@
+r/taype Subreddit Setup
+========================
+URL: https://www.reddit.com/subreddits/create
+
+NAME:
+taype
+
+TITLE:
+TayPE - Musician-first DAW
+
+DESCRIPTION:
+Official community for TayPE - a musician-first multitrack DAW. Accessible by design. Robots welcome too.
+
+SIDEBAR (About / Community Details):
+TayPE is a multitrack DAW built for musicians who want to finish records, not fight software.
+
+WCAG 2.2 AA accessible. AI-ready via Model Context Protocol. macOS.
+
+Links:
+- Website: https://taype.ruminantaudioworks.com
+- Docs: https://taype-kb.ruminantaudioworks.com
+- Instagram: https://instagram.com/ruminantrecords
+- GitHub: https://github.com/taylormadeapps/taype-releases
+- Bugs: https://github.com/taylormadeapps/taype-releases/issues/new
+
+COMMUNITY TOPICS:
+Music, Audio Production, Software, Digital Audio Workstation, Accessibility
+
+TYPE: Public
+CONTENT: Posts & Links
+MATURE: No
