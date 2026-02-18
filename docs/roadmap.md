@@ -107,4 +107,4 @@ commitment over endless tweaking.
 If you want to influence what comes next, the best way is to use it and
 tell us what's missing. File an issue, post on
 [r/taype](https://www.reddit.com/r/taype/), or DM us on
-[Instagram](https://www.instagram.com/ruminantaudioworks/).
+[Instagram](https://instagram.com/ruminantrecords).
