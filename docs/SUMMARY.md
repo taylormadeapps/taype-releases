@@ -6,3 +6,4 @@
 * [The Mixer](mixer.md)
 * [Channel Strip](channel-strip.md)
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [Roadmap](roadmap.md)
