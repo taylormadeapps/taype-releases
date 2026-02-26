@@ -24,6 +24,7 @@ Features that are built, tested, and working in the current version.
 - **Archive** - dead tracks that use zero CPU, not just hidden ones
 - **Customisable key bindings** - make it yours
 - **High contrast mode** - full WCAG accessibility support
+- **SSL 360° integration** - track names, colours, and layout pushed to 360° automatically. UF8 fader/pan moves control TayPE tracks in real time via PSL. Full motorised fader feedback coming with MCU support
 - **Licensing and registration** - founder and standard tiers
 
 ---
@@ -38,6 +39,7 @@ instrument.
 *Close the core loop. Record with hardware synths, mix with working PDC,
 export a stereo file.*
 
+- **Mix FX — Softube Tape** - dedicated tape saturation slot on the mix bus, powered by Softube Multitrack Tape
 - **Export and print** - bounce the master bus or individual tracks to file
 - **Audio import** - drag and drop audio files onto the timeline
 - **Plugin delay compensation** - keep everything sample-aligned when plugins add latency
@@ -93,7 +95,7 @@ real plans, not wishful thinking - they just haven't been scheduled yet.
 - **Track tags** - tag-based filtering as an alternative to stems
 - **Automation** - parameter automation lanes on the timeline
 - **The Convolver** - built-in convolution reverb
-- **Controller surfaces** - hardware control support including SSL 360
+- **Controller surfaces** - Mackie Control protocol for generic hardware fader units. Also completes SSL 360° DAW→surface motorised fader sync
 - **Waveform energy hue** - colour-coded waveforms by frequency content
 
 ---
