@@ -88,6 +88,23 @@ or to open the plugin editor window.
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
 
+## Tape Summing (Master Bus Only)
+
+The master bus channel strip has a Tape section above the insert slots.
+When enabled, Softube Multitrack Tape replaces the digital master bus sum —
+each track feeds a dedicated tape channel, and the plugin performs per-channel
+saturation, inter-channel crosstalk, and head bump before outputting a stereo
+mix into the master strip.
+
+- Click the Tape button to enable or disable. Requires transport to be stopped.
+- Right-click opens the Softube Tape plugin editor window.
+- If Softube Multitrack Tape is not installed, the button shows "Not installed".
+- Non-master tracks show a small "+" indicator next to their name when tape
+  summing is active, confirming they are being routed through tape.
+
+When tape is disabled, the master bus uses standard digital summing with zero
+CPU overhead.
+
 ## Fader and Pan
 
 - **Fader** - 0 to +12 dB range. Drag vertically.
