@@ -22,6 +22,8 @@ Features that are built, tested, and working in the current version.
 - **Stems** - real summing buses, not cosmetic folders
 - **Focus mode** - strip the timeline down to what matters right now
 - **Archive** - dead tracks that use zero CPU, not just hidden ones
+- **Software monitoring** - hear your input through the full plugin chain for sound check and rehearsal
+- **Tape-style clip behavior** - recording replaces what's underneath, no stacked layers
 - **Customisable key bindings** - make it yours
 - **High contrast mode** - full WCAG accessibility support
 - **SSL 360° integration** - track names, colours, and layout pushed to 360° automatically. UF8 fader/pan moves control TayPE tracks in real time via PSL. Full motorised fader feedback coming with MCU support

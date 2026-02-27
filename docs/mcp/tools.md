@@ -147,6 +147,7 @@ Update a track's properties. Only provided fields are changed.
 | `pan` | number | no | -1.0 to +1.0 |
 | `mute` | boolean | no | Mute state |
 | `solo` | boolean | no | Solo state |
+| `monitor` | boolean | no | Software monitoring (tracks: hear input through chain; buses: summing toggle) |
 | `is_bus` | boolean | no | Bus designation |
 | `input_id` | string | no | Input channel(s): "1", "1-2", etc. |
 | `output_id` | string | no | Output target: "master" or bus track ID |
@@ -160,9 +161,9 @@ Update a track's properties. Only provided fields are changed.
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |
 
-Volume, pan, mute, solo, and preamp parameters take effect immediately
-(safe during playback). Name, colour, archived, bus, input, and output
-changes require transport to be stopped.
+Volume, pan, mute, solo, monitor, and preamp parameters take effect
+immediately (safe during playback). Name, colour, archived, bus, input,
+and output changes require transport to be stopped.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface).
