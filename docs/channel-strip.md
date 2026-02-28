@@ -15,8 +15,17 @@ get your input level right before any processing.
 
 ## Preamp
 
-A soft-clipping drive stage for adding warmth and saturation. Disabled
-by default.
+The preamp operates in one of three modes. Right-click the preamp section
+header (or long-press) to switch between them.
+
+### Clean Gain (default)
+
+The preamp is off. Your trim setting passes through cleanly with no
+colour or saturation. This is how every new track starts.
+
+### Built-in Saturator
+
+A soft-clipping drive stage for adding warmth and saturation.
 
 - **Drive** - how hard you push the signal into the clipper. Higher values
   mean more saturation and harmonic content.
@@ -25,6 +34,24 @@ by default.
   hard and you want to keep things smooth.
 - **Auto-gain** - compensates for volume changes from the drive so you
   can compare the tone without being fooled by loudness differences.
+
+### NAM Profile
+
+Load a Neural Amp Modeler profile of a real preamp (Neve 1073, API 512,
+SSL E, Trident, and thousands more). The profile replaces the built-in
+saturator entirely - your channel now sounds like the captured hardware.
+
+- Click the **browse** button to open the Profile Browser where you can
+  search TONE3000's online library or pick from locally saved profiles.
+- Your trim knob drives the NAM model harder at higher settings, just
+  like pushing a real preamp.
+- **Output gain** compensates for level changes after the model.
+- Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`.
+  Downloaded profiles work offline from that point.
+
+The Performance Monitor shows per-track preamp CPU usage so you can
+see the impact of different model architectures (Linear is lightest,
+LSTM moderate, WaveNet heaviest).
 
 ## Filters (HP/LP)
 
@@ -88,22 +115,22 @@ or to open the plugin editor window.
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
 
-## Tape Summing (Master Bus Only)
+## NAM Summing (Master Bus Only)
 
-The master bus channel strip has a Tape section above the insert slots.
-When enabled, Softube Multitrack Tape replaces the digital master bus sum —
-each track feeds a dedicated tape channel, and the plugin performs per-channel
-saturation, inter-channel crosstalk, and head bump before outputting a stereo
-mix into the master strip.
+The master bus channel strip has a Summing section. Load a NAM profile of
+a real console's summing amplifier (SSL 4000G, Neve 8816, etc.) and the
+digital sum passes through the captured hardware's character - saturation,
+harmonic interaction, and compression behaviour.
 
-- Click the Tape button to enable or disable. Requires transport to be stopped.
-- Right-click opens the Softube Tape plugin editor window.
-- If Softube Multitrack Tape is not installed, the button shows "Not installed".
-- Non-master tracks show a small "+" indicator next to their name when tape
-  summing is active, confirming they are being routed through tape.
+- Click the **Summing** button to enable or disable. Requires transport
+  to be stopped.
+- Click **browse** to open the Profile Browser (filtered to summing profiles).
+- **Drive** controls how hard the summed audio pushes into the model.
+- **Output gain** compensates for level changes.
+- Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`.
 
-When tape is disabled, the master bus uses standard digital summing with zero
-CPU overhead.
+When summing is disabled, the master bus uses standard digital summing
+with zero CPU overhead.
 
 ## Fader and Pan
 

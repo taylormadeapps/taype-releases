@@ -48,6 +48,7 @@ export a stereo file.*
 - **MIDI input for VST3 instruments** - play your hardware synths through software instruments
 - **VST3 stability pass** - iron out the remaining plugin hosting glitches
 - **Bug fixes and stability** - threading, edge cases, the unsexy but essential stuff
+- **NAM Console Engine** - load Neural Amp Modeler profiles on channel preamps and mix bus for real console character, powered by TONE3000 community profiles
 - **UX refinement** - making everything feel tighter
 
 ---
@@ -82,6 +83,7 @@ and have a good experience.
 - **Metronome options** - count-in, click patterns, custom sounds
 - **Reel templates** - start new sessions from pre-built setups
 - **Channel presets** - save and recall strip settings across sessions
+- **Offline rendering** - faster-than-real-time export for quicker bounces
 - **Performance monitor** - see what's eating your CPU in real time
 - **Installer and setup** - proper macOS installer with plain-language license
 - **Update checker** - know when a new version is available
@@ -99,6 +101,7 @@ real plans, not wishful thinking - they just haven't been scheduled yet.
 - **The Convolver** - built-in convolution reverb
 - **Controller surfaces** - Mackie Control protocol for generic hardware fader units. Also completes SSL 360° DAW→surface motorised fader sync
 - **Waveform energy hue** - colour-coded waveforms by frequency content
+- **Ableton Link** - tempo sync with other apps and devices on your local network
 
 ---
 
