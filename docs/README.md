@@ -1,6 +1,6 @@
 # TayPE Documentation
 
-Welcome to the TayPE knowledge base. TayPE is a musician-first DAW built
+Welcome to the TayPE knowledge base. TayPE is a craft-first DAW built
 around commitment, clarity, and getting the record made.
 
 These docs cover the interface, the workflow, and the features you need

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TayPE - Musician-first DAW. Accessible by design. Robots welcome too.</title>
+<title>TayPE - Craft first. Accessible by design. Robots welcome too.</title>
 <meta name="description" content="TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 accessible. MCP native. macOS.">
 <meta property="og:title" content="TayPE - Make the Record">
-<meta property="og:description" content="Musician-first DAW. Accessible by design. Robots welcome too.">
+<meta property="og:description" content="Craft first. Accessible by design. Robots welcome too.">
 <meta property="og:image" content="assets/img/hero.png">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="assets/img/logo-square.png">
@@ -588,6 +588,39 @@ footer {
     min-height: 1.5em;
     transition: opacity 0.5s;
 }
+
+/* ---- Tone Architecture ---- */
+
+.tone-arch {
+    text-align: center;
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tone-arch .tone-intro {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 1rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.tone-arch .tone-kicker {
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(0.6rem, 1.2vw, 0.75rem);
+    color: var(--brass);
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tone-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
 </style>
 </head>
 <body>
@@ -619,7 +652,7 @@ footer {
     <h1>TAYPE</h1>
     <p class="hero-descriptor">Multitrack DAW for macOS</p>
     <p class="hero-tagline">
-        Musician-first. Accessible by design. Robots welcome too. <a href="#features"><img src="assets/img/mcp-logo.png" alt="MCP Native" class="mcp-logo-tagline"></a>
+        Craft first. Accessible by design. Robots welcome too. <a href="#features"><img src="assets/img/mcp-logo.png" alt="MCP Native" class="mcp-logo-tagline"></a>
     </p>
     <div class="hero-buttons">
         <a href="#download" class="btn-primary">Coming Soon</a>
@@ -627,6 +660,53 @@ footer {
     </div>
     <p class="hero-platform">Multitrack DAW &middot; macOS 12+ &middot; Apple Silicon native &middot; VST3 host</p>
     <p class="gregism" id="gregism"></p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- Tone Architecture                                            -->
+<!-- ============================================================ -->
+
+<section class="tone-arch" id="tone">
+    <h2>Tone Architecture</h2>
+    <p class="tone-intro">
+        TayPE isn't a flat digital mixer.
+        Every channel runs through a modelled preamp stage — real hardware character
+        captured by Neural Amp Modeler and applied at the source. On the mixbus,
+        a modelled summing engine adds console-style saturation, cohesion, and drive.
+    </p>
+    <p class="tone-intro">
+        No plugin instances. No sandboxed processes. The console emulation runs
+        directly in the audio engine — shared weight tensors, per-channel state,
+        zero added latency. Same philosophy as hardware-accelerated DSP, built into
+        the mixer, not bolted on.
+    </p>
+    <p class="tone-kicker">Craft first. Tone at the core.</p>
+
+    <div class="tone-cards">
+        <div class="feature-card">
+            <h3>Modelled Preamps</h3>
+            <p>Per-channel hardware character from captured NAM profiles — Neve, API,
+               SSL, and more via the TONE3000 community library. Shape tone at the source
+               and commit with intention. Three modes: clean gain, built-in saturator,
+               or full neural amp model.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Modelled Console Summing</h3>
+            <p>A NAM-powered summing engine on the master bus. Load a captured console
+               profile and every signal hits the bus with real nonlinear character —
+               saturation, harmonic colour, and subtle compression that responds to
+               dynamics. What you hear is what sums.</p>
+        </div>
+        <div class="feature-card">
+            <h3>True Summing</h3>
+            <p>Coming soon: per-channel NAM processing before the sum — every track
+               through its own console channel, just like pushing 24 signals through
+               a real analog desk. Shared weights, batched matrix inference on Apple
+               Silicon. Full console emulation at a fraction of the CPU cost.</p>
+        </div>
+    </div>
 </section>
 
 <hr class="section-divider">
@@ -655,10 +735,10 @@ footer {
                can see 12px text on a dark background.</p>
         </div>
         <div class="feature-card">
-            <h3>MCP Native <img src="assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"></h3>
-            <p>Full Model Context Protocol integration. Connect Claude Desktop, Claude Code,
-               or any MCP client and collaborate with your session - hands-free mixing,
-               track management, creative production.</p>
+            <h3>MCP Integration <img src="assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"></h3>
+            <p>Optional machine assistance for batch edits and session management.
+               Automate the admin, not the art. TayPE remains deterministic and
+               transactional at its core — MCP enhances workflow without replacing craft.</p>
         </div>
         <div class="feature-card">
             <h3>Focus Over Clutter</h3>
@@ -718,6 +798,7 @@ footer {
 <div class="a11y-banner">
     <h2>Built for Everyone</h2>
     <p>
+        <strong>Craft requires access.</strong>
         <strong>Accessibility is not a feature. It's a foundation.</strong>
         TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
         Every state is conveyed with shape and icon, never colour alone.

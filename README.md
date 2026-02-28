@@ -1,8 +1,8 @@
 # TayPE
 
-**Musician-first DAW. Accessible by design. Robots welcome too.**
+**Craft first. Accessible by design. Robots welcome too.**
 
-TayPE is a multitrack digital audio workstation for macOS built for musicians who want to finish records, not fight software. WCAG 2.2 AA accessible. AI-ready via Model Context Protocol (MCP).
+TayPE is a multitrack digital audio workstation for macOS built for musicians who want to finish records, not fight software. Modelled console tone built into the engine. WCAG 2.2 AA accessible. MCP native.
 
 ## Download
 

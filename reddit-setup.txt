@@ -6,10 +6,10 @@ NAME:
 taype
 
 TITLE:
-TayPE - Musician-first DAW
+TayPE - Craft first DAW
 
 DESCRIPTION:
-Official community for TayPE - a musician-first multitrack DAW. Accessible by design. Robots welcome too.
+Official community for TayPE - a craft-first multitrack DAW. Accessible by design. Robots welcome too.
 
 SIDEBAR (About / Community Details):
 TayPE is a multitrack DAW built for musicians who want to finish records, not fight software.
