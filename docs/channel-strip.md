@@ -4,7 +4,7 @@ Every track in TayPE has a built-in channel strip with processing that
 runs before any plugin inserts hit the fader. The signal flows through
 each stage in order:
 
-**Input - Trim - Preamp - Inserts - Filters - EQ - Compressor - Fader - Pan - Output**
+**Input - Trim - Preamp - Filters - EQ - Compressor - Inserts - Fader - Pan - Output**
 
 Each section can be enabled or bypassed independently.
 
