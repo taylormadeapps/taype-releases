@@ -49,12 +49,15 @@ saturator entirely - your channel now sounds like the captured hardware.
 - Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`.
   Downloaded profiles work offline from that point.
 
-The Performance Monitor shows per-track preamp CPU usage so you can
-see the impact of different model architectures (Linear is lightest,
-LSTM moderate, WaveNet heaviest). It stays on top of the main window
-until you close it, so you can keep it visible while adjusting your mix.
-By default it refreshes 10 times per second, so changes are easier to
-see while you tweak settings.
+The Performance Monitor shows per-track DSP breakdown with separate
+**Preamp/Summing** and **Plugin** CPU columns. On the master track, the
+Preamp/Summing column reflects NAM summing CPU. This makes it easy to see
+whether load is coming from console tone stages or plugin inserts.
+Those per-track CPU values are smoothed for readability (quick rise, slower
+fall), so the numbers stay trackable while still showing spikes.
+It stays on top of the main window until you close it, so you can keep it
+visible while adjusting your mix. By default it refreshes 10 times per
+second, so changes are easier to see while you tweak settings.
 
 ## Filters (HP/LP)
 
