@@ -17,7 +17,8 @@ This file is created automatically on first launch with sensible defaults.
 
 | Shortcut | Action |
 |----------|--------|
-| Space | Play / pause |
+| Space | Play / stop |
+| P | Pause |
 | Z | Stop and return to start |
 | Return | Start / stop recording |
 
@@ -75,6 +76,7 @@ is straightforward:
 ```json
 {
   "play_pause": "space",
+  "pause": "p",
   "stop": "z",
   "record": "return",
   "split_clip": "s",

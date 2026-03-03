@@ -12,8 +12,8 @@ Each strip shows (top to bottom):
 
 - **Track name** - double-click to rename
 - **Input selector** - which audio interface input the track records from
-- **Control buttons** - M (mute), S (solo), R (record arm), A (archive),
-  B (bus)
+- **Control buttons** - M (mute), S (solo), R (record arm), MON (software
+  monitoring), A (archive), B (bus)
 - **Output selector** - where the track sends its audio
 - **Preamp section** - drive/trim control with toggles
 - **Filter section** - high-pass and low-pass filters
@@ -23,6 +23,7 @@ Each strip shows (top to bottom):
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
+  (display updates at 4 Hz and keeps transient peaks per update window)
 
 Each processing section can be expanded or collapsed with its header
 toggle. See the [Channel Strip](channel-strip.md) page for details on

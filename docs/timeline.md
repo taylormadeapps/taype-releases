@@ -22,11 +22,14 @@ Each track header shows:
 - **Colour strip** - click to change the track colour from 24 swatches
 - **Track name** - double-click to rename (only when stopped)
 - **R** - record arm (red circle when armed)
+- **MON** - software monitoring (hear input through the track channel strip)
 - **B** - designate as bus track
 - **M** - mute (speaker icon, crossed out when muted)
 - **S** - solo
 - **A** - archive
 - **I/O labels** - input source and output destination (click to change)
+- **Mini meter** - stereo peak meter in the header, updated at 4 Hz using
+  the highest peak seen in each quarter-second window
 
 ## Working with Clips
 
@@ -132,6 +135,10 @@ final waveform.
 **Input** - click the input label in the track header to choose which
 audio interface channel(s) the track records from. Options include mono
 channels (1, 2, 3...) and stereo pairs (1-2, 3-4...).
+
+**MON** - click the MON button to hear live input through the full track
+channel strip and inserts. When transport is stopped, MON passes live
+input only; timeline clips stay silent until you press play.
 
 **Output** - click the output label to choose where the track sends its
 audio. Options are "Master" (the main output) or any bus track you've

@@ -143,3 +143,7 @@ with zero CPU overhead.
 
 Stereo peak meter with a clip indicator at the top. If the clip indicator
 lights up, your signal is hitting 0 dBFS. Back off the fader or trim.
+
+The meter display refreshes at 4 updates per second for readability. Each
+update shows the highest peak seen in the previous quarter-second, so very
+short transients still show up instead of being missed between redraws.

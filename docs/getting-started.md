@@ -28,7 +28,8 @@ its waveform.
 
 ## Playback
 
-- **Space** - play / pause
+- **P** - pause
+- **Space** - play / stop
 - **Z** - stop and return to the start
 
 Click anywhere in the timeline (or the ruler at the top) to move the tape
