@@ -69,6 +69,9 @@ nested visually instead of appearing as a flat list.
 The **Lvl** column shows routing depth from master (`L0` master, deeper levels
 further upstream), and the session summary includes a **Critical path (est)**
 line to show the longest active dependency chain in the current block.
+The session summary also includes a **Scheduler** line (levels, max width,
+workers used, utilization, and compute/wait/merge timing) so you can see
+whether bottlenecks are in bus-level work, barrier wait, or merge stages.
 Each stage now shows `% | ms` per track, and the table includes per-track
 enabled plugin count to spot heavy chains quickly.
 Stage colour bands are per-node hints (`<12%` green, `12-25%` amber, `>25%`

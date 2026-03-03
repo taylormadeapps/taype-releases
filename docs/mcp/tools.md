@@ -151,6 +151,7 @@ Update a track's properties. Only provided fields are changed.
 | `is_bus` | boolean | no | Bus designation |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `output_id` | string | no | Output target: "master" or bus track ID |
+| `sends` | array | no | Additional fan-out routes: `[{"target_id":"<bus-or-master>","level":0.0-4.0}]` |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
 | `preamp_enabled` | boolean | no | Enable/disable channel preamp |
@@ -163,14 +164,15 @@ Update a track's properties. Only provided fields are changed.
 
 Volume, pan, mute, solo, monitor, and preamp parameters take effect
 immediately (safe during playback). Name, colour, archived, bus, input,
-and output changes require transport to be stopped.
+output, and send changes require transport to be stopped.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous
 input is stashed and restored when `is_bus` is later set to `false`, unless
 an explicit `input_id` is provided in that same `set_track` call (explicit
 input wins). Setting `is_bus: false` also clears any tracks whose
-`output_id` pointed at that track, preventing stale routes to a non-bus.
+`output_id` or `sends` pointed at that track, preventing stale routes to
+a non-bus.
 
 `set_track` also normalizes `input_id` to track mode: instrument tracks
 normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
