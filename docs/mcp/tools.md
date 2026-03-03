@@ -166,7 +166,11 @@ immediately (safe during playback). Name, colour, archived, bus, input,
 and output changes require transport to be stopped.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
-(buses receive from routed tracks, not the audio interface).
+(buses receive from routed tracks, not the audio interface). The previous
+input is stashed and restored when `is_bus` is later set to `false`, unless
+an explicit `input_id` is provided in that same `set_track` call (explicit
+input wins). Setting `is_bus: false` also clears any tracks whose
+`output_id` pointed at that track, preventing stale routes to a non-bus.
 
 **Returns:** Updated track object.
 
