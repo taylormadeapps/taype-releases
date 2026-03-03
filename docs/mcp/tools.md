@@ -142,14 +142,14 @@ Update a track's properties. Only provided fields are changed.
 | `id` | string | yes | Track ID |
 | `name` | string | no | New name |
 | `color` | string | no | New colour |
-| `archived` | boolean | no | Archive state (mutes, disables processing, hides in Focus) |
-| `volume` | number | no | 0.0 to 1.0 |
+| `archived` | boolean | no | Archive state (currently mutes track audio) |
+| `volume` | number | no | 0.0 to 3.9810717 (0 dB default at 1.0; +12 dB max) |
 | `pan` | number | no | -1.0 to +1.0 |
 | `mute` | boolean | no | Mute state |
 | `solo` | boolean | no | Solo state |
 | `monitor` | boolean | no | Software monitoring (tracks: hear input through chain; buses: summing toggle) |
 | `is_bus` | boolean | no | Bus designation |
-| `input_id` | string | no | Input channel(s): "1", "1-2", etc. |
+| `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `output_id` | string | no | Output target: "master" or bus track ID |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
@@ -171,6 +171,10 @@ input is stashed and restored when `is_bus` is later set to `false`, unless
 an explicit `input_id` is provided in that same `set_track` call (explicit
 input wins). Setting `is_bus: false` also clears any tracks whose
 `output_id` pointed at that track, preventing stale routes to a non-bus.
+
+`set_track` also normalizes `input_id` to track mode: instrument tracks
+normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
+tracks normalize MIDI routes ("midi:*") to default audio ("").
 
 **Returns:** Updated track object.
 
@@ -407,6 +411,21 @@ Close the plugin editor window.
 | `slot` | number | no | Insert slot index 0-3 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "editor_open": false }`
+
+### `restart_sandbox`
+
+Restart the plugin sandbox host process. Requires transport stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| _(none)_ | | | |
+
+**Returns (success):** `{ "success": true }`
+
+**Returns (failure):**
+```json
+{ "success": false, "error": "..." }
+```
 
 ---
 

@@ -36,6 +36,10 @@ undoable action.
 
 **Buttons** (mute, solo, etc.) - single click to toggle.
 
+Turning **B** on makes the track a bus and switches its input to no device
+input. Turning **B** off disconnects any tracks routed to that bus so your
+routing stays valid.
+
 **Insert slots** - click to load a plugin, right-click for a context menu
 with options like bypass and remove.
 

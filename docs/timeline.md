@@ -23,11 +23,12 @@ Each track header shows:
 - **Track name** - double-click to rename (only when stopped)
 - **R** - record arm (red circle when armed)
 - **MON** - software monitoring (hear input through the track channel strip)
-- **B** - designate as bus track
+- **B** - designate as bus track (bus tracks receive from routed tracks)
 - **M** - mute (speaker icon, crossed out when muted)
 - **S** - solo
-- **A** - archive
+- **Archive** - managed from the channel strip and MCP (not shown in timeline header)
 - **I/O labels** - input source and output destination (click to change)
+  (at very small track heights, labels are hidden until you zoom in)
 - **Mini meter** - stereo peak meter in the header, updated at 4 Hz using
   the highest peak seen in each quarter-second window
 
@@ -132,9 +133,15 @@ final waveform.
 
 ## Input and Output Routing
 
-**Input** - click the input label in the track header to choose which
-audio interface channel(s) the track records from. Options include mono
-channels (1, 2, 3...) and stereo pairs (1-2, 3-4...).
+**Input** - click the input label in the track header.
+- Audio tracks (no instrument insert): audio inputs only (Default, None,
+  mono channels, stereo pairs).
+- Instrument tracks (instrument insert present): MIDI inputs only
+  (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
+
+When a track switches into instrument mode, non-MIDI input routes are
+automatically changed to **All MIDI**. When it switches back to audio mode,
+MIDI routes are reset to default audio input.
 
 **MON** - click the MON button to hear live input through the full track
 channel strip and inserts. When transport is stopped, MON passes live
@@ -143,6 +150,9 @@ input only; timeline clips stay silent until you press play.
 **Output** - click the output label to choose where the track sends its
 audio. Options are "Master" (the main output) or any bus track you've
 created.
+
+If you turn off bus mode on a track, any tracks that were routed to that
+bus are disconnected so nothing stays pointed at a non-bus destination.
 
 If your audio interface changes and a track references a channel that no
 longer exists, the input label appears greyed out. The setting is

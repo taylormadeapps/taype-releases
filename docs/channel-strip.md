@@ -124,10 +124,15 @@ The crash alert may name the culprit plugin. If TayPE cannot attribute the
 exact plugin (for example, crash between processing blocks), it will say the
 culprit is unknown and still keep audio running dry.
 
-For instrument plugins, set the track input to a MIDI source (All MIDI,
-Virtual Keyboard, or a hardware MIDI device) and enable monitoring/arm.
-Input changes apply immediately, so you don't need to toggle monitoring again
-after switching sources.
+Input selection is mode-aware:
+- With an instrument insert loaded, the input menu shows MIDI sources only
+  (All MIDI, Virtual Keyboard, hardware MIDI devices, or None).
+- Without an instrument insert, the input menu shows audio sources only
+  (Default, None, mono channels, stereo pairs).
+
+When you load an instrument insert on an audio-routed track, TayPE
+automatically switches input to **All MIDI**. When the last instrument insert
+is removed, MIDI routes are reset to default audio input.
 
 ## NAM Summing (Master Bus Only)
 
