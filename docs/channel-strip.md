@@ -43,18 +43,41 @@ saturator entirely - your channel now sounds like the captured hardware.
 
 - Click the **browse** button to open the Profile Browser where you can
   search TONE3000's online library or pick from locally saved profiles.
+- TONE3000 rows show model thumbnail, type, and creator.
+- In TONE3000 search/favourites tabs, clicking a model name opens its
+  tone page on tone3000.com in your default browser.
+- If TONE3000 favourite sync is temporarily unavailable, star toggles are
+  still saved locally so your favourites persist on this machine.
 - Your trim knob drives the NAM model harder at higher settings, just
   like pushing a real preamp.
 - **Output gain** compensates for level changes after the model.
 - Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`.
   Downloaded profiles work offline from that point.
+- Downloaded profiles keep their model title metadata, so the strip and
+  browser show the profile title instead of hashed download filenames.
+- Downloaded profile thumbnails are cached locally, so local browsing still
+  shows artwork on airgapped/offline machines.
+- You can switch a strip to NAM mode before choosing a profile; TayPE shows
+  a warning and stays clean until a NAM model is selected/loaded.
 
 The Performance Monitor shows per-track DSP breakdown with separate
 **Preamp/Summing** and **Plugin** CPU columns. On the master track, the
 Preamp/Summing column reflects NAM summing CPU. This makes it easy to see
 whether load is coming from console tone stages or plugin inserts.
+Rows are shown as a routing tree under the master bus, so bus chains are
+nested visually instead of appearing as a flat list.
+The **Lvl** column shows routing depth from master (`L0` master, deeper levels
+further upstream), and the session summary includes a **Critical path (est)**
+line to show the longest active dependency chain in the current block.
+Each stage now shows `% | ms` per track, and the table includes per-track
+enabled plugin count to spot heavy chains quickly.
+Stage colour bands are per-node hints (`<12%` green, `12-25%` amber, `>25%`
+red) rather than a global overload alarm; use the top DSP gauge for that.
 Those per-track CPU values are smoothed for readability (quick rise, slower
 fall), so the numbers stay trackable while still showing spikes.
+The monitor also shows **Host CPU** as total TayPE process usage across all
+logical cores (0-100%), so you can gauge whole-machine load separately from
+audio-block deadline load.
 It stays on top of the main window until you close it, so you can keep it
 visible while adjusting your mix. By default it refreshes 10 times per
 second, so changes are easier to see while you tweak settings.
@@ -124,6 +147,12 @@ The crash alert may name the culprit plugin. If TayPE cannot attribute the
 exact plugin (for example, crash between processing blocks), it will say the
 culprit is unknown and still keep audio running dry.
 
+During playback, time-based insert effects (like delay and reverb) keep
+processing across silent gaps between clips, so tails carry naturally instead
+of stopping at clip boundaries.
+Pressing **Stop** clears insert tails, so playback restarts cleanly from
+silence.
+
 Input selection is mode-aware:
 - With an instrument insert loaded, the input menu shows MIDI sources only
   (All MIDI, Virtual Keyboard, hardware MIDI devices, or None).
@@ -133,6 +162,11 @@ Input selection is mode-aware:
 When you load an instrument insert on an audio-routed track, TayPE
 automatically switches input to **All MIDI**. When the last instrument insert
 is removed, MIDI routes are reset to default audio input.
+
+If a project references a MIDI device that is not currently available,
+the strip shows **MIDI Device (offline)** for that route. You can keep the
+stored route, or switch to **All MIDI**, **Virtual Keyboard**, or another
+available MIDI input from the same menu.
 
 ## NAM Summing (Master Bus Only)
 
@@ -147,6 +181,8 @@ harmonic interaction, and compression behaviour.
 - **Drive** controls how hard the summed audio pushes into the model.
 - **Output gain** compensates for level changes.
 - Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`.
+- Downloaded profiles show their model title in the strip/browser when
+  metadata is available.
 
 When summing is disabled, the master bus uses standard digital summing
 with zero CPU overhead.

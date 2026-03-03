@@ -848,6 +848,8 @@ Search the TONE3000 online library for NAM profiles.
 ### `download_tone3000`
 
 Download a NAM profile from TONE3000 to the local profiles directory.
+Filenames are based on tone metadata (title/creator) for both `preamp`
+and `summing`, with tone ID fallback when metadata is unavailable.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
