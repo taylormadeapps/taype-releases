@@ -53,6 +53,8 @@ The Performance Monitor shows per-track preamp CPU usage so you can
 see the impact of different model architectures (Linear is lightest,
 LSTM moderate, WaveNet heaviest). It stays on top of the main window
 until you close it, so you can keep it visible while adjusting your mix.
+By default it refreshes 10 times per second, so changes are easier to
+see while you tweak settings.
 
 ## Filters (HP/LP)
 
