@@ -51,7 +51,8 @@ saturator entirely - your channel now sounds like the captured hardware.
 
 The Performance Monitor shows per-track preamp CPU usage so you can
 see the impact of different model architectures (Linear is lightest,
-LSTM moderate, WaveNet heaviest).
+LSTM moderate, WaveNet heaviest). It stays on top of the main window
+until you close it, so you can keep it visible while adjusting your mix.
 
 ## Filters (HP/LP)
 
