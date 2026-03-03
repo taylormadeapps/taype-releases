@@ -120,6 +120,9 @@ or to open the plugin editor window.
 
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
+The crash alert may name the culprit plugin. If TayPE cannot attribute the
+exact plugin (for example, crash between processing blocks), it will say the
+culprit is unknown and still keep audio running dry.
 
 For instrument plugins, set the track input to a MIDI source (All MIDI,
 Virtual Keyboard, or a hardware MIDI device) and enable monitoring/arm.

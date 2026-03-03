@@ -35,6 +35,22 @@ its waveform.
 Click anywhere in the timeline (or the ruler at the top) to move the tape
 head to that position. Hold and drag to scrub.
 
+## Audio Sample Rate and Resampling
+
+Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
+
+- TayPE runs internally at **48 kHz**.
+- Use **Apply Audio Changes** if you want an explicit commit after editing
+  audio settings.
+- If **Resampling** is **off**, the Sample rate field is read-only and shows
+  your interface's current rate.
+- With Resampling off, TayPE will try to switch your interface to **48 kHz**
+  automatically.
+- If your interface is not at 48 kHz while Resampling is off, TayPE flags this
+  in red and tells you to engage Resampling.
+- If **Resampling** is **on**, you can change the interface sample rate in the
+  Audio settings while TayPE continues processing internally at 48 kHz.
+
 ## Editing
 
 Editing only happens when the transport is stopped. This is by design -
