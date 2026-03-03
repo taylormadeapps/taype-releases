@@ -47,6 +47,7 @@ This file is created automatically on first launch with sensible defaults.
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
 | K | Toggle high contrast theme |
+| Cmd+K | Open the virtual keyboard popup |
 
 ### Zoom
 
@@ -118,3 +119,9 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+C | Copy |
 | Cmd+V | Paste |
 | Cmd+, | Open Preferences |
+
+## Virtual Keyboard Mode
+
+When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
+to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
+to close the popup and return to normal shortcut control.

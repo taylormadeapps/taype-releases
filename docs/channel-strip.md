@@ -118,6 +118,11 @@ or to open the plugin editor window.
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
 
+For instrument plugins, set the track input to a MIDI source (All MIDI,
+Virtual Keyboard, or a hardware MIDI device) and enable monitoring/arm.
+Input changes apply immediately, so you don't need to toggle monitoring again
+after switching sources.
+
 ## NAM Summing (Master Bus Only)
 
 The master bus channel strip has a Summing section. Load a NAM profile of
