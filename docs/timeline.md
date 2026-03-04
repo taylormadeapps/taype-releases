@@ -76,6 +76,19 @@ Hover near the left or right edge of a clip (the cursor changes to a
 resize arrow). Drag to trim. This is non-destructive - you're just
 changing which portion of the audio file is visible.
 
+### Crossfades
+
+When two clips overlap, the overlap area shows a dedicated crossfade overlay.
+Overlap length sets crossfade duration; there are no extra overlap-specific
+fade-length handles.
+
+To shape the crossfade, drag vertically anywhere in the overlap region.
+Both sides move together to stay symmetric:
+- left clip fade-out curve
+- right clip fade-in curve
+
+Double-click the overlap to reset both sides to a linear curve.
+
 ### Clipboard
 
 - **Cmd+X** - cut (copy and delete)
@@ -143,6 +156,13 @@ per second so you can see the signal coming in.
 
 When you stop, the ghost clip is replaced by the real clip with its
 final waveform.
+
+Recorded clips stay anchored to the position where you punched in. Latency
+compensation is applied internally so back-to-back takes keep the timing
+you performed.
+
+If you press **Stop** while recording, the head parks at the end of the
+committed take so what you just captured is immediately visible.
 
 ## Input and Output Routing
 

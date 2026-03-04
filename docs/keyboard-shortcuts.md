@@ -19,7 +19,7 @@ This file is created automatically on first launch with sensible defaults.
 |----------|--------|
 | Space | Play / stop |
 | P | Pause |
-| Z | Stop and return to start |
+| Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
 
 ### Editing
