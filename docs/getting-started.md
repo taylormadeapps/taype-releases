@@ -81,6 +81,12 @@ Use the **TayPE** application menu to open licensing:
 - **License Now** (when unregistered)
 - **License** (when registered)
 
+## About TayPE
+
+Use **TayPE > About TayPE** to view the exact app version/build and the
+shipped third-party library versions and licences (JUCE, Signalsmith Stretch,
+and NeuralAmpModelerCore).
+
 ## Track States
 
 TayPE has three ways to think about tracks:

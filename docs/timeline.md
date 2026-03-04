@@ -22,7 +22,7 @@ with the arranger width. The left-side view controls are ordered:
 
 The left side of the ruler has quick controls:
 
-- **Channel Strip** - show/hide the channel strip side panel
+- **Channel Strip** - show/hide the channel strip side panel (auto-minimizes when no track is selected; if opened with no selection, it shows an empty "Select a track" state with the divider still visible)
 - **+** - add a new track
 - **Metronome** - toggle click on/off
 - **Snap** - toggle grid snap
@@ -36,7 +36,7 @@ Each track header shows:
 - **Track name** - double-click to rename (only when stopped)
 - **R** - record arm (red circle when armed)
 - **MON** - software monitoring (hear input through the track channel strip)
-- **B** - designate as bus track (bus tracks receive from routed tracks)
+- **Bus** (school-bus icon) - designate as bus track (bus tracks receive from routed tracks)
 - **M** - mute (speaker icon, crossed out when muted)
 - **S** - solo
 - **Archive** - managed from the channel strip and MCP (not shown in timeline header)
