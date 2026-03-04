@@ -74,6 +74,13 @@ original audio is never modified.
 
 Every action is undoable. Fader moves, clip edits, track changes - all of it.
 
+## Licensing
+
+Use the **TayPE** application menu to open licensing:
+
+- **License Now** (when unregistered)
+- **License** (when registered)
+
 ## Track States
 
 TayPE has three ways to think about tracks:

@@ -12,8 +12,11 @@ The left column shows **track headers** with controls. The main area shows
 The **ruler** along the top shows time. Press **T** to toggle between
 minutes:seconds and bars|beats.
 
-The **transport bar** along the bottom has playback controls, BPM display,
-and position readout.
+The **transport bar** has playback controls, BPM display, and position
+readout. It stays along the bottom and remains visible; when the channel
+strip panel is open, the strip stays full-height and the transport aligns
+with the arranger width. The left-side view controls are ordered:
+**Show Mixer**, **Focus**, **Spill**, **Archive**.
 
 ### Ruler Header Controls
 

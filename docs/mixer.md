@@ -50,3 +50,9 @@ stopped).
 
 Tracks appear in the same order as the timeline. The master bus is always
 the rightmost strip.
+
+Mixer visibility follows timeline view filters:
+
+- **Archive View (A)** - shows active or archived tracks to match timeline mode
+- **Focus (F)** - shows tracks with clips at the tape head position
+- **Spill (G)** - shows the selected bus and tracks routed to it
