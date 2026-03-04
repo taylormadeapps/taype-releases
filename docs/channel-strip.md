@@ -143,6 +143,8 @@ transients. Turn it off if you want strict, clinical compression.
 Four serial plugin slots for VST3 plugins. Click an empty slot to load
 a plugin from the scanner. Right-click a loaded slot for bypass, remove,
 or to open the plugin editor window.
+The master bus has the same four insert slots, so you can run processing
+directly on the master strip.
 
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
