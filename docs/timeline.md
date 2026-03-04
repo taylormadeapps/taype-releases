@@ -15,6 +15,16 @@ minutes:seconds and bars|beats.
 The **transport bar** along the bottom has playback controls, BPM display,
 and position readout.
 
+### Ruler Header Controls
+
+The left side of the ruler has quick controls:
+
+- **Channel Strip** - show/hide the channel strip side panel
+- **+** - add a new track
+- **Metronome** - toggle click on/off
+- **Snap** - toggle grid snap
+- **Ruler Mode** - switch between time and bars|beats
+
 ## Track Headers
 
 Each track header shows:
