@@ -6,6 +6,8 @@ The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always on the far right. Scroll horizontally
 with the mouse wheel or trackpad to navigate across your channels.
 
+![Mixer overview](../assets/img/docs/mixer-overview.png)
+
 ## Channel Strip Layout
 
 Each strip shows (top to bottom):
@@ -27,7 +29,7 @@ Each strip shows (top to bottom):
   (display updates at 4 Hz and keeps transient peaks per update window)
 
 Each processing section can be expanded or collapsed with its header
-toggle. See the [Channel Strip](channel-strip.md) page for details on
+toggle. See the [Channel Strip](channel-strip/README.md) page for details on
 every section.
 
 ## Using the Controls

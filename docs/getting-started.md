@@ -147,6 +147,6 @@ it - useful for focusing on a submix.
 
 ## What Next
 
-- Learn the [Timeline](timeline.md) in detail
-- Explore the [Mixer](mixer.md) and [Channel Strip](channel-strip.md)
+- Learn the [Timeline](timeline/README.md) in detail
+- Explore the [Mixer](mixer.md) and [Channel Strip](channel-strip/README.md)
 - See all [Keyboard Shortcuts](keyboard-shortcuts.md)

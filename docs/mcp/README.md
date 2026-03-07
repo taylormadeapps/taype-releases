@@ -63,7 +63,7 @@ all available tools.
 On connection, the MCP handshake returns:
 
 - **Server info** - app name and version
-- **Tool list** - all available tools (see [Tool Reference](tools.md))
+- **Tool list** - all available tools (documented in the sub-pages below)
 - **Instructions** - a preamble with links to these docs, plus the active
   studio tech personality if one is set (see [Personalities](personalities.md))
 
@@ -104,5 +104,14 @@ consent.
 
 ## Next Steps
 
-- [Tool Reference](tools.md) - every MCP tool, its parameters, and examples
+- [Transport](transport.md) - playback, tempo, metronome
+- [Reel Management](reels.md) - save, open, list reels
+- [Tracks](tracks.md) - add, edit, remove tracks
+- [Clips](clips.md) - add, edit, remove clips
+- [Recording](recording.md) - start and stop recording
+- [Plugins](plugins.md) - VST3 inserts, sandbox, Mix FX
+- [View & Session](view-and-session.md) - view state, undo, theme, personality, status
+- [NAM Console Engine](nam.md) - preamp profiles, mix summing, TONE3000
+- [Transactions](transactions.md) - batch changes as single undo steps
+- [Utilities](utilities.md) - feedback, licensing
 - [Personalities](personalities.md) - studio tech characters that shape the AI interaction
