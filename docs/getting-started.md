@@ -99,19 +99,22 @@ and NeuralAmpModelerCore).
 
 ## Popup Help
 
-Use **Help -> Popup Help** to turn on hover help across the transport,
-timeline, mixer, and channel strip. After you rest the pointer on a control
-for about **0.7 seconds**, TayPE explains what that control does.
+Use **Help -> Popup Help** or the transport bar's **?** toggle to turn on
+hover help across the transport, timeline, mixer, and channel strip. When
+popup help is enabled, the **?** button lights green. After you rest the
+pointer on a control for about **0.7 seconds**, TayPE explains what that
+control does.
 
 ## RTFM and Docs Search
 
 Use **Help -> Read the Fine Manual** to open the TayPE docs in your browser.
 
 On macOS, use the search field at the top of the **Help** menu to search the
-docs. Pressing Return there opens that doc search in your browser.
+docs. Pressing Return there, or clicking the search button, opens that doc
+search in your browser instead of invoking Apple Help search.
 
-On non-macOS builds, **Help -> Search TayPE Docs...** remains available as the
-explicit docs-search command.
+**Help -> Search TayPE Docs...** remains available on every platform as the
+explicit docs-search fallback.
 
 ## Track States
 
