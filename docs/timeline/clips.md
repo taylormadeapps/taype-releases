@@ -24,6 +24,12 @@ Hover near the left or right edge of a clip until the cursor changes to a resize
 
 This is non-destructive — you're just changing which portion of the audio file is visible.
 
+## Gain and Fades
+
+Drag the clip gain line up or down to change that clip's level. The waveform redraws with it, so lower gain pulls the waveform inward and unity fills the clip body.
+
+Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint.
+
 ## Crossfades
 
 When two clips overlap, the overlap area shows a crossfade overlay. Overlap length sets crossfade duration.
