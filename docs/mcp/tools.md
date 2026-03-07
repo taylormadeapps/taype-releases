@@ -184,6 +184,7 @@ Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_threshold`, `comp_ratio`, `comp_attack_ms`, `comp_release_ms`,
 `comp_knee`, `comp_makeup_gain`, `comp_log_release`, and
 `comp_sidechain_low_cut` (fixed `80 Hz` high-pass on the detector sidechain).
+`comp_attack_ms` accepts **0.1–100 ms**.
 
 **Returns:** Updated track object.
 
@@ -499,6 +500,8 @@ Get the current visibility and display state.
 {
   "focus": false,
   "focus_tag": "",
+  "focus_tags": [],
+  "tag_filter_mode": "or",
   "archive_view": false,
   "spill": false,
   "can_spill": false,
@@ -516,6 +519,8 @@ Toggle Focus mode (shows only relevant tracks).
 |-------|------|----------|-------------|
 | `enabled` | boolean | yes | Focus on/off |
 | `tag` | string | no | Optional focus tag (Focus-by-Tag) |
+| `tags` | string[] | no | Optional multiple focus tags |
+| `filter_mode` | string | no | `"or"` (default) or `"and"` for multi-tag focus |
 
 ### `set_archive_view`
 
@@ -670,7 +675,7 @@ re-check via `status` before assuming previous values are still valid.
   "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },
   "personality": { "name": "Greg Zenner", "system_prompt": "..." },
   "theme": "normal",
-  "view": { "focus": false, "focus_tag": "", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
+  "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
   "metronome": { "enabled": false }
 }
 ```
@@ -694,7 +699,9 @@ undo step. Requires transport stopped.
 
 While active, the UI locks structural edits. Mute, solo, and transport
 remain available to the user. If the connection drops, the transaction
-is automatically aborted and rolled back.
+is automatically aborted and rolled back. The user can also release the lock
+from Edit > **Release MCP Lock...** or by right-clicking the red **MCP**
+indicator beside the transport DSP meter.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|

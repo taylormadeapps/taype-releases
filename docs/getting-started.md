@@ -56,9 +56,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
   batches.
-- **True Summing** only becomes available when **NAM AMX Acceleration** is on:
-  enabled means tracks feeding the master pass through NAM before the sum;
-  disabled means audio sums first and then runs through the stereo NAM bus.
+- **True Summing** now lives on the master strip's **NAM Summing** panel.
+  It only becomes active when **NAM AMX Acceleration** is on: enabled means
+  tracks feeding the master pass through NAM before the sum; disabled means
+  audio sums first and then runs through the stereo NAM bus.
 
 ## Editing
 
@@ -95,6 +96,22 @@ Use the **TayPE** application menu to open licensing:
 Use **TayPE > About TayPE** to view the exact app version/build and the
 shipped third-party library versions and licences (JUCE, Signalsmith Stretch,
 and NeuralAmpModelerCore).
+
+## Popup Help
+
+Use **Help -> Popup Help** to turn on hover help across the transport,
+timeline, mixer, and channel strip. After you rest the pointer on a control
+for about **0.7 seconds**, TayPE explains what that control does.
+
+## RTFM and Docs Search
+
+Use **Help -> Read the Fine Manual** to open the TayPE docs in your browser.
+
+On macOS, use the search field at the top of the **Help** menu to search the
+docs. Pressing Return there opens that doc search in your browser.
+
+On non-macOS builds, **Help -> Search TayPE Docs...** remains available as the
+explicit docs-search command.
 
 ## Track States
 

@@ -14,9 +14,28 @@ and bottom spacing stays balanced as sections open and close.
 The compact FILTER, EQ, COMP, and INSERTS panels now share one body inset
 rule, so they stop feeling like separate widgets with unrelated top and
 bottom padding.
+The strip's bus button now lives in the left side of the coloured title bar as
+a larger 20x20 control inset 8px from the top, left, and bottom edges, so it
+stays available without taking up space in the tool row below.
+That bus toggle now uses the same rounded alpha-backed control family as the
+title pill, with a white outlined bus glyph and a green active fill instead of
+the old yellow/brass state.
+The tool row itself is now `Mute`, `Solo`, `Tag`, `Archive`, `MON`, `Record`,
+so track tagging stays one click away without putting the bus toggle back in that lane.
+Double-click the centred track-name pill to rename the track inline; once that
+editor opens, typing stays in the name field until you commit or cancel it.
+Double-click the centred title pill to rename the track. Double-click the
+coloured title background beside it to open the track colour picker.
+The title pill stays centred on the full coloured header band even with the
+bus button living in that lane; long names keep that visual centre and truncate
+at the right edge of the strip instead of shifting left.
 Input and output routing now share one top strip row instead of living at
 opposite ends of the panel, which frees vertical space without changing how
 either selector works.
+With **Help -> Popup Help** enabled, the strip shows hover help after about
+**0.7 seconds** for knobs, routing selectors, section headers, insert slots,
+meters, and toggle buttons. Hovering the track title also shows the full track
+name in the popup before the rename hint.
 The preamp body uses the same compact centred spacing rule, so it does not
 leave extra dead air under the trim/drive readouts.
 Its side labels (`TRIM`, `DRIVE`, `OUT`) stay level with the knob body
@@ -27,11 +46,16 @@ Strip knobs respond the same way across the panel: drag vertically, or hover
 and use the mouse wheel. Knobs with a true neutral point add a detent at
 centre or `0 dB` that holds a little more firmly before crossing through, and
 the fader now does the same at unity (`0 dB`). Mouse-wheel edits still snap to
-those neutral points, but the next wheel tick continues through instead of
-sticking there.
+those neutral points, but with a slightly lighter snap than drag so they do
+not feel overly sticky. Double-click zero-style gain and balance knobs to
+reset them to `0`, and double-click the fader to return it to unity.
 In the compressor section, the short knob labels switch to the live value of
 the control while the mouse is over that knob, so you can read settings
 without adding a separate value row.
+In the insert section, the top comparison meter now carries a `PK` / `RMS`
+mode button and the bottom comparison meter keeps the `AUTO` button, so you
+can stage plugin-chain input and output in either peak or RMS terms before
+asking the strip to auto-match the result.
 
 ## Trim
 
@@ -77,14 +101,19 @@ saturator entirely - your channel now sounds like the captured hardware.
   search TONE3000's online library or pick from locally saved profiles.
 - TONE3000 rows show model thumbnail, type, creator, an `arch:` field, and
   an `AMX` badge when the capture is LSTM/AMX-compatible.
-- The TONE3000 search tab includes an **AMX** filter for LSTM captures that
+- If TONE3000 leaves architecture blank in its API response, TayPE resolves
+  it from the model header so the browser rows still show a real `arch:` value.
+- The TONE3000 search tab includes an **AMX Compatible** filter for LSTM captures that
   qualify for TayPE's accelerated AMX path, and it searches forward through
   the library until it finds matching AMX-compatible rows instead of stopping
   at the first unfiltered page.
 - In TONE3000 search/favourites tabs, clicking a model thumbnail opens its
   tone page on tone3000.com in your default browser.
+- Remote TONE3000 lookups now show a spinner in the browser while search,
+  favourites refresh, or download metadata is in flight.
 - If TONE3000 favourite sync is temporarily unavailable, star toggles are
-  still saved locally so your favourites persist on this machine.
+  still saved locally so your favourites persist on this machine, and the
+  Favourites tab rebuilds those saved entries automatically.
 - **Trim** is always visible and always pre-NAM, so higher trim drives the
   NAM model harder, like pushing a real preamp.
 - Trim always lives in the left slot of the preamp body.
@@ -99,6 +128,10 @@ saturator entirely - your channel now sounds like the captured hardware.
   browser show the profile title instead of hashed download filenames.
 - Downloaded profile thumbnails are cached locally, so local browsing still
   shows artwork on airgapped/offline machines.
+- That thumbnail cache is written by both browser downloads and
+  `download_tone3000`. TayPE reuses remembered TONE3000 search metadata if the
+  direct detail lookup comes back thin, and older local sidecars backfill
+  their thumb file the next time the Local tab scans your NAM folder.
 - TONE3000 artwork is read from both legacy thumbnail fields and the current
   `images` metadata, so thumbnails render in search/favourites again.
 - You can switch a strip to NAM mode before choosing a profile; TayPE shows
@@ -174,7 +207,7 @@ A dynamics processor for controlling level and adding punch.
 | Threshold | -20 dB | -60 to 0 dB |
 | Ratio | 4:1 | 1:1 to 20:1 |
 | Makeup Gain | 0 dB | 0 to 24 dB |
-| Attack | 10 ms | 0.02 to 100 ms |
+| Attack | 10 ms | 0.1 to 100 ms |
 | Release | 100 ms | 10 to 2,000 ms |
 | Knee | 6 dB | 0 to 12 dB |
 | Sidechain low-cut | Off | fixed 80 Hz |
@@ -191,15 +224,23 @@ The strip lays the controls out as **Threshold, Ratio, Makeup** on the top row
 and **Knee, Attack, Release** on the second row. Between the lower-row knobs
 and the gain-reduction meter there is a vertical button stack: the upper button
 enables a fixed **80 Hz** sidechain low-cut, and the lower button is **LOG**
-release. The gain-reduction display is a vertical top-down bar: no fill means
-`0 dB` GR, and a full bar means `48 dB` GR. The GR meter follows the live
-compressor reduction value directly, so it lights as soon as the compressor
-starts clamping the signal.
+release. The gain-reduction display is a vertical top-down bar with a short
+tick scale beside it: no fill means `0 dB` GR, and a full bar means `48 dB`
+GR. The tick scale sits above the sidechain button stack so the markings stay
+clear of the controls. The GR meter follows the live compressor reduction value
+directly, so it lights as soon as the compressor starts clamping the signal.
+The attack knob now starts at **0.1 ms**. The fast end of the dial covers
+**0.1–1.0 ms** in **0.1 ms** steps, then the rest of the dial covers
+**1–100 ms** in **1 ms** steps.
 The lower PAN/FADER block now follows the same centring rule: the pan knob
 sits on the middle of its panel slot, and the fader lane keeps equal top and
 bottom padding.
 
 ## Insert Slots
+
+If the insert rack is empty, the header power icon stays in its normal armed
+state instead of reading as bypassed. The header bypass only reflects loaded
+insert slots.
 
 Four serial plugin slots for VST3 plugins. Click an empty slot to load
 a plugin from the scanner. Right-click a loaded slot for bypass, remove,
@@ -211,6 +252,14 @@ the strip, so the insert rack stays readable without overpowering the EQ,
 compressor, or fader sections.
 Their slot stack is vertically centred in the panel body, so the rack no
 longer looks more top-padded than the surrounding sections.
+The insert panel also shows two thin comparison meters for gain staging:
+the bar above the slots is the level **into** the plugin chain, and the bar
+below the slots is the level **coming out** of it.
+That lower lane also carries a small **AUTO** button. On audio-FX chains,
+clicking it listens for about 3 seconds and writes a hidden post-insert trim
+so the rack output matches the level going in. Instrument insert chains leave
+that button dim because there is no meaningful pre-rack audio reference to
+match against.
 
 Plugins run in a sandboxed process - if a plugin crashes, TayPE keeps
 running. The slot shows an error state and you can reload or remove it.
@@ -233,6 +282,8 @@ Input selection is mode-aware:
 When you load an instrument insert on an audio-routed track, TayPE
 automatically switches input to **All MIDI**. When the last instrument insert
 is removed, MIDI routes are reset to default audio input.
+Hosted instruments also receive TayPE's transport timing, so tempo-synced
+plugins can lock to the DAW's BPM, playhead position, and time signature.
 
 If a project references a MIDI device that is not currently available,
 the strip shows **MIDI Device (offline)** for that route. You can keep the
@@ -248,8 +299,10 @@ harmonic interaction, and compression behaviour.
 On the master strip, this summing section occupies the preamp slot so
 section rows stay vertically aligned across the mixer.
 
-- Click the **Summing** button to enable or disable. Requires transport
+- Click the **SUM** button to enable or disable NAM summing. Requires transport
   to be stopped.
+- Click the inline **TRUE** toggle to choose TayPE's True Summing path. This
+  only becomes active when **NAM AMX Acceleration** is enabled.
 - Click **browse** to open the Profile Browser (filtered to summing profiles).
 - **Drive** controls how hard the summed audio pushes into the model.
 - **Output gain** compensates for level changes.

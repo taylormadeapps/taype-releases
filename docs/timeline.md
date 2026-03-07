@@ -11,13 +11,21 @@ The left column shows **track headers** with controls. The main area shows
 
 The **ruler** along the top shows time. Press **T** to toggle between
 minutes:seconds and bars|beats.
+In bars|beats mode, the smaller beat labels start directly on their tick,
+while bar labels keep their current major-marker offset.
 
 The **transport bar** has playback controls, BPM display, and position
 readout. It stays along the bottom and remains visible; when the channel
 strip panel is open, the strip stays full-height and the transport aligns
 with the arranger width. The left-side view controls are ordered:
 **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**.
+Next to the DSP meter there is a small **MCP** lock indicator. It lights red
+while an MCP transaction is active, and you can right-click it to abort the
+active lock.
 The **Tags** popup opens near that button and stays inside the app window.
+With **Help -> Popup Help** enabled, hover help appears after about **0.7
+seconds** on ruler buttons, track-header controls, clips, fades, gain lines,
+and crossfade regions.
 
 ### Ruler Header Controls
 
@@ -37,14 +45,19 @@ Each track header shows:
 - **Track name** - double-click to rename (only when stopped)
   At medium/tall heights, the full button row stays pinned directly under the
   title instead of dropping as the lane gets taller.
+  With popup help enabled, hovering the track name shows the full track title
+  before the rename hint.
 - **Tags** - opens the tag cloud popup for this track
 - **R** - record arm (red circle when armed)
 - **MON** - software monitoring (hear input through the track channel strip)
-- **Bus** (school-bus icon) - designate as bus track (bus tracks receive from routed tracks)
+- **Bus** (white bus glyph inside a rounded alpha-backed toggle) - designate as
+  bus track (bus tracks receive from routed tracks); active state fills green.
+  On normal tracks it clears the standard colour strip, while bus tracks can
+  overlap the wider bus strip on the left edge
 - **M** - mute (speaker icon, crossed out when muted)
 - **S** - solo
 - **Archive** - managed from the channel strip and MCP (not shown in timeline header)
-- **Tag pills** - at larger track heights, assigned tags appear as pills directly below the button row
+- **Tag pills** - at larger track heights, assigned tags appear as pills directly below the button row and wrap onto extra rows when needed, while staying above the I/O labels
 - **I/O labels** - input source and output destination (click to change)
   (at very small track heights, labels are hidden until you zoom in)
 - **Mini meter** - stereo peak meter in the header, updated at 4 Hz using

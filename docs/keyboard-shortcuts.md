@@ -27,10 +27,14 @@ This file is created automatically on first launch with sensible defaults.
 | Shortcut | Action |
 |----------|--------|
 | S | Split selected clip at the tape head |
-| Cmd+D | Duplicate selected clip back-to-back |
+| D | Duplicate selected clip back-to-back |
+| Cmd+D | Duplicate selected track without clips |
+| Cmd+Option+D | Duplicate selected track with clips |
 | Cmd+X | Cut selected clip |
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
+| Backspace | Delete selected clip |
+| Delete | Delete selected non-master track |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -81,6 +85,9 @@ is straightforward:
   "stop": "z",
   "record": "return",
   "split_clip": "s",
+  "duplicate_clip": "d",
+  "duplicate_track_without_content": "cmd+d",
+  "duplicate_track": "cmd+alt+d",
   "toggle_focus": "f"
 }
 ```
@@ -118,6 +125,8 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+X | Cut |
 | Cmd+C | Copy |
 | Cmd+V | Paste |
+| Backspace | Delete selected clip |
+| Delete | Delete selected non-master track |
 | Cmd+, | Open Preferences |
 
 ## Virtual Keyboard Mode
@@ -125,3 +134,6 @@ These standard shortcuts are always active and cannot be reassigned:
 When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
+
+On macOS, TayPE also shows these shortcuts beside the matching menu items in
+the native menu bar when the menus are open.
