@@ -105,6 +105,7 @@ consent.
 ## Next Steps
 
 - [Transport](transport.md) - playback, tempo, metronome
+- [Cuts](cuts.md) - alternate timeline pages inside one reel
 - [Reel Management](reels.md) - save, open, list reels
 - [Tracks](tracks.md) - add, edit, remove tracks
 - [Clips](clips.md) - add, edit, remove clips

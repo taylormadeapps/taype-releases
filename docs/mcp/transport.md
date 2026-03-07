@@ -2,6 +2,10 @@
 
 Tools for controlling playback, tempo, and the metronome.
 
+Tempo and time signature live on the **currently selected Cut**. Use the
+Cut tools to switch pages before calling `set_transport` if you want to edit
+a different Cut's tempo map.
+
 ---
 
 ### `play`

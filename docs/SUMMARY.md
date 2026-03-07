@@ -25,6 +25,7 @@
 * [Licensing](licensing.md)
 * [MCP Integration](mcp/README.md)
   * [Transport](mcp/transport.md)
+  * [Cuts](mcp/cuts.md)
   * [Reel Management](mcp/reels.md)
   * [Tracks](mcp/tracks.md)
   * [Clips](mcp/clips.md)

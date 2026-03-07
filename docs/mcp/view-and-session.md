@@ -173,9 +173,9 @@ Get the currently active personality.
 
 ### `status`
 
-Comprehensive session snapshot - reel info, transport, all tracks with
-peak levels, call sign, undo/redo state, personality, theme, view state,
-and metronome. Use this to load context at the start of a conversation.
+Comprehensive session snapshot - reel info, transport, selected Cut, Cut list,
+all tracks with peak levels, call sign, undo/redo state, personality, theme,
+view state, and metronome. Use this to load context at the start of a conversation.
 
 Note: app state can change at any time due to UI interaction. Always
 re-check via `status` before assuming previous values are still valid.
@@ -185,6 +185,8 @@ re-check via `status` before assuming previous values are still valid.
 {
   "reel": { "name": "Default", "directory": "...", "sample_rate": 44100, "device_sr_matched": true },
   "transport": { "playing": false, "recording": false, "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
+  "selected_cut_name": "Main Cut",
+  "cuts": ["Main Cut", "Verse", "Chorus"],
   "tracks": [ { "id": "track_1", "name": "Audio 1", "tags": ["Vocals"], "volume": 1.0, "pan": 0.0, "mute": false, "solo": false, "peak_l": 0.0, "peak_r": 0.0 } ],
   "call_sign": "tape",
   "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },

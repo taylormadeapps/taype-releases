@@ -99,9 +99,9 @@ and NeuralAmpModelerCore).
 
 ## Popup Help
 
-Use **Help -> Popup Help** or the transport bar's **?** toggle to turn on
-hover help across the transport, timeline, mixer, and channel strip. When
-popup help is enabled, the **?** button lights green. After you rest the
+Use **Help -> Popup Help** or the transport bar's far-right **?** toggle to
+turn on hover help across the transport, timeline, mixer, and channel strip.
+When popup help is enabled, the **?** button lights green. After you rest the
 pointer on a control for about **0.7 seconds**, TayPE explains what that
 control does.
 
