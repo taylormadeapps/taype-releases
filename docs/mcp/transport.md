@@ -16,7 +16,8 @@ Start audio playback.
 
 ### `stop`
 
-Stop playback and reset position to the beginning.
+Stop playback. If transport is already stopped, TayPE returns the head to the
+selected Cut's zero point.
 
 **Returns:** `{ "playing": false, "position": 0.0 }`
 
@@ -29,7 +30,8 @@ Get current transport state.
 {
   "playing": false,
   "position": 12.5,
-  "duration": 180.0
+  "duration": 180.0,
+  "zero_time_seconds": 8.0
 }
 ```
 
@@ -42,6 +44,22 @@ Set the playback position.
 | `position` | number | yes | Position in seconds |
 
 **Returns:** `{ "position": 12.5 }`
+
+### `set_cut_zero`
+
+Set the selected Cut's zero point at the playhead.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `position` | number | no | Zero point in seconds; defaults to current playhead |
+
+**Returns:** `{ "selected": "Verse", "zero_time_seconds": 8.0 }`
+
+### `reset_cut_zero`
+
+Reset the selected Cut's zero point back to timeline start.
+
+**Returns:** `{ "selected": "Verse", "zero_time_seconds": 0.0 }`
 
 ### `set_transport`
 

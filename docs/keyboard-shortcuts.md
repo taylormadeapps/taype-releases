@@ -21,6 +21,7 @@ This file is created automatically on first launch with sensible defaults.
 | P | Pause |
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
+| Unbound | Set 0 at Playhead for the selected Cut |
 
 ### Editing
 
@@ -93,6 +94,9 @@ is straightforward:
 ```
 
 Each entry maps an action name to a key combination.
+
+To bind **Set 0 at Playhead**, add a `set_zero_here` entry. For example,
+`"set_zero_here": "0"` would bind it to the `0` key.
 
 ### Key Combination Format
 

@@ -28,5 +28,9 @@ Press **E** to zoom the view to fit the selected clip. Press **E** again to snap
 ## Seeking
 
 Click anywhere in the timeline (that isn't a clip) to move the tape head. Click in the ruler to seek regardless of what's below.
+Right-click in the ruler to open the zero-point menu for the selected Cut.
 
 **Option+click** anywhere on the timeline always seeks, even over a clip. Hold and drag after clicking to scrub.
+
+When snap is on, ruler seek and seek-drag also lock onto nearby clip starts
+and ends, making it easier to line the tape head up before using **Set 0 at Playhead**.
