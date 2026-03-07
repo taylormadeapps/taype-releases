@@ -23,7 +23,6 @@
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
 * [Voice Control](voice-control.md)
 * [Licensing](licensing.md)
-* [Roadmap](roadmap.md)
 * [MCP Integration](mcp/README.md)
   * [Transport](mcp/transport.md)
   * [Reel Management](mcp/reels.md)
