@@ -26,7 +26,9 @@ The left side of the ruler has quick controls:
 - **Snap** — toggle grid snap
 - **Ruler Mode** — switch between time and bars|beats
 
-Right-click in the ruler to open the zero-point menu:
+Right-click in the upper ruler area to open the zero-point menu:
 
 - **Set 0 at Playhead** — make the current tape-head position the selected Cut's new `0:00`
 - **Reset 0 to Start** — restore that Cut's zero point to the beginning
+
+The lower ruler tick band keeps the existing right-drag pan/zoom gesture.
