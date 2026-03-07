@@ -49,6 +49,9 @@ the fader now does the same at unity (`0 dB`). Mouse-wheel edits still snap to
 those neutral points, but with a slightly lighter snap than drag so they do
 not feel overly sticky. Double-click zero-style gain and balance knobs to
 reset them to `0`, and double-click the fader to return it to unity.
+That unity snap is forgiving on purpose: if you drag the fader to just above
+or below the `0 dB` line, TayPE still drops it onto exact unity instead of
+leaving you parked a hair off.
 In the compressor section, the short knob labels switch to the live value of
 the control while the mouse is over that knob, so you can read settings
 without adding a separate value row.
