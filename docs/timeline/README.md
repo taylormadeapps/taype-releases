@@ -10,7 +10,7 @@ The left column shows **track headers** with controls. The main area shows **cli
 
 The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats.
 
-The **transport bar** runs along the bottom. It has a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name, plus playback controls, BPM, and position readout. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**. The **?** popup-help toggle lives at the far right of the transport bar.
+The **transport bar** runs along the bottom. It has playback controls, BPM, and position readout in the middle, then a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name at the start of the right-hand utility cluster. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**. The **?** popup-help toggle lives at the far right of the transport bar.
 
 Next to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active — right-click it to abort the lock.
 
