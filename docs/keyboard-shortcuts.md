@@ -21,7 +21,21 @@ This file is created automatically on first launch with sensible defaults.
 | P | Pause |
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
+| / | Add marker at the tape head |
+| , | Go to previous marker |
+| . | Go to next marker |
 | Unbound | Set 0 at Playhead for the selected Cut |
+
+### Markers
+
+| Shortcut | Action |
+|----------|--------|
+| 1 through 9 | Go to markers 1 through 9 |
+| 0 | Go to marker 10 |
+| Cmd+1 through Cmd+9 | Go to markers 11 through 19 |
+| Cmd+0 | Go to marker 20 |
+| Cmd+Shift+1 through Cmd+9 | Go to markers 21 through 29 |
+| Cmd+Shift+0 | Go to marker 30 |
 
 ### Editing
 
@@ -85,6 +99,10 @@ is straightforward:
   "pause": "p",
   "stop": "z",
   "record": "return",
+  "add_marker_here": "/",
+  "previous_marker": ",",
+  "next_marker": ".",
+  "go_to_marker_1": "1",
   "split_clip": "s",
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
@@ -96,7 +114,9 @@ is straightforward:
 Each entry maps an action name to a key combination.
 
 To bind **Set 0 at Playhead**, add a `set_zero_here` entry. For example,
-`"set_zero_here": "0"` would bind it to the `0` key.
+`"set_zero_here": "0"` would bind it to the `0` key. Marker actions use
+`add_marker_here`, `previous_marker`, `next_marker`, and `go_to_marker_N`
+for direct jumps.
 
 ### Key Combination Format
 

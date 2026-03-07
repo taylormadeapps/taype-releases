@@ -35,3 +35,25 @@ Right-click in the lower ruler tick band to use the existing pan/zoom drag.
 
 When snap is on, ruler seek and seek-drag also lock onto nearby clip starts
 and ends, making it easier to line the tape head up before using **Set 0 at Playhead**.
+
+## Markers
+
+Markers belong to the current Cut and stay fixed to absolute timeline time.
+Changing tempo, time signature, or the Cut zero point does not move them.
+
+- Right-click the top ruler area and choose **Add Marker at Playhead** to drop
+  a marker at the current tape head.
+- Each marker draws as a thin vertical line through the whole timeline, with a
+  small label tab to the right of the line in the ruler.
+- Drag a marker left or right to move it. When snap is on, marker drags snap
+  the same way ruler seeking does.
+- Double-click a marker tab to name it. If you leave the name blank, TayPE
+  shows the marker's current index instead.
+- Right-click a marker tab to delete it or change its colour.
+- Long labels are truncated in the tab when needed. Hover the marker to see
+  the full name in popup help.
+- If two markers land on the same timestamp, TayPE keeps the existing marker
+  and collapses the duplicate.
+
+Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
+keyboard shortcuts page, to move between markers quickly.
