@@ -116,6 +116,18 @@ search in your browser instead of invoking Apple Help search.
 **Help -> Search TayPE Docs...** remains available on every platform as the
 explicit docs-search fallback.
 
+## Guild Picks
+
+Use **Tools -> Guild Picks** for a small curated list of plugins we rate for
+actually making records.
+
+Guild Picks carries this disclaimer:
+
+**No affiliations. No kickbacks. Just plugins we genuinely rate for making records.**
+
+The list is grouped into **Free**, **Honourware**, **Paid Sleepers**, and
+**Paid Premium**, and each item opens the official vendor page in your browser.
+
 ## Track States
 
 TayPE has three ways to think about tracks:
