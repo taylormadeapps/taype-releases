@@ -108,6 +108,7 @@ List all tracks with their channel settings.
       "color": "",
       "archived": false,
       "is_bus": false,
+      "tags": ["Vocals", "Lead Vocal"],
       "input_id": "1-2",
       "output_id": "master",
       "channel": {
@@ -154,6 +155,7 @@ Update a track's properties. Only provided fields are changed.
 | `sends` | array | no | Additional fan-out routes: `[{"target_id":"<bus-or-master>","level":0.0-4.0}]` |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
+| `tags` | array | no | Replace track tags with an array of tag strings |
 | `preamp_enabled` | boolean | no | Enable/disable channel preamp |
 | `preamp_drive` | number | no | Preamp drive: 0.0 to 36.0 dB |
 | `preamp_auto_gain` | boolean | no | Auto-gain compensation |
@@ -177,6 +179,11 @@ a non-bus.
 `set_track` also normalizes `input_id` to track mode: instrument tracks
 normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
 tracks normalize MIDI routes ("midi:*") to default audio ("").
+
+Compressor fields are also supported through `set_track`: `comp_enabled`,
+`comp_threshold`, `comp_ratio`, `comp_attack_ms`, `comp_release_ms`,
+`comp_knee`, `comp_makeup_gain`, `comp_log_release`, and
+`comp_sidechain_low_cut` (fixed `80 Hz` high-pass on the detector sidechain).
 
 **Returns:** Updated track object.
 
@@ -491,6 +498,7 @@ Get the current visibility and display state.
 ```json
 {
   "focus": false,
+  "focus_tag": "",
   "archive_view": false,
   "spill": false,
   "can_spill": false,
@@ -507,6 +515,7 @@ Toggle Focus mode (shows only relevant tracks).
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `enabled` | boolean | yes | Focus on/off |
+| `tag` | string | no | Optional focus tag (Focus-by-Tag) |
 
 ### `set_archive_view`
 
@@ -518,13 +527,13 @@ Toggle Archive View (show archived tracks).
 
 ### `set_spill`
 
-Toggle Spill (show tracks routed to selected bus).
+Toggle Spill (show tracks routed to the selected bus or master).
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `enabled` | boolean | yes | Spill on/off |
 
-Requires a bus track to be selected.
+Requires a bus or master track to be selected.
 
 ### `set_e_zoom`
 
@@ -656,12 +665,12 @@ re-check via `status` before assuming previous values are still valid.
 {
   "reel": { "name": "Default", "directory": "...", "sample_rate": 44100, "device_sr_matched": true },
   "transport": { "playing": false, "recording": false, "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
-  "tracks": [ { "id": "track_1", "name": "Audio 1", "volume": 1.0, "pan": 0.0, "mute": false, "solo": false, "peak_l": 0.0, "peak_r": 0.0 } ],
+  "tracks": [ { "id": "track_1", "name": "Audio 1", "tags": ["Vocals"], "volume": 1.0, "pan": 0.0, "mute": false, "solo": false, "peak_l": 0.0, "peak_r": 0.0 } ],
   "call_sign": "tape",
   "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },
   "personality": { "name": "Greg Zenner", "system_prompt": "..." },
   "theme": "normal",
-  "view": { "focus": false, "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
+  "view": { "focus": false, "focus_tag": "", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
   "metronome": { "enabled": false }
 }
 ```
@@ -842,10 +851,11 @@ Search the TONE3000 online library for NAM profiles.
 |-------|------|----------|-------------|
 | `query` | string | yes | Search query |
 | `sort` | string | no | "trending", "downloads", "newest", "relevance" |
-| `category` | string | no | "all", "preamp", "amp", "pedal", "summing" |
+| `category` | string | no | "all", "amp", "pedal", "full-rig", "ir", "outboard" |
+| `architecture` | string | no | "amx", "lstm", "wavenet", "convnet", "linear", "a2" |
 | `page` | number | no | Page number (default: 1) |
 
-**Returns:** Array of results with id, name, creator, architecture, file size, and download count.
+**Returns:** Array of results with id, name, creator, gear, `thumbnail_url`, download count, `architecture`, and `amx_eligible`. Architecture-filtered searches resolve those fields before filtering; unfiltered searches may return an empty `architecture` string when TONE3000 omits it.
 
 ### `download_tone3000`
 

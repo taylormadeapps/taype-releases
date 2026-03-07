@@ -16,7 +16,8 @@ The **transport bar** has playback controls, BPM display, and position
 readout. It stays along the bottom and remains visible; when the channel
 strip panel is open, the strip stays full-height and the transport aligns
 with the arranger width. The left-side view controls are ordered:
-**Show Mixer**, **Focus**, **Spill**, **Archive**.
+**Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**.
+The **Tags** popup opens near that button and stays inside the app window.
 
 ### Ruler Header Controls
 
@@ -34,16 +35,34 @@ Each track header shows:
 
 - **Colour strip** - click to change the track colour from 24 swatches
 - **Track name** - double-click to rename (only when stopped)
+  At medium/tall heights, the full button row stays pinned directly under the
+  title instead of dropping as the lane gets taller.
+- **Tags** - opens the tag cloud popup for this track
 - **R** - record arm (red circle when armed)
 - **MON** - software monitoring (hear input through the track channel strip)
 - **Bus** (school-bus icon) - designate as bus track (bus tracks receive from routed tracks)
 - **M** - mute (speaker icon, crossed out when muted)
 - **S** - solo
 - **Archive** - managed from the channel strip and MCP (not shown in timeline header)
+- **Tag pills** - at larger track heights, assigned tags appear as pills directly below the button row
 - **I/O labels** - input source and output destination (click to change)
   (at very small track heights, labels are hidden until you zoom in)
 - **Mini meter** - stereo peak meter in the header, updated at 4 Hz using
   the highest peak seen in each quarter-second window
+
+## Tag Cloud
+
+Click **Tags** on a track header to open the tag cloud.
+
+- **Both / Global / Reel** filters the cloud scope
+- Search field live-filters tag names
+- Clicking a tag toggles it on/off for that track
+- **New Tag** opens inline creation with scope choice:
+  - **Global** tags are shared across reels on this machine
+  - **Reel** tags are saved in the reel and travel with it
+
+The popup stays open while you assign multiple tags and closes when you click
+outside or press **Done**.
 
 ## Working with Clips
 
@@ -107,6 +126,10 @@ Double-click the overlap to reset both sides to a linear curve.
 Thin overlay scrollbars appear when you scroll and fade away after a moment.
 You can also drag the scrollbar thumbs directly.
 
+During playback, the timeline uses paged follow: when the tape head reaches
+the right edge of the arranger, the view jumps forward one page so the head
+returns to the left edge.
+
 ### Zooming
 
 **Horizontal zoom** (time):
@@ -142,11 +165,14 @@ Four view filters help you focus on what matters. All are toggles:
 |----------|------|-------------|
 | F | Focus | Show only tracks with clips at the tape head position |
 | A | Archive View | Toggle between active tracks and archived tracks |
-| G | Spill | Show the selected bus and all tracks routed to it |
+| G | Spill | Show the selected bus, or master, and all tracks routed directly to it |
 | E | E-Zoom | Zoom to fit the selected clip |
 
 Record-armed and selected tracks are always visible regardless of the
 active view filter.
+
+Focus can also be driven by MCP with a specific tag (Focus-by-Tag), which
+shows only tracks that carry that tag.
 
 ## Recording
 

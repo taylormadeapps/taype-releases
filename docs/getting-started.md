@@ -40,6 +40,9 @@ head to that position. Hold and drag to scrub.
 Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 
 - TayPE runs internally at **48 kHz**.
+- The Audio tab keeps the hardware selector rows at the top through **Audio
+  buffer size**. The device status, resampling, NAM, and **Apply Audio
+  Changes** controls sit underneath.
 - Use **Apply Audio Changes** if you want an explicit commit after editing
   audio settings.
 - If **Resampling** is **off**, the Sample rate field is read-only and shows
@@ -50,6 +53,12 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   in red and tells you to engage Resampling.
 - If **Resampling** is **on**, you can change the interface sample rate in the
   Audio settings while TayPE continues processing internally at 48 kHz.
+- **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
+  Apple Silicon, including mono/stereo LSTM instances and larger shared
+  batches.
+- **True Summing** only becomes available when **NAM AMX Acceleration** is on:
+  enabled means tracks feeding the master pass through NAM before the sum;
+  disabled means audio sums first and then runs through the stereo NAM bus.
 
 ## Editing
 

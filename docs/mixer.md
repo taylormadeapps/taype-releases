@@ -15,7 +15,8 @@ Each strip shows (top to bottom):
 - **Control buttons** - M (mute), S (solo), R (record arm), MON (software
   monitoring), A (archive), B (bus)
 - **Output selector** - where the track sends its audio
-- **Preamp section** - drive/trim control with toggles
+- **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
+  mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters
 - **EQ section** - 3-band parametric equaliser
 - **Compressor section** - dynamics processing
