@@ -58,13 +58,12 @@ confidence.
 - **Set Zero** — move the timeline origin to wherever you're standing, because the grid is a tape measure not law
 - **Mixer channel strip UX pass** — refinement of strip controls and interaction
 - **Sends in channel strip** — send routing visible and controllable from the strip
-- **Website refinement** — ruminantaudioworks.com gets a proper polish
-- **Private beta sign-up** — request a free beta licence key from the site, valid through to 1.0
 - **Reel file manager** — browse, open, save, and create reels from a proper file manager panel instead of bare dialogs
 - **Auto-save** — automatic background saves so you never lose work
 - **Reel versioning** — discover and navigate version history within a reel
 - **Thin Reel** — remove WAV files no longer referenced by any clip, reclaiming disk space
 - **Archive Reel** — zip up a reel and save the archive to a location of your choosing
+- **Plugin management** — enable/disable plugins from the scanner, organise with custom menu paths so the insert menu shows in folders (similar to Cubase/Logic plugin organisation)
 - **General polish and stabilisation** — the unsexy work that makes everything feel solid
 
 ---
@@ -82,6 +81,18 @@ when you're deep in a session.
 - **Multi-clip selection** — grab and move multiple clips at once
 - **Bounce in place** — render a track's processing into a new audio clip
 - **Ableton Link** — tempo sync with other apps and devices on your local network
+
+---
+
+## Gate
+
+The private beta checkpoint. Everything here ships before we open the
+door to people outside the inner circle.
+
+*Lock the front of house. Then open the doors.*
+
+- **Website refinement** — ruminantaudioworks.com gets a proper polish
+- **Private beta sign-up** — request a free beta licence key from the site, valid through to 1.0
 
 ---
 
