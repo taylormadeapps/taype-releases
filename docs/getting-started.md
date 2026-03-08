@@ -13,6 +13,43 @@ across time. This is where you record, arrange, and edit.
 **Mixer** - where you shape the sound. Faders, EQ, compression, plugin
 inserts. One channel strip per track, laid out left to right.
 
+## Opening and Creating Reels
+
+TayPE opens into the **Reel Browser**. That is the place to open an existing
+reel, jump into a recent one, or create a new one.
+
+Use **Open From File...** in the Reel Browser when the reel or pack you want
+is outside your normal library.
+
+Temporary bundles opened from system temp folders are not kept in Recents, so
+test or unpack scratch work does not pollute your normal reel list.
+
+When you create a reel, TayPE opens a native save dialog rooted at
+`~/Documents/Taype/Reels` and suggests a bundle name like
+`Untitled Reel.taype`. You can change both the location and the reel name in
+that one step.
+
+Working state is saved automatically while the transport is stopped. There is
+no separate Save command to manage. Press **Cmd+S** when you want to create a
+named checkpoint: a deliberate line in the sand you can come back to later.
+
+When you want a fresh start without dragging the old history behind you, use
+**Thin Reel...** in the Reel Browser. TayPE asks where to put the thinned
+bundle, appends `Thinned` to the current name by default, and leaves the
+source reel untouched. If you are short on storage, delete the old reel in
+Finder after you have checked the thinned one.
+
+In the Reel Browser history, the default filtered view is tag-driven: current
+state, named checkpoints, and branch-origin tags. If you branch from an
+autosave, TayPE tags that source commit so it stays visible as the branch node.
+Plain autosave heads stay hidden until you turn on **Show Autosaves** for the
+full save-by-save trail. The history view is a continuous vertical git-style
+graph: earliest at the top, newest at the bottom, current branch as the main
+spine, and side branches offset to the right. Autosaves on the same branch
+stay in one lane instead of cascading deeper with every commit. Use **Focus**
+in the history header to snap the browser back to the current state after
+exploring older commits and side branches.
+
 ## Recording
 
 1. Select a track by clicking its header in the timeline.
@@ -94,8 +131,8 @@ Use the **TayPE** application menu to open licensing:
 ## About TayPE
 
 Use **TayPE > About TayPE** to view the exact app version/build and the
-shipped third-party library versions and licences (JUCE, Signalsmith Stretch,
-and NeuralAmpModelerCore).
+shipped dependency versions and licences (JUCE, Signalsmith Stretch,
+NeuralAmpModelerCore, and the system Git runtime used for reel history).
 
 ## Popup Help
 

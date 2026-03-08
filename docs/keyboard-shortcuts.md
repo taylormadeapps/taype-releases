@@ -58,8 +58,11 @@ This file is created automatically on first launch with sensible defaults.
 
 | Shortcut | Action |
 |----------|--------|
-| Cmd+S | Save current reel (persist working state now) |
-| Cmd+Shift+S | Create checkpoint |
+| Cmd+S | Create checkpoint |
+| Cmd+R | Open Reel Browser |
+
+TayPE persists working state automatically while transport is stopped, so
+there is no separate user-facing Save command.
 
 ### View
 
@@ -111,8 +114,6 @@ is straightforward:
   "next_marker": ".",
   "go_to_marker_1": "1",
   "split_clip": "s",
-  "save_reel": "cmd+s",
-  "checkpoint": "cmd+shift+s",
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",

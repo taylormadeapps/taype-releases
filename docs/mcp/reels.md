@@ -11,7 +11,8 @@ Persist the current reel's working state immediately if it changed.
 If `name` is omitted, this is a plain save. If `name` is provided and differs
 from the current reel name, TayPE duplicates the current reel to a new
 `.taype` bundle and switches to it. Passing the current reel name behaves like
-plain save.
+plain save. If no reel is loaded, `name` is required and TayPE creates a new
+empty reel with that name.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -43,6 +44,7 @@ Get info about the currently loaded reel.
 **Returns:**
 ```json
 {
+  "loaded": true,
   "name": "Default",
   "directory": "/Users/.../Reels/Default.taype",
   "bundle_path": "/Users/.../Reels/Default.taype",
@@ -50,9 +52,22 @@ Get info about the currently loaded reel.
   "sample_rate": 44100,
   "device_sr_matched": true,
   "schema_version": 1,
-  "checkpoint_count": 3
+  "checkpoint_count": 3,
+  "current_branch": "main"
 }
 ```
+
+When no reel is loaded, `loaded` is `false` and the reel-specific path/name
+fields are empty strings.
+
+### `close_reel`
+
+Unload the current reel and leave TayPE in a no-reel state. TayPE flushes the
+working state first if needed.
+
+**Returns:** `{ "closed": true, "had_reel": true }`
+
+**Requires:** transport stopped
 
 ### `duplicate_reel`
 
@@ -112,6 +127,22 @@ List checkpoints for the current reel.
 }
 ```
 
+### `list_reel_history`
+
+List reel history. TayPE returns a compatibility `history` view for the
+current branch, a branch-aware `history_tree` for the visible commit tree,
+and a chronological `history_graph` for the Reel Browser's vertical graph view.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `include_timed_saves` | bool | no | When true, include autosave/timed-save commits |
+
+**Returns:** `{ "history": [...], "history_tree": [...], "history_graph": [{"lane":0,"parent_lane":-1,"parent_revision":"","current_lane":true}], "include_timed_saves": false, "current_branch": "main" }`
+
+With `include_timed_saves: false`, TayPE keeps the current state and tagged
+history anchors only. Plain autosaves stay hidden unless they were tagged as a
+branch origin when you restored from them.
+
 ### `revert_to_checkpoint`
 
 Revert the current reel working state to a checkpoint chosen by `id` or
@@ -122,7 +153,21 @@ Revert the current reel working state to a checkpoint chosen by `id` or
 | `id` | string | no | Checkpoint ID |
 | `name` | string | no | Checkpoint display name |
 
-**Returns:** `{ "reverted": true, "reel": "MyReel" }`
+**Returns:** `{ "reverted": true, "reel": "MyReel", "current_branch": "history/before-comp-20260308-113000" }`
+
+**Requires:** transport stopped
+
+### `restore_reel_history`
+
+Restore a historical revision chosen by commit SHA. TayPE preserves the
+current line if needed, creates a new history branch from the selected
+revision, and commits the restored state there.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `revision` | string | yes | Commit SHA to branch from and restore |
+
+**Returns:** `{ "restored": true, "revision": "abc123...", "reel": "MyReel", "current_branch": "history/rough-mix-20260308-113412" }`
 
 **Requires:** transport stopped
 
@@ -169,29 +214,29 @@ Unpack a `.tpak` archive into a `.taype` bundle and open the unpacked reel.
 
 ### `preview_thin_reel`
 
-Preview which bundle-owned media would be removed by a thin operation.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `protectCheckpoints` | bool | no | When true, preserve media reachable from checkpoints |
+Preview a clean-slate thin export of the current reel.
 
 **Returns:**
 ```json
 {
-  "removable_media": ["media/a1b2.wav"],
-  "protected_media": ["media/c3d4.wav"]
+  "kept_media": ["media/current.wav"],
+  "discarded_media": ["media/old-take.wav"],
+  "source_unchanged": true,
+  "history_reset": true
 }
 ```
 
 ### `thin_reel`
 
-Delete unreachable bundle-owned media from the current reel.
+Create a new clean-slate `.taype` bundle from the current working state,
+reset its history to a fresh repo, and open it. The source reel stays
+untouched.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
-| `protectCheckpoints` | bool | no | When true, preserve media reachable from checkpoints |
+| `destination` | string | no | Target `.taype` bundle path; defaults to `{Current Name} Thinned.taype` beside the current reel |
 
-**Returns:** `{ "thinned": true, "removed_count": 4 }`
+**Returns:** `{ "thinned": true, "bundle_path": "/path/to/My Reel Thinned.taype", "discarded_count": 4, "history_reset": true, "source_unchanged": true }`
 
 **Requires:** transport stopped
 
