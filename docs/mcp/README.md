@@ -58,6 +58,10 @@ Any client that supports the MCP stdio transport can connect by launching
 `taype-mcp` as a subprocess. The bridge handles the handshake and exposes
 all available tools.
 
+If a client sends malformed JSON, the bridge returns the standard JSON-RPC
+parse error (`-32700`). If the JSON is valid but not a valid request object,
+the bridge returns `-32600` (`Invalid Request`).
+
 ## What You Get
 
 On connection, the MCP handshake returns:
