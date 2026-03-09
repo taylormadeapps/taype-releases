@@ -153,6 +153,21 @@ search in your browser instead of invoking Apple Help search.
 **Help -> Search TayPE Docs...** remains available on every platform as the
 explicit docs-search fallback.
 
+## App Language
+
+Use **Help -> Language** to pick the app language TayPE should use on the
+next launch. TayPE writes the selection to your user settings immediately,
+shows a confirmation modal in the newly selected language, and asks you to
+restart so the whole interface picks it up cleanly.
+
+The menu only shows language files that are actually present and valid in
+your TayPE language folder, so custom or in-progress language packs can be
+tested without changing the app build.
+
+The current alpha bundle ships with **English (UK)** and a draft
+**Français** app pack. If you add or remove valid language CSV files in your
+TayPE language folder, that menu updates to match what is actually installed.
+
 ## Guild Picks
 
 Use **Tools -> Guild Picks** for a small curated list of plugins we rate for
