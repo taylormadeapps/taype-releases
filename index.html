@@ -106,6 +106,12 @@ nav .nav-links {
     align-items: center;
 }
 
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 nav .nav-links a {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -129,10 +135,6 @@ nav .nav-links a:hover { color: var(--brass); }
 }
 
 .lang-switch {
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    z-index: 2;
     display: flex;
     gap: 0.35rem;
     padding: 0.35rem;
@@ -603,19 +605,29 @@ footer {
 /* ---- Responsive ---- */
 
 @media (max-width: 640px) {
-    nav { padding: 0 1rem; }
-    nav .nav-links { gap: 0.75rem; }
-    nav .nav-links a { font-size: 0.75rem; }
-    .lang-switch {
-        top: 0.75rem;
-        right: 1rem;
+    nav {
+        height: auto;
+        min-height: 56px;
+        padding: 0.65rem 1rem;
+        align-items: flex-start;
     }
+    .nav-right {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.45rem;
+    }
+    nav .nav-links {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    nav .nav-links a { font-size: 0.75rem; }
     .lang-button {
         padding: 0.3rem 0.55rem;
         font-size: 0.7rem;
     }
     section { padding: 3rem 1.25rem; }
-    .hero { padding: 5rem 1.25rem 3rem; }
+    .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(280px, 70vw); }
     .features-grid { grid-template-columns: 1fr; }
     .pricing-cards { grid-template-columns: 1fr; }
@@ -678,12 +690,18 @@ footer {
         <img id="nav-logo" src="assets/img/logo-square.png" alt="TayPE logo">
         <span>TAYPE</span>
     </a>
-    <div class="nav-links">
-        <a id="nav-features" href="#features">Features</a>
-        <a id="nav-pricing" href="#pricing">Pricing</a>
-        <a id="nav-docs" href="https://ruminant-audio-works.gitbook.io/taype/" target="_blank">Docs</a>
-        <a id="nav-community" href="#community">Community</a>
-        <a id="nav-download-link" href="#download" class="nav-cta">Coming Soon</a>
+    <div class="nav-right">
+        <div class="lang-switch" aria-label="Language">
+            <button type="button" class="lang-button is-active" data-lang-choice="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" data-lang-choice="ja" aria-pressed="false" lang="ja">日本語</button>
+        </div>
+        <div class="nav-links">
+            <a id="nav-features" href="#features">Features</a>
+            <a id="nav-pricing" href="#pricing">Pricing</a>
+            <a id="nav-docs" href="https://ruminant-audio-works.gitbook.io/taype/" target="_blank">Docs</a>
+            <a id="nav-community" href="#community">Community</a>
+            <a id="nav-download-link" href="#download" class="nav-cta">Coming Soon</a>
+        </div>
     </div>
 </nav>
 
@@ -692,10 +710,6 @@ footer {
 <!-- ============================================================ -->
 
 <section class="hero" id="top">
-    <div class="lang-switch" aria-label="Language">
-        <button type="button" class="lang-button is-active" data-lang-choice="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-button" data-lang-choice="ja" aria-pressed="false" lang="ja">日本語</button>
-    </div>
     <img id="hero-logo" src="assets/img/logo.png" alt="TayPE - tape reel logo" class="hero-logo">
     <h1>TAYPE</h1>
     <p id="hero-descriptor" class="hero-descriptor">Multitrack DAW for macOS</p>
