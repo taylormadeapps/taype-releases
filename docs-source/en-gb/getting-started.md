@@ -144,11 +144,14 @@ control does.
 
 ## RTFM and Docs Search
 
-Use **Help -> Read the Fine Manual** to open the TayPE docs in your browser.
+Use **Help -> Read the Fine Manual** to open the matching TayPE GitBook
+language in your browser when that translation exists. If your current app
+locale does not have a published docs section yet, TayPE falls back to English.
 
 On macOS, use the search field at the top of the **Help** menu to search the
-docs. Pressing Return there, or clicking the search button, opens that doc
-search in your browser instead of invoking Apple Help search.
+docs. Pressing Return there, or clicking the search button, opens that search
+in the matching docs language in your browser instead of invoking Apple Help
+search. If that locale has no GitBook section, the search falls back to English.
 
 **Help -> Search TayPE Docs...** remains available on every platform as the
 explicit docs-search fallback.
@@ -165,7 +168,7 @@ your TayPE language folder, so custom or in-progress language packs can be
 tested without changing the app build.
 
 The current alpha bundle ships with **English (UK)** plus draft
-**American**, **Français**, **Deutsch**, **Español**, **Íslenska**,
+**America English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
 **Esperanto**, and **日本語** app packs. If you add or remove valid language
 CSV files in your TayPE language folder, that menu updates to match what is
 actually installed.
