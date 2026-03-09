@@ -170,6 +170,10 @@ The current alpha bundle ships with **English (UK)** plus draft
 CSV files in your TayPE language folder, that menu updates to match what is
 actually installed.
 
+The startup splash and plugin-scan splash follow that same selected app
+language for their rotating gregisms, but those lines stay bundled inside
+the app rather than coming from the editable CSV language packs.
+
 ## Guild Picks
 
 Use **Tools -> Guild Picks** for a small curated list of plugins we rate for
