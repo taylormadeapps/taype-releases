@@ -2,9 +2,9 @@
 
 ## Ghost Clip
 
-While recording, a translucent red "ghost clip" grows on the armed track showing where audio is being captured. The waveform updates roughly once per second so you can see the signal coming in.
+While recording, a translucent red "ghost clip" grows on each track admitted to the record pass, showing where audio is being captured. The waveform updates roughly once per second so you can see the signal coming in.
 
-When you stop, the ghost clip is replaced by the real clip with its final waveform.
+When you stop, each ghost clip is replaced by its real clip with the final waveform.
 
 ## Timing
 
