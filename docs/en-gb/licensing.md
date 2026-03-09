@@ -20,3 +20,13 @@ If you have accessibility requirements, TayPE is 33% off. DM us on
 TayPE includes a generous evaluation period so you can try it properly before
 buying. No nag screens, no watermarks on your audio, no artificial limitations
 during the trial.
+
+## Agreement
+
+The About window includes the current end user licence agreement in a
+scrollable panel, and the signed installer package uses that same agreement
+text. The About window also lists the linked third-party dependencies in the
+build, including the embedded `libgit2` reel-history backend. There is one
+canonical licence source for both surfaces, so the wording stays in sync. For
+`libgit2`, the About copy explicitly notes that TayPE links it under
+libgit2's GPLv2 linking exception.
