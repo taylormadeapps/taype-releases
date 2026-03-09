@@ -164,9 +164,11 @@ The menu only shows language files that are actually present and valid in
 your TayPE language folder, so custom or in-progress language packs can be
 tested without changing the app build.
 
-The current alpha bundle ships with **English (UK)** and a draft
-**Français** app pack. If you add or remove valid language CSV files in your
-TayPE language folder, that menu updates to match what is actually installed.
+The current alpha bundle ships with **English (UK)** plus draft
+**American**, **Français**, **Deutsch**, **Español**, **Íslenska**,
+**Esperanto**, and **日本語** app packs. If you add or remove valid language
+CSV files in your TayPE language folder, that menu updates to match what is
+actually installed.
 
 ## Guild Picks
 
