@@ -92,7 +92,7 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   Audio settings while TayPE continues processing internally at 48 kHz.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
-  batches.
+  batches. New installs and fresh preferences leave this on by default.
 - **True Summing** now lives on the master strip's **NAM Summing** panel.
   It only becomes active when **NAM AMX Acceleration** is on: enabled means
   tracks feeding the master pass through NAM before the sum; disabled means
