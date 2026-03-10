@@ -4,6 +4,8 @@ Four serial plugin slots for VST3 plugins. Click an empty slot to load a plugin 
 
 The master bus has the same four insert slots, so you can run processing directly on the master strip.
 
+On a mono strip, TayPE keeps the strip mono through the channel path. If an insert only works in stereo, TayPE feeds it dual-mono and folds the result back to mono before pan. That keeps stereo-only effects usable without changing the track back to stereo.
+
 ## Plugin Manager
 
 Open **Tools -> Plugin Manager** to organise the scanner catalogue before you

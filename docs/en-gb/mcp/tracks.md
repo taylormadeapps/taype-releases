@@ -19,6 +19,8 @@ List all tracks with their channel settings.
       "color": "",
       "archived": false,
       "is_bus": false,
+      "strip_mode": "stereo",
+      "phase_flip": false,
       "tags": ["Vocals", "Lead Vocal"],
       "input_id": "1-2",
       "output_id": "master",
@@ -61,6 +63,8 @@ Update a track's properties. Only provided fields are changed.
 | `solo` | boolean | no | Solo state |
 | `monitor` | boolean | no | Software monitoring (tracks: hear input through chain; buses: summing toggle) |
 | `is_bus` | boolean | no | Bus designation |
+| `strip_mode` | string | no | `"stereo"` or `"mono"` on regular tracks. Buses and the master track are always stereo. |
+| `phase_flip` | boolean | no | Flip polarity on the strip output |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `output_id` | string | no | Output target: "master" or bus track ID |
 | `sends` | array | no | Additional fan-out routes: `[{"target_id":"<bus-or-master>","level":0.0-4.0}]` |
@@ -75,9 +79,9 @@ Update a track's properties. Only provided fields are changed.
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |
 
-Volume, pan, mute, solo, monitor, and preamp parameters take effect
+Volume, pan, mute, solo, monitor, `phase_flip`, and preamp parameters take effect
 immediately (safe during playback). Name, colour, archived, bus, input,
-output, and send changes require transport to be stopped.
+output, send, and `strip_mode` changes require transport to be stopped.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous
@@ -89,7 +93,9 @@ a non-bus.
 
 `set_track` also normalizes `input_id` to track mode: instrument tracks
 normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
-tracks normalize MIDI routes ("midi:*") to default audio ("").
+tracks normalize MIDI routes ("midi:*") to default audio (""). Audio tracks
+also normalize hardware input choice to the strip mode: mono strips keep mono
+inputs, stereo strips keep stereo pairs.
 
 Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_threshold`, `comp_ratio`, `comp_attack_ms`, `comp_release_ms`,
