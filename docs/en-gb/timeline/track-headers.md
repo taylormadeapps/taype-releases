@@ -10,7 +10,9 @@ Each track header shows the following controls. At very small track heights, som
 - **Track name** — double-click to rename (only when stopped). With popup help enabled, hovering shows the full title.
 - **Tags** — opens the tag cloud popup for this track
 - **R** — record arm (red circle when armed)
-- **MON** — software monitoring (hear input through the track channel strip)
+- **MON** — software monitoring (hear input through the track channel strip).
+  When several live-monitored tracks are active, TayPE aligns the faster ones
+  to the slowest monitored path so the cue stays tight.
 - **Bus** — designate as bus track (white bus glyph, fills green when active)
 - **M** — mute (speaker icon, crossed out when muted)
 - **S** — solo

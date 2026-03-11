@@ -25,13 +25,41 @@ selected Cut's zero point.
 
 Get current transport state.
 
+`pdc.monitor_reference_latency_samples` is the slowest active monitored live
+path in the current session. Per-track `monitoring_latency` is the true
+downstream live-path latency for that monitored source.
+`monitor_alignment_delay` is the extra audition-only delay currently applied
+to faster monitored live paths so they arrive with that reference. A track
+with `monitor_alignment_reference: true` is itself one of the current
+slowest monitored live paths.
+
 **Returns:**
 ```json
 {
   "playing": false,
   "position": 12.5,
   "duration": 180.0,
-  "zero_time_seconds": 8.0
+  "zero_time_seconds": 8.0,
+  "recording": false,
+  "pdc": {
+    "total_session_latency_samples": 1024,
+    "total_session_latency_ms": 23.2,
+    "master_chain_latency_samples": 0,
+    "mix_fx_latency_samples": 0,
+    "monitor_reference_latency_samples": 768,
+    "tracks": [
+      {
+        "track_id": "track_1",
+        "chain_latency": 512,
+        "compensation": 512,
+        "live_path_latency": 768,
+        "monitoring_latency": 768,
+        "monitor_alignment_delay": 256,
+        "live_monitored": true,
+        "monitor_alignment_reference": false
+      }
+    ]
+  }
 }
 ```
 

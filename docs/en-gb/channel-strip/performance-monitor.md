@@ -8,6 +8,18 @@ Rows display as a routing tree under the master bus, so bus chains are nested vi
 
 The **Lvl** column shows routing depth from master (L0 = master, deeper levels further upstream). Each stage shows `% | ms` per track, and the table includes per-track enabled plugin count to spot heavy chains quickly.
 
+The timing columns now split playback and monitoring truth explicitly:
+
+- **Chain** — the track's own insert/strip latency
+- **Live** — the downstream live-path latency a monitored source would feel to the output
+- **PDC** — playback compensation applied to prerecorded material
+- **Mon** — software-monitor alignment state for active monitored paths
+
+In the **Mon** column:
+
+- `Ref` means this track is one of the current slowest monitored reference paths
+- `+N smp` means TayPE is delaying this track's live monitored contribution by `N` samples so it lands with the reference
+
 ## Colour Coding
 
 Stage colour bands are per-node hints:
@@ -24,6 +36,7 @@ The summary includes:
 
 - **Critical path (est)** — the longest active dependency chain in the current block
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
+- **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
 - **Host CPU** — total TayPE process usage across all logical cores (0–100%)
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
