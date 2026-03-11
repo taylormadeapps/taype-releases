@@ -26,7 +26,7 @@ Click the **browse** button to open the Profile Browser, where you can search TO
 
 ### Profile Browser
 
-TONE3000 rows show the model thumbnail, type, creator, architecture, and an AMX badge for LSTM/AMX-compatible captures. Click a thumbnail to open its page on tone3000.com.
+TONE3000 rows show the model thumbnail, type, creator, architecture, and an AMX badge for LSTM/AMX-compatible captures. Use the **View Profile** link at the bottom right of a row to open its page on tone3000.com.
 
 The **AMX Compatible** filter narrows results to LSTM captures that qualify for TayPE's accelerated path. The browser searches forward through the library until it finds matching rows.
 

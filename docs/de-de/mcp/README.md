@@ -9,7 +9,13 @@ offenen Standard zur Verbindung von KI-Assistenten, Tools und Anwendungen.
 
 In TayPE: **Tools > Install Claude Connector**.
 
+### Codex
+
+In TayPE: **Tools > Install Codex Connector**.
+
 ### Manuelle Konfiguration
+
+Für Claude Desktop:
 
 ```json
 {
@@ -19,4 +25,11 @@ In TayPE: **Tools > Install Claude Connector**.
     }
   }
 }
+```
+
+Für Codex:
+
+```toml
+[mcp_servers.taype]
+command = "/Applications/Taype.app/Contents/MacOS/taype-mcp"
 ```

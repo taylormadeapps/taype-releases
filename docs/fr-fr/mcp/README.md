@@ -17,7 +17,13 @@ le client MCP et l'application.
 
 Dans TayPE, utilisez **Tools > Install Claude Connector**.
 
+### Codex
+
+Dans TayPE, utilisez **Tools > Install Codex Connector**.
+
 ### Configuration manuelle
+
+Pour Claude Desktop :
 
 ```json
 {
@@ -27,6 +33,13 @@ Dans TayPE, utilisez **Tools > Install Claude Connector**.
     }
   }
 }
+```
+
+Pour Codex :
+
+```toml
+[mcp_servers.taype]
+command = "/Applications/Taype.app/Contents/MacOS/taype-mcp"
 ```
 
 ## Concepts

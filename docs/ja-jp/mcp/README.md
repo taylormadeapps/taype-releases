@@ -22,13 +22,19 @@ TayPE (running app)
 
 ## 接続中
 
-### クロードデスクトップ (推奨)
+### クロードデスクトップ
 
 TayPE で、**[ツール] > [Claude Connector のインストール]** に移動します。これにより、TayPE に接続するように Claude Desktop が自動的に構成されます。手動で編集する必要はありません。インストール後に Claude Desktop を再起動します。会話を開始する前に TayPE を実行する必要があります。
+
+### Codex
+
+TayPE で、**[ツール] > [Codex Connector のインストール]** に移動します。これにより、Codex に TayPE がローカル MCP サーバーとして追加されます。手動で編集する必要はありません。インストール後に Codex を再起動します。セッションを開始する前に TayPE を実行する必要があります。
 
 ### 手動構成
 
 自分で設定したい場合、または別の MCP クライアントを使用している場合は、TayPE を MCP 構成に追加します。
+
+Claude Desktop の場合:
 
 ```json
 {
@@ -38,6 +44,13 @@ TayPE で、**[ツール] > [Claude Connector のインストール]** に移動
     }
   }
 }
+```
+
+Codex の場合:
+
+```toml
+[mcp_servers.taype]
+command = "/Applications/Taype.app/Contents/MacOS/taype-mcp"
 ```
 
 ### 他の MCP クライアント
