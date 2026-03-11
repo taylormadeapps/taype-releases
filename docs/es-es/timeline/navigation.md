@@ -10,8 +10,11 @@
 
 - **Cmd + rueda** para zoom horizontal
 - **Option + rueda** para zoom vertical
-- **Cmd+Option+= / Cmd+Option+-**
-- **Cmd+Option+0**
+- **= / -**
+- **Shift+-**
+- **Shift+=**
+
+Al usar el gesto de arrastre con clic derecho para paneo/zoom, TayPE cambia al cursor de lupa hasta soltar.
 
 ## E-Zoom
 

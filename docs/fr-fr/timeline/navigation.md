@@ -17,8 +17,11 @@ droit, l'affichage saute d'une page.
 
 **Zoom vertical** :
 - **Option + molette**
-- **Cmd+Option+= / Cmd+Option+-**
-- **Cmd+Option+0**
+- **= / -**
+- **Shift+-**
+- **Shift+=**
+
+Pendant le geste panoramique/zoom au clic droit, TayPE affiche un curseur en forme de loupe jusqu'au relâchement.
 
 ## E-Zoom
 

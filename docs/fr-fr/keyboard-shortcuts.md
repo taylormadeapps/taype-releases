@@ -85,9 +85,10 @@ arrêté, donc il n'existe pas de commande Save séparée pour l'utilisateur.
 |----------|--------|
 | Cmd + molette | Zoom horizontal |
 | Option + molette | Zoom vertical |
-| Cmd+Option+= | Agrandir les pistes |
-| Cmd+Option+- | Réduire les pistes |
-| Cmd+Option+0 | Réinitialiser la hauteur de piste |
+| = | Agrandir les pistes |
+| - | Réduire les pistes |
+| Shift+- | Réinitialiser la hauteur de piste |
+| Shift+= | Passer la hauteur de piste au maximum |
 
 ### Souris
 

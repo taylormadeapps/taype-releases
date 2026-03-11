@@ -83,9 +83,10 @@ TayPE speichert den Arbeitsstand automatisch, solange der Transport steht.
 |----------|--------|
 | Cmd + Mausrad | Horizontal zoomen |
 | Option + Mausrad | Vertikal zoomen |
-| Cmd+Option+= | Tracks vergrößern |
-| Cmd+Option+- | Tracks verkleinern |
-| Cmd+Option+0 | Track-Höhe zurücksetzen |
+| = | Tracks vergrößern |
+| - | Tracks verkleinern |
+| Shift+- | Track-Höhe zurücksetzen |
+| Shift+= | Track-Höhe auf Maximum setzen |
 
 ### Maus
 

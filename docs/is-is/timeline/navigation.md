@@ -10,8 +10,11 @@
 
 - **Cmd + hjól**
 - **Option + hjól**
-- **Cmd+Option+= / Cmd+Option+-**
-- **Cmd+Option+0**
+- **= / -**
+- **Shift+-**
+- **Shift+=**
+
+Við hægrismelltu pan/zoom-dragi sýnir TayPE stækkunargler-bendil þar til sleppt er.
 
 ## E-Zoom
 

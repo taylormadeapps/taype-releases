@@ -82,9 +82,10 @@ TayPE は、トランスポートが停止している間、動作状態を自�
 |----------|--------|
 | Cmd + mouse wheel | Horizontal zoom (centred on tape head) |
 | Option + mouse wheel | Vertical zoom (anchored to selected track) |
-| Cmd+Option+= | Zoom in tracks |
-| Cmd+Option+- | Zoom out tracks |
-| Cmd+Option+0 | Reset track height to default |
+| = | Zoom in tracks |
+| - | Zoom out tracks |
+| Shift+- | Reset track height to default |
+| Shift+= | Jump track height to maximum |
 
 ### ねずみ
 
