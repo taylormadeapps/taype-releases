@@ -81,9 +81,10 @@ Se crea automáticamente al primer arranque.
 |----------|--------|
 | Cmd + rueda | Zoom horizontal |
 | Option + rueda | Zoom vertical |
-| Cmd+Option+= | Acercar pistas |
-| Cmd+Option+- | Alejar pistas |
-| Cmd+Option+0 | Restablecer altura de pista |
+| = | Acercar pistas |
+| - | Alejar pistas |
+| Shift+- | Restablecer altura de pista |
+| Shift+= | Llevar la altura de pista al máximo |
 
 ## Ratón
 

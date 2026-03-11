@@ -16,8 +16,11 @@ Während der Wiedergabe nutzt die Timeline seitenweises Follow.
 
 **Vertikal**:
 - **Option + Mausrad**
-- **Cmd+Option+= / Cmd+Option+-**
-- **Cmd+Option+0**
+- **= / -**
+- **Shift+-**
+- **Shift+=**
+
+Beim Pan/Zoom per Rechtsklick-Drag zeigt TayPE bis zum Loslassen einen Lupen-Cursor.
 
 ## E-Zoom
 

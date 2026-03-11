@@ -84,9 +84,10 @@ there is no separate user-facing Save command.
 |----------|--------|
 | Cmd + mouse wheel | Horizontal zoom (centred on tape head) |
 | Option + mouse wheel | Vertical zoom (anchored to selected track) |
-| Cmd+Option+= | Zoom in tracks |
-| Cmd+Option+- | Zoom out tracks |
-| Cmd+Option+0 | Reset track height to default |
+| = | Zoom in tracks |
+| - | Zoom out tracks |
+| Shift+- | Reset track height to default |
+| Shift+= | Jump track height to maximum |
 
 ### Mouse
 
@@ -117,6 +118,10 @@ is straightforward:
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",
+  "zoom_in_vertical": "=",
+  "zoom_out_vertical": "-",
+  "zoom_reset_vertical": "shift+-",
+  "zoom_max_vertical": "shift+=",
   "toggle_focus": "f"
 }
 ```
