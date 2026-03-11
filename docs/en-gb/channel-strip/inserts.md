@@ -2,11 +2,9 @@
 
 Four serial plugin slots for VST3 plugins. Click an empty slot to load a plugin from the scanner. Right-click a loaded slot for bypass, remove, or to open the plugin editor.
 
-If you load an instrument plugin, TayPE treats the first instrument slot as the sound source at the top of the strip. Any remaining effect slots still behave like normal inserts after EQ and compression, before the fader.
-
 The master bus has the same four insert slots, so you can run processing directly on the master strip.
 
-On a mono strip, TayPE keeps the strip mono through the channel path. If an insert only works in stereo, TayPE feeds it dual-mono and folds the result back to mono before pan. That keeps stereo-only effects usable without changing the track back to stereo.
+The **INSERTS** header always lets you collapse or reopen the rack, even when no plugins are loaded.
 
 ## Plugin Manager
 
@@ -35,7 +33,7 @@ The insert panel shows two thin comparison meters for gain staging. The bar abov
 
 The top meter carries a **PK** / **RMS** mode button. The bottom meter has an **AUTO** button — click it and TayPE listens for about 3 seconds, then writes a hidden post-insert trim so the output matches the input level.
 
-The AUTO button stays dim for an instrument slot, since there's no meaningful dry input to compare against there.
+The AUTO button stays dim on instrument insert chains, since there's no meaningful pre-rack audio reference to match against.
 
 ## Plugin Sandboxing
 

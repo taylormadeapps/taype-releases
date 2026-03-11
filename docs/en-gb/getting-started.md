@@ -153,8 +153,9 @@ docs. Pressing Return there, or clicking the search button, opens that search
 in the matching docs language in your browser instead of invoking Apple Help
 search. If that locale has no GitBook section, the search falls back to English.
 
-**Help -> Search TayPE Docs...** remains available on every platform as the
-explicit docs-search fallback.
+**Help -> Search TayPE Docs...** stays available on every platform. On macOS it
+now jumps straight to the docs in your browser without opening a separate modal
+first.
 
 ## App Language
 
