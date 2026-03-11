@@ -21,6 +21,8 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 - **Cmd+Option+=** / **Cmd+Option+-** — zoom in / out from keyboard
 - **Cmd+Option+0** — reset to default track height
 
+TayPE opens with a taller default track height so the track controls and labels are visible straight away.
+
 ## E-Zoom
 
 Press **E** to zoom the view to fit the selected clip. Press **E** again to snap back to your previous zoom and scroll position.
