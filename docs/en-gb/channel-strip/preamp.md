@@ -30,7 +30,7 @@ TONE3000 rows show the model thumbnail, type, creator, architecture, and an AMX 
 
 The **AMX Compatible** filter narrows results to LSTM captures that qualify for TayPE's accelerated path. The browser searches forward through the library until it finds matching rows.
 
-A spinner appears while search, favourites refresh, or download metadata is loading. If TONE3000 favourite sync is temporarily unavailable, starred profiles are still saved locally.
+A spinner appears while search, favourites refresh, or download metadata is loading. If TONE3000 favourite sync is temporarily unavailable, starred profiles are still saved locally. Changes to the TONE3000 API key in Preferences are picked up the next time you open the browser, so you do not need to relaunch TayPE.
 
 ### NAM Controls
 

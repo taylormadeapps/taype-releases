@@ -4,6 +4,8 @@ Four serial plugin slots for VST3 plugins. Click an empty slot to load a plugin 
 
 The master bus has the same four insert slots, so you can run processing directly on the master strip.
 
+The **INSERTS** header always lets you collapse or reopen the rack, even when no plugins are loaded.
+
 ## Plugin Manager
 
 Open **Tools -> Plugin Manager** to organise the scanner catalogue before you
