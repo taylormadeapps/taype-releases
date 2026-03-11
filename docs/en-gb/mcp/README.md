@@ -30,17 +30,25 @@ TayPE (running app)
 
 ## Connecting
 
-### Claude Desktop (recommended)
+### Claude Desktop
 
 In TayPE, go to **Tools > Install Claude Connector**. This automatically
 configures Claude Desktop to connect to TayPE - no manual editing needed.
 Restart Claude Desktop after installing, and TayPE must be running before
 you start a conversation.
 
+### Codex
+
+In TayPE, go to **Tools > Install Codex Connector**. This tells Codex to add
+TayPE as a local MCP server - no manual editing needed. Restart Codex after
+installing, and TayPE must be running before you start a session.
+
 ### Manual Configuration
 
 If you prefer to set it up yourself, or you're using a different MCP
 client, add TayPE to your MCP configuration:
+
+For Claude Desktop:
 
 ```json
 {
@@ -50,6 +58,13 @@ client, add TayPE to your MCP configuration:
     }
   }
 }
+```
+
+For Codex:
+
+```toml
+[mcp_servers.taype]
+command = "/Applications/Taype.app/Contents/MacOS/taype-mcp"
 ```
 
 ### Other MCP Clients
