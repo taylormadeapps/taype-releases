@@ -26,6 +26,8 @@ When a track switches into instrument mode, input routes automatically change to
 
 **MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
 
+On instrument tracks, the recorded take prints the instrument itself. The rest of the strip and any effect inserts stay live playback processing, so you can change that sound later without re-recording the performance.
+
 **Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 
 If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out — the setting is preserved until you plug it back in.

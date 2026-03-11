@@ -22,7 +22,7 @@ Each strip shows (top to bottom):
 - **Filter section** - high-pass and low-pass filters
 - **EQ section** - 3-band parametric equaliser
 - **Compressor section** - dynamics processing
-- **Insert slots** - 4 slots for VST3 plugins
+- **Insert slots** - 4 slots for VST3 plugins and instruments
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -44,7 +44,9 @@ input. Turning **B** off disconnects any tracks routed to that bus so your
 routing stays valid.
 
 **Insert slots** - click to load a plugin, right-click for a context menu
-with options like bypass and remove.
+with options like bypass and remove. If the first loaded insert is an
+instrument, it becomes the track's sound source; the remaining effect slots
+still work like normal post-strip inserts.
 
 **Track name** - double-click to edit inline (only when transport is
 stopped).
