@@ -15,8 +15,29 @@ inserts. One channel strip per track, laid out left to right.
 
 ## Opening and Creating Reels
 
-TayPE opens into the **Reel Browser**. That is the place to open an existing
-reel, jump into a recent one, or create a new one.
+TayPE opens onto a fresh real reel with Track 1 armed and a welcome card over
+the live desk. Hit **Let's Roll** and record, or branch straight to **Open Reel
+Browser**, **Audio Preferences** (which lands on the **Audio** tab), or
+**Plugin Manager** from that card.
+The audio section on that card now starts with one plain sample-rate and
+readiness line, then uses green ticks and amber warning triangles only for the
+device lines underneath.
+The card signs off with one last reminder that native preamps and TONE3000 NAM
+support are already built in before you start piling on plugins.
+If you need to hand the room over in another language, the small language pill
+under **Let's Roll** gives you the same next-launch switch as the Help menu
+without making the whole startup screen shout about it.
+If you're unlicensed, the nag now follows that startup path in order instead
+of racing it: splash, welcome, then nag, with the welcome step dismissed
+before the nag appears.
+
+If you double-click a `.taype` reel or `.tpak` pack in Finder, TayPE opens
+straight into that session path instead of stopping to show the welcome card
+first. `.tpak` packs unpack into your normal reels folder with a unique name
+and then open automatically.
+
+The **Reel Browser** is where you open an existing reel, jump into a recent
+one, or create a new intentional session branch.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
@@ -136,8 +157,9 @@ NeuralAmpModelerCore, and the system Git runtime used for reel history).
 
 ## Popup Help
 
-Use **Help -> Popup Help** or the transport bar's far-right **?** toggle to
-turn on hover help across the transport, timeline, mixer, and channel strip.
+Popup help starts enabled by default. Use **Help -> Popup Help** or the
+transport bar's far-right **?** toggle to turn hover help on or off across
+the transport, timeline, mixer, and channel strip.
 When popup help is enabled, the **?** button lights green. After you rest the
 pointer on a control for about **0.7 seconds**, TayPE explains what that
 control does.
