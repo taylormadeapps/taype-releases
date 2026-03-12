@@ -14,16 +14,19 @@ Each strip shows (top to bottom):
 
 - **Track name** - double-click to rename
 - **Input selector** - which audio interface input the track records from
-- **Control buttons** - M (mute), S (solo), R (record arm), MON (software
-  monitoring), A (archive), B (bus)
+- **Control buttons** - regular tracks show M (mute), S (solo), Tag,
+  A (archive), MON (software monitoring), and R (record arm). The master
+  strip keeps only M.
 - **Output selector** - where the track sends its audio
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
-  mode-dependent Drive or NAM Output Gain
+  mode-dependent Drive or NAM Output Gain. On the master strip, this slot is
+  replaced by **NAM Summing** in the same vertical position.
 - **Filter section** - high-pass and low-pass filters
 - **EQ section** - 3-band parametric equaliser
 - **Compressor section** - dynamics processing
 - **Insert slots** - 4 slots for VST3 plugins
-- **Pan knob** - stereo position
+- **Pan row** - gain readout on the left, mono/stereo and phase icons beside
+  it, pan knob in the middle
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
   (display updates at 4 Hz and keeps transient peaks per update window)
@@ -53,6 +56,10 @@ stopped).
 
 Tracks appear in the same order as the timeline. The master bus is always
 the rightmost strip.
+
+Bus strips get a little extra breathing room in the rack so submix runs read
+as grouped blocks. Adjacent buses share the middle edge, and the master always
+keeps its own outer gutter.
 
 Mixer visibility follows timeline view filters:
 

@@ -19,6 +19,9 @@ TayPE opens onto a fresh real reel with Track 1 armed and a welcome card over
 the live desk. Hit **Let's Roll** and record, or branch straight to **Open Reel
 Browser**, **Audio Preferences** (which lands on the **Audio** tab), or
 **Plugin Manager** from that card.
+If you need to hand the room over in another language, the top-right language
+picker on that welcome card gives you the same next-launch switch as the Help
+menu without making the whole startup screen shout about it.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new intentional session branch.
@@ -72,10 +75,17 @@ its waveform.
 
 - **P** - pause
 - **Space** - play / stop
-- **Z** - stop and return to the start
+- **Z** - stop and return to the selected Cut zero point
 
 Click anywhere in the timeline (or the ruler at the top) to move the tape
 head to that position. Hold and drag to scrub.
+
+When you stop a play pass, TayPE returns to where that pass started. If you
+move the tape head while playing, that new spot becomes the stop-return point.
+If playback runs off the end of the timeline, pressing stop once still brings
+you back to that remembered point.
+
+You can drag the BPM readout in the transport bar to change tempo quickly.
 
 ## Audio Sample Rate and Resampling
 
@@ -164,10 +174,11 @@ first.
 
 ## App Language
 
-Use **Help -> Language** to pick the app language TayPE should use on the
-next launch. TayPE writes the selection to your user settings immediately,
-shows a confirmation modal in the newly selected language, and asks you to
-restart so the whole interface picks it up cleanly.
+Use **Help -> Language** or the small language picker on the welcome card to
+choose the app language TayPE should use on the next launch. TayPE writes the
+selection to your user settings immediately, shows a confirmation modal in the
+newly selected language, and asks you to restart so the whole interface picks
+it up cleanly.
 
 The menu only shows language files that are actually present and valid in
 your TayPE language folder, so custom or in-progress language packs can be

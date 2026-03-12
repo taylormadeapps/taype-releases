@@ -62,6 +62,9 @@ Changing tempo, time signature, or the Cut zero point does not move them.
   the full name in popup help.
 - If two markers land on the same timestamp, TayPE keeps the existing marker
   and collapses the duplicate.
+- Previous/next marker navigation also walks three hidden anchors:
+  absolute timeline start, the current Cut zero point, and the current
+  timeline end at the rightmost clip boundary.
 
 Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
-keyboard shortcuts page, to move between markers quickly.
+keyboard shortcuts page, to move between marker anchors quickly.

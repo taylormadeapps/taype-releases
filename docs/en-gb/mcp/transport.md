@@ -16,8 +16,11 @@ Start audio playback.
 
 ### `stop`
 
-Stop playback. If transport is already stopped, TayPE returns the head to the
-selected Cut's zero point.
+Stop playback. While transport is running, TayPE returns to the current
+play-pass return point. If playback has already auto-ended and that return
+point is still pending, one stopped-state `stop` call jumps back there.
+Otherwise, stopped-state `stop` returns the head to the selected Cut's zero
+point.
 
 **Returns:** `{ "playing": false, "position": 0.0 }`
 
@@ -44,6 +47,9 @@ Set the playback position.
 | `position` | number | yes | Position in seconds |
 
 **Returns:** `{ "position": 12.5 }`
+
+If you call `seek` while playback is running, that new position also becomes
+the stop-return point for the current play pass.
 
 ### `set_cut_zero`
 
