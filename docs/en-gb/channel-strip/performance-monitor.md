@@ -38,6 +38,7 @@ The summary includes:
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
 - **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
 - **Host CPU** — total TayPE process usage across all logical cores (0–100%)
+- **NAM preamp** — a per-group list showing each batch's channel count and whether it is running on the small or turbo path on a worker or inline
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 
