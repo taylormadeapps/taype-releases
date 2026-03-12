@@ -15,8 +15,14 @@ inserts. One channel strip per track, laid out left to right.
 
 ## Opening and Creating Reels
 
-TayPE opens into the **Reel Browser**. That is the place to open an existing
-reel, jump into a recent one, or create a new one.
+On a normal launch, TayPE opens a fresh reel behind the welcome card. If you
+are unlicensed, the license screen chains in as soon as you leave that welcome
+step. If you open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips
+the welcome card, opens that session first, and then chains straight into the
+license screen.
+
+The **Reel Browser** is where you open an existing reel, jump into a recent
+one, or create a new one.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
@@ -28,6 +34,8 @@ When you create a reel, TayPE opens a native save dialog rooted at
 `~/Documents/Taype/Reels` and suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step.
+
+Fresh reels open with one armed audio track and the transport set to **90 BPM**.
 
 Working state is saved automatically while the transport is stopped. There is
 no separate Save command to manage. Press **Cmd+S** when you want to create a
