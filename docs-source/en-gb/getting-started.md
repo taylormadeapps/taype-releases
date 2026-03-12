@@ -168,7 +168,7 @@ your TayPE language folder, so custom or in-progress language packs can be
 tested without changing the app build.
 
 The current alpha bundle ships with **English (UK)** plus draft
-**America English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
+**American English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
 **Esperanto**, and **日本語** app packs. If you add or remove valid language
 CSV files in your TayPE language folder, that menu updates to match what is
 actually installed.

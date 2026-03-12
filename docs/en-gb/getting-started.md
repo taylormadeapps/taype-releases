@@ -19,9 +19,14 @@ TayPE opens onto a fresh real reel with Track 1 armed and a welcome card over
 the live desk. Hit **Let's Roll** and record, or branch straight to **Open Reel
 Browser**, **Audio Preferences** (which lands on the **Audio** tab), or
 **Plugin Manager** from that card.
-If you need to hand the room over in another language, the top-right language
-picker on that welcome card gives you the same next-launch switch as the Help
-menu without making the whole startup screen shout about it.
+If you need to hand the room over in another language, the small language pill
+under **Let's Roll** gives you the same next-launch switch as the Help menu
+without making the whole startup screen shout about it.
+
+If you double-click a `.taype` reel or `.tpak` pack in Finder, TayPE opens
+straight into that session path instead of stopping to show the welcome card
+first. `.tpak` packs unpack into your normal reels folder with a unique name
+and then open automatically.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new intentional session branch.
@@ -174,7 +179,7 @@ first.
 
 ## App Language
 
-Use **Help -> Language** or the small language picker on the welcome card to
+Use **Help -> Language** or the small language pill on the welcome card to
 choose the app language TayPE should use on the next launch. TayPE writes the
 selection to your user settings immediately, shows a confirmation modal in the
 newly selected language, and asks you to restart so the whole interface picks
@@ -183,9 +188,11 @@ it up cleanly.
 The menu only shows language files that are actually present and valid in
 your TayPE language folder, so custom or in-progress language packs can be
 tested without changing the app build.
+Each pack supplies its own display name, so the welcome-card language pill and
+the Help menu show whatever that locale file declares.
 
 The current alpha bundle ships with **English (UK)** plus draft
-**America English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
+**American English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
 **Esperanto**, and **日本語** app packs. If you add or remove valid language
 CSV files in your TayPE language folder, that menu updates to match what is
 actually installed.
