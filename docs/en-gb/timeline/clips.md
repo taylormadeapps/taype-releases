@@ -20,15 +20,26 @@ Select a clip, position the tape head where you want the split, and press **S**.
 
 ## Trimming
 
-Hover near the left or right edge of a clip until the cursor changes to a resize arrow. Drag to trim.
+Hover near the lower half of the left or right edge of a clip until the cursor changes to a resize arrow. Drag to trim.
 
 This is non-destructive — you're just changing which portion of the audio file is visible.
+
+The upper edge zone is used for stretch. As you drag it, the waveform preview
+stretches with the clip instead of looking like a plain trim.
+
+When you let go, TayPE renders the clip's current audible slice into the new
+stretched file, so playback restarts from the top of that stretched audio
+rather than carrying an old trim offset across.
 
 ## Gain and Fades
 
 Drag the clip gain line up or down to change that clip's level. The waveform redraws with it, so lower gain pulls the waveform inward and unity fills the clip body.
 
-Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint.
+Fade handles sit just inside the top corners of the clip, and their hit area
+stays inset too, so the edge itself remains available for stretch and trim
+gestures.
+
+Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint, and the guide curve stays clean instead of flooding the quiet part of the clip.
 
 ## Crossfades
 
@@ -44,3 +55,16 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 - **Cmd+C** — copy
 - **Cmd+V** — paste at the tape head position on the selected track
 - **Cmd+D** — duplicate back-to-back (immediately after the original)
+
+## Importing Files
+
+Use **File -> Import Audio...** to place an audio file on the selected track at
+the tape head.
+
+Use **File -> Import MIDI to Audio...** to render a MIDI file through an
+instrument track. TayPE opens a modal track chooser first, then asks for the
+MIDI file.
+
+Dropping a MIDI file straight onto the timeline also works. If the target
+track has no instrument loaded, TayPE flashes a warning banner instead of
+importing the clip.

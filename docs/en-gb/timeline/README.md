@@ -14,7 +14,7 @@ Idle track headers keep a translucent tint of the track colour. Only the
 selected header deepens into a slightly darker version of that colour, so the
 active row reads clearly without making every header a solid block.
 
-The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative.
+The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative. The tape-head marker stays on the timeline side of that ruler, so it doesn't crash into the left toolbar block. Track headers, selected-lane guides, drag highlights, and reorder indicators stay clipped below the ruler too, so zooming and vertical scroll can't smear lane paint into the toolbar.
 
 The **transport bar** runs along the bottom. It has playback controls, BPM, and position readout in the middle, then a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name at the start of the right-hand utility cluster. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**. The **?** popup-help toggle lives at the far right of the transport bar.
 
