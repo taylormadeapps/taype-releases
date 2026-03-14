@@ -16,7 +16,7 @@ Double-click any gain or balance knob to reset it to zero. Double-click the fade
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
 
-Preamp, filter, EQ, and compressor controls now sit inside a shared centred control band with matched top and bottom breathing room, instead of pinning the knobs to the panel edge.
+Preamp, filter, and EQ controls now sit a touch lower inside their panels so the bottom edge reads as evenly as the top, instead of leaving a fat dead strip under the lower controls. The compressor already used the right anchor and stays put.
 
 On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them.
 

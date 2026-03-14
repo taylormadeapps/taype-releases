@@ -24,6 +24,10 @@ license screen.
 The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
+The right-hand action stack keeps **Open Reel Browser** as the standout branch,
+with **Audio Preferences** and **Plugin Manager** sitting underneath it as
+matched secondary buttons. The supporting copy on the left starts level with
+those buttons, so the card scans as three aligned action rows.
 
 If you open the **Reel Browser** straight from that welcome card, the fresh
 startup reel stays loaded and shows as the current session while you decide
