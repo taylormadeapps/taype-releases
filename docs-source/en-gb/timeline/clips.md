@@ -34,6 +34,8 @@ Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the wavefor
 
 When two clips overlap, the overlap area shows a crossfade overlay. Overlap length sets crossfade duration.
 
+Both clips stay audible through that overlap: the outgoing one fades down while the incoming one fades up, so the seam holds steady instead of dipping.
+
 Drag vertically anywhere in the overlap region to shape the curve. Both sides move together to stay symmetric. Double-click the overlap to reset to a linear curve.
 
 ## Clipboard

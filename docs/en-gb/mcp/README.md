@@ -32,14 +32,14 @@ TayPE (running app)
 
 ### Claude Desktop
 
-In TayPE, go to **Tools > Install Claude Connector**. This automatically
+In TayPE, go to **Tools > AI Integrations > Install Claude Connector**. This automatically
 configures Claude Desktop to connect to TayPE - no manual editing needed.
 Restart Claude Desktop after installing, and TayPE must be running before
 you start a conversation.
 
 ### Codex
 
-In TayPE, go to **Tools > Install Codex Connector**. This tells Codex to add
+In TayPE, go to **Tools > AI Integrations > Install Codex Connector**. This tells Codex to add
 TayPE as a local MCP server - no manual editing needed. Restart Codex after
 installing, and TayPE must be running before you start a session.
 

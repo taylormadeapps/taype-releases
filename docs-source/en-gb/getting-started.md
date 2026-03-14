@@ -18,8 +18,19 @@ inserts. One channel strip per track, laid out left to right.
 TayPE opens into the **Reel Browser**. That is the place to open an existing
 reel, jump into a recent one, or create a new one.
 
+If your startup path includes the welcome card, the green **Let's Roll**
+button waits a second for the card to settle, then flashes three times at
+3 Hz so the main path into the reel is obvious without turning startup into
+a wizard.
+
+The paired welcome logos sit in matched square tiles with the artwork centred
+inside extra background instead of being stretched to fill the plate.
+
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
+
+Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
+for confirmation before it commits either action.
 
 Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
