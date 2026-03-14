@@ -89,11 +89,13 @@ Search the TONE3000 online library for NAM profiles.
 
 Download a NAM profile from TONE3000 to the local profiles directory.
 Filenames are based on tone metadata (title/creator) for both `preamp`
-and `summing`, with tone ID fallback when metadata is unavailable.
+and `summing`, with tone ID fallback when metadata is unavailable. If the
+requested tone is already present locally with matching metadata, TayPE returns
+that file instead of downloading a duplicate.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `tone_id` | string | yes | TONE3000 tone ID (from search results) |
 | `category` | string | no | "preamp" (default) or "summing" |
 
-**Returns:** `{ "status": "downloaded", "tone_id": "abc123", "filename": "1073_Hot.nam", "category": "preamp" }`
+**Returns:** `{ "status": "ok", "tone_id": "abc123", "filename": "1073_Hot.nam", "category": "preamp" }`

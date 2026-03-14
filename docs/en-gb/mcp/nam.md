@@ -89,13 +89,13 @@ Search the TONE3000 online library for NAM profiles.
 
 Download a NAM profile from TONE3000 to the local profiles directory.
 Filenames are based on tone metadata (title/creator) for both `preamp`
-and `summing`, with tone ID fallback when metadata is unavailable.
+and `summing`, with tone ID fallback when metadata is unavailable. If the
+requested tone is already present locally with matching metadata, TayPE returns
+that file instead of downloading a duplicate.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `tone_id` | string | yes | TONE3000 tone ID (from search results) |
 | `category` | string | no | "preamp" (default) or "summing" |
-| `architecture` | string | no | Prefer one model architecture inside a multi-model tone: "lstm", "wavenet", "convnet", "linear", "a2" |
-| `model_name` | string | no | Pick one exact model inside a multi-model tone by its TONE3000 model name or filename stem. Use this when you need a specific capture variant, such as matching clean and LSTM versions of the same amp setting. |
 
-**Returns:** `{ "status": "ok", "tone_id": "abc123", "filename": "1073_Hot.nam", "path": ".../1073_Hot.nam", "category": "preamp" }`
+**Returns:** `{ "status": "ok", "tone_id": "abc123", "filename": "1073_Hot.nam", "category": "preamp" }`

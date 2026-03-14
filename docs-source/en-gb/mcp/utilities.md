@@ -17,6 +17,10 @@ Before calling this tool, you must show the user everything that will
 be sent and get their explicit confirmation. Nothing leaves the machine
 without approval.
 
+If TayPE itself crashed in the previous session, the app surfaces the same
+kind of payload in its restart-time crash recovery dialog. That handoff stays
+inside TayPE; you should not get bounced through a separate macOS reopen prompt.
+
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `description` | string | yes | User's description of the issue |
