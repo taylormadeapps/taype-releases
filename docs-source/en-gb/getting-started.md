@@ -23,6 +23,12 @@ button waits a second for the card to settle, then flashes three times at
 3 Hz so the main path into the reel is obvious without turning startup into
 a wizard.
 
+If you open the **Reel Browser** straight from that welcome card, the fresh
+startup reel stays loaded and shows as the current session while you decide
+what to do next. If you branch into a different reel without touching it,
+TayPE still throws that blank startup reel away instead of clogging the
+library with dead air.
+
 The paired welcome logos sit in matched square tiles, and the tape mark now
 gets its own square badge with extra background instead of being stretched to
 fake the RAW block.
@@ -35,8 +41,8 @@ for confirmation before it commits either action. If that reel is the one you
 are currently working in, rename keeps the session open under the new bundle
 name and delete closes the session before removing the bundle.
 
-When a reel is already open, the browser action row includes **Media**, which
-opens that reel's `media/` folder in Finder without closing the browser.
+When a reel is already open, the browser action row starts with **Media**,
+which opens that reel's `media/` folder in Finder without closing the browser.
 
 Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
