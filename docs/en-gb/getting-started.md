@@ -21,8 +21,18 @@ step. If you open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips
 the welcome card, opens that session first, and then chains straight into the
 license screen.
 
+The welcome card points you at the green **Let's Roll** button first, waits a
+second for the card to settle, and then flashes it three times at 3 Hz so the
+main path into the reel is obvious without turning startup into a wizard.
+
+The paired welcome logos sit in matched square tiles with the artwork centred
+inside extra background instead of being stretched to fill the plate.
+
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one.
+
+Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
+for confirmation before it commits either action.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.

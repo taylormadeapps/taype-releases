@@ -4,7 +4,7 @@ Every track in TayPE has a built-in channel strip. The signal flows through each
 
 **Input → Trim → Preamp → Filters → EQ → Compressor → Inserts → Fader → Pan → Output**
 
-Each section can be enabled or bypassed independently. When a section is bypassed, its body hides to reduce clutter — the header stays visible so you can re-enable it.
+Each section can be enabled or bypassed independently. The on/off state does not control whether the body is open: if you leave a section expanded, it stays expanded and simply renders dimmed while bypassed.
 
 ![Channel strip overview](../../../assets/img/docs/timeline-with-strip.png)
 
@@ -15,6 +15,10 @@ All knobs work the same way: drag vertically, or hover and scroll the mouse whee
 Double-click any gain or balance knob to reset it to zero. Double-click the fader to return it to unity.
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
+
+Preamp, filter, EQ, and compressor controls now sit inside a shared centred control band with matched top and bottom breathing room, instead of pinning the knobs to the panel edge.
+
+On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them.
 
 ## Strip Header
 

@@ -27,14 +27,14 @@ Return the scanned VST3 plugin catalogue.
 
 ### `add_insert`
 
-Load a plugin into one of a track's 4 insert slots. Requires transport
+Load a plugin into one of a track's 8 insert slots. Requires transport
 stopped.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
 | `plugin_id` | string | yes | Plugin path or UID from `list_plugins` |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:**
 ```json
@@ -55,7 +55,7 @@ Unload the plugin from a track's insert slot. Requires transport stopped.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "removed": true }`
 
@@ -67,7 +67,7 @@ Toggle bypass on a track's insert. Safe during playback.
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
 | `bypass` | boolean | no | Bypass state (default: true) |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "bypass": true }`
 
@@ -78,7 +78,7 @@ Get the current state of a track's insert slot.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns (loaded):**
 ```json
@@ -104,7 +104,7 @@ Open the plugin editor window.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "editor_open": true }`
 
@@ -115,7 +115,7 @@ Close the plugin editor window.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-3 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "editor_open": false }`
 
