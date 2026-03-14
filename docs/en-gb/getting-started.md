@@ -25,14 +25,20 @@ The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
 
-The paired welcome logos sit in matched square tiles with the artwork centred
-inside extra background instead of being stretched to fill the plate.
+The paired welcome logos sit in matched square tiles, and the tape mark now
+gets its own square badge with extra background instead of being stretched to
+fake the RAW block.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one.
 
 Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
-for confirmation before it commits either action.
+for confirmation before it commits either action. If that reel is the one you
+are currently working in, rename keeps the session open under the new bundle
+name and delete closes the session before removing the bundle.
+
+When a reel is already open, the browser action row includes **Media**, which
+opens that reel's `media/` folder in Finder without closing the browser.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.

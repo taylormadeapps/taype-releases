@@ -10,8 +10,9 @@ The left column shows **track headers** with controls. The main area shows **cli
 
 When you select a track, TayPE keeps the row highlight restrained: a faint fill
 with crisp white guide lines at the top and bottom of the selected lane.
-Track headers themselves use a slightly darkened version of the track colour,
-so the row still reads like its own channel.
+Idle track headers keep a translucent tint of the track colour. Only the
+selected header deepens into a slightly darker version of that colour, so the
+active row reads clearly without making every header a solid block.
 
 The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative.
 

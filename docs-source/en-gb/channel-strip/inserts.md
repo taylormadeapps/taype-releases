@@ -1,6 +1,9 @@
 # Insert Slots
 
-Eight serial plugin slots for VST3 plugins. Click an empty slot to load a plugin from the scanner. Right-click a loaded slot for bypass, remove, or to open the plugin editor.
+The insert rack can host eight serial VST3 slots. By default TayPE shows slots
+1-4; click **MORE** in the rack footer to reveal slots 5-8. Click an empty
+slot to load a plugin from the scanner. Right-click a loaded slot for bypass,
+remove, or to open the plugin editor.
 
 When you choose a plugin from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable.
@@ -8,7 +11,8 @@ the popup closes so nested submenu picks stay dependable.
 When you load or re-enable a plugin, the target slot shows a small spinner
 until TayPE finishes bringing that insert online.
 
-The master bus has the same eight insert slots, so you can run processing directly on the master strip.
+The master bus follows the same rule: four slots visible by default, with the
+same **MORE** toggle to reveal the full eight-slot rack.
 
 The INSERTS power button works even before you load anything. If you switch the
 rack off first, the next plugin you load comes in bypassed until you turn the
