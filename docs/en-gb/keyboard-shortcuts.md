@@ -69,6 +69,7 @@ there is no separate user-facing Save command.
 | Shortcut | Action |
 |----------|--------|
 | M | Toggle between timeline and mixer |
+| W | Toggle mixer width between narrow and full-width strips (mixer view only) |
 | I | Toggle channel strip panel |
 | F | Focus view - show only tracks with clips at the tape head |
 | A | Toggle archive view |
@@ -122,6 +123,7 @@ is straightforward:
   "zoom_out_vertical": "-",
   "zoom_reset_vertical": "shift+-",
   "zoom_max_vertical": "shift+=",
+  "toggle_mixer_width": "w",
   "toggle_focus": "f"
 }
 ```

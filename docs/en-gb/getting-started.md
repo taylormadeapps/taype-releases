@@ -35,9 +35,13 @@ what to do next. If you branch into a different reel without touching it,
 TayPE still throws that blank startup reel away instead of clogging the
 library with dead air.
 
-The paired welcome logos sit in matched square tiles, and the tape mark now
-gets its own square badge with extra background instead of being stretched to
-fake the RAW block.
+The paired welcome logos sit in matched square tiles, and the left TayPE mark
+now fills its tile directly instead of sitting inside a second inner badge.
+The supporting copy on the left also stays level with the top edge of its
+matching action button row.
+The welcome card itself stays deliberately compact instead of stretching across
+the whole window, so the footer line and action rows feel like one focused
+panel rather than a billboard.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one.
