@@ -34,8 +34,10 @@ docked strip and the mixer, so routing stays grouped with the insert rack.
 Mixer strips now use a narrow half-width desk mode. The top stack stays two
 knobs wide with simpler control groups: preamp keeps drive/output (or trim in
 clean mode), EQ becomes three gain/frequency rows, compressor keeps threshold,
-ratio, makeup, and release only, inserts show slot rows without the extra
-meter chrome, and the fader lane drops non-essential value text. The transport
+ratio, makeup, and release only, inserts keep their thin pre/post meter lanes
+while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
+non-essential value text. Narrow mixer strips also show the full eight-slot
+insert rack with no MORE/LESS control. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
 
