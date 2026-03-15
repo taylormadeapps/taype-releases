@@ -63,7 +63,7 @@ Update a track's properties. Only provided fields are changed.
 | `is_bus` | boolean | no | Bus designation |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `output_id` | string | no | Output target: "master" or bus track ID |
-| `sends` | array | no | Additional fan-out routes: `[{"target_id":"<bus-or-master>","level":0.0-4.0}]` |
+| `sends` | array | no | Additional fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0}]` |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
 | `tags` | array | no | Replace track tags with an array of tag strings |

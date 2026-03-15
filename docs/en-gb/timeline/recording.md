@@ -21,7 +21,7 @@ If you press **Stop** while recording, the head parks at the end of the committe
 
 When a track switches into instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
-**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
+**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. Instrument tracks keep MON visible too, even though record arm still mirrors it on and off.
 
 **Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 

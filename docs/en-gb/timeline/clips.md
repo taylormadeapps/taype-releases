@@ -10,6 +10,8 @@ Drag a clip horizontally to reposition it in time. Drag vertically to move it to
 
 There's a slight resistance threshold to prevent accidental cross-track moves.
 
+Snap stays soft while you drag, so the clip only grabs a rail when you get near it. When you let go, TayPE still drops the clip onto the nearest visible grid point instead of leaving it hanging between snap zones.
+
 ## Copying
 
 Hold **Cmd** while dragging a clip to copy it. The original stays put and a duplicate appears at the drop position. Both clips share the same source audio file.
