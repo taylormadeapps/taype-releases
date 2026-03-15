@@ -4,6 +4,10 @@
 
 Click a clip to select it. The clip highlights and its track becomes selected too. Press **Escape** to deselect everything.
 
+Double-click a clip to open **Clip Properties**. That's where you rename or
+recolour the clip, inspect its source paths, and, for MIDI-origin clips, open
+the paired MIDI file or re-render it through the track's current instrument.
+
 ## Moving
 
 Drag a clip horizontally to reposition it in time. Drag vertically to move it to a different track.
@@ -70,3 +74,9 @@ MIDI file.
 Dropping a MIDI file straight onto the timeline also works. If the target
 track has no instrument loaded, TayPE flashes a warning banner instead of
 importing the clip.
+
+Imported MIDI clips and recorded instrument takes keep a paired MIDI sidecar
+inside the reel. If you edit that MIDI file outside TayPE, go back to **Clip
+Properties** and use **Re-render from MIDI** to commit a fresh audio render.
+If the clip already has stretch or Melodyne-style derived audio on top, TayPE
+warns before that rerender clears those derived edits.
