@@ -174,8 +174,9 @@ Get the currently active personality.
 ### `status`
 
 Comprehensive session snapshot - reel info, transport, selected Cut, Cut list,
-all tracks with peak levels, call sign, undo/redo state, personality, theme,
-view state, and metronome. Use this to load context at the start of a conversation.
+all tracks with five meter taps, call sign, undo/redo state, personality,
+theme, view state, and metronome. Use this to load context at the start of a
+conversation.
 
 Note: app state can change at any time due to UI interaction. Always
 re-check via `status` before assuming previous values are still valid.
@@ -187,12 +188,27 @@ re-check via `status` before assuming previous values are still valid.
   "transport": { "playing": false, "recording": false, "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
   "selected_cut_name": "Main Cut",
   "cuts": ["Main Cut", "Verse", "Chorus"],
-  "tracks": [ { "id": "track_1", "name": "Audio 1", "tags": ["Vocals"], "volume": 1.0, "pan": 0.0, "mute": false, "solo": false, "peak_l": 0.0, "peak_r": 0.0 } ],
+  "tracks": [ {
+    "id": "track_1",
+    "name": "Audio 1",
+    "tags": ["Vocals"],
+    "volume": 1.0,
+    "pan": 0.0,
+    "mute": false,
+    "solo": false,
+    "meters": {
+      "pre_preamp":  { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
+      "post_preamp": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
+      "pre_inserts": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
+      "post_inserts": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
+      "post_fader":  { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false }
+    }
+  } ],
   "call_sign": "tape",
   "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },
   "personality": { "name": "Greg Zenner", "system_prompt": "..." },
   "theme": "normal",
-  "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
+  "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "meter_scale": "dbfs", "selected_track": "" },
   "metronome": { "enabled": false }
 }
 ```
