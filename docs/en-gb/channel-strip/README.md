@@ -16,7 +16,11 @@ Double-click any gain or balance knob to reset it to zero. Double-click the fade
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
 
+Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. The fader cap itself is now a silver-based metal handle with a clearer powder-coat tint from the track colour, plus a recessed centre slot instead of a raw swatch block.
+
 Preamp, filter, and EQ controls now sit a touch lower inside their panels so the bottom edge reads as evenly as the top, instead of leaving a fat dead strip under the lower controls. The compressor already used the right anchor and stays put.
+
+The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge.
 
 On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them.
 
@@ -33,13 +37,31 @@ docked strip and the mixer, so routing stays grouped with the insert rack.
 
 Mixer strips now use a narrow half-width desk mode. The top stack stays two
 knobs wide with simpler control groups: preamp keeps drive/output (or trim in
-clean mode), EQ becomes three gain/frequency rows, compressor keeps threshold,
-ratio, makeup, and release only, inserts keep their thin pre/post meter lanes
+clean mode), EQ becomes three gain/frequency rows ordered high, mid, then low
+from top to bottom, compressor keeps its new grouped `IN:` / `OUT:` mini meters
+at the top while slimming the controls down to threshold, ratio, makeup, and
+release only, inserts keep their thin pre/post meter lanes
 while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
 non-essential value text. Narrow mixer strips also show the full eight-slot
 insert rack with no MORE/LESS control. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
+The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
+`OUT:` pair above the controls instead of being split apart, so input and
+output gain are easier to compare at a glance.
+The compressor now follows that same pattern with its own `IN:` / `OUT:` pair
+above the control rows, so you can see what the EQ is feeding into the comp and
+what comes out before the insert rack.
+Its GR scale now labels the major `12 dB` ticks where there is room above the
+button stack, while the major guide marks still continue down to the bottom of
+the meter beside the controls, with the whole GR lane now scaled for a `24 dB`
+full reduction range instead of stretching out to `48 dB`.
+The insert rack now does the same trick: `IN:` / `OUT:` mini meters are
+grouped together at the top, and the docked strip's `MORE` / `LESS` control
+gets its own footer row at the bottom instead of sharing the lower meter lane.
+Whichever meter scale you pick, the fader lane still keeps a separate `0 dBFS`
+full-scale mark so the digital ceiling stays visible in `K12`, `K14`, and
+`K20`.
 
 The strip now works in two zones. The upper stack of sections scrolls vertically
 when it runs out of room, and a slim scrollbar appears at the right edge for
