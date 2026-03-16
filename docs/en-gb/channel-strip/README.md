@@ -16,13 +16,13 @@ Double-click any gain or balance knob to reset it to zero. Double-click the fade
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
 
-Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. The fader cap itself is now a silver-based metal handle with a clearer powder-coat tint from the track colour, plus a recessed centre slot instead of a raw swatch block.
+Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. On the knobs, that contact spot now stays only a few pixels tighter than the real knob body diameter rather than shrinking down to a tiny blot, and it pushes far enough into the 225-degree lower-left seat to read past the radial light. The fade runs a touch taller so the seat reads deeper without getting wider. The fader cap itself is now a slightly taller silver-based metal handle with a clearer powder-coat tint from the track colour, plus a recessed centre slot instead of a raw swatch block, and its seat shadow hugs the cap more tightly so it reads planted in the slot instead of hovering. If you shorten the fader dock, the handle still scales back with the shorter throw instead of seeming to grow just because the panel got shallower, and the full-size strip still stops shrinking before the whole ladder turns into a cramped stack.
 
 Preamp, filter, and EQ controls now sit a touch lower inside their panels so the bottom edge reads as evenly as the top, instead of leaving a fat dead strip under the lower controls. The compressor already used the right anchor and stays put.
 
-The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge.
+The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
 
-On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them.
+On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing.
 
 The docked arranger strip and the mixer both carry a stronger blend of the
 track colour through the background, so the selected channel reads by family at
@@ -42,16 +42,21 @@ from top to bottom, compressor keeps its new grouped `IN:` / `OUT:` mini meters
 at the top while slimming the controls down to threshold, ratio, makeup, and
 release only, inserts keep their thin pre/post meter lanes
 while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
-non-essential value text. Narrow mixer strips also show the full eight-slot
-insert rack with no MORE/LESS control. The transport
+non-essential value text while keeping the post-fader scale markings. Narrow
+mixer strips also show the full eight-slot insert rack with no MORE/LESS
+control. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
 The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
 `OUT:` pair above the controls instead of being split apart, so input and
-output gain are easier to compare at a glance.
+output gain are easier to compare at a glance. The compact `IN:` / `OUT:` bars
+across the strip now sit on slimmer side gutters too, so they read wider
+without touching the panel edges.
 The compressor now follows that same pattern with its own `IN:` / `OUT:` pair
 above the control rows, so you can see what the EQ is feeding into the comp and
 what comes out before the insert rack.
+Fresh strips now start with `INSERTS` and `SENDS` folded shut by default, so
+that whole routing block stays tucked away until you actually need it.
 Its GR scale now labels the major `12 dB` ticks where there is room above the
 button stack, while the major guide marks still continue down to the bottom of
 the meter beside the controls, with the whole GR lane now scaled for a `24 dB`
@@ -59,9 +64,30 @@ full reduction range instead of stretching out to `48 dB`.
 The insert rack now does the same trick: `IN:` / `OUT:` mini meters are
 grouped together at the top, and the docked strip's `MORE` / `LESS` control
 gets its own footer row at the bottom instead of sharing the lower meter lane.
+Those grouped mini meters now carry the same held peak hairline as the main
+post-fader meter, so sharp transients stay visible without the held line doing
+that daft little walk back down the scale.
+The live peak tick now falls with its own ballistics, while the held peak
+stays latched until a higher hit replaces it or you clear the meter lane.
 Whichever meter scale you pick, the fader lane still keeps a separate `0 dBFS`
 full-scale mark so the digital ceiling stays visible in `K12`, `K14`, and
 `K20`.
+The fader's own gain ladder now keeps straight `3 dB` steps from `+12` down to
+`-24`, so there are naturally twice as many printed marks below `0` as above
+it before the tail compresses into `-36`, `-48`, and mute.
+In plain `dBFS`, the full-width fader meter now follows a console-style
+working ladder: tight `3 dB` steps from `0` down to `-21`, then a compressed
+tail for `-36`, `-46`, and `-60`, with a small held peak box parked below the
+scale.
+That box shows the held post-fader peak in dB, and flips to `CLIP` until you
+clear the meter lane.
+In the K-system scales, the printed ladder now keeps the red `FS` tick at the
+true ceiling, adds `+3 dB` marks above the highlighted `0 VU` reference up
+toward full scale, then steps down in `-3 dB` marks to `-21` and `6 dB` marks
+below. The reference `0` zone still sits tighter to the top, so the lane reads
+like a working meter instead of a stretched-out ruler.
+Silent meters stay dark now too. The old floor tick that made dead inputs look
+alive is gone.
 
 The strip now works in two zones. The upper stack of sections scrolls vertically
 when it runs out of room, and a slim scrollbar appears at the right edge for
@@ -69,7 +95,8 @@ precise scrolling without the mouse wheel. The fader section stays docked to
 the bottom of the strip, can be collapsed, and can be resized by dragging its
 top edge. In the mixer, the visible strips now share that upper scroll position
 as well as the dock height, so the desk stays lined up while you move through
-the stack.
+the stack. Fresh strips now open that dock at about one third of the display
+height before any manual resize.
 
 Mouse wheel over the actual knob body still adjusts that knob. Labels, value
 readouts, and the padded space around the control do not count. Mouse wheel
@@ -93,3 +120,5 @@ The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record*
 ## Popup Help
 
 With **Help → Popup Help** enabled, the strip shows hover help after about **0.7 seconds** for knobs, routing selectors, section headers, insert slots, meters, and toggle buttons.
+If part of the upper section stack is scrolled out of view, that clipped area
+stops answering popup help until you bring it back on screen.

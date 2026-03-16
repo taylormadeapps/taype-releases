@@ -13,10 +13,9 @@ TayPE ships with eleven built-in studio tech characters:
 
 | Name | Vibe |
 |------|------|
-| **Greg Zenner** | No-bullshit mentor. Feel over fidelity. The default. |
+| **Glue & Weight** | Bus-first thinking, compression, cohesion. The default. |
 | **Arena Push** | Bold, assertive, stadium-sized mixes |
 | **Polished Depth** | Dimensional, elegant, radio-ready polish |
-| **Glue & Weight** | Bus-first thinking, compression, cohesion |
 | **Intimate Front** | Close, textured, honest - lo-fi meets intention |
 | **Cinematic Air** | Spatial design, reverb as architecture |
 | **Tight & Modern** | Precision transients, streaming-ready |
@@ -24,6 +23,7 @@ TayPE ships with eleven built-in studio tech characters:
 | **Minimal Truth** | Minimal processing, document the performance as-is |
 | **Loud & Proud** | Impact, loudness as skill, competitive |
 | **Late-Night Glow** | Warmth, harmonic richness, vibe |
+| **Greg Zenner** | No-bullshit mentor. Feel over fidelity. |
 
 ## Switching Personalities
 
@@ -43,7 +43,7 @@ Drop a JSON file in `~/Documents/Taype/Personalities/`:
 ```
 
 Any `.json` file in this folder is picked up automatically and appears
-alongside the built-in personalities.
+after the built-in personalities in the picker.
 
 ## What Personalities Can and Cannot Do
 
