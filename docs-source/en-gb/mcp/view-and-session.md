@@ -147,7 +147,7 @@ List all available studio tech personalities.
 ```json
 {
   "personalities": [
-    { "name": "Greg Zenner", "prompt": "..." },
+    { "name": "Glue & Weight", "prompt": "..." },
     ...
   ]
 }
@@ -165,7 +165,7 @@ Set the active personality by name. See [Personalities](personalities.md).
 
 Get the currently active personality.
 
-**Returns:** `{ "name": "Greg Zenner", "prompt": "..." }`
+**Returns:** `{ "name": "Glue & Weight", "prompt": "..." }`
 
 ---
 
@@ -190,7 +190,7 @@ re-check via `status` before assuming previous values are still valid.
   "tracks": [ { "id": "track_1", "name": "Audio 1", "tags": ["Vocals"], "volume": 1.0, "pan": 0.0, "mute": false, "solo": false, "peak_l": 0.0, "peak_r": 0.0 } ],
   "call_sign": "tape",
   "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },
-  "personality": { "name": "Greg Zenner", "system_prompt": "..." },
+  "personality": { "name": "Glue & Weight", "system_prompt": "..." },
   "theme": "normal",
   "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "selected_track": "" },
   "metronome": { "enabled": false }
