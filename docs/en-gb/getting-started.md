@@ -118,14 +118,32 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - The Audio tab keeps the hardware selector rows at the top through **Audio
   buffer size**. The device status, resampling, NAM, and **Apply Audio
   Changes** controls sit underneath.
-- Use **Apply Audio Changes** if you want an explicit commit after editing
-  audio settings.
-- If **Resampling** is **off**, the Sample rate field is read-only and shows
-  your interface's current rate.
+- Every control on this tab is staged. TayPE does not reopen the live audio
+  device when you change a field; it waits for **Apply Audio Changes**.
+- Use **Apply Audio Changes** to commit output device, input device, sample
+  rate, buffer size, Resampling, and NAM changes together.
+- TayPE remembers the last input and output device you applied here, so the
+  same hardware routing comes back on relaunch.
+- If **Resampling** is **off**, the Sample rate field stays read-only once the
+  interface is already back at **48 kHz**.
 - With Resampling off, TayPE will try to switch your interface to **48 kHz**
-  automatically.
+  automatically after you apply the staged audio change, and whenever the live
+  device changes elsewhere.
+- You can park the **Input** or **Output** device on **none** while lining up
+  a new combination. TayPE only commits that staged setup when you press
+  **Apply Audio Changes**.
+- If the driver rejects any staged device combination, TayPE restores the last
+  working audio setup and shows the failure instead of snapping the controls
+  back behind your back.
 - If your interface is not at 48 kHz while Resampling is off, TayPE flags this
-  in red and tells you to engage Resampling.
+  with a persistent red banner at the top of the window and tells you to
+  engage Resampling. The Sample rate picker also re-opens in that state and
+  always includes **48 kHz** as the native recovery target, so you can drive
+  the interface back to TayPE's fixed-rate lane without enabling Resampling
+  first. When you pick **48 kHz**, TayPE now makes a real 48 kHz device-open
+  attempt instead of silently falling back to the old hardware rate. If that
+  input/output combination truly cannot run at 48 kHz, TayPE restores the last
+  working setup and shows the failure.
 - If **Resampling** is **on**, you can change the interface sample rate in the
   Audio settings while TayPE continues processing internally at 48 kHz.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on

@@ -31,7 +31,7 @@ without dragging for days. The fader dB field drops the `dB` suffix while you
 edit it, Return commits, and Escape or clicking anywhere outside the actual
 edit box dismisses it without applying the typed value.
 
-On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing.
+On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing. The mono/stereo badge stays lit in both states so it reads as the current strip mode instead of a dead toggle: double circles mean stereo, a single circle means mono.
 
 The docked arranger strip and the mixer both carry a stronger blend of the
 track colour through the background, so the selected channel reads by family at
@@ -54,7 +54,9 @@ while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
 non-essential value text while keeping the post-fader scale markings. Narrow
 mixer strips also keep the same full-size machined fader handle as the
 standard strip, they now keep the fader's own left-side dB tick ladder too,
-and they still show the full eight-slot insert rack with no MORE/LESS control. The transport
+and they still show the full eight-slot insert rack with no MORE/LESS control.
+Those skinny EQ rows now leave a little extra room under each mini knob too, so
+the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
@@ -96,8 +98,10 @@ that daft little walk back down the scale.
 The live peak tick now falls with its own ballistics, while the held peak
 holds for three seconds, refreshes on equal or higher hits, and clears when
 you clear the meter lane.
-If the preamp, compressor, or insert rack is disabled, those mini meters stay
-parked as dim wells instead of pretending the bypassed section is still alive.
+If the compressor or insert rack is disabled, those mini meters stay parked as
+dim wells instead of pretending the bypassed section is still alive. The
+preamp pair keeps running in Clean mode, because it is still showing the live
+gain staging across that slot.
 Lit post-fader meter LEDs now also throw a small soft bloom outside each
 segment, with the hotter upper bars, live peak tick, and clip lamp glowing a
 touch harder so the lane feels like lit hardware instead of flat blocks.

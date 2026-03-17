@@ -16,7 +16,9 @@ Start audio playback.
 
 ### `stop`
 
-Stop playback. If transport is already stopped, TayPE returns the head to the
+Stop playback. While transport is running, TayPE returns the head to the
+current play-pass origin. If playback has already auto-ended, that return has
+already happened, so a stopped-state `stop` call returns the head to the
 selected Cut's zero point.
 
 **Returns:** `{ "playing": false, "position": 0.0 }`

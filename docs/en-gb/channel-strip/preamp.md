@@ -9,6 +9,9 @@ The preamp header shows the current mode with a `PRE:` prefix. In NAM mode, it a
 ## Clean Gain (default)
 
 The preamp is off. Your trim setting passes through with no colour or saturation. Every new track starts here.
+The `IN:` / `OUT:` mini meters still stay live in Clean, so you can judge the
+level hitting the preamp slot and the level leaving it even when there is no
+saturation stage engaged.
 
 ## Classic
 
