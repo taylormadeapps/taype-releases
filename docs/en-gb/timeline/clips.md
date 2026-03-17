@@ -9,6 +9,9 @@ recolour the clip, inspect its source paths, reveal those files in Finder from
 the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
 TayPE's MIDI Clip Editor or **Re-render from MIDI** to print a fresh render
 through the track's current instrument.
+The reel-owned audio and MIDI rows are shown relative to the reel bundle so you
+see paths like `media/imports-midi/...`, while the original source row stays
+absolute.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
 so you can spot them at a glance.
 

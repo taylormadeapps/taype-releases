@@ -1,6 +1,6 @@
 # Preamp
 
-The preamp operates in one of three modes. Use the **MODE** button to cycle through them:
+The preamp operates in one of three modes. Use the **MODE** button on the preamp info row to cycle through them:
 
 **Clean → Classic → NAM → Clean**
 

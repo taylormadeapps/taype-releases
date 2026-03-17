@@ -49,7 +49,13 @@ one, or create a new one.
 Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
 for confirmation before it commits either action. If that reel is the one you
 are currently working in, rename keeps the session open under the new bundle
-name and delete closes the session before removing the bundle.
+name and delete closes the session before removing the bundle. If the name you
+ask for is already taken in that folder, TayPE adds ` 2`, ` 3`, and so on
+instead of overwriting the existing reel.
+
+When the current reel is already open, **File -> Rename Reel...** runs the
+same rename prompt and confirmation flow without making you hop back into the
+browser first.
 
 When a reel is already open, the browser action row starts with **Media**,
 which opens that reel's `media/` folder in Finder without closing the browser.
@@ -92,7 +98,9 @@ exploring older commits and side branches.
 
 1. Select a track by clicking its header in the timeline.
 2. Set the track's input by clicking the input label (e.g. "1-2" for a
-   stereo pair from your audio interface).
+   stereo pair from your audio interface). When TayPE knows the device's own
+   channel labels, the strip and timeline echo those names back instead of
+   raw `1-2` IDs.
 3. Arm the track for recording by clicking the **R** button, or pressing
    the R button in the track header.
 4. Press **Return** to start recording. Press **Return** again to stop.
@@ -116,14 +124,19 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 
 - TayPE runs internally at **48 kHz**.
 - The Audio tab keeps the hardware selector rows at the top through **Audio
-  buffer size**. The device status, resampling, NAM, and **Apply Audio
-  Changes** controls sit underneath.
+  buffer size**. That top block includes output device, input device, master
+  output pair, default stereo input, and default mono input. The device
+  status, resampling, NAM, and **Apply Audio Changes** controls sit
+  underneath.
 - Every control on this tab is staged. TayPE does not reopen the live audio
   device when you change a field; it waits for **Apply Audio Changes**.
-- Use **Apply Audio Changes** to commit output device, input device, sample
-  rate, buffer size, Resampling, and NAM changes together.
+- Use **Apply Audio Changes** to commit output device, input device, master
+  output pair, default stereo input, default mono input, sample rate, buffer
+  size, Resampling, and NAM changes together.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
+- Tracks whose input selector is **Default** follow the mono/stereo default
+  input you pick here. Either default input can be **None**.
 - If **Resampling** is **off**, the Sample rate field stays read-only once the
   interface is already back at **48 kHz**.
 - With Resampling off, TayPE will try to switch your interface to **48 kHz**

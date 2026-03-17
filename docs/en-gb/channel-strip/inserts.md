@@ -8,7 +8,8 @@ scanner. Right-click a loaded slot for bypass, remove, or to open the plugin
 editor.
 
 When you choose a plugin from the insert menu, TayPE loads that choice after
-the popup closes so nested submenu picks stay dependable.
+the popup closes so nested submenu picks stay dependable, then opens that
+plug-in window straight away when the load succeeds.
 
 When you load or re-enable a plugin, the target slot shows a small spinner
 until TayPE finishes bringing that insert online.
@@ -41,6 +42,40 @@ If **Menu Path** is blank, the plugin sits directly inside the top-level
 
 Only insert **1** can host an instrument or TayPE's built-in **MIDI Out**.
 Slots **2-8** stay audio-effects only.
+
+## Plug-in Window
+
+Click a loaded slot to open that plug-in's window. TayPE adds a slim toolbar
+across the top with **Bypass**, **Disable**, a `Preset:` label, and a preset
+menu on the left, plus a `Sidechain:` label and selector on the right.
+That **Disable** toggle uses the same stop-to-edit enable/disable path as the
+insert slot itself and keeps the plug-in window open instead of unloading the
+plug-in out from under it.
+If no plug-in preset is currently active, that selector reads `None`.
+The window now follows the plug-in's own resize rules, so it can't be dragged
+smaller than the plug-in's minimum size, larger than its maximum, or into a
+cropped shape that breaks the editor's aspect.
+
+Plug-in presets live in `Documents/Taype/Presets/FX` for effects and
+`Documents/Taype/Presets/Instruments` for instruments. TayPE keeps each
+plug-in's own library in a clean plug-in-name subfolder there. Older preset
+folders saved with the previous UID suffix still load. If the preset name contains `/`,
+TayPE mirrors that path as nested folders on disk and nested submenus in the
+preset popup. The menu only shows presets that belong to the current plug-in.
+Saving an `INSERTS` section preset from the channel strip also writes companion
+plug-in presets into that plug-in's own `CSB/<Section Preset Path>` folder.
+When you load that insert-section preset later, TayPE restores matching
+plug-ins from those `CSB/...` presets too.
+
+Loading a plug-in preset follows the same stopped-transport rule as other
+insert edits.
+
+Bypass can still toggle while the transport is running. **Disable** cannot:
+if you try it from the plug-in window while playback is rolling, TayPE warns
+you to stop transport first.
+
+The sidechain selector is a placeholder for now. It only shows `Coming Soon`
+and does not change routing yet.
 
 Open **MIDI Out** to choose the Core MIDI destination, pick `Any` or a fixed
 channel, and set a timing advance. TayPE starts new MIDI Out inserts at the

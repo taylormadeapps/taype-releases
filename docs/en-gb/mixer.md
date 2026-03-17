@@ -33,22 +33,26 @@ toggle. See the [Channel Strip](channel-strip/README.md) page for details on
 every section.
 
 Right-click any section header to load a preset for just that section or use
-**Save Preset As...** at the top of the menu to save into that section's
-folder under `Documents/Taype/Section Presets`. If the strip section already
-came from a preset, TayPE pre-fills that preset name in the save dialog so you
-can rename or overwrite it without typing from scratch. If the preset name
-contains `/`, TayPE stores it in nested folders under that section's preset
-root, and the popup menu mirrors that folder tree as nested submenus. Section
-headers show a preset-name pill only when that section still
+**Save Section As...** at the top of the menu to save into that section's
+folder under `Documents/Taype/Presets/Channel Strip Section`. If the strip
+section already came from a preset, TayPE pre-fills that preset name in the
+save dialog so you can rename or overwrite it without typing from scratch. If
+the preset name contains `/`, TayPE stores it in nested folders under that
+section's preset root, and the popup menu mirrors that folder tree as nested
+submenus. Section headers show a preset-name pill only when that section still
 matches the active strip preset's `CSP/...` path, or when no strip preset is
-active at all.
+active at all. Older libraries saved in the previous section-preset folder
+still load.
 
 Right-click the strip title bar to load or save a full channel strip preset.
-Those live under `Documents/Taype/Channel Strip Presets`. Each strip preset
+Those live under `Documents/Taype/Presets/Channel Strip`. Each strip preset
 stores the fader panel state directly and recalls the rest of the strip through
-section presets under `Documents/Taype/Section Presets/<Section Name>/CSP/<Preset Name>`.
+section presets under `Documents/Taype/Presets/Channel Strip Section/<Section Name>/CSP/<Preset Name>`.
+Use **Save Strip As...** at the top of that menu when you want to save a whole
+strip preset from the title bar.
 If the strip preset name contains `/`, TayPE mirrors that path in both places,
-and the popup menu mirrors that folder tree as nested submenus too.
+and the popup menu mirrors that folder tree as nested submenus too. Older
+libraries saved in the previous strip-preset folder still load.
 
 The `PREAMP` header now stays a clean section label. Its mode/profile line sits
 inside the section body above the preamp mini meters, with the NAM browse
