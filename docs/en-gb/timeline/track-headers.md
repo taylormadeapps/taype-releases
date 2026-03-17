@@ -7,7 +7,7 @@ Each track header shows the following controls. At very small track heights, som
 ## Controls
 
 - **Colour strip** — click to change the track colour from 24 swatches
-- **Track name** — double-click to rename (only when stopped). With popup help enabled, hovering shows the full title.
+- **Track name** — double-click to rename (only when stopped). Press Return to commit, or Escape / click away to cancel. With popup help enabled, hovering shows the full title.
 - **Tags** — opens the tag cloud popup for this track
 - **R** — record arm (red circle when armed)
 - **MON** — software monitoring (hear input through the track channel strip). On instrument tracks, MON stays visible and can be toggled separately from record arm.

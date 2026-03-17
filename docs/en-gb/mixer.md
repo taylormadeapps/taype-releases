@@ -47,7 +47,7 @@ routing stays valid.
 with options like bypass and remove.
 
 **Track name** - double-click to edit inline (only when transport is
-stopped).
+stopped). Return commits; Escape or clicking away cancels.
 
 ## Track Order
 

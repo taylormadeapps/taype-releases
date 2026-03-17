@@ -21,10 +21,15 @@ Knobs and the fader now cast a darker bottom-left contact shadow, so the control
 Preamp, filter, and EQ controls now sit a touch lower inside their panels so the bottom edge reads as evenly as the top, instead of leaving a fat dead strip under the lower controls. The compressor already used the right anchor and stays put.
 
 The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
+The meter yellow and the fader lamp now sit closer to the same brass-gold
+family as the radial knob lights, so the strip keeps one honest yellow instead
+of splitting between glow gold and dull mustard.
 
 Double-click the fader dB readout or the pan readout and TayPE now drops a
-small inline text editor right on the strip, so you can type exact values
-without dragging for days.
+small single-line text editor right on the strip, so you can type exact values
+without dragging for days. The fader dB field drops the `dB` suffix while you
+edit it, Return commits, and Escape or clicking anywhere outside the actual
+edit box dismisses it without applying the typed value.
 
 On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing.
 
@@ -91,6 +96,8 @@ that daft little walk back down the scale.
 The live peak tick now falls with its own ballistics, while the held peak
 holds for three seconds, refreshes on equal or higher hits, and clears when
 you clear the meter lane.
+If the preamp, compressor, or insert rack is disabled, those mini meters stay
+parked as dim wells instead of pretending the bypassed section is still alive.
 Lit post-fader meter LEDs now also throw a small soft bloom outside each
 segment, with the hotter upper bars, live peak tick, and clip lamp glowing a
 touch harder so the lane feels like lit hardware instead of flat blocks.
