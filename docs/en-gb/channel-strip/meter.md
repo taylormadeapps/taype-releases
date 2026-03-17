@@ -3,7 +3,8 @@
 Stereo post-fader meter with an RMS body, a fast peak tick, a held peak trace,
 and a clip indicator at the top. The scale can be shown as dBFS, K-12, K-14,
 or K-20. If the clip indicator lights up, your signal is hitting 0 dBFS
-somewhere on that track.
+somewhere on that track. If you have not picked a meter scale yet, TayPE
+starts in `K-14`.
 
 In full-width `dBFS` view, the fader meter uses a console-style ladder:
 `0`, `-3`, `-6`, `-9`, `-12`, `-15`, `-18`, `-21`, then `-36`, `-46`, and
@@ -19,6 +20,11 @@ live peak tick falls with ballistics; the held line stays latched until a
 higher hit replaces it or you clear the meter lane. Those little bars also run
 wider now, with only a slim gutter to the panel edges instead of a fat dead
 margin.
+The yellow zone now sits closer to the same bright brass family as the radial
+knob lights, so it keeps its glow without drifting off into a dull mustard.
+If one of those sections is disabled or bypassed, the mini meters stay there
+as dim wells so the layout does not jump about, but the live fill and peak
+indicators go inactive until that section is back in circuit.
 
 K-system scales keep the red `FS` ceiling marker, label the highlighted K
 reference as `0`, add `+3 dB` marks above that `0 VU` line up toward

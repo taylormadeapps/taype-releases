@@ -49,7 +49,7 @@ instrument, it becomes the track's sound source; the remaining effect slots
 still work like normal post-strip inserts.
 
 **Track name** - double-click to edit inline (only when transport is
-stopped).
+stopped). Return commits; Escape or clicking away cancels.
 
 ## Track Order
 
