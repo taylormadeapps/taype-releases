@@ -32,6 +32,34 @@ Each processing section can be expanded or collapsed with its header
 toggle. See the [Channel Strip](channel-strip/README.md) page for details on
 every section.
 
+Right-click any section header to load a preset for just that section or use
+**Save Preset As...** at the top of the menu to save into that section's
+folder under `Documents/Taype/Section Presets`. If the strip section already
+came from a preset, TayPE pre-fills that preset name in the save dialog so you
+can rename or overwrite it without typing from scratch. If the preset name
+contains `/`, TayPE stores it in nested folders under that section's preset
+root, and the popup menu mirrors that folder tree as nested submenus. Section
+headers show a preset-name pill only when that section still
+matches the active strip preset's `CSP/...` path, or when no strip preset is
+active at all.
+
+Right-click the strip title bar to load or save a full channel strip preset.
+Those live under `Documents/Taype/Channel Strip Presets`. Each strip preset
+stores the fader panel state directly and recalls the rest of the strip through
+section presets under `Documents/Taype/Section Presets/<Section Name>/CSP/<Preset Name>`.
+If the strip preset name contains `/`, TayPE mirrors that path in both places,
+and the popup menu mirrors that folder tree as nested submenus too.
+
+The `PREAMP` header now stays a clean section label. Its mode/profile line sits
+inside the section body above the preamp mini meters, with the NAM browse
+button living on that row instead of in the header.
+
+Section presets only recall what belongs to that section. Fader presets bring
+back volume, pan, strip mode, and polarity, but they do not change the track's
+hardware input or output routing. Send presets try to reconnect by bus ID or
+bus name; if a target bus is missing in the current reel, TayPE skips that send
+and tells you.
+
 ## Using the Controls
 
 **Faders and knobs** - click and drag vertically. Each drag is a single

@@ -60,8 +60,9 @@ the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
-instead of using old text pills: low and high shelf toggles are shelf glyphs,
-and the mid-band narrow mode is a glowing `HI-Q` switch.
+instead of using old text pills: low and high shelf toggles show shelf-on
+glyphs by default and swap to a bell glyph when switched off, and the mid-band
+narrow mode is a glowing `HI-Q` switch.
 The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
 `OUT:` pair above the controls instead of being split apart, so input and
 output gain are easier to compare at a glance. The compact `IN:` / `OUT:` bars
