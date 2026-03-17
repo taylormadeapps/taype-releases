@@ -16,11 +16,15 @@ Double-click any gain or balance knob to reset it to zero. Double-click the fade
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
 
-Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. On the knobs, that contact spot now stays only a few pixels tighter than the real knob body diameter rather than shrinking down to a tiny blot, and it pushes far enough into the 225-degree lower-left seat to read past the radial light. The fade runs a touch taller so the seat reads deeper without getting wider. The fader cap itself is now a slightly taller silver-based metal handle with a clearer powder-coat tint from the track colour, plus a recessed centre slot instead of a raw swatch block, and its seat shadow hugs the cap more tightly so it reads planted in the slot instead of hovering. If you shorten the fader dock, the handle still scales back with the shorter throw instead of seeming to grow just because the panel got shallower, and the full-size strip still stops shrinking before the whole ladder turns into a cramped stack.
+Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. On the knobs, the unlit radial groove itself now sits closer to black, so the active yellow arc reads from a darker base instead of a softer grey-brown track. That contact spot now stays tied to the real knob body instead of the larger radial glow, but it runs a touch wider than the body so the seat holds its weight at both knob sizes, and it paints as a full circular seat rather than a narrow stripe. A short soft penumbra blooms from that same seat and now feathers out through a more diffuse outer falloff instead of cutting off too neatly or turning into a big halo. That seat still leans into the lower-left lighting story, but it now tucks a touch closer to the knob centre, with the smaller trim, EQ, filter, and compressor knobs pulled back a little more so they do not look detached from the body. That contact-shadow base density now stays in the same tonal family as the inactive dial track, so the seated hardware shadows read like part of the same unlit groove system rather than a separate grey overlay. The knob bevel lighting now keeps its brightest point in the top-right corner, then falls down the right edge toward the bottom-right instead of slanting that falloff across the face, while keeping the same colour recipe and contrast; it also drifts more obviously as you turn the knob so the face feels like real material moving under the light. The smaller trim, EQ, filter, and compressor knobs also carry a slightly stronger version of that same seat so the shadow still reads at mini-knob scale instead of only working on the larger pan control. The fader cap itself is now a slightly taller silver-based metal handle with a clearer powder-coat tint from the track colour, plus a recessed centre slot instead of a raw swatch block, and it now uses that same planted-seat shadow language with the seat nudged a touch farther left to match the lighting angle rather than a stack of tiny shadow stripes under the lip. That seat now tucks under the lit groove instead of being painted over the fader lamp, and it follows the full handle footprint instead of shrinking into a tiny blot, so the shadow can climb the left side of the cap as well as the base. The lit throw itself now stops at the handle's real centre travel, so the groove, printed ladder, and post-fader meter do not pretend the cap can keep moving past its own end-stops, and the visible groove itself now stops with that same honest travel instead of stretching farther just because the handle body overhangs at the ends. The whole fader lane now also reaches up into the dead lower band under the pan knob, so a maxed handle can come up to within about a pixel of the knob's bottom edge instead of wasting that empty air above the cap. The lit groove below the cap now follows the same lamp curve as the rotary arcs, keeping the same bolder low-state gold instead of slipping into muddy mustard, then warming up through the travel and only throwing a real glow as you push toward the top. If you shorten the fader dock, the handle still scales back with the shorter throw instead of seeming to grow just because the panel got shallower, and the full-size strip still stops shrinking before the whole ladder turns into a cramped stack.
 
 Preamp, filter, and EQ controls now sit a touch lower inside their panels so the bottom edge reads as evenly as the top, instead of leaving a fat dead strip under the lower controls. The compressor already used the right anchor and stays put.
 
 The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
+
+Double-click the fader dB readout or the pan readout and TayPE now drops a
+small inline text editor right on the strip, so you can type exact values
+without dragging for days.
 
 On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing.
 
@@ -43,10 +47,14 @@ at the top while slimming the controls down to threshold, ratio, makeup, and
 release only, inserts keep their thin pre/post meter lanes
 while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
 non-essential value text while keeping the post-fader scale markings. Narrow
-mixer strips also show the full eight-slot insert rack with no MORE/LESS
-control. The transport
+mixer strips also keep the same full-size machined fader handle as the
+standard strip, they now keep the fader's own left-side dB tick ladder too,
+and they still show the full eight-slot insert rack with no MORE/LESS control. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
 desk and the full-width strip view.
+On the full-width strip, the EQ mode row now matches the fader utility buttons
+instead of using old text pills: low and high shelf toggles are shelf glyphs,
+and the mid-band narrow mode is a glowing `HI-Q` switch.
 The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
 `OUT:` pair above the controls instead of being split apart, so input and
 output gain are easier to compare at a glance. The compact `IN:` / `OUT:` bars
@@ -81,21 +89,33 @@ Those grouped mini meters now carry the same held peak hairline as the main
 post-fader meter, so sharp transients stay visible without the held line doing
 that daft little walk back down the scale.
 The live peak tick now falls with its own ballistics, while the held peak
-stays latched until a higher hit replaces it or you clear the meter lane.
+holds for three seconds, refreshes on equal or higher hits, and clears when
+you clear the meter lane.
+Lit post-fader meter LEDs now also throw a small soft bloom outside each
+segment, with the hotter upper bars, live peak tick, and clip lamp glowing a
+touch harder so the lane feels like lit hardware instead of flat blocks.
+The live peak overlay itself now reads as a cool neon blue, closer to a
+Bluetooth status lamp, but a touch lighter and more diffuse so it reads like a
+lit diode rather than a flat line. When a post-fader hit clips, that live peak
+overlay only borrows the red clip colour for the short hold window before
+dropping back to neon blue, while the clip lamp and `CLIP` readout stay
+latched until you clear them.
 Whichever meter scale you pick, the fader lane still keeps a separate `0 dBFS`
 full-scale mark so the digital ceiling stays visible in `K12`, `K14`, and
 `K20`.
 The fader's own gain ladder now keeps straight `3 dB` steps from `+12` down to
-`-24`, so there are naturally twice as many printed marks below `0` as above
-it before the tail compresses into `-36`, `-48`, and mute.
+`-21`, then drops into evenly spaced `6 dB` tail labels at `-27`, `-33`,
+`-39`, and `-45` so the compressed floor reads in bigger chunks instead of pretending it is
+still a dense working band.
 In plain `dBFS`, the full-width fader meter now follows a console-style
 working ladder: tight `3 dB` steps from `0` down to `-21`, then a compressed
-tail for `-36`, `-46`, and `-60`, with a small held peak box parked below the
-scale.
+meter law with an evenly spaced printed tail for `-36`, `-46`, and `-60`, so
+the labels do not bunch up at the floor, with a small held peak box parked
+below the scale.
 That box shows the held post-fader peak in dB, and flips to `CLIP` until you
 clear the meter lane.
 In the K-system scales, the printed ladder now keeps the red `FS` tick at the
-true ceiling, adds `+3 dB` marks above the highlighted `0 VU` reference up
+true ceiling, keeps the `FS` label clear of that red line, adds `+3 dB` marks above the highlighted `0 VU` reference up
 toward full scale, then steps down in `-3 dB` marks to `-21` and `6 dB` marks
 below. The reference `0` zone still sits tighter to the top, so the lane reads
 like a working meter instead of a stretched-out ruler.
