@@ -39,6 +39,14 @@ pick plugins from the channel strip.
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
 
+Only insert **1** can host an instrument or TayPE's built-in **MIDI Out**.
+Slots **2-8** stay audio-effects only.
+
+Open **MIDI Out** to choose the Core MIDI destination, pick `Any` or a fixed
+channel, and set a timing advance. TayPE starts new MIDI Out inserts at the
+current interface round-trip so the external synth return can record back in
+time on the track's audio input.
+
 Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.
