@@ -111,6 +111,9 @@ lit diode rather than a flat line. When a post-fader hit clips, that live peak
 overlay only borrows the red clip colour for the short hold window before
 dropping back to neon blue, while the clip lamp and `CLIP` readout stay
 latched until you clear them.
+The grouped mini meters now follow that same split, so their live peak tick
+can cool back out after the short over hold without pretending the clip latch
+itself has been cleared.
 Whichever meter scale you pick, the fader lane still keeps a separate `0 dBFS`
 full-scale mark so the digital ceiling stays visible in `K12`, `K14`, and
 `K20`.

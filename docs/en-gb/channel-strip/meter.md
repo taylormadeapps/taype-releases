@@ -14,12 +14,19 @@ The held-peak box now lives in the pan row, directly under the pan readout. It
 shows the held post-fader peak in dB. If the clip latch trips, the box
 switches to `CLIP` and stays there until you clear the meter lane.
 
+When the main post-fader peak clips, the live peak tick goes red only for a
+short hold window, then drops back to its normal blue. The clip lamp and the
+`CLIP` box stay latched until you clear the meter lane.
+
 The grouped `IN:` / `OUT:` mini meters in the preamp, compressor, and insert
 sections now carry the same held peak line as the main post-fader meter. The
 live peak tick falls with ballistics; the held line stays latched until a
 higher hit replaces it or you clear the meter lane. Those little bars also run
 wider now, with only a slim gutter to the panel edges instead of a fat dead
 margin.
+If one of those little meters clips, its live peak tick borrows the same short
+red hold and then cools back out, while the underlying clip state still stays
+latched until you clear the main meter lane.
 The yellow zone now sits closer to the same bright brass family as the radial
 knob lights, so it keeps its glow without drifting off into a dull mustard.
 If the compressor or insert section is disabled or bypassed, the mini meters
