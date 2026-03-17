@@ -5,8 +5,36 @@
 Click a clip to select it. The clip highlights and its track becomes selected too. Press **Escape** to deselect everything.
 
 Double-click a clip to open **Clip Properties**. That's where you rename or
-recolour the clip, inspect its source paths, and, for MIDI-origin clips, open
-the paired MIDI file or re-render it through the track's current instrument.
+recolour the clip, inspect its source paths, reveal those files in Finder from
+the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
+TayPE's MIDI Clip Editor or **Re-render from MIDI** to print a fresh render
+through the track's current instrument.
+MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
+so you can spot them at a glance.
+
+## MIDI Clip Editor
+
+**Cmd+double-click** a MIDI-origin clip to open the floating MIDI Clip
+Editor. A regular double-click still opens **Clip Properties**.
+
+Click the grid to add a note. Drag a note to move it in time and pitch.
+Right-click a note to delete it. The **Piano/Drum** toggle switches between a
+pitched piano-roll view and fixed-length drum rows. The **High Top/Low Top**
+toggle flips whether higher notes sit at the top or bottom of the grid.
+Drag an empty part of the grid to marquee-select notes, and press
+**Cmd/Ctrl+A** to select the lot. When more than one note is selected,
+dragging a note moves the whole selection and dragging a note's right-edge
+resize handle changes every selected note by the same duration amount.
+
+As you add or move notes, TayPE auditions them through the track's current
+instrument. While the editor stays open, TayPE mutes that clip's baked audio
+and plays the current note layout through the instrument instead, so transport
+playback gives you a live preview rather than the stale printed render.
+**Commit** writes the updated MIDI sidecar and re-renders the clip.
+**Cancel** closes the window without changing the clip. The editor only opens
+while the transport is stopped. The editor also follows the reel timeline, so
+it uses the same ruler mode, Cut zero, snap rails, and main playhead as the
+arranger.
 
 ## Moving
 
@@ -79,4 +107,6 @@ Imported MIDI clips and recorded instrument takes keep a paired MIDI sidecar
 inside the reel. If you edit that MIDI file outside TayPE, go back to **Clip
 Properties** and use **Re-render from MIDI** to commit a fresh audio render.
 If the clip already has stretch or Melodyne-style derived audio on top, TayPE
-warns before that rerender clears those derived edits.
+warns before that rerender clears those derived edits. While the new audio is
+printing, the clip stays in place with a small spinner so you can see the
+rerender is still in flight without hearing anything from the offline print.

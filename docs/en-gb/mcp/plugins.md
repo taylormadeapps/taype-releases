@@ -34,19 +34,31 @@ stopped.
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
 | `plugin_id` | string | yes | Plugin path or UID from `list_plugins` |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+| `slot` | number | no | Insert slot index 0-7 (default: 0; instruments and MIDI Out must use slot 0) |
+| `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
+| `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
+| `advance_ms` | number | no | Virtual MIDI Out early-send amount in milliseconds; omitted uses the current interface round-trip estimate |
 
 **Returns:**
 ```json
 {
   "track_id": "...",
   "slot": 0,
-  "plugin_name": "ValhallaRoom",
+  "plugin_name": "External MIDI Out",
   "bypass": false,
   "enabled": true,
-  "latency_samples": 0
+  "latency_samples": 0,
+  "is_midi_out": true,
+  "midi_output_id": "iac-driver-bus-1",
+  "midi_output_name": "IAC Driver Bus 1",
+  "midi_channel": 0,
+  "midi_output_advance_ms": 12.5,
+  "midi_output_advance_samples": 600
 }
 ```
+
+**Errors:**
+- `Only the first insert slot can host instruments or MIDI Out`
 
 ### `remove_insert`
 
@@ -91,7 +103,13 @@ Get the current state of a track's insert slot.
   "uid": "12345678",
   "bypass": false,
   "enabled": true,
-  "latency_samples": 512
+  "latency_samples": 512,
+  "is_midi_out": false,
+  "midi_output_id": "",
+  "midi_output_name": "",
+  "midi_channel": 0,
+  "midi_output_advance_ms": 0.0,
+  "midi_output_advance_samples": 0
 }
 ```
 

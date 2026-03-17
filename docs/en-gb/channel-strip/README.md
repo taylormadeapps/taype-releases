@@ -64,6 +64,19 @@ full reduction range instead of stretching out to `48 dB`.
 The insert rack now does the same trick: `IN:` / `OUT:` mini meters are
 grouped together at the top, and the docked strip's `MORE` / `LESS` control
 gets its own footer row at the bottom instead of sharing the lower meter lane.
+The insert picker now also carries a top-level `MIDI Out` entry. That creates
+TayPE's built-in `External MIDI Out` insert, which keeps the track playing as
+normal while mirroring MIDI clip playback to a chosen Core MIDI destination.
+`Instruments` and `MIDI Out` only live on insert `1`; slots `2-8` stay
+audio-effects only.
+Unlike an instrument insert, `MIDI Out` does not switch the track into
+MIDI-only recording mode; audio takes still print from the track's audio input.
+If you swap a VSTi lane over to `MIDI Out`, TayPE drops any stale MIDI input
+route and puts the track back on its normal audio input so the external synth
+return can print honestly. Open that insert to pick the output device, either
+keep the source channel (`Any`) or force a fixed channel `1-16`, and set a
+timing advance so playback MIDI can leave early enough to cover the current
+interface round-trip.
 Those grouped mini meters now carry the same held peak hairline as the main
 post-fader meter, so sharp transients stay visible without the held line doing
 that daft little walk back down the scale.
@@ -90,8 +103,8 @@ Silent meters stay dark now too. The old floor tick that made dead inputs look
 alive is gone.
 
 The strip now works in two zones. The upper stack of sections scrolls vertically
-when it runs out of room, and a slim scrollbar appears at the right edge for
-precise scrolling without the mouse wheel. The fader section stays docked to
+when it runs out of room, and the docked channel strip puts a slim scrollbar on
+the left edge for precise scrolling without the mouse wheel. The fader section stays docked to
 the bottom of the strip, can be collapsed, and can be resized by dragging its
 top edge. In the mixer, the visible strips now share that upper scroll position
 as well as the dock height, so the desk stays lined up while you move through
