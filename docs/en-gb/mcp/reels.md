@@ -84,7 +84,8 @@ Duplicate the current reel to a new `.taype` bundle and switch to it.
 ### `rename_reel`
 
 Rename the current reel bundle. The bundle filename is the canonical reel
-name.
+name. If the requested name is already taken in that folder, TayPE appends
+` 2`, ` 3`, and so on and returns the actual renamed bundle name.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
