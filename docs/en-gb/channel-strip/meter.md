@@ -22,9 +22,11 @@ wider now, with only a slim gutter to the panel edges instead of a fat dead
 margin.
 The yellow zone now sits closer to the same bright brass family as the radial
 knob lights, so it keeps its glow without drifting off into a dull mustard.
-If one of those sections is disabled or bypassed, the mini meters stay there
-as dim wells so the layout does not jump about, but the live fill and peak
-indicators go inactive until that section is back in circuit.
+If the compressor or insert section is disabled or bypassed, the mini meters
+stay there as dim wells so the layout does not jump about, but the live fill
+and peak indicators go inactive until that section is back in circuit. The
+preamp `IN:` / `OUT:` pair stays live in Clean mode, because it is still
+showing the gain staging around the trim/preamp slot.
 
 K-system scales keep the red `FS` ceiling marker, label the highlighted K
 reference as `0`, add `+3 dB` marks above that `0 VU` line up toward
