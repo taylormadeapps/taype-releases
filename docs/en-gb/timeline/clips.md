@@ -2,7 +2,7 @@
 
 ## Selecting
 
-Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, and dragging in empty timeline space marquee-selects clips. Press **Escape** to deselect everything.
+Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
 
 Double-click a clip to open **Clip Properties**. That's where you rename or
 recolour the clip, inspect its source paths, reveal those files in Finder from
@@ -49,7 +49,21 @@ Snap stays soft while you drag, so the clip only grabs a rail when you get near 
 
 ## Copying
 
-Hold **Option** while dragging a clip to copy it. The original stays put and a duplicate appears at the drop position. Both clips share the same source audio file.
+Hold **Option** while dragging a clip to copy it. If more than one clip is selected, TayPE copy-drags the whole selection as a group and preserves the relative spacing. Both the originals and the copies keep pointing at the same source media.
+
+## Loop Braces
+
+The timeline ruler always shows loop braces. Drag the handles to set the loop
+start and end, or drag the top ruler space between them to move the whole
+range without changing its width. The untouched default span is 16 bars. The
+brace handles sit in the top marker lane as little **L** and **R** tabs by the
+brace lines, so
+the lower ruler zoom band stays clear. When loop playback is on, the brace
+lines extend through the arranger; when loop playback is off, they stay up in
+the ruler. Press **[** to set the left brace at the tape head, **]** to set
+the right brace, and **L** to set both braces from the current clip selection
+and turn loop playback on. If a marker lands on the left brace time, TayPE
+flips the brace tab to the other side of the line so both stay readable.
 
 ## Splitting
 
