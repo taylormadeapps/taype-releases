@@ -79,6 +79,9 @@ Set tempo and/or time signature. Only provided fields are changed.
 
 Enable or disable the metronome click.
 
+When playback starts, the click stays locked to the transport grid even though
+TayPE still applies a short fixed anti-pop fade to the program mix underneath.
+
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `enabled` | bool | yes | true to enable, false to disable |
