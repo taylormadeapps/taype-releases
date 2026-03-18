@@ -22,9 +22,12 @@ This file is created automatically on first launch with sensible defaults.
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
 | / | Add marker at the tape head |
-| , | Go to previous marker |
-| . | Go to next marker |
+| , | Go to previous marker or loop brace |
+| . | Go to next marker or loop brace |
 | Unbound | Set 0 at Playhead for the selected Cut |
+| [ | Set the left loop brace to the tape head |
+| ] | Set the right loop brace to the tape head |
+| L | Set both loop braces to the selected clips and enable loop playback |
 
 ### Markers
 
@@ -48,6 +51,7 @@ This file is created automatically on first launch with sensible defaults.
 | Cmd+X | Cut selected clip |
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
+| Cmd+A | Select all clips, or all clips overlapping the loop when loop is active |
 | Backspace | Delete selected clip |
 | Delete | Delete selected non-master track |
 | Cmd+Z | Undo |
@@ -114,6 +118,9 @@ is straightforward:
   "add_marker_here": "/",
   "previous_marker": ",",
   "next_marker": ".",
+  "set_left_loop_brace": "[",
+  "set_right_loop_brace": "]",
+  "set_loop_from_selection": "l",
   "go_to_marker_1": "1",
   "split_clip": "\\",
   "duplicate_clip": "d",

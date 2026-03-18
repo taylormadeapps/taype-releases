@@ -27,14 +27,6 @@ selected Cut's zero point.
 
 Get current transport state.
 
-`pdc.monitor_reference_latency_samples` is the slowest active monitored live
-path in the current session. Per-track `monitoring_latency` is the true
-downstream live-path latency for that monitored source.
-`monitor_alignment_delay` is the extra audition-only delay currently applied
-to faster monitored live paths so they arrive with that reference. A track
-with `monitor_alignment_reference: true` is itself one of the current
-slowest monitored live paths.
-
 **Returns:**
 ```json
 {
@@ -42,26 +34,9 @@ slowest monitored live paths.
   "position": 12.5,
   "duration": 180.0,
   "zero_time_seconds": 8.0,
-  "recording": false,
-  "pdc": {
-    "total_session_latency_samples": 1024,
-    "total_session_latency_ms": 23.2,
-    "master_chain_latency_samples": 0,
-    "mix_fx_latency_samples": 0,
-    "monitor_reference_latency_samples": 768,
-    "tracks": [
-      {
-        "track_id": "track_1",
-        "chain_latency": 512,
-        "compensation": 512,
-        "live_path_latency": 768,
-        "monitoring_latency": 768,
-        "monitor_alignment_delay": 256,
-        "live_monitored": true,
-        "monitor_alignment_reference": false
-      }
-    ]
-  }
+  "loop_enabled": false,
+  "loop_start_seconds": 0.0,
+  "loop_end_seconds": 0.0
 }
 ```
 
@@ -93,15 +68,22 @@ Reset the selected Cut's zero point back to timeline start.
 
 ### `set_transport`
 
-Set tempo and/or time signature. Only provided fields are changed.
+Set tempo, time signature, and/or playback loop range. Only provided fields
+are changed.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `tempo` | number | no | BPM |
 | `numerator` | number | no | Time signature numerator |
 | `denominator` | number | no | Time signature denominator |
+| `loop_enabled` | bool | no | Enable or disable loop playback |
+| `loop_start_seconds` | number | no | Absolute loop start in seconds |
+| `loop_end_seconds` | number | no | Absolute loop end in seconds |
 
-**Returns:** Current transport state after changes.
+Loop range updates require both loop endpoints and at least `0.5` seconds of
+width.
+
+**Returns:** Current transport state after changes, including the loop fields.
 
 ### `set_metronome`
 

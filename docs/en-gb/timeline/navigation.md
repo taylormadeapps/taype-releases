@@ -51,6 +51,8 @@ Changing tempo, time signature, or the Cut zero point does not move them.
 
 - Right-click the top ruler area and choose **Add Marker at Playhead** to drop
   a marker at the current tape head.
+- Double-click an empty spot in the upper ruler lane to drop a marker at the
+  clicked time.
 - Each marker draws as a thin vertical line through the whole timeline, with a
   small label tab to the right of the line in the ruler.
 - Drag a marker left or right to move it. When snap is on, marker drags snap
@@ -64,4 +66,6 @@ Changing tempo, time signature, or the Cut zero point does not move them.
   and collapses the duplicate.
 
 Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
-keyboard shortcuts page, to move between markers quickly.
+keyboard shortcuts page, to move between markers quickly. When the loop has
+been explicitly set or enabled, those previous/next jumps also stop at the
+loop brace points.
