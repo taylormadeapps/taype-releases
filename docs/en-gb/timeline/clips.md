@@ -49,7 +49,7 @@ Snap stays soft while you drag, so the clip only grabs a rail when you get near 
 
 ## Copying
 
-Hold **Option** while dragging a clip to copy it. If more than one clip is selected, TayPE copy-drags the whole selection as a group and preserves the relative spacing. The original and the copy keep sharing the canonical source media. If the clip already has clip-local generated audio from stretch or Melodyne, TayPE duplicates that generated layer for the new clip so later edits can diverge cleanly.
+Hold **Option** while dragging a clip to copy it. The original and the copy keep sharing the canonical source media. If the clip already has clip-local generated audio from stretch or Melodyne, TayPE duplicates that generated layer for the new clip so later edits can diverge cleanly.
 
 ## Loop Braces
 
@@ -69,7 +69,7 @@ flips the brace tab to the other side of the line so both stay readable.
 
 ## Splitting
 
-Select a clip, position the tape head where you want the split, and press **\\**. The clip divides into two at that point. Both halves reference the same audio file — nothing is destroyed.
+Select one or more clips, position the tape head where you want the split, and press **\\**. Every selected clip that spans the tape head divides into two at that point. Both halves reference the same audio file, and TayPE selects the new right-hand clips when the split is done.
 
 ## Trimming
 
@@ -104,10 +104,15 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 
 ## Clipboard
 
-- **Cmd+X** — cut (copy and delete)
-- **Cmd+C** — copy
-- **Cmd+V** — paste at the tape head position on the selected track
-- **Cmd+D** — duplicate back-to-back (immediately after the original)
+- **Cmd+X** — cut the selected clip set
+- **Cmd+C** — copy the selected clip set
+- **Cmd+V** — paste the copied clip set at the tape head
+- **D** — duplicate the selected clip set back-to-back
+
+When more than one clip is in the clipboard or duplicate set, TayPE preserves
+the spacing between them. Paste uses the selected track as the anchor for the
+copied track layout; if no track is selected, each clip goes back to the track
+it was copied from.
 
 ## Importing Files
 
