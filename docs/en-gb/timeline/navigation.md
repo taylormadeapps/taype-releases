@@ -68,4 +68,5 @@ Changing tempo, time signature, or the Cut zero point does not move them.
 Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
 keyboard shortcuts page, to move between markers quickly. When the loop has
 been explicitly set or enabled, those previous/next jumps also stop at the
-loop brace points.
+loop brace points. If a jump lands outside the current view, TayPE brings the
+playhead back on screen instead of leaving it off to the side.

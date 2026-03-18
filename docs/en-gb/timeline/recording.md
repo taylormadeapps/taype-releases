@@ -16,9 +16,11 @@ linear after the punch instead of wrapping back around. Latency compensation
 keeps the committed take reaching the visible right brace instead of ending
 short.
 
-Right-click the metronome button in the ruler to choose a one-shot record
-pre-roll of **Off**, **1**, **2**, or **4** bars. During pre-roll, TayPE can
-force the metronome on only where the lead-in would otherwise be silent.
+Right-click the metronome button in the ruler to choose a one-shot pre-roll of
+**Off**, **1**, **2**, or **4** bars. Playback always uses that lead-in: with
+loop playback on, TayPE backs up from the left brace; with loop playback off,
+it backs up from the current tape head position. During any pre-roll, TayPE
+can force the metronome on only where the lead-in would otherwise be silent.
 
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
 
