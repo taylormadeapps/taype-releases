@@ -49,7 +49,7 @@ Snap stays soft while you drag, so the clip only grabs a rail when you get near 
 
 ## Copying
 
-Hold **Option** while dragging a clip to copy it. If more than one clip is selected, TayPE copy-drags the whole selection as a group and preserves the relative spacing. Both the originals and the copies keep pointing at the same source media.
+Hold **Option** while dragging a clip to copy it. If more than one clip is selected, TayPE copy-drags the whole selection as a group and preserves the relative spacing. The original and the copy keep sharing the canonical source media. If the clip already has clip-local generated audio from stretch or Melodyne, TayPE duplicates that generated layer for the new clip so later edits can diverge cleanly.
 
 ## Loop Braces
 
@@ -62,7 +62,9 @@ the lower ruler zoom band stays clear. When loop playback is on, the brace
 lines extend through the arranger; when loop playback is off, they stay up in
 the ruler. Press **[** to set the left brace at the tape head, **]** to set
 the right brace, and **L** to set both braces from the current clip selection
-and turn loop playback on. If a marker lands on the left brace time, TayPE
+and turn loop playback on. Looping is playback-only; when you record with
+braces active, TayPE uses the same range as a linear punch window instead of
+cycling the take. If a marker lands on the left brace time, TayPE
 flips the brace tab to the other side of the line so both stay readable.
 
 ## Splitting

@@ -87,10 +87,13 @@ width.
 
 ### `set_metronome`
 
-Enable or disable the metronome click.
+Enable or disable the metronome click and/or set record pre-roll bars.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
-| `enabled` | bool | yes | true to enable, false to disable |
+| `enabled` | bool | no | true to enable, false to disable |
+| `pre_roll_bars` | integer | no | record pre-roll bars: `0`, `1`, `2`, or `4` |
 
-**Returns:** `{ "enabled": true }`
+Pass at least one of `enabled` or `pre_roll_bars`.
+
+**Returns:** `{ "enabled": true, "pre_roll_bars": 2, "pre_roll_forced": false }`

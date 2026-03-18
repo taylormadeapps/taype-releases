@@ -209,7 +209,7 @@ re-check via `status` before assuming previous values are still valid.
   "personality": { "name": "Glue & Weight", "system_prompt": "..." },
   "theme": "normal",
   "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "meter_scale": "dbfs", "selected_track": "" },
-  "metronome": { "enabled": false }
+  "metronome": { "enabled": false, "pre_roll_bars": 0, "pre_roll_forced": false }
 }
 ```
 
