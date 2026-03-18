@@ -22,12 +22,9 @@ This file is created automatically on first launch with sensible defaults.
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
 | / | Add marker at the tape head |
-| , | Go to previous marker or loop brace |
-| . | Go to next marker or loop brace |
+| , | Go to previous marker |
+| . | Go to next marker |
 | Unbound | Set 0 at Playhead for the selected Cut |
-| [ | Set the left loop brace to the tape head |
-| ] | Set the right loop brace to the tape head |
-| L | Set both loop braces to the selected clips and enable loop playback |
 
 ### Markers
 
@@ -44,18 +41,15 @@ This file is created automatically on first launch with sensible defaults.
 
 | Shortcut | Action |
 |----------|--------|
-| \ | Split selected clips that cross the tape head |
-| Cmd+\ | Split selected clips at both loop braces |
-| Option+\ | Split all clips at the tape head |
-| Cmd+Option+\ | Split all clips at both loop braces |
-| D | Duplicate selected clips back-to-back as a group |
+| S | Split selected clip at the tape head |
+| D | Duplicate selected clip back-to-back |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+Option+D | Duplicate selected track with clips |
-| Cmd+X | Cut selected clips |
-| Cmd+C | Copy selected clips |
-| Cmd+V | Paste copied clip group at tape head position |
-| Cmd+A | Select all clips, or all clips overlapping the loop when loop is active |
-| Backspace | Delete selected clips |
+| Cmd+X | Cut selected clip |
+| Cmd+C | Copy selected clip |
+| Cmd+V | Paste clip at tape head position |
+| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
+| Backspace | Delete selected clip |
 | Delete | Delete selected non-master track |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
@@ -78,7 +72,7 @@ there is no separate user-facing Save command.
 | M | Toggle between timeline and mixer |
 | W | Toggle mixer width between narrow and full-width strips (mixer view only) |
 | I | Toggle channel strip panel |
-| F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
+| F | Focus view - show only tracks with clips at the tape head |
 | A | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
@@ -104,7 +98,7 @@ there is no separate user-facing Save command.
 | Option+click | Timeline | Seek tape head (even over clips) |
 | Right-click drag left/right | Timeline | Scroll through time |
 | Right-click drag up/down | Timeline | Horizontal zoom |
-| Option+drag | Clip | Copy clip to new position |
+| Cmd+drag | Clip | Copy clip to new position |
 | Drag clip edge | Clip | Trim clip (non-destructive) |
 
 ## Customising Shortcuts
@@ -121,14 +115,8 @@ is straightforward:
   "add_marker_here": "/",
   "previous_marker": ",",
   "next_marker": ".",
-  "set_left_loop_brace": "[",
-  "set_right_loop_brace": "]",
-  "set_loop_from_selection": "l",
   "go_to_marker_1": "1",
-  "split_clip": "\\",
-  "split_clip_at_loop_braces": "cmd+\\",
-  "split_all_clips_at_playhead": "alt+\\",
-  "split_all_clips_at_loop_braces": "cmd+alt+\\",
+  "split_clip": "s",
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",

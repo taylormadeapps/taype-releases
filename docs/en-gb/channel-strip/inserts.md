@@ -68,7 +68,9 @@ When you load that insert-section preset later, TayPE restores matching
 plug-ins from those `CSB/...` presets too.
 
 Loading a plug-in preset follows the same stopped-transport rule as other
-insert edits.
+insert edits. TayPE now fully reloads that insert from the saved preset chunk,
+so processors that ignore hot state swaps still come back in the recalled
+state instead of quietly snapping to the default patch.
 
 Bypass can still toggle while the transport is running. **Disable** cannot:
 if you try it from the plug-in window while playback is rolling, TayPE warns
@@ -79,8 +81,8 @@ and does not change routing yet.
 
 Open **MIDI Out** to choose the Core MIDI destination, pick `Any` or a fixed
 channel, and set a timing advance. TayPE starts new MIDI Out inserts at the
-current interface round-trip so the external synth return can record back in
-time on the track's audio input.
+current corrected interface round-trip from Audio prefs so the external synth
+return can record back in time on the track's audio input.
 
 Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
@@ -105,6 +107,11 @@ The crash alert names the culprit plugin when possible. If TayPE can't attribute
 ## Tail Handling
 
 During playback, time-based effects (delay, reverb) keep processing across silent gaps between clips, so tails carry naturally. Pressing **Stop** clears insert tails for a clean restart.
+
+If a plug-in adds heavy latency, TayPE recalculates playback timing before the
+next pass so clips stay locked through that insert path. If you are starting
+right on a big downbeat into a very latent chain, give yourself a touch of
+lead-in for the cleanest first transient.
 
 ## Input Routing
 

@@ -53,6 +53,11 @@ Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running —
 
 The crash alert names the culprit plugin when possible. If TayPE can't attribute it, it says the culprit is unknown and keeps audio running dry.
 
+Loading a saved plug-in preset happens with transport stopped. TayPE fully
+reloads that insert from the saved preset chunk so processors that ignore hot
+state swaps still come back in the recalled state instead of slipping back to
+the default patch.
+
 ## Tail Handling
 
 During playback, time-based effects (delay, reverb) keep processing across silent gaps between clips, so tails carry naturally. Pressing **Stop** clears insert tails for a clean restart.

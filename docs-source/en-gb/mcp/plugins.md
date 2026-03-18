@@ -97,6 +97,47 @@ Get the current state of a track's insert slot.
 
 **Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false }`
 
+### `list_insert_presets`
+
+List saved TayPE plug-in presets that match the current insert slot.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+
+**Returns (loaded):**
+```json
+{
+  "track_id": "...",
+  "slot": 0,
+  "loaded": true,
+  "plugin_name": "Master Plan",
+  "count": 1,
+  "presets": [
+    {
+      "name": "Latency Clean",
+      "path": "/Users/you/Documents/Taype/Presets/FX/Master Plan/Latency Clean"
+    }
+  ]
+}
+```
+
+**Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false, "count": 0, "presets": [] }`
+
+### `load_insert_preset`
+
+Load a saved TayPE plug-in preset into the current insert slot. Requires
+transport stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `preset_name` | string | yes | Saved preset name/path from `list_insert_presets` |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+
+**Returns:** `{ "track_id": "...", "slot": 0, "preset_name": "Latency Clean", "latency_samples": 4706 }`
+
 ### `open_insert_editor`
 
 Open the plugin editor window.

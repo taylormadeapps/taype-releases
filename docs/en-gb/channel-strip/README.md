@@ -94,7 +94,7 @@ route and puts the track back on its normal audio input so the external synth
 return can print honestly. Open that insert to pick the output device, either
 keep the source channel (`Any`) or force a fixed channel `1-16`, and set a
 timing advance so playback MIDI can leave early enough to cover the current
-interface round-trip.
+corrected interface round-trip from Audio prefs.
 Those grouped mini meters now carry the same held peak hairline as the main
 post-fader meter, so sharp transients stay visible without the held line doing
 that daft little walk back down the scale.
