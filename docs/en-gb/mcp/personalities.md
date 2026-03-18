@@ -23,7 +23,7 @@ TayPE ships with eleven built-in studio tech characters:
 | **Minimal Truth** | Minimal processing, document the performance as-is |
 | **Loud & Proud** | Impact, loudness as skill, competitive |
 | **Late-Night Glow** | Warmth, harmonic richness, vibe |
-| **Greg Zenner** | No-bullshit mentor. Feel over fidelity. |
+| **Greg Zenner** | No-bs mentor. Feel over fidelity. |
 
 ## Switching Personalities
 
