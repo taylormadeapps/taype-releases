@@ -44,15 +44,15 @@ This file is created automatically on first launch with sensible defaults.
 
 | Shortcut | Action |
 |----------|--------|
-| \ | Split selected clip at the tape head |
-| D | Duplicate selected clip back-to-back |
+| \ | Split selected clips that cross the tape head |
+| D | Duplicate selected clips back-to-back as a group |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+Option+D | Duplicate selected track with clips |
-| Cmd+X | Cut selected clip |
-| Cmd+C | Copy selected clip |
-| Cmd+V | Paste clip at tape head position |
+| Cmd+X | Cut selected clips |
+| Cmd+C | Copy selected clips |
+| Cmd+V | Paste copied clip group at tape head position |
 | Cmd+A | Select all clips, or all clips overlapping the loop when loop is active |
-| Backspace | Delete selected clip |
+| Backspace | Delete selected clips |
 | Delete | Delete selected non-master track |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |

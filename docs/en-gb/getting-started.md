@@ -175,10 +175,10 @@ TayPE keeps playback clean and separate from structural changes.
 - **Click a clip** to select it
 - **Drag a clip** to move it (horizontally for time, vertically to change
   tracks)
-- **Cmd+drag** a clip to copy it to a new position
-- **S** - split the selected clip at the tape head
-- **Cmd+D** - duplicate a clip back-to-back
-- **Cmd+X / Cmd+C / Cmd+V** - cut, copy, paste
+- **Option+drag** a clip to copy it to a new position
+- **\\** - split the selected clip, or every selected clip that crosses the tape head
+- **D** - duplicate the selected clip or clip set back-to-back
+- **Cmd+X / Cmd+C / Cmd+V** - cut, copy, paste the selected clip or clip set
 
 Drag the edges of a clip to trim it. This is non-destructive - your
 original audio is never modified.
