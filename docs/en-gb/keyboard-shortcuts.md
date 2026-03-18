@@ -55,6 +55,7 @@ This file is created automatically on first launch with sensible defaults.
 | Cmd+C | Copy selected clips |
 | Cmd+V | Paste copied clip group at tape head position |
 | Cmd+A | Select all clips, or all clips overlapping the loop when loop is active |
+| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | Backspace | Delete selected clips |
 | Delete | Delete selected non-master track |
 | Cmd+Z | Undo |

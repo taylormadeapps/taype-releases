@@ -132,11 +132,15 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   device when you change a field; it waits for **Apply Audio Changes**.
 - Use **Apply Audio Changes** to commit output device, input device, master
   output pair, default stereo input, default mono input, sample rate, buffer
-  size, Resampling, and NAM changes together.
+  size, hardware error compensation, Resampling, and NAM changes together.
+- The **Master output pair** list only offers normal stereo hardware pairs
+  such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
 - Tracks whose input selector is **Default** follow the mono/stereo default
-  input you pick here. Either default input can be **None**.
+  input you pick here as soon as you apply the change. TayPE also restores the
+  matching input channels on relaunch, so an aggregate-device default keeps
+  pointing at the same hardware tail. Either default input can be **None**.
 - If **Resampling** is **off**, the Sample rate field stays read-only once the
   interface is already back at **48 kHz**.
 - With Resampling off, TayPE will try to switch your interface to **48 kHz**
@@ -159,6 +163,11 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   working setup and shows the failure.
 - If **Resampling** is **on**, you can change the interface sample rate in the
   Audio settings while TayPE continues processing internally at 48 kHz.
+- **Hardware error compensation (samples)** lets you add or subtract a small
+  signed sample trim when the real rig lands consistently late or early versus
+  the driver report. Positive values mean "this box is actually later than
+  Core Audio says." TayPE folds that trim into recording compensation and the
+  default MIDI Out timing estimate.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
   batches.
