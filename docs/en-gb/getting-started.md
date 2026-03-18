@@ -133,10 +133,14 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - Use **Apply Audio Changes** to commit output device, input device, master
   output pair, default stereo input, default mono input, sample rate, buffer
   size, Resampling, and NAM changes together.
+- The **Master output pair** list only offers normal stereo hardware pairs
+  such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
 - Tracks whose input selector is **Default** follow the mono/stereo default
-  input you pick here. Either default input can be **None**.
+  input you pick here as soon as you apply the change. TayPE also restores the
+  matching input channels on relaunch, so an aggregate-device default keeps
+  pointing at the same hardware tail. Either default input can be **None**.
 - If **Resampling** is **off**, the Sample rate field stays read-only once the
   interface is already back at **48 kHz**.
 - With Resampling off, TayPE will try to switch your interface to **48 kHz**
