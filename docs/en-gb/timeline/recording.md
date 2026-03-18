@@ -10,6 +10,16 @@ When you stop, each ghost clip is replaced by its real clip with the final wavef
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
+If the loop braces are active, recording does **not** cycle. TayPE treats the
+left brace as punch-in and the right brace as punch-out, with playback staying
+linear after the punch instead of wrapping back around. Latency compensation
+keeps the committed take reaching the visible right brace instead of ending
+short.
+
+Right-click the metronome button in the ruler to choose a one-shot record
+pre-roll of **Off**, **1**, **2**, or **4** bars. During pre-roll, TayPE can
+force the metronome on only where the lead-in would otherwise be silent.
+
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
 
 ## Input and Output Routing
