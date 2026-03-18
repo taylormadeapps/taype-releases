@@ -48,6 +48,7 @@ This file is created automatically on first launch with sensible defaults.
 | Cmd+X | Cut selected clip |
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
+| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | Backspace | Delete selected clip |
 | Delete | Delete selected non-master track |
 | Cmd+Z | Undo |
