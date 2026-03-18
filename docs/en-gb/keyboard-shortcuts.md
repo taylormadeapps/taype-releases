@@ -45,6 +45,9 @@ This file is created automatically on first launch with sensible defaults.
 | Shortcut | Action |
 |----------|--------|
 | \ | Split selected clips that cross the tape head |
+| Cmd+\ | Split selected clips at both loop braces |
+| Option+\ | Split all clips at the tape head |
+| Cmd+Option+\ | Split all clips at both loop braces |
 | D | Duplicate selected clips back-to-back as a group |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+Option+D | Duplicate selected track with clips |
@@ -75,7 +78,7 @@ there is no separate user-facing Save command.
 | M | Toggle between timeline and mixer |
 | W | Toggle mixer width between narrow and full-width strips (mixer view only) |
 | I | Toggle channel strip panel |
-| F | Focus view - show only tracks with clips at the tape head |
+| F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
@@ -123,6 +126,9 @@ is straightforward:
   "set_loop_from_selection": "l",
   "go_to_marker_1": "1",
   "split_clip": "\\",
+  "split_clip_at_loop_braces": "cmd+\\",
+  "split_all_clips_at_playhead": "alt+\\",
+  "split_all_clips_at_loop_braces": "cmd+alt+\\",
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",

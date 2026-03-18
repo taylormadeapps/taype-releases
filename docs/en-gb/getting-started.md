@@ -267,7 +267,8 @@ TayPE has three ways to think about tracks:
 hear during playback.
 
 **Focus** - press **F** to filter the timeline down to only the tracks
-that have audio at the current tape head position. Focus recomputes when
+that have audio at the current tape head position. If loop playback is on,
+Focus widens to the whole loop-brace range instead. Focus recomputes when
 you press the button - it doesn't jitter around while you work. Record-armed
 and selected tracks are always visible.
 

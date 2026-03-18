@@ -4,7 +4,7 @@ Four view filters help you focus on what matters. All are toggles:
 
 | Shortcut | Mode | What It Does |
 |----------|------|-------------|
-| F | Focus | Show only tracks with clips at the tape head position |
+| F | Focus | Show only tracks with clips at the tape head, or inside the active loop range |
 | A | Archive View | Toggle between active tracks and archived tracks |
 | G | Spill | Show the selected bus (or master) and all tracks routed directly to it |
 | E | E-Zoom | Zoom to fit the selected clip |
