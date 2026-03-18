@@ -35,7 +35,7 @@ Press **E** to zoom the view to fit the selected clip. Press **E** again to snap
 
 ## Seeking
 
-Click anywhere in the timeline (that isn't a clip) to move the tape head. Click in the ruler to seek regardless of what's below.
+Dragging in empty timeline space marquee-selects clips. Click in the ruler to seek regardless of what's below.
 Right-click in the upper ruler area to open the zero-point menu for the selected Cut.
 Right-click in the lower ruler tick band to use the existing pan/zoom drag.
 

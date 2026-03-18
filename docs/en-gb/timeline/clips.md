@@ -2,7 +2,7 @@
 
 ## Selecting
 
-Click a clip to select it. The clip highlights and its track becomes selected too. Press **Escape** to deselect everything.
+Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, and dragging in empty timeline space marquee-selects clips. Press **Escape** to deselect everything.
 
 Double-click a clip to open **Clip Properties**. That's where you rename or
 recolour the clip, inspect its source paths, reveal those files in Finder from
@@ -49,11 +49,11 @@ Snap stays soft while you drag, so the clip only grabs a rail when you get near 
 
 ## Copying
 
-Hold **Cmd** while dragging a clip to copy it. The original stays put and a duplicate appears at the drop position. Both clips share the same source audio file.
+Hold **Option** while dragging a clip to copy it. The original stays put and a duplicate appears at the drop position. Both clips share the same source audio file.
 
 ## Splitting
 
-Select a clip, position the tape head where you want the split, and press **S**. The clip divides into two at that point. Both halves reference the same audio file — nothing is destroyed.
+Select a clip, position the tape head where you want the split, and press **\\**. The clip divides into two at that point. Both halves reference the same audio file — nothing is destroyed.
 
 ## Trimming
 

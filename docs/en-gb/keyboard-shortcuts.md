@@ -41,7 +41,7 @@ This file is created automatically on first launch with sensible defaults.
 
 | Shortcut | Action |
 |----------|--------|
-| S | Split selected clip at the tape head |
+| \ | Split selected clip at the tape head |
 | D | Duplicate selected clip back-to-back |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+Option+D | Duplicate selected track with clips |
@@ -97,7 +97,7 @@ there is no separate user-facing Save command.
 | Option+click | Timeline | Seek tape head (even over clips) |
 | Right-click drag left/right | Timeline | Scroll through time |
 | Right-click drag up/down | Timeline | Horizontal zoom |
-| Cmd+drag | Clip | Copy clip to new position |
+| Option+drag | Clip | Copy clip to new position |
 | Drag clip edge | Clip | Trim clip (non-destructive) |
 
 ## Customising Shortcuts
@@ -115,7 +115,7 @@ is straightforward:
   "previous_marker": ",",
   "next_marker": ".",
   "go_to_marker_1": "1",
-  "split_clip": "s",
+  "split_clip": "\\",
   "duplicate_clip": "d",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",
