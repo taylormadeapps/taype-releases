@@ -42,7 +42,7 @@ If **Menu Path** is blank, the plugin sits directly inside the top-level
 
 The insert picker is split into **Stock**, **Effects**, and
 **Instruments**. **Stock** holds TayPE-shipped inserts such as
-**Tape Rooms** and the built-in **External MIDI Out**.
+**Tape Rooms**, **Ache-Delay**, and the built-in **External MIDI Out**.
 
 Only insert **1** can host an instrument or **External MIDI Out**.
 Slots **2-8** stay audio-effects only, but audio-FX extensions like
@@ -85,6 +85,14 @@ as **Channels**, and gives the send behaviour its own **Mode** toggle with
 **Send / Insert** choices. **Send** is the default and forces a
 100% wet return; flip to **Insert** to wake the Mix control up. Ducking always
 happens on the wet path before Mix combines wet and dry. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
+
+The same **Stock** lane now ships **Ache-Delay** as TayPE's house delay.
+It follows the same native editor language as Tape Rooms, but with a warmer
+copper wash and a delay-first layout: **Free / Sync** timing, note divisions,
+**Mono / Dual Stereo / Ping-Pong / Ping-Pong (Even)** routing, and the same
+wet-path **Duck** behaviour keyed from the incoming signal. **Send** is the
+default output mode and forces a 100% wet return. Flip to **Insert** to bring
+the stored **Mix** value back into play without rewriting it.
 
 ## Plug-in Window
 

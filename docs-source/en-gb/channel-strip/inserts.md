@@ -73,6 +73,14 @@ as **Channels**, and gives the send behaviour its own **Mode** toggle with
 100% wet return; flip to **Insert** to wake the Mix control up. Ducking always
 happens on the wet path before Mix combines wet and dry. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
 
+The same **Stock** lane now ships **Ache-Delay** as TayPE's house delay.
+It follows the same native editor language as Tape Rooms, but with a warmer
+copper wash and a delay-first layout: **Free / Sync** timing, note divisions,
+**Mono / Dual Stereo / Ping-Pong / Ping-Pong (Even)** routing, and the same
+wet-path **Duck** behaviour keyed from the incoming signal. **Send** is the
+default output mode and forces a 100% wet return. Flip to **Insert** to bring
+the stored **Mix** value back into play without rewriting it.
+
 Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.

@@ -6,7 +6,8 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 
 ### `list_plugins`
 
-Return the scanned VST3 plugin catalogue.
+Return the scanned VST3 plugin catalogue plus TayPE's bundled
+**Stock** entries such as **Tape Rooms** and **Ache-Delay**.
 
 **Returns:**
 ```json
@@ -33,8 +34,11 @@ stopped.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `plugin_id` | string | yes | Plugin path or UID from `list_plugins` |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, or a bundled extension name/path |
+| `slot` | number | no | Insert slot index 0-7 (default: 0; instruments and MIDI Out must use slot 0) |
+| `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
+| `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
+| `advance_ms` | number | no | Virtual MIDI Out playback lead in milliseconds |
 
 **Returns:**
 ```json
