@@ -7,7 +7,7 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 ### `list_plugins`
 
 Return the scanned VST3 plugin catalogue plus TayPE's bundled
-**Extensions** entries such as **The Convolver**.
+**Stock** entries such as **Tape Rooms**.
 
 **Returns:**
 ```json

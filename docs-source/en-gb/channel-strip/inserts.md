@@ -35,6 +35,44 @@ pick plugins from the channel strip.
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
 
+Its bundled Factory IR bank is normalised automatically to TayPE's house
+format on bootstrap, so the shipped rooms actually appear in the selector
+instead of getting dropped for being out of spec.
+Fresh Tape Rooms instances default to the factory room shown as
+**Dieppe Cathedral**, so the plug-in starts from the same known room even
+after you add other IR libraries.
+
+Inside **Tape Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
+That flow asks you to accept Samplicity's terms, gives the first alert a
+real **View Samplicity T&Cs** button, then has TayPE download and install
+the official archive automatically into `Documents/Taype/IRs/Bricasti M7`,
+organised by register. That preflight still appears before install or
+reinstall, even after TayPE has remembered acceptance. If TayPE already has
+that managed Bricasti folder, it asks before replacing it. It also warns that
+the automatic transfer is a large download before it starts and then treats
+the download as most of the install progress. No folder picking or manual zip
+import is part of the user flow. Internal support folders such as the wizard's
+`_download` stash do not appear in the IR selector.
+When Samplicity ships both 48 kHz and 44.1 kHz copies, TayPE bins the 44.1 kHz
+lane before import and keeps the 48 kHz set for normalisation.
+The IR selector itself uses a nested category popup rather than one long flat list.
+Its native editor also uses the same strip-hardware language as TayPE's
+channel strip, with a more obvious baby-blue panel wash instead of a generic
+plug-in skin.
+The layout stays compact rather than wasting height, but keeps the larger
+strip-style knobs intact.
+Its `IR` and `CONTROLS` headers are just section labels, not collapsible panes.
+Each large knob now carries its value in a readout between the hardware and the control label. That readout sits between the hardware and the control label
+instead of being buried in a separate text box.
+Its control section labels those tone-shaping controls as **Low Cut** and
+**High Cut**, adds a **Duck** knob that self-ducks the wet return from the
+incoming signal with a fixed medium attack and slow release, adds a **Mix**
+knob for insert use, labels the IR topology picker
+as **Channels**, and gives the send behaviour its own **Mode** toggle with
+**Send / Insert** choices. **Send** is the default and forces a
+100% wet return; flip to **Insert** to wake the Mix control up. Ducking always
+happens on the wet path before Mix combines wet and dry. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
+
 Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.
@@ -66,6 +104,7 @@ During playback, time-based effects (delay, reverb) keep processing across silen
 
 Input selection is mode-aware:
 
+- Bus tracks keep the **Sender** label for orientation only. That row does not open an input menu or expose device-input choices.
 - With an instrument insert loaded, the input menu shows MIDI sources only (All MIDI, Virtual Keyboard, hardware MIDI devices, or None).
 - Without an instrument insert, the input menu shows audio sources only (Default, None, mono channels, stereo pairs).
 

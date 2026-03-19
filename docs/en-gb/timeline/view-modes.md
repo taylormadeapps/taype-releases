@@ -11,4 +11,4 @@ Four view filters help you focus on what matters. All are toggles:
 
 Record-armed and selected tracks are always visible regardless of the active view filter.
 
-Focus can also be driven by MCP with a specific tag (Focus-by-Tag), which shows only tracks that carry that tag.
+Focus can also be driven by MCP with a specific tag (Focus-by-Tag), which shows only tracks that carry that tag. The transport **Tags** popup now includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud.

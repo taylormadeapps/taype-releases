@@ -27,13 +27,15 @@ main path into the reel is obvious without turning startup into a wizard.
 The right-hand action stack keeps **Open Reel Browser** as the standout branch,
 with **Audio Preferences** and **Plugin Manager** sitting underneath it as
 matched secondary buttons. The supporting copy on the left starts level with
-those buttons, so the card scans as three aligned action rows.
+those buttons, so the card scans as three aligned action rows. Under the
+performance advisor note, a left-aligned brass **Automation coming soon.**
+line now sits between the same goat glyphs used by the Founder badge.
 
 If you open the **Reel Browser** straight from that welcome card, the fresh
 startup reel stays loaded and shows as the current session while you decide
 what to do next. If you branch into a different reel without touching it,
-TayPE still throws that blank startup reel away instead of clogging the
-library with dead air.
+TayPE still moves that blank startup reel into **Scrap Pile** instead of
+clogging the library with dead air.
 
 The paired welcome logos sit in matched square tiles, and the left TayPE mark
 now fills its tile directly instead of sitting inside a second inner badge.
@@ -49,8 +51,10 @@ one, or create a new one.
 Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
 for confirmation before it commits either action. If that reel is the one you
 are currently working in, rename keeps the session open under the new bundle
-name and delete closes the session before removing the bundle. If the name you
-ask for is already taken in that folder, TayPE adds ` 2`, ` 3`, and so on
+name and delete closes the session before moving the bundle into `Scrap Pile`
+inside your Reels folder. After delete, TayPE confirms the move and offers
+**Show in Finder** so you can reveal the moved reel with that bundle selected.
+If the name you ask for is already taken in that folder, TayPE adds ` 2`, ` 3`, and so on
 instead of overwriting the existing reel.
 
 When the current reel is already open, **File -> Rename Reel...** runs the

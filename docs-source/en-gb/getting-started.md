@@ -21,13 +21,15 @@ reel, jump into a recent one, or create a new one.
 If your startup path includes the welcome card, the green **Let's Roll**
 button waits a second for the card to settle, then flashes three times at
 3 Hz so the main path into the reel is obvious without turning startup into
-a wizard.
+a wizard. Under the performance advisor note, a left-aligned brass
+**Automation coming soon.** line sits between the same goat glyphs used by
+the Founder badge.
 
 If you open the **Reel Browser** straight from that welcome card, the fresh
 startup reel stays loaded and shows as the current session while you decide
 what to do next. If you branch into a different reel without touching it,
-TayPE still throws that blank startup reel away instead of clogging the
-library with dead air.
+TayPE still moves that blank startup reel into **Scrap Pile** instead of
+clogging the library with dead air.
 
 The paired welcome logos sit in matched square tiles, and the tape mark now
 gets its own square badge with extra background instead of being stretched to
@@ -39,7 +41,9 @@ is outside your normal library.
 Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
 for confirmation before it commits either action. If that reel is the one you
 are currently working in, rename keeps the session open under the new bundle
-name and delete closes the session before removing the bundle.
+name and delete closes the session before moving the bundle into `Scrap Pile`
+inside your Reels folder. After delete, TayPE confirms the move and offers
+**Show in Finder** so you can reveal the moved reel with that bundle selected.
 
 When a reel is already open, the browser action row starts with **Media**,
 which opens that reel's `media/` folder in Finder without closing the browser.

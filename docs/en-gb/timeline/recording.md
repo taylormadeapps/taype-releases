@@ -30,6 +30,7 @@ If you press **Stop** while recording, the head parks at the end of the committe
 
 - Audio tracks (no instrument insert): audio inputs only (Default, None, mono channels, stereo pairs).
 - Instrument tracks (instrument insert present): MIDI inputs only (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
+- Bus tracks: the label reads **Sender** for orientation, but there is no input menu or device-input choice there.
 
 When a track switches into instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
