@@ -7,7 +7,7 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 ### `list_plugins`
 
 Return the scanned VST3 plugin catalogue plus TayPE's bundled
-**Stock** entries such as **Tape Rooms** and **Ache-Delay**.
+**Taype Stock** entries such as **Taype Rooms** and **Ache-Delay**.
 
 **Returns:**
 ```json

@@ -155,6 +155,10 @@ Mouse wheel over the actual knob body still adjusts that knob. Labels, value
 readouts, and the padded space around the control do not count. Mouse wheel
 anywhere else in the strip's upper lane scrolls the section stack instead.
 
+Send level knobs are safe during playback. Changing the track output or the
+send target itself still needs stopped transport, because that changes routing
+topology rather than just the live gain on an existing send.
+
 The master strip's `NAM SUMMING` block lives in the same vertical lane as the ordinary `PREAMP` block. In the mixer, collapsing either one now collapses that whole shared lane across every visible strip, so the desk stays aligned.
 The mixer master strip also carries a blank spacer below `INSERTS`, sized so
 its upper scroll travel matches the ordinary strips even though it has no send

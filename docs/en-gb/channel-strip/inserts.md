@@ -5,7 +5,8 @@ strip TayPE shows slots 1-4 by default; click **MORE** in the rack footer to
 reveal slots 5-8. Narrow mixer strips show all eight slots all the time and
 drop the MORE/LESS control. Click an empty slot to load a plugin from the
 insert picker. Right-click a loaded slot for bypass, remove, or to open the
-plugin editor.
+plugin editor. Bypassing one slot only takes that slot dry; later inserts in
+the rack still run in order.
 
 When you choose something from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable, then opens that
@@ -40,22 +41,22 @@ pick plugins from the channel strip.
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
 
-The insert picker is split into **Stock**, **Effects**, and
-**Instruments**. **Stock** holds TayPE-shipped inserts such as
-**Tape Rooms**, **Ache-Delay**, and the built-in **External MIDI Out**.
+The insert picker is split into **Taype Stock**, **Effects**, and
+**Instruments**. **Taype Stock** holds TayPE-shipped inserts such as
+**Taype Rooms**, **Ache-Delay**, and the built-in **External MIDI Out**.
 
 Only insert **1** can host an instrument or **External MIDI Out**.
 Slots **2-8** stay audio-effects only, but audio-FX extensions like
-**Tape Rooms** can load in any slot.
+**Taype Rooms** can load in any slot.
 
 Its bundled Factory IR bank is normalised automatically to TayPE's house
 format on bootstrap, so the shipped rooms actually appear in the selector
 instead of getting dropped for being out of spec.
-Fresh Tape Rooms instances default to the factory room shown as
+Fresh Taype Rooms instances default to the factory room shown as
 **Dieppe Cathedral**, so the plug-in starts from the same known room even
 after you add other IR libraries.
 
-Inside **Tape Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
+Inside **Taype Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
 That flow asks you to accept Samplicity's terms, gives the first alert a
 real **View Samplicity T&Cs** button, then has TayPE download and install
 the official archive automatically into `Documents/Taype/IRs/Bricasti M7`,
@@ -70,10 +71,16 @@ When Samplicity ships both 48 kHz and 44.1 kHz copies, TayPE bins the 44.1 kHz
 lane before import and keeps the 48 kHz set for normalisation.
 The IR selector itself uses a nested category popup rather than one long flat list.
 Its native editor also uses the same strip-hardware language as TayPE's
-channel strip, with a more obvious baby-blue panel wash instead of a generic
+channel strip, with a more obvious TayPE-green panel wash instead of a generic
 plug-in skin.
 The layout stays compact rather than wasting height, but keeps the larger
 strip-style knobs intact.
+Under the hood, the stereo and Dual Stereo lanes use the same long-IR-tuned
+non-uniform engine and only process the active live block, so big room pairs
+do not waste CPU on dead scratch-buffer space.
+The sandbox return path also waits to the actual render-block deadline before
+it gives up, so a heavy room should not spit dry fallback glitches just
+because the old proxy wait budget guessed low.
 Its `IR` and `CONTROLS` headers are just section labels, not collapsible panes.
 Each large knob now carries its value in a readout between the hardware and the control label. That readout sits between the hardware and the control label
 instead of being buried in a separate text box.
@@ -86,13 +93,32 @@ as **Channels**, and gives the send behaviour its own **Mode** toggle with
 100% wet return; flip to **Insert** to wake the Mix control up. Ducking always
 happens on the wet path before Mix combines wet and dry. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
 
-The same **Stock** lane now ships **Ache-Delay** as TayPE's house delay.
-It follows the same native editor language as Tape Rooms, but with a warmer
-copper wash and a delay-first layout: **Free / Sync** timing, note divisions,
+The same **Taype Stock** lane now ships **Ache-Delay** as TayPE's house delay.
+It follows the same native editor language as Taype Rooms, but with a primary
+yellow wash and a delay-first layout: **Free / Sync** timing, note divisions,
 **Mono / Dual Stereo / Ping-Pong / Ping-Pong (Even)** routing, and the same
 wet-path **Duck** behaviour keyed from the incoming signal. **Send** is the
 default output mode and forces a 100% wet return. Flip to **Insert** to bring
-the stored **Mix** value back into play without rewriting it.
+the stored **Mix** value back into play without rewriting it. Its feedback
+**Tubeyness** now leans the saturation knee itself instead of skewing the
+whole waveshape, which keeps the colour warm without turning the delay tail
+into a fake offset waveform.
+
+**T-Clipper** lives in that same **Taype Stock** lane as TayPE's house clipper.
+It is always an inline insert: no wet/dry, no send mode, just drive into
+the ceiling and listen. Its editor carries the stock family's primary red
+wash, then keeps two displays front and centre:
+a scrolling waveform view that paints clipped peaks in red against the
+current threshold, and a transfer curve that shows how **Knee** and
+**Tubeyness** are bending the clip shape. **Tubeyness** now runs from clean
+symmetry at `0%` up to full tube lean at `100%`, while the ceiling stays
+put, and **Knee** now
+reaches far enough past a plain clipper to do genuinely soft saturation.
+**Low Cut** and **High Cut**
+leave the lows or highs out of the clipping path so you can clip the
+mid-band harder without flattening the whole picture. **Auto-Gain** trims
+the output back by the same amount of drive after the full signal is
+recombined, so you can judge tone instead of loudness.
 
 ## Plug-in Window
 

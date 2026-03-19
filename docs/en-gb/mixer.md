@@ -69,6 +69,10 @@ and tells you.
 **Faders and knobs** - click and drag vertically. Each drag is a single
 undoable action.
 
+Send level knobs are safe to move while the transport is running. Changing the
+main output route or picking a different send target still requires playback to
+be stopped because those edits rebuild routing.
+
 **Buttons** (mute, solo, etc.) - single click to toggle.
 
 Turning **B** on makes the track a bus and switches its input to no device
