@@ -4,10 +4,10 @@ The insert rack can host eight serial VST3 slots. In the full-width docked
 strip TayPE shows slots 1-4 by default; click **MORE** in the rack footer to
 reveal slots 5-8. Narrow mixer strips show all eight slots all the time and
 drop the MORE/LESS control. Click an empty slot to load a plugin from the
-scanner. Right-click a loaded slot for bypass, remove, or to open the plugin
-editor.
+insert picker. Right-click a loaded slot for bypass, remove, or to open the
+plugin editor.
 
-When you choose a plugin from the insert menu, TayPE loads that choice after
+When you choose something from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable, then opens that
 plug-in window straight away when the load succeeds.
 
@@ -40,8 +40,13 @@ pick plugins from the channel strip.
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
 
-Only insert **1** can host an instrument or TayPE's built-in **MIDI Out**.
-Slots **2-8** stay audio-effects only.
+The insert picker is split into **Extensions**, **Effects**, and
+**Instruments**. **Extensions** holds TayPE-shipped inserts such as
+**The Convolver** and the built-in **External MIDI Out**.
+
+Only insert **1** can host an instrument or **External MIDI Out**.
+Slots **2-8** stay audio-effects only, but audio-FX extensions like
+**The Convolver** can load in any slot.
 
 ## Plug-in Window
 
