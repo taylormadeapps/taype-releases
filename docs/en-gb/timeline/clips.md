@@ -16,12 +16,27 @@ The reel-owned audio and MIDI rows are shown relative to the reel bundle so you
 see paths like `media/imports-midi/...`, while the original source row stays
 absolute.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
-so you can spot them at a glance.
+so you can spot them at a glance. Double-click that glyph to open the MIDI
+editor directly.
+
+**Option+double-click** on an audio clip opens Melodyne for that clip. While
+Melodyne is open, TayPE lets you hear the live edit through the main transport.
+If you select a different clip, TayPE auto-commits the current Melodyne work,
+closes that session, and reopens Melodyne on the newly selected clip. Ordinary
+focus changes do not close Melodyne, but Melodyne and the MIDI Clip Editor are
+globally mutually exclusive, so if one is open the other will not launch until
+it closes. Clips with committed Melodyne work also
+show a small tuning-fork glyph in the clip pill; double-click that glyph to
+open Melodyne directly. If a reel arrives from another system with committed
+Melodyne audio but Melodyne is not installed here, TayPE still shows the glyph
+so the clip's state is honest, hides **Edit in Melodyne**, and keeps **Revert
+Melodyne** available in **Clip Properties**.
 
 ## MIDI Clip Editor
 
 **Cmd+double-click** a MIDI-origin clip to open the floating MIDI Clip
-Editor. A regular double-click still opens **Clip Properties**.
+Editor. Double-clicking the note glyph does the same thing. A regular
+double-click on the clip body still opens **Clip Properties**.
 
 Click the grid to add a note. Drag a note to move it in time and pitch.
 Right-click a note to delete it. The **Piano/Drum** toggle switches between a
