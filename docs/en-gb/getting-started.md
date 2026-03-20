@@ -44,6 +44,10 @@ matching action button row.
 The welcome card itself stays deliberately compact instead of stretching across
 the whole window, so the footer line and action rows feel like one focused
 panel rather than a billboard.
+Centred directly under that footer reminder, TayPE shows whether a TONE3000
+API key is stored locally, so you can see at a glance if online NAM browsing
+is wired up. That line is a local presence check only, not a live network
+verification.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one.

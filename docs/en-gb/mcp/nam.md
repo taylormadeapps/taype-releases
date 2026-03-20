@@ -73,29 +73,37 @@ Disable NAM summing, revert to digital sum. Requires transport stopped.
 
 ### `search_tone3000`
 
-Search the TONE3000 online library for NAM profiles.
+Search the TONE3000 online library for NAM packages.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `query` | string | yes | Search query |
 | `sort` | string | no | "trending", "downloads", "newest", "relevance" |
 | `category` | string | no | "all", "amp", "pedal", "full-rig", "ir", "outboard" |
-| `architecture` | string | no | "amx", "lstm", "wavenet", "convnet", "linear", "a2" |
 | `page` | number | no | Page number (default: 1) |
 
-**Returns:** Array of results with id, name, creator, gear, `thumbnail_url`, download count, `architecture`, and `amx_eligible`. Architecture-filtered searches resolve those fields before filtering; unfiltered searches may return an empty `architecture` string when TONE3000 omits it.
+**Returns:** Array of package results with id, name, creator, gear, `thumbnail_url`, download count, package-level `architecture` / `amx_eligible`, and a full `models` list.
+
+### `list_local_profiles`
+
+List local NAM packages grouped by tone/package identity.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `category` | string | no | "preamp" (default) or "summing" |
+| `track_id` | string | no | For `preamp`, marks which local model is loaded on that track |
+
+**Returns:** Array of local packages. Each package includes package metadata, favourite state, and a `models` array with filenames, paths, architectures, and an optional `loaded` flag.
 
 ### `download_tone3000`
 
-Download a NAM profile from TONE3000 to the local profiles directory.
-Filenames are based on tone metadata (title/creator) for both `preamp`
-and `summing`, with tone ID fallback when metadata is unavailable. If the
-requested tone is already present locally with matching metadata, TayPE returns
-that file instead of downloading a duplicate.
+Download a full NAM package from TONE3000 to the local profiles directory.
+All models inside the package are fetched and a package sidecar is written so
+later local loads keep the model identity intact.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `tone_id` | string | yes | TONE3000 tone ID (from search results) |
 | `category` | string | no | "preamp" (default) or "summing" |
 
-**Returns:** `{ "status": "ok", "tone_id": "abc123", "filename": "1073_Hot.nam", "category": "preamp" }`
+**Returns:** Package-level download metadata including `downloaded_count`, `package_sidecar`, and a `files` array describing every local `.nam` file written for the package.

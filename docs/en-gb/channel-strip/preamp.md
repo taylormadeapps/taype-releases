@@ -29,11 +29,19 @@ Click the **browse** button to open the Profile Browser, where you can search TO
 
 ### Profile Browser
 
-TONE3000 rows show the model thumbnail, type, creator, architecture, and an AMX badge for LSTM/AMX-compatible captures. Use the **View Profile** link at the bottom right of a row to open its page on tone3000.com.
+The browser has two tabs:
 
-The **AMX Compatible** filter narrows results to LSTM captures that qualify for TayPE's accelerated path. The browser searches forward through the library until it finds matching rows.
+- **Local** opens first. If the current local list contains favourites, TayPE splits it into **Favourites** and **All** with favourites pinned at the top. If there are no favourites in the current scope, it stays as one flat list. Single-model packages load straight away. Multi-model packages expand inline so you can choose the exact capture variant you want.
+- **TONE3000** is the online catalogue. Search results are package rows, not single files. The browser shows the package thumbnail, creator, model count, and the architectures inside it.
+- On the **TONE3000** tab, each package row carries its own **Download** button, so the footer only keeps **Cancel** instead of repeating that action.
 
-A spinner appears while search, favourites refresh, or download metadata is loading. If TONE3000 favourite sync is temporarily unavailable, starred profiles are still saved locally. Changes to the TONE3000 API key in Preferences are picked up the next time you open the browser, so you do not need to relaunch TayPE.
+The **Architecture** filter lives on the **Local** tab. That is where TayPE knows the real model files on disk, so filters like **AMX Compatible**, **LSTM**, and **WaveNet** are based on known local model metadata instead of guesswork from the online catalogue.
+
+If the strip already uses a profile from a downloaded TONE3000 package, opening the browser expands that local package and selects the active model straight away, even if an older search would otherwise have hidden it.
+
+The search bar keeps an `x` button beside it, so you can clear the current search and refresh the list without closing the browser.
+
+Downloading from TONE3000 pulls the whole package, not just one file. Once the package is local, model choice happens from the Local tab where the variants are listed explicitly. Starred packages stay starred in both tabs.
 
 ### NAM Controls
 
@@ -44,8 +52,8 @@ A spinner appears while search, favourites refresh, or download metadata is load
 
 ### Profile Storage
 
-Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`. Downloaded profiles work offline from that point.
+Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`. Downloaded TONE3000 packages are kept in their own folders under that directory, with the package metadata, model files, and cached artwork together in one place. They work offline from that point.
 
-Downloaded profiles keep their model title metadata, so the strip and browser show the profile title instead of hashed filenames. Thumbnails are cached locally for offline browsing.
+Downloaded packages keep their package and model metadata, so the strip and browser stay locked to the right variant instead of drifting to the wrong file. Thumbnails are cached locally for offline browsing.
 
 You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.
