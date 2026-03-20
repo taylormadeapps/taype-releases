@@ -1,6 +1,6 @@
 # EQ — 3-Band Parametric
 
-A Neve-inspired 3-band parametric EQ. Each band has:
+A 3-band 1081-inspired parametric EQ. Each band has:
 
 - **Frequency** — where the band is centred
 - **Gain** — boost or cut, from -18 dB to +18 dB
@@ -15,7 +15,17 @@ A Neve-inspired 3-band parametric EQ. Each band has:
 
 Low and High default to shelf mode. Mid defaults to bell. Toggle to switch.
 
-Bell bands now use proportional Q, so bigger boosts and cuts tighten up.
+Bell bands use proportional Q. Small boosts and cuts stay broad; bigger
+moves tighten up. Cuts run a touch tighter than boosts at the same amount,
+and the mid band starts a little more focused than low/high so the whole
+thing leans hard toward an 1081.
+
+Shelf mode is no longer a dead generic ramp either. The `HI-Q` toggle and
+gain amount now push the shelf contour harder, so bigger boosts show a more
+musical turnover "nose" at the edge instead of a sterile cookbook shelf.
+
+The separate HP/LP filters are still 12 dB/oct curves, but they now carry a
+small fixed resonance at cutoff instead of sitting totally flat.
 
 The EQ header's small spectrum button opens the shared floating **EQ
 Visualiser** window for the current track with the live response curve,
