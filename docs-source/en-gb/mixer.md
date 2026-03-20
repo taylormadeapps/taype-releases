@@ -20,9 +20,10 @@ Each strip shows (top to bottom):
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters
-- **EQ section** - 3-band parametric equaliser
+- **EQ section** - 3-band parametric equaliser with a spectrum button for the shared EQ Visualiser
 - **Compressor section** - dynamics processing
-- **Insert slots** - 4 slots for VST3 plugins
+- **Insert slots** - up to 8 slots for VST3 plugins
+- **Sends section** - bus sends with a `POST` / `PRE` mode switch
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -36,6 +37,11 @@ every section.
 
 **Faders and knobs** - click and drag vertically. Each drag is a single
 undoable action.
+
+The `SENDS` header flips the whole track between `POST` and `PRE`, and the
+thin ring around each send knob is a live RMS hint. The EQ header's spectrum
+button opens the shared floating **EQ Visualiser** window for that strip, and
+while it stays open it follows the currently selected track automatically.
 
 **Buttons** (mute, solo, etc.) - single click to toggle.
 

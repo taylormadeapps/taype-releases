@@ -24,6 +24,17 @@ On track strips, the pan row puts the mono/stereo and phase stack to the left of
 
 The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
 
+The EQ header also carries a small spectrum button. Click it to open the one
+shared floating **EQ Visualiser** window for the current track, with the live
+response curve, small `IN` / `OUT` spectrum toggles in the graph's top-right
+corner, and split `FILTER` / `EQ` panels that mirror the strip's header power
+toggles and EQ glyph buttons. Once open, that shared window follows whichever
+track is currently selected.
+
+The `SENDS` header carries a `POST` / `PRE` button for the whole track. `PRE`
+moves every send to the pre-fader tap, and the thin ring around each send knob
+is a simple RMS hint of what is feeding that send.
+
 In the K-system scales, the printed ladder keeps the red `FS` tick at the true ceiling, adds `+3 dB` marks above the highlighted `0 VU` reference up toward full scale, then steps down in `-3 dB` marks to `-21` and `6 dB` marks below.
 
 ## Strip Header

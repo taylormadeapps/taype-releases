@@ -19,10 +19,11 @@ Each strip shows (top to bottom):
 - **Output selector** - where the track sends its audio
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
-- **Filter section** - high-pass and low-pass filters
-- **EQ section** - 3-band parametric equaliser
+- **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
+- **EQ section** - 3-band parametric equaliser with the same shared EQ Visualiser button
 - **Compressor section** - dynamics processing
-- **Insert slots** - 4 slots for VST3 plugins and instruments
+- **Insert slots** - up to 8 slots for VST3 plugins
+- **Sends section** - bus sends with a `POST` / `PRE` mode switch and live RMS hint rings
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -72,6 +73,15 @@ undoable action.
 Send level knobs are safe to move while the transport is running. Changing the
 main output route or picking a different send target still requires playback to
 be stopped because those edits rebuild routing.
+The `SENDS` header mode button flips the whole strip between `POST` and `PRE`.
+`POST` follows the fader; `PRE` keeps the send alive with the fader down.
+The thin ring around each send knob is an RMS-only hint of what is actually
+feeding that send.
+
+The EQ header's spectrum button opens the one shared floating **EQ Visualiser**
+window for that track. Open it from another strip and TayPE retargets the same
+window instead of opening a second one, and while it stays open it follows the
+currently selected track automatically.
 
 **Buttons** (mute, solo, etc.) - single click to toggle.
 
@@ -80,9 +90,7 @@ input. Turning **B** off disconnects any tracks routed to that bus so your
 routing stays valid.
 
 **Insert slots** - click to load a plugin, right-click for a context menu
-with options like bypass and remove. If the first loaded insert is an
-instrument, it becomes the track's sound source; the remaining effect slots
-still work like normal post-strip inserts.
+with options like bypass and remove.
 
 **Track name** - double-click to edit inline (only when transport is
 stopped). Return commits; Escape or clicking away cancels.

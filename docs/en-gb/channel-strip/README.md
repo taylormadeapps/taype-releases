@@ -65,6 +65,15 @@ mode and light up as bell glyphs when you switch them on, and the mid-band
 narrow mode is a glowing `HI-Q` switch. That `HI-Q` label now uses the same
 strip text size as the rest of the panel copy instead of the older shrunken
 utility-label scale.
+The EQ header also carries a small spectrum button. Click it to open the one
+shared floating **EQ Visualiser** window for the current track. That window
+has small `IN` and `OUT` spectrum toggles in the graph's top-right corner,
+both on by default, plus a left `FILTER` panel and right `EQ` panel using
+the same header power toggles and EQ glyph buttons as the strip. It overlays
+the live EQ response curve too. Open it from another track and the same
+window retargets instead of
+spawning a second copy, and while it stays open it follows the currently
+selected track automatically.
 The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
 `OUT:` pair above the controls instead of being split apart, so input and
 output gain are easier to compare at a glance. The compact `IN:` / `OUT:` bars
@@ -73,8 +82,9 @@ without touching the panel edges.
 The compressor now follows that same pattern with its own `IN:` / `OUT:` pair
 above the control rows, so you can see what the EQ is feeding into the comp and
 what comes out before the insert rack.
-Fresh strips now start with `INSERTS` and `SENDS` folded shut by default, so
-that whole routing block stays tucked away until you actually need it.
+Fresh strips now start with `INSERTS` and `SENDS` open by default, so the
+routing-heavy lower stack is ready to work without the extra click on every
+fresh strip.
 Its GR scale now labels the major `12 dB` ticks where there is room above the
 button stack, while the major guide marks still continue down to the bottom of
 the meter beside the controls, with the whole GR lane now scaled for a `24 dB`
@@ -158,6 +168,11 @@ anywhere else in the strip's upper lane scrolls the section stack instead.
 Send level knobs are safe during playback. Changing the track output or the
 send target itself still needs stopped transport, because that changes routing
 topology rather than just the live gain on an existing send.
+The `SENDS` header now carries a `POST` / `PRE` button for the whole track.
+`POST` is the normal mix-bus behaviour: pull the fader down and the send comes
+down with it. `PRE` moves the send to the pre-fader tap, so the send keeps
+feeding even if you pull the track fader to silence. The thin secondary ring
+around each send knob is an RMS-only hint of what is actually being sent.
 
 The master strip's `NAM SUMMING` block lives in the same vertical lane as the ordinary `PREAMP` block. In the mixer, collapsing either one now collapses that whole shared lane across every visible strip, so the desk stays aligned.
 The mixer master strip also carries a blank spacer below `INSERTS`, sized so
