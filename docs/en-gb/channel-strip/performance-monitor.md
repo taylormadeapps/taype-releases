@@ -1,6 +1,6 @@
-# Performance Monitor
+# Taype — Performance Monitor
 
-The Performance Monitor shows per-track DSP breakdown with separate **Preamp/Summing** and **Plugin** CPU columns. On the master track, the Preamp/Summing column reflects NAM summing CPU.
+The **Taype — Performance Monitor** shows per-track DSP breakdown with separate **Preamp/Summing** and **Plugin** CPU columns. On the master track, the Preamp/Summing column reflects NAM summing CPU.
 
 ## Routing Tree
 

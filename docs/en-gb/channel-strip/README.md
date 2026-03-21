@@ -60,7 +60,8 @@ while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
 non-essential value text while keeping the post-fader scale markings. Narrow
 mixer strips also keep the same full-size machined fader handle as the
 standard strip, they now keep the fader's own left-side dB tick ladder too,
-and they still show the full eight-slot insert rack with no MORE/LESS control.
+and the insert rack now keeps the same shared `MORE` / `LESS` footer and
+four-slot default as the docked strip instead of forcing all eight slots open.
 Those skinny EQ rows now leave a little extra room under each mini knob too, so
 the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon flips the whole visible mixer rack between that narrow
@@ -104,6 +105,8 @@ full reduction range instead of stretching out to `48 dB`.
 The insert rack now does the same trick: `IN:` / `OUT:` mini meters are
 grouped together at the top, and the docked strip's `MORE` / `LESS` control
 gets its own footer row at the bottom instead of sharing the lower meter lane.
+That rack-visibility toggle is global UI state across docked and mixer strips,
+defaults to `LESS`, and is remembered between launches.
 The insert picker now also carries a top-level `MIDI Out` entry. That creates
 TayPE's built-in `External MIDI Out` insert, which keeps the track playing as
 normal while mirroring MIDI clip playback to a chosen Core MIDI destination.

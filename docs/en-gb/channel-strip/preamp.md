@@ -40,6 +40,8 @@ The **Architecture** filter lives on the **Local** tab. That is where TayPE know
 If the strip already uses a profile from a downloaded TONE3000 package, opening the browser expands that local package and selects the active model straight away, even if an older search would otherwise have hidden it.
 
 The search bar keeps an `x` button beside it, so you can clear the current search and refresh the list without closing the browser.
+Popup help now covers the floating browser as well, including the search bar,
+filters, tabs, package list, and footer actions.
 
 Downloading from TONE3000 pulls the whole package, not just one file. Once the package is local, model choice happens from the Local tab where the variants are listed explicitly. Starred packages stay starred in both tabs.
 

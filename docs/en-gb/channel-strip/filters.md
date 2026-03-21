@@ -9,4 +9,5 @@ High-pass and low-pass filters for cleaning up the frequency extremes. These hav
 
 The high-pass is your rumble killer. The low-pass tames harshness up top.
 Both are 12 dB/oct second-order curves with a small fixed resonant lift at
-cutoff, so they feel a bit more alive than dead-flat Butterworth filters.
+cutoff, but the high-pass now sits a touch looser through the shoulder so it
+does not feel pinched in the turn.

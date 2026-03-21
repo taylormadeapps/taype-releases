@@ -29,7 +29,7 @@ gain amount now push the shelf contour harder, and that musical turnover
 through the mid-gain range instead of only waking up near full boost.
 
 The separate HP/LP filters are still 12 dB/oct curves, but the high-pass now
-gets a slightly more open shoulder so low cuts do not feel cramped, while the
+keeps a slightly more open shoulder without the old pinched turn-in, while the
 low-pass stays gentler and more damped.
 
 The EQ header's small spectrum button opens the shared floating **EQ
@@ -61,7 +61,11 @@ The `HI` filter knob's radial lamp now runs in reverse, so a lower low-pass
 cutoff shows a fuller lit arc.
 The analyser itself now reads more like a proper RTA too: it compensates the
 window loss and draws log-band energy instead of skinny raw FFT bins, so
-broadband material no longer hugs the graph floor for no good reason.
+broadband material no longer hugs the graph floor for no good reason, and the
+low end now blends across neighbouring bins instead of stepping like a crude
+FFT readout.
+Popup help now covers the floating visualiser too, including the graph body,
+`IN` / `OUT` toggles, zoom buttons, and the mirrored filter / EQ controls.
 
 Those popup `FILTER` and `EQ` headers also keep the same preset badge
 language as the strip. Right-click either one to load or save a filter or

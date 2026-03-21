@@ -2,8 +2,8 @@
 
 The insert rack can host eight serial VST3 slots. In the full-width docked
 strip TayPE shows slots 1-4 by default; click **MORE** in the rack footer to
-reveal slots 5-8. Narrow mixer strips show all eight slots all the time and
-drop the MORE/LESS control. Click an empty slot to load a plugin from the
+reveal slots 5-8. Narrow mixer strips now keep that same **MORE** / **LESS**
+footer instead of forcing the full rack open. Click an empty slot to load a plugin from the
 insert picker. Right-click a loaded slot for bypass, remove, or to open the
 plugin editor. Bypassing one slot only takes that slot dry; later inserts in
 the rack still run in order.
@@ -17,6 +17,10 @@ until TayPE finishes bringing that insert online.
 
 The master bus follows the same rule in the full-width strip: four slots
 visible by default, with the same **MORE** toggle to reveal the full eight-slot rack.
+
+That **MORE** / **LESS** state is global UI state, not per-track memory. It
+defaults to **LESS**, applies across the docked strip and mixer together, and
+is remembered between launches.
 
 The INSERTS power button works even before you load anything. If you switch the
 rack off first, the next plugin you load comes in bypassed until you turn the
@@ -187,7 +191,7 @@ The crash alert names the culprit plugin when possible. If TayPE can't attribute
 
 ## Tail Handling
 
-During playback, time-based effects (delay, reverb) keep processing across silent gaps between clips, so tails carry naturally. Pressing **Stop** clears insert tails for a clean restart.
+During playback, time-based effects (delay, reverb) keep processing across silent gaps between clips, so tails carry naturally. Pressing **Stop** clears insert tails for a clean restart and sends an emergency MIDI all-notes-off / all-sound-off burst to instrument inserts and any routed **External MIDI Out** targets. If something still hangs, use **Tools > Kill MIDI** to fire that same panic without changing transport state.
 
 If a plug-in adds heavy latency, TayPE recalculates playback timing before the
 next pass so clips stay locked through that insert path. If you are starting

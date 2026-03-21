@@ -38,6 +38,8 @@ directly from the floating window. The popup shell and section plates also
 carry a visible wash of the source track colour.
 
 The compressor popup now behaves like the EQ popup: there is one shared floating window, and while it is open it follows the currently selected track. The header button stays lit on whichever track the shared window is currently targeting.
+Popup help now covers that floating window too, including the visualiser body,
+the mirrored knob set, and the detector / sidechain / release switches.
 
 ## Gain Reduction Meter
 

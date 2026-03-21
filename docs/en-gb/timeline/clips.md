@@ -4,17 +4,20 @@
 
 Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
 
-Double-click a clip to open **Clip Properties**. That's where you rename or
+Double-click a clip to open **Taype — Clip Properties**. That's where you rename or
 recolour the clip, inspect its source paths, reveal those files in Finder from
 the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
-TayPE's MIDI Clip Editor or **Re-render from MIDI** to print a fresh render
+TayPE's **Taype — MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
 through the track's current instrument. If the clip you double-click is part
-of the current multi-selection, **Clip Properties** flips into a batch mode:
+of the current multi-selection, **Taype — Clip Properties** flips into a batch mode:
 clip colour still edits the whole selection, but the per-clip name, source,
 and MIDI actions are greyed out.
-The reel-owned audio and MIDI rows are shown relative to the reel bundle so you
-see paths like `media/imports-midi/...`, while the original source row stays
-absolute.
+The dialog now groups file references into a collapsible **Media Paths**
+section. `Clip Audio Actual` and `Clip MIDI Actual` show the current live
+truth as absolute paths, `Reel Store Audio` and `Reel Store MIDI` stay
+relative to the reel bundle so you see paths like `media/imports-midi/...`,
+and `Import Source` stays absolute when the clip came from outside the reel.
+Missing rows read `n/a` instead of disappearing.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
 so you can spot them at a glance. Double-click that glyph to open the MIDI
 editor directly.
@@ -23,39 +26,106 @@ editor directly.
 Melodyne is open, TayPE lets you hear the live edit through the main transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,
 closes that session, and reopens Melodyne on the newly selected clip. Ordinary
-focus changes do not close Melodyne, but Melodyne and the MIDI Clip Editor are
+focus changes do not close Melodyne, but Melodyne and the **Taype — MIDI Clip Editor** are
 globally mutually exclusive, so if one is open the other will not launch until
 it closes. Clips with committed Melodyne work also
 show a small tuning-fork glyph in the clip pill; double-click that glyph to
 open Melodyne directly. If a reel arrives from another system with committed
 Melodyne audio but Melodyne is not installed here, TayPE still shows the glyph
 so the clip's state is honest, hides **Edit in Melodyne**, and keeps **Revert
-Melodyne** available in **Clip Properties**.
+Melodyne** available in **Taype — Clip Properties**.
 
-## MIDI Clip Editor
+## Taype — MIDI Clip Editor
 
-**Cmd+double-click** a MIDI-origin clip to open the floating MIDI Clip
-Editor. Double-clicking the note glyph does the same thing. A regular
-double-click on the clip body still opens **Clip Properties**.
+**Cmd+double-click** a MIDI-origin clip to open the floating **Taype — MIDI
+Clip Editor**. Double-clicking the note glyph does the same thing. A regular
+double-click on the clip body still opens **Taype — Clip Properties**.
 
-Click the grid to add a note. Drag a note to move it in time and pitch.
-Right-click a note to delete it. The **Piano/Drum** toggle switches between a
-pitched piano-roll view and fixed-length drum rows. The **High Top/Low Top**
-toggle flips whether higher notes sit at the top or bottom of the grid.
-Drag an empty part of the grid to marquee-select notes, and press
-**Cmd/Ctrl+A** to select the lot. When more than one note is selected,
-dragging a note moves the whole selection and dragging a note's right-edge
-resize handle changes every selected note by the same duration amount.
+This phase is melodic-first. The editor opens around the clip's used note
+range, gives you a proper piano keyboard down the left edge, and leaves
+dedicated drum editing for later.
+
+Click the grid to add a note. Drag an empty part of the grid to marquee-select
+notes, and press **Cmd/Ctrl+A** to select the lot even while the transport is
+running. Drag a note to move it in time and pitch, and drag its right-edge
+handle to resize it. When more than
+one note is selected, those move and resize gestures apply to the whole
+selection by the same amount. New notes inherit velocity from the closest
+previous note time, and if several earlier notes share that time TayPE takes
+the highest of those velocities. Their default length also follows the current
+quantise note interval. With absolute snap on, note drags keep the arranger's
+sticky snap feel: free away from the rail, magnetic near it, nearest-grid on
+release. **Up** / **Down** move the selected notes by an
+octave, while **Cmd/Ctrl+Up** and **Cmd/Ctrl+Down** nudge them by a semitone.
+**Left** / **Right** move the selected notes by one current quantise interval.
+
+The left keyboard rail is playable for audition, stays pinned to the editor's
+left edge while the roll scrolls behind it, scroll-wheel movement there moves
+through the visible pitch range, and both popup-dragging and
+**Cmd/Ctrl-scroll** on that rail change the editor's vertical pitch zoom.
+**Cmd/Ctrl-scroll** on the piano-roll grid does the same. The pitch-order
+overlay flips
+whether higher notes sit at the top or bottom of the grid, and it now sits
+flush over the keyboard corner instead of floating out in the chrome. A
+sticky timeline header also stays on-screen above the roll, so you can
+left-click there to set the transport and popup-drag there for horizontal
+zoom. When you first open the editor, TayPE gives you a musical default view:
+roughly the first 16 bars at the current tempo and time signature, starting
+from bar 1 of the current Cut instead of inheriting whatever zoom the main
+arranger was using.
+Popup help now covers that floating window properly too, including the pinned
+keyboard rail, sticky ruler, piano-roll surface, `CTRL` lane, overlay buttons,
+and footer quantise controls.
+
+Velocity now lives right in the note body. TayPE colours notes from cool to
+hot across the `0..127` range, keeps pitch names inside the notes by default,
+and only flips those labels to numeric velocity while you are actively
+popup-dragging a velocity edit. **Option-click** or plain **double-click**
+removes one note, and **Delete** / **Backspace** removes the full selection.
+
+A floating MIDI editor window already carries the clip name in its title, so
+the editor body does not waste space repeating it in a top bar.
+
+A left-aligned footer **Quantise** strip carries **Quantise**, note-length,
+strength, and capture controls. TayPE defaults that strip to
+`1/16`, `100%` strength, and `100%` capture. If you already have notes
+selected, Quantise only moves those notes; if nothing is selected, it works on
+the whole clip. This pass only moves note starts. If the ruler is in beats and
+your chosen quantise note value is finer than the main beat grid, TayPE
+overlays that quantise rail on top so you can actually see what you are
+snapping to.
+
+To resize a MIDI note, hover its right edge until the cursor changes, then
+drag. TayPE no longer burns note-body space on a permanent chunky resize
+handle.
+
+The bottom-left **CTRL** overlay sits over the pinned keyboard rail and opens a
+lower control lane inside the same window. That lane shares the piano roll's
+time axis, snap, playhead, and horizontal zoom, and this pass opens it
+straight into **Pitch Bend** without a separate type selector. Click empty
+space to set a point, drag a point to move it, double-click a point to delete
+it, and hold **Cmd** while dragging to brush values across time. Clicking a
+point without dragging leaves it alone. Other controller data still stays
+intact in the MIDI sidecar unless you deliberately edit that lane in a future
+pass.
+
+If that MIDI-backed clip also has committed Melodyne audio on top, opening the
+MIDI editor still stays safe. TayPE warns only when **Commit** or
+**Re-render from MIDI** is about to replace the current audio, so you can back
+out before the destructive step.
 
 As you add or move notes, TayPE auditions them through the track's current
 instrument. While the editor stays open, TayPE mutes that clip's baked audio
 and plays the current note layout through the instrument instead, so transport
 playback gives you a live preview rather than the stale printed render.
-**Commit** writes the updated MIDI sidecar and re-renders the clip.
+**Commit** writes the updated MIDI sidecar, folds the clip's current trim and
+stretch into that new MIDI truth, and re-renders the clip.
 **Cancel** closes the window without changing the clip. The editor only opens
 while the transport is stopped. The editor also follows the reel timeline, so
 it uses the same ruler mode, Cut zero, snap rails, and main playhead as the
-arranger.
+arranger. Note-only edits preserve the clip's other MIDI events too, so
+sustain, pitch bend, program change, aftertouch, and unrelated CC data survive
+unless you deliberately edit that lane.
 
 ## Moving
 
