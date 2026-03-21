@@ -52,8 +52,9 @@ routing stays valid.
 **Insert slots** - click to load a plugin, right-click for a context menu
 with options like bypass and remove.
 
-**Track name** - double-click to edit inline (only when transport is
-stopped).
+**Track name** - single-click the title panel to select that track in the
+arranger and light its footer outline. Double-click the name pill to edit
+inline (only when transport is stopped).
 
 ## Track Order
 

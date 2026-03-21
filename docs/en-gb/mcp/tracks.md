@@ -98,6 +98,7 @@ Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_knee`, `comp_makeup_gain`, `comp_log_release`, and
 `comp_sidechain_low_cut` (fixed `80 Hz` high-pass on the detector sidechain).
 `comp_attack_ms` accepts **0.1–100 ms**.
+`comp_knee` accepts **0–120 dB**.
 
 **Returns:** Updated track object.
 

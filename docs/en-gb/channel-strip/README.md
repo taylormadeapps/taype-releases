@@ -25,6 +25,12 @@ The meter yellow and the fader lamp now sit closer to the same brass-gold
 family as the radial knob lights, so the strip keeps one honest yellow instead
 of splitting between glow gold and dull mustard.
 
+The input selector follows mono and stereo mode separately. If you flip the
+strip between mono and stereo, TayPE restores the last input you picked for
+that mode instead of forcing one route shape into the other. If a mode's
+default input is unset in Audio preferences, the selector says `No mono ins`
+or `No stereo ins` instead of `Default`.
+
 Double-click the fader dB readout or the pan readout and TayPE now drops a
 small single-line text editor right on the strip, so you can type exact values
 without dragging for days. The fader dB field drops the `dB` suffix while you
@@ -73,7 +79,13 @@ the same header power toggles and EQ glyph buttons as the strip. It overlays
 the live EQ response curve too. Open it from another track and the same
 window retargets instead of
 spawning a second copy, and while it stays open it follows the currently
-selected track automatically.
+selected track automatically. The popup shell and section plates keep a
+visible wash of that track colour too. The `FILTER` panel now stacks `LO` over
+`HI` in one centred column so its two knobs line up with the EQ rows, and the
+right-hand `EQ` panel now adds a left-edge `IN` / `OUT` ladder meter lane
+using the same segmented K-scale / clip language as the main meters. On the
+`HI` filter knob, the radial lamp now fills in reverse, so lowering the
+low-pass cutoff lights more of the arc instead of less.
 The preamp's tiny gain-staging meters now live together as a labelled `IN:` /
 `OUT:` pair above the controls instead of being split apart, so input and
 output gain are easier to compare at a glance. The compact `IN:` / `OUT:` bars
@@ -183,7 +195,14 @@ send picker.
 
 ## Strip Header
 
-The coloured title bar shows the track name as a centred pill. In the arranger strip it lives at the top; in the mixer it sits below the fader as the strip footer. Double-click the pill to rename the track. Double-click the coloured background beside it to open the colour picker, and double-click it again while the picker is up to close it. Inside the picker, a single swatch click previews the colour; double-click a swatch to commit it and close the picker.
+The coloured title bar shows the track name as a centred pill. In the arranger
+strip it lives at the top; in the mixer it sits below the fader as the strip
+footer. In the mixer, single-clicking that title panel selects the track and
+lights a white footer outline. Double-click the pill to rename the track.
+Double-click the coloured background beside it to open the colour picker, and
+double-click it again while the picker is up to close it. Inside the picker, a
+single swatch click previews the colour; double-click a swatch to commit it
+and close the picker.
 
 The bus toggle sits in the left side of the title bar — a white bus glyph that fills green when active. Bus mode forces MON on immediately, drops live input to `none`, and temporarily disables any enabled instrument inserts on that track. Switching back out of bus mode restores the old input, restores those instrument inserts, and forces MON back off.
 

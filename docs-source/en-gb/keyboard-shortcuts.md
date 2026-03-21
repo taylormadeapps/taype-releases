@@ -174,5 +174,18 @@ When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
 
+The popup is anchored above the transport lane so it stays clear of the
+transport controls instead of sitting on top of them.
+
+## Floating Window Shortcut Pass-Through
+
+TayPE's own floating utility windows still hand unhandled key presses back to
+the main app shortcut path. That means `Space`, transport keys, and the rest
+still work while the EQ visualiser, compressor visualiser, MIDI clip editor,
+Performance Monitor, or floating Melodyne window has focus.
+
+Hosted plugin editors are the exception. Those windows keep their own key
+handling.
+
 On macOS, TayPE also shows these shortcuts beside the matching menu items in
 the native menu bar when the menus are open.

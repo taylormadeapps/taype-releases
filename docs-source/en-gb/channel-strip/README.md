@@ -24,12 +24,24 @@ On track strips, the pan row puts the mono/stereo and phase stack to the left of
 
 The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
 
+The input selector follows mono and stereo mode separately. If you flip the
+strip between mono and stereo, TayPE restores the last input you picked for
+that mode instead of forcing one route shape into the other. If a mode's
+default input is unset in Audio preferences, the selector says `No mono ins`
+or `No stereo ins` instead of `Default`.
+
 The EQ header also carries a small spectrum button. Click it to open the one
 shared floating **EQ Visualiser** window for the current track, with the live
 response curve, small `IN` / `OUT` spectrum toggles in the graph's top-right
 corner, and split `FILTER` / `EQ` panels that mirror the strip's header power
 toggles and EQ glyph buttons. Once open, that shared window follows whichever
-track is currently selected.
+track is currently selected, and it keeps a visible wash of that track colour
+through the popup shell and section plates. The `FILTER` panel now stacks `LO`
+over `HI` in one centred column so its two knobs line up with the EQ rows, and
+the `EQ` panel also puts a small left-hand `IN` / `OUT` meter lane beside the
+knobs using the same segmented K-scale / clip ladder language as the main
+track meters. On the `HI` filter knob, the radial lamp now fills in reverse,
+so lowering the low-pass cutoff lights more of the arc instead of less.
 
 The `SENDS` header carries a `POST` / `PRE` button for the whole track. `PRE`
 moves every send to the pre-fader tap, and the thin ring around each send knob
@@ -39,7 +51,10 @@ In the K-system scales, the printed ladder keeps the red `FS` tick at the true c
 
 ## Strip Header
 
-The coloured title bar shows the track name as a centred pill. Double-click the pill to rename the track. Double-click the coloured background beside it to open the colour picker.
+The coloured title bar shows the track name as a centred pill. In the mixer,
+single-clicking that title panel selects the track and lights a white footer
+outline. Double-click the pill to rename the track. Double-click the coloured
+background beside it to open the colour picker.
 
 The bus toggle sits in the left side of the title bar — a white bus glyph that fills green when active.
 

@@ -1,10 +1,10 @@
 # Preamp
 
-The preamp operates in one of three modes. Use the **MODE** button to cycle through them:
+The preamp operates in one of three modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
 
 **Clean → Classic → NAM → Clean**
 
-The preamp header shows the current mode with a `PRE:` prefix. In NAM mode, it also shows the loaded profile name.
+That button now shows only the current mode text. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
 ## Clean Gain (default)
 
