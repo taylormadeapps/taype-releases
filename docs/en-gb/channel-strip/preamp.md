@@ -58,4 +58,6 @@ Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`. Downloaded
 
 Downloaded packages keep their package and model metadata, so the strip and browser stay locked to the right variant instead of drifting to the wrong file. Thumbnails are cached locally for offline browsing.
 
+If a reel opens with a missing TONE3000-backed preamp or summing profile, TayPE stops and asks whether to **Download** the missing package or **Skip** it. Skip keeps the clean fallback alive and the profile stays marked offline until the model is restored.
+
 You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.

@@ -185,7 +185,7 @@ re-check via `status` before assuming previous values are still valid.
 ```json
 {
   "reel": { "name": "Default", "directory": "...", "sample_rate": 44100, "device_sr_matched": true },
-  "transport": { "playing": false, "recording": false, "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
+  "transport": { "playing": false, "recording": false, "record_mode": "return", "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
   "selected_cut_name": "Main Cut",
   "cuts": ["Main Cut", "Verse", "Chorus"],
   "tracks": [ {

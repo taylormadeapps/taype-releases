@@ -19,7 +19,9 @@ Start audio playback.
 Stop playback. While transport is running, TayPE returns the head to the
 current play-pass origin. If playback has already auto-ended, that return has
 already happened, so a stopped-state `stop` call returns the head to the
-selected Cut's zero point.
+selected Cut's zero point. If a recording pass is active, **Return** mode
+commits the pass and lands back at the pass start, while **Punch** and
+**Do-Over** commit the pass and park at the committed take end.
 
 **Returns:** `{ "playing": false, "position": 0.0 }`
 
@@ -37,7 +39,9 @@ Get current transport state.
   "zero_time_seconds": 8.0,
   "loop_enabled": false,
   "loop_start_seconds": 0.0,
-  "loop_end_seconds": 0.0
+  "loop_end_seconds": 0.0,
+  "recording": false,
+  "record_mode": "return"
 }
 ```
 

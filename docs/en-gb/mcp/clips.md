@@ -21,15 +21,16 @@ Place an audio file on a track at a timeline position.
 
 ### `set_clip`
 
-Move a clip on the timeline or between tracks.
+Move a clip on the timeline or between tracks, or disable it without removing it.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `id` | string | yes | Clip ID |
 | `time` | number | no | New timeline position in seconds |
 | `track_id` | string | no | Target track ID (for cross-track moves) |
+| `disabled` | boolean | no | `true` disables clip playback while keeping the clip on the timeline |
 
-At least one of `time` or `track_id` must be provided.
+At least one mutable field must be provided.
 
 **Returns:** Updated clip object.
 
@@ -58,12 +59,17 @@ List clips, optionally filtered by track.
     {
       "id": "clip_1",
       "name": "take1.wav",
+      "disabled": false,
       "track_id": "track_1",
       "time": 0.0,
       "duration": 45.2,
       "clip_start": 0.0,
+      "derived_path": "",
+      "stretched_wav_path": "",
       "file": "/path/to/take1.wav"
     }
   ]
 }
 ```
+
+`stretched_wav_path` is a compatibility alias of `derived_path`.

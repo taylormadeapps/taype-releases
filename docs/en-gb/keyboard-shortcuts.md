@@ -19,8 +19,8 @@ This file is created automatically on first launch with sensible defaults.
 |----------|--------|
 | Space | Play / stop |
 | P | Pause |
-| Z | Stop (returns to start; while recording, parks at take end) |
-| Return | Start / stop recording |
+| Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
+| Return | Record-mode action |
 | / | Add marker at the tape head |
 | , | Go to previous marker or loop brace |
 | . | Go to next marker or loop brace |
@@ -40,6 +40,16 @@ This file is created automatically on first launch with sensible defaults.
 | Cmd+Shift+1 through Cmd+9 | Go to markers 21 through 29 |
 | Cmd+Shift+0 | Go to marker 30 |
 
+## Record Modes
+
+Right-click the transport record button to choose what **Return** does during a take:
+
+- **Return** — commit the pass, stop transport, and go back to the pass start.
+- **Punch** — commit the pass and keep playback rolling.
+- **Do-Over** — commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
+
+**Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end.
+
 ### Editing
 
 | Shortcut | Action |
@@ -57,7 +67,8 @@ This file is created automatically on first launch with sensible defaults.
 | Cmd+A | Select all clips, or all clips overlapping the loop when loop is active. In the MIDI editor, select all notes in the open clip |
 | Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | Backspace | Delete selected clips |
-| Delete | Delete selected non-master track |
+| Delete | Disable selected clips |
+| Cmd+Option+Backspace | Delete selected non-master track |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -181,7 +192,8 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+C | Copy |
 | Cmd+V | Paste |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Disable selected clips |
+| Cmd+Option+Backspace | Delete selected non-master track |
 | Cmd+, | Open Preferences |
 
 ## Virtual Keyboard Mode

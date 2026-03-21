@@ -151,6 +151,10 @@ Saving an `INSERTS` section preset from the channel strip also writes companion
 plug-in presets into that plug-in's own `CSB/<Section Preset Path>` folder.
 When you load that insert-section preset later, TayPE restores matching
 plug-ins from those `CSB/...` presets too.
+Full strip presets also keep the whole insert rack state inline, so a recalled
+strip can put the rack back exactly as saved. If a saved plug-in is missing,
+TayPE skips that slot and warns you instead of throwing away the rest of the
+strip recall.
 
 Loading a plug-in preset follows the same stopped-transport rule as other
 insert edits. TayPE now fully reloads that insert from the saved preset chunk,

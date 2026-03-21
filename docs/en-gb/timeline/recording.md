@@ -6,6 +6,14 @@ While recording, a translucent red "ghost clip" grows on each track admitted to 
 
 When you stop, each ghost clip is replaced by its real clip with the final waveform.
 
+## Record Modes
+
+Right-click the transport record button to choose the record macro:
+
+- **Return** — pressing **Return** again commits the pass, stops transport, and returns to the pass start.
+- **Punch** — pressing **Return** again commits the pass and keeps playback rolling.
+- **Do-Over** — pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
+
 ## Timing
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
@@ -22,7 +30,7 @@ loop playback on, TayPE backs up from the left brace; with loop playback off,
 it backs up from the current tape head position. During any pre-roll, TayPE
 can force the metronome on only where the lead-in would otherwise be silent.
 
-If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+If you press **Stop** while recording, TayPE always commits the current pass first. In **Return** mode it then lands back at the pass start; in **Punch** and **Do-Over** it parks at the end of the committed take so what you just captured is immediately visible.
 
 ## Input and Output Routing
 

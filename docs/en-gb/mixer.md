@@ -49,11 +49,19 @@ Right-click the strip title bar to load or save a full channel strip preset.
 Those live under `Documents/Taype/Presets/Channel Strip`. Each strip preset
 stores the fader panel state directly and recalls the rest of the strip through
 section presets under `Documents/Taype/Presets/Channel Strip Section/<Section Name>/CSP/<Preset Name>`.
+The strip file also carries the full `INSERTS` rack state inline, so loading a
+strip preset brings the saved plug-in chunks back with it instead of relying on
+whatever state those plug-ins happen to be in now.
 Use **Save Strip As...** at the top of that menu when you want to save a whole
 strip preset from the title bar.
 If the strip preset name contains `/`, TayPE mirrors that path in both places,
 and the popup menu mirrors that folder tree as nested submenus too. Older
 libraries saved in the previous strip-preset folder still load.
+If you change a recalled section afterwards, its preset pill grows a `*` so the
+strip stops pretending it is still on the saved preset state. TayPE also shows
+that `*` if the backing preset file has gone missing. If a recalled insert
+plug-in is not installed on this machine, TayPE skips that slot and warns you
+instead of aborting the whole strip load.
 
 The `PREAMP` header now stays a clean section label. Its mode/profile line sits
 inside the section body above the preamp mini meters, with the NAM browse
@@ -63,7 +71,8 @@ Section presets only recall what belongs to that section. Fader presets bring
 back volume, pan, strip mode, and polarity, but they do not change the track's
 hardware input or output routing. Send presets try to reconnect by bus ID or
 bus name; if a target bus is missing in the current reel, TayPE skips that send
-and tells you.
+and tells you. Insert presets and strip presets both warn and carry on if a
+saved plug-in cannot be restored.
 
 ## Using the Controls
 

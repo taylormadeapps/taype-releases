@@ -3,15 +3,18 @@
 ## Selecting
 
 Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
+Press **Delete** to disable the selected clips without removing them. Disabled
+clips stay on the timeline, dim visually, and do not sound. Press
+**Backspace** when you really want to delete the selected clips.
 
 Double-click a clip to open **Taype — Clip Properties**. That's where you rename or
-recolour the clip, inspect its source paths, reveal those files in Finder from
-the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
+recolour or disable the clip, inspect its source paths, reveal those files in
+Finder from the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
 TayPE's **Taype — MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
 through the track's current instrument. If the clip you double-click is part
 of the current multi-selection, **Taype — Clip Properties** flips into a batch mode:
-clip colour still edits the whole selection, but the per-clip name, source,
-and MIDI actions are greyed out.
+clip colour and the disable toggle still edit the whole selection, but the
+per-clip name, source, and MIDI actions are greyed out.
 The dialog now groups file references into a collapsible **Media Paths**
 section. `Clip Audio Actual` and `Clip MIDI Actual` show the current live
 truth as absolute paths, `Reel Store Audio` and `Reel Store MIDI` stay

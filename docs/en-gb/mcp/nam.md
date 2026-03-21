@@ -14,9 +14,9 @@ Load a NAM profile on a track's preamp. Requires transport stopped.
 | `profile` | string | yes | NAM profile filename (e.g. "1073_Hot.nam") |
 | `output_gain` | number | no | Post-NAM output gain in dB (default: 0.0) |
 
-**Returns:** `{ "track_id": "...", "profile": "1073_Hot.nam", "architecture": "WaveNet", "output_gain": 0.0 }`
+**Returns:** `{ "track_id": "...", "profile": "1073_Hot.nam", "tone_id": "abc123", "architecture": "WaveNet", "output_gain": 0.0 }`
 
-Includes a `cpu_warning` field for heavy architectures (WaveNet, ConvNet).
+Includes `tone_id` when the local NAM file carries TONE3000 metadata, plus a `cpu_warning` field for heavy architectures (WaveNet, ConvNet).
 
 ### `clear_preamp_nam`
 
@@ -57,13 +57,13 @@ Load a NAM summing profile on the master bus. Requires transport stopped.
 | `drive` | number | no | Input drive in dB (default: 0.0) |
 | `output_gain` | number | no | Output gain in dB (default: 0.0) |
 
-**Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "architecture": "LSTM", "drive": 6.0, "output_gain": 0.0 }`
+**Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "tone_id": "abc123", "architecture": "LSTM", "drive": 6.0, "output_gain": 0.0 }`
 
 ### `get_mix_summing`
 
 Get the current NAM summing state on the master bus.
 
-**Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "drive": 6.0, "output_gain": 0.0 }` (or `{ "enabled": false }` when off)
+**Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "tone_id": "abc123", "drive": 6.0, "output_gain": 0.0 }` (or `{ "enabled": false }` when off)
 
 ### `clear_mix_summing`
 

@@ -2,7 +2,39 @@
 
 Tools for recording audio input.
 
+`get_record_mode` / `set_record_mode` control the transport's record-button
+macro. `record_start` / `record_stop` stay low-level and let MCP clients drive
+the take lifecycle directly.
+
 ---
+
+### `get_record_mode`
+
+Get the current transport record-button mode.
+
+**Returns:**
+```json
+{
+  "record_mode": "return"
+}
+```
+
+### `set_record_mode`
+
+Persist the transport record-button mode. This changes how the UI record
+button and **Return** shortcut behave; it does not start or stop a take by
+itself.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `record_mode` | string | yes | `"return"`, `"punch"`, or `"do_over"` |
+
+**Returns:**
+```json
+{
+  "record_mode": "punch"
+}
+```
 
 ### `record_start`
 
