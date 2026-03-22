@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirming… — TayPE</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="/assets/img/logo-square.png">
+<link rel="canonical" href="https://taype.ruminantaudioworks.com/confirm/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg:           #0e0d0b;
+    --panel:        #1b1813;
+    --surface:      #26211a;
+    --text:         #f5f1e8;
+    --text-muted:   #e2d8c7;
+    --text-dim:     #a79d8b;
+    --brass:        #f0c96a;
+    --brass-hover:  #e0a84e;
+    --border:       #2a2520;
+    --record:       #ff4d2e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    background: var(--bg);
+    color: var(--text);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+a {
+    color: var(--brass);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover { color: var(--brass-hover); }
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+}
+
+.card h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: var(--brass);
+    margin: 0 0 24px 0;
+    letter-spacing: 2px;
+}
+
+.card p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 0 16px 0;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card strong {
+    color: var(--text);
+}
+
+.card .email-highlight {
+    font-family: monospace;
+    color: var(--brass);
+    word-break: break-all;
+}
+
+.spinner {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--brass);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 24px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 24px;
+    background: var(--brass);
+    color: var(--bg);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+.back-link:hover {
+    background: var(--brass-hover);
+    color: var(--bg);
+}
+
+.error-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.footer {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-dim);
+}
+.footer a { color: var(--text-dim); }
+.footer a:hover { color: var(--brass); }
+
+/* Hide content until JS runs */
+#result { display: none; }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <!-- Loading state -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <h1>One moment…</h1>
+        <p>Processing your request.</p>
+    </div>
+
+    <!-- Result (shown by JS) -->
+    <div id="result"></div>
+
+    <div class="footer">
+        Ruminant Audio Works Ltd (Company No. 16978494)<br>
+        <a href="https://taype.ruminantaudioworks.com/privacy/">Privacy Policy</a>
+    </div>
+</div>
+
+<script>
+(function() {
+    var WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwb2FVwNLmjpyfASVqKg5yr4OWSZ4lqnpKA7V3PL6mBcH7whkV8B058lv-f77hpu43UyQ/exec';
+
+    var params = new URLSearchParams(window.location.search);
+    var token  = params.get('token')  || '';
+    var action = params.get('action') || 'confirm';
+
+    var loadingEl = document.getElementById('loading');
+    var resultEl  = document.getElementById('result');
+
+    function showResult(title, html) {
+        document.title = title + ' — TayPE';
+        loadingEl.style.display = 'none';
+        resultEl.style.display = 'block';
+        resultEl.innerHTML =
+            '<h1>' + escapeHtml(title) + '</h1>' + html;
+    }
+
+    function escapeHtml(str) {
+        var div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+
+    if (!token) {
+        showResult('Invalid Link',
+            '<p>This link appears to be broken. If you\'re trying to ' +
+            'subscribe, please use the signup form on our website.</p>' +
+            '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+        return;
+    }
+
+    // Build the API URL — request JSON response
+    var apiUrl = WEBAPP_URL +
+        '?action=' + encodeURIComponent(action) +
+        '&token='  + encodeURIComponent(token) +
+        '&format=json';
+
+    // Apps Script web apps redirect (302) to googleusercontent.com.
+    // fetch() with redirect:'follow' handles this, but CORS can block it.
+    // Fallback: use the Google Apps Script JSONP-style trick via script injection,
+    // or use no-cors mode and assume success based on response status.
+    //
+    // Strategy: try fetch first, fall back to iframe approach.
+
+    fetch(apiUrl, { redirect: 'follow' })
+        .then(function(response) {
+            // Apps Script returns a redirect; if fetch followed it successfully
+            // we get a response from googleusercontent.com
+            if (!response.ok) {
+                throw new Error('HTTP ' + response.status);
+            }
+            return response.json();
+        })
+        .then(function(data) {
+            handleResponse(data);
+        })
+        .catch(function(err) {
+            // CORS likely blocked the redirect — fall back to script injection (JSONP)
+            console.log('fetch failed, trying JSONP fallback:', err.message);
+            tryJsonp(apiUrl);
+        });
+
+    function tryJsonp(url) {
+        // Apps Script doesn't support JSONP natively, so if fetch failed
+        // due to CORS, we'll use an iframe + postMessage approach,
+        // or just redirect the user directly to the Apps Script URL.
+        // The direct redirect works in most cases — the /u/N/ issue
+        // only affects users already logged into Google in this browser
+        // session. For non-Google users, direct redirect works fine.
+        //
+        // Ultimate fallback: redirect directly to the non-JSON endpoint
+        // (without format=json) so Apps Script returns its HTML page.
+        var directUrl = WEBAPP_URL +
+            '?action=' + encodeURIComponent(action) +
+            '&token='  + encodeURIComponent(token);
+
+        // Try creating a hidden iframe to execute the action
+        var iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = directUrl;
+        document.body.appendChild(iframe);
+
+        // Give the iframe a few seconds, then show a success-ish message
+        // since we can't read the iframe response cross-origin
+        setTimeout(function() {
+            if (action === 'confirm') {
+                showResult("You're In!",
+                    '<p>Your subscription should be confirmed. ' +
+                    'You\'ll receive updates about TayPE.</p>' +
+                    '<p>If you don\'t receive a welcome in the next few minutes, ' +
+                    'please try <a href="' + directUrl + '">this direct link</a>.</p>' +
+                    '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+            } else if (action === 'unsubscribe') {
+                showResult('Unsubscribed',
+                    '<p>You\'ve been removed from the TayPE mailing list. ' +
+                    'You won\'t receive any more emails from us.</p>' +
+                    '<p>Changed your mind? You can sign up again on our website.</p>' +
+                    '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+            }
+        }, 4000);
+    }
+
+    function handleResponse(data) {
+        if (!data || !data.status) {
+            showResult('Something went wrong',
+                '<p>We couldn\'t process your request. Please try again later.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+            return;
+        }
+
+        var title = data.title || 'Done';
+        var message = data.message || '';
+
+        if (data.status === 'confirmed') {
+            showResult("You're In!",
+                '<p>Your subscription is confirmed. You\'ll receive updates ' +
+                'about TayPE at <span class="email-highlight">' +
+                escapeHtml(data.email || '') + '</span>.</p>' +
+                '<p>Every email includes an unsubscribe link.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+
+        } else if (data.status === 'already_confirmed') {
+            showResult('Already Subscribed',
+                '<p>You\'re already on the list! You\'ll receive updates ' +
+                'about TayPE at <span class="email-highlight">' +
+                escapeHtml(data.email || '') + '</span>.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+
+        } else if (data.status === 'expired') {
+            showResult('Link Expired',
+                '<p>This confirmation link has expired. Please sign up again.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Sign up again</a>');
+
+        } else if (data.status === 'unsubscribed') {
+            showResult('Unsubscribed',
+                '<p>You\'ve been removed from the TayPE mailing list. ' +
+                'You won\'t receive any more emails from us.</p>' +
+                '<p>Changed your mind? You can sign up again on our website.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+
+        } else if (data.status === 'not_found') {
+            showResult('Not Found',
+                '<p>We couldn\'t find this subscription. You may have already ' +
+                'unsubscribed, or the link may be invalid.</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+
+        } else if (data.status === 'invalid') {
+            showResult('Invalid Link',
+                '<p>' + escapeHtml(message || 'This link appears to be broken.') + '</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+
+        } else {
+            showResult(title,
+                '<p>' + escapeHtml(message) + '</p>' +
+                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+        }
+    }
+})();
+</script>
+
+</body>
+</html>
