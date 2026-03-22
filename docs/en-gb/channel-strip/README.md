@@ -64,8 +64,10 @@ and the insert rack now keeps the same shared `MORE` / `LESS` footer and
 four-slot default as the docked strip instead of forcing all eight slots open.
 Those skinny EQ rows now leave a little extra room under each mini knob too, so
 the frequency and gain readouts stop crashing into the hardware. The transport
-bar's Mixer Width icon flips the whole visible mixer rack between that narrow
-desk and the full-width strip view.
+bar's Mixer Width icon stays visible in both views: in mixer view it flips the
+whole visible mixer rack between that narrow desk and the full-width strip
+view, and in timeline view it does the same for the docked channel strip,
+opening that strip if it was hidden.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band

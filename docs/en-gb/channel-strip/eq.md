@@ -41,7 +41,8 @@ panel and right `EQ` panel underneath. Those panels use the same
 section-header bypass switches and EQ glyph buttons as the channel strip,
 with the live EQ response curve overlaid on top. The window title carries the
 track name, so the graph itself stays uncluttered. Once that shared window is
-open, it follows whichever track is currently selected. The popup now
+open, it follows whichever track is currently selected, and clicking the same
+lit EQ header button again closes it. The popup now
 defaults to its tightest useful graph view with `+18 dB` pinned at the top
 and `-18 dB` at the floor, and those zoom buttons move the floor in `3 dB`
 steps while still letting you zoom all the way back out to `-72 dB`. The `FILTER` side now stacks `LO`

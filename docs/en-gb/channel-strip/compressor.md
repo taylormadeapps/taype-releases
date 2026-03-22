@@ -22,7 +22,7 @@ The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.
 
 ## Compressor Visualiser
 
-The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track.
+The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track, and click the same lit button again to close it.
 
 The window puts the incoming waveform and scrolling gain-reduction trace on the left under a **GAIN REDUCTION** title, the transfer curve in the middle under **CURVE**, and fader-style LED **IN** / **OUT** meters on the right after the curve for gain staging. Those meter captions sit left and right across the top of the lane, and the ladders use the same glowing segmented treatment, K-scale marks, and clip behaviour as the strip meter.
 The graph and transfer-curve grids are also a touch stronger now, so the popup
@@ -37,7 +37,7 @@ language as the strip. Right-click it to load or save a compressor preset
 directly from the floating window. The popup shell and section plates also
 carry a visible wash of the source track colour.
 
-The compressor popup now behaves like the EQ popup: there is one shared floating window, and while it is open it follows the currently selected track. The header button stays lit on whichever track the shared window is currently targeting.
+The compressor popup now behaves like the EQ popup: there is one shared floating window, and while it is open it follows the currently selected track. The header button stays lit on whichever track the shared window is currently targeting, and that lit button is also the close toggle for the popup.
 Popup help now covers that floating window too, including the visualiser body,
 the mirrored knob set, and the detector / sidechain / release switches.
 

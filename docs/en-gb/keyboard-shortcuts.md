@@ -88,7 +88,7 @@ there is no separate user-facing Save command.
 | Shortcut | Action |
 |----------|--------|
 | M | Toggle between timeline and mixer |
-| W | Toggle mixer width between narrow and full-width strips (mixer view only) |
+| W | Toggle the active desk width: mixer rack in mixer view, docked channel strip in arranger view |
 | I | Toggle channel strip panel |
 | F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle archive view |
