@@ -37,9 +37,11 @@ showing the gain staging around the trim/preamp slot.
 
 K-system scales keep the red `FS` ceiling marker, label the highlighted K
 reference as `0`, add `+3 dB` marks above that `0 VU` line up toward
-`0 dBFS`, then step down in `-3 dB` marks to `-21 dB` and `6 dB` marks below,
-with the ladder spaced from the K reference instead of bunching around
-absolute `-21 dBFS`.
+`0 dBFS`, keep those positive `+3 dB` steps spaced the same as the `0` to
+`-21 dB` working ladder, then switch to `6 dB` marks below, with the ladder
+spaced from the K reference instead of bunching the upper span. The moving
+LED ladder and peak/hold ticks now snap to that same geometry too, so the
+meter body matches the printed ruler.
 
 Silent meters stay visually silent. The old floor tick that made a dead lane
 look like it still had signal is gone.

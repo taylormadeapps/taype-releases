@@ -168,9 +168,9 @@ That box shows the held post-fader peak in dB, and flips to `CLIP` until you
 clear the meter lane.
 In the K-system scales, the printed ladder now keeps the red `FS` tick at the
 true ceiling, keeps the `FS` label clear of that red line, adds `+3 dB` marks above the highlighted `0 VU` reference up
-toward full scale, then steps down in `-3 dB` marks to `-21` and `6 dB` marks
-below. The reference `0` zone still sits tighter to the top, so the lane reads
-like a working meter instead of a stretched-out ruler.
+toward full scale, and keeps those positive `+3 dB` steps spaced the same as
+the `0` to `-21` working ladder before switching to `6 dB` marks below. The
+moving LED ladder and peak/hold ticks now follow that same snapped geometry.
 Silent meters stay dark now too. The old floor tick that made dead inputs look
 alive is gone.
 

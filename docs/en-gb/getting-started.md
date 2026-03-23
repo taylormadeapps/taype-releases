@@ -163,8 +163,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   same hardware routing comes back on relaunch.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
-  as `{device_name} (fallback)` in the Audio tab so **Apply Audio Changes**
-  can restore it as soon as the hardware returns.
+  as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
+  Audio tab. Other staged changes still apply safely against the live fallback,
+  and TayPE automatically restores the preferred device as soon as the
+  hardware returns.
 - Tracks whose input selector is **Default** follow the mono/stereo default
   input you pick here as soon as you apply the change. TayPE also restores the
   matching input channels on relaunch, so an aggregate-device default keeps
