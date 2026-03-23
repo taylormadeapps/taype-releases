@@ -266,4 +266,5 @@ If the clip already has stretch or Melodyne-style derived audio on top, TayPE
 warns before that rerender clears those derived edits. While the new audio is
 printing, the clip stays in place with a small spinner so you can see the
 rerender is still in flight without hearing anything from the offline print,
-even if that instrument track is still monitor-armed.
+even if that instrument track is still monitor-armed, and the rerender always
+prints the current MIDI sidecar instead of silently reusing stale note data.

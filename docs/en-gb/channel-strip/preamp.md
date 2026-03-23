@@ -8,14 +8,19 @@ That button now shows only the current mode text. In NAM mode, the loaded profil
 
 ## Clean Gain (default)
 
-The preamp is off. Your trim setting passes through with no colour or saturation. Every new track starts here.
+The preamp is in its neutral clean mode. Your trim setting passes through with no colour or saturation. Every new track starts here.
 The `IN:` / `OUT:` mini meters still stay live in Clean, so you can judge the
 level hitting the preamp slot and the level leaving it even when there is no
 saturation stage engaged.
 
 ## Classic
 
-A soft-clipping drive stage for adding warmth and saturation.
+A soft-sine drive stage for adding warmth and saturation. The onset is meant
+to come on gradually, so higher drive blooms into colour before it turns into
+real crunch.
+The PREAMP header always carries its own power button. That button bypasses or
+re-enables the whole preamp section during playback without changing the
+selected mode, so Clean stays Clean and Classic or NAM keep their settings.
 
 - **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
 - **Safe mode** — engages oversampling for cleaner saturation at the cost of a bit more CPU.
