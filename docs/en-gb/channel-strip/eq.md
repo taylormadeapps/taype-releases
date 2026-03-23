@@ -64,7 +64,9 @@ The analyser itself now reads more like a proper RTA too: it compensates the
 window loss and draws log-band energy instead of skinny raw FFT bins, so
 broadband material no longer hugs the graph floor for no good reason, and the
 low end now blends across neighbouring bins instead of stepping like a crude
-FFT readout.
+FFT readout. The popup now also smooths that trace in power rather than dB and
+uses the higher-resolution FFT lane, so broadband material reads less blocky
+and the graph stays truer as you zoom the floor out.
 Popup help now covers the floating visualiser too, including the graph body,
 `IN` / `OUT` toggles, zoom buttons, and the mirrored filter / EQ controls.
 

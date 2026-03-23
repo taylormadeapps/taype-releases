@@ -112,7 +112,7 @@ width.
 
 ### `set_metronome`
 
-Enable or disable the metronome click and/or set playback/record pre-roll bars.
+Enable or disable the metronome click and/or set record pre-roll bars.
 
 When playback starts, the click stays locked to the transport grid even though
 TayPE still applies a short fixed anti-pop fade to the program mix underneath.
@@ -120,7 +120,7 @@ TayPE still applies a short fixed anti-pop fade to the program mix underneath.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `enabled` | bool | no | true to enable, false to disable |
-| `pre_roll_bars` | integer | no | playback/record pre-roll bars: `0`, `1`, `2`, or `4` |
+| `pre_roll_bars` | integer | no | record pre-roll bars: `0`, `1`, `2`, or `4` |
 
 Pass at least one of `enabled` or `pre_roll_bars`.
 

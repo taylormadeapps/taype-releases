@@ -26,12 +26,14 @@ keeps the committed take reaching the visible right brace instead of ending
 short.
 
 Right-click the metronome button in the ruler to choose a one-shot pre-roll of
-**Off**, **1**, **2**, or **4** bars. Playback always uses that lead-in: with
-loop playback on, TayPE backs up from the left brace; with loop playback off,
-it backs up from the current tape head position. If the tape head is already at
-absolute `0`, TayPE keeps the head there, runs the count-in in place, and then
-starts capture while still committing the take at `0`. During any pre-roll, TayPE
-can force the metronome on only where the lead-in would otherwise be silent.
+**Off**, **1**, **2**, or **4** bars. TayPE uses that lead-in only for
+recording: with loop recording on, it backs up from the left brace; with loop
+recording off, it backs up from the current tape head position. Playback just
+starts from the current tape head, or from the left brace when looping, with
+no count-in rewind. If the tape head is already at absolute `0`, TayPE keeps
+the head there, runs the count-in in place, and then starts capture while
+still committing the take at `0`. During any pre-roll, TayPE can force the
+metronome on only where the lead-in would otherwise be silent.
 
 If you press **Stop** while recording, TayPE always commits the current pass first. In **Return** mode it then lands back at the pass start; in **Punch** and **Do-Over** it parks at the end of the committed take so what you just captured is immediately visible.
 
