@@ -23,7 +23,8 @@ empty reel with that name.
 ### `open_reel`
 
 Open an existing reel by name. TayPE persists the current reel's working state
-before switching.
+before switching. Name lookup scans the reel library under
+`~/Documents/Taype/Reels/`, including subfolders such as `Starters/`.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -33,7 +34,8 @@ before switching.
 
 ### `list_reels`
 
-List all available reel names.
+List all available reel names from the reel library under
+`~/Documents/Taype/Reels/`, including subfolders.
 
 **Returns:** `{ "reels": ["Default", "MyReel", "Demo"] }`
 
@@ -46,9 +48,9 @@ Get info about the currently loaded reel.
 {
   "loaded": true,
   "name": "Default",
-  "directory": "/Users/.../Reels/Default.taype",
-  "bundle_path": "/Users/.../Reels/Default.taype",
-  "reel_file": "/Users/.../Reels/Default.taype/reel.xml",
+  "directory": "/Users/.../Reels/Starters/Default.taype",
+  "bundle_path": "/Users/.../Reels/Starters/Default.taype",
+  "reel_file": "/Users/.../Reels/Starters/Default.taype/reel.xml",
   "sample_rate": 44100,
   "device_sr_matched": true,
   "schema_version": 1,
@@ -84,8 +86,9 @@ Duplicate the current reel to a new `.taype` bundle and switch to it.
 ### `rename_reel`
 
 Rename the current reel bundle. The bundle filename is the canonical reel
-name. If the requested name is already taken in that folder, TayPE appends
-` 2`, ` 3`, and so on and returns the actual renamed bundle name.
+name. If the requested name is already taken anywhere in the reel library,
+TayPE appends ` 2`, ` 3`, and so on and returns the actual renamed bundle
+name.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -207,7 +210,7 @@ Unpack a `.tpak` archive into a `.taype` bundle and open the unpacked reel.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `path` | string | yes | Path to the `.tpak` archive |
-| `destination` | string | no | Target `.taype` bundle path; defaults to a unique name in the default reels directory |
+| `destination` | string | no | Target `.taype` bundle path; defaults to a unique name in `~/Documents/Taype/Reels/Starters/` |
 
 **Returns:** `{ "unpacked": true, "bundle_path": "/path/to/MyReel.taype" }`
 

@@ -50,7 +50,11 @@ is wired up. That line is a local presence check only, not a live network
 verification.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
-one, or create a new one.
+one, or create a new one. At the root of the browser list, TayPE shows
+**Recents** first, then **Starter Reels**, then your other folders, and then
+any reels that live directly at the top level. When you enter a folder, the
+first row becomes **↩ Back** so you can climb back out. Folder rows are
+outlined, show a folder glyph before the name, and open on single-click.
 
 Right-click any reel in the browser to **Rename** or **Delete** it. TayPE asks
 for confirmation before it commits either action. If that reel is the one you
@@ -58,8 +62,8 @@ are currently working in, rename keeps the session open under the new bundle
 name and delete closes the session before moving the bundle into `Scrap Pile`
 inside your Reels folder. After delete, TayPE confirms the move and offers
 **Show in Finder** so you can reveal the moved reel with that bundle selected.
-If the name you ask for is already taken in that folder, TayPE adds ` 2`, ` 3`, and so on
-instead of overwriting the existing reel.
+If the name you ask for is already taken anywhere in the reel library, TayPE
+adds ` 2`, ` 3`, and so on instead of overwriting the existing reel.
 
 When the current reel is already open, **File -> Rename Reel...** runs the
 same rename prompt and confirmation flow without making you hop back into the
@@ -75,7 +79,7 @@ Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
 When you create a reel, TayPE opens a native save dialog rooted at
-`~/Documents/Taype/Reels` and suggests a bundle name like
+`~/Documents/Taype/Reels/Starters` and suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step.
 
