@@ -95,8 +95,8 @@ strength, and capture controls. TayPE defaults that strip to
 selected, Quantise only moves those notes; if nothing is selected, it works on
 the whole clip. This pass only moves note starts. If the ruler is in beats and
 your chosen quantise note value is finer than the main beat grid, TayPE
-overlays that quantise rail on top so you can actually see what you are
-snapping to.
+overlays that quantise rail on top and snaps notes and header seeks to that
+finer visible rail until the main beat grid catches up.
 
 To resize a MIDI note, hover its right edge until the cursor changes, then
 drag. TayPE no longer burns note-body space on a permanent chunky resize
