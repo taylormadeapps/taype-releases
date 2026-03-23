@@ -84,7 +84,7 @@ const locales = {
             "price-commercial-feature-2": "2 major versions of free updates",
             "price-commercial-cta": "Coming Soon",
             "education-heading": "Education",
-            "education-copy": "Free for students and educators. DM us for a discount code.",
+            "education-copy": "Free for students. DM us for a discount code.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-heading": "Accessibility",

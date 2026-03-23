@@ -53,6 +53,7 @@ Downloading from TONE3000 pulls the whole package, not just one file. Once the p
 ### NAM Controls
 
 - **Trim** is always visible and always pre-NAM — higher trim drives the model harder, like pushing a real preamp.
+- **Drive** still applies before the NAM model itself, even when **NAM AMX Acceleration** is grouping multiple strips behind the scenes, so grouped NAM tracks react to drive the same way as standalone ones.
 - **Output Gain** is a level control after the model.
 - **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
 - **SAFE** is not shown in NAM mode.
