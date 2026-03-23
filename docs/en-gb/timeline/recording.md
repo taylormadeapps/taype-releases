@@ -46,6 +46,15 @@ If you press **Stop** while recording, TayPE always commits the current pass fir
 When a track switches into instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
 **MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. Instrument tracks keep MON visible too, even though record arm still mirrors it on and off.
+On instrument tracks, live MIDI monitoring now keeps the note's played phase
+inside the block but hands it to the next guaranteed sandbox block, so you
+get one steady shove of latency instead of random timing wobble that kills
+the pocket.
+When you record a monitor-armed instrument track, TayPE also stores that take
+at the heard speaker-time, not the raw queue-arrival time. The instrument's
+own timing is already in the captured source, and TayPE carries forward only
+the extra monitor-alignment delay applied after that tap, so the grid and any
+later re-render stay where you actually heard the note land.
 
 **Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 

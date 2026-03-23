@@ -268,3 +268,8 @@ printing, the clip stays in place with a small centred spinner so you can see
 the rerender is still in flight without hearing anything from the offline print,
 even if that instrument track is still monitor-armed, and the rerender always
 prints the current MIDI sidecar instead of silently reusing stale note data.
+Recorded instrument takes store speaker-time as their MIDI truth too, so a
+later rerender lands where you originally heard the performance rather than
+quietly moving the furniture. That MIDI truth carries the same post-tap
+monitor-alignment shove as the committed audio instead of snapping back to the
+raw incoming queue time.
