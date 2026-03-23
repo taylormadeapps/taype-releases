@@ -190,6 +190,9 @@ anywhere else in the strip's upper lane scrolls the section stack instead.
 Send level knobs are safe during playback. Changing the track output or the
 send target itself still needs stopped transport, because that changes routing
 topology rather than just the live gain on an existing send.
+If you click a playback-blocked structural control such as routing, bus,
+strip mode, Mix FX, or a pending rename commit, TayPE now flashes the
+transport warning banner instead of just swallowing the click.
 The `SENDS` header now carries a `POST` / `PRE` button for the whole track.
 `POST` is the normal mix-bus behaviour: pull the fader down and the send comes
 down with it. `PRE` moves the send to the pre-fader tap, so the send keeps

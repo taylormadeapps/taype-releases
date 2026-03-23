@@ -108,8 +108,10 @@ state, named checkpoints, and branch-origin tags. If you branch from an
 autosave, TayPE tags that source commit so it stays visible as the branch node.
 Plain autosave heads stay hidden until you turn on **Show Autosaves** for the
 full save-by-save trail. The history view is a continuous vertical git-style
-graph: earliest at the top, newest at the bottom, current branch as the main
-spine, and side branches offset to the right. Autosaves on the same branch
+graph: earliest at the top, newest at the bottom, parent branches staying
+leftmost when you come back to them, the current state highlighted wherever it
+sits, and side
+branches offset to the right with their own connector colours. Autosaves on the same branch
 stay in one lane instead of cascading deeper with every commit, and each row
 puts its timestamp before the secondary detail text so that context stays in
 reading order. Use **Focus**
@@ -159,6 +161,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
+- If that preferred input or output device is missing when TayPE launches, the
+  app stays up on the live fallback device but keeps the missing choice staged
+  as `{device_name} (fallback)` in the Audio tab so **Apply Audio Changes**
+  can restore it as soon as the hardware returns.
 - Tracks whose input selector is **Default** follow the mono/stereo default
   input you pick here as soon as you apply the change. TayPE also restores the
   matching input channels on relaunch, so an aggregate-device default keeps

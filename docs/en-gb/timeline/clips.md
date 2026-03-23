@@ -174,20 +174,23 @@ waits where it was; when you let go TayPE carries the opposite brace with it
 to preserve the current width, only shortening the range when the timeline
 start at `0` gets in the way. Marker tabs and rods
 still win pointer hits over the loop drag strip, so marker drag and marker
-menus keep working inside the loop range.
+menus keep working inside the loop range. If playback is running, blocked loop,
+marker, clip, or drag edits now flash the transport warning banner instead of
+quietly doing nothing.
 
 ## Splitting
 
 | Shortcut | What it does |
 |----------|---------------|
 | **\\** | Split the selected clips at the tape head |
-| **Cmd+\\** | Split the selected clips at both loop braces |
+| **Cmd+\\** | Split the selected clips at both current loop braces |
 | **Option+\\** | Split every clip that crosses the tape head, across all tracks |
-| **Cmd+Option+\\** | Split every clip that crosses either loop brace, across all tracks |
+| **Cmd+Option+\\** | Split every clip that crosses either current loop brace, across all tracks |
 
 Plain **\\** splits every selected clip that spans the tape head into two.
 Both halves keep pointing at the same source audio, and TayPE selects the new
-right-hand pieces when the split is done.
+right-hand pieces when the split is done. The loop-brace variants use the
+latest committed loop brace positions, even if you just moved the ruler tabs.
 
 The brace versions make both cuts in one go. TayPE only cuts clips that
 actually cross a brace, skips clips that already line up with the brace, and
@@ -262,4 +265,5 @@ Properties** and use **Re-render from MIDI** to commit a fresh audio render.
 If the clip already has stretch or Melodyne-style derived audio on top, TayPE
 warns before that rerender clears those derived edits. While the new audio is
 printing, the clip stays in place with a small spinner so you can see the
-rerender is still in flight without hearing anything from the offline print.
+rerender is still in flight without hearing anything from the offline print,
+even if that instrument track is still monitor-armed.

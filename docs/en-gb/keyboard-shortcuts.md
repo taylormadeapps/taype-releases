@@ -59,9 +59,9 @@ track duplication and deletion.
 | Shortcut | Action |
 |----------|--------|
 | \ | Split selected clips that cross the tape head |
-| Cmd+\ | Split selected clips at both loop braces |
+| Cmd+\ | Split selected clips at both current loop braces |
 | Option+\ | Split all clips at the tape head |
-| Cmd+Option+\ | Split all clips at both loop braces |
+| Cmd+Option+\ | Split all clips at both current loop braces |
 | D | Duplicate selected clips back-to-back as a group |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+Option+D | Duplicate selected track with clips |
