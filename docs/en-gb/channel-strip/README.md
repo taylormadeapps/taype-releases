@@ -45,8 +45,9 @@ The docked arranger strip and the mixer both carry a stronger blend of the
 track colour through the background, so the selected channel reads by family at
 a glance. The mixer pushes that wash a little harder in the normal theme, while
 high-contrast mode keeps the plain accessibility surface. In the mixer, the
-output selector pill and its immediate surround also pick up a tint from the
-destination track colour so bus and master routing reads faster. In the mixer,
+output selector pill and its immediate surround now use a solid destination
+colour mix off a neutral dark base instead of a muddy alpha wash, so bus and
+master routing reads faster and keeps the routed hue intact. In the mixer,
 ordinary strips also sit flush together, only bus and master strips open the
 shared 8px separator, the coloured title band runs the full strip width as a
 footer below the fader, and there is no extra top rail, boxed strip gutter, or

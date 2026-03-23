@@ -25,9 +25,10 @@ The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
 The right-hand action stack keeps **Open Reel Browser** as the standout branch,
-with **Audio Preferences** and **Plugin Manager** sitting underneath it as
-matched secondary buttons. The supporting copy on the left starts level with
-those buttons, so the card scans as three aligned action rows. Under the
+with **New Reel** parked directly underneath it as the fast named-session path,
+then **Audio Preferences** and **Plugin Manager** as the supporting secondary
+buttons. The supporting copy on the left starts level with the top button in
+each action lane, so the card still scans as aligned rows. Under the
 performance advisor note, a left-aligned brass **Automation coming soon.**
 line now sits between the same goat glyphs used by the Founder badge.
 
@@ -36,6 +37,10 @@ startup reel stays loaded and shows as the current session while you decide
 what to do next. If you branch into a different reel without touching it,
 TayPE still moves that blank startup reel into **Scrap Pile** instead of
 clogging the library with dead air.
+
+If you hit **New Reel** from the welcome card, TayPE skips the browser and
+opens the native save dialog directly so you can name the new bundle in one
+move.
 
 The paired welcome logos sit in matched square tiles, and the left TayPE mark
 now fills its tile directly instead of sitting inside a second inner badge.
@@ -71,6 +76,9 @@ browser first.
 
 When a reel is already open, the browser action row starts with **Media**,
 which opens that reel's `media/` folder in Finder without closing the browser.
+With popup help enabled, the browser's action buttons and history entries also
+answer hover help, so long version rows still tell the truth when the visible
+line has to clip.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
@@ -102,7 +110,9 @@ Plain autosave heads stay hidden until you turn on **Show Autosaves** for the
 full save-by-save trail. The history view is a continuous vertical git-style
 graph: earliest at the top, newest at the bottom, current branch as the main
 spine, and side branches offset to the right. Autosaves on the same branch
-stay in one lane instead of cascading deeper with every commit. Use **Focus**
+stay in one lane instead of cascading deeper with every commit, and each row
+puts its timestamp before the secondary detail text so that context stays in
+reading order. Use **Focus**
 in the history header to snap the browser back to the current state after
 exploring older commits and side branches.
 

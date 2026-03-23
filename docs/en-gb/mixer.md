@@ -18,8 +18,8 @@ Each strip shows (top to bottom):
 - **Input selector** - which audio interface input the track records from
 - **Control buttons** - M (mute), S (solo), R (record arm), MON (software
   monitoring), A (archive), B (bus)
-- **Output selector** - where the track sends its audio, with a light tint
-  from the destination track colour
+- **Output selector** - where the track sends its audio, with a destination
+  track tint that keeps the routed hue clean against the dark strip
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
