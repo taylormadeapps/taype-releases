@@ -42,13 +42,17 @@ This file is created automatically on first launch with sensible defaults.
 
 ## Record Modes
 
-Right-click the transport record button to choose what **Return** does during a take:
+Right-click the transport record button or use **Transport > Record Stop Mode** to
+choose what **Return** does during a take:
 
 - **Return** — commit the pass, stop transport, and go back to the pass start.
 - **Punch** — commit the pass and keep playback rolling.
 - **Do-Over** — commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
 
 **Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end.
+
+The **Edit** menu carries the split variants, while the **Tracks** menu carries
+track duplication and deletion.
 
 ### Editing
 

@@ -8,7 +8,8 @@ When you stop, each ghost clip is replaced by its real clip with the final wavef
 
 ## Record Modes
 
-Right-click the transport record button to choose the record macro:
+Right-click the transport record button or open `Transport > Record Stop Mode` to
+choose the record macro:
 
 - **Return** — pressing **Return** again commits the pass, stops transport, and returns to the pass start.
 - **Punch** — pressing **Return** again commits the pass and keeps playback rolling.

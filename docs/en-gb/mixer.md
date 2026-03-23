@@ -3,8 +3,10 @@
 Press **M** to switch between the timeline and mixer views.
 
 The mixer shows one channel strip per track, laid out horizontally left
-to right. The master bus is always on the far right. Scroll horizontally
-with the mouse wheel or trackpad to navigate across your channels.
+to right. The master bus is always the rightmost strip, and when the visible
+rack fits inside the viewport it anchors flush to the far right as its own
+lane. Scroll horizontally with the mouse wheel or trackpad to navigate across
+your channels.
 
 ![Mixer overview](../../assets/img/docs/mixer-overview.png)
 
@@ -16,7 +18,8 @@ Each strip shows (top to bottom):
 - **Input selector** - which audio interface input the track records from
 - **Control buttons** - M (mute), S (solo), R (record arm), MON (software
   monitoring), A (archive), B (bus)
-- **Output selector** - where the track sends its audio
+- **Output selector** - where the track sends its audio, with a light tint
+  from the destination track colour
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
@@ -108,8 +111,9 @@ away cancels.
 
 ## Track Order
 
-Tracks appear in the same order as the timeline. The master bus is always
-the rightmost strip.
+Tracks appear in the same order as the timeline. The master bus is always the
+rightmost strip, and with spare width it parks flush against the mixer's right
+edge as a dedicated lane.
 
 Mixer visibility follows timeline view filters:
 

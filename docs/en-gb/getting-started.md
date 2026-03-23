@@ -152,7 +152,9 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - Tracks whose input selector is **Default** follow the mono/stereo default
   input you pick here as soon as you apply the change. TayPE also restores the
   matching input channels on relaunch, so an aggregate-device default keeps
-  pointing at the same hardware tail. Either default input can be **None**.
+  pointing at the same hardware tail. Either default input can be **None**,
+  and when the current mode's default is unset the track simply shows
+  **No Input** until you choose a real route.
 - If **Resampling** is **off**, the Sample rate field stays read-only once the
   interface is already back at **48 kHz**.
 - With Resampling off, TayPE will try to switch your interface to **48 kHz**
@@ -200,6 +202,11 @@ TayPE keeps playback clean and separate from structural changes.
 - **\\** - split the selected clip, or every selected clip that crosses the tape head
 - **D** - duplicate the selected clip or clip set back-to-back
 - **Cmd+X / Cmd+C / Cmd+V** - cut, copy, paste the selected clip or clip set
+
+The **Edit** menu carries all split variants, including loop-brace splits and
+"split all" actions. The **Tracks** menu carries track duplication/deletion,
+and the **Transport** menu now carries **Loop Selected** plus the
+**Record Stop Mode** submenu.
 
 Drag the edges of a clip to trim it. This is non-destructive - your
 original audio is never modified.

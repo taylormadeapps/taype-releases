@@ -25,11 +25,13 @@ The meter yellow and the fader lamp now sit closer to the same brass-gold
 family as the radial knob lights, so the strip keeps one honest yellow instead
 of splitting between glow gold and dull mustard.
 
-The input selector follows mono and stereo mode separately. If you flip the
-strip between mono and stereo, TayPE restores the last input you picked for
-that mode instead of forcing one route shape into the other. If a mode's
-default input is unset in Audio preferences, the selector says `No mono ins`
-or `No stereo ins` instead of `Default`.
+The input selector still remembers mono and stereo choices separately, so if
+you flip the strip between mono and stereo TayPE restores the last route you
+picked for that mode instead of forcing one route shape into the other. The
+audio-input popup always offers both mono channels and stereo pairs. If the
+current mode's default input is unset in Audio preferences, the selector says
+`No Input` instead of `Default`, and that unresolved state does not also grow a
+duplicate `None` item in the popup.
 
 Double-click the fader dB readout or the pan readout and TayPE now drops a
 small single-line text editor right on the strip, so you can type exact values
@@ -42,7 +44,9 @@ On track strips, the pan row puts the mono/stereo and phase stack to the left of
 The docked arranger strip and the mixer both carry a stronger blend of the
 track colour through the background, so the selected channel reads by family at
 a glance. The mixer pushes that wash a little harder in the normal theme, while
-high-contrast mode keeps the plain accessibility surface. In the mixer,
+high-contrast mode keeps the plain accessibility surface. In the mixer, the
+output selector pill and its immediate surround also pick up a tint from the
+destination track colour so bus and master routing reads faster. In the mixer,
 ordinary strips also sit flush together, only bus and master strips open the
 shared 8px separator, the coloured title band runs the full strip width as a
 footer below the fader, and there is no extra top rail, boxed strip gutter, or
