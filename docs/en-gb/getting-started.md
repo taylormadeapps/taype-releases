@@ -3,6 +3,11 @@
 TayPE is built around a simple loop: record, listen, commit. No endless
 menus, no buried features. Here's how the core workflow fits together.
 
+On macOS, TayPE's own utility dialogs use native window chrome while keeping
+TayPE styling inside the content panes, and simple warnings or confirmations
+open as native system alerts, so the app feels at home on the desktop without
+falling back to generic toolkit-looking shells.
+
 ## The Two Views
 
 TayPE has two main views. Press **M** to toggle between them.
@@ -20,6 +25,10 @@ are unlicensed, the license screen chains in as soon as you leave that welcome
 step. If you open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips
 the welcome card, opens that session first, and then chains straight into the
 license screen.
+
+Fresh launch-created reels come up with Track 1 selected and the docked
+channel strip already open, so TayPE lands in a ready-to-record state instead
+of making you pick the first working track by hand.
 
 The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
