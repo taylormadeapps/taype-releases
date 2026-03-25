@@ -78,7 +78,7 @@ TONE3000 のオンラインライブラリで NAM プロファイルを検索し
 | パラメータ | 型 | 必須 | 説明 |
 |-------|------|----------|-------------|
 | `query` | string | はい | 検索語 |
-| `sort` | string | いいえ | `"trending"`、`"downloads"`、`"newest"`、`"relevance"` |
+| `sort` | string | いいえ | `"trending"`、`"newest"`、`"oldest"`。省略時はデフォルト（関連性順）。 |
 | `category` | string | いいえ | `"all"`、`"amp"`、`"pedal"`、`"full-rig"`、`"ir"`、`"outboard"` |
 | `architecture` | string | いいえ | `"amx"`、`"lstm"`、`"wavenet"`、`"convnet"`、`"linear"`、`"a2"` |
 | `page` | number | いいえ | ページ番号（既定: 1） |

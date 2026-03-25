@@ -78,7 +78,7 @@ Search the TONE3000 online library for NAM packages.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `query` | string | yes | Search query |
-| `sort` | string | no | "trending", "downloads", "newest", "relevance" |
+| `sort` | string | no | "trending", "newest", "oldest". Omit for default (relevance). |
 | `category` | string | no | "all", "amp", "pedal", "full-rig", "ir", "outboard" |
 | `page` | number | no | Page number (default: 1) |
 
