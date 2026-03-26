@@ -219,7 +219,7 @@ double-click it again while the picker is up to close it. Inside the picker, a
 single swatch click previews the colour; double-click a swatch to commit it
 and close the picker.
 
-The bus toggle sits in the left side of the title bar — a white bus glyph that fills green when active. Bus mode forces MON on immediately, drops live input to `none`, and temporarily disables any enabled instrument inserts on that track. Switching back out of bus mode restores the old input, restores those instrument inserts, and forces MON back off.
+The bus toggle sits in the left side of the title bar — a white bus glyph that fills green when active. Bus mode forces MON on immediately, drops live input to `none`, and temporarily disables any enabled instrument inserts on that track. Switching back out of bus mode restores the old mode-appropriate input, restores those instrument inserts, and forces MON back off, so an instrument track comes back on MIDI instead of a stale audio pair.
 
 The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record**. On instrument tracks, Record still mirrors MON on and off for quick arm/disarm, but MON stays independently clickable so you can audition or mute the live instrument feed without changing record arm. Input and output routing share one row at the top of the strip.
 

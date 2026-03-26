@@ -11,7 +11,7 @@ Each track header shows the following controls. At very small track heights, som
 - **Tags** — opens the tag cloud popup for this track
 - **R** — record arm (red circle when armed). The channel strip shows the same armed state for the selected track.
 - **MON** — software monitoring (hear input through the track channel strip). On instrument tracks, MON stays visible and can be toggled separately from record arm. When record arm mirrors monitoring on or off for an instrument track, the MON lamp follows that change straight away.
-- **Bus** — designate as bus track (white bus glyph, fills green when active). Bus mode forces MON on, turns live input off, and temporarily disables any enabled instrument inserts until you switch the track back out of bus mode.
+- **Bus** — designate as bus track (white bus glyph, fills green when active). Bus mode forces MON on, turns live input off, and temporarily disables any enabled instrument inserts until you switch the track back out of bus mode. When you switch back, TayPE restores the old mode-appropriate input, so instrument tracks return to MIDI instead of showing a stale audio pair.
 - **M** — mute (speaker icon, crossed out when muted)
 - **S** — solo
 - **Tag pills** — at larger track heights, assigned tags appear as pills below the button row
