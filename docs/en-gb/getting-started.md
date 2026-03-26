@@ -322,9 +322,10 @@ hear during playback.
 
 **Focus** - press **F** to filter the timeline down to only the tracks
 that have audio at the current tape head position. If loop playback is on,
-Focus widens to the whole loop-brace range instead. Focus recomputes when
-you press the button - it doesn't jitter around while you work. Record-armed
-and selected tracks are always visible.
+Focus widens to the whole loop-brace range instead. With loop off, Focus
+follows manual playhead moves plus transport playback/record in real time.
+Record-armed and monitored tracks stay visible, but selecting a track outside
+the clip/loop window does not keep it in Focus.
 
 **Archive** - press **A** to toggle archive view. Archived tracks are
 completely silent - no playback, no processing, no CPU. Archive is not

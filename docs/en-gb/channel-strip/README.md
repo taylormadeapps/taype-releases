@@ -228,9 +228,15 @@ footer. In the mixer, single-clicking that title panel selects the track and
 lights a white footer outline. Double-click the pill to rename the track.
 `Cmd`-click toggles extra visible strips into the mixer selection, `Shift`-click
 extends that selection as a visible range, and `Cmd+A` selects every visible
-strip. Grouped fader, pan, width, section power, and insert-slot power edits
-apply only to the visible selected strips, even if Focus / Spill / Archive are
-hiding other remembered selections underneath.
+strip. Arranger track headers share that same multiselect behaviour, except
+arranger `Cmd+A` still belongs to clip selection. When more than one track is
+selected, the docked arranger strip stays pinned to the first selected track.
+Grouped fader, pan, width, section power, and insert-slot power edits apply
+only to the visible selected strips, even if Focus / Spill / Archive are
+hiding other remembered selections underneath, and grouped fader / pan / width
+drags preserve each strip's relative offset instead of flattening them to one
+value. If a linked control hits its min/max rail, it stays pinned there until
+the drag comes back far enough for the original offset to fit again.
 Double-click the coloured background beside it to open the colour picker, and
 double-click it again while the picker is up to close it. Inside the picker, a
 single swatch click previews the colour; double-click a swatch to commit it

@@ -5,8 +5,10 @@ Press **M** to switch between the timeline and mixer views.
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
 rack fits inside the viewport it anchors flush to the far right as its own
-lane. Scroll horizontally with the mouse wheel or trackpad to navigate across
-your channels.
+lane. Adjacent bus strips keep a single visible seam between them inside a bus
+run, while the wider bus gutters still mark the outside edges of the group.
+Scroll horizontally with the mouse wheel or trackpad to navigate across your
+channels.
 
 ![Mixer overview](../../assets/img/docs/mixer-overview.png)
 
@@ -111,10 +113,16 @@ drop between rows to insert and shift later slots down.
 **Track name** - single-click the title panel to select that track in the
 arranger and light its footer outline. **Cmd-click** toggles extra visible
 strips into the mixer selection, **Shift-click** extends the selection as a
-visible range, and **Cmd+A** selects every visible strip. Grouped mixer edits
-apply to the visible selected set only. Double-click the name pill to edit
-inline (only when transport is stopped). Return commits; Escape or clicking
-away cancels.
+visible range, and **Cmd+A** selects every visible strip. Arranger track
+headers share the same **Cmd-click** / **Shift-click** multiselect behaviour,
+but arranger **Cmd+A** still belongs to clip selection. When more than one
+track is selected, the arranger strip stays pinned to the first selected
+track. Grouped mixer edits apply to the visible selected set only, and grouped
+fader / pan / width drags preserve each strip's relative offset instead of
+snapping everything to one flat line. If a linked control hits its min/max
+rail, it stays pinned there until the drag comes back far enough for the
+original offset to fit again. Double-click the name pill to edit inline (only
+when transport is stopped). Return commits; Escape or clicking away cancels.
 
 ## Track Order
 
@@ -127,3 +135,6 @@ Mixer visibility follows timeline view filters:
 - **Archive View (A)** - shows active or archived tracks to match timeline mode
 - **Focus (F)** - shows tracks with clips at the tape head position
 - **Spill (G)** - shows the selected bus and tracks routed to it
+
+The master strip stays visible through all of those filters, so the final sum
+never drops out of the desk.
