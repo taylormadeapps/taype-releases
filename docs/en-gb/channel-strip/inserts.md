@@ -3,10 +3,20 @@
 The insert rack can host eight serial VST3 slots. In the full-width docked
 strip TayPE shows slots 1-4 by default; click **MORE** in the rack footer to
 reveal slots 5-8. Narrow mixer strips now keep that same **MORE** / **LESS**
-footer instead of forcing the full rack open. Click an empty slot to load a plugin from the
-insert picker. Right-click a loaded slot for bypass, remove, or to open the
-plugin editor. Bypassing one slot only takes that slot dry; later inserts in
-the rack still run in order.
+footer instead of forcing the full rack open. Click an empty slot to load a
+plugin from the insert picker. Right-click a loaded slot for bypass, remove, or
+to open the plugin editor. Bypassing one slot only takes that slot dry; later
+inserts in the rack still run in order.
+
+Each loaded row now carries its own small power button on the right. Click it
+to bypass just that slot, or **Option-click** to disable / re-enable the
+plug-in through the normal stopped-transport path.
+
+You can also drag a loaded insert to move it. Drag inside one rack to reorder
+the chain, or drag between strips in mixer view to move it to another track.
+Drop on an existing row to replace that slot. Drop between rows to insert there
+and shift later slots down. Hold **Cmd** while you drag to copy instead of
+moving; anything pushed past slot 8 is discarded.
 
 When you choose something from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable, then opens that

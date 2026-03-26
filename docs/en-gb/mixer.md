@@ -26,7 +26,7 @@ Each strip shows (top to bottom):
 - **EQ section** - 3-band parametric equaliser with the same shared EQ Visualiser button
 - **Compressor section** - dynamics processing
 - **Insert slots** - up to 8 slots for VST3 plugins
-- **Sends section** - bus sends with a `POST` / `PRE` mode switch and live RMS hint rings
+- **Sends section** - bus sends with a `POST` / `PRE` mode switch, a section power button, and live RMS hint rings
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -86,9 +86,10 @@ Send level knobs are safe to move while the transport is running. Changing the
 main output route or picking a different send target still requires playback to
 be stopped because those edits rebuild routing.
 The `SENDS` header mode button flips the whole strip between `POST` and `PRE`.
-`POST` follows the fader; `PRE` keeps the send alive with the fader down.
-The thin ring around each send knob is an RMS-only hint of what is actually
-feeding that send.
+`POST` follows the fader; `PRE` keeps the send alive with the fader down. The
+new SENDS power button sits to the right of that mode switch and bypasses send
+processing without changing the stored send routes. The thin ring around each
+send knob is an RMS-only hint of what is actually feeding that send.
 
 The EQ header's spectrum button opens the one shared floating **EQ Visualiser**
 window for that track. Open it from another strip and TayPE retargets the same
@@ -101,11 +102,17 @@ Turning **B** on makes the track a bus and switches its input to no device
 input. Turning **B** off disconnects any tracks routed to that bus so your
 routing stays valid.
 
-**Insert slots** - click to load a plugin, right-click for a context menu
-with options like bypass and remove.
+**Insert slots** - click an empty slot to load a plugin. Each loaded row now
+has its own power button: click it to bypass that slot, or **Option-click** to
+disable / re-enable it. Drag a loaded slot to move it within that chain or to a
+different strip; **Cmd-drag** copies instead. Drop on a slot to replace it, or
+drop between rows to insert and shift later slots down.
 
 **Track name** - single-click the title panel to select that track in the
-arranger and light its footer outline. Double-click the name pill to edit
+arranger and light its footer outline. **Cmd-click** toggles extra visible
+strips into the mixer selection, **Shift-click** extends the selection as a
+visible range, and **Cmd+A** selects every visible strip. Grouped mixer edits
+apply to the visible selected set only. Double-click the name pill to edit
 inline (only when transport is stopped). Return commits; Escape or clicking
 away cancels.
 

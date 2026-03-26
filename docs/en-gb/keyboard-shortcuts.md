@@ -68,7 +68,7 @@ track duplication and deletion.
 | Cmd+X | Cut selected clips |
 | Cmd+C | Copy selected clips |
 | Cmd+V | Paste copied clip group at tape head position |
-| Cmd+A | Select all clips, or all clips overlapping the loop when loop is active. In the MIDI editor, select all notes in the open clip |
+| Cmd+A | Select all visible mixer strips when mixer view has focus; otherwise select all clips, or all clips overlapping the loop when loop is active. In the MIDI editor, select all notes in the open clip |
 | Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | Backspace | Delete selected clips |
 | Delete | Disable selected clips |

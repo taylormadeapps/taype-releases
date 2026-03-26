@@ -116,6 +116,11 @@ grouped together at the top, and the docked strip's `MORE` / `LESS` control
 gets its own footer row at the bottom instead of sharing the lower meter lane.
 That rack-visibility toggle is global UI state across docked and mixer strips,
 defaults to `LESS`, and is remembered between launches.
+Each loaded insert row also carries its own small power button: click it to
+bypass that slot, or **Option-click** to disable / re-enable it. Loaded rows
+can be dragged to move inside the rack or, in mixer view, between tracks; drop
+on a row to replace it, drop between rows to insert there, and hold **Cmd**
+while dragging if you want a copy instead of a move.
 If loaded inserts are hiding in slots 5-8 while the rack is still on `LESS`,
 that footer label warns in yellow so you do not miss the extra loaded slots.
 The insert picker now also carries a top-level `MIDI Out` entry. That creates
@@ -204,7 +209,9 @@ The `SENDS` header now carries a `POST` / `PRE` button for the whole track.
 `POST` is the normal mix-bus behaviour: pull the fader down and the send comes
 down with it. `PRE` moves the send to the pre-fader tap, so the send keeps
 feeding even if you pull the track fader to silence. The thin secondary ring
-around each send knob is an RMS-only hint of what is actually being sent.
+around each send knob is an RMS-only hint of what is actually being sent. A
+matching SENDS power button sits to the right of the mode switch and bypasses
+send processing without deleting or rerouting the stored sends.
 
 The master strip's `NAM SUMMING` block lives in the same vertical lane as the ordinary `PREAMP` block. In the mixer, collapsing either one now collapses that whole shared lane across every visible strip, so the desk stays aligned.
 The mixer master strip also carries a blank spacer below `INSERTS`, sized so
@@ -219,6 +226,11 @@ The coloured title bar shows the track name as a centred pill. In the arranger
 strip it lives at the top; in the mixer it sits below the fader as the strip
 footer. In the mixer, single-clicking that title panel selects the track and
 lights a white footer outline. Double-click the pill to rename the track.
+`Cmd`-click toggles extra visible strips into the mixer selection, `Shift`-click
+extends that selection as a visible range, and `Cmd+A` selects every visible
+strip. Grouped fader, pan, width, section power, and insert-slot power edits
+apply only to the visible selected strips, even if Focus / Spill / Archive are
+hiding other remembered selections underneath.
 Double-click the coloured background beside it to open the colour picker, and
 double-click it again while the picker is up to close it. Inside the picker, a
 single swatch click previews the colour; double-click a swatch to commit it
