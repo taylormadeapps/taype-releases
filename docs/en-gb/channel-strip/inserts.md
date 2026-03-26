@@ -21,6 +21,10 @@ visible by default, with the same **MORE** toggle to reveal the full eight-slot 
 That **MORE** / **LESS** state is global UI state, not per-track memory. It
 defaults to **LESS**, applies across the docked strip and mixer together, and
 is remembered between launches.
+When nothing is hiding in loaded extra slots, both **MORE** and **LESS** keep
+their normal white label styling. The yellow label is reserved for the warning
+state on **MORE** only, so **LESS** stays white once the extra slots are
+visible.
 
 The INSERTS power button works even before you load anything. If you switch the
 rack off first, the next plugin you load comes in bypassed until you turn the
@@ -95,7 +99,9 @@ knob for insert use, labels the IR topology picker
 as **Channels**, and gives the send behaviour its own **Mode** toggle with
 **Send / Insert** choices. **Send** is the default and forces a
 100% wet return; flip to **Insert** to wake the Mix control up. Ducking always
-happens on the wet path before Mix combines wet and dry. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
+happens on the wet path before Mix combines wet and dry, and that insert blend
+uses an equal-power dry/wet law so the source hangs on longer through the
+middle of the knob instead of fading too fast. The Duck knob's gold arc shows live ducking activity rather than just mirroring the set depth.
 
 The same **Taype Stock** lane now ships **Ache-Delay** as TayPE's house delay.
 It follows the same native editor language as Taype Rooms, but with a primary
@@ -103,10 +109,16 @@ yellow wash and a delay-first layout: **Free / Sync** timing, note divisions,
 **Mono / Dual Stereo / Ping-Pong / Ping-Pong (Even)** routing, and the same
 wet-path **Duck** behaviour keyed from the incoming signal. **Send** is the
 default output mode and forces a 100% wet return. Flip to **Insert** to bring
-the stored **Mix** value back into play without rewriting it. Its feedback
-**Tubeyness** now leans the saturation knee itself instead of skewing the
-whole waveshape, which keeps the colour warm without turning the delay tail
-into a fake offset waveform.
+the stored **Mix** value back into play without rewriting it, using the same
+equal-power insert blend as Taype Rooms so the dry side does not vanish too
+early. Its feedback
+**Drive** now leans on the same soft-sine curve as TayPE's classic preamp, so
+the repeats bloom and fold with the same house saturation instead of a
+different shaper. **Tubeyness** still leans that knee itself instead of
+skewing the whole waveshape, and **Loss** now unfolds that wider diffuser
+progressively across the travel instead of waking the whole smear at once, so
+low settings stay more discrete and the top of the knob really does melt
+repeats into a wash.
 
 **T-Clipper** lives in that same **Taype Stock** lane as TayPE's house clipper.
 It is always an inline insert: no wet/dry, no send mode, just drive into

@@ -16,14 +16,16 @@ of the current multi-selection, **Taype — Clip Properties** flips into a batch
 clip colour and the disable toggle still edit the whole selection, but the
 per-clip name, source, and MIDI actions are greyed out.
 The dialog now groups file references into a collapsible **Media Paths**
-section. `Clip Audio Actual` and `Clip MIDI Actual` show the current live
-truth as absolute paths, `Reel Store Audio` and `Reel Store MIDI` stay
-relative to the reel bundle so you see paths like `media/imports-midi/...`,
-and `Import Source` stays absolute when the clip came from outside the reel.
-Missing rows read `n/a` instead of disappearing.
+section that starts closed so the main clip controls stay up top. `Clip Audio
+Actual` and `Clip MIDI Actual` show the current live truth as absolute paths,
+`Reel Store Audio` and `Reel Store MIDI` stay relative to the reel bundle so
+you see paths like `media/imports-midi/...`, and `Import Source` stays
+absolute when the clip came from outside the reel. Missing rows read `n/a`
+instead of disappearing.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
 so you can spot them at a glance. Double-click that glyph to open the MIDI
-editor directly.
+editor directly. When a clip-name pill is clipped, hovering it still reveals
+the full clip name even if popup help is turned off.
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. While
 Melodyne is open, TayPE lets you hear the live edit through the main transport.

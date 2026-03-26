@@ -116,6 +116,8 @@ grouped together at the top, and the docked strip's `MORE` / `LESS` control
 gets its own footer row at the bottom instead of sharing the lower meter lane.
 That rack-visibility toggle is global UI state across docked and mixer strips,
 defaults to `LESS`, and is remembered between launches.
+If loaded inserts are hiding in slots 5-8 while the rack is still on `LESS`,
+that footer label warns in yellow so you do not miss the extra loaded slots.
 The insert picker now also carries a top-level `MIDI Out` entry. That creates
 TayPE's built-in `External MIDI Out` insert, which keeps the track playing as
 normal while mirroring MIDI clip playback to a chosen Core MIDI destination.
@@ -154,6 +156,9 @@ latched until you clear them.
 The grouped mini meters now follow that same split, so their live peak tick
 can cool back out after the short over hold without pretending the clip latch
 itself has been cleared.
+Starting playback or record on a fresh transport pass clears any stale clip
+latch first, so yesterday's red light does not leak into the next pass before
+new audio hits.
 Whichever meter scale you pick, the fader lane still keeps a separate `0 dBFS`
 full-scale mark so the digital ceiling stays visible in `K12`, `K14`, and
 `K20`.
@@ -226,5 +231,6 @@ The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record*
 ## Popup Help
 
 With **Help → Popup Help** enabled, the strip shows hover help after about **0.7 seconds** for knobs, routing selectors, section headers, insert slots, meters, and toggle buttons.
+If popup help is off, TayPE still reveals the full text for clipped name pills only: the track title, truncated section preset pills, and a clipped NAM profile pill still answer hover with the full name.
 If part of the upper section stack is scrolled out of view, that clipped area
 stops answering popup help until you bring it back on screen.
