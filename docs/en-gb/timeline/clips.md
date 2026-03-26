@@ -140,7 +140,7 @@ track offsets intact.
 
 There's a slight resistance threshold to prevent accidental cross-track moves.
 
-Snap stays soft while you drag, so the clip only grabs a rail when you get near it. When you let go, TayPE still drops the clip onto the nearest visible grid point instead of leaving it hanging between snap zones.
+Snap stays soft while you drag, so the clip only grabs a rail when you get near it. When you let go, TayPE still drops the clip onto the nearest visible grid point instead of leaving it hanging between snap zones. External audio and MIDI file drops keep that same feel too: the hover guide snaps onto the visible rail while you drag, and the committed import lands on the nearest visible snap point when snap is on.
 
 ## Copying
 

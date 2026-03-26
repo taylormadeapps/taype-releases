@@ -72,7 +72,9 @@ the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon stays visible in both views: in mixer view it flips the
 whole visible mixer rack between that narrow desk and the full-width strip
 view, and in timeline view it does the same for the docked channel strip,
-opening that strip if it was hidden.
+opening that strip if it was hidden. A floated mixer stays in step with that
+toggle too, but it no longer steals the arranger width control away from the
+docked strip underneath it.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band

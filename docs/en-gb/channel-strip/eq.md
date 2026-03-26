@@ -57,7 +57,9 @@ strip, and double-clicking any of the three resets it straight back to zero.
 The graph grid is also a touch stronger now, so the popup reads faster without
 turning into graph paper.
 In K-system views, that popup ladder keeps both the red `FS` ceiling tick and
-the highlighted `0` reference line too.
+the highlighted `0` reference line, and the graph's left dB scale now marks
+that same `0 VU` reference so the popup grid tells the same truth as the
+meter lane.
 The `HI` filter knob's radial lamp now runs in reverse, so a lower low-pass
 cutoff shows a fuller lit arc.
 The analyser itself now reads more like a proper RTA too: it compensates the
@@ -69,6 +71,9 @@ uses the higher-resolution FFT lane, so broadband material reads less blocky
 and the graph stays truer as you zoom the floor out.
 Popup help now covers the floating visualiser too, including the graph body,
 `IN` / `OUT` toggles, zoom buttons, and the mirrored filter / EQ controls.
+Right-click-dragging a bell handle in that popup solos the swept band while you
+move it, and releasing keeps the newly swept centre frequency instead of
+dropping the handle back on stale pre-solo coordinates.
 
 Those popup `FILTER` and `EQ` headers also keep the same preset badge
 language as the strip. Right-click either one to load or save a filter or

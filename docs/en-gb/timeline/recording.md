@@ -29,8 +29,10 @@ Right-click the metronome button in the ruler to choose a one-shot pre-roll of
 **Off**, **1**, **2**, or **4** bars. TayPE uses that lead-in only for
 recording: with loop recording on, it backs up from the left brace; with loop
 recording off, it backs up from the current tape head position. Playback just
-starts from the current tape head, or from the left brace when looping, with
-no count-in rewind. If the tape head is already at the selected Cut's visible
+starts from the current tape head; with loop playback on, positions before the
+left brace run straight into the loop and positions already past the right
+brace restart from the left brace, with no count-in rewind. If the tape head
+is already at the selected Cut's visible
 timeline zero, TayPE keeps the head there, runs the count-in, and only then
 starts capture while still committing the take at that same zero point.
 During any pre-roll, TayPE can force the
