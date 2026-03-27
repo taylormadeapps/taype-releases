@@ -20,6 +20,13 @@ Each strip shows (top to bottom):
 - **Input selector** - which audio interface input the track records from
 - **Control buttons** - M (mute), S (solo), R (record arm), MON (software
   monitoring), A (archive), B (bus)
+- **Route-aware solo** - solo follows the live signal path: soloing a bus
+  keeps its active upstream feeders, and soloing a track or bus keeps its
+  active downstream bus/send path alive. `MON`-off bus ingress and dead sends
+  stay out of the solo path. Tracks and buses that are only riding that solo
+  path show a softer yellow solo lamp instead of the full hard-solo state.
+  Click a dim inherited solo lamp to drop that strip out of the current solo
+  group, and click it again to let it back into the inherited path.
 - **Output selector** - where the track sends its audio, with a destination
   track tint that keeps the routed hue clean against the dark strip
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
@@ -107,10 +114,14 @@ routing stays valid.
 
 **Insert slots** - click an empty slot to load a plugin. Each loaded row now
 has its own power button: click it to bypass that slot, or **Option-click** to
-disable / re-enable it. Drag a loaded slot to move it within that chain or to a
+disable / re-enable it. That disable toggle also clears the slot's own bypass
+latch, so it comes back live when you re-enable it. Drag a loaded slot to move
+it within that chain or to a
 different strip; **Cmd-drag** copies instead. Drop on a slot to replace it, or
 drop between rows to insert and shift later slots down. If playback is already
 running, the empty-slot click warns immediately instead of opening the picker.
+If the loaded plug-in name clips, hovering that row reveals the full plug-in
+name with its latency on a second line, even with Popup Help turned off.
 
 **Track name** - single-click the title panel to select that track in the
 arranger and light its footer outline. **Cmd-click** toggles extra visible

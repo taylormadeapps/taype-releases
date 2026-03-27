@@ -117,7 +117,9 @@ gets its own footer row at the bottom instead of sharing the lower meter lane.
 That rack-visibility toggle is global UI state across docked and mixer strips,
 defaults to `LESS`, and is remembered between launches.
 Each loaded insert row also carries its own small power button: click it to
-bypass that slot, or **Option-click** to disable / re-enable it. Loaded rows
+bypass that slot, or **Option-click** to disable / re-enable it. That disable
+toggle also clears the slot's own bypass latch, so it wakes back up live when
+you turn it on again. Loaded rows
 can be dragged to move inside the rack or, in mixer view, between tracks; drop
 on a row to replace it, drop between rows to insert there, and hold **Cmd**
 while dragging if you want a copy instead of a move.
@@ -133,6 +135,8 @@ complaining after you choose something.
 When you hover a loaded insert row, its latency readout now lives in its own
 little lane to the left of the row power button, so the sample count does not
 sit on top of the bypass icon.
+If that row clips the plug-in name, hovering it now reveals the full plug-in
+name with the latency on a second line, even if Popup Help is turned off.
 If loaded inserts are hiding in slots 5-8 while the rack is still on `LESS`,
 that footer label warns in yellow so you do not miss the extra loaded slots.
 The insert picker now also carries a top-level `MIDI Out` entry. That creates
@@ -258,10 +262,20 @@ and close the picker.
 The bus toggle sits in the left side of the title bar — a white bus glyph that fills green when active. Bus mode forces MON on immediately, drops live input to `none`, and temporarily disables any enabled instrument inserts on that track. Switching back out of bus mode restores the old mode-appropriate input, restores those instrument inserts, and forces MON back off, so an instrument track comes back on MIDI instead of a stale audio pair.
 
 The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record**. On instrument tracks, Record still mirrors MON on and off for quick arm/disarm, but MON stays independently clickable so you can audition or mute the live instrument feed without changing record arm. Input and output routing share one row at the top of the strip.
+Solo now follows the live signal path instead of just the lit button. Solo a
+bus and TayPE keeps the active upstream tracks and buses feeding it; solo a
+track or bus and TayPE keeps the active downstream bus path alive too,
+including send-fed buses. A bus with `MON` off does not drag its children into
+that solo path, and bypassed or zero-gain sends stay out of it. Tracks and
+buses that are only audible because they sit on that path glow with a softer
+yellow solo lamp instead of the full hard-solo state. Click one of those dim
+lamps and that track or bus steps out of the current solo group; click again
+and it rejoins the inherited path without becoming the explicit solo source.
 
 ## Popup Help
 
 With **Help → Popup Help** enabled, the strip shows hover help after about **0.7 seconds** for knobs, routing selectors, section headers, insert slots, meters, and toggle buttons.
 If popup help is off, TayPE still reveals the full text for clipped name pills only: the track title, truncated section preset pills, and a clipped NAM profile pill still answer hover with the full name.
+Clipped insert slot names still answer too, and add the slot latency on a new line.
 If part of the upper section stack is scrolled out of view, that clipped area
 stops answering popup help until you bring it back on screen.
