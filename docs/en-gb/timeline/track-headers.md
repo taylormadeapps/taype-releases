@@ -24,7 +24,7 @@ At medium and tall heights, the full button row stays pinned directly under the 
 
 Click **Tags** on a track header to open the tag cloud.
 
-- **Both / Global / Reel** filters the cloud scope
+- **All / Global / Reel** filters the cloud scope
 - Search field live-filters tag names
 - Click a tag to toggle it on/off for that track
 - **New Tag** opens inline creation with scope choice:
