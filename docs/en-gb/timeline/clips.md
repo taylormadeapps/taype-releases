@@ -15,6 +15,8 @@ through the track's current instrument. If the clip you double-click is part
 of the current multi-selection, **Taype — Clip Properties** flips into a batch mode:
 clip colour and the disable toggle still edit the whole selection, but the
 per-clip name, source, and MIDI actions are greyed out.
+If that fresh print rings longer than the previous one, TayPE lets the clip
+grow to keep the new tail instead of chopping it back to the old right edge.
 The dialog now groups file references into a collapsible **Media Paths**
 section that starts closed so the main clip controls stay up top. `Clip Audio
 Actual` and `Clip MIDI Actual` show the current live truth as absolute paths,
@@ -68,16 +70,18 @@ The left keyboard rail is playable for audition, stays pinned to the editor's
 left edge while the roll scrolls behind it, scroll-wheel movement there moves
 through the visible pitch range, and both popup-dragging and
 **Cmd/Ctrl-scroll** on that rail change the editor's vertical pitch zoom.
+Popup-dragging there now tracks your pointer cleanly instead of slipping
+around as the editor recentres the note view during zoom.
 **Cmd/Ctrl-scroll** on the piano-roll grid does the same. The pitch-order
 overlay flips
 whether higher notes sit at the top or bottom of the grid, and it now sits
 flush over the keyboard corner instead of floating out in the chrome. A
 sticky timeline header also stays on-screen above the roll, so you can
 left-click there to set the transport and popup-drag there for horizontal
-zoom. When you first open the editor, TayPE gives you a musical default view:
-roughly the first 16 bars at the current tempo and time signature, starting
-from bar 1 of the current Cut instead of inheriting whatever zoom the main
-arranger was using.
+zoom. Pinching anywhere inside the MIDI editor now changes vertical pitch zoom
+too, including the roll, keyboard rail, header, and control lane.
+When you first open the editor, TayPE now inherits the arranger's current
+horizontal zoom instead of snapping to its own separate default span.
 Popup help now covers that floating window properly too, including the pinned
 keyboard rail, sticky ruler, piano-roll surface, `CTRL` lane, overlay buttons,
 and footer quantise controls.
@@ -100,9 +104,14 @@ your chosen quantise note value is finer than the main beat grid, TayPE
 overlays that quantise rail on top and snaps notes and header seeks to that
 finer visible rail until the main beat grid catches up.
 
+When you open a MIDI clip, TayPE now fits the editor vertically to the
+highest and lowest used notes in that clip instead of leaving the whole pitch
+range zoomed out and hoping you squint.
+
 To resize a MIDI note, hover its right edge until the cursor changes, then
 drag. TayPE no longer burns note-body space on a permanent chunky resize
-handle.
+handle, and even very short notes keep enough body area to move or repitch
+cleanly without the resize grab swallowing the whole thing.
 
 The bottom-left **CTRL** overlay sits over the pinned keyboard rail and opens a
 lower control lane inside the same window. That lane shares the piano roll's
@@ -275,4 +284,5 @@ Recorded instrument takes store speaker-time as their MIDI truth too, so a
 later rerender lands where you originally heard the performance rather than
 quietly moving the furniture. That MIDI truth carries the same post-tap
 monitor-alignment shove as the committed audio instead of snapping back to the
-raw incoming queue time.
+raw incoming queue time, and front-edge junk in the old print does not get to
+drag the rerender earlier than the committed MIDI note start.
