@@ -29,6 +29,9 @@ license screen.
 Fresh launch-created reels come up with Track 1 selected and the docked
 channel strip already open, so TayPE lands in a ready-to-record state instead
 of making you pick the first working track by hand.
+Those launch-created `Untitled Reel` bundles live in
+`~/Documents/Taype/Reels/Starters` by default, separate from the ordinary
+manual **New Reel** flow.
 
 The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
@@ -95,8 +98,8 @@ is outside your normal library.
 Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
-When you create a reel, TayPE opens a native save dialog rooted at
-`~/Documents/Taype/Reels/Starters` and suggests a bundle name like
+When you create a reel manually, TayPE opens a native save dialog rooted at
+`~/Documents/Taype/Reels` and suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step.
 

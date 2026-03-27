@@ -70,7 +70,7 @@ Update a track's properties. Only provided fields are changed.
 | `preamp_enabled` | boolean | no | Enable/disable channel preamp |
 | `preamp_drive` | number | no | Preamp drive: 0.0 to 36.0 dB |
 | `preamp_auto_gain` | boolean | no | Auto-gain compensation |
-| `preamp_manual_gain` | number | no | Manual output gain: -36.0 to +12.0 dB |
+| `preamp_manual_gain` | number | no | Legacy alias for the unified preamp output gain: -36.0 to +12.0 dB |
 | `preamp_hp_freq` | number | no | Saturation HP filter: 20.0 to 500.0 Hz |
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |
@@ -80,6 +80,8 @@ immediately (safe during playback). Name, colour, archived, bus, input, and
 output changes require transport to be stopped. Send target changes still need
 stopped transport, but changing only a send's `level` on an existing send is
 safe during playback.
+`preamp_manual_gain` now writes the same output-gain stage used by AG and NAM
+output compensation, so manual trims and automatic trims stay in one lane.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous

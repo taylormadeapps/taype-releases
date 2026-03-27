@@ -78,6 +78,9 @@ instead of aborting the whole strip load.
 The `PREAMP` header now stays a clean section label. Its mode/profile line sits
 inside the section body above the preamp mini meters, with the NAM browse
 button living on that row instead of in the header.
+If a track already remembers a NAM profile but the live NAM engine has dropped
+out, switching back to **NAM** while stopped reloads that remembered profile
+instead of leaving the strip silently passing clean audio.
 
 Section presets only recall what belongs to that section. Fader presets bring
 back volume, pan, strip mode, and polarity, but they do not change the track's
@@ -135,7 +138,10 @@ fader / pan / width drags preserve each strip's relative offset instead of
 snapping everything to one flat line. If a linked control hits its min/max
 rail, it stays pinned there until the drag comes back far enough for the
 original offset to fit again. Double-click the name pill to edit inline (only
-when transport is stopped). Return commits; Escape or clicking away cancels.
+when transport is stopped). During playback, live fader, pan, width, and
+preamp level moves glide over a short internal ramp so what you hear and print
+stays clean instead of stepping at block edges. Return commits; Escape or
+clicking away cancels.
 
 ## Track Order
 

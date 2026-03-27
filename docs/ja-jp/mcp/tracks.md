@@ -70,12 +70,12 @@
 | `preamp_enabled` | boolean | いいえ | チャンネルプリアンプの有効 / 無効 |
 | `preamp_drive` | number | いいえ | プリアンプドライブ: 0.0 から 36.0 dB |
 | `preamp_auto_gain` | boolean | いいえ | オートゲイン補正 |
-| `preamp_manual_gain` | number | いいえ | 手動出力ゲイン: -36.0 から +12.0 dB |
+| `preamp_manual_gain` | number | いいえ | 統合プリアンプ出力ゲインへの互換エイリアス: -36.0 から +12.0 dB |
 | `preamp_hp_freq` | number | いいえ | サチュレーション HP フィルター: 20.0 から 500.0 Hz |
 | `preamp_lp_freq` | number | いいえ | サチュレーション LP フィルター: 2000.0 から 20000.0 Hz |
 | `preamp_safe` | boolean | いいえ | 4x オーバーサンプリング（高ドライブ時のエイリアシングを抑える） |
 
-volume、pan、mute、solo、monitor、preamp 系パラメータは即時反映され、再生中でも安全です。name、color、archived、bus、input、output、send の変更はトランスポート停止中のみです。
+volume、pan、mute、solo、monitor、preamp 系パラメータは即時反映され、再生中でも安全です。name、color、archived、bus、input、output、send の変更はトランスポート停止中のみです。`preamp_manual_gain` は AG や NAM の出力補正と同じ出力ゲイン段を書き換える互換エイリアスなので、手動調整と自動調整が別々の隠れた経路に分かれません。
 
 `is_bus: true` にすると、そのトラックの入力は自動で `"none"` になります（バスはオーディオインターフェイスからではなく、他トラックから受けるためです）。後で `is_bus` を `false` に戻すと、同じ `set_track` 呼び出し内で明示的な `input_id` が渡されていない限り、以前の入力が復元されます。`is_bus: false` に戻したときは、そのトラックを参照していた `output_id` や `sends` もクリアされ、非バスへ向けた古いルートが残りません。
 
