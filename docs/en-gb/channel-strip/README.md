@@ -121,6 +121,12 @@ bypass that slot, or **Option-click** to disable / re-enable it. Loaded rows
 can be dragged to move inside the rack or, in mixer view, between tracks; drop
 on a row to replace it, drop between rows to insert there, and hold **Cmd**
 while dragging if you want a copy instead of a move.
+If the transport is already rolling, clicking an empty insert slot now stops
+right at the yellow warning bar instead of opening the picker and only
+complaining after you choose something.
+When you hover a loaded insert row, its latency readout now lives in its own
+little lane to the left of the row power button, so the sample count does not
+sit on top of the bypass icon.
 If loaded inserts are hiding in slots 5-8 while the rack is still on `LESS`,
 that footer label warns in yellow so you do not miss the extra loaded slots.
 The insert picker now also carries a top-level `MIDI Out` entry. That creates

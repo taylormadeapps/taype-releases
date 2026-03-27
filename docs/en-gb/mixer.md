@@ -27,7 +27,7 @@ Each strip shows (top to bottom):
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
 - **EQ section** - 3-band parametric equaliser with the same shared EQ Visualiser button
 - **Compressor section** - dynamics processing
-- **Insert slots** - up to 8 slots for VST3 plugins
+- **Insert slots** - up to 8 slots for VST3 plugins, with per-slot power buttons and a hover latency readout that stays clear of that switch
 - **Sends section** - bus sends with a `POST` / `PRE` mode switch, a section power button, and live RMS hint rings
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
@@ -109,7 +109,8 @@ routing stays valid.
 has its own power button: click it to bypass that slot, or **Option-click** to
 disable / re-enable it. Drag a loaded slot to move it within that chain or to a
 different strip; **Cmd-drag** copies instead. Drop on a slot to replace it, or
-drop between rows to insert and shift later slots down.
+drop between rows to insert and shift later slots down. If playback is already
+running, the empty-slot click warns immediately instead of opening the picker.
 
 **Track name** - single-click the title panel to select that track in the
 arranger and light its footer outline. **Cmd-click** toggles extra visible
