@@ -121,6 +121,12 @@ bypass that slot, or **Option-click** to disable / re-enable it. Loaded rows
 can be dragged to move inside the rack or, in mixer view, between tracks; drop
 on a row to replace it, drop between rows to insert there, and hold **Cmd**
 while dragging if you want a copy instead of a move.
+While you drag, TayPE now keeps a little ghost insert under the pointer, lights
+replace targets in white, lights both neighbouring rows in yellow when you are
+inserting between them, and keeps the source row ringed red while it is being
+lifted. A normal move uses a solid red border; **Cmd**-drag keeps the broken
+red version so copy-vs-move stays obvious. If the top target slot is empty,
+dropping in the gap above the next insert now just fills that empty top slot.
 If the transport is already rolling, clicking an empty insert slot now stops
 right at the yellow warning bar instead of opening the picker and only
 complaining after you choose something.

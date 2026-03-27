@@ -27,7 +27,7 @@ Each strip shows (top to bottom):
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
 - **EQ section** - 3-band parametric equaliser with the same shared EQ Visualiser button
 - **Compressor section** - dynamics processing
-- **Insert slots** - up to 8 slots for VST3 plugins, with per-slot power buttons and a hover latency readout that stays clear of that switch
+- **Insert slots** - up to 8 slots for VST3 plugins, with per-slot power buttons, a hover latency readout that stays clear of that switch, and clear drag/drop ghost + target cues while you reorder or copy inserts, including the empty-top-slot drop shortcut
 - **Sends section** - bus sends with a `POST` / `PRE` mode switch, a section power button, and live RMS hint rings
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
