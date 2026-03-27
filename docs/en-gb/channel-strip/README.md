@@ -211,7 +211,8 @@ down with it. `PRE` moves the send to the pre-fader tap, so the send keeps
 feeding even if you pull the track fader to silence. The thin secondary ring
 around each send knob is an RMS-only hint of what is actually being sent. A
 matching SENDS power button sits to the right of the mode switch and bypasses
-send processing without deleting or rerouting the stored sends.
+send processing without deleting or rerouting the stored sends. When you kill
+that section, the downstream bus feed and the send meter ring both shut up.
 
 The master strip's `NAM SUMMING` block lives in the same vertical lane as the ordinary `PREAMP` block. In the mixer, collapsing either one now collapses that whole shared lane across every visible strip, so the desk stays aligned.
 The mixer master strip also carries a blank spacer below `INSERTS`, sized so

@@ -90,8 +90,9 @@ be stopped because those edits rebuild routing.
 The `SENDS` header mode button flips the whole strip between `POST` and `PRE`.
 `POST` follows the fader; `PRE` keeps the send alive with the fader down. The
 new SENDS power button sits to the right of that mode switch and bypasses send
-processing without changing the stored send routes. The thin ring around each
-send knob is an RMS-only hint of what is actually feeding that send.
+processing without changing the stored send routes. When it is off, the send
+feed and the thin RMS ring both go quiet. The thin ring around each send knob
+is an RMS-only hint of what is actually feeding that send.
 
 The EQ header's spectrum button opens the one shared floating **EQ Visualiser**
 window for that track. Open it from another strip and TayPE retargets the same
