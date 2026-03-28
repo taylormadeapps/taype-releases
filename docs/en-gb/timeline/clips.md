@@ -3,6 +3,8 @@
 ## Selecting
 
 Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
+**Option-drag** on a clip body duplicates it at the drop point instead of
+moving the original.
 Press **Delete** to disable the selected clips without removing them. Disabled
 clips stay on the timeline, dim visually, and do not sound. Press
 **Backspace** when you really want to delete the selected clips.
