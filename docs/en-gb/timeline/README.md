@@ -6,7 +6,7 @@ The timeline is where you see your session laid out in time. Tracks run top to b
 
 ## Layout
 
-The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio.
+The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio. When automation view is on, those same lanes show a breakpoint line over the clips for the chosen parameter.
 
 Track header colour pickers preview on single swatch click, and a swatch
 double-click commits that colour and closes the picker straight away.
@@ -38,8 +38,11 @@ The left side of the ruler has quick controls:
 - **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
 - **+** — add a new track; if you already have a track selected, the new one drops in immediately after it
 - **Snap** — toggle grid snap
+- **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume** or **Pan**
 - **Metronome** — toggle click on/off
 - **Ruler Mode** — switch between time and bars|beats
+
+This ruler-header **A** is separate from the transport **Archive** shortcut.
 
 Right-click in the upper ruler area to open the zero-point menu:
 

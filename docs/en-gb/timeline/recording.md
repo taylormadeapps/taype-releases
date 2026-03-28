@@ -2,9 +2,25 @@
 
 ## Ghost Clip
 
-While recording, a translucent red "ghost clip" grows on each track admitted to the record pass, showing where audio is being captured. The waveform updates roughly once per second so you can see the signal coming in.
+During audio recording, a translucent red "ghost clip" grows on each track admitted to the record pass, showing where audio is being captured. The waveform updates roughly once per second so you can see the signal coming in.
 
 When you stop, each ghost clip is replaced by its real clip with the final waveform.
+
+Automation recording does not create ghost clips because TayPE is writing
+breakpoints, not capturing new audio.
+
+## Audio vs Automation Passes
+
+The ruler header has an **A** automation button. That button decides what the
+transport **Record** button means.
+
+- **A off** — Record captures audio or instrument takes as normal, but only when at least one track is armed. Existing automation still plays, but TayPE does not write new automation.
+- **A on** — Record captures automation for the parameter currently shown in the ruler header. Right-click the ruler **A** button to choose **Volume** or **Pan**. The transport **Record** button shows a white **A** badge in this mode. Move the relevant track control during the pass and TayPE writes breakpoint automation instead of creating new clips. Those breakpoint points draw live in the lane while the pass is still running.
+
+Playback always follows existing automation whenever the transport is running,
+including ordinary audio recording. **Return**, **Punch**, and **Do-Over**
+still behave the same way; with automation view on, they control an automation
+pass instead of an audio pass.
 
 ## Record Modes
 
