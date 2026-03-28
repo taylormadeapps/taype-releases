@@ -2,6 +2,10 @@
 
 Press **M** to switch between the timeline and mixer views.
 
+Mixer view, the detached mixer window, and the shared narrow/full-width desk
+mode are app-global preferences. If you leave TayPE with the mixer floated or
+the narrow desk engaged, the next launch comes back that way.
+
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
 rack fits inside the viewport it anchors flush to the far right as its own

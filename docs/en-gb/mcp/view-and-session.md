@@ -8,7 +8,8 @@ Tools for view state, undo/redo, theme, personality, and session status.
 
 ### `get_view_state`
 
-Get the current visibility and display state.
+Get the current visibility and display state. These view preferences are
+app-global and survive relaunches.
 
 **Returns:**
 ```json
@@ -54,6 +55,9 @@ Toggle Spill (show tracks routed to the selected bus or master).
 | `enabled` | boolean | yes | Spill on/off |
 
 Requires a bus or master track to be selected.
+
+Focus, Archive View, Spill, ruler mode, automation view, and meter scale all
+persist as app-global preferences rather than reel state.
 
 ### `set_e_zoom`
 

@@ -27,6 +27,9 @@ the last affected track instead of snapping shut.
 Focus can also be driven by MCP with a specific tag (Focus-by-Tag). When you pick more than one tag, the transport popup's OR / AND toggle decides whether TayPE shows tracks matching any selected tag or only tracks matching them all. The transport **Tags** popup also includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud. The popup also includes a **Select** button that selects all matching tracks under the current OR / AND tag mode.
 Archive View chooses the base track set first. After that, Focus, tag Focus,
 and Spill intersect cleanly instead of one filter overriding the others.
+Focus, Archive View, Spill, ruler mode, automation view, popup help, and the
+timeline's snap preferences are app-global settings, so TayPE restores them on
+the next launch instead of storing them in the current reel.
 
 ## Automation View
 

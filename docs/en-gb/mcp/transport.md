@@ -116,6 +116,8 @@ Enable or disable the metronome click and/or set record pre-roll bars.
 
 When playback starts, the click stays locked to the transport grid even though
 TayPE still applies a short fixed anti-pop fade to the program mix underneath.
+The metronome enabled state and `pre_roll_bars` persist as app-global
+preferences across relaunches.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
