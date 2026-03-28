@@ -14,7 +14,7 @@
 | `path` | string | はい | オーディオファイルの絶対パス |
 | `time` | number | いいえ | 秒単位のタイムライン位置（既定: 0.0） |
 | `duration` | number | いいえ | クリップ長（秒、既定: ファイル全体） |
-| `clip_start` | number | いいえ | ソースファイル内の開始オフセット（秒） |
+| `clip_start` | number | いいえ | ソースファイル内で実際に再生が始まるオフセット（秒） |
 | `name` | string | いいえ | クリップ名 |
 
 **戻り値:** `{ "id": "clip_1", "time": 0.0, "duration": 45.2 }`
@@ -62,8 +62,17 @@
       "time": 0.0,
       "duration": 45.2,
       "clip_start": 0.0,
+      "record_alignment_offset": 0.0,
+      "source_start": "00:00.000",
+      "source_end": "00:45.200",
       "file": "/path/to/take1.wav"
     }
   ]
 }
 ```
+
+`clip_start` は実際の再生開始オフセットです。録音で作ったクリップでは
+自動の録音位置合わせがここに含まれることがあり、その分は
+`record_alignment_offset` に別で出ます。`source_start` / `source_end` は
+ユーザーのトリム位置を表すので、触っていない録音直後のテイクは
+`00:00.000` のままです。

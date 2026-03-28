@@ -13,10 +13,13 @@ Double-click a clip to open **Taype — Clip Properties**. That's where you rena
 recolour or disable the clip, inspect its source paths, reveal those files in
 Finder from the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
 TayPE's **Taype — MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
-through the track's current instrument. If the clip you double-click is part
-of the current multi-selection, **Taype — Clip Properties** flips into a batch mode:
-clip colour and the disable toggle still edit the whole selection, but the
-per-clip name, source, and MIDI actions are greyed out.
+through the track's current instrument. The same dialog now shows the clip's
+current source window, stretch ratio, and offline pitch in **semitones** plus
+**cents**, with an **Apply** button beside those pitch fields. If the clip you
+double-click is part of the current multi-selection, **Taype — Clip Properties**
+flips into a batch mode: clip colour and the disable toggle still edit the
+whole selection, the pitch fields stay live as **deltas** added onto each
+selected clip, and the per-clip name, source, and MIDI actions are greyed out.
 If that fresh print rings longer than the previous one, TayPE lets the clip
 grow to keep the new tail instead of chopping it back to the old right edge.
 The dialog now groups file references into a collapsible **Media Paths**
@@ -27,10 +30,15 @@ you see paths like `media/imports-midi/...`, and `Import Source` stays
 absolute when the clip came from outside the reel. When the section is closed,
 the file rows stay hidden instead of sitting there half-open. Missing rows
 read `n/a` instead of disappearing.
+For recorded takes, **Source start** and **Source end** reflect your actual
+trim into the take, not TayPE's hidden record-alignment offset, so a fresh
+untouched recording still reads from zero.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
 so you can spot them at a glance. Double-click that glyph to open the MIDI
 editor directly. When a clip-name pill is clipped, hovering it still reveals
 the full clip name even if popup help is turned off.
+Pitch-shifted clips show a small `#` marker in that same pill so you can see
+at a glance that the clip's rendered audio is no longer at source pitch.
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. While
 Melodyne is open, TayPE lets you hear the live edit through the main transport.

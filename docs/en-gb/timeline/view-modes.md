@@ -51,7 +51,10 @@ timeline starts with snap on, while automation view starts with snap off.
 Single-click in the lane to select the nearest automation point on that track,
 double-click empty lane space to add a new point, double-click an existing
 point to delete it, drag selected points to move them, and use **Backspace**
-to delete the current selection.
+to delete the current selection. Dragging a marquee across the timeline works
+by time range on touched tracks: if the box covers any part of a track row,
+TayPE selects every automation point on that track whose time falls inside the
+box, even if the point itself sits above or below the marquee.
 
 Automation playback still runs whenever the transport runs and the track has
 automation data. The automation button changes what you see and what
