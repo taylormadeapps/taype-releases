@@ -197,9 +197,10 @@ waits where it was; when you let go TayPE carries the opposite brace with it
 to preserve the current width, only shortening the range when the timeline
 start at `0` gets in the way. Marker tabs and rods
 still win pointer hits over the loop drag strip, so marker drag and marker
-menus keep working inside the loop range. Clip edits still flash the transport
-warning banner during playback or recording, but loop braces and marker edits
-stay live during playback and only block once recording is active.
+menus keep working inside the loop range. Clip edits, including body drags and
+copy/paste shortcuts, still flash the transport warning banner during
+playback or recording, but loop braces and marker edits stay live during
+playback and only block once recording is active.
 
 ## Splitting
 
