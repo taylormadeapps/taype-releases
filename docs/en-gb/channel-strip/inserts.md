@@ -187,8 +187,13 @@ Bypass can still toggle while the transport is running. **Disable** cannot:
 if you try it from the plug-in window while playback is rolling, TayPE warns
 you to stop transport first.
 
-The sidechain selector is a placeholder for now. It only shows `Coming Soon`
-and does not change routing yet.
+If the loaded plug-in exposes a sidechain input, the plug-in window shows a
+working `Sidechain:` selector. It offers `None`, `Self`, and every non-bus
+track in the session. `Self` feeds the receiver's own pre-strip input to the
+plug-in's sidechain bus for self-ducking or self-pumping. Choosing another
+track feeds that track's raw pre-strip input instead. The selector is hidden
+for plug-ins that do not expose a sidechain input bus, and changing the source
+follows the usual stopped-transport insert-edit rule.
 
 Open **MIDI Out** to choose the Core MIDI destination, pick `Any` or a fixed
 channel, and set a timing advance. TayPE starts new MIDI Out inserts at the

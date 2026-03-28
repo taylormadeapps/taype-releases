@@ -105,6 +105,8 @@ Get the current state of a track's insert slot.
   "bypass": false,
   "enabled": true,
   "latency_samples": 512,
+  "supports_sidechain": true,
+  "sidechain_source": "self",
   "is_midi_out": false,
   "midi_output_id": "",
   "midi_output_name": "",
@@ -115,6 +117,31 @@ Get the current state of a track's insert slot.
 ```
 
 **Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false }`
+
+`supports_sidechain` is `true` when the plug-in exposes an aux input bus that
+TayPE can feed. `sidechain_source` is `""` for none, `"self"` for self-ducking,
+or a non-bus track ID for an external key.
+
+### `set_insert_sidechain`
+
+Set or clear the sidechain source for an insert slot. Requires transport
+stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Receiver track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+| `sidechain_source` | string | no | `""` clears, `"self"` self-keys, any non-bus track ID selects that track |
+
+**Returns:**
+```json
+{
+  "track_id": "...",
+  "slot": 0,
+  "supports_sidechain": true,
+  "sidechain_source": "track_2"
+}
+```
 
 ### `list_insert_presets`
 
