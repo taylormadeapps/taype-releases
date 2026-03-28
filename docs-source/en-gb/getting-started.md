@@ -225,10 +225,14 @@ follows manual playhead moves plus transport playback/record in real time.
 Record-armed and monitored tracks stay visible, but selecting a track outside
 the clip window does not keep it in Focus.
 
-**Archive** - press **A** to toggle archive view. Archived tracks are
+**Archive** - press **X** to toggle archive view. Archived tracks are
 completely silent - no playback, no processing, no CPU. Archive is not
 "mute" or "hide" - it's putting a track away in the cupboard. You can
 pull it back out when you need it.
+
+**Automation** - press **A** to toggle automation view. That switches the
+timeline into breakpoint editing for the selected automation parameter while
+leaving the clips visible underneath.
 
 ## Stems and Buses
 

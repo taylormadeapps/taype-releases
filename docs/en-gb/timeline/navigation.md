@@ -73,3 +73,7 @@ keyboard shortcuts page, to move between markers quickly. When the loop has
 been explicitly set or enabled, those previous/next jumps also stop at the
 loop brace points. If a jump lands outside the current view, TayPE brings the
 playhead back on screen instead of leaving it off to the side.
+
+TayPE treats the song end as the furthest of the last clip plus a short tail,
+the latest marker, or an explicit right loop brace. Playback and Print Mix use
+that same horizon instead of stopping at the first clip edge they find.

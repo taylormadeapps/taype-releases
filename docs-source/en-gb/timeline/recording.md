@@ -6,6 +6,14 @@ While recording, a translucent red "ghost clip" grows on the armed track showing
 
 When you stop, the ghost clip is replaced by the real clip with its final waveform.
 
+## Audio vs Automation Passes
+
+The ruler header has an **A** automation button. With **A** off, **Record**
+captures audio or instrument takes as normal. With **A** on, **Record**
+captures automation for the parameter currently shown in the ruler header.
+Right-click the ruler **A** button to choose **Volume**, **Pan**, or
+**Width**.
+
 ## Timing
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.

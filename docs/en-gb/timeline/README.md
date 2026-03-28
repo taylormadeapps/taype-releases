@@ -38,11 +38,11 @@ The left side of the ruler has quick controls:
 - **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
 - **+** — add a new track; if you already have a track selected, the new one drops in immediately after it
 - **Snap** — toggle grid snap
-- **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume** or **Pan**
+- **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume**, **Pan**, or **Width**
 - **Metronome** — toggle click on/off
 - **Ruler Mode** — switch between time and bars|beats
 
-This ruler-header **A** is separate from the transport **Archive** shortcut.
+This ruler-header **A** is separate from the transport **Archive** shortcut on **X**.
 
 Right-click in the upper ruler area to open the zero-point menu:
 

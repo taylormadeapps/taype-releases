@@ -5,7 +5,7 @@ Four transport view filters help you focus on what matters. All are toggles:
 | Shortcut | Mode | What It Does |
 |----------|------|-------------|
 | F | Focus | Show only tracks with clips at the tape head while it moves, or inside the active loop range |
-| A | Archive View | Toggle between active tracks and archived tracks |
+| X | Archive View | Toggle between active tracks and archived tracks |
 | G | Spill | Show the selected bus or master, or all selected spill-capable buses/masters, plus tracks routed directly to them |
 | E | E-Zoom | Zoom to fit the selected clip |
 
@@ -31,24 +31,27 @@ and Spill intersect cleanly instead of one filter overriding the others.
 ## Automation View
 
 Automation is a separate ruler-header mode, not one of the transport view
-filters above. The **A** shortcut in the table still belongs to **Archive
-View**. Automation uses the **A** button in the ruler header.
+filters above. Press **A** or use the ruler's **A** button to toggle it.
+Archive View moves to **X**.
 
-Left-click that ruler button to switch the whole timeline between normal clip
+Left-click that ruler button, or press **A**, to switch the whole timeline between normal clip
 view and automation view. Right-click it to choose whether the automation
-overlay shows **Volume** or **Pan**. TayPE starts on **Volume**.
+overlay shows **Volume**, **Pan**, or **Width**. TayPE starts on **Volume**.
 
 When automation view is on, every visible track shows the chosen parameter as
 breakpoint lines over the clips. The clips stay visible as a backdrop, but
 clip editing is blocked until you leave automation view.
-Volume automation draws in yellow and pan automation draws in orange, and the
-ruler **A** follows that same colour so you can tell at a glance which
-parameter the lane is showing.
+Volume automation draws in yellow, pan automation draws in orange, and width
+automation draws in blue. The ruler **A** follows that same colour so you can
+tell at a glance which parameter the lane is showing.
+Volume automation is shown on a straight dB ladder from **-60 dB** to
+**+12 dB**, with the floor still meaning hard mute.
 Clip view and automation view remember separate snap modes. The normal
 timeline starts with snap on, while automation view starts with snap off.
 Single-click in the lane to select the nearest automation point on that track,
-double-click to add a new point, drag selected points to move them, and use
-**Backspace** to delete the current selection.
+double-click empty lane space to add a new point, double-click an existing
+point to delete it, drag selected points to move them, and use **Backspace**
+to delete the current selection.
 
 Automation playback still runs whenever the transport runs and the track has
 automation data. The automation button changes what you see and what

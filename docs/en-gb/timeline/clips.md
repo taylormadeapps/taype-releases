@@ -22,8 +22,9 @@ section that starts closed so the main clip controls stay up top. `Clip Audio
 Actual` and `Clip MIDI Actual` show the current live truth as absolute paths,
 `Reel Store Audio` and `Reel Store MIDI` stay relative to the reel bundle so
 you see paths like `media/imports-midi/...`, and `Import Source` stays
-absolute when the clip came from outside the reel. Missing rows read `n/a`
-instead of disappearing.
+absolute when the clip came from outside the reel. When the section is closed,
+the file rows stay hidden instead of sitting there half-open. Missing rows
+read `n/a` instead of disappearing.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
 so you can spot them at a glance. Double-click that glyph to open the MIDI
 editor directly. When a clip-name pill is clipped, hovering it still reveals

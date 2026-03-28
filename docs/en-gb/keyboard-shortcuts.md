@@ -95,7 +95,8 @@ there is no separate user-facing Save command.
 | W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
 | I | Toggle channel strip panel |
 | F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
-| A | Toggle archive view |
+| A | Toggle automation view |
+| X | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
@@ -153,7 +154,9 @@ is straightforward:
   "zoom_reset_vertical": "shift+-",
   "zoom_max_vertical": "shift+=",
   "toggle_mixer_width": "w",
-  "toggle_focus": "f"
+  "toggle_focus": "f",
+  "toggle_automation_view": "a",
+  "toggle_archive_view": "x"
 }
 ```
 

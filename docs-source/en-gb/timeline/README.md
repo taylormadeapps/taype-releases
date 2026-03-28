@@ -18,6 +18,10 @@ The **ruler** along the top shows time. Press **T** to toggle between minutes:se
 
 The **transport bar** runs along the bottom. It has playback controls, BPM, and position readout in the middle, then a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name at the start of the right-hand utility cluster. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**. The **?** popup-help toggle lives at the far right of the transport bar.
 
+The ruler header also carries the global **A** automation toggle. Left-click
+it to switch the whole timeline between clip editing and automation view.
+Right-click it to choose **Volume**, **Pan**, or **Width**.
+
 Next to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active — right-click it to abort the lock.
 
 With **Help → Popup Help** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
@@ -28,6 +32,7 @@ The left side of the ruler has quick controls:
 
 - **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
 - **+** — add a new track
+- **A** — toggle automation view; right-click chooses **Volume**, **Pan**, or **Width**
 - **Metronome** — toggle click on/off
 - **Snap** — toggle grid snap
 - **Ruler Mode** — switch between time and bars|beats
