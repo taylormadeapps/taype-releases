@@ -27,6 +27,8 @@ first 16 bars from bar 1 of the current Cut, instead of some arbitrary fixed zoo
 
 The **transport bar** runs along the bottom. It has playback controls, BPM, and position readout in the middle, then a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name at the start of the right-hand utility cluster. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Mixer Width**, **Focus**, **Tags**, **Spill**, **Archive**. The Mixer Width icon now stays visible in both views. In mixer view it flips the desk between the narrow half-width strips and the full-width strips. In timeline view it flips the docked channel strip between those same widths, and if the strip was hidden it opens it for you; if the mixer is floated, that same toggle keeps the detached desk in step instead of letting it hijack the arranger control. The slot still stays fixed, so the rest of the transport controls do not jump. Double-click the BPM label to type an exact tempo; Return commits, while Escape or clicking away cancels. Right-click the record button to choose **Return**, **Punch**, or **Do-Over** record mode. The **?** popup-help toggle lives at the far right of the transport bar. When TayPE needs to warn you about a rejected routing move or similar, it flashes a solid yellow bar just above the transport for about three seconds instead of covering the controls. Clip drags, copy/paste tries, and header dead-space reorder drags hit that same bar when transport is rolling or recording instead of pretending the move might take.
 
+Focus only counts enabled clips. Disabled clips do not keep a track visible, whether Focus is following the playhead or the active loop range.
+
 Next to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active — right-click it to abort the lock.
 
 With **Help → Popup Help** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
@@ -36,7 +38,7 @@ With **Help → Popup Help** enabled, hover help appears after about **0.7 secon
 The left side of the ruler has quick controls:
 
 - **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
-- **+** — add a new track; if you already have a track selected, the new one drops in immediately after it
+- **+** — add a new track; if you already have a track selected, the new one drops in immediately after it. If that selected track belongs to a comp group, the new track lands after the whole comp block instead of inside it
 - **Snap** — toggle grid snap; press **S** to flip it from the keyboard
 - **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume**, **Pan**, or **Width**
 - **Metronome** — toggle click on/off

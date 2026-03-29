@@ -39,7 +39,8 @@ Dragging in empty timeline space marquee-selects clips. Click in the ruler to se
 Right-click in the upper ruler area to open the zero-point menu for the selected Cut.
 Right-click in the lower ruler tick band to use the existing pan/zoom drag.
 
-**Option+click** anywhere on the timeline always seeks, even over a clip. Hold and drag after clicking to scrub.
+**Option+click** in empty timeline space still seeks. On a clip body, **Option+click**
+toggles clip disable instead. Hold and drag after a seek click to scrub.
 
 When snap is on, ruler seek and seek-drag also lock onto nearby clip starts
 and ends, making it easier to line the tape head up before using **Set 0 at Playhead**.

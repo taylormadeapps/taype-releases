@@ -41,7 +41,7 @@ with **New Reel** parked directly underneath it as the fast named-session path,
 then **Audio Preferences** and **Plugin Manager** as the supporting secondary
 buttons. The supporting copy on the left starts level with the top button in
 each action lane, so the card still scans as aligned rows. Under the
-performance advisor note, a left-aligned brass **Automation coming soon.**
+performance advisor note, a left-aligned brass **Full Plugin Automation in development**
 line now sits between the same goat glyphs used by the Founder badge.
 
 If you open the **Reel Browser** straight from that welcome card, the fresh

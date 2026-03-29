@@ -41,7 +41,8 @@ Get current transport state.
   "loop_start_seconds": 0.0,
   "loop_end_seconds": 0.0,
   "recording": false,
-  "record_mode": "return"
+  "record_mode": "return",
+  "loop_record_mode": "auto_punch"
 }
 ```
 

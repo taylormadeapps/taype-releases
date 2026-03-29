@@ -87,6 +87,14 @@ input wins). Setting `is_bus: false` also clears any tracks whose
 `output_id` or `sends` pointed at that track, preventing stale routes to
 a non-bus.
 
+`comp_bus: true` turns the track into a comp bus without changing the
+underlying routing model. Child takes are still ordinary tracks routed to
+that bus. `comp_input_id` stores the group's shared visible input choice,
+and child take tracks inherit that into their real `input_id` while their
+own `input_id`, `monitor`, `output_id`, and `is_bus` fields stay locked.
+Unlike a plain bus, a comp bus may host instrument inserts, so a MIDI/VSTi
+track can enter comp mode without losing its synth.
+
 `set_track` also normalizes `input_id` to track mode: instrument tracks
 normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
 tracks normalize MIDI routes ("midi:*") to default audio ("").

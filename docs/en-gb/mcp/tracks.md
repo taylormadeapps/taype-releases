@@ -61,7 +61,9 @@ Update a track's properties. Only provided fields are changed.
 | `solo` | boolean | no | Solo state |
 | `monitor` | boolean | no | Software monitoring (tracks: hear input through chain; buses: summing toggle) |
 | `is_bus` | boolean | no | Bus designation |
+| `comp_bus` | boolean | no | Comp-bus designation (implies `is_bus`) |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
+| `comp_input_id` | string | no | Shared visible input choice for a comp bus |
 | `output_id` | string | no | Output target: "master" or bus track ID |
 | `sends` | array | no | Additional fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0}]` |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
@@ -94,6 +96,17 @@ a non-bus.
 `set_track` also normalizes `input_id` to track mode: instrument tracks
 normalize non-MIDI routes to "midi:all" (except "none"), while non-instrument
 tracks normalize MIDI routes ("midi:*") to default audio ("").
+
+`comp_bus: true` turns the track into a comp bus without changing the
+underlying routing model. Child takes are still ordinary tracks routed to
+that bus. `comp_input_id` stores the group's shared visible input choice,
+and child take tracks inherit that into their real `input_id` while their
+own `input_id`, `monitor`, `output_id`, and `is_bus` fields stay locked.
+Unlike a plain bus, a comp bus may host instrument inserts, so a MIDI/VSTi
+track can enter comp mode without losing its synth.
+The UI hides child-track arm and monitor controls while the track belongs to
+the comp group, but low-level `record_start` calls can still target child
+tracks to print them back onto the parent comp bus.
 
 Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_threshold`, `comp_ratio`, `comp_attack_ms`, `comp_release_ms`,

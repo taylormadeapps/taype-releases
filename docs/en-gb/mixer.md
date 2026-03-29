@@ -119,6 +119,10 @@ Turning **B** on makes the track a bus and switches its input to no device
 input. Turning **B** off disconnects any tracks routed to that bus so your
 routing stays valid.
 
+**Cmd-click** the same bus glyph to enter comp mode. A comp bus does not add
+new engine routing underneath: it owns the group's visible input/record
+controls while child takes remain ordinary tracks routed to that bus.
+
 **Insert slots** - click an empty slot to load a plugin. Each loaded row now
 has its own power button: click it to bypass that slot, or **Option-click** to
 disable / re-enable it. That disable toggle also clears the slot's own bypass

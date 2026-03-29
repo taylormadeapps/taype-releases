@@ -35,11 +35,19 @@ choose the record macro:
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
-If the loop braces are active, recording does **not** cycle. TayPE treats the
-left brace as punch-in and the right brace as punch-out, with playback staying
-linear after the punch instead of wrapping back around. Latency compensation
-keeps the committed take reaching the visible right brace instead of ending
-short.
+If the loop braces are active, right-click the loop button or open
+`Transport > Loop Record Mode` to choose what record means:
+
+- **Auto Punch** — TayPE treats the left brace as punch-in and the right
+  brace as punch-out, with playback staying linear after the punch instead
+  of wrapping back around.
+- **Loop** — transport wraps like playback while recording. Ordinary tracks
+  keep the last full lap, or the first partial lap if you stop before the
+  first wrap. Comp passes keep each lap as comp history, with the newest lap
+  enabled by default.
+
+Latency compensation still keeps committed takes reaching the visible timing
+window instead of ending short.
 
 Right-click the metronome button in the ruler to choose a one-shot pre-roll of
 **Off**, **1**, **2**, or **4** bars. TayPE uses that lead-in only for
@@ -65,10 +73,13 @@ If you press **Stop** while recording, TayPE always commits the current pass fir
 - Audio tracks (no instrument insert): audio inputs only (Default, None, mono channels, stereo pairs).
 - Instrument tracks (instrument insert present): MIDI inputs only (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
 - Bus tracks: the label reads **Sender** for orientation, but there is no input menu or device-input choice there.
+- Comp buses: the visible input chooser is the group's shared comp input. New
+  take tracks inherit that choice into their real inputs; child take tracks
+  themselves hide input, MON, and record arm in the timeline.
 
 When a track switches into instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
-**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. Instrument tracks keep MON visible too, even though record arm still mirrors it on and off.
+**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. Instrument tracks keep MON visible too, even though record arm still mirrors it on and off. On a comp bus, `MON` now behaves like normal software monitoring for the group's shared comp input. Record-arm on the comp bus creates a new take track. Comp child tracks do not expose their own MON or record-arm controls in the UI while they belong to the group. During a live comp-take pass, the existing comp group stays silent so the new pass is not fighting the old takes in the speakers.
 On instrument tracks, live MIDI monitoring now keeps the note's played phase
 inside the block but hands it to the next guaranteed sandbox block, so you
 get one steady shove of latency instead of random timing wobble that kills

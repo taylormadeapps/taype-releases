@@ -22,7 +22,7 @@ If your startup path includes the welcome card, the green **Let's Roll**
 button waits a second for the card to settle, then flashes three times at
 3 Hz so the main path into the reel is obvious without turning startup into
 a wizard. Under the performance advisor note, a left-aligned brass
-**Automation coming soon.** line sits between the same goat glyphs used by
+**Full Plugin Automation in development** line sits between the same goat glyphs used by
 the Founder badge.
 
 If you open the **Reel Browser** straight from that welcome card, the fresh

@@ -8,8 +8,9 @@ Tools for view state, undo/redo, theme, personality, and session status.
 
 ### `get_view_state`
 
-Get the current visibility and display state. These view preferences are
-app-global and survive relaunches.
+Get the current visibility and display state. Focus, Archive View, Spill,
+and tag-filter state are transient session view modes, while ruler mode
+and other explicit app preferences persist separately.
 
 **Returns:**
 ```json
@@ -56,8 +57,9 @@ Toggle Spill (show tracks routed to the selected bus or master).
 
 Requires a bus or master track to be selected.
 
-Focus, Archive View, Spill, ruler mode, automation view, and meter scale all
-persist as app-global preferences rather than reel state.
+Focus, Archive View, Spill, and tag-filter state are not reel data and reset
+on relaunch. Ruler mode, automation view, and meter scale still persist as
+app-global preferences.
 
 ### `set_e_zoom`
 
@@ -189,7 +191,7 @@ re-check via `status` before assuming previous values are still valid.
 ```json
 {
   "reel": { "name": "Default", "directory": "...", "sample_rate": 44100, "device_sr_matched": true },
-  "transport": { "playing": false, "recording": false, "record_mode": "return", "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
+  "transport": { "playing": false, "recording": false, "record_mode": "return", "loop_record_mode": "auto_punch", "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
   "selected_cut_name": "Main Cut",
   "cuts": ["Main Cut", "Verse", "Chorus"],
   "tracks": [ {

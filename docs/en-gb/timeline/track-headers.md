@@ -14,7 +14,18 @@ the arranger does not change which track is selected.
 - **Tags** — opens the tag cloud popup for this track
 - **R** — record arm (red circle when armed). The channel strip shows the same armed state for the selected track.
 - **MON** — software monitoring (hear input through the track channel strip). On instrument tracks, MON stays visible and can be toggled separately from record arm. When record arm mirrors monitoring on or off for an instrument track, the MON lamp follows that change straight away.
-- **Bus** — designate as bus track (white bus glyph, fills green when active). Bus mode forces MON on, turns live input off, and temporarily disables any enabled instrument inserts until you switch the track back out of bus mode. When you switch back, TayPE restores the old mode-appropriate input, so instrument tracks return to MIDI instead of showing a stale audio pair.
+- **Bus** — the arranger header badge is display-only. Plain bus toggling and
+  **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead.
+  In comp groups, child take headers hide **R**, **MON**, and the input
+  selector because the comp bus owns those controls for the whole group. The comp bus header
+  also draws a blue outline around the whole visible comp block, with a
+  small +/- square in the top-left corner to hide or show the child take
+  headers. On the arranger lane itself, the comp bus also paints faint,
+  non-editable "quasi clips" wherever hidden or visible child takes contain
+  clips, so you still get a read on where audio lives when the group is
+  folded up. `Cmd-click` on a non-empty comp bus does not silently fail:
+  TayPE asks whether to flatten the group to one clip on that track, and
+  confirming removes the child take tracks and leaves a normal track behind.
 - **M** — mute. When it is on, the button lights in a softer red than the record arm lamp so the two states stay related without reading the same.
 - **S** — solo
 - **Tag pills** — at larger track heights, assigned tags appear as pills below the button row

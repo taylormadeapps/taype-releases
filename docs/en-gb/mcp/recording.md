@@ -3,8 +3,9 @@
 Tools for recording audio input.
 
 `get_record_mode` / `set_record_mode` control the transport's record-button
-macro. `record_start` / `record_stop` stay low-level and let MCP clients drive
-the take lifecycle directly.
+macro. `get_loop_record_mode` / `set_loop_record_mode` control whether loop
+braces auto-punch or wrap during record. `record_start` / `record_stop` stay
+low-level and let MCP clients drive the take lifecycle directly.
 
 ---
 
@@ -36,6 +37,32 @@ itself.
 }
 ```
 
+### `get_loop_record_mode`
+
+Get the current loop-record mode.
+
+**Returns:**
+```json
+{
+  "loop_record_mode": "auto_punch"
+}
+```
+
+### `set_loop_record_mode`
+
+Persist the loop-record mode.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `loop_record_mode` | string | yes | `"auto_punch"` or `"loop"` |
+
+**Returns:**
+```json
+{
+  "loop_record_mode": "loop"
+}
+```
+
 ### `record_start`
 
 Start recording audio input onto one or more tracks. Transport begins
@@ -49,6 +76,13 @@ and get back out before transport work.
 |-------|------|----------|-------------|
 | `track_id` | string | no | Single-track compatibility path |
 | `track_ids` | array[string] | no | Tracks to record onto in caller order |
+
+Comp buses are special: `record_start` on the comp bus itself always creates a
+new child take track for that comp group, regardless of `monitor`. `monitor`
+only controls whether the comp bus also auditions its shared comp input
+through the normal bus strip. Calling `record_start` on one or more comp-child
+tracks instead collapses those child selections into a single print pass on
+the parent comp bus.
 
 **Returns:**
 ```json

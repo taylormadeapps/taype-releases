@@ -8,7 +8,9 @@ Tools for view state, undo/redo, theme, personality, and session status.
 
 ### `get_view_state`
 
-Get the current visibility and display state.
+Get the current visibility and display state. Focus, Archive View, Spill,
+and tag-filter state are transient session view modes, while ruler mode
+and other explicit app preferences persist separately.
 
 **Returns:**
 ```json
@@ -54,6 +56,10 @@ Toggle Spill (show tracks routed to the selected bus or master).
 | `enabled` | boolean | yes | Spill on/off |
 
 Requires a bus or master track to be selected.
+
+Focus, Archive View, Spill, and tag-filter state are not reel data and reset
+on relaunch. Ruler mode, automation view, and meter scale still persist as
+app-global preferences.
 
 ### `set_e_zoom`
 
