@@ -16,11 +16,14 @@ the arranger does not change which track is selected.
 - **MON** — software monitoring (hear input through the track channel strip). On instrument tracks, MON stays visible and can be toggled separately from record arm. When record arm mirrors monitoring on or off for an instrument track, the MON lamp follows that change straight away.
 - **Bus** — the arranger header badge is display-only. Plain bus toggling and
   **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead.
-  In comp groups, child take headers hide **R**, **MON**, and the input
-  selector because the comp bus owns those controls for the whole group. The comp bus header
-  also draws a blue outline around the whole visible comp block, with a
-  small +/- square in the top-left corner to hide or show the child take
-  headers. On the arranger lane itself, the comp bus also paints faint,
+  In comp groups, child take headers hide **R**, **MON**, and both I/O
+  selectors because the comp bus owns those controls for the whole group.
+  The comp bus header also draws a blue outline around the whole visible
+  comp block, with a small +/- square in the top-left corner to hide or
+  show the child take headers. The mixer shows that same blue comp-group
+  frame and collapse toggle across the visible bus-plus-child strip run.
+  That folded/expanded state is saved with the reel.
+  On the arranger lane itself, the comp bus also paints faint,
   non-editable "quasi clips" wherever hidden or visible child takes contain
   clips, so you still get a read on where audio lives when the group is
   folded up. `Cmd-click` on a non-empty comp bus does not silently fail:

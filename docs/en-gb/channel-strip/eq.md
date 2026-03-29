@@ -45,7 +45,7 @@ open, it follows whichever track is currently selected, and clicking the same
 lit EQ header button again closes it. The popup now
 defaults to its tightest useful graph view with `+18 dB` pinned at the top
 and `-18 dB` at the floor, and those zoom buttons move the floor in `3 dB`
-steps while still letting you zoom all the way back out to `-72 dB`. The `FILTER` side now stacks `LO`
+steps while still letting you zoom all the way back out to `-90 dB`. The `FILTER` side now stacks `LO`
 over `HI` in one centred column so those knobs line up with the EQ rows, and
 the right-hand `EQ` panel now gives `IN` / `OUT` metering its own dedicated
 inset well on the far right, using the same segmented K-scale / clip ladder
@@ -57,9 +57,12 @@ strip, and double-clicking any of the three resets it straight back to zero.
 The graph grid is also a touch stronger now, so the popup reads faster without
 turning into graph paper.
 In K-system views, that popup ladder keeps both the red `FS` ceiling tick and
-the highlighted `0` reference line, and the graph's left dB scale now marks
-that same `0 VU` reference so the popup grid tells the same truth as the
-meter lane.
+the highlighted `0` reference line, and the graph follows the same displayed
+K-scale while still keeping absolute `0 dBFS` pinned to the top edge.
+The popup opens fully zoomed in at `-36 dBFS`, and each zoom step drops or
+raises the floor by `6 dB` while keeping `0 dBFS` pinned to the top edge.
+The right-side EQ labels still show the available boost and cut span around
+`0 dB`.
 The `HI` filter knob's radial lamp now runs in reverse, so a lower low-pass
 cutoff shows a fuller lit arc.
 The analyser itself now reads more like a proper RTA too: it compensates the

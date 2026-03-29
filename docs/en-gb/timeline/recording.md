@@ -38,10 +38,10 @@ Recorded clips stay anchored to the position where you punched in. Latency compe
 If the loop braces are active, right-click the loop button or open
 `Transport > Loop Record Mode` to choose what record means:
 
-- **Auto Punch** — TayPE treats the left brace as punch-in and the right
+- **Auto Punch Record** — TayPE treats the left brace as punch-in and the right
   brace as punch-out, with playback staying linear after the punch instead
   of wrapping back around.
-- **Loop** — transport wraps like playback while recording. Ordinary tracks
+- **Loop Record** — transport wraps like playback while recording. Ordinary tracks
   keep the last full lap, or the first partial lap if you stop before the
   first wrap. Comp passes keep each lap as comp history, with the newest lap
   enabled by default.

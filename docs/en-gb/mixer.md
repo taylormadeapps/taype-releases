@@ -11,6 +11,11 @@ to right. The master bus is always the rightmost strip, and when the visible
 rack fits inside the viewport it anchors flush to the far right as its own
 lane. Adjacent bus strips keep a single visible seam between them inside a bus
 run, while the wider bus gutters still mark the outside edges of the group.
+Comp buses add the same snap-blue group frame used in the arranger, with a
+small +/- square in the top-left corner so you can collapse or expand the
+visible child take strips without changing any routing. That folded state is
+saved with the reel, so reopening the session restores the same comp-group
+desk shape.
 Scroll horizontally with the mouse wheel or trackpad to navigate across your
 channels.
 

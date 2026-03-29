@@ -44,6 +44,8 @@ This file is created automatically on first launch with sensible defaults.
 
 Right-click the transport record button or use **Transport > Record Stop Mode** to
 choose what **Return** does during a take:
+that right-click menu still works even when the record button itself is
+currently disabled for take admission.
 
 - **Return** — commit the pass, stop transport, and go back to the pass start.
 - **Punch** — commit the pass and keep playback rolling.

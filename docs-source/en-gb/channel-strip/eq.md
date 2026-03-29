@@ -43,7 +43,7 @@ itself stays uncluttered. Once open, that shared window follows whichever
 track is currently selected. The popup now defaults to its tightest useful
 graph view with `+18 dB` pinned at the top and `-18 dB` at the floor, and
 those zoom buttons move the floor in `3 dB` steps while still letting you zoom
-all the way back out to `-72 dB`. The `FILTER` side now stacks `LO` over `HI`
+all the way back out to `-90 dB`. The `FILTER` side now stacks `LO` over `HI`
 in one centred
 column so those knobs line up with the EQ rows, and the right-hand `EQ` panel
 now gives `IN` / `OUT` metering its own dedicated inset well on the far
@@ -62,6 +62,10 @@ cutoff shows a fuller lit arc.
 The analyser itself now reads more like a proper RTA too: it compensates the
 window loss and draws log-band energy instead of skinny raw FFT bins, so
 broadband material no longer hugs the graph floor for no good reason.
+That popup graph keeps `0 dBFS` pinned to the top edge, opens fully zoomed in
+at `-36 dBFS`, and moves the floor in `6 dB` steps. In K-system modes it
+still shows the K-scale labels and highlighted `0` reference line on that
+same geometry.
 
 Those popup `FILTER` and `EQ` headers also keep the same preset badge
 language as the strip. Right-click either one to load or save a filter or
