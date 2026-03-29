@@ -242,3 +242,7 @@ When you load an instrument insert on an audio-routed track, TayPE automatically
 Hosted instruments receive TayPE's transport timing, so tempo-synced plugins lock to the DAW's BPM, playhead position, and time signature.
 
 If a project references an unavailable MIDI device, the strip shows **MIDI Device (offline)**. You can keep the stored route or switch to another input from the same menu.
+
+Enabled hardware MIDI devices are re-audited in the background, so if a saved
+port appears late or reconnects, TayPE reopens it without needing a full app
+restart.

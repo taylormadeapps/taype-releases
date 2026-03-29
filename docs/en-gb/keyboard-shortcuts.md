@@ -27,7 +27,8 @@ This file is created automatically on first launch with sensible defaults.
 | Unbound | Set 0 at Playhead for the selected Cut |
 | [ | Set the left loop brace to the tape head |
 | ] | Set the right loop brace to the tape head |
-| L | Set both loop braces to the selected clips and enable loop playback |
+| L | Toggle loop playback on or off |
+| Cmd+L | Set both loop braces to the selected clips and enable loop playback |
 
 ### Markers
 
@@ -142,7 +143,8 @@ is straightforward:
   "next_marker": ".",
   "set_left_loop_brace": "[",
   "set_right_loop_brace": "]",
-  "set_loop_from_selection": "l",
+  "toggle_loop": "l",
+  "set_loop_from_selection": "cmd+l",
   "go_to_marker_1": "1",
   "split_clip": "\\",
   "split_clip_at_loop_braces": "cmd+\\",

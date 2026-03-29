@@ -1,4 +1,4 @@
-# NAM Summing (Master Bus)
+# Summing (Master Bus)
 
 The master bus channel strip has a Summing section. Load a NAM profile of a real console's summing amplifier — SSL 4000G, Neve 8816, and more — and the digital sum passes through the captured hardware's character.
 
@@ -6,12 +6,24 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 
 ## Controls
 
-- **SUM** — enable or disable NAM summing (requires transport stopped)
-- **TRUE** — choose TayPE's True Summing path (only active when NAM AMX Acceleration is enabled)
+- **SUM** — the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in.
+- **Power** — bypass or re-enable the selected master summing flavour without changing mode.
+- **Trim** — in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty.
+- **P/R** — switches the master summing auto-gain detector between Peak and RMS.
+- **AG** — runs a 3-second one-shot calibration and writes the compensation into the master summing output gain.
+- **Tape speed** — in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`.
+- **Dubly** — in ToTaype mode, toggles the encode/decode HF stage in the same third stack slot used by the track preamp.
 - **Browse** — open the Profile Browser, filtered to summing packages. Download packages from TONE3000, then pick the exact local model if the package contains multiple variants.
 - In the TONE3000 tab, download happens from each package row's own button; the footer does not repeat that action.
 - **Drive** — how hard the summed audio pushes into the model
 - **Output gain** — compensates for level changes
+- **Mini meters** — with `SUM` out, the master strip shows both `IN:` and `OUT:` mini meters around the selected flavour just like the track preamp. With `SUM` in, it drops to post-sum `OUT:` only because the true-summing path has no single stereo input comparison worth faking.
+
+The body deliberately mirrors the track preamp layout so the mixer keeps one muscle memory: mode row at the top, meter cluster beneath, utility stack on the left, trim-or-drive on the left knob lane, and the right knob lane used only when a non-clean summing flavour needs output gain.
+
+With `SUM` on, TayPE keeps stereo feeders as independent left/right summing
+lanes before the final stereo mix. It does not collapse a stereo feeder to
+mono first.
 
 ## Profile Storage
 

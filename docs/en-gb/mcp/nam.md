@@ -65,6 +65,22 @@ Get the current NAM summing state on the master bus.
 
 **Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "tone_id": "abc123", "drive": 6.0, "output_gain": 0.0 }` (or `{ "enabled": false }` when off)
 
+### `get_true_summing`
+
+Get the current global `SUM` preference state.
+
+**Returns:** `{ "enabled": false }`
+
+### `set_true_summing`
+
+Enable or disable the global `SUM` preference. Requires transport stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `enabled` | boolean | yes | `true` enables the true-summing path, `false` disables it |
+
+**Returns:** `{ "status": "ok", "enabled": true }`
+
 ### `clear_mix_summing`
 
 Disable NAM summing, revert to digital sum. Requires transport stopped.

@@ -186,14 +186,18 @@ brace lines, so
 the lower ruler zoom band stays clear. When loop playback is on, the brace
 lines extend through the arranger; when loop playback is off, they stay up in
 the ruler. Press **[** to set the left brace at the tape head, **]** to set
-the right brace, and **L** to set both braces from the current clip selection
-and turn loop playback on. Those loop-brace edits stay live during playback,
+the right brace, **L** to toggle loop playback, and **Cmd+L** to frame the
+current selection into the loop range and turn loop playback on. Those
+loop-brace edits stay live during playback,
 but recording still blocks them. Looping is playback-only; when you record with
 braces active, TayPE uses the same range as a linear punch window instead of
 cycling the take. If a marker lands on the left brace time, TayPE
 flips the brace tab to the other side of the line so both stay readable. The
 marker/brace lane only uses the little tab strip at the top of the ruler, and
 the right-click scroll/zoom band starts down at the major ruler ticks. If you
+use **[** or **]** in a way that would cross the braces, TayPE carries the
+opposite brace along to preserve the current width, only shortening the range
+when timeline `0` blocks the full window from fitting. If you
 drag one brace past the other, TayPE keeps the committed loop braces in order.
 While you drag, the grabbed brace stays under the pointer and the far brace
 waits where it was; when you let go TayPE carries the opposite brace with it

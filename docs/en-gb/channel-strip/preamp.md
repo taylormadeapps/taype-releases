@@ -1,10 +1,10 @@
 # Preamp
 
-The preamp operates in one of three modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
+The preamp operates in four modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
 
-**Clean → Classic → NAM → Clean**
+**Clean → Classic → ToTaype → NAM → Clean**
 
-That button now shows only the current mode text. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
+That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
 ## Clean Gain (default)
 
@@ -23,8 +23,17 @@ re-enables the whole preamp section during playback without changing the
 selected mode, so Clean stays Clean and Classic or NAM keep their settings.
 
 - **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
-- **Safe mode** — engages oversampling for cleaner saturation at the cost of a bit more CPU.
+- **Oversampling** — always on for the Classic saturator.
 - **Auto-gain (AG)** — compensates for loudness changes from drive so you can compare tone instead of volume.
+
+## ToTaype
+
+The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps the same compact control language as Classic, but swaps the voicing over to tape behaviour.
+
+- **Drive** — pushes the input harder into the tape stage.
+- **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`.
+- **Dubly** — toggles the encode/decode flavour. Default: off.
+- **Output gain** — trims the level leaving the tape stage.
 
 ## NAM Profile
 
@@ -56,7 +65,7 @@ Downloading from TONE3000 pulls the whole package, not just one file. Once the p
 - **Drive** still applies before the NAM model itself, even when **NAM AMX Acceleration** is grouping multiple strips behind the scenes, so grouped NAM tracks react to drive the same way as standalone ones.
 - **Output Gain** is a level control after the model.
 - **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
-- **SAFE** is not shown in NAM mode.
+- **SAFE** is not shown in NAM mode because that control no longer exists on the strip.
 
 ### Profile Storage
 

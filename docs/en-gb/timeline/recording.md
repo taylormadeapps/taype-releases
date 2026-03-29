@@ -40,11 +40,14 @@ If the loop braces are active, right-click the loop button or open
 
 - **Auto Punch Record** — TayPE treats the left brace as punch-in and the right
   brace as punch-out, with playback staying linear after the punch instead
-  of wrapping back around.
+  of wrapping back around. When automation view is on, the same punch window
+  applies to automation capture.
 - **Loop Record** — transport wraps like playback while recording. Ordinary tracks
   keep the last full lap, or the first partial lap if you stop before the
   first wrap. Comp passes keep each lap as comp history, with the newest lap
-  enabled by default.
+  enabled by default. Automation capture wraps too and commits the latest
+  completed touched pass when one exists, otherwise the current touched
+  partial.
 
 Latency compensation still keeps committed takes reaching the visible timing
 window instead of ending short.
@@ -56,9 +59,11 @@ recording off, it backs up from the current tape head position. Playback just
 starts from the current tape head; with loop playback on, positions before the
 left brace run straight into the loop and positions already past the right
 brace restart from the left brace, with no count-in rewind. If the tape head
-is already at the selected Cut's visible
-timeline zero, TayPE keeps the head there, runs the count-in, and only then
-starts capture while still committing the take at that same zero point.
+is already on an anchor that cannot rewind any earlier, TayPE keeps the head
+there, runs the count-in, and only then starts capture while still committing
+the take at that same point. That applies at the selected Cut's visible
+timeline zero and at literal timeline `0`, even if the selected Cut zero has
+been moved later.
 During any pre-roll, TayPE can force the
 metronome on only where the lead-in would otherwise be silent.
 The metronome enabled state and the chosen pre-roll bars are app-global
