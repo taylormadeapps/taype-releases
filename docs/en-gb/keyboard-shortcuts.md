@@ -10,6 +10,9 @@ file and restart to apply your changes.
 ```
 
 This file is created automatically on first launch with sensible defaults.
+Older pre-launch bindings files that still have the loop shortcuts reversed
+are auto-migrated on load, so `L` toggles loop and `Cmd+L` loops the
+selection again.
 
 ## Default Shortcuts
 

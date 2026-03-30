@@ -121,14 +121,24 @@ wet-path **Duck** behaviour keyed from the incoming signal. **Send** is the
 default output mode and forces a 100% wet return. Flip to **Insert** to bring
 the stored **Mix** value back into play without rewriting it, using the same
 equal-power insert blend as Taype Rooms so the dry side does not vanish too
-early. Its feedback
-**Drive** now leans on the same soft-sine curve as TayPE's classic preamp, so
-the repeats bloom and fold with the same house saturation instead of a
-different shaper. **Tubeyness** still leans that knee itself instead of
-skewing the whole waveshape, and **Loss** now unfolds that wider diffuser
-progressively across the travel instead of waking the whole smear at once, so
-low settings stay more discrete and the top of the knob really does melt
-repeats into a wash.
+early. The input now starts with a full **ToTape** lane instead of a fake
+"tape vibe" toggle: a cycling **Tape Mode** pill for `7.5 / 15 / 30` ips,
+plus **Tape Drive** and **Tape Trim**, with a **Link** toggle to keep them
+inverse-tracked when you want the extra tape push without a dumb level jump.
+**Tape Trim** is attenuation only here, so the top of that knob is a clean
+`0 dB`, not makeup gain.
+That is the same oversampled ToTaype circuit used in the strip preamp, and in
+Ache-Delay it is always in circuit, so the repeats pick up that house tape
+colour before they ever hit the delay line. Inside the feedback loop the grime
+is split into **Diffusion** and **Loss**. **Diffusion** handles the serial
+allpass smear. **Loss** handles the repeat melt and the floor. That means you
+can keep the echoes discrete and only chew them up, or wash them out without
+dragging loads of noise with them. The hiss is envelope-followed now, so it
+breathes with the repeats instead of sitting there as a flat constant bed, and
+it gets band-shaped before the mix with a one-pole `1 kHz` low-pass and
+`300 Hz` high-pass so it reads like medium noise instead of white fizz. The
+loss stage now leans more on sag and blur than hard flattening, so the tail
+should ache and give way instead of sounding crushed.
 
 **T-Clipper** lives in that same **Taype Stock** lane as TayPE's house clipper.
 It is always an inline insert: no wet/dry, no send mode, just drive into
