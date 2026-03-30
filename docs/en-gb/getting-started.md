@@ -231,12 +231,15 @@ TayPE keeps playback clean and separate from structural changes.
 - **Option+drag** a clip to copy it to a new position
 - **\\** - split the selected clip, or every selected clip that crosses the tape head
 - **D** - duplicate the selected clip or clip set back-to-back
+- **B** - bounce the selected clips to one new stem track
+- **Cmd+B** - bounce the selected tracks to one new stem track and archive the sources
 - **Cmd+X / Cmd+C / Cmd+V** - cut, copy, paste the selected clip or clip set
 
-The **Edit** menu carries all split variants, including loop-brace splits and
-"split all" actions. The **Tracks** menu carries track duplication/deletion,
-and the **Transport** menu now carries **Loop Selected** plus the
-**Record Stop Mode** submenu.
+The **Edit** menu carries all split variants, including loop-brace splits,
+"split all" actions, and **Bounce Clips to Stem**. The **Tracks** menu carries
+track duplication/deletion plus **Bounce Tracks to Stem**, and the
+**Transport** menu now carries **Loop Selected** plus the **Record Stop Mode**
+submenu.
 
 Drag the edges of a clip to trim it. This is non-destructive - your
 original audio is never modified.

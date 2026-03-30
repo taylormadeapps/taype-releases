@@ -66,7 +66,9 @@ track duplication and deletion.
 | Option+\ | Split all clips at the tape head |
 | Cmd+Option+\ | Split all clips at both current loop braces |
 | D | Duplicate selected clips back-to-back as a group |
+| B | Bounce selected clips to one new stem track |
 | Cmd+D | Duplicate selected track without clips |
+| Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
 | Cmd+Option+D | Duplicate selected track with clips |
 | Cmd+X | Cut selected clips |
 | Cmd+C | Copy selected clips |
@@ -151,6 +153,8 @@ is straightforward:
   "split_all_clips_at_playhead": "alt+\\",
   "split_all_clips_at_loop_braces": "cmd+alt+\\",
   "duplicate_clip": "d",
+  "bounce_clips_to_stem": "b",
+  "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",
   "zoom_in_vertical": "=",

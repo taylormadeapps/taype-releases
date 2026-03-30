@@ -37,8 +37,8 @@ For recorded takes, **Source start** and **Source end** reflect your actual
 trim into the take, not TayPE's hidden record-alignment offset, so a fresh
 untouched recording still reads from zero.
 MIDI-backed clips also show a small joined-quaver glyph in the clip-name pill
-so you can spot them at a glance. Double-click that glyph to open the MIDI
-editor directly. When a clip-name pill is clipped, hovering it still reveals
+so you can spot them at a glance. Double-click that
+glyph to open the MIDI editor directly. When a clip-name pill is clipped, hovering it still reveals
 the full clip name even if popup help is turned off.
 Pitch-shifted clips show a small `#` marker in that same pill so you can see
 at a glance that the clip's rendered audio is no longer at source pitch.
@@ -65,6 +65,9 @@ double-click on the clip body still opens **Taype — Clip Properties**.
 This phase is melodic-first. The editor opens around the clip's used note
 range, gives you a proper piano keyboard down the left edge, and leaves
 dedicated drum editing for later.
+
+If the sidecar has no note events yet, TayPE still opens the editor on a blank
+middle-register view so you can add notes instead of getting a fake error.
 
 Click the grid to add a note. Drag an empty part of the grid to marquee-select
 notes, and press **Cmd/Ctrl+A** to select the lot even while the transport is
@@ -276,6 +279,24 @@ When more than one clip is in the clipboard or duplicate set, TayPE preserves
 the spacing between them. Paste uses the selected track as the anchor for the
 copied track layout; if no track is selected, each clip goes back to the track
 it was copied from.
+
+## Bounce to Stem
+
+Press **B** or choose **Edit -> Bounce Clips to Stem** to print the selected
+clips to one new stereo stem track in real time. TayPE plays the selected
+range, records the summed channel output to the new stem, then disables the
+source clips when the pass is done. Before the pass starts, TayPE asks you to
+confirm that those selected clips will be disabled and reminds you that bounce
+consolidates audio only — no MIDI stem is created.
+
+Press **Cmd+B** or choose **Tracks -> Bounce Tracks to Stem** to print the
+selected tracks to one new stereo stem track in real time. When the pass
+completes, TayPE archives those source tracks. That confirm also spells out
+that bounce consolidates audio only — no MIDI stem is created.
+
+If the selection spans more than one track, TayPE still makes one stem track
+containing the full summed result. One **Cmd+Z** removes the stem and puts
+the source clips back exactly as they were.
 
 ## Importing Files
 

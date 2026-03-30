@@ -84,6 +84,10 @@ through the normal bus strip. Calling `record_start` on one or more comp-child
 tracks instead collapses those child selections into a single print pass on
 the parent comp bus.
 
+Plain buses record their routed input sum too. `monitor` does not decide
+whether that routed audio is capturable; it only decides whether you also hear
+the bus through its own strip during the pass.
+
 **Returns:**
 ```json
 {

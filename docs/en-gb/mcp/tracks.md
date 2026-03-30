@@ -59,7 +59,7 @@ Update a track's properties. Only provided fields are changed.
 | `pan` | number | no | -1.0 to +1.0 |
 | `mute` | boolean | no | Mute state |
 | `solo` | boolean | no | Solo state |
-| `monitor` | boolean | no | Software monitoring (tracks: hear input through chain; buses: summing toggle) |
+| `monitor` | boolean | no | Software monitoring (tracks: hear live input through the strip; buses: audition routed bus audio through the strip) |
 | `is_bus` | boolean | no | Bus designation |
 | `comp_bus` | boolean | no | Comp-bus designation (implies `is_bus`) |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
