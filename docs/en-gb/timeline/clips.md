@@ -189,7 +189,7 @@ brace lines, so
 the lower ruler zoom band stays clear. When loop playback is on, the brace
 lines extend through the arranger; when loop playback is off, they stay up in
 the ruler. Press **[** to set the left brace at the tape head, **]** to set
-the right brace, **L** to toggle loop playback, and **Cmd+L** to frame the
+the right brace, **L** to frame the selection into the loop range, and **Cmd+L** to toggle loop playback
 current selection into the loop range and turn loop playback on. Those
 loop-brace edits stay live during playback,
 but recording still blocks them. Looping is playback-only; when you record with
