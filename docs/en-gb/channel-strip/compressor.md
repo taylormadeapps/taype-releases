@@ -25,7 +25,7 @@ The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.
 The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track, and click the same lit button again to close it.
 
 The window puts the incoming waveform and scrolling gain-reduction trace on the left under a **GAIN REDUCTION** title, the transfer curve in the middle under **CURVE**, and fader-style LED **IN** / **OUT** meters on the right after the curve for gain staging. That same meter lane now carries a slim dedicated **GR** bar beside the ladders, using the same top-down **0-24 dB** reduction scale as the strip. Those meter captions sit across the top of the lane, and the ladders use the same glowing segmented treatment, K-scale marks, and clip behaviour as the strip meter.
-That scrolling lane now keeps a fixed time window from the moment audio starts, so it no longer begins stretched out and then compresses as the history buffer fills.
+That scrolling lane now keeps the same full-history density from the moment audio starts, so it no longer begins stretched out and then compresses as the history buffer fills.
 The graph and transfer-curve grids are also a touch stronger now, so the popup
 stays readable at a glance without turning into graph paper.
 In K-system views, that popup ladder now keeps both the red `FS` ceiling tick
