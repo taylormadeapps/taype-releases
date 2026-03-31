@@ -62,7 +62,7 @@ sample rate that matches the reel.
 {
   "enabled": true,
   "printing": true,
-  "file": "/Users/you/Documents/Taype/Reels/My Reel.taype/Prints/My Reel-01.wav"
+  "file": "/Users/you/Documents/Taype/Prints/My Reel/My Reel-01.wav"
 }
 ```
 

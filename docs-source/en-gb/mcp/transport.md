@@ -31,7 +31,28 @@ Get current transport state.
   "playing": false,
   "position": 12.5,
   "duration": 180.0,
+  "printing": false,
   "zero_time_seconds": 8.0
+}
+```
+
+### `print_mix`
+
+Start or stop realtime Print Mix capture on the current reel.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `enabled` | bool | yes | `true` starts Print Mix, `false` stops and commits it |
+
+Starting requires a loaded reel, audible clips on the timeline, and a device
+sample rate that matches the reel.
+
+**Returns:**
+```json
+{
+  "enabled": true,
+  "printing": true,
+  "file": "/Users/you/Documents/Taype/Prints/My Reel/My Reel-01.wav"
 }
 ```
 
