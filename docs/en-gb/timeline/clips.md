@@ -46,12 +46,12 @@ the full clip name even if popup help is turned off.
 Pitch-shifted clips show a small `#` marker in that same pill so you can see
 at a glance that the clip's rendered audio is no longer at source pitch.
 
-During playback, TayPE keeps a small set of clip tweaks live: you can rename,
-recolour, disable, trim, and adjust clip gain or fade shape without stopping
-first. Recording is still stricter, so those edits wait until the take stops.
-Edits that have to create or remove clip pieces, move clips around, or print
-new audio still ask you to stop first through the same transport warning
-banner used elsewhere in the timeline.
+During playback, TayPE keeps the core clip workflow live: you can rename,
+recolour, disable, trim, move, split, delete, duplicate, copy, paste, and
+adjust clip gain or fade shape without stopping first. Recording is still
+stricter, so those edits wait until the take stops. Edits that have to print
+new audio or replace committed media still ask you to stop first through the
+same transport warning banner used elsewhere in the timeline.
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. If
 playback is already running, TayPE only does that live on clips that already
@@ -222,10 +222,11 @@ to preserve the current width, only shortening the range when the timeline
 start at `0` gets in the way. Marker tabs and rods
 still win pointer hits over the loop drag strip, so marker drag and marker
 menus keep working inside the loop range. Playback-safe clip tweaks such as
-disable, rename, recolour, gain, fades, and straightforward trims stay live
-during playback, but body drags, copy/paste, stretch, split, delete, pitch,
-and other heavier clip edits still flash the transport warning banner until
-you stop. Recording still blocks all of those clip edits.
+disable, rename, recolour, gain, fades, straightforward trims, body drags,
+copy/paste, duplicate, split, and delete stay live during playback. Stretch,
+pitch, bounce, join, and other render-backed clip edits still flash the
+transport warning banner until you stop. Recording still blocks all of those
+clip edits.
 
 ## Splitting
 
