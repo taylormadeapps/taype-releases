@@ -95,6 +95,15 @@ line has to clip.
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
 
+When TayPE opens a reel, it now brings up a dedicated loading window instead
+of leaving you with a beachball and guesswork. That window shows the reel
+name, the full path, a real progress bar, and the current restore step. If
+the reel opens but some plugins or media files could not be restored, TayPE
+follows up with a scrollable issues list so you can see what is missing,
+offline, or errored before you start playback. On startup and document-open
+loads, TayPE also brings that loading flow to the front instead of quietly
+finishing in the background.
+
 Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
