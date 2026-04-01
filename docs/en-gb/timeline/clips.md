@@ -23,6 +23,9 @@ double-click is part of the current multi-selection, **Taype — Clip Properties
 flips into a batch mode: clip colour and the disable toggle still edit the
 whole selection, the pitch fields stay live as **deltas** added onto each
 selected clip, and the per-clip name, source, and MIDI actions are greyed out.
+Clip Properties now opens without dropping the typing caret straight into the
+name field, so transport and marker shortcuts keep working until you click
+into a text box.
 If that fresh print rings longer than the previous one, TayPE lets the clip
 grow to keep the new tail instead of chopping it back to the old right edge.
 The dialog now groups file references into a collapsible **Media Paths**
@@ -50,8 +53,11 @@ Edits that have to create or remove clip pieces, move clips around, or print
 new audio still ask you to stop first through the same transport warning
 banner used elsewhere in the timeline.
 
-**Option+double-click** on an audio clip opens Melodyne for that clip. While
-Melodyne is open, TayPE lets you hear the live edit through the main transport.
+**Option+double-click** on an audio clip opens Melodyne for that clip. If
+playback is already running, TayPE only does that live on clips that already
+have committed derived audio to reopen from; otherwise it keeps the usual
+**Stop playback first** warning. While Melodyne is open, TayPE lets you hear
+the live edit through the main transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,
 closes that session, and reopens Melodyne on the newly selected clip. Ordinary
 focus changes do not close Melodyne, but Melodyne and the **Taype — MIDI Clip Editor** are
@@ -66,8 +72,9 @@ Melodyne** available in **Taype — Clip Properties**.
 ## Taype — MIDI Clip Editor
 
 **Cmd+double-click** a MIDI-origin clip to open the floating **Taype — MIDI
-Clip Editor**. Double-clicking the note glyph does the same thing. A regular
-double-click on the clip body still opens **Taype — Clip Properties**.
+Clip Editor**. Double-clicking the note glyph does the same thing, and that
+launch stays live during playback. A regular double-click on the clip body
+still opens **Taype — Clip Properties**.
 
 This phase is melodic-first. The editor opens around the clip's used note
 range, gives you a proper piano keyboard down the left edge, and leaves
