@@ -138,7 +138,9 @@ breathes with the repeats instead of sitting there as a flat constant bed, and
 it gets band-shaped before the mix with a one-pole `1 kHz` low-pass and
 `300 Hz` high-pass so it reads like medium noise instead of white fizz. The
 loss stage now leans more on sag and blur than hard flattening, so the tail
-should ache and give way instead of sounding crushed.
+should ache and give way instead of sounding crushed. Push **Loss** higher and
+Ache-Delay now darkens the whole feedback tail after that hiss blend, so the
+noise stays tucked into the repeats instead of fizzing on top of them.
 
 **T-Clipper** lives in that same **Taype Stock** lane as TayPE's house clipper.
 It is always an inline insert: no wet/dry, no send mode, just drive into
