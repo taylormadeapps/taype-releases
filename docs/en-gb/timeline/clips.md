@@ -43,6 +43,13 @@ the full clip name even if popup help is turned off.
 Pitch-shifted clips show a small `#` marker in that same pill so you can see
 at a glance that the clip's rendered audio is no longer at source pitch.
 
+During playback, TayPE keeps a small set of clip tweaks live: you can rename,
+recolour, disable, trim, and adjust clip gain or fade shape without stopping
+first. Recording is still stricter, so those edits wait until the take stops.
+Edits that have to create or remove clip pieces, move clips around, or print
+new audio still ask you to stop first through the same transport warning
+banner used elsewhere in the timeline.
+
 **Option+double-click** on an audio clip opens Melodyne for that clip. While
 Melodyne is open, TayPE lets you hear the live edit through the main transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,
@@ -207,10 +214,11 @@ waits where it was; when you let go TayPE carries the opposite brace with it
 to preserve the current width, only shortening the range when the timeline
 start at `0` gets in the way. Marker tabs and rods
 still win pointer hits over the loop drag strip, so marker drag and marker
-menus keep working inside the loop range. Clip edits, including body drags and
-copy/paste shortcuts, still flash the transport warning banner during
-playback or recording, but loop braces and marker edits stay live during
-playback and only block once recording is active.
+menus keep working inside the loop range. Playback-safe clip tweaks such as
+disable, rename, recolour, gain, fades, and straightforward trims stay live
+during playback, but body drags, copy/paste, stretch, split, delete, pitch,
+and other heavier clip edits still flash the transport warning banner until
+you stop. Recording still blocks all of those clip edits.
 
 ## Splitting
 
