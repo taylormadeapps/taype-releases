@@ -6,7 +6,7 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 
 ## Controls
 
-- **SUM** — the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in. In `ToTaype`, it also stays visible but disabled for now while that summing lane remains on the stereo post-sum path.
+- **SUM** — the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in. In `ToTaype`, it now switches the grouped per-feeder tape summing path the same way it does for the other non-clean summing flavours.
 - **Power** — bypass or re-enable the selected master summing flavour without changing mode.
 - **Trim** — in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty.
 - **P/R** — switches the master summing auto-gain detector between Peak and RMS.
