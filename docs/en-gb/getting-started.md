@@ -171,13 +171,14 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - The Audio tab keeps the hardware selector rows at the top through **Audio
   buffer size**. That top block includes output device, input device, master
   output pair, default stereo input, and default mono input. The device
-  status, resampling, NAM, and **Apply Audio Changes** controls sit
-  underneath.
+  status, Audio worker cores, resampling, NAM, and **Apply Audio Changes**
+  controls sit underneath.
 - Every control on this tab is staged. TayPE does not reopen the live audio
   device when you change a field; it waits for **Apply Audio Changes**.
 - Use **Apply Audio Changes** to commit output device, input device, master
   output pair, default stereo input, default mono input, sample rate, buffer
-  size, hardware error compensation, Resampling, and NAM changes together.
+  size, hardware error compensation, Audio worker cores, Resampling, and NAM
+  changes together.
 - The **Master output pair** list only offers normal stereo hardware pairs
   such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
@@ -221,6 +222,13 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   the driver report. Positive values mean "this box is actually later than
   Core Audio says." TayPE folds that trim into recording compensation and the
   default MIDI Out timing estimate.
+- **Audio worker cores** defaults to **Performance cores only**. On
+  heterogeneous Apple Silicon systems, that keeps the preamp/summing worker
+  pool and the plugin sandbox worker pool on a `performance_cores - 1`
+  budget so one performance core stays reserved for the main callback and
+  coordination work. Turn on **Allow efficiency cores** if you want those
+  worker pools widened to `total_cores - 1`. Applying that change refreshes
+  the in-process worker pool and restarts the plugin sandbox.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
   batches. New installs and fresh preferences leave this on by default.
@@ -306,15 +314,17 @@ The menu only shows language files that are actually present and valid in
 your TayPE language folder, so custom or in-progress language packs can be
 tested without changing the app build.
 
-The current alpha bundle ships with **English (UK)** plus draft
-**America English**, **Français**, **Deutsch**, **Español**, **Íslenska**,
-**Esperanto**, and **日本語** app packs. If you add or remove valid language
-CSV files in your TayPE language folder, that menu updates to match what is
-actually installed.
+Shipped app language packs are seeded into that folder automatically, and app
+updates can add newly bundled CSV packs there on next launch without any extra
+registration step. If you add or remove valid language CSV files in your TayPE
+language folder yourself, that menu updates to match what is actually
+installed.
 
 The startup splash and plugin-scan splash follow that same selected app
 language for their rotating gregisms, but those lines stay bundled inside
-the app rather than coming from the editable CSV language packs.
+the app rather than coming from the editable CSV language packs. When the
+normal startup splash is still on its timer, you can click it away once the
+main desk is ready behind it.
 
 ## Guild Picks
 
