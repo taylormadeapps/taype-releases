@@ -95,11 +95,18 @@ Get the current state of a track's insert slot.
   "uid": "12345678",
   "bypass": false,
   "enabled": true,
-  "latency_samples": 512
+  "latency_samples": 512,
+  "supports_mono_main": true,
+  "main_bus_channels": 1
 }
 ```
 
 **Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false }`
+
+`supports_mono_main` tells you whether that plug-in offers a mono main-bus
+layout TayPE can use on mono strips. `main_bus_channels` is the live main-bus
+width for the loaded slot: `1` for true mono, `2` for stereo, or `0` for the
+virtual `External MIDI Out` insert.
 
 ### `list_insert_presets`
 

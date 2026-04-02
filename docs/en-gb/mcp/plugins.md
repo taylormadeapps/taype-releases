@@ -105,6 +105,8 @@ Get the current state of a track's insert slot.
   "bypass": false,
   "enabled": true,
   "latency_samples": 512,
+  "supports_mono_main": true,
+  "main_bus_channels": 1,
   "supports_sidechain": true,
   "sidechain_source": "self",
   "is_midi_out": false,
@@ -121,6 +123,11 @@ Get the current state of a track's insert slot.
 `supports_sidechain` is `true` when the plug-in exposes an aux input bus that
 TayPE can feed. `sidechain_source` is `""` for none, `"self"` for self-ducking,
 or a non-bus track ID for an external key.
+
+`supports_mono_main` tells you whether the plug-in exposes a mono main-bus
+layout TayPE can use on mono strips. `main_bus_channels` is the live main-bus
+width for that slot: `1` for true mono, `2` for stereo, or `0` for the
+virtual `External MIDI Out` insert.
 
 ### `set_insert_sidechain`
 

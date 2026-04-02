@@ -14,6 +14,11 @@ until TayPE finishes bringing that insert online.
 The master bus follows the same rule: four slots visible by default, with the
 same **MORE** toggle to reveal the full eight-slot rack.
 
+On mono track strips, TayPE prefers a true mono main bus for inserts that
+support it. If a plug-in only exposes stereo, TayPE widens to dual-mono for
+that slot and collapses back to mono afterwards, so the strip still reaches
+pan as mono. Bus and master strips always stay stereo.
+
 The INSERTS power button works even before you load anything. If you switch the
 rack off first, the next plugin you load comes in bypassed until you turn the
 section back on.

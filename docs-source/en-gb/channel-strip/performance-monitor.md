@@ -24,8 +24,11 @@ The summary includes:
 
 - **Critical path (est)** — the longest active dependency chain in the current block
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
+- **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
 - **Host CPU** — total TayPE process usage across all logical cores (0–100%)
+- **NAM preamp** — a per-group list showing each batch's channel count plus whether it ran inline or on a worker
+- **Master true summing** — grouped Classic/ToTaype true-summing lanes, including channel count and inline/worker dispatch
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 
-The monitor stays on top of the main window and refreshes 10 times per second by default.
+The monitor stays on top of the main window, is resizable, and the track table expands to fill the available width. It refreshes 10 times per second by default.

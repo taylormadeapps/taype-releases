@@ -20,7 +20,7 @@ Knobs and the fader now cast a darker bottom-left contact shadow, so the control
 
 Preamp, filter, EQ, and compressor controls now sit inside a shared centred control band with matched top and bottom breathing room, instead of pinning the knobs to the panel edge.
 
-On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them.
+On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. Stereo strips also show the width mini knob on the far right; mono strips leave that lane empty instead of showing a dead width control.
 
 The post-fader meter now keeps a little breathing room from the strip wall instead of sitting hard against the right edge. Its held-peak text box now sits directly under the pan readout in the pan row, so the meter itself can run the same full height as the fader throw.
 

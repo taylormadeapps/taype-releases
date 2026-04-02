@@ -39,7 +39,7 @@ without dragging for days. The fader dB field drops the `dB` suffix while you
 edit it, Return commits, and Escape or clicking anywhere outside the actual
 edit box dismisses it without applying the typed value.
 
-On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing. The mono/stereo badge stays lit in both states so it reads as the current strip mode instead of a dead toggle: double circles mean stereo, a single circle means mono.
+On track strips, the pan row puts the mono/stereo and phase stack to the left of the dB readout, with the pan knob centred beside them. That left button stack now keeps a little more vertical space between the two buttons, and the pan/peak readouts on the right mirror that spacing. Stereo strips also show the width mini knob on the far right; mono strips leave that lane empty instead of showing a dead width control. The mono/stereo badge stays lit in both states so it reads as the current strip mode instead of a dead toggle: double circles mean stereo, a single circle means mono.
 
 The docked arranger strip and the mixer both carry a stronger blend of the
 track colour through the background, so the selected channel reads by family at
