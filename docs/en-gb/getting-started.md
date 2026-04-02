@@ -222,13 +222,13 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   the driver report. Positive values mean "this box is actually later than
   Core Audio says." TayPE folds that trim into recording compensation and the
   default MIDI Out timing estimate.
-- **Audio worker cores** defaults to **Performance cores only**. On
-  heterogeneous Apple Silicon systems, that keeps the preamp/summing worker
-  pool and the plugin sandbox worker pool on a `performance_cores - 1`
-  budget so one performance core stays reserved for the main callback and
-  coordination work. Turn on **Allow efficiency cores** if you want those
-  worker pools widened to `total_cores - 1`. Applying that change refreshes
-  the in-process worker pool and restarts the plugin sandbox.
+- **Audio worker cores** defaults to **Allow efficiency cores**. On
+  heterogeneous Apple Silicon systems, that lets TayPE use a `total_cores - 1`
+  worker pool while still reserving the `performance_cores - 1` heavy lanes
+  for the most expensive plugin tracks. Switch to **Performance cores only**
+  if you want the worker pools constrained entirely to the performance-core
+  budget. Applying that change refreshes the in-process worker pool and
+  restarts the plugin sandbox.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
   batches. New installs and fresh preferences leave this on by default.
