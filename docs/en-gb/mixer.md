@@ -2,9 +2,10 @@
 
 Press **M** to switch between the timeline and mixer views.
 
-Mixer view, the detached mixer window, and the shared narrow/full-width desk
-mode are app-global preferences. If you leave TayPE with the mixer floated or
-the narrow desk engaged, the next launch comes back that way.
+Mixer view, the detached mixer window, the shared narrow/full-width desk
+mode, and the shared section-collapse posture are app-global preferences. If
+you leave TayPE with the mixer floated, the narrow desk engaged, or shared
+sections folded, the next launch comes back that way.
 
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
@@ -52,7 +53,9 @@ Each strip shows (top to bottom):
 
 Each processing section can be expanded or collapsed with its header
 toggle. See the [Channel Strip](channel-strip/README.md) page for details on
-every section.
+every section. That shared lane posture is global to the app across the
+docked strip, inline mixer, and floated mixer, so if you leave a shared
+section folded TayPE brings every desk surface back that way on next launch.
 
 Right-click any section header to load a preset for just that section or use
 **Save Section As...** at the top of the menu to save into that section's

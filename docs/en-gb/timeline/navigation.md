@@ -16,6 +16,11 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 - **Cmd + mouse wheel** — zoom in/out, centred on the tape head
 - **Right-click drag up/down** — drag down to zoom in, up to zoom out
 
+Once you have manually changed horizontal zoom, TayPE remembers that zoom
+level for the next launch. Scroll position stays transient, so a relaunch
+comes back at the current Cut zero point instead of trying to restore the old
+pan offset.
+
 **Vertical zoom** (track height):
 - **Option + mouse wheel** — zoom in/out, anchored to the selected track
 - **=** / **-** — zoom in / out from keyboard

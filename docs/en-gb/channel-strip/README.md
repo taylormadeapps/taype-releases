@@ -74,7 +74,10 @@ whole visible mixer rack between that narrow desk and the full-width strip
 view, and in timeline view it does the same for the docked channel strip,
 opening that strip if it was hidden. A floated mixer stays in step with that
 toggle too, but it no longer steals the arranger width control away from the
-docked strip underneath it.
+docked strip underneath it. TayPE also remembers the docked strip's explicit
+show/hide choice, width mode, and the shared section-collapse posture across
+launches; a brand-new untitled startup reel only force-opens the strip until
+you have explicitly chosen that setting once.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band
@@ -158,6 +161,9 @@ corrected interface round-trip from Audio prefs.
 Those grouped mini meters now carry the same held peak hairline as the main
 post-fader meter, so sharp transients stay visible without the held line doing
 that daft little walk back down the scale.
+The shared section collapse posture now spans the docked strip, the inline
+mixer, and the floated mixer, and it restores from app prefs too, so a folded
+desk stays folded after relaunch.
 The live peak tick now falls with its own ballistics, while the held peak
 holds for three seconds, refreshes on equal or higher hits, and clears when
 you clear the meter lane.
