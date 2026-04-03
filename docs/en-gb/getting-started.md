@@ -110,9 +110,14 @@ that one step.
 
 Fresh reels open with one armed audio track and the transport set to **90 BPM**.
 
-Working state is saved automatically while the transport is stopped. There is
-no separate Save command to manage. Press **Cmd+S** when you want to create a
-named checkpoint: a deliberate line in the sand you can come back to later.
+Working state is saved automatically about every 1 minute while the transport
+is stopped by default. You can change that interval in **Preferences > General**
+to anything from **15 seconds** up to **Hourly**. There is no separate Save
+command to manage. Press **Cmd+S** when you want to create a named checkpoint:
+a deliberate line in the sand you can come back to later.
+When that background snapshot finishes, TayPE briefly says **Reel Snapshot Saved**
+so you get reassurance after the write lands rather than a hanging save banner
+while the queue is busy.
 
 When you want a fresh start without dragging the old history behind you, use
 **Thin Reel...** in the Reel Browser. TayPE asks where to put the thinned
