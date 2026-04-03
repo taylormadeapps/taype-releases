@@ -71,6 +71,10 @@ The insert picker is split into **Taype Stock**, **Effects**, and
 **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
 **Taype Comp**, and the built-in **External MIDI Out**.
 
+Those Taype Stock VST3 plug-ins are limited to running inside Taype. If you
+load one in another host it opens with a warning and stays dry/pass-through
+instead of processing audio.
+
 Only insert **1** can host an instrument or **External MIDI Out**.
 Slots **2-8** stay audio-effects only, but audio-FX extensions like
 **Taype Rooms** can load in any slot.
@@ -182,35 +186,53 @@ at the same model pool.
 
 **Taype EQ** is the strip EQ window as a standalone insert, then adds a
 dynamic row for the three musical bands. The response display still shows the
-static EQ curve, but a red line marks the shared threshold. Drag that line in
-the graph or set the threshold directly. Each band then gets its own
+static EQ curve, but a green line marks the shared threshold and the dynamic
+overlay shows those same three EQ bands being pushed or pulled around their
+current gain settings rather than inventing a separate fourth curve. Drag that
+line in the graph or set the threshold directly. Each band then gets its own
 **Range** and **FET / VCA / Opto** detector mode. Negative range pushes peaks
 down above threshold. Positive range lifts detail back up when that band drops
-under threshold.
+under threshold. Range still works when the static EQ band is at `0 dB`, so
+the dynamic section can impose its own band-shaped push or pull from flat. The
+live orange overlay clears back to the static view when playback stops instead
+of holding the last active reduction shape. Its
+window is now fixed-aspect resizable, scaling the existing
+EQ popup up or down without changing the layout, including down below the
+default stock size.
 
 **Taype Comp** is the strip compressor as its own insert. The editor keeps the
 live waveform history, the transfer curve, and the same core controls:
 **Threshold**, **Ratio**, **Attack**, **Release**, **Knee**, **Makeup**,
 detector mode, **Log Release**, and **Sidechain HP**. Readouts on the right
 show current detector level and gain reduction so you can see what the
-compressor is actually hearing and taking off.
+compressor is actually hearing and taking off, with 3 dB tick spacing on the
+gain-reduction scales for finer readout. Its window is now fixed-aspect
+resizable, scaling the existing compressor popup up or down without changing
+the layout, including down below the default stock size.
 
 ## Plug-in Window
 
 Click a loaded slot to open that plug-in's window. TayPE adds a slim toolbar
-across the top with **Bypass**, **Disable**, a `Preset:` label, and a preset
-menu on the left, plus a `Sidechain:` label and selector on the right.
+across the top with **Bypass**, **Disable**, `One`, a `Preset:` label, and a
+preset menu on the left, plus a `Sidechain:` label and selector on the right.
 That **Disable** toggle uses the same stop-to-edit enable/disable path as the
 insert slot itself and keeps the plug-in window open instead of unloading the
 plug-in out from under it.
+When `One` is enabled, opening another plug-in reuses the current plug-in
+window so only one hosted editor stays visible at a time.
 If no plug-in preset is currently active, that selector reads `None`.
 The plug-in window now opens at the editor's preferred size and treats sizing
 as a two-way street: if you resize a resizable plug-in window, TayPE resizes
 the hosted editor with it, and if the editor asks for a new size, the wrapper
 follows. Fixed-size editors stay at their intended size instead of stretching.
+Like TayPE's own popup windows, hosted plug-in windows stay above TayPE while
+TayPE or the hosted editor is frontmost, but they yield properly when you
+switch to another app.
 The window still follows the plug-in's own resize rules, so it can't be dragged
 smaller than the plug-in's minimum size, larger than its maximum, or into a
-cropped shape that breaks the editor's aspect.
+cropped shape that breaks the editor's aspect. TayPE's own resizable stock
+plug-ins can now shrink to roughly two-thirds of their default open size within
+those declared limits.
 
 Plug-in presets live in `Documents/Taype/Presets/FX` for effects and
 `Documents/Taype/Presets/Instruments` for instruments. TayPE keeps each

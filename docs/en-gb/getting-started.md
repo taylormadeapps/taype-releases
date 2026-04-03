@@ -37,10 +37,10 @@ The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
 The right-hand action stack keeps **Open Reel Browser** as the standout branch,
-with **New Reel** parked directly underneath it as the fast named-session path,
-then **Audio Preferences** and **Plugin Manager** as the supporting secondary
-buttons. The supporting copy on the left starts level with the top button in
-each action lane, so the card still scans as aligned rows. Under the
+with **Audio Preferences** and **Plugin Manager** as the supporting secondary
+buttons beneath the main reel path. The supporting copy on the left starts
+level with the top button in each action lane, so the card still scans as
+aligned rows. Under the
 performance advisor note, a left-aligned brass **Full Plugin Automation in development**
 line now sits between the same goat glyphs used by the Founder badge.
 
@@ -49,10 +49,6 @@ startup reel stays loaded and shows as the current session while you decide
 what to do next. If you branch into a different reel without touching it,
 TayPE still moves that blank startup reel into **Scrap Pile** instead of
 clogging the library with dead air.
-
-If you hit **New Reel** from the welcome card, TayPE skips the browser and
-opens the native save dialog directly so you can name the new bundle in one
-move.
 
 The paired welcome logos sit in matched square tiles, and the left TayPE mark
 now fills its tile directly instead of sitting inside a second inner badge.

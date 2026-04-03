@@ -10,6 +10,9 @@ Return the scanned VST3 plugin catalogue plus TayPE's bundled
 **Taype Stock** entries such as **Taype Rooms**, **Ache-Delay**,
 **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**.
 
+Those Taype Stock VST3 entries are Taype-only: outside Taype they warn on
+open and stay dry/pass-through instead of processing audio.
+
 **Returns:**
 ```json
 {
