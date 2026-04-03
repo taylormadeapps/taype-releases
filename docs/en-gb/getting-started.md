@@ -20,11 +20,14 @@ inserts. One channel strip per track, laid out left to right.
 
 ## Opening and Creating Reels
 
-On a normal launch, TayPE opens a fresh reel behind the welcome card. If you
-are unlicensed, the license screen chains in as soon as you leave that welcome
-step. If you open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips
-the welcome card, opens that session first, and then chains straight into the
-license screen.
+On a normal launch, TayPE opens a fresh reel behind the startup splash and then
+brings in the welcome card as soon as that splash dismisses. If you click the
+splash away manually after the desk is ready, the welcome card still chains in
+straight afterwards instead of appearing underneath it. If you are unlicensed,
+the license screen chains in as soon as you leave that welcome step. If you
+open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips the welcome
+card, opens that session first, and then chains straight into the license
+screen.
 
 Fresh launch-created reels come up with Track 1 selected and the docked
 channel strip already open, so TayPE lands in a ready-to-record state instead
@@ -331,7 +334,8 @@ The startup splash and plugin-scan splash follow that same selected app
 language for their rotating gregisms, but those lines stay bundled inside
 the app rather than coming from the editable CSV language packs. When the
 normal startup splash is still on its timer, you can click it away once the
-main desk is ready behind it.
+main desk is ready behind it, and the welcome card then appears on that same
+handoff instead of peeking out underneath.
 
 ## Guild Picks
 

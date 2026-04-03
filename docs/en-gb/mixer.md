@@ -29,7 +29,9 @@ Each strip shows (top to bottom):
 - **Track name** - double-click to rename
 - **Input selector** - which audio interface input the track records from
 - **Control buttons** - M (mute), S (solo), R (record arm), MON (software
-  monitoring), A (archive), B (bus)
+  monitoring), A (archive), B (bus). The master strip swaps the normal solo
+  toggle for a yellow `S`-with-`X` **Cancel Solo** button that clears every
+  current solo state in one click and stays disabled when nothing is soloed.
 - **Route-aware solo** - solo follows the live signal path: soloing a bus
   keeps its active upstream feeders, and soloing a track or bus keeps its
   active downstream bus/send path alive. `MON`-off bus ingress and dead sends
@@ -149,11 +151,13 @@ visible range, and **Cmd+A** selects every visible strip. Arranger track
 headers share the same **Cmd-click** / **Shift-click** multiselect behaviour,
 but arranger **Cmd+A** still belongs to clip selection. When more than one
 track is selected, the arranger strip stays pinned to the first selected
-track. Grouped mixer edits apply to the visible selected set only, and grouped
-fader / pan / width drags preserve each strip's relative offset instead of
-snapping everything to one flat line. If a linked control hits its min/max
-rail, it stays pinned there until the drag comes back far enough for the
-original offset to fit again. Double-click the name pill to edit inline (only
+track, and opening or updating the mixer scrolls to the first selected visible
+strip in mixer order so the active group stays in view. Grouped mixer edits
+apply to the visible selected set only, and grouped fader / pan / width drags
+preserve each strip's relative offset instead of snapping everything to one
+flat line. If a linked control hits its min/max rail, it stays pinned there
+until the drag comes back far enough for the original offset to fit again.
+Double-click the name pill to edit inline (only
 when transport is stopped). During playback, live fader, pan, width, and
 preamp level moves glide over a short internal ramp so what you hear and print
 stays clean instead of stepping at block edges. Return commits; Escape or
