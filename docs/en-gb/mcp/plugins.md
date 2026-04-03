@@ -7,7 +7,8 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 ### `list_plugins`
 
 Return the scanned VST3 plugin catalogue plus TayPE's bundled
-**Taype Stock** entries such as **Taype Rooms** and **Ache-Delay**.
+**Taype Stock** entries such as **Taype Rooms**, **Ache-Delay**,
+**T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**.
 
 **Returns:**
 ```json
@@ -60,6 +61,9 @@ stopped.
 
 **Errors:**
 - `Only the first insert slot can host instruments or MIDI Out`
+
+Bundled stock names from `list_plugins` can be loaded directly through
+`plugin_id`, including **Taype Drive**, **Taype EQ**, and **Taype Comp**.
 
 ### `remove_insert`
 

@@ -68,7 +68,8 @@ If **Menu Path** is blank, the plugin sits directly inside the top-level
 
 The insert picker is split into **Taype Stock**, **Effects**, and
 **Instruments**. **Taype Stock** holds TayPE-shipped inserts such as
-**Taype Rooms**, **Ache-Delay**, and the built-in **External MIDI Out**.
+**Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
+**Taype Comp**, and the built-in **External MIDI Out**.
 
 Only insert **1** can host an instrument or **External MIDI Out**.
 Slots **2-8** stay audio-effects only, but audio-FX extensions like
@@ -164,6 +165,35 @@ leave the lows or highs out of the clipping path so you can clip the
 mid-band harder without flattening the whole picture. **Auto-Gain** trims
 the output back by the same amount of drive after the full signal is
 recombined, so you can judge tone instead of loudness.
+
+**Taype Drive** brings the strip preamp out as a standalone insert. It keeps
+the same four modes: **Clean**, **Builtin**, **Tape**, and **NAM**. The editor
+stays compact and fixed-size: mode and measurement at the top, shared NAM
+profile browsing in the middle, then **Drive**, **Output**, **Tape Speed**,
+**Dubly**, and **Measure**. **Measure** runs the same output-match idea as the
+strip preamp, so the plug-in can listen to the before/after swing and write a
+matching output trim back into the insert.
+
+Drive's **NAM** browser points at the same preamp profile folder and the same
+TONE3000 settings file as the channel strip. If you already configured
+TONE3000 in TayPE, the plug-in picks that up immediately. Downloads land in
+the same shared NAM library, so the strip and the plug-in are always looking
+at the same model pool.
+
+**Taype EQ** is the strip EQ window as a standalone insert, then adds a
+dynamic row for the three musical bands. The response display still shows the
+static EQ curve, but a red line marks the shared threshold. Drag that line in
+the graph or set the threshold directly. Each band then gets its own
+**Range** and **FET / VCA / Opto** detector mode. Negative range pushes peaks
+down above threshold. Positive range lifts detail back up when that band drops
+under threshold.
+
+**Taype Comp** is the strip compressor as its own insert. The editor keeps the
+live waveform history, the transfer curve, and the same core controls:
+**Threshold**, **Ratio**, **Attack**, **Release**, **Knee**, **Makeup**,
+detector mode, **Log Release**, and **Sidechain HP**. Readouts on the right
+show current detector level and gain reduction so you can see what the
+compressor is actually hearing and taking off.
 
 ## Plug-in Window
 
