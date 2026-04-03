@@ -110,6 +110,7 @@ there is no separate user-facing Save command.
 | T | Toggle ruler between time and beats |
 | K | Toggle high contrast theme |
 | Cmd+K | Open the virtual keyboard popup |
+| § | Open the Performance Monitor window |
 
 ### Zoom
 
@@ -167,7 +168,8 @@ is straightforward:
   "toggle_mixer_width": "w",
   "toggle_focus": "f",
   "toggle_automation_view": "a",
-  "toggle_archive_view": "x"
+  "toggle_archive_view": "x",
+  "show_performance_monitor": "§"
 }
 ```
 
@@ -197,6 +199,7 @@ Examples: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
 - Arrows: `up`, `down`, `left`, `right`
 - Navigation: `home`, `end`, `pageup`, `pagedown`
 - Function keys: `f1` through `f12`
+- Single characters such as `a`, `7`, `\\`, or `§`
 
 ### Platform Shortcuts
 
