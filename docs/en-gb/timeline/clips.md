@@ -336,6 +336,9 @@ printing, the clip stays in place with a small centred spinner so you can see
 the rerender is still in flight without hearing anything from the offline print,
 even if that instrument track is still monitor-armed, and the rerender always
 prints the current MIDI sidecar instead of silently reusing stale note data.
+When the instrument supports offline processing, TayPE asks it to use that
+mode for the hidden rerender rather than pretending the plug-in is still in
+live playback.
 Recorded instrument takes store speaker-time as their MIDI truth too, so a
 later rerender lands where you originally heard the performance rather than
 quietly moving the furniture. That MIDI truth carries the same post-tap
