@@ -47,6 +47,9 @@ The `SENDS` header carries a `POST` / `PRE` button for the whole track. `PRE`
 moves every send to the pre-fader tap, and the thin ring around each send knob
 is a simple RMS hint of what is feeding that send.
 
+Section headers collapse or reopen on **double-click** across the title band,
+while the little chevron on the left stays a single-click toggle.
+
 In the K-system scales, the printed ladder keeps the red `FS` tick at the true ceiling, adds `+3 dB` marks above the highlighted `0 VU` reference up toward full scale, then steps down in `-3 dB` marks to `-21` and `6 dB` marks below.
 
 ## Strip Header

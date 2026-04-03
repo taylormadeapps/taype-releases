@@ -119,7 +119,8 @@ defaults to `LESS`, and is remembered between launches.
 Each loaded insert row also carries its own small power button: click it to
 bypass that slot, or **Option-click** to disable / re-enable it. That disable
 toggle also clears the slot's own bypass latch, so it wakes back up live when
-you turn it on again. Loaded rows
+you turn it on again. Plain clicks on a disabled row stay inert, so re-enabling
+still lives on the power button or the row context menu. Loaded rows
 can be dragged to move inside the rack or, in mixer view, between tracks; drop
 on a row to replace it, drop between rows to insert there, and hold **Cmd**
 while dragging if you want a copy instead of a move.
@@ -129,6 +130,8 @@ inserting between them, and keeps the source row ringed red while it is being
 lifted. A normal move uses a solid red border; **Cmd**-drag keeps the broken
 red version so copy-vs-move stays obvious. If the top target slot is empty,
 dropping in the gap above the next insert now just fills that empty top slot.
+Section headers now collapse or reopen on **double-click** across the title
+band, while the little chevron on the left stays a single-click toggle.
 If the transport is already rolling, clicking an empty insert slot now stops
 right at the yellow warning bar instead of opening the picker and only
 complaining after you choose something.

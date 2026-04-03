@@ -11,6 +11,12 @@ the popup closes so nested submenu picks stay dependable.
 When you load or re-enable a plugin, the target slot shows a small spinner
 until TayPE finishes bringing that insert online.
 
+Each loaded row now carries its own small power button on the right. Click it
+to bypass just that slot, or **Option-click** to disable / re-enable the
+plug-in through the normal stopped-transport path. Plain clicks on a disabled
+row stay inert; use that power button or the row context menu to bring the
+plug-in back online.
+
 The master bus follows the same rule: four slots visible by default, with the
 same **MORE** toggle to reveal the full eight-slot rack.
 
