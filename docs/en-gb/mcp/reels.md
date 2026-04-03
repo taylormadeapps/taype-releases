@@ -136,6 +136,10 @@ List checkpoints for the current reel.
 List reel history. TayPE returns a compatibility `history` view for the
 current branch, a branch-aware `history_tree` for the visible commit tree,
 and a chronological `history_graph` for the Reel Browser's vertical graph view.
+With `include_timed_saves: true`, TayPE walks the reel's full local commit
+history instead of stopping at a small fixed history window.
+Automatic `Session end` / pre-pack checkpoints ride with the autosave lane in
+this history view instead of appearing as manual checkpoint anchors.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|

@@ -129,14 +129,16 @@ In the Reel Browser history, the default filtered view is tag-driven: current
 state, named checkpoints, and branch-origin tags. If you branch from an
 autosave, TayPE tags that source commit so it stays visible as the branch node.
 Plain autosave heads stay hidden until you turn on **Show Autosaves** for the
-full save-by-save trail. The history view is a continuous vertical git-style
+full save-by-save trail without chopping older commits off long-lived reels, and automatic
+**Session end** checkpoints ride with that autosave lane instead of cluttering
+the default checkpoint anchors. The history view is a continuous vertical git-style
 graph: earliest at the top, newest at the bottom, parent branches staying
 leftmost when you come back to them, the current state highlighted wherever it
 sits, and side
-branches offset to the right with their own connector colours. Autosaves on the same branch
+branches offset to the right with their own connector colours and red branch badges. Autosaves on the same branch
 stay in one lane instead of cascading deeper with every commit, and each row
 puts its timestamp before the secondary detail text so that context stays in
-reading order. Use **Focus**
+reading order without the history card clipping long metadata into mush. Use **Focus**
 in the history header to snap the browser back to the current state after
 exploring older commits and side branches.
 
