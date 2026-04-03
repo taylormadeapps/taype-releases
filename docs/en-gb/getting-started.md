@@ -179,6 +179,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
+- On a fresh install, or after upgrading from an older build that never saved
+  MIDI input choices, TayPE enables the MIDI inputs it can currently see by
+  default so live instrument monitoring works straight away. Use Preferences if
+  you want to narrow that list later.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
   as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
