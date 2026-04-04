@@ -119,9 +119,14 @@ is stopped by default. You can change that interval in **Preferences > General**
 to anything from **15 seconds** up to **Hourly**. There is no separate Save
 command to manage. Press **Cmd+S** when you want to create a named checkpoint:
 a deliberate line in the sand you can come back to later.
+Stopping transport out of record mode also forces a snapshot once the
+committed take or automation pass lands. Punching out while playback keeps
+rolling does not.
 When that background snapshot finishes, TayPE briefly says **Reel Snapshot Saved**
 so you get reassurance after the write lands rather than a hanging save banner
 while the queue is busy.
+Switching or opening reels does not flash that banner just because TayPE saved
+the reel you were leaving behind.
 
 When you want a fresh start without dragging the old history behind you, use
 **Thin Reel...** in the Reel Browser. TayPE asks where to put the thinned
@@ -130,16 +135,20 @@ source reel untouched. If you are short on storage, delete the old reel in
 Finder after you have checked the thinned one.
 
 In the Reel Browser history, the default filtered view is tag-driven: current
-state, named checkpoints, and branch-origin tags. If you branch from an
+state, named checkpoints, and branch-origin tags. If the current commit is a
+manual checkpoint, the current card carries that checkpoint identity instead of
+hiding it behind a generic current-state row. If you branch from an
 autosave, TayPE tags that source commit so it stays visible as the branch node.
 Plain autosave heads stay hidden until you turn on **Show Autosaves** for the
-full save-by-save trail without chopping older commits off long-lived reels, and automatic
-**Session end** checkpoints ride with that autosave lane instead of cluttering
+full save-by-save trail without chopping older commits off long-lived reels, but forced
+post-record snapshots stay visible with their own red **RECORD** badge even in the filtered view,
+and automatic **Session end** checkpoints ride with that autosave lane instead of cluttering
 the default checkpoint anchors. The history view is a continuous vertical git-style
 graph: earliest at the top, newest at the bottom, parent branches staying
 leftmost when you come back to them, the current state highlighted wherever it
 sits, and side
-branches offset to the right with their own connector colours and red branch badges. Autosaves on the same branch
+branches offset to the right with their own connector colours, red branch badges, green checkpoint badges,
+and blue autosave badges. Autosaves on the same branch
 stay in one lane instead of cascading deeper with every commit, and each row
 puts its timestamp before the secondary detail text so that context stays in
 reading order without the history card clipping long metadata into mush. Use **Focus**

@@ -109,8 +109,9 @@ transport and recording commands are rejected until you commit or abort.
 
 If the connection drops mid-transaction, TayPE automatically aborts and
 rolls back to the pre-transaction state. The user can also manually
-release the lock from the Edit menu. A successful `tx_commit` also persists
-the resulting reel working state immediately if it changed.
+release the lock from the Edit menu. A successful `tx_commit` releases the
+lock and lets ordinary save boundaries resume; it does not force an immediate
+disk write.
 
 ### Feedback and Problem Reporting
 

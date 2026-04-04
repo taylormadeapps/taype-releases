@@ -143,13 +143,13 @@ this history view instead of appearing as manual checkpoint anchors.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
-| `include_timed_saves` | bool | no | When true, include autosave/timed-save commits |
+| `include_timed_saves` | bool | no | When true, include plain autosave/timed-save commits; `recording_save` entries are always returned |
 
 **Returns:** `{ "history": [...], "history_tree": [...], "history_graph": [{"lane":0,"parent_lane":-1,"parent_revision":"","current_lane":true}], "include_timed_saves": false, "current_branch": "main" }`
 
-With `include_timed_saves: false`, TayPE keeps the current state and tagged
-history anchors only. Plain autosaves stay hidden unless they were tagged as a
-branch origin when you restored from them.
+With `include_timed_saves: false`, TayPE keeps the current state, tagged
+history anchors, and post-record `recording_save` nodes. Plain autosaves stay
+hidden unless they were tagged as a branch origin when you restored from them.
 
 ### `revert_to_checkpoint`
 

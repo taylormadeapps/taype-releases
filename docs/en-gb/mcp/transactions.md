@@ -29,8 +29,8 @@ or by right-clicking the red **MCP** indicator beside the transport DSP meter.
 
 ### `tx_commit`
 
-Commit the transaction. Pushes the undo snapshot and immediately persists the
-reel working state if it changed.
+Commit the transaction. Pushes the undo snapshot, releases the MCP lock, and
+lets the normal save boundaries resume.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -39,7 +39,8 @@ reel working state if it changed.
 ### `tx_abort`
 
 Abort the transaction. Rolls back to pre-transaction state, rebuilds the
-engine from that restored model, and discards any deferred autosave.
+engine from that restored model, and resumes the normal stopped-state save
+schedule.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
