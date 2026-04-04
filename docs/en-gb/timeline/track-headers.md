@@ -13,7 +13,7 @@ the arranger does not change which track is selected.
 - **Track name** — double-click to rename (only when stopped). Press Return to commit, or Escape / click away to cancel. With popup help enabled, hovering shows the full title. If popup help is off, TayPE still reveals the full name when the title pill is actually clipped.
 - **Tags** — opens the tag cloud popup for this track
 - **R** — record arm (red circle when armed). The channel strip shows the same armed state for the selected track.
-- **MON** — software monitoring (hear input through the track channel strip). On instrument tracks, MON stays visible and can be toggled separately from record arm. When record arm mirrors monitoring on or off for an instrument track, the MON lamp follows that change straight away.
+- **MON** — software monitoring (hear input through the track channel strip). In the arranger header this now uses the same button shell as mute/solo, but keeps the speaker glyph instead of a letter. On instrument tracks, MON stays visible and can be toggled separately from record arm. When record arm mirrors monitoring on or off for an instrument track, the MON lamp follows that change straight away.
 - **Bus** — the arranger header badge is display-only. Plain bus toggling and
   **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead.
   In comp groups, child take headers hide **R**, **MON**, and both I/O
