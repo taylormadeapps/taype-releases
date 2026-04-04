@@ -28,8 +28,9 @@ the Founder badge.
 If you open the **Reel Browser** straight from that welcome card, the fresh
 startup reel stays loaded and shows as the current session while you decide
 what to do next. If you branch into a different reel without touching it,
-TayPE still moves that blank startup reel into **Scrap Pile** instead of
-clogging the library with dead air.
+TayPE just deletes that blank startup reel outright instead of clogging the
+library with dead air, and it stays out of **Recents** until you actually do
+some real work in it.
 
 The paired welcome logos sit in matched square tiles, and the tape mark now
 gets its own square badge with extra background instead of being stretched to
