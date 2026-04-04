@@ -97,6 +97,8 @@ at the heard speaker-time, not the raw queue-arrival time. The instrument's
 own timing is already in the captured source, and TayPE carries forward only
 the extra monitor-alignment delay applied after that tap, so the grid and any
 later re-render stay where you actually heard the note land.
+Armed tracks stay armed while you switch Cuts inside the same reel. Loading a
+different reel still clears that arm state.
 
 **Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 
