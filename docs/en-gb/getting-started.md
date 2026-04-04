@@ -197,9 +197,14 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
   as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
-  Audio tab. Other staged changes still apply safely against the live fallback,
-  and TayPE automatically restores the preferred device as soon as the
-  hardware returns.
+  Audio tab. If there is no live fallback device, the Audio tab shows
+  `{device_name} (missing)` instead. Other staged changes still apply safely
+  against the live fallback, explicitly choosing that live fallback now enables
+  **Apply Audio Changes**, and TayPE automatically restores the preferred
+  device as soon as the hardware returns.
+- On the first playback attempt in that missing-device state, TayPE asks
+  whether to use the live fallback for this app session or stay on
+  **No Audio** until you choose hardware manually.
 - Tracks whose input selector is **Default** follow the mono/stereo default
   input you pick here as soon as you apply the change. TayPE also restores the
   matching input channels on relaunch, so an aggregate-device default keeps

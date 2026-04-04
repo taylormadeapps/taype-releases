@@ -118,6 +118,14 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   in red and tells you to engage Resampling.
 - If **Resampling** is **on**, you can change the interface sample rate in the
   Audio settings while TayPE continues processing internally at 48 kHz.
+- If your preferred device is missing, TayPE keeps that missing choice staged
+  in Audio settings instead of silently forgetting it. If there is no live
+  fallback device, the selector now shows `{device_name} (missing)`, and
+  explicitly choosing the live fallback device enables **Apply Audio Changes**
+  even when the live hardware does not change.
+- On the first playback attempt in that state, TayPE asks whether to use the
+  live fallback for this app session or stay on **No Audio** until you choose
+  hardware manually.
 - **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
   Apple Silicon, including mono/stereo LSTM instances and larger shared
   batches.
