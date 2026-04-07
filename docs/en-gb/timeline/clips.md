@@ -163,8 +163,12 @@ As you add or move notes, TayPE auditions them through the track's current
 instrument. While the editor stays open, TayPE mutes that clip's baked audio
 and plays the current note layout through the instrument instead, so transport
 playback gives you a live preview rather than the stale printed render.
-**Commit** writes the updated MIDI sidecar, folds the clip's current trim and
-stretch into that new MIDI truth, and re-renders the clip.
+The grid shades the area outside the clip's audible window so you can see the
+real boundary at a glance. Notes may extend visually past that line, but live
+preview and re-render hard-stop them at the clip end instead of letting tail
+spill past the visible edge. **Commit** writes the updated MIDI sidecar, folds
+the clip's current trim and stretch into that new MIDI truth, and re-renders
+the clip without silently growing the visible clip to preserve hidden tail.
 **Cancel** closes the window without changing the clip. The editor only opens
 while the transport is stopped. The editor also follows the reel timeline, so
 it uses the same ruler mode, Cut zero, snap rails, and main playhead as the
