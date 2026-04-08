@@ -83,34 +83,37 @@ dedicated drum editing for later.
 If the sidecar has no note events yet, TayPE still opens the editor on a blank
 middle-register view so you can add notes instead of getting a fake error.
 
-Click the grid to add a note. Drag an empty part of the grid to marquee-select
-notes, and press **Cmd/Ctrl+A** to select the lot even while the transport is
-running. Drag a note to move it in time and pitch, and drag its right-edge
-handle to resize it. When more than
-one note is selected, those move and resize gestures apply to the whole
-selection by the same amount. New notes inherit velocity from the closest
-previous note time, and if several earlier notes share that time TayPE takes
-the highest of those velocities. Their default length also follows the current
-quantise note interval. With absolute snap on, note drags keep the arranger's
-sticky snap feel: free away from the rail, magnetic near it, nearest-grid on
-release. **Up** / **Down** move the selected notes by an
+Single-clicking empty grid now seeks the transport to the clicked snapped
+time. Double-clicking empty grid adds a note at velocity `90`, and its default
+length follows the current quantise note interval. **Cmd-drag** on empty grid
+paints notes at that interval; if you start the paint stroke from an existing
+note, the notes you paint after that inherit that note's velocity and channel.
+Drag an empty part of the grid without **Cmd** to marquee-select notes, and
+press **Cmd/Ctrl+A** to select the lot even while the transport is running.
+Drag a note to move it in time and pitch, and drag its right-edge handle to
+resize it. When more than one note is selected, those move and resize gestures
+apply to the whole selection by the same amount. With absolute snap on, note
+drags keep the arranger's sticky snap feel: free away from the rail, magnetic
+near it, nearest-grid on release. **Up** / **Down** move the selected notes by an
 octave, while **Cmd/Ctrl+Up** and **Cmd/Ctrl+Down** nudge them by a semitone.
 **Left** / **Right** move the selected notes by one current quantise interval.
 
 The left keyboard rail is playable for audition, stays pinned to the editor's
-left edge while the roll scrolls behind it, scroll-wheel movement there moves
-through the visible pitch range, and both popup-dragging and
-**Cmd/Ctrl-scroll** on that rail change the editor's vertical pitch zoom.
+left edge while the roll scrolls behind it, and scroll-wheel movement there
+moves through the visible pitch range. Popup-dragging there changes the
+editor's vertical pitch zoom. **Cmd/Ctrl-scroll** on that rail changes the
+shared horizontal zoom, while **Option-scroll** changes vertical pitch zoom.
 Popup-dragging there now tracks your pointer cleanly instead of slipping
 around as the editor recentres the note view during zoom.
-**Cmd/Ctrl-scroll** on the piano-roll grid does the same. The pitch-order
+**Cmd/Ctrl-scroll** on the piano-roll grid does the same shared horizontal
+zoom, and **Option-scroll** there changes vertical pitch zoom. The pitch-order
 overlay flips
 whether higher notes sit at the top or bottom of the grid, and it now sits
 flush over the keyboard corner instead of floating out in the chrome. A
 sticky timeline header also stays on-screen above the roll, so you can
 left-click there to set the transport and popup-drag there for horizontal
-zoom. Pinching anywhere inside the MIDI editor now changes vertical pitch zoom
-too, including the roll, keyboard rail, header, and control lane.
+zoom. Pinching anywhere inside the MIDI editor now changes shared horizontal
+zoom too.
 When you first open the editor, TayPE now inherits the arranger's current
 horizontal zoom instead of snapping to its own separate default span.
 Popup help now covers that floating window properly too, including the pinned
