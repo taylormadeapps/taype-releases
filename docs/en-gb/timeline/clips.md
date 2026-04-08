@@ -342,12 +342,20 @@ that rerender clears them. Stretch is committed into the new MIDI sidecar, and
 any old clip pitch shift is cleared back to zero because the fresh render
 follows the MIDI plus current instrument truth rather than the previous
 audio-only repitch. While the new audio is printing, the clip stays in place
-with a small centred spinner so you can see the rerender is still in flight
-without hearing anything from the offline print, even if that instrument track
-is still monitor-armed, and the rerender always prints the current MIDI
-sidecar instead of silently reusing stale note data. When the instrument
-supports offline processing, TayPE asks it to use that mode for the hidden
-rerender rather than pretending the plug-in is still in live playback.
+with a small centred spinner and the not-yet-rendered tail is shaded on the
+clip itself, so you can see the rerender progress without hearing anything
+from the offline print, even if that instrument track is still monitor-armed,
+and the rerender always prints the current MIDI sidecar instead of silently
+reusing stale note data. When the instrument supports offline processing,
+TayPE asks it to use that mode for the hidden rerender and runs that pass in
+the background instead of pacing it off the visible transport UI. If the
+current clip window has no MIDI
+notes at all, TayPE still runs the instrument over the full clip duration with
+an empty MIDI feed instead of blocking the rerender, which keeps transport-
+driven drum machines and sequencers printable from a plain clip.
+While that rerender is pending, TayPE keeps transport start and record actions
+blocked until the new print lands, so the hidden offline pass cannot get mixed
+up with a live play or record start.
 Recorded instrument takes store speaker-time as their MIDI truth too, so a
 later rerender lands where you originally heard the performance rather than
 quietly moving the furniture. That MIDI truth carries the same post-tap
