@@ -337,15 +337,17 @@ importing the clip.
 Imported MIDI clips and recorded instrument takes keep a paired MIDI sidecar
 inside the reel. If you edit that MIDI file outside TayPE, go back to **Clip
 Properties** and use **Re-render from MIDI** to commit a fresh audio render.
-If the clip already has stretch or Melodyne-style derived audio on top, TayPE
-warns before that rerender clears those derived edits. While the new audio is
-printing, the clip stays in place with a small centred spinner so you can see
-the rerender is still in flight without hearing anything from the offline print,
-even if that instrument track is still monitor-armed, and the rerender always
-prints the current MIDI sidecar instead of silently reusing stale note data.
-When the instrument supports offline processing, TayPE asks it to use that
-mode for the hidden rerender rather than pretending the plug-in is still in
-live playback.
+If the clip has Melodyne-style rendered-audio edits on top, TayPE warns before
+that rerender clears them. Stretch is committed into the new MIDI sidecar, and
+any old clip pitch shift is cleared back to zero because the fresh render
+follows the MIDI plus current instrument truth rather than the previous
+audio-only repitch. While the new audio is printing, the clip stays in place
+with a small centred spinner so you can see the rerender is still in flight
+without hearing anything from the offline print, even if that instrument track
+is still monitor-armed, and the rerender always prints the current MIDI
+sidecar instead of silently reusing stale note data. When the instrument
+supports offline processing, TayPE asks it to use that mode for the hidden
+rerender rather than pretending the plug-in is still in live playback.
 Recorded instrument takes store speaker-time as their MIDI truth too, so a
 later rerender lands where you originally heard the performance rather than
 quietly moving the furniture. That MIDI truth carries the same post-tap
