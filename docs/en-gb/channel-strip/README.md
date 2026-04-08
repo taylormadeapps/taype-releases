@@ -76,8 +76,9 @@ opening that strip if it was hidden. A floated mixer stays in step with that
 toggle too, but it no longer steals the arranger width control away from the
 docked strip underneath it. TayPE also remembers the docked strip's explicit
 show/hide choice, width mode, and the shared section-collapse posture across
-launches; a brand-new untitled startup reel only force-opens the strip until
-you have explicitly chosen that setting once.
+launches for ordinary reels; the fresh launch-created `Untitled Reel` is the
+intentional exception and still lands with Track 1's strip open until you
+close it or pick a different track.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band
