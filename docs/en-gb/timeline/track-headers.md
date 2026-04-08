@@ -31,6 +31,9 @@ the arranger does not change which track is selected.
   confirming removes the child take tracks and leaves a normal track behind.
 - **M** — mute. When it is on, the button lights in a softer red than the record arm lamp so the two states stay related without reading the same.
 - **S** — solo
+- **Cancel Solo** — on the master header, the normal per-track **S** button is
+  replaced by a yellow `S`-with-`X` button that clears every current solo in
+  the session.
 - **Tag pills** — at larger track heights, assigned tags appear as pills below the button row
 - **I/O labels** — input source and output destination (click to change)
 - **Mini meter** — single post-fader meter. The body uses the summed RMS of
