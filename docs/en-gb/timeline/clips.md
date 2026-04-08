@@ -352,7 +352,10 @@ the background instead of pacing it off the visible transport UI. If the
 current clip window has no MIDI
 notes at all, TayPE still runs the instrument over the full clip duration with
 an empty MIDI feed instead of blocking the rerender, which keeps transport-
-driven drum machines and sequencers printable from a plain clip.
+driven drum machines and sequencers printable from a plain clip. Host-synced
+instruments also see the clip's real timeline position and musical transport
+context during that hidden render instead of a fake playhead starting from
+bar one.
 While that rerender is pending, TayPE keeps transport start and record actions
 blocked until the new print lands, so the hidden offline pass cannot get mixed
 up with a live play or record start.
