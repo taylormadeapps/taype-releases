@@ -319,7 +319,10 @@ that bounce consolidates audio only — no MIDI stem is created.
 
 If the selection spans more than one track, TayPE still makes one stem track
 containing the full summed result. One **Cmd+Z** removes the stem and puts
-the source clips back exactly as they were.
+the source clips back exactly as they were. Regular track bounces do not
+drag along downstream send or bus chains unless you selected those buses as
+part of the bounce too, and the live bounce pass now auditions that same
+reduced path instead of letting unrelated bus work leak through.
 
 ## Importing Files
 
