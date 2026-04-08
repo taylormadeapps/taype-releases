@@ -104,7 +104,9 @@ moves through the visible pitch range. Popup-dragging there changes the
 editor's vertical pitch zoom. **Cmd/Ctrl-scroll** on that rail changes the
 shared horizontal zoom, while **Option-scroll** changes vertical pitch zoom.
 Popup-dragging there now tracks your pointer cleanly instead of slipping
-around as the editor recentres the note view during zoom.
+around as the editor recentres the note view during zoom, and horizontal zoom
+now prefers the visible transport playhead as its anchor before falling back
+to the pointer position.
 **Cmd/Ctrl-scroll** on the piano-roll grid does the same shared horizontal
 zoom, and **Option-scroll** there changes vertical pitch zoom. The pitch-order
 overlay flips
@@ -112,8 +114,10 @@ whether higher notes sit at the top or bottom of the grid, and it now sits
 flush over the keyboard corner instead of floating out in the chrome. A
 sticky timeline header also stays on-screen above the roll, so you can
 left-click there to set the transport and popup-drag there for horizontal
-zoom. Pinching anywhere inside the MIDI editor now changes shared horizontal
-zoom too.
+zoom with that same visible-playhead-first anchor rule. Pinching anywhere
+inside the MIDI editor now changes shared horizontal zoom too, using that
+same anchor rule. The MIDI editor transport marker now uses the same yellow
+arranger-style head and top cap instead of a separate white editor line.
 When you first open the editor, TayPE now inherits the arranger's current
 horizontal zoom instead of snapping to its own separate default span.
 Popup help now covers that floating window properly too, including the pinned
@@ -177,7 +181,9 @@ while the transport is stopped. The editor also follows the reel timeline, so
 it uses the same ruler mode, Cut zero, snap rails, and main playhead as the
 arranger. Note-only edits preserve the clip's other MIDI events too, so
 sustain, pitch bend, program change, aftertouch, and unrelated CC data survive
-unless you deliberately edit that lane.
+unless you deliberately edit that lane. If you try to open a different MIDI
+clip while the current editor still has pending changes, TayPE shows the same
+warning first instead of quietly discarding the dirty editor.
 
 ## Moving
 
