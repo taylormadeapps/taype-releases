@@ -29,7 +29,7 @@ The **transport bar** runs along the bottom. It has playback controls, BPM, and 
 
 Focus only counts enabled clips. Disabled clips do not keep a track visible, whether Focus is following the playhead or the active loop range.
 
-Next to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active — right-click it to abort the lock.
+Next to the DSP meter there's a small lock indicator. It reads **MCP** and lights red while an MCP transaction is active, and in that state you can right-click it to abort the lock. During a realtime bounce it temporarily reads **BNC** instead, so it's obvious TayPE's own bounce pass is holding the lock rather than an MCP client.
 
 With **Help → Popup Help** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
 
