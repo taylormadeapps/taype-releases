@@ -343,6 +343,9 @@ Dropping a MIDI file straight onto the timeline also works. If the target
 track has no instrument loaded, TayPE flashes a warning banner instead of
 importing the clip.
 
+If that MIDI file has no embedded tempo map, TayPE interprets its PPQN timing
+against the current reel tempo instead of silently assuming a fixed 120 BPM.
+
 Imported MIDI clips and recorded instrument takes keep a paired MIDI sidecar
 inside the reel. If you edit that MIDI file outside TayPE, go back to **Clip
 Properties** and use **Re-render from MIDI** to commit a fresh audio render.
