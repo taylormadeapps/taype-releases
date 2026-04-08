@@ -4,7 +4,7 @@
 
 During audio recording, a translucent red "ghost clip" grows on each track admitted to the record pass, showing where audio is being captured. The waveform updates roughly once per second so you can see the signal coming in.
 
-When you stop, each ghost clip is replaced by its real clip with the final waveform.
+When you stop, each ghost clip is replaced by its real clip with the final waveform. Ordinary recorded clips are named `{Track Name}-takeN`, and `N` increments per track so repeated passes land as `Guitar-take1`, `Guitar-take2`, and so on.
 
 Automation recording does not create ghost clips because TayPE is writing
 breakpoints, not capturing new audio.
