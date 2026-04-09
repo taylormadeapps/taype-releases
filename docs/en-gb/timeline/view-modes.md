@@ -44,7 +44,10 @@ overlay shows **Volume**, **Pan**, or **Width**. TayPE starts on **Volume**.
 
 When automation view is on, every visible track shows the chosen parameter as
 breakpoint lines over the clips. The clips stay visible as a backdrop, but
-clip editing is blocked until you leave automation view.
+clip editing is blocked until you leave automation view. Before the first
+breakpoint the line sits on the track's current static value. After the final
+breakpoint it stays flat at that last automation value until a later
+breakpoint changes it.
 Volume automation draws in yellow, pan automation draws in orange, and width
 automation draws in blue. The ruler **A** follows that same colour so you can
 tell at a glance which parameter the lane is showing.
@@ -54,11 +57,16 @@ Clip view and automation view remember separate snap modes. The normal
 timeline starts with snap on, while automation view starts with snap off.
 Single-click in the lane to select the nearest automation point on that track,
 double-click empty lane space to add a new point, double-click an existing
-point to delete it, drag selected points to move them, and use **Backspace**
-to delete the current selection. Dragging a marquee across the timeline works
-by time range on touched tracks: if the box covers any part of a track row,
-TayPE selects every automation point on that track whose time falls inside the
-box, even if the point itself sits above or below the marquee.
+point to delete it, **Option**-double-click an existing point to clear that
+lane on the touched track, **Option**-click an existing point to snap it back
+to the track's current static value, drag selected points to move them, and
+use **Backspace** to delete the current selection. If you **Option**-click one
+point inside a selected automation group, TayPE resets the whole selected set
+to the track's current static value and thins any flat interior points that no
+longer need to be there. Dragging a marquee across the timeline works by time
+range on touched tracks: if the box covers any part of a track row, TayPE
+selects every automation point on that track whose time falls inside the box,
+even if the point itself sits above or below the marquee.
 
 Automation playback still runs whenever the transport runs and the track has
 automation data. The automation button changes what you see and what
@@ -66,4 +74,6 @@ automation data. The automation button changes what you see and what
 When automation view is on, the transport **Record** button also carries a
 white **A** badge so it reads as automation capture at a glance.
 When transport is stopped, moving the playhead through an automation section
-updates the live channel-strip preview to the value parked under the head.
+updates the live channel-strip preview to the value parked under the head, but
+manual control moves stay where you leave them until the playhead moves again
+or the transport starts running.

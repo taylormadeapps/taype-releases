@@ -15,7 +15,7 @@ The ruler header has an **A** automation button. That button decides what the
 transport **Record** button means.
 
 - **A off** — Record captures audio or instrument takes as normal, but only when at least one track is armed. Existing automation still plays, but TayPE does not write new automation.
-- **A on** — Record captures automation for the parameter currently shown in the ruler header. Right-click the ruler **A** button to choose **Volume**, **Pan**, or **Width**. The transport **Record** button shows a white **A** badge in this mode. Move the relevant track control during the pass and TayPE writes breakpoint automation instead of creating new clips. Those breakpoint points draw live in the lane while the pass is still running.
+- **A on** — Record captures automation for the parameter currently shown in the ruler header. Right-click the ruler **A** button to choose **Volume**, **Pan**, or **Width**. The transport **Record** button shows a white **A** badge in this mode. Move the relevant track control during the pass and TayPE writes breakpoint automation instead of creating new clips. Those breakpoint points draw live in the lane while the pass is still running. When the pass finishes, the line stays latched at the last value you wrote until a later breakpoint changes it.
 
 Playback always follows existing automation whenever the transport is running,
 including ordinary audio recording. **Return**, **Punch**, and **Do-Over**
