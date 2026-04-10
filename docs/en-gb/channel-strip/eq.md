@@ -74,9 +74,10 @@ uses the higher-resolution FFT lane, so broadband material reads less blocky
 and the graph stays truer as you zoom the floor out.
 Popup help now covers the floating visualiser too, including the graph body,
 `IN` / `OUT` toggles, zoom buttons, and the mirrored filter / EQ controls.
-Right-click-dragging a bell handle in that popup solos the swept band while you
+**Option-dragging** a bell handle in that popup solos the swept band while you
 move it, and releasing keeps the newly swept centre frequency instead of
-dropping the handle back on stale pre-solo coordinates.
+dropping the handle back on stale pre-solo coordinates. Hold **Shift** while
+dragging any popup knob for a finer 4x trim pass.
 
 Those popup `FILTER` and `EQ` headers also keep the same preset badge
 language as the strip. Right-click either one to load or save a filter or

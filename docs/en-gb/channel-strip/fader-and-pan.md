@@ -24,6 +24,13 @@ While you drag, the fader thumb keeps moving live with your hand. TayPE does
 not wait for playback or another screen refresh before showing the new
 position.
 
+Hold **Shift** while dragging the fader, pan, or width control for a finer
+4x trim pass.
+
+Hovering the fader thumb, rail, or dB readout also lets the mouse wheel trim
+the level directly in fine sub-dB steps. Hold **Shift** there as well for the
+same finer 4x pass.
+
 Double-click the fader readout to type an exact value. Finite entries stay
 readable down to **-80.0 dB**; only an exact mute reads as **-inf**.
 
