@@ -51,8 +51,9 @@ breakpoint changes it.
 Volume automation draws in yellow, pan automation draws in orange, and width
 automation draws in blue. The ruler **A** follows that same colour so you can
 tell at a glance which parameter the lane is showing.
-Volume automation is shown on a straight dB ladder from **-60 dB** to
-**+12 dB**, with the floor still meaning hard mute.
+Volume automation uses the same ladder as the strip fader: straight **3 dB**
+steps from **+12 dB** down to **-12 dB**, then **-18**, **-24**, **-36**,
+**-48**, and **-60**, with the lane floor below that still meaning hard mute.
 Clip view and automation view remember separate snap modes. The normal
 timeline starts with snap on, while automation view starts with snap off.
 Single-click in the lane to select the nearest automation point on that track,

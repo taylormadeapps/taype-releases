@@ -24,6 +24,9 @@ While you drag, the fader thumb keeps moving live with your hand. TayPE does
 not wait for playback or another screen refresh before showing the new
 position.
 
+Double-click the fader readout to type an exact value. Finite entries stay
+readable down to **-80.0 dB**; only an exact mute reads as **-inf**.
+
 The fader cap keeps the track colour so you can read the strip at a glance.
 
 Mono strip mode sums stereo sources before the strip, runs the strip in mono, then turns the result back into dual-mono before pan. That means pan still behaves normally. Bus and master strips always stay stereo, so they do not show the `ST / MONO` switch.
