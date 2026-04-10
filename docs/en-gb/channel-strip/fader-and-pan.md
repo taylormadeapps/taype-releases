@@ -6,7 +6,9 @@
 - **ST / MONO** — switch a regular track's strip between stereo and mono processing.
 - **INV** — flip polarity on the strip output.
 
-The fader has a detent at unity (0 dB) that snaps forgivingly. Drag to just above or below the line and TayPE drops it onto exact unity, then lets go again as soon as you keep moving.
+The fader moves continuously through unity (0 dB). There is no sticky catch on
+the centre line, so short automation rides and hand moves keep tracking exactly
+with the pointer.
 
 While you drag, the fader thumb keeps moving live with your hand. TayPE does
 not wait for playback or another screen refresh before showing the new

@@ -10,7 +10,7 @@ Each section can be enabled or bypassed independently. The on/off state does not
 
 ## Strip Controls
 
-All knobs work the same way: drag vertically, or hover and scroll the mouse wheel. Knobs with a neutral point (like 0 dB) have a detent that holds before crossing through. Drag now follows pointer movement through that centre hold instead of springing off the original click point, and when you leave the centre it uses only the extra travel beyond that hold, so zero crossings feel deliberate without getting sticky. The fader's unity catch is narrower now, so it settles on 0 dB when you actually reach the centre band and takes only a short extra drag to move off again. At the hard top and bottom limits, the drag also remembers any overshoot off the rail, so a quick reversal does not make the control jump away from the stop before your hand has really come back.
+All knobs work the same way: drag vertically, or hover and scroll the mouse wheel. Knobs with a neutral point (like 0 dB) have a detent that holds before crossing through. Drag now follows pointer movement through that centre hold instead of springing off the original click point, and when you leave the centre it uses only the extra travel beyond that hold, so zero crossings feel deliberate without getting sticky. Faders are different: they now track continuously through unity with no centre detent, so short rides stay honest under the pointer. At the hard top and bottom limits, the drag also remembers any overshoot off the rail, so a quick reversal does not make the control jump away from the stop before your hand has really come back.
 
 Double-click any gain or balance knob to reset it to zero. Double-click the fader to return it to unity.
 
