@@ -78,7 +78,9 @@ docked strip underneath it. TayPE also remembers the docked strip's explicit
 show/hide choice, width mode, and the shared section-collapse posture across
 launches for ordinary reels; the fresh launch-created `Untitled Reel` is the
 intentional exception and still lands with Track 1's strip open until you
-close it or pick a different track.
+close it. Clearing track selection no longer collapses the docked strip
+either, so if it is already open you simply see the muted `Select a track`
+empty state until you choose another lane.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band
