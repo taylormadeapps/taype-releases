@@ -10,6 +10,16 @@ The fader moves continuously through unity (0 dB). There is no sticky catch on
 the centre line, so short automation rides and hand moves keep tracking exactly
 with the pointer.
 
+The printed ruler beside the fader is grouped for readability rather than
+trying to show every quiet-tail step. At the normal dock height it shows
+`+12`, `+9`, `+6`, `+3`, `0`, `-3`, `-6`, `-9`, `-12`, `-18`, `-24`, `-36`,
+`-48`, and `-60`, then a separate `-inf` mute mark below the throw. If you
+shrink the fader dock far enough, TayPE drops the `-60` label before the tail
+ticks start bunching up.
+
+That `-60` mark sits one full ladder step above the mute stop. Dragging to the
+very bottom still gives `-inf`.
+
 While you drag, the fader thumb keeps moving live with your hand. TayPE does
 not wait for playback or another screen refresh before showing the new
 position.
