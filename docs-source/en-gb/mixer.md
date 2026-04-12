@@ -6,6 +6,9 @@ The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always on the far right. Adjacent bus strips keep
 a single visible seam between them inside a bus run. Scroll horizontally with
 the mouse wheel or trackpad to navigate across your channels.
+Buttons, section headers, knobs, and the fader all follow the same live
+interaction rules on every strip, including the master bus, even straight
+after switching between arranger and mixer.
 Comp buses add the same snap-blue group frame used in the arranger, with a
 small +/- square in the top-left corner so you can collapse or expand the
 visible child take strips without changing any routing. That folded state is
