@@ -23,6 +23,8 @@
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
 * [Voice Control](voice-control.md)
 * [Licensing](licensing.md)
+* [Reels](reels/README.md)
+  * [Reel Upgrades](reels/reel-upgrades.md)
 * [MCP Integration](mcp/README.md)
   * [Transport](mcp/transport.md)
   * [Cuts](mcp/cuts.md)
