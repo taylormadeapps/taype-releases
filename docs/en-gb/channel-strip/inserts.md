@@ -71,9 +71,10 @@ The insert picker is split into **Taype Stock**, **Effects**, and
 **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
 **Taype Comp**, and the built-in **External MIDI Out**.
 
-Those Taype Stock VST3 plug-ins are limited to running inside Taype. If you
-load one in another host it opens with a warning and stays dry/pass-through
-instead of processing audio.
+Those Taype Stock VST3 plug-ins are limited to running inside Taype, apart
+from **Taype Drive**, which also works in standalone **Plugin Doctor** for
+measurement. Load the others in another host and they open with a warning and
+stay dry/pass-through instead of processing audio.
 
 Only insert **1** can host an instrument or **External MIDI Out**.
 Slots **2-8** stay audio-effects only, but audio-FX extensions like
@@ -174,15 +175,23 @@ recombined, so you can judge tone instead of loudness.
 the same four modes: **Clean**, **Builtin**, **Tape**, and **NAM**. The editor
 stays compact and fixed-size: mode and measurement at the top, shared NAM
 profile browsing in the middle, then **Drive**, **Output**, **Tape Speed**,
-**Dubly**, and **Measure**. **Measure** runs the same output-match idea as the
+and **Measure**. **Measure** runs the same output-match idea as the
 strip preamp, so the plug-in can listen to the before/after swing and write a
 matching output trim back into the insert.
+In **Tape** mode, `30` stays the brightest lane, `15` is the middle tape
+setting, and `7.5` is the obviously slower one. The write-side HF contour is
+now fixed internally for that ToTaype lane rather than exposed as a separate
+Dubly switch.
 
 Drive's **NAM** browser points at the same preamp profile folder and the same
 TONE3000 settings file as the channel strip. If you already configured
 TONE3000 in TayPE, the plug-in picks that up immediately. Downloads land in
 the same shared NAM library, so the strip and the plug-in are always looking
 at the same model pool.
+
+For measurement work, **Taype Drive** also runs in standalone
+**Plugin Doctor**, so you can inspect the transfer without hosting it inside
+the DAW.
 
 **Taype EQ** is the strip EQ window as a standalone insert, then adds a
 dynamic row for the three musical bands. The response display still shows the

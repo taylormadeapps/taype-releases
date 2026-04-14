@@ -11,8 +11,8 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 - **Trim** — in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty.
 - **P/R** — switches the master summing auto-gain detector between Peak and RMS.
 - **AG** — runs a 3-second one-shot calibration and writes the compensation into the master summing output gain.
-- **Tape speed** — in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`.
-- **Dubly** — in ToTaype mode, toggles the encode/decode HF stage in the same third stack slot used by the track preamp.
+- **Tape speed** — in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`. `30` is the brightest lane, `15` stays broadly full-range, and `7.5` is where the slower top-end softening really starts to show.
+- **HF contour** — fixed internally in ToTaype mode. There is no separate Dubly switch on the master strip now.
 - **Browse** — open the Profile Browser, filtered to summing packages. Download packages from TONE3000, then pick the exact local model if the package contains multiple variants.
 - In the TONE3000 tab, download happens from each package row's own button; the footer does not repeat that action.
 - **Drive** — how hard the summed audio pushes into the model
