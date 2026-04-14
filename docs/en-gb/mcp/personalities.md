@@ -28,8 +28,8 @@ TayPE ships with eleven built-in studio tech characters:
 ## Switching Personalities
 
 Use the `set_personality` tool to switch, or ask your AI assistant to
-change character. The personality persists per reel - different sessions
-can have different engineers.
+change character. The active personality is an app-global preference, so it
+stays put across restarts until you change it again.
 
 ## Custom Personalities
 
@@ -51,3 +51,6 @@ Personalities shape tone, suggestions, and workflow defaults. They never
 affect the engine, the audio, or how your session is saved. A personality
 cannot break your mix or corrupt your data - it just changes who is
 sitting at the desk.
+
+Personality is not part of `get_project` or the reel schema. Use
+`get_personality` or `status` when you need to read it through MCP.

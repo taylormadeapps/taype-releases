@@ -162,6 +162,8 @@ List all available studio tech personalities.
 ### `set_personality`
 
 Set the active personality by name. See [Personalities](personalities.md).
+This is an app-global preference, not reel data, and it does not create a
+project undo step.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -170,6 +172,7 @@ Set the active personality by name. See [Personalities](personalities.md).
 ### `get_personality`
 
 Get the currently active personality.
+Use this or `status` for personality state; `get_project` does not include it.
 
 **Returns:** `{ "name": "Glue & Weight", "prompt": "..." }`
 
