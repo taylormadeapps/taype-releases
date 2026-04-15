@@ -10,9 +10,9 @@ file and restart to apply your changes.
 ```
 
 This file is created automatically on first launch with sensible defaults.
-Older bindings files that still have the loop shortcuts reversed are
-auto-migrated on load, so `L` loops the selection and `Cmd+L` toggles loop
-again.
+Older bindings files still auto-migrate on load when TayPE can see they are
+just carrying an earlier default layout. That includes the old reversed loop
+pair, and the older zoom layout where plain `=` / `-` changed track height.
 
 ## Default Shortcuts
 
@@ -118,10 +118,14 @@ there is no separate user-facing Save command.
 |----------|--------|
 | Cmd + mouse wheel | Horizontal zoom (centred on tape head) |
 | Option + mouse wheel | Vertical zoom (anchored to selected track) |
-| = | Zoom in tracks |
-| - | Zoom out tracks |
-| Shift+- | Reset track height to default |
-| Shift+= | Jump track height to maximum |
+| = | Zoom the timeline in around the tape head |
+| - | Zoom the timeline out around the tape head |
+| Option+- | Reset the timeline to the default 16-bar frame level |
+| Option+= | Jump the timeline to maximum horizontal zoom |
+| Shift+= | Zoom in tracks |
+| Shift+- | Zoom out tracks |
+| Option+Shift+- | Reset track height to default |
+| Option+Shift+= | Jump track height to maximum |
 
 ### Mouse
 
@@ -161,10 +165,14 @@ is straightforward:
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",
-  "zoom_in_vertical": "=",
-  "zoom_out_vertical": "-",
-  "zoom_reset_vertical": "shift+-",
-  "zoom_max_vertical": "shift+=",
+  "zoom_in_horizontal": "=",
+  "zoom_out_horizontal": "-",
+  "zoom_reset_horizontal": "alt+-",
+  "zoom_max_horizontal": "alt+=",
+  "zoom_in_vertical": "shift+=",
+  "zoom_out_vertical": "shift+-",
+  "zoom_reset_vertical": "alt+shift+-",
+  "zoom_max_vertical": "alt+shift+=",
   "toggle_mixer_width": "w",
   "toggle_focus": "f",
   "toggle_automation_view": "a",

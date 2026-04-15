@@ -15,6 +15,9 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 **Horizontal zoom** (time):
 - **Cmd + mouse wheel** — zoom in/out, centred on the tape head
 - **Right-click drag up/down** — drag down to zoom in, up to zoom out
+- **=** / **-** — zoom in / out from keyboard around the tape head
+- **Option+-** — reset to the default 16-bar frame level
+- **Option+=** — jump straight to the maximum horizontal zoom
 
 Once you have manually changed horizontal zoom, TayPE remembers that zoom
 level for the next launch. Scroll position stays transient, so a relaunch
@@ -23,9 +26,9 @@ pan offset.
 
 **Vertical zoom** (track height):
 - **Option + mouse wheel** — zoom in/out, anchored to the selected track
-- **=** / **-** — zoom in / out from keyboard
-- **Shift+-** — reset to default track height
-- **Shift+=** — jump straight to the maximum track height
+- **Shift+=** / **Shift+-** — zoom in / out from keyboard
+- **Option+Shift+-** — reset to default track height
+- **Option+Shift+=** — jump straight to the maximum track height
 
 When you use the right-click drag pan/zoom gesture, TayPE switches to a
 magnifier cursor until you let go. Holding **Command** or **Option** over
