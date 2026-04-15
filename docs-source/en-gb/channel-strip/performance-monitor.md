@@ -2,6 +2,8 @@
 
 The Performance Monitor shows per-track DSP breakdown with separate **Preamp/Summing** and **Plugin** CPU columns. On the master track, the Preamp/Summing column reflects NAM summing CPU.
 
+Open it from **Tools -> DSP Monitor**, press the backtick key, or click the transport DSP gauge.
+
 ## Routing Tree
 
 Rows display as a routing tree under the master bus, so bus chains are nested visually instead of appearing as a flat list.

@@ -12,7 +12,8 @@ file and restart to apply your changes.
 This file is created automatically on first launch with sensible defaults.
 Older bindings files still auto-migrate on load when TayPE can see they are
 just carrying an earlier default layout. That includes the old reversed loop
-pair, and the older zoom layout where plain `=` / `-` changed track height.
+pair, the older zoom layout where plain `=` / `-` changed track height, and
+the older snap toggle default where plain `S` was used instead of `Option+S`.
 
 ## Default Shortcuts
 
@@ -24,14 +25,16 @@ pair, and the older zoom layout where plain `=` / `-` changed track height.
 | P | Pause |
 | Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
 | Return | Record-mode action |
-| / | Add marker at the tape head |
-| , | Go to previous marker or loop brace |
-| . | Go to next marker or loop brace |
-| Unbound | Set 0 at Playhead for the selected Cut |
+| C | Toggle metronome click |
 | [ | Set the left loop brace to the tape head |
 | ] | Set the right loop brace to the tape head |
 | L | Set both loop braces to the selected clips and enable loop playback |
 | Cmd+L | Toggle loop playback on or off |
+| / | Add marker at the tape head |
+| , | Go to previous marker or loop brace |
+| . | Go to next marker or loop brace |
+| Cmd+/ | Set 0 at Playhead for the selected Cut |
+| Option+S | Toggle timeline snap |
 
 ### Markers
 
@@ -57,8 +60,14 @@ currently disabled for take admission.
 
 **Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end.
 
-The **Edit** menu carries the split variants inside the **Split** submenu,
-while the **Tracks** menu carries track duplication and deletion.
+The **Transport** menu now exposes the same bound transport actions directly:
+**Play / Stop**, **Pause**, **Stop**, **Record**, both loop-brace setters,
+**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**, **Snap**, and a
+**Markers** submenu that also contains direct **Go to Marker** jumps split
+into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
+carries **Select All** / **Deselect All** alongside the split variants inside
+the **Split** submenu, while the **Tracks** menu carries track creation,
+reordering, duplication, and deletion.
 
 ### Editing
 
@@ -102,21 +111,25 @@ there is no separate user-facing Save command.
 | M | Toggle between timeline and mixer |
 | W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
 | I | Toggle channel strip panel |
+| Left / Right | In timeline view, move the tape head to the previous or next visible tick. In mixer view, scroll the rack left or right |
+| Up / Down | In timeline view, scroll the track stack. In mixer view, scroll the shared strip sections up or down |
 | F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle automation view |
 | Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |
 | X | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
-| T | Toggle ruler between time and beats |
+| T | Add a new audio track |
+| R | Toggle ruler between time and beats |
 | K | Toggle high contrast theme |
 | Cmd+K | Open the virtual keyboard popup |
-| § | Open the Performance Monitor window |
+| Backtick (\`) | Open the Performance Monitor window |
 
-The **View** menu also exposes the same focus, automation, spill, ruler, and
-zoom actions, grouped into **Automation Display**, **Horizontal Zoom**, and
-**Vertical Zoom** submenus. The automation submenu carries the direct
-**Show Volume / Show Pan / Show Width** picks.
+The **View** menu also exposes the same focus, automation, deselect, mixer,
+channel-strip, ruler, and zoom actions, grouped into
+**Automation Display**, **Horizontal Zoom**, and **Vertical Zoom** submenus.
+The automation submenu carries both **Cycle Automation Display** and the
+direct **Show Volume / Show Pan / Show Width** picks.
 
 ### Zoom
 
@@ -157,6 +170,7 @@ is straightforward:
   "pause": "p",
   "stop": "z",
   "record": "return",
+  "toggle_metronome": "c",
   "add_marker_here": "/",
   "previous_marker": ",",
   "next_marker": ".",
@@ -164,6 +178,7 @@ is straightforward:
   "set_right_loop_brace": "]",
   "toggle_loop": "cmd+l",
   "set_loop_from_selection": "l",
+  "set_zero_here": "cmd+/",
   "go_to_marker_1": "1",
   "split_clip": "\\",
   "split_clip_at_loop_braces": "cmd+\\",
@@ -187,14 +202,16 @@ is straightforward:
   "toggle_focus": "f",
   "toggle_automation_view": "a",
   "toggle_archive_view": "x",
-  "show_performance_monitor": "§"
+  "toggle_snap": "alt+s",
+  "show_performance_monitor": "`"
 }
 ```
 
 Each entry maps an action name to a key combination.
 
-To bind **Set 0 at Playhead**, add a `set_zero_here` entry. For example,
-`"set_zero_here": "0"` would bind it to the `0` key. Marker actions use
+**Set 0 at Playhead** defaults to `Cmd+/`. Override it with a
+`set_zero_here` entry if you want a different key. For example,
+`"set_zero_here": "0"` would move it to the `0` key. Marker actions use
 `add_marker_here`, `previous_marker`, `next_marker`, and `go_to_marker_N`
 for direct jumps.
 

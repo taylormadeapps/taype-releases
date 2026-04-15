@@ -52,18 +52,19 @@ If the loop braces are active, right-click the loop button or open
 Latency compensation still keeps committed takes reaching the visible timing
 window instead of ending short.
 
-Right-click the metronome button in the ruler to choose a one-shot pre-roll of
-**Off**, **1**, **2**, or **4** bars. TayPE uses that lead-in only for
-recording: with loop recording on, it backs up from the left brace; with loop
-recording off, it backs up from the current tape head position. Playback just
-starts from the current tape head; with loop playback on, positions before the
-left brace run straight into the loop and positions already past the right
-brace restart from the left brace, with no count-in rewind. If the tape head
-is already on an anchor that cannot rewind any earlier, TayPE keeps the head
-there, runs the count-in, and only then starts capture while still committing
-the take at that same point. That applies at the selected Cut's visible
-timeline zero and at literal timeline `0`, even if the selected Cut zero has
-been moved later.
+Right-click the metronome button in the ruler or open `Transport > Count-In` to
+choose a one-shot pre-roll of **Off**, **1**, **2**, or **4** bars. The
+matching click toggle also lives at `Transport > Metronome`. TayPE uses that
+lead-in only for recording: with loop recording on, it backs up from the left
+brace; with loop recording off, it backs up from the current tape head
+position. Playback just starts from the current tape head; with loop playback
+on, positions before the left brace run straight into the loop and positions
+already past the right brace restart from the left brace, with no count-in
+rewind. If the tape head is already on an anchor that cannot rewind any
+earlier, TayPE keeps the head there, runs the count-in, and only then starts
+capture while still committing the take at that same point. That applies at
+the selected Cut's visible timeline zero and at literal timeline `0`, even if
+the selected Cut zero has been moved later.
 During any pre-roll, TayPE can force the
 metronome on only where the lead-in would otherwise be silent.
 The metronome enabled state and the chosen pre-roll bars are app-global

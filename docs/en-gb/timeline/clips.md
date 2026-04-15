@@ -135,7 +135,8 @@ the editor body does not waste space repeating it in a top bar.
 
 A left-aligned footer **Quantise** strip carries **Quantise**, note-length,
 strength, and capture controls. TayPE defaults that strip to
-`1/16`, `100%` strength, and `100%` capture. If you already have notes
+`1/16`, `100%` strength, and `100%` capture on first open, then keeps those
+settings globally across MIDI editor windows. If you already have notes
 selected, Quantise only moves those notes; if nothing is selected, it works on
 the whole clip. This pass only moves note starts. If the ruler is in beats and
 your chosen quantise note value is finer than the main beat grid, TayPE

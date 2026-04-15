@@ -18,6 +18,11 @@ Right-click the ruler **A** button to choose **Volume**, **Pan**, or
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
+Use **Transport > Metronome** to toggle the click and **Transport > Count-In**
+to choose a one-shot lead-in of **Off**, **1**, **2**, or **4** bars. The
+same count-in menu is also available by right-clicking the metronome button in
+the ruler.
+
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
 
 ## Input and Output Routing
