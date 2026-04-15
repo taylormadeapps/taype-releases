@@ -2,7 +2,7 @@
 
 The preamp operates in four modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
 
-**Clean → Classic → ToTaype → NAM → Clean**
+**Clean → Modern → ToTaype → NAM → Clean**
 
 That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
@@ -13,22 +13,22 @@ The `IN:` / `OUT:` mini meters still stay live in Clean, so you can judge the
 level hitting the preamp slot and the level leaving it even when there is no
 saturation stage engaged.
 
-## Classic
+## Modern
 
 A soft-sine drive stage for adding warmth and saturation. The onset is meant
 to come on gradually, so higher drive blooms into colour before it turns into
 real crunch.
 The PREAMP header always carries its own power button. That button bypasses or
 re-enables the whole preamp section during playback without changing the
-selected mode, so Clean stays Clean and Classic or NAM keep their settings.
+selected mode, so Clean stays Clean and Modern or NAM keep their settings.
 
 - **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
-- **Oversampling** — always on for the Classic saturator.
+- **Oversampling** — always on for the Modern saturator.
 - **Auto-gain (AG)** — compensates for loudness changes from drive so you can compare tone instead of volume.
 
 ## ToTaype
 
-The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps the same compact control language as Classic, but swaps the voicing over to tape behaviour.
+The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps the same compact control language as Modern, but swaps the voicing over to tape behaviour.
 
 - **Drive** — pushes the input harder into the tape stage.
 - **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` is where the obvious top-end slowing starts.

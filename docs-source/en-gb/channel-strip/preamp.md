@@ -2,7 +2,7 @@
 
 The preamp operates in one of three modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
 
-**Clean → Classic → NAM → Clean**
+**Clean → Modern → NAM → Clean**
 
 That button now shows only the current mode text. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
@@ -10,7 +10,7 @@ That button now shows only the current mode text. In NAM mode, the loaded profil
 
 The preamp is off. Your trim setting passes through with no colour or saturation. Every new track starts here.
 
-## Classic
+## Modern
 
 A soft-clipping drive stage for adding warmth and saturation.
 
