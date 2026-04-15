@@ -181,7 +181,10 @@ matching output trim back into the insert.
 In **Tape** mode, `30` stays the brightest lane, `15` is the middle tape
 setting, and `7.5` is the obviously slower one. The write-side HF contour is
 now fixed internally for that ToTaype lane rather than exposed as a separate
-Dubly switch.
+Dubly switch. For inspection work, the plug-in also has a tape-only **HQ**
+toggle that routes the full tape core through the legacy 4x oversampled lane
+so you can compare that supplied-rate behaviour directly in **Plugin Doctor**.
+It stays off by default.
 
 Drive's **NAM** browser points at the same preamp profile folder and the same
 TONE3000 settings file as the channel strip. If you already configured
