@@ -45,6 +45,15 @@ are currently working in, rename keeps the session open under the new bundle
 name and delete closes the session before moving the bundle into `Scrap Pile`
 inside your Reels folder. After delete, TayPE confirms the move and offers
 **Show in Finder** so you can reveal the moved reel with that bundle selected.
+Rename now opens the native save panel with that reel's current bundle path
+already filled in, so you can change both the folder and the bundle name in
+one pass. TayPE refuses destinations that would overwrite another reel bundle,
+and it also refuses duplicate managed-library reel names instead of silently
+inventing a suffix.
+
+When the current reel is already open, **File -> Rename Reel...** uses that
+same native save panel directly instead of bouncing you back through the
+browser first.
 
 When a reel is already open, the browser action row starts with **Media**,
 which opens that reel's `media/` folder in Finder without closing the browser.
