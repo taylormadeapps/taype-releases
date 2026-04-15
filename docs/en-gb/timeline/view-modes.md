@@ -35,12 +35,16 @@ still persist as app-global settings.
 ## Automation View
 
 Automation is a separate ruler-header mode, not one of the transport view
-filters above. Press **A** or use the ruler's **A** button to toggle it.
+filters above. Press **A**, use the ruler's **A** button, or use the
+**View** menu to toggle it.
 Archive View moves to **X**.
 
-Left-click that ruler button, or press **A**, to switch the whole timeline between normal clip
-view and automation view. Right-click it to choose whether the automation
-overlay shows **Volume**, **Pan**, or **Width**. TayPE starts on **Volume**.
+Left-click that ruler button, or press **A**, to switch the whole timeline
+between normal clip view and automation view. Press **Shift+A** to cycle the
+displayed automation lane between **Volume**, **Pan**, and **Width** while
+making automation view visible if it was hidden. Right-click the button, or
+use **View > Automation Display > Show Volume / Show Pan / Show Width**, to
+choose the lane directly. TayPE starts on **Volume**.
 
 When automation view is on, every visible track shows the chosen parameter as
 breakpoint lines over the clips. The clips stay visible as a backdrop, but

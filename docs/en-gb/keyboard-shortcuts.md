@@ -57,8 +57,8 @@ currently disabled for take admission.
 
 **Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end.
 
-The **Edit** menu carries the split variants, while the **Tracks** menu carries
-track duplication and deletion.
+The **Edit** menu carries the split variants inside the **Split** submenu,
+while the **Tracks** menu carries track duplication and deletion.
 
 ### Editing
 
@@ -104,6 +104,7 @@ there is no separate user-facing Save command.
 | I | Toggle channel strip panel |
 | F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle automation view |
+| Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |
 | X | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
@@ -111,6 +112,11 @@ there is no separate user-facing Save command.
 | K | Toggle high contrast theme |
 | Cmd+K | Open the virtual keyboard popup |
 | § | Open the Performance Monitor window |
+
+The **View** menu also exposes the same focus, automation, spill, ruler, and
+zoom actions, grouped into **Automation Display**, **Horizontal Zoom**, and
+**Vertical Zoom** submenus. The automation submenu carries the direct
+**Show Volume / Show Pan / Show Width** picks.
 
 ### Zoom
 
@@ -126,6 +132,9 @@ there is no separate user-facing Save command.
 | Shift+- | Zoom out tracks |
 | Option+Shift+- | Reset track height to default |
 | Option+Shift+= | Jump track height to maximum |
+
+On macOS, those same zoom bindings show beside their **View** menu entries in
+the native menu bar.
 
 ### Mouse
 
@@ -169,6 +178,7 @@ is straightforward:
   "zoom_out_horizontal": "-",
   "zoom_reset_horizontal": "alt+-",
   "zoom_max_horizontal": "alt+=",
+  "cycle_automation_display": "shift+a",
   "zoom_in_vertical": "shift+=",
   "zoom_out_vertical": "shift+-",
   "zoom_reset_vertical": "alt+shift+-",

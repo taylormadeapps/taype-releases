@@ -64,19 +64,31 @@ This file is created automatically on first launch with sensible defaults.
 TayPE persists working state automatically while transport is stopped, so
 there is no separate user-facing Save command.
 
+The **Edit** menu carries the split variants inside the **Split** submenu,
+while the **Tracks** menu carries track duplication and deletion.
+
 ### View
 
 | Shortcut | Action |
 |----------|--------|
 | M | Toggle between timeline and mixer |
+| W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
 | I | Toggle channel strip panel |
 | F | Focus view - show only tracks with clips at the tape head |
-| A | Toggle archive view |
+| A | Toggle automation view |
+| Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |
+| X | Toggle archive view |
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
 | K | Toggle high contrast theme |
 | Cmd+K | Open the virtual keyboard popup |
+| § | Open the Performance Monitor window |
+
+The **View** menu also exposes the same focus, automation, spill, ruler, and
+zoom actions, grouped into **Automation Display**, **Horizontal Zoom**, and
+**Vertical Zoom** submenus. The automation submenu carries the direct
+**Show Volume / Show Pan / Show Width** picks.
 
 ### Zoom
 
@@ -84,10 +96,17 @@ there is no separate user-facing Save command.
 |----------|--------|
 | Cmd + mouse wheel | Horizontal zoom (centred on tape head) |
 | Option + mouse wheel | Vertical zoom (anchored to selected track) |
-| = | Zoom in tracks |
-| - | Zoom out tracks |
-| Shift+- | Reset track height to default |
-| Shift+= | Jump track height to maximum |
+| = | Zoom the timeline in around the tape head |
+| - | Zoom the timeline out around the tape head |
+| Option+- | Reset the timeline to the default 16-bar frame level |
+| Option+= | Jump the timeline to maximum horizontal zoom |
+| Shift+= | Zoom in tracks |
+| Shift+- | Zoom out tracks |
+| Option+Shift+- | Reset track height to default |
+| Option+Shift+= | Jump track height to maximum |
+
+On macOS, those same zoom bindings show beside their **View** menu entries in
+the native menu bar.
 
 ### Mouse
 
@@ -113,16 +132,34 @@ is straightforward:
   "add_marker_here": "/",
   "previous_marker": ",",
   "next_marker": ".",
+  "set_left_loop_brace": "[",
+  "set_right_loop_brace": "]",
+  "toggle_loop": "cmd+l",
+  "set_loop_from_selection": "l",
   "go_to_marker_1": "1",
-  "split_clip": "s",
+  "split_clip": "\\",
+  "split_clip_at_loop_braces": "cmd+\\",
+  "split_all_clips_at_playhead": "alt+\\",
+  "split_all_clips_at_loop_braces": "cmd+alt+\\",
   "duplicate_clip": "d",
+  "bounce_clips_to_stem": "b",
+  "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "cmd+alt+d",
-  "zoom_in_vertical": "=",
-  "zoom_out_vertical": "-",
-  "zoom_reset_vertical": "shift+-",
-  "zoom_max_vertical": "shift+=",
-  "toggle_focus": "f"
+  "zoom_in_horizontal": "=",
+  "zoom_out_horizontal": "-",
+  "zoom_reset_horizontal": "alt+-",
+  "zoom_max_horizontal": "alt+=",
+  "cycle_automation_display": "shift+a",
+  "zoom_in_vertical": "shift+=",
+  "zoom_out_vertical": "shift+-",
+  "zoom_reset_vertical": "alt+shift+-",
+  "zoom_max_vertical": "alt+shift+=",
+  "toggle_mixer_width": "w",
+  "toggle_focus": "f",
+  "toggle_automation_view": "a",
+  "toggle_archive_view": "x",
+  "show_performance_monitor": "§"
 }
 ```
 

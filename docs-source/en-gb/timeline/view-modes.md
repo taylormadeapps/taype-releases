@@ -18,9 +18,12 @@ Focus can also be driven by MCP with a specific tag (Focus-by-Tag). When you pic
 ## Automation View
 
 Automation is a separate ruler-header mode, not one of the transport view
-filters above. Press **A** or use the ruler's **A** button to toggle it.
+filters above. Press **A**, use the ruler's **A** button, or use the
+**View** menu to toggle it.
 
-Right-click the ruler **A** button to choose whether the automation overlay
-shows **Volume**, **Pan**, or **Width**. TayPE starts on **Volume**. Volume
-automation draws in yellow, pan automation draws in orange, and width
-automation draws in blue.
+Press **Shift+A** to cycle the displayed automation lane between **Volume**,
+**Pan**, and **Width** while making automation view visible if it was hidden.
+Right-click the ruler **A** button, or use **View > Automation Display > Show
+Volume / Show Pan / Show Width**, to choose the lane directly. TayPE starts
+on **Volume**. Volume automation draws in yellow, pan automation draws in
+orange, and width automation draws in blue.
