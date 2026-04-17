@@ -5,6 +5,9 @@
 Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
 **Option-drag** on a clip body duplicates it at the drop point instead of
 moving the original.
+Hold **Shift** while dragging, or **Option+Shift** while drag-copying, to butt
+the clip against neighbouring clip edges instead of overlapping and creating a
+crossfade.
 Press **Backspace** to disable the selected clips without removing them. Disabled
 clips stay on the timeline, dim visually, and do not sound. Press
 **Delete** when you really want to delete the selected clips.
@@ -47,6 +50,8 @@ glyph to open the MIDI editor directly. When a clip-name pill is clipped, hoveri
 the full clip name even if popup help is turned off.
 Pitch-shifted clips show a small `#` marker in that same pill so you can see
 at a glance that the clip's rendered audio is no longer at source pitch.
+When you drag or trim previously crossfaded clips apart, TayPE clears the old
+crossfade fade handles so the separated clips do not stay accidentally faded.
 
 During playback, TayPE keeps the core clip workflow live: you can rename,
 recolour, disable, trim, move, split, delete, duplicate, copy, paste, and
