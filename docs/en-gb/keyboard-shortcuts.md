@@ -13,7 +13,8 @@ This file is created automatically on first launch with sensible defaults.
 Older bindings files still auto-migrate on load when TayPE can see they are
 just carrying an earlier default layout. That includes the old reversed loop
 pair, the older zoom layout where plain `=` / `-` changed track height, and
-the older snap toggle default where plain `S` was used instead of `Option+S`.
+the short-lived snap layout where `Option+S` toggled snap on/off instead of
+switching snap mode.
 
 ## Default Shortcuts
 
@@ -34,7 +35,8 @@ the older snap toggle default where plain `S` was used instead of `Option+S`.
 | , | Go to previous marker or loop brace |
 | . | Go to next marker or loop brace |
 | Cmd+/ | Set 0 at Playhead for the selected Cut |
-| Option+S | Toggle timeline snap |
+| S | Toggle timeline snap |
+| Option+S | Switch snap between absolute and relative mode |
 
 ### Markers
 
@@ -62,7 +64,8 @@ currently disabled for take admission.
 
 The **Transport** menu now exposes the same bound transport actions directly:
 **Play / Stop**, **Pause**, **Stop**, **Record**, both loop-brace setters,
-**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**, **Snap**, and a
+**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**, **Snap**,
+**Snap Mode**, and a
 **Markers** submenu that also contains direct **Go to Marker** jumps split
 into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
 carries **Select All** / **Deselect All** alongside the split variants inside
@@ -202,7 +205,8 @@ is straightforward:
   "toggle_focus": "f",
   "toggle_automation_view": "a",
   "toggle_archive_view": "x",
-  "toggle_snap": "alt+s",
+  "toggle_snap": "s",
+  "toggle_snap_mode": "alt+s",
   "show_performance_monitor": "`"
 }
 ```
