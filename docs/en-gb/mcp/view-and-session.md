@@ -93,6 +93,9 @@ Select a track (or deselect all).
 
 Undo the last change.
 
+Undo is unavailable while an offline clip render is pending. Wait for the clip
+spinner to clear, then call `undo` again.
+
 **Returns:**
 ```json
 {
@@ -111,6 +114,9 @@ Redo the last undone change. Same return shape as `undo`.
 ### `get_undo_state`
 
 Check undo/redo availability without performing any action.
+
+`canUndo` and `canRedo` return `false` while an offline clip render is pending,
+even if undo history exists.
 
 **Returns:**
 ```json

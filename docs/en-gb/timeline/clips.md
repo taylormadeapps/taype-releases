@@ -26,6 +26,8 @@ selected clip, and the per-clip name, source, and MIDI actions are greyed out.
 Clip Properties now opens without dropping the typing caret straight into the
 name field, so transport and marker shortcuts keep working until you click
 into a text box.
+While a clip render is pending, global undo/redo waits for that render to
+settle so it never restores a half-rendered clip state.
 If that fresh print rings longer than the previous one, TayPE lets the clip
 grow to keep the new tail instead of chopping it back to the old right edge.
 The dialog now groups file references into a collapsible **Media Paths**

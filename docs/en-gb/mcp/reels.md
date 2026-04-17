@@ -105,6 +105,10 @@ name.
 Create an intentional checkpoint in the current reel history. TayPE flushes
 working state first if needed.
 
+Creating a checkpoint also becomes the local undo boundary. Older in-memory
+undo frames are cleared because checkpoint cleanup may remove superseded
+rendered clip audio.
+
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `name` | string | no | Display name for the checkpoint |
