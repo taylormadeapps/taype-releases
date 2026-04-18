@@ -70,7 +70,9 @@ The **Transport** menu now exposes the same bound transport actions directly:
 into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
 carries **Select All** / **Deselect All** alongside the split variants inside
 the **Split** submenu, while the **Tracks** menu carries track creation,
-reordering, duplication, and deletion.
+reordering, duplication, and deletion. On macOS those menu ticks stay in sync
+with toolbar clicks, keyboard shortcuts, and other live state changes instead
+of only reflecting the last path that touched the setting.
 
 ### Editing
 
