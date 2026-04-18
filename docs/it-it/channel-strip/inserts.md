@@ -99,6 +99,10 @@ Plug-in run in a sandboxed process. If a plugin crashes, TayPE keeps running —
 
 The crash alert names the culprit plugin when possible. If TayPE can't attribute it, it says the culprit is unknown and keeps audio running dry.
 
+Se un plug-in impiega troppo a caricarsi, TayPE annulla quel tentativo di
+caricamento, lascia invariato lo slot e ti permette di riprovare dopo aver
+chiuso l'eventuale finestra di autorizzazione o setup del plug-in.
+
 Caricamento in corso a saved plug-in preset happens con transport stopped. TayPE fully
 reloads che insert da the saved preset chunk so processors che ignore hot
 state swaps still come back in the recalled state instead of slipping back to

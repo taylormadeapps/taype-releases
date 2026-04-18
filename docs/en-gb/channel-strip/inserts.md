@@ -303,6 +303,10 @@ Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running —
 
 The crash alert names the culprit plugin when possible. If TayPE can't attribute it, it says the culprit is unknown and keeps audio running dry.
 
+If a plugin load takes too long, TayPE cancels that load attempt, leaves the
+slot unchanged, and lets you try again after the plug-in's own authorisation or
+setup window has finished.
+
 ## Tail Handling
 
 During playback, time-based effects (delay, reverb) keep processing across silent gaps between clips, so tails carry naturally. Pressing **Stop** clears insert tails for a clean restart and sends an emergency MIDI all-notes-off / all-sound-off burst to instrument inserts and any routed **External MIDI Out** targets. If something still hangs, use **Tools > Kill MIDI** to fire that same panic without changing transport state.
