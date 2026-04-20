@@ -83,6 +83,10 @@ If you press **Stop** while recording, TayPE always commits the current pass fir
   take tracks inherit that choice into their real inputs; child take tracks
   themselves hide input, MON, and record arm in the timeline.
 
+Choosing a mono audio source switches a regular audio track to mono strip mode.
+Choosing a stereo source switches it back to stereo. This is only a convenience
+from the UI menu, not a hard routing rule.
+
 When a track switches into instrument mode, input routes automatically change
 to **All MIDI** and `MON` comes on straight away so the new instrument is live
 without another click. When it switches back, MIDI routes reset to default

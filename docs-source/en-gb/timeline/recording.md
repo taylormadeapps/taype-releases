@@ -33,6 +33,10 @@ If you press **Stop** while recording, the head parks at the end of the committe
 - Instrument tracks (instrument insert present): MIDI inputs only (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
 - Bus tracks: the label reads **Sender** for orientation, but there is no input menu or device-input choice there.
 
+Choosing a mono audio source switches a regular audio track to mono strip mode.
+Choosing a stereo source switches it back to stereo. This is only a convenience
+from the UI menu, not a hard routing rule.
+
 When a track switches into instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
 **MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.

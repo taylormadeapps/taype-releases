@@ -324,6 +324,8 @@ Input selection is mode-aware:
 - With an instrument insert loaded, the input menu shows MIDI sources only (All MIDI, Virtual Keyboard, hardware MIDI devices, or None).
 - Without an instrument insert, the input menu shows audio sources only (Default, None, mono channels, stereo pairs).
 
+Choosing a mono audio source from the input menu switches a regular audio track to mono strip mode. Choosing a stereo source switches it back to stereo. This is just a convenience from the UI menu; direct routing commands can still keep a mono input on a stereo strip when you need that.
+
 When you load an instrument insert on an audio-routed track, TayPE automatically switches input to **All MIDI**. When the last instrument insert is removed, MIDI routes reset to default audio input.
 
 Hosted instruments receive TayPE's transport timing, so tempo-synced plugins lock to the DAW's BPM, playhead position, and time signature.
