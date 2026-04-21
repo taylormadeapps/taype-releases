@@ -40,7 +40,7 @@ The summary includes:
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
 - **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
 - **Host CPU** — total TayPE process usage across all logical cores (0–100%)
-- **NAM preamp** — a per-group list showing each batch's channel count and whether it is running on the small or turbo path on a worker or inline
+- **NAM preamp** — NAM batches still show as per-group rows with channel count plus small/turbo and worker/inline state, while Modern and ToTayPE worker preamps show as `W1`, `W2`, etc. so you can see which assigned worker lane each non-NAM set landed on instead of reading one giant aggregate block
 - **Master true summing** — grouped Classic/ToTaype true-summing lanes, including channel count and whether each group ran inline or on a worker
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
