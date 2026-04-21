@@ -54,6 +54,13 @@ out of the EQ before the compressor. Its parameter labels now take the
 stronger panel-label treatment while the live values stay lighter.
 Those popup gain knobs now keep the same sticky `0 dB` centre detent as the
 strip, and double-clicking any of the three resets it straight back to zero.
+The popup also carries the dynamic EQ controls: one shared threshold, three
+centre-detented Low/Mid/High range knobs, and FET/VCA/OPTO detector buttons
+for those bands. Leave a range at `0 dB` and that dynamic band is off. Move a
+range negative for downward movement or positive for upward movement; it can
+still work from a flat static EQ band. If any dynamic range is non-zero, the
+EQ header's spectrum button takes the same hidden-state colour used when the
+popup output trim is active.
 The graph grid is also a touch stronger now, so the popup reads faster without
 turning into graph paper.
 In K-system views, that popup ladder keeps both the red `FS` ceiling tick and
