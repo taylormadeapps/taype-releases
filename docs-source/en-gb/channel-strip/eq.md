@@ -32,6 +32,13 @@ The separate HP/LP filters are still 12 dB/oct curves, but the high-pass now
 gets a slightly more open shoulder so low cuts do not feel cramped, while the
 low-pass stays gentler and more damped.
 
+New channels start with both the `FILTER` and `EQ` sections switched on, but
+the filter is parked at its neutral endpoints: low cut at `0` (`20 Hz`
+stored) and high cut at max (`20 kHz` stored). At those endpoints the filter
+section stays lit but does not process audio. The EQ likewise idles with flat
+static gains and zero dynamic ranges, so it only burns DSP once a band is
+actually doing something.
+
 The EQ header's small spectrum button opens the shared floating **EQ
 Visualiser** window for the current track with the live response curve,
 small `IN` / `OUT` spectrum toggles in the graph's top-right corner, a little
@@ -57,8 +64,10 @@ The graph grid is also a touch stronger now, so the popup reads faster without
 turning into graph paper.
 In K-system views, that popup ladder keeps both the red `FS` ceiling tick and
 the highlighted `0` reference line too.
-The `HI` filter knob's radial lamp now runs in reverse, so a lower low-pass
-cutoff shows a fuller lit arc.
+Both popup filter knobs now read from the right-hand side of the ring. `LO`
+fills from the right as you raise the cutoff, and `HI` also starts from the
+right so a lower low-pass cutoff shows a fuller lit arc while the off state
+lives at max.
 The analyser itself now reads more like a proper RTA too: it compensates the
 window loss and draws log-band energy instead of skinny raw FFT bins, so
 broadband material no longer hugs the graph floor for no good reason.

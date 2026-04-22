@@ -1,14 +1,14 @@
 # Preamp
 
-The preamp operates in one of three modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
+The preamp operates in four modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
 
-**Clean → Modern → NAM → Clean**
+**Clean → Modern → ToTaype → NAM → Clean**
 
-That button now shows only the current mode text. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
+That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
 ## Clean Gain (default)
 
-The preamp is off. Your trim setting passes through with no colour or saturation. Every new track starts here.
+The preamp starts enabled in its neutral clean mode. Your trim setting passes through with no colour or saturation until you switch into a colour stage. Every new track starts here.
 
 ## Modern
 

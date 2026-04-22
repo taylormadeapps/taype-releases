@@ -8,7 +8,7 @@ That button now shows only the current mode text. In ToTaype mode, the speed pil
 
 ## Clean Gain (default)
 
-The preamp is in its neutral clean mode. Your trim setting passes through with no colour or saturation. Every new track starts here.
+The preamp starts enabled in its neutral clean mode. Your trim setting passes through with no colour or saturation until you switch into a colour stage. Every new track starts here.
 The `IN:` / `OUT:` mini meters still stay live in Clean, so you can judge the
 level hitting the preamp slot and the level leaving it even when there is no
 saturation stage engaged.
