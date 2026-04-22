@@ -55,13 +55,18 @@ Open **Tools -> Plugin Manager** to organise the scanner catalogue before you
 pick plugins from the channel strip.
 
 - The **Enabled** checkbox controls whether a validated plugin appears in the insert menu.
-- **Status** shows whether a plugin is **Validated**, **Disabled**, **Failed**, or queued for **Rescan** on the next launch.
+- **Status** shows whether a plugin is **Validated**, **Disabled**, **Needs Attention**, **Failed**, or queued for **Rescan** on the next launch.
 - **Type** separates instruments from effects.
 - **Manufacturer** helps sort and filter larger collections.
 - **Menu Path** lets you build your own nested insert menus. Type a path like
   `Dynamics/Compressors/Classics` and TayPE will create those child menus under
   **Effects** or **Instruments**. Slashes are the separator; backslashes are
   converted automatically when you commit the field.
+
+If a plug-in lands in **Needs Attention**, TayPE timed out waiting for it
+during the background scan but keeps it available so you can try loading it
+deliberately from an insert slot once you are ready to deal with any auth or
+vendor UI.
 
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
