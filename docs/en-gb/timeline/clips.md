@@ -19,8 +19,9 @@ Double-click a clip to open **Taype — Clip Properties**. That's where you rena
 recolour or disable the clip, inspect its source paths, reveal those files in
 Finder from the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
 TayPE's **Taype — MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
-through the track's current instrument. The same dialog now shows the clip's
-current source window, stretch ratio, and offline pitch in **semitones** plus
+through the clip's current instrument. For comp takes, that means the
+instrument on the parent comp track, not the child take lane. The same dialog
+now shows the clip's current source window, stretch ratio, and offline pitch in **semitones** plus
 **cents**, with an **Apply** button beside those pitch fields. If the clip you
 double-click is part of the current multi-selection, **Taype — Clip Properties**
 flips into a batch mode: clip colour and the disable toggle still edit the
