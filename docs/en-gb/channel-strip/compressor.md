@@ -2,6 +2,10 @@
 
 A dynamics processor for controlling level and adding punch.
 
+The section power button bypasses the full compressor stage. When it is off,
+both gain reduction and makeup gain are skipped, so the section returns to
+unity instead of leaving makeup boost in circuit.
+
 | Parameter | Default | Range |
 |-----------|---------|-------|
 | Threshold | -20 dB | -60 to 0 dB |
