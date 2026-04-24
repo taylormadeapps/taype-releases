@@ -114,6 +114,11 @@ strip-style knobs intact.
 Under the hood, the stereo and Dual Stereo lanes use the same long-IR-tuned
 non-uniform engine and only process the active live block, so big room pairs
 do not waste CPU on dead scratch-buffer space.
+Taype Rooms also keeps its convolver work internally chunked, so heavyweight
+Factory rooms do not inherit the sandbox's larger allocation headroom as extra
+latency or avoidable live CPU.
+Its **Eco** mode now makes a deliberate reverb tradeoff: lower live CPU in
+exchange for a small fixed delay reported to TayPE for compensation.
 The sandbox return path also waits to the actual render-block deadline before
 it gives up, so a heavy room should not spit dry fallback glitches just
 because the old proxy wait budget guessed low.
