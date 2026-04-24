@@ -117,8 +117,8 @@ do not waste CPU on dead scratch-buffer space.
 Taype Rooms also keeps its convolver work internally chunked, so heavyweight
 Factory rooms do not inherit the sandbox's larger allocation headroom as extra
 latency or avoidable live CPU.
-Its **Eco** mode now makes a deliberate reverb tradeoff: lower live CPU in
-exchange for a small fixed delay reported to TayPE for compensation.
+Taype Rooms no longer exposes an **Eco** switch; every instance stays on the
+zero-latency non-uniform convolution path.
 The sandbox return path also waits to the actual render-block deadline before
 it gives up, so a heavy room should not spit dry fallback glitches just
 because the old proxy wait budget guessed low.
