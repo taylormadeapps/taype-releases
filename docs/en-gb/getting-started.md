@@ -198,8 +198,8 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   output pair, default stereo input, default mono input, sample rate, buffer
   size, hardware error compensation, Audio worker cores, Resampling, and NAM
   changes together.
-- The **Master output pair** list only offers normal stereo hardware pairs
-  such as `1-2`, `3-4`, `5-6`, and so on.
+- The **Master output pair** and **Default stereo input** lists only offer
+  normal stereo hardware pairs such as `1-2`, `3-4`, `5-6`, and so on.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
 - On a fresh install, or after upgrading from an older build that never saved
