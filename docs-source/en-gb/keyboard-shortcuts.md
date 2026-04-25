@@ -50,12 +50,14 @@ This file is created automatically on first launch with sensible defaults.
 | S | Split selected clip at the tape head |
 | D | Duplicate selected clip back-to-back |
 | Cmd+D | Duplicate selected track without clips |
-| Cmd+Option+D | Duplicate selected track with clips |
+| Option+D | Duplicate selected track with clips |
+| Cmd+Backspace | Archive or unarchive the selected non-master track |
+| Cmd+Delete | Delete selected non-master track |
 | Cmd+X | Cut selected clip |
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Toggle clip disable for the selected clips |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -163,7 +165,9 @@ is straightforward:
   "bounce_clips_to_stem": "b",
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
-  "duplicate_track": "cmd+alt+d",
+  "duplicate_track": "alt+d",
+  "archive_track": "cmd+backspace",
+  "delete_track": "cmd+delete",
   "zoom_in_horizontal": "=",
   "zoom_out_horizontal": "-",
   "zoom_reset_horizontal": "alt+-",

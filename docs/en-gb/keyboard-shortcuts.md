@@ -86,7 +86,9 @@ of only reflecting the last path that touched the setting.
 | B | Bounce selected clips to one new stem track |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
-| Cmd+Option+D | Duplicate selected track with clips |
+| Option+D | Duplicate selected track with clips |
+| Cmd+Backspace | Archive or unarchive the selected non-master track |
+| Cmd+Delete | Delete selected non-master track |
 | Cmd+X | Cut selected clips |
 | Cmd+C | Copy selected clips |
 | Cmd+V | Paste copied clip group at tape head position |
@@ -193,7 +195,9 @@ is straightforward:
   "bounce_clips_to_stem": "b",
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
-  "duplicate_track": "cmd+alt+d",
+  "duplicate_track": "alt+d",
+  "archive_track": "cmd+backspace",
+  "delete_track": "cmd+delete",
   "zoom_in_horizontal": "=",
   "zoom_out_horizontal": "-",
   "zoom_reset_horizontal": "alt+-",
