@@ -117,11 +117,11 @@ do not waste CPU on dead scratch-buffer space.
 Taype Rooms trims leading and trailing silence from IR files when it loads
 them, keeping the useful room response while avoiding avoidable convolution
 work on dead ends.
-Taype Rooms also keeps its convolver work internally chunked, so heavyweight
-Factory rooms do not inherit the sandbox's larger allocation headroom as extra
-latency or avoidable live CPU.
-Taype Rooms no longer exposes an **Eco** switch; every instance stays on the
-zero-latency non-uniform convolution path.
+Taype Rooms defaults to **HQ Off**, which uses an internally latent wet engine
+with its impulse tail truncated at -80 dB for lower CPU while keeping the dry
+path immediate and reporting no host PDC.
+Switch **HQ On** when you want the zero-latency non-uniform convolution path
+used by earlier Taype Rooms builds.
 The sandbox return path also waits to the actual render-block deadline before
 it gives up, so a heavy room should not spit dry fallback glitches just
 because the old proxy wait budget guessed low.
