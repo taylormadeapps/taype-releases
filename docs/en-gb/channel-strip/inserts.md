@@ -118,7 +118,7 @@ Taype Rooms trims leading and trailing silence from IR files when it loads
 them, keeping the useful room response while avoiding avoidable convolution
 work on dead ends.
 Taype Rooms defaults to **HQ Off**, which uses an internally latent wet engine
-with its impulse tail truncated at -80 dB for lower CPU while keeping the dry
+with its impulse tail truncated at -70 dB for lower CPU while keeping the dry
 path immediate and reporting no host PDC.
 Switch **HQ On** when you want the zero-latency non-uniform convolution path
 used by earlier Taype Rooms builds.
