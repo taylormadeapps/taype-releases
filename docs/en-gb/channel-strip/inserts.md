@@ -114,6 +114,9 @@ strip-style knobs intact.
 Under the hood, the stereo and Dual Stereo lanes use the same long-IR-tuned
 non-uniform engine and only process the active live block, so big room pairs
 do not waste CPU on dead scratch-buffer space.
+Taype Rooms trims leading and trailing silence from IR files when it loads
+them, keeping the useful room response while avoiding avoidable convolution
+work on dead ends.
 Taype Rooms also keeps its convolver work internally chunked, so heavyweight
 Factory rooms do not inherit the sandbox's larger allocation headroom as extra
 latency or avoidable live CPU.
