@@ -47,7 +47,10 @@ The browser has two tabs:
 
 - **Local** opens first. If the current local list contains favourites, TayPE splits it into **Favourites** and **All** with favourites pinned at the top. If there are no favourites in the current scope, it stays as one flat list. Single-model packages load straight away. Multi-model packages expand inline so you can choose the exact capture variant you want.
 - **TONE3000** is the online catalogue. Search results are package rows, not single files. The browser shows the package thumbnail, creator, model count, and the architectures inside it.
+- Tone-backed package rows in both tabs show a yellow **More info >>** link that opens that package page on tone3000.com. The artwork and title stay passive, so opening the site is always an explicit action.
 - On the **TONE3000** tab, each package row carries its own **Download** button, so the footer only keeps **Cancel** instead of repeating that action.
+- If that package is already on disk, the same row button changes to **Downloaded**. Click it to jump straight to that package on the **Local** tab.
+- Finishing a TONE3000 download flips the browser back to **Local**, selects the downloaded package, and expands it straight away when that package contains multiple models.
 
 The **Architecture** filter lives on the **Local** tab. That is where TayPE knows the real model files on disk, so filters like **AMX Compatible**, **LSTM**, and **WaveNet** are based on known local model metadata instead of guesswork from the online catalogue.
 
@@ -57,7 +60,7 @@ The search bar keeps an `x` button beside it, so you can clear the current searc
 Popup help now covers the floating browser as well, including the search bar,
 filters, tabs, package list, and footer actions.
 
-Downloading from TONE3000 pulls the whole package, not just one file. Once the package is local, model choice happens from the Local tab where the variants are listed explicitly. Starred packages stay starred in both tabs.
+Downloading from TONE3000 pulls the whole package, not just one file. Once the package is local, the browser lands back on the Local tab with that package selected, and multi-model packages are already expanded so the variants are right there. Starred packages stay starred in both tabs.
 
 ### NAM Controls
 
