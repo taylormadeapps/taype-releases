@@ -68,9 +68,9 @@ Update a track's properties. Only provided fields are changed.
 | `position` | number | no | 0-based display index (reorders track) |
 | `tags` | array | no | Replace track tags with an array of tag strings |
 | `preamp_enabled` | boolean | no | Włącz/disable channel preamp |
-| `preamp_drive` | number | no | Przedwzmacniacz drive: 0.0 to 36.0 dB |
+| `preamp_drive` | number | no | Przedwzmacniacz drive: Modern/NAM 0.0 to 18.0 dB, ToTaype centred control -0.5 to +0.5 |
 | `preamp_auto_gain` | boolean | no | Auto-gain compensation |
-| `preamp_manual_gain` | number | no | Manual output gain: -36.0 to +12.0 dB |
+| `preamp_manual_gain` | number | no | Manual output gain: Modern/NAM -18.0 to +12.0 dB, ToTaype centred control -0.5 to +0.5 |
 | `preamp_hp_freq` | number | no | Saturation HP filter: 20.0 to 500.0 Hz |
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |

@@ -12,7 +12,7 @@ Load a NAM profile on a track's preamp. Requires transport stopped.
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
 | `profile` | string | yes | NAM profile filename (e.g. "1073_Hot.nam") |
-| `output_gain` | number | no | Post-NAM output gain in dB (default: 0.0) |
+| `output_gain` | number | no | Post-NAM output gain in dB, -18.0 to +12.0 (default: 0.0) |
 
 **Returns:** `{ "track_id": "...", "profile": "1073_Hot.nam", "tone_id": "abc123", "architecture": "WaveNet", "output_gain": 0.0 }`
 
@@ -54,8 +54,8 @@ Load a NAM summing profile on the master bus. Requires transport stopped.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `profile` | string | yes | NAM profile filename |
-| `drive` | number | no | Input drive in dB (default: 0.0) |
-| `output_gain` | number | no | Output gain in dB (default: 0.0) |
+| `drive` | number | no | Input drive in dB, 0.0 to +18.0 (default: 0.0) |
+| `output_gain` | number | no | Output gain in dB, -18.0 to +12.0 (default: 0.0) |
 
 **Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "tone_id": "abc123", "architecture": "LSTM", "drive": 6.0, "output_gain": 0.0 }`
 

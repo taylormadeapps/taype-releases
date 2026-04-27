@@ -12,7 +12,7 @@ NAM プリアンププロファイル、ミックスバスサミング、TONE300
 |-------|------|----------|-------------|
 | `track_id` | string | はい | 対象トラック |
 | `profile` | string | はい | NAM プロファイルのファイル名（例: `"1073_Hot.nam"`） |
-| `output_gain` | number | いいえ | NAM 後段の出力ゲイン（dB、既定: 0.0） |
+| `output_gain` | number | いいえ | NAM 後段の出力ゲイン（-18.0 から +12.0 dB、既定: 0.0） |
 
 **戻り値:** `{ "track_id": "...", "profile": "1073_Hot.nam", "architecture": "WaveNet", "output_gain": 0.0 }`
 
@@ -54,8 +54,8 @@ NAM プリアンププロファイル、ミックスバスサミング、TONE300
 | パラメータ | 型 | 必須 | 説明 |
 |-------|------|----------|-------------|
 | `profile` | string | はい | NAM プロファイルのファイル名 |
-| `drive` | number | いいえ | 入力ドライブ（dB、既定: 0.0） |
-| `output_gain` | number | いいえ | 出力ゲイン（dB、既定: 0.0） |
+| `drive` | number | いいえ | 入力ドライブ（0.0 から +18.0 dB、既定: 0.0） |
+| `output_gain` | number | いいえ | 出力ゲイン（-18.0 から +12.0 dB、既定: 0.0） |
 
 **戻り値:** `{ "enabled": true, "profile": "SSL_4000G.nam", "architecture": "LSTM", "drive": 6.0, "output_gain": 0.0 }`
 

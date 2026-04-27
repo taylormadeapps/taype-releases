@@ -18,6 +18,8 @@ saturation stage engaged.
 A soft-sine drive stage for adding warmth and saturation. The onset is meant
 to come on gradually, so higher drive blooms into colour before it turns into
 real crunch.
+Modern drive runs from 0 to +18 dB. The OUT control trims the processed
+signal from -18 to +12 dB.
 The PREAMP header always carries its own power button. That button bypasses or
 re-enables the whole preamp section during playback without changing the
 selected mode, so Clean stays Clean and Modern or NAM keep their settings.
@@ -65,8 +67,8 @@ Downloading from TONE3000 pulls the whole package, not just one file. Once the p
 ### NAM Controls
 
 - **Trim** is always visible and always pre-NAM — higher trim drives the model harder, like pushing a real preamp.
-- **Drive** still applies before the NAM model itself, even when **NAM AMX Acceleration** is grouping multiple strips behind the scenes, so grouped NAM tracks react to drive the same way as standalone ones.
-- **Output Gain** is a level control after the model.
+- **Drive** still applies before the NAM model itself, from 0 to +18 dB, even when **NAM AMX Acceleration** is grouping multiple strips behind the scenes, so grouped NAM tracks react to drive the same way as standalone ones.
+- **Output Gain** trims the level after the model from -18 to +12 dB.
 - **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
 - **SAFE** is not shown in NAM mode because that control no longer exists on the strip.
 
