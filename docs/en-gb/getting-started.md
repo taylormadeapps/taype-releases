@@ -223,33 +223,33 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   pointing at the same hardware tail. Either default input can be **None**,
   and when the current mode's default is unset the track simply shows
   **No Input** until you choose a real route.
-- If **Resampling** is **off**, the Sample rate field stays read-only once the
-  interface is already back at **48 kHz**.
-- With Resampling off, TayPE will try to switch your interface to **48 kHz**
-  automatically after you apply the staged audio change, and whenever the live
-  device changes elsewhere.
+- If **Resampling** is **off**, the Sample rate field stages **48 kHz** as
+  the target.
+- With Resampling off, TayPE makes one controlled attempt to switch your
+  interface to **48 kHz** when you apply the staged audio change. If the
+  interface reports another rate, TayPE accepts it, turns Resampling back on,
+  saves that choice, and shows a 10-second red warning banner.
+- If the live device sample rate changes outside TayPE, TayPE does not fight
+  the hardware. It rolls with the rate Core Audio reports: non-48 kHz turns
+  Resampling on, 48 kHz turns it off.
 - You can park the **Input** or **Output** device on **none** while lining up
   a new combination. TayPE only commits that staged setup when you press
   **Apply Audio Changes**.
 - If the driver rejects any staged device combination, TayPE restores the last
   working audio setup and shows the failure instead of snapping the controls
   back behind your back.
-- If your interface is not at 48 kHz while Resampling is off, TayPE flags this
-  with a persistent red banner at the top of the window and tells you to
-  engage Resampling. The Sample rate picker also re-opens in that state and
-  always includes **48 kHz** as the native recovery target, so you can drive
-  the interface back to TayPE's fixed-rate lane without enabling Resampling
-  first. When you pick **48 kHz**, TayPE now makes a real 48 kHz device-open
-  attempt instead of silently falling back to the old hardware rate. If that
-  input/output combination truly cannot run at 48 kHz, TayPE restores the last
-  working setup and shows the failure.
+- If your interface is not at 48 kHz, TayPE keeps the engine running at
+  **48 kHz** and resamples audio in and out at the boundary. This is a
+  compatibility/survival mode: it adds a little buffering latency so the engine
+  and plugins still see stable 48 kHz blocks.
 - If **Resampling** is **on**, you can change the interface sample rate in the
   Audio settings while TayPE continues processing internally at 48 kHz.
 - **Hardware error compensation (samples)** lets you add or subtract a small
   signed sample trim when the real rig lands consistently late or early versus
   the driver report. Positive values mean "this box is actually later than
-  Core Audio says." TayPE folds that trim into recording compensation and the
-  default MIDI Out timing estimate.
+  Core Audio says." TayPE folds that trim, driver latency, and any boundary
+  resampling latency into recording compensation and the default MIDI Out timing
+  estimate.
 - **Audio worker cores** defaults to **Allow efficiency cores**. On
   heterogeneous Apple Silicon systems, that lets TayPE use a `total_cores - 1`
   worker pool while still reserving the `performance_cores - 1` heavy lanes
