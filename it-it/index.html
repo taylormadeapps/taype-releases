@@ -439,21 +439,26 @@ dialog#screenshot-zoom {
     border: none;
     padding: 0;
     background: transparent;
+    width: 100vw;
+    height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
-    overflow: visible;
+    overflow: auto;
 }
 dialog#screenshot-zoom::backdrop {
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(0, 0, 0, 0.92);
     cursor: zoom-out;
 }
 dialog#screenshot-zoom img {
-    max-width: 96vw;
-    max-height: 96vh;
+    /* Show at the image's natural pixel size — user scrolls within the
+       dialog to pan around if the image is larger than the viewport.
+       This is "click to actually zoom" rather than "click to enlarge a bit". */
+    max-width: none;
+    max-height: none;
     width: auto;
     height: auto;
     display: block;
-    border-radius: 8px;
+    margin: 0 auto;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
     cursor: zoom-out;
 }
@@ -869,6 +874,22 @@ footer {
 <hr class="section-divider">
 
 <!-- ============================================================ -->
+<!-- Accessibility Banner                                         -->
+<!-- ============================================================ -->
+
+<div class="a11y-banner" id="features">
+    <h2 id="a11y-heading">Built for Everyone</h2>
+    <p id="a11y-copy">
+        <strong>Craft requires access.</strong>
+        <strong>Accessibility is not a feature. It's a foundation.</strong>
+        TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
+        Every state is conveyed with shape and icon, never colour alone.
+        Keyboard shortcuts for every action. Because the interface must meet
+        musicians where they are.
+    </p>
+</div>
+
+<!-- ============================================================ -->
 <!-- Tone Architecture                                            -->
 <!-- ============================================================ -->
 
@@ -919,7 +940,7 @@ footer {
 <!-- Philosophy + Features                                        -->
 <!-- ============================================================ -->
 
-<section class="philosophy" id="features">
+<section class="philosophy" id="philosophy">
     <h2 id="philosophy-heading">Make the Record</h2>
     <p id="philosophy-copy-1">
         TayPE exists to help you finish real takes, not drown in endless options.
@@ -963,22 +984,6 @@ footer {
 </section>
 
 <hr class="section-divider">
-
-<!-- ============================================================ -->
-<!-- Accessibility Banner                                         -->
-<!-- ============================================================ -->
-
-<div class="a11y-banner">
-    <h2 id="a11y-heading">Built for Everyone</h2>
-    <p id="a11y-copy">
-        <strong>Craft requires access.</strong>
-        <strong>Accessibility is not a feature. It's a foundation.</strong>
-        TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
-        Every state is conveyed with shape and icon, never colour alone.
-        Keyboard shortcuts for every action. Because the interface must meet
-        musicians where they are.
-    </p>
-</div>
 
 <!-- ============================================================ -->
 <!-- Pricing                                                      -->
@@ -1080,8 +1085,8 @@ footer {
         </div>
         <div class="community-card">
             <h3 id="community-card-3-title">Bug Reports</h3>
-            <p id="community-card-3-body">Found something broken? File a GitHub issue. We read every one and fix what matters.</p>
-            <a id="community-card-3-link" href="https://github.com/taylormadeapps/taype-releases/issues/new" class="link-arrow" target="_blank">Report a bug &rarr;</a>
+            <p id="community-card-3-body">Found something broken? Drop us a bug report. We read every one and fix what matters.</p>
+            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Report a bug &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-4-title">Follow Along</h3>
@@ -1108,7 +1113,7 @@ footer {
         <a id="footer-download" href="#download">Let's Roll</a>
         <a id="footer-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
         <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
-        <a id="footer-bug" href="https://github.com/taylormadeapps/taype-releases/issues/new" target="_blank">Bug Report</a>
+        <a id="footer-bug" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Bug Report</a>
     </div>
     <p id="footer-copy" class="footer-copy">
         &copy; 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd.
