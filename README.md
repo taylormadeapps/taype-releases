@@ -27,7 +27,7 @@ Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https:/
 
 | License | Price | Who |
 |---------|-------|-----|
-| Personal / Small Business | TBC | Individuals and small businesses |
+| Personal                  | £75 | Individual artists, hobbyists, small studios |
 | Commercial | TBC | Businesses and organisations |
 
 All licenses include 2 major versions of free updates.

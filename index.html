@@ -412,15 +412,41 @@ h2 {
 }
 
 .screenshot-row img {
-    max-height: 400px;
+    max-height: 600px;
+    max-width: 100%;
     width: auto;
     border-radius: 8px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s;
+    cursor: zoom-in;
 }
 .screenshot-row img:hover {
     transform: scale(1.02);
+}
+
+/* Screenshot lightbox (native <dialog>) */
+dialog#screenshot-zoom {
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: visible;
+}
+dialog#screenshot-zoom::backdrop {
+    background: rgba(0, 0, 0, 0.88);
+    cursor: zoom-out;
+}
+dialog#screenshot-zoom img {
+    max-width: 96vw;
+    max-height: 96vh;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    cursor: zoom-out;
 }
 
 /* ---- Pricing ---- */
@@ -978,7 +1004,7 @@ footer {
 
     <div class="pricing-cards">
         <div class="price-card featured">
-            <h3 id="price-personal-title">Personal / Small Business</h3>
+            <h3 id="price-personal-title">Personal</h3>
             <div class="price">£75</div>
             <p id="price-personal-note" class="price-note">one-time purchase</p>
             <ul>
@@ -1001,10 +1027,8 @@ footer {
 
     <div class="price-accessibility">
         <p>
-            <span id="accessibility-note">Students free. Accessibility discount. Just ask.</span>
-            <br><a id="accessibility-instagram" href="https://instagram.com/ruminantrecords" target="_blank">Instagram &rarr;</a>
-            &nbsp;
-            <a id="accessibility-reddit" href="https://www.reddit.com/message/compose/?to=ruminantrecords" target="_blank">Reddit &rarr;</a>
+            <span id="accessibility-note">Students free. Accessibility concessions. Just ask.</span>
+            <br><a id="accessibility-mailto" href="mailto:concessions@ruminantaudioworks.com">concessions@ruminantaudioworks.com</a>
         </p>
     </div>
 </section>
@@ -1102,6 +1126,11 @@ footer {
 <!-- ============================================================ -->
 <!-- Gregism rotator                                              -->
 <!-- ============================================================ -->
+
+
+<dialog id="screenshot-zoom" aria-label="Screenshot, full size">
+    <img src="" alt="">
+</dialog>
 
 <script src="/assets/site.js"></script>
 

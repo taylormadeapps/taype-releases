@@ -34,7 +34,7 @@ const locales = {
         quoteOpen: "\u201c",
         quoteClose: "\u201d",
         title: "TayPE - Craft first. Accessible by design. Robots welcome too.",
-        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 accessible. MCP native. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Make the Record",
         ogDescription: "Craft first. Accessible by design. Robots welcome too.",
         text: {
@@ -61,9 +61,9 @@ const locales = {
             "tone-card-3-body": "Coming soon: per-channel NAM processing before the sum \u2014 every track through its own console channel, just like pushing 24 signals through a real analogue desk. Shared weights, batched matrix inference on Apple Silicon. Full console emulation at a fraction of the CPU cost.",
             "philosophy-heading": "Make the Record",
             "philosophy-copy-1": "TayPE exists to help you finish real takes, not drown in endless options. A multitrack DAW with the soul of a tape machine. Fewer modes, fewer knobs, more truth.",
-            "philosophy-copy-2": "Built from the ground up with accessibility at its core. WCAG 2.2 AA compliant. High-contrast mode. Keyboard navigable. Because musicians are not all sighted, all hearing, or all able-bodied.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Accessible by Design",
-            "feature-a11y-body": "WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. Screen-reader compatible labels. Designed for every musician, not just the ones who can see 12px text on a dark background.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "MCP Integration",
             "feature-mcp-body": "Optional machine assistance for batch edits and session management. Automate the admin, not the art. TayPE remains deterministic and transactional at its core \u2014 MCP enhances workflow without replacing craft.",
             "feature-focus-title": "Focus Over Clutter",
@@ -87,7 +87,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Personal / Small Business",
+            "price-personal-title": "Personal",
             "price-personal-note": "one-time purchase",
             "price-personal-feature-1": "Full application, all features",
             "price-personal-feature-2": "2 major versions of free updates",
@@ -101,9 +101,7 @@ const locales = {
             "education-copy": "Free for students. DM us for a discount code.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Let's Roll",
             "download-copy": "TayPE is in active development. Follow us for release announcements and early access.",
             "download-apply": "Apply for the Private Beta",
@@ -133,7 +131,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "TayPE logo" },
@@ -169,7 +167,7 @@ const locales = {
         quoteOpen: "\u300c",
         quoteClose: "\u300d",
         title: "TayPE - クラフト優先。設計段階からアクセシブル。ロボットも歓迎。",
-        metaDescription: "TayPE は、ソフトと格闘するのではなく、ちゃんと曲を仕上げたいミュージシャンのためのマルチトラック DAW です。WCAG 2.2 対応。MCP ネイティブ。macOS 向け。",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - レコードを作れ",
         ogDescription: "クラフト優先。設計段階からアクセシブル。ロボットも歓迎。",
         text: {
@@ -196,9 +194,9 @@ const locales = {
             "tone-card-3-body": "近日公開: サムの前段で、各チャンネルごとに NAM 処理を走らせます。24 本の信号を本物のアナログ卓へ押し込むように、各トラックが自分専用のコンソールチャンネルを通ります。共有ウェイトと Apple Silicon 上のバッチ行列推論で、CPU を抑えつつフルコンソールエミュレーションを実現します。",
             "philosophy-heading": "レコードを作れ",
             "philosophy-copy-1": "TayPE は、無限の選択肢に溺れるためではなく、実際のテイクを仕上げるためにあります。テープマシンの魂を持ったマルチトラック DAW。モードは少なく、ノブも少なく、真実は多く。",
-            "philosophy-copy-2": "アクセシビリティを中心に据えてゼロから組み上げました。WCAG 2.2 AA 準拠。高コントラストモード。キーボード操作対応。ミュージシャンは、全員が見えるわけでも、聞こえるわけでも、身体条件が同じでもありません。",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "設計段階からアクセシブル",
-            "feature-a11y-body": "WCAG 2.2 AA。高コントラストテーマ。完全なキーボードナビゲーション。スクリーンリーダー互換ラベル。暗い背景に 12px の文字が見える人だけのためではなく、すべてのミュージシャンのために設計しています。",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "MCP 連携",
             "feature-mcp-body": "バッチ編集やセッション管理に、必要なら機械の助けを借りられます。自動化するのは事務作業であって、創作ではありません。TayPE の核はあくまで決定論的でトランザクショナルです。MCP はクラフトを置き換えず、流れを助けます。",
             "feature-focus-title": "散らかりよりフォーカス",
@@ -222,7 +220,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "個人 / 小規模事業者",
+            "price-personal-title": "個人",
             "price-personal-note": "買い切り",
             "price-personal-feature-1": "フルアプリケーション、全機能込み",
             "price-personal-feature-2": "2 メジャーバージョン分の無償アップデート",
@@ -236,9 +234,7 @@ const locales = {
             "education-copy": "学生と教育機関は無償です。割引コードが必要なら DM をください。",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "さあ始めよう",
             "download-copy": "TayPE は現在も開発中です。リリース告知と早期アクセス情報は、各チャンネルで追ってください。",
             "download-apply": "Apply for the Private Beta",
@@ -268,7 +264,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE は Ruminant Audio Works Ltd. のプロダクトです。"
         },
         html: {
-            "a11y-copy": "<strong>良い制作にはアクセスが要る。</strong> <strong>アクセシビリティは機能ではなく土台です。</strong> TayPE は全体で WCAG 2.2 AA を目標にしています。高コントラストモードではテキスト比 15:1 以上。すべての状態は色だけでなく、形とアイコンでも伝えます。あらゆる操作にキーボードショートカットがあります。インターフェイスは、ミュージシャンがいる場所に届かなければいけません。"
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "TayPE ロゴ" },
@@ -304,7 +300,7 @@ const locales = {
         quoteOpen: "\u00ab\u00a0",
         quoteClose: "\u00a0\u00bb",
         title: "TayPE - Le geste d'abord. Accessible dès la conception. Les robots aussi sont les bienvenus.",
-        metaDescription: "TayPE est une DAW multipiste pour les musicien·nes qui veulent finir des disques, pas se battre avec le logiciel. Conforme WCAG 2.2. MCP natif. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Fais le disque",
         ogDescription: "Le geste d'abord. Accessible dès la conception. Les robots aussi sont les bienvenus.",
         text: {
@@ -331,9 +327,9 @@ const locales = {
             "tone-card-3-body": "Bientôt : traitement NAM par canal avant la somme. Chaque piste passera par son propre canal de console, comme 24 signaux poussés dans une vraie desk analogique. Poids partagés, inférence matricielle batchée sur Apple Silicon. Une émulation de console complète pour une fraction du CPU.",
             "philosophy-heading": "Fais le disque",
             "philosophy-copy-1": "TayPE existe pour vous aider à finir de vraies prises, pas à vous noyer dans des options sans fin. Une DAW multipiste avec l'âme d'un magnétophone. Moins de modes, moins de boutons, plus de vérité.",
-            "philosophy-copy-2": "Construit dès le départ autour de l'accessibilité. Conforme WCAG 2.2 AA. Mode à fort contraste. Navigation complète au clavier. Parce que les musicien·nes ne sont pas tous voyants, tous entendants, ni tous valides.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Accessible dès la conception",
-            "feature-a11y-body": "WCAG 2.2 AA. Thème à fort contraste. Navigation clavier complète. Libellés compatibles avec les lecteurs d'écran. Pensé pour chaque musicien, pas seulement pour ceux qui voient du texte en 12 px sur fond sombre.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Intégration MCP",
             "feature-mcp-body": "Assistance machine en option pour les éditions par lots et la gestion de session. Automatisez l'administratif, pas l'art. TayPE reste déterministe et transactionnel au cœur ; MCP accélère le flux sans remplacer le craft.",
             "feature-focus-title": "Le focus avant le bazar",
@@ -357,7 +353,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Personnel / Petite entreprise",
+            "price-personal-title": "Personnel",
             "price-personal-note": "achat unique",
             "price-personal-feature-1": "Application complète, toutes les fonctions",
             "price-personal-feature-2": "2 versions majeures de mises à jour gratuites",
@@ -371,9 +367,7 @@ const locales = {
             "education-copy": "Gratuit pour les étudiant·es et les enseignant·es. Envoyez-nous un message pour un code de réduction.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "C'est parti",
             "download-copy": "TayPE est en développement actif. Suivez-nous pour les annonces de sortie et l'accès anticipé.",
             "download-apply": "Apply for the Private Beta",
@@ -403,7 +397,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE est un produit de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Le craft demande l'accès.</strong> <strong>L'accessibilité n'est pas une option. C'est la base.</strong> TayPE vise le niveau WCAG 2.2 AA partout. Mode à fort contraste avec des ratios de texte de 15:1 et plus. Chaque état est signalé par la forme et l'icône, jamais par la couleur seule. Des raccourcis clavier pour chaque action. L'interface doit rejoindre les musicien·nes là où ils sont."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -439,7 +433,7 @@ const locales = {
         quoteOpen: "\u201e",
         quoteClose: "\u201c",
         title: "TayPE - Handwerk zuerst. Barrierefrei von Anfang an. Roboter sind auch willkommen.",
-        metaDescription: "TayPE ist eine Multitrack-DAW für Musikerinnen und Musiker, die Platten fertig machen wollen statt mit Software zu kämpfen. WCAG-2.2-barrierefrei. MCP nativ. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Mach die Platte",
         ogDescription: "Handwerk zuerst. Barrierefrei von Anfang an. Roboter sind auch willkommen.",
         text: {
@@ -466,9 +460,9 @@ const locales = {
             "tone-card-3-body": "Demnächst: NAM-Verarbeitung pro Kanal vor der Summe \u2014 jede Spur durch ihren eigenen Konsolenkanal, als würdest du 24 Signale durch ein echtes Analogpult schicken. Gemeinsame Gewichte, gebatchte Matrix-Inferenz auf Apple Silicon. Volle Konsolenemulation zu einem Bruchteil der CPU-Kosten.",
             "philosophy-heading": "Mach die Platte",
             "philosophy-copy-1": "TayPE ist dafür da, dir beim Fertigmachen echter Takes zu helfen, nicht beim Ertrinken in endlosen Optionen. Eine Multitrack-DAW mit der Seele einer Bandmaschine. Weniger Modi, weniger Knöpfe, mehr Wahrheit.",
-            "philosophy-copy-2": "Von Grund auf mit Accessibility im Kern gebaut. WCAG 2.2 AA-konform. High-Contrast-Modus. Voll per Tastatur bedienbar. Denn Musikerinnen und Musiker sind nicht alle sehend, hörend oder körperlich gleich.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Barrierefrei im Design",
-            "feature-a11y-body": "WCAG 2.2 AA. High-Contrast-Theme. Vollständige Tastaturnavigation. Screenreader-kompatible Beschriftungen. Entwickelt für alle Musikerinnen und Musiker, nicht nur für Menschen, die 12-Pixel-Text auf dunklem Hintergrund lesen können.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "MCP-Integration",
             "feature-mcp-body": "Optionale Maschinenhilfe für Batch-Edits und Session-Management. Automatisiere die Verwaltung, nicht die Kunst. TayPE bleibt im Kern deterministisch und transaktional \u2014 MCP verbessert den Workflow, ohne das Handwerk zu ersetzen.",
             "feature-focus-title": "Fokus statt Ballast",
@@ -492,7 +486,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Privat / Kleinunternehmen",
+            "price-personal-title": "Privat",
             "price-personal-note": "Einmalkauf",
             "price-personal-feature-1": "Vollständige Anwendung, alle Funktionen",
             "price-personal-feature-2": "2 Hauptversionen kostenloser Updates",
@@ -506,9 +500,7 @@ const locales = {
             "education-copy": "Kostenlos für Studierende und Lehrende. Schreib uns für einen Rabattcode.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Los geht's",
             "download-copy": "TayPE befindet sich in aktiver Entwicklung. Folge uns für Release-Ankündigungen und Early Access.",
             "download-apply": "Apply for the Private Beta",
@@ -538,7 +530,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE ist ein Produkt von Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Handwerk braucht Zugang.</strong> <strong>Barrierefreiheit ist kein Feature. Sie ist das Fundament.</strong> TayPE zielt durchgängig auf WCAG 2.2 AA. High-Contrast-Modus mit Textkontrasten von 15:1 und mehr. Jeder Zustand wird über Form und Symbol vermittelt, nie nur über Farbe. Tastaturkürzel für jede Aktion. Die Oberfläche muss Musikerinnen und Musiker dort abholen, wo sie stehen."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-Logo" },
@@ -574,7 +566,7 @@ const locales = {
         quoteOpen: "\u00ab",
         quoteClose: "\u00bb",
         title: "TayPE - Primero el oficio. Accesible desde el diseño. Los robots también son bienvenidos.",
-        metaDescription: "TayPE es una DAW multipista para músicos que quieren terminar discos, no pelearse con el software. Accesible según WCAG 2.2. MCP nativo. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Haz el disco",
         ogDescription: "Primero el oficio. Accesible desde el diseño. Los robots también son bienvenidos.",
         text: {
@@ -601,9 +593,9 @@ const locales = {
             "tone-card-3-body": "Próximamente: procesamiento NAM por canal antes de la suma. Cada pista pasará por su propio canal de consola, como empujar 24 señales por una mesa analógica real. Pesos compartidos e inferencia matricial por lotes en Apple Silicon. Emulación de consola completa por una fracción del coste de CPU.",
             "philosophy-heading": "Haz el disco",
             "philosophy-copy-1": "TayPE existe para ayudarte a terminar tomas reales, no a ahogarte en opciones infinitas. Una DAW multipista con alma de grabadora de cinta. Menos modos, menos perillas, más verdad.",
-            "philosophy-copy-2": "Construido desde cero con la accesibilidad en el centro. Cumple WCAG 2.2 AA. Modo de alto contraste. Navegable por teclado. Porque los músicos no son todos videntes, oyentes ni capacitados de la misma manera.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Accesible desde el diseño",
-            "feature-a11y-body": "WCAG 2.2 AA. Tema de alto contraste. Navegación completa por teclado. Etiquetas compatibles con lectores de pantalla. Diseñado para cada músico, no solo para quien puede leer texto de 12 px sobre fondo oscuro.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Integración MCP",
             "feature-mcp-body": "Asistencia de máquina opcional para ediciones por lotes y gestión de sesiones. Automatiza la administración, no el arte. TayPE sigue siendo determinista y transaccional en su núcleo: MCP mejora el flujo sin sustituir el oficio.",
             "feature-focus-title": "Enfoque antes que ruido",
@@ -627,7 +619,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Personal / Pequeña empresa",
+            "price-personal-title": "Personal",
             "price-personal-note": "pago único",
             "price-personal-feature-1": "Aplicación completa, todas las funciones",
             "price-personal-feature-2": "2 versiones mayores de actualizaciones gratuitas",
@@ -641,9 +633,7 @@ const locales = {
             "education-copy": "Gratis para estudiantes y docentes. Escríbenos para conseguir un código de descuento.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "A grabar",
             "download-copy": "TayPE está en desarrollo activo. Síguenos para conocer anuncios de lanzamiento y acceso anticipado.",
             "download-apply": "Apply for the Private Beta",
@@ -673,7 +663,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE es un producto de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>El oficio exige acceso.</strong> <strong>La accesibilidad no es una función. Es la base.</strong> TayPE apunta a WCAG 2.2 AA en todo el producto. Modo de alto contraste con relaciones de texto de 15:1 o más. Cada estado se comunica con forma e icono, nunca solo con color. Atajos de teclado para cada acción. La interfaz tiene que encontrarse con los músicos donde están."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Logo de TayPE" },
@@ -709,7 +699,7 @@ const locales = {
         quoteOpen: "\u201e",
         quoteClose: "\u201c",
         title: "TayPE - Handverkið fyrst. Aðgengilegt frá upphafi. Vélmennum er líka vel tekið.",
-        metaDescription: "TayPE er fjölrása DAW fyrir tónlistarfólk sem vill klára plötur í stað þess að berjast við hugbúnað. WCAG 2.2 aðgengi. Innbyggt MCP. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Gerðu plötuna",
         ogDescription: "Handverkið fyrst. Aðgengilegt frá upphafi. Vélmennum er líka vel tekið.",
         text: {
@@ -736,9 +726,9 @@ const locales = {
             "tone-card-3-body": "Væntanlegt: NAM-vinnsla á hverri rás áður en summan er reiknuð. Hvert lag fer í gegnum sína eigin console-rás, eins og að ýta 24 merkjum í gegnum raunverulegt analog-borð. Sameiginleg þyngd og batchuð fylkjainferensa á Apple Silicon. Full console-hermun fyrir brot af CPU-kostnaði.",
             "philosophy-heading": "Gerðu plötuna",
             "philosophy-copy-1": "TayPE er til til að hjálpa þér að klára alvöru tökur, ekki sökkva í endalausa valkosti. Fjölrása DAW með sál segulbandstækis. Færri hamir, færri hnappar, meiri sannleikur.",
-            "philosophy-copy-2": "Byggt frá grunni með aðgengi í miðjunni. WCAG 2.2 AA samræmi. Há-contrast hamur. Full lyklaborðsstýring. Því tónlistarfólk sér ekki allt, heyrir ekki allt og býr ekki allt við sömu líkamsgetu.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Aðgengilegt frá hönnun",
-            "feature-a11y-body": "WCAG 2.2 AA. Há-contrast þema. Full lyklaborðsstýring. Merkingar sem virka með skjálesurum. Hannað fyrir allt tónlistarfólk, ekki bara þau sem sjá 12 px texta á dökkum bakgrunni.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "MCP samþætting",
             "feature-mcp-body": "Valfrjáls vélræn aðstoð fyrir lotubreytingar og utanumhald sessions. Sjálfvirknivæddu umsýsluna, ekki listina. TayPE er enn determinískt og transactional í kjarnanum \u2014 MCP bætir vinnuflæði án þess að koma í stað handverksins.",
             "feature-focus-title": "Fókus fram yfir drasl",
@@ -762,7 +752,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Einstaklingar / lítil fyrirtæki",
+            "price-personal-title": "Einstaklingar",
             "price-personal-note": "eitt skipti",
             "price-personal-feature-1": "Fullt forrit, allir eiginleikar",
             "price-personal-feature-2": "2 aðalútgáfur af ókeypis uppfærslum",
@@ -776,9 +766,7 @@ const locales = {
             "education-copy": "Ókeypis fyrir nemendur og kennara. Sendu okkur skilaboð fyrir afsláttarkóða.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Til verks",
             "download-copy": "TayPE er í virkri þróun. Fylgstu með fyrir útgáfutilkynningar og snemmbúinn aðgang.",
             "download-apply": "Apply for the Private Beta",
@@ -808,7 +796,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE er vara frá Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Handverk krefst aðgangs.</strong> <strong>Aðgengi er ekki aukaatriði. Það er grunnurinn.</strong> TayPE stefnir á WCAG 2.2 AA alls staðar. Há-contrast hamur með 15:1 eða meiri textahlutföllum. Hvert ástand er sýnt með lögun og tákni, aldrei aðeins með lit. Flýtilyklar fyrir hverja aðgerð. Viðmótið verður að mæta tónlistarfólki þar sem það er statt."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "TayPE merki" },
@@ -844,7 +832,7 @@ const locales = {
         quoteOpen: "\u201c",
         quoteClose: "\u201d",
         title: "TayPE - Ambacht eerst. Toegankelijk door ontwerp. Robots zijn ook welkom.",
-        metaDescription: "TayPE is een multitrack DAW voor muzikanten die records willen afmaken, niet met software willen stoeien. WCAG 2.2 toegankelijk. MCP native. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Maak het record",
         ogDescription: "Ambacht eerst. Toegankelijk door ontwerp. Robots zijn ook welkom.",
         text: {
@@ -871,9 +859,9 @@ const locales = {
             "tone-card-3-body": "Binnenkort: NAM-verwerking per kanaal vóór de sum \u2014 elk spoor door zijn eigen consolekanaal, alsof je 24 signalen door een echte analoge mengpaneel stuurt. Gedeelde gewichten, batchvormige matrixafleiding op Apple Silicon. Volledige consoleemulatie voor een fractie van de CPU-kosten.",
             "philosophy-heading": "Maak het record",
             "philosophy-copy-1": "TayPE helpt je echte takes af te maken, niet verdrinken in eindeloze opties. Een multitrack DAW met het hart van een bandapparaat. Minder modi, minder knoppen, meer waarheid.",
-            "philosophy-copy-2": "Vanaf de grond af opgebouwd met toegankelijkheid in het hart. WCAG 2.2 AA compliant. Hoog contrast-modus. Volledig toetsenbord navigeerbaar. Want muzikanten zijn niet allemaal ziend, horend of even fysiek.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Toegankelijk door ontwerp",
-            "feature-a11y-body": "WCAG 2.2 AA. Hoog contrast-thema. Volledige toetsenbordnavigatie. Schermleezer-compatibele labels. Ontworpen voor elke muzikant, niet alleen voor degenen die 12px-tekst op donkere achtergrond kunnen lezen.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "MCP-integratie",
             "feature-mcp-body": "Optionele machine-assistentie voor batchbewerkingen en sessiemanagement. Automatiseer het beheer, niet de kunst. TayPE blijft in wezen deterministisch en transactioneel \u2014 MCP verbetert de workflow zonder het ambacht te vervangen.",
             "feature-focus-title": "Focus boven rommel",
@@ -897,7 +885,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Persoonlijk / Klein bedrijf",
+            "price-personal-title": "Persoonlijk",
             "price-personal-note": "eenmalige aankoop",
             "price-personal-feature-1": "Volledige toepassing, alle functies",
             "price-personal-feature-2": "2 grote versies gratis updates",
@@ -911,9 +899,7 @@ const locales = {
             "education-copy": "Gratis voor studenten. Stuur ons een DM voor een kortingscode.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Laten we beginnen",
             "download-copy": "TayPE is in actieve ontwikkeling. Volg ons voor aankondigingen van releases en vroege toegang.",
             "download-apply": "Apply for the Private Beta",
@@ -943,7 +929,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is een product van Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Ambacht vereist toegang.</strong> <strong>Toegankelijkheid is geen functie. Het is een basis.</strong> TayPE streeft naar WCAG 2.2 AA overal. Hoog contrast-modus met tekstverhoudingen van 15:1 of hoger. Elke toestand wordt weergegeven met vorm en pictogram, nooit alleen kleur. Toetsenbordsnelkoppelingen voor elke actie. De interface moet muzikanten bereiken waar zij zijn."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-logo" },
@@ -979,7 +965,7 @@ const locales = {
         quoteOpen: "\u00ab",
         quoteClose: "\u00bb",
         title: "TayPE - Mestiere prima. Accessibile fin dalla progettazione. I robot sono benvenuti.",
-        metaDescription: "TayPE è una DAW multitraccia per musicisti che vogliono finire dischi, non lottare con il software. Accessibile secondo WCAG 2.2. MCP nativo. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Fai il disco",
         ogDescription: "Mestiere prima. Accessibile fin dalla progettazione. I robot sono benvenuti.",
         text: {
@@ -1006,9 +992,9 @@ const locales = {
             "tone-card-3-body": "Prossimamente: elaborazione NAM per canale prima della somma. Ogni traccia passerà attraverso il proprio canale console, come spingere 24 segnali attraverso un vero mixer analogico. Pesi condivisi e inferenza matriciale in batch su Apple Silicon. Emulazione console completa a una frazione del costo della CPU.",
             "philosophy-heading": "Fai il disco",
             "philosophy-copy-1": "TayPE esiste per aiutarti a finire vere take, non per annegare in opzioni infinite. Una DAW multitraccia con l'anima di un registratore. Meno modalità, meno manopole, più verità.",
-            "philosophy-copy-2": "Costruito da zero con l'accessibilità al centro. Conforme a WCAG 2.2 AA. Modalità alto contrasto. Completamente navigabile con tastiera. Perché i musicisti non sono tutti vedenti, udenti o fisicamente identici.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Accessibile fin dalla progettazione",
-            "feature-a11y-body": "WCAG 2.2 AA. Tema ad alto contrasto. Navigazione completa da tastiera. Etichette compatibili con lettori di schermo. Progettato per ogni musicista, non solo per chi riesce a leggere testo da 12px su sfondo scuro.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Integrazione MCP",
             "feature-mcp-body": "Assistenza macchina opzionale per modifiche batch e gestione sessioni. Automatizza l'amministrazione, non l'arte. TayPE rimane deterministico e transazionale al suo interno: MCP migliora il flusso di lavoro senza sostituire il mestiere.",
             "feature-focus-title": "Focus sopra il disordine",
@@ -1032,7 +1018,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Personale / Piccola azienda",
+            "price-personal-title": "Personale",
             "price-personal-note": "acquisto una tantum",
             "price-personal-feature-1": "Applicazione completa, tutte le funzioni",
             "price-personal-feature-2": "2 versioni principali di aggiornamenti gratuiti",
@@ -1046,9 +1032,7 @@ const locales = {
             "education-copy": "Gratuito per studenti. Inviaci un DM per un codice sconto.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Si parte",
             "download-copy": "TayPE è in sviluppo attivo. Seguici per gli annunci di rilascio e l'accesso anticipato.",
             "download-apply": "Apply for the Private Beta",
@@ -1078,7 +1062,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE è un prodotto di Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>L'artigianato richiede accesso.</strong> <strong>L'accessibilità non è una funzione. È una base.</strong> TayPE mira a WCAG 2.2 AA dappertutto. Modalità ad alto contrasto con rapporti di testo 15:1 o superiori. Ogni stato è trasmesso con forma e icona, mai solo colore. Scorciatoie da tastiera per ogni azione. L'interfaccia deve raggiungere i musicisti dove si trovano."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1114,7 +1098,7 @@ const locales = {
         quoteOpen: "\u201e",
         quoteClose: "\u201d",
         title: "TayPE - Rzemiosło przed wszystkim. Dostępne od projektowania. Roboty też są mile widziane.",
-        metaDescription: "TayPE to wielościeżkowy DAW dla muzyków, którzy chcą skończyć rekordy, a nie walczyć z oprogramowaniem. Dostępne w WCAG 2.2. MCP native. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Stwórz rekord",
         ogDescription: "Rzemiosło przed wszystkim. Dostępne od projektowania. Roboty też są mile widziane.",
         text: {
@@ -1141,9 +1125,9 @@ const locales = {
             "tone-card-3-body": "Wkrótce: przetwarzanie NAM na kanał przed sumą. Każdy utwór przejdzie przez własny kanał konsoli, jak 24 sygnały popychane przez prawdziwy analogowy pulpit miksujący. Współdzielone wagi i wnioskowanie macierzy wsadowej na Apple Silicon. Pełna emulacja konsoli za ułamek kosztów CPU.",
             "philosophy-heading": "Stwórz rekord",
             "philosophy-copy-1": "TayPE istnieje, aby pomóc ci skończyć prawdziwe ujęcia, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu. Mniej trybów, mniej gałek, więcej prawdy.",
-            "philosophy-copy-2": "Zbudowany od początku z dostępnością w sercu. Zgodny z WCAG 2.2 AA. Tryb wysokiego kontrastu. W pełni nawigowany klawiaturą. Ponieważ muzycy nie są wszyscy widzący, słyszący lub jednakowo zdolni.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Dostępne od projektowania",
-            "feature-a11y-body": "WCAG 2.2 AA. Motyw wysokiego kontrastu. Pełna nawigacja klawiaturą. Etykiety kompatybilne z czytnikami ekranu. Zaprojektowane dla każdego muzyka, a nie tylko dla osób, które potrafią czytać tekst 12px na ciemnym tle.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Integracja MCP",
             "feature-mcp-body": "Opcjonalna asystenta maszyny do edycji wsadowych i zarządzania sesją. Automatyzuj administrację, a nie sztukę. TayPE pozostaje deterministyczne i transakcyjne w swoim rdzeniu: MCP ulepsza przepływ pracy bez zastępowania rzemiosła.",
             "feature-focus-title": "Fokus nad bałaganem",
@@ -1167,7 +1151,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Osobisty / Mała firma",
+            "price-personal-title": "Osobisty",
             "price-personal-note": "jednorazowy zakup",
             "price-personal-feature-1": "Pełna aplikacja, wszystkie funkcje",
             "price-personal-feature-2": "2 główne wersje bezpłatnych aktualizacji",
@@ -1181,9 +1165,7 @@ const locales = {
             "education-copy": "Bezpłatnie dla studentów. Wyślij nam DM, aby uzyskać kod rabatowy.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Zaczynamy",
             "download-copy": "TayPE jest w aktywnym rozwoju. Obserwuj nas, aby poznać ogłoszenia o wydaniach i wczesny dostęp.",
             "download-apply": "Apply for the Private Beta",
@@ -1213,7 +1195,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE jest produktem Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Rzemiosło wymaga dostępu.</strong> <strong>Dostępność nie jest funkcją. To jest fundament.</strong> TayPE celuje w WCAG 2.2 AA wszędzie. Tryb wysokiego kontrastu ze stosunkami tekstu 15:1 lub wyższymi. Każdy stan jest przekazywany za pomocą kształtu i ikony, nigdy tylko koloru. Skróty klawiaturowe dla każdej akcji. Interfejs musi dotrzeć do muzyków tam, gdzie są."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1249,7 +1231,7 @@ const locales = {
         quoteOpen: "\u00ab",
         quoteClose: "\u00bb",
         title: "TayPE - Ремесло спочатку. Доступний за дизайном. Роботи теж вітаються.",
-        metaDescription: "TayPE - багатодоріжковий DAW для музикантів, які хочуть закінчити альбоми, а не боротися з програмним забезпеченням. WCAG 2.2 доступний. MCP native. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Зробити запис",
         ogDescription: "Ремесло спочатку. Доступний за дизайном. Роботи теж вітаються.",
         text: {
@@ -1276,9 +1258,9 @@ const locales = {
             "tone-card-3-body": "Незабаром: обробка NAM на канал перед сумою. Кожна доріжка буде проходити через власний канал консолі, як 24 сигнали, проштовхувані через справжній аналоговий пульт. Спільні ваги та пакетне матричне висновування на Apple Silicon. Повна емуляція консолі за частину вартості CPU.",
             "philosophy-heading": "Зробити запис",
             "philosophy-copy-1": "TayPE існує, щоб допомогти вам закінчити справжні дубляжі, а не потонути в безкінечних опціях. Багатодоріжковий DAW з душею магнітофона. Менше режимів, менше кнопок, більше правди.",
-            "philosophy-copy-2": "Побудований з нуля з доступністю в серці. Відповідає WCAG 2.2 AA. Режим високого контрасту. Повністю навігуємий клавіатурою. Тому що музиканти не всі зрячі, слухаючі або однаково здатні.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Доступний за дизайном",
-            "feature-a11y-body": "WCAG 2.2 AA. Тема високого контрасту. Повна навігація клавіатурою. Етикетки, сумісні з програмами читання з екрана. Розроблено для кожного музиканта, а не тільки для тих, хто може читати текст 12px на темному тлі.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Інтеграція MCP",
             "feature-mcp-body": "Опціональна машинна допомога для пакетного редагування та управління сеансом. Автоматизуйте адміністрацію, а не мистецтво. TayPE залишається детерміністичним і транзакційним у своій основі: MCP покращує робочий процес без заміни ремесла.",
             "feature-focus-title": "Фокус над безладом",
@@ -1302,7 +1284,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Особистий / Малий бізнес",
+            "price-personal-title": "Особистий",
             "price-personal-note": "одноразова покупка",
             "price-personal-feature-1": "Повна програма, всі функції",
             "price-personal-feature-2": "2 основні версії безкоштовних оновлень",
@@ -1316,9 +1298,7 @@ const locales = {
             "education-copy": "Безпечно для студентів. Надішліть нам DM для кодексу дисконту.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Поїхали",
             "download-copy": "TayPE перебуває в активній розробці. Слідкуйте за нами для оголошень про випуски та ранній доступ.",
             "download-apply": "Apply for the Private Beta",
@@ -1348,7 +1328,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE - це продукт Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Ремесло вимагає доступу.</strong> <strong>Доступність - не функція. Це основа.</strong> TayPE спрямується на WCAG 2.2 AA скрізь. Режим високого контрасту з коефіцієнтами тексту 15:1 або вищими. Кожен стан передається формою та піктограмою, ніколи тільки кольором. Гарячі клавіші для кожної дії. Інтерфейс повинен досягти музикантів там, де вони є."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Логотип TayPE" },
@@ -1384,7 +1364,7 @@ const locales = {
         quoteOpen: "\u00ab",
         quoteClose: "\u00bb",
         title: "TayPE - Τέχνη πρώτα. Προσβάσιμο από το σχεδιασμό. Τα ρομπότ είναι καλώς ήρθατε.",
-        metaDescription: "Το TayPE είναι ένα DAW πολλαπλών κομματιών για μουσικούς που θέλουν να τελειώσουν δίσκους, όχι να παλεύουν με το λογισμικό. WCAG 2.2 προσβάσιμο. MCP native. macOS.",
+        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native — Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
         ogTitle: "TayPE - Κάντε το δίσκο",
         ogDescription: "Τέχνη πρώτα. Προσβάσιμο από το σχεδιασμό. Τα ρομπότ είναι καλώς ήρθατε.",
         text: {
@@ -1411,9 +1391,9 @@ const locales = {
             "tone-card-3-body": "Σύντομα: Επεξεργασία NAM ανά κανάλι πριν από το άθροισμα. Κάθε τροχιά θα περάσει μέσα από το δικό της κανάλι κονσόλας, σαν να ωθούν 24 σήματα μέσα από έναν πραγματικό αναλογικό μίκτη. Κοινόχρηστα βάρη και συμπυκνωμένη συμπέρασμα μήτρας στο Apple Silicon. Πλήρης προσομοίωση κονσόλας για κλάσμα του κόστους CPU.",
             "philosophy-heading": "Κάντε το δίσκο",
             "philosophy-copy-1": "Το TayPE υπάρχει για να σας βοηθήσει να τελειώσετε πραγματικές λήψεις, όχι να πνιγείτε σε ατελείωτες επιλογές. Ένα πολυτροχικό DAW με την ψυχή μιας ταινιογραφικής μηχανής. Λιγότερες λειτουργίες, λιγότερα κουμπιά, περισσότερη αλήθεια.",
-            "philosophy-copy-2": "Κατασκευασμένο από το μηδέν με προσβασιμότητα στο κέντρο. Συμμόρφωση με WCAG 2.2 AA. Λειτουργία υψηλής αντίθεσης. Πλήρως πλοηγήσιμη από το πληκτρολόγιο. Επειδή οι μουσικοί δεν είναι όλοι βλέποντες, ακούοντες ή εξίσου ικανοί.",
+            "philosophy-copy-2": "Built with accessibility at its core. Targeting WCAG 2.2 AA. High-contrast mode. Keyboard navigable. MCP through Claude or Codex (with voice) is the primary non-visual interface — native screen-reader support is a work in progress. Because musicians are not all sighted, all hearing, or all able-bodied.",
             "feature-a11y-title": "Προσβάσιμο από το σχεδιασμό",
-            "feature-a11y-body": "WCAG 2.2 AA. Θέμα υψηλής αντίθεσης. Πλήρης πλοήγηση πληκτρολογίου. Ετικέτες συμβατές με αναγνώστες οθόνης. Σχεδιασμένο για κάθε μουσικό, όχι μόνο για όσους μπορούν να διαβάσουν κείμενο 12px σε σκοτεινό φόντο.",
+            "feature-a11y-body": "Targeting WCAG 2.2 AA. High-contrast theme. Full keyboard navigation. MCP through Claude or Codex (with voice) is the primary non-visual interface; native screen-reader support is a work in progress. Designed for every musician, not just the ones who can see 12px text on a dark background.",
             "feature-mcp-title": "Ενσωμάτωση MCP",
             "feature-mcp-body": "Προαιρετική δοϋλεία μηχανής για επεξεργασία παρτίδας και διαχείριση συνεδρίας. Αυτοματοποιήστε τη διακυβέρνηση, όχι την τέχνη. Το TayPE παραμένει ντετερμινιστικό και συναλλακτικό στον πυρήνα του: το MCP βελτιώνει τη ροή εργασίας χωρίς να αντικαθιστά το τεχνίτευμα.",
             "feature-focus-title": "Εστίαση πάνω από την αταξία",
@@ -1437,7 +1417,7 @@ const locales = {
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
             "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
-            "price-personal-title": "Προσωπικό / Μικρή επιχείρηση",
+            "price-personal-title": "Προσωπικό",
             "price-personal-note": "αγορά μιας φοράς",
             "price-personal-feature-1": "Πλήρη εφαρμογή, όλα τα χαρακτηριστικά",
             "price-personal-feature-2": "2 κύριες εκδόσεις δωρεάν ενημερώσεων",
@@ -1451,9 +1431,7 @@ const locales = {
             "education-copy": "Δωρεάν για φοιτητές. Στείλτε μας ένα DM για κωδικό έκπτωσης.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility discount. Just ask.",
-            "accessibility-instagram": "Instagram \u2192",
-            "accessibility-reddit": "Reddit \u2192",
+            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "download-heading": "Ξεκινάμε",
             "download-copy": "Το TayPE βρίσκεται σε ενεργή ανάπτυξη. Ακολουθήστε μας για ανακοινώσεις κυκλοφορίας και πρώιμη πρόσβαση.",
             "download-apply": "Apply for the Private Beta",
@@ -1483,7 +1461,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. Το TayPE είναι προϊόν του Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Η τέχνη απαιτεί πρόσβαση.</strong> <strong>Η προσβασιμότητα δεν είναι δυνατότητα. Είναι ίδρυμα.</strong> Το TayPE στοχεύει σε WCAG 2.2 AA παντού. Λειτουργία υψηλής αντίθεσης με αναλογίες κειμένου 15:1 ή υψηλότερα. Κάθε κατάσταση μεταδίδεται με σχήμα και εικονίδιο, ποτέ μόνο χρώμα. Συντόμευση πληκτρολογίου για κάθε ενέργεια. Η διεπαφή πρέπει να φτάσει τους μουσικούς στο σημείο που βρίσκονται."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
         },
         attrs: {
             "nav-logo": { alt: "Λογότυπο TayPE" },
@@ -1714,3 +1692,20 @@ if (gregismEl) {
         }, 500);
     }, 6000);
 }
+
+
+/* === screenshot lightbox === */
+(function () {
+    const dialog = document.getElementById('screenshot-zoom');
+    if (!dialog) return;
+    const dlgImg = dialog.querySelector('img');
+    if (!dlgImg) return;
+    document.querySelectorAll('.screenshot-row img').forEach(function (img) {
+        img.addEventListener('click', function () {
+            dlgImg.src = img.src;
+            dlgImg.alt = img.alt;
+            dialog.showModal();
+        });
+    });
+    dialog.addEventListener('click', function () { dialog.close(); });
+})();
