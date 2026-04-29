@@ -127,7 +127,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "TayPE logo" },
@@ -317,7 +317,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE は Ruminant Audio Works Ltd. のプロダクトです。"
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "TayPE ロゴ" },
@@ -507,7 +507,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE est un produit de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -697,7 +697,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE ist ein Produkt von Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-Logo" },
@@ -887,7 +887,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE es un producto de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Logo de TayPE" },
@@ -1077,7 +1077,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE er vara frá Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "TayPE merki" },
@@ -1267,7 +1267,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is een product van Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-logo" },
@@ -1457,7 +1457,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE è un prodotto di Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1647,7 +1647,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE jest produktem Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1837,7 +1837,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE - це продукт Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Логотип TayPE" },
@@ -2027,7 +2027,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. Το TayPE είναι προϊόν του Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress. Because the interface must meet musicians where they are."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
         },
         attrs: {
             "nav-logo": { alt: "Λογότυπο TayPE" },
