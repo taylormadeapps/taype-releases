@@ -1,6 +1,6 @@
 # Plugins
 
-Herramientas para gestionar inserts VST3 y el bus Mix FX.
+Herramientas para gestionar inserts VST3.
 
 ### `list_plugins`
 ### `add_insert`

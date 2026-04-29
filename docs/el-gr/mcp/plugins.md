@@ -1,6 +1,6 @@
 # Plugins
 
-Tools for managing VST3 plugin inserts and the Mix FX bus.
+Tools for managing VST3 plugin inserts.
 
 ---
 
@@ -178,39 +178,3 @@ Restart the plugin sandbox host process. Requires transport stopped.
 ```json
 { "success": false, "error": "..." }
 ```
-
----
-
-## Mix FX (Tape Summing)
-
-### `get_mix_fx`
-
-Get the current Mix FX state (Softube Multitrack Tape on the master bus).
-
-**Returns:**
-```json
-{
-  "enabled": false,
-  "plugin_loaded": false,
-  "plugin_name": "Tape Multi Track",
-  "available": true
-}
-```
-
-`available` is true when Softube Multitrack Tape is installed.
-
-### `set_mix_fx`
-
-Enable or disable tape summing. Requires transport stopped.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | true to enable, false to disable |
-
-**Returns:** `{ "enabled": true, "plugin_loaded": true }`
-
-### `open_mix_fx_editor`
-
-Open the Softube Tape plugin editor window.
-
-**Returns:** `{ "editor_open": true }`

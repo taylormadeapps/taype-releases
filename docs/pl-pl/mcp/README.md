@@ -130,7 +130,7 @@ consent.
 - [Ścieżki](tracks.md) - add, edit, remove tracks
 - [Clipy](clips.md) - add, edit, remove clips
 - [Nagrywanie](recording.md) - start and stop recording
-- [Wtyczki](plugins.md) - VST3 inserts, sandbox, Mix FX
+- [Wtyczki](plugins.md) - VST3 inserts and sandbox
 - [Widok & Session](view-and-session.md) - view state, undo, theme, personality, status
 - [NAM Console Engine](nam.md) - preamp profiles, mix summing, TONE3000
 - [Transactions](transactions.md) - batch changes as single undo steps

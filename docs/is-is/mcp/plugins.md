@@ -1,6 +1,6 @@
 # Viðbætur
 
-Tól til að stjórna VST3 inserts og Mix FX bus.
+Tól til að stjórna VST3 inserts.
 
 ### `list_plugins`
 ### `add_insert`

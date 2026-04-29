@@ -1,6 +1,6 @@
 # プラグイン
 
-VST3 プラグインインサートと Mix FX バスを管理するためのツールです。
+VST3 プラグインインサートを管理するためのツールです。
 
 ---
 
@@ -132,39 +132,3 @@ VST3 プラグインインサートと Mix FX バスを管理するためのツ�
 ```json
 { "success": false, "error": "..." }
 ```
-
----
-
-## Mix FX（Tape Summing）
-
-### `get_mix_fx`
-
-現在の Mix FX 状態（マスターバス上の Softube Multitrack Tape）を取得します。
-
-**戻り値:**
-```json
-{
-  "enabled": false,
-  "plugin_loaded": false,
-  "plugin_name": "Tape Multi Track",
-  "available": true
-}
-```
-
-`available` は、Softube Multitrack Tape がインストールされているとき true です。
-
-### `set_mix_fx`
-
-テープサミングを有効 / 無効にします。トランスポート停止中のみ使えます。
-
-| パラメータ | 型 | 必須 | 説明 |
-|-------|------|----------|-------------|
-| `enabled` | boolean | はい | true で有効、false で無効 |
-
-**戻り値:** `{ "enabled": true, "plugin_loaded": true }`
-
-### `open_mix_fx_editor`
-
-Softube Tape プラグインのエディターウィンドウを開きます。
-
-**戻り値:** `{ "editor_open": true }`
