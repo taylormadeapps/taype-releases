@@ -535,6 +535,35 @@ h2 {
     margin: 0 auto;
 }
 
+.demoware-notice .demoware-meta {
+    font-size: 0.8rem;
+    color: var(--text-dim, var(--text-muted));
+    margin-bottom: 0.25rem;
+    margin-top: 0.75rem;
+}
+
+.demoware-notice ul.demoware-trust-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem auto 0.75rem;
+    max-width: 600px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    justify-content: center;
+}
+
+.demoware-notice ul.demoware-trust-list li::before {
+    content: "\2713\00a0";
+    color: var(--accent, #f0c96a);
+}
+
+.demoware-notice #demo-connector {
+    margin-top: 0.5rem;
+}
+
 /* ---- Community ---- */
 
 .community-grid {
@@ -904,8 +933,8 @@ footer {
 <section class="screenshots">
     <h2 id="screenshots-heading">The Console</h2>
     <div class="screenshot-row">
-        <img id="screenshot-1" src="/assets/img/screenshot-mixer-1.png" alt="TayPE mixer - channel strip with EQ, compressor, and meter">
-        <img id="screenshot-2" src="/assets/img/screenshot-mixer-2.png" alt="TayPE mixer - expanded EQ and filter view">
+        <img id="screenshot-1" src="/assets/img/screenshot-mixer-1.png" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders">
+        <img id="screenshot-2" src="/assets/img/screenshot-mixer-2.png" alt="TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left">
     </div>
 </section>
 
@@ -935,12 +964,16 @@ footer {
     <h2 id="pricing-heading">Pricing</h2>
 
     <div class="demoware-notice">
-        <h3 id="demo-heading">Try Before You Buy</h3>
-        <p id="demo-copy">
-            TayPE is fully functional demoware. Download it, use it, make records with it.
-            When you're ready, buy a license. No time limits, no feature locks, no nag screens
-            beyond a gentle reminder at launch.
-        </p>
+        <h3 id="demo-heading">Here's the deal.</h3>
+        <p id="demo-trust-framing">TayPE runs on two-way trust.</p>
+        <p id="demo-what-that-means" class="demoware-meta">What that means:</p>
+        <ul class="demoware-trust-list">
+            <li id="demo-trust-1">No subscriptions</li>
+            <li id="demo-trust-2">No DRM</li>
+            <li id="demo-trust-3">No feature limits</li>
+            <li id="demo-trust-4">No phone home</li>
+        </ul>
+        <p id="demo-connector">If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.</p>
     </div>
 
     <div class="pricing-cards">
@@ -967,19 +1000,8 @@ footer {
     </div>
 
     <div class="price-accessibility">
-        <h3 id="education-heading">Education</h3>
         <p>
-            <span id="education-copy">Free for students. DM us for a discount code.</span>
-            <br><a id="education-instagram" href="https://instagram.com/ruminantrecords" target="_blank">Instagram &rarr;</a>
-            &nbsp;
-            <a id="education-reddit" href="https://www.reddit.com/message/compose/?to=ruminantrecords" target="_blank">Reddit &rarr;</a>
-        </p>
-    </div>
-
-    <div class="price-accessibility" style="margin-top: 1rem;">
-        <h3 id="accessibility-heading">Accessibility</h3>
-        <p>
-            <span id="accessibility-copy">33% off if you have accessibility requirements. DM us for a discount code.</span>
+            <span id="accessibility-note">Students free. Accessibility discount. Just ask.</span>
             <br><a id="accessibility-instagram" href="https://instagram.com/ruminantrecords" target="_blank">Instagram &rarr;</a>
             &nbsp;
             <a id="accessibility-reddit" href="https://www.reddit.com/message/compose/?to=ruminantrecords" target="_blank">Reddit &rarr;</a>
