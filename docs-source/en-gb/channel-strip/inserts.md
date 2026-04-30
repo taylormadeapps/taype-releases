@@ -17,6 +17,11 @@ plug-in through the normal stopped-transport path. Plain clicks on a disabled
 row stay inert; use that power button or the row context menu to bring the
 plug-in back online.
 
+Bypass keeps audio-FX slots in the timing path. TayPE continues processing the
+plug-in in the sandbox and ramps that slot to a latency-aligned dry lane, so
+lookahead and linear-phase processors do not shift the track when you bypass
+them during playback.
+
 The master bus follows the same rule: four slots visible by default, with the
 same **MORE** toggle to reveal the full eight-slot rack.
 

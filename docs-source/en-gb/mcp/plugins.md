@@ -65,7 +65,9 @@ Unload the plugin from a track's insert slot. Requires transport stopped.
 
 ### `bypass_insert`
 
-Toggle bypass on a track's insert. Safe during playback.
+Toggle bypass on a track's insert. Safe during playback. Audio-FX bypass keeps
+the plug-in in the sandbox chain and ramps that slot to latency-aligned dry
+audio, so PDC remains unchanged.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
