@@ -91,6 +91,31 @@ Toggle bypass on a track's insert. Safe during playback.
 
 **Returns:** `{ "track_id": "...", "slot": 0, "bypass": true }`
 
+### `disable_insert`
+
+Disable a plugin in one insert slot. The plugin stays loaded for state/editor
+recall, but it leaves the audio graph, receives no sandbox processing, burns no
+processing CPU, and contributes zero latency. Requires transport stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+
+**Returns:** `{ "track_id": "...", "slot": 0, "enabled": false }`
+
+### `enable_insert`
+
+Re-enable a previously disabled plugin. The resident plugin rejoins the audio
+graph, sandbox dispatch, and PDC graph. Requires transport stopped.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+
+**Returns:** `{ "track_id": "...", "slot": 0, "enabled": true }`
+
 ### `get_insert_info`
 
 Get the current state of a track's insert slot.

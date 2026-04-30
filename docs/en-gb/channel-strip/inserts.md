@@ -12,7 +12,9 @@ Each loaded row now carries its own small power button on the right. Click it
 to bypass just that slot, or **Option-click** to disable / re-enable the
 plug-in through the normal stopped-transport path. Plain clicks on a disabled
 row stay inert; use that power button or the row context menu to bring the
-plug-in back online.
+plug-in back online. Disabled slots stay loaded for state/editor recall, but
+they leave the audio graph, contribute no latency, and receive no sandbox
+processing until re-enabled.
 
 You can also drag a loaded insert to move it. Drag inside one rack to reorder
 the chain, or drag between strips in mixer view to move it to another track.
