@@ -136,6 +136,7 @@ Get the current state of a track's insert slot.
   "uid": "12345678",
   "bypass": false,
   "enabled": true,
+  "wet_dry_mix": 1.0,
   "latency_samples": 512,
   "supports_mono_main": true,
   "main_bus_channels": 1,

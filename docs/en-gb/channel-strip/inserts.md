@@ -16,6 +16,13 @@ plug-in back online. Disabled slots stay loaded for state/editor recall, but
 they leave the audio graph, contribute no latency, and receive no sandbox
 processing until re-enabled.
 
+In the wide channel strip, loaded audio-effect rows also show a compact
+wet/dry knob immediately to the left of the slot bypass button. Full
+counter-clockwise, around 7:30 on the dial, is dry; full clockwise, around
+4:30, is 100% wet. Double-click resets the slot to 100% wet.
+Bypassed inserts keep their stored wet/dry value, but TayPE ramps the slot to
+the latency-aligned dry path while the bypass is active.
+
 You can also drag a loaded insert to move it. Drag inside one rack to reorder
 the chain, or drag between strips in mixer view to move it to another track.
 Drop on an existing row to replace that slot. Drop between rows to insert there
