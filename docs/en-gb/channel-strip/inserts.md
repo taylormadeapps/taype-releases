@@ -16,6 +16,13 @@ plug-in back online. Disabled slots stay loaded for state/editor recall, but
 they leave the audio graph, contribute no latency, and receive no sandbox
 processing until re-enabled.
 
+On archived tracks, active or bypassed insert rows show as offline red in
+Archive View. The stored plugin state is kept for unarchiving, but the hosted
+plugin is unloaded and cannot be edited while the track is archived. You can
+still remove a slot or disable an active slot; adding, changing, opening,
+bypassing, enabling, dragging, routing, wet/dry edits, and preset loads ask you
+to unarchive the track first.
+
 In the wide channel strip, loaded audio-effect rows also show a compact
 wet/dry knob immediately to the left of the slot bypass button. Full
 counter-clockwise, around 7:30 on the dial, is dry; full clockwise, around

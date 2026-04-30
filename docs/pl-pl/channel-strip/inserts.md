@@ -5,6 +5,13 @@ The insert rack can host eight serial VST3 slots. By default TayPE shows slots
 slot to load a plugin from the scanner. Right-click a loaded slot for bypass,
 remove, or to open the plugin editor.
 
+On archived tracks, active or bypassed insert rows show as offline red in
+Archive View. TayPE keeps the stored plugin state for unarchiving, but unloads
+the hosted plugin and blocks plugin editing while the track is archived. You
+can still remove a slot or disable an active slot; adding, changing, opening,
+bypassing, enabling, dragging, routing, wet/dry edits, and preset loads ask you
+to unarchive the track first.
+
 When you choose a plugin from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable.
 

@@ -4,6 +4,13 @@ Quatre slots série pour plugins VST3. Cliquez sur un slot vide pour charger un
 plugin. Faites un clic droit sur un slot occupé pour bypass, remove, ou ouvrir
 l'éditeur du plugin.
 
+Sur les pistes archivées, les inserts actifs ou bypassés apparaissent en rouge
+hors ligne dans la vue Archive. TayPE garde l'état du plugin pour le
+désarchivage, mais décharge le plugin hébergé et bloque l'édition tant que la
+piste est archivée. Vous pouvez encore supprimer un slot ou désactiver un
+insert actif ; charger, changer, ouvrir, bypasser, réactiver, déplacer, router,
+modifier le wet/dry ou charger un preset demande de désarchiver d'abord.
+
 Le bus master dispose des mêmes quatre slots.
 
 ## Plugin Manager
