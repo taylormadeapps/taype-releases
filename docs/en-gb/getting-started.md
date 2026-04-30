@@ -36,6 +36,13 @@ Those launch-created `Untitled Reel` bundles live in
 `~/Documents/Taype/Reels/Starters` by default, separate from the ordinary
 manual **New Reel** flow.
 
+`~/Documents/Taype` is TayPE's preferred user folder. If macOS blocks access to
+the configured folder during startup, TayPE falls back to `~/Music/Taype`,
+remembers that folder, and tells you it is using the fallback. You can see or
+change the active folder in **Preferences > General**.
+If the destination already contains files, TayPE will not copy or merge your
+current library into it; you can switch to that folder and restart, or cancel.
+
 The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
@@ -111,7 +118,8 @@ Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
 When you create a reel manually, TayPE opens a native save dialog rooted at
-`~/Documents/Taype/Reels` and suggests a bundle name like
+the active TayPE reel library, `~/Documents/Taype/Reels` by default, and
+suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step.
 
