@@ -290,13 +290,13 @@ stretched render.
 
 ## Gain and Fades
 
-Drag the clip gain line up or down to change that clip's level. The waveform redraws with it, so lower gain pulls the waveform inward and unity still leaves a touch of headroom instead of pinning the clip edges. If the grabbed clip is part of the current selection, TayPE applies the same gain change to the whole selected set and keeps the relative gain offsets between clips intact.
+Drag the clip gain line up or down to change that clip's level. The line, centre handle, and gain readout appear when the clip is selected or hovered. The waveform redraws with gain all the time, so lower gain pulls the waveform inward and unity still leaves a touch of headroom instead of pinning the clip edges. In the normal theme idle waveforms are toned from the clip colour, while the selected clip switches to a cream waveform and stronger cream outline; high contrast keeps the brighter treatment and uses the same selected-clip band. If the grabbed clip is part of the current selection, TayPE applies the same gain change to the whole selected set and keeps the relative gain offsets between clips intact.
 
 Fade handles sit just inside the top corners of the clip, and their hit area
 stays inset too, so the edge itself remains available for stretch and trim
 gestures.
 
-Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint, and the guide curve stays clean instead of flooding the quiet part of the clip. On a multi-selection, fade-length and fade-curve drags use the same shared delta across the selected set, so existing offsets stay intact.
+Fade-ins and fade-outs reshape the waveform too. Fade handles and guide curves appear when the clip is selected or hovered, while the waveform, clip name, and clip glyphs stay visible. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint, and the guide curve stays clean instead of flooding the quiet part of the clip. On a multi-selection, fade-length and fade-curve drags use the same shared delta across the selected set, so existing offsets stay intact.
 
 ## Crossfades
 

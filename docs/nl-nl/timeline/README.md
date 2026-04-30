@@ -9,10 +9,13 @@ The timeline is where you see your session laid out in time. Tracks run top to b
 The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio.
 
 When you select a track, TayPE keeps the row highlight restrained: a faint fill
-with crisp white guide lines at the top and bottom of the selected lane.
-Idle track headers keep a translucent tint of the track colour. Only the
-selected header deepens into a slightly darker version of that colour, so the
-active row reads clearly without making every header a solid block.
+with soft guide lines at the top and bottom of the selected lane.
+In the normal theme, track headers use a subtle track-colour gradient with
+small lower-right button shadows. Only the selected header deepens into a
+slightly darker version of that colour, so the active row reads clearly without
+making every header a solid block. Uncovered header-column space uses the same
+soft arrange-bed gradient as the timeline body. High contrast keeps solid
+header fills.
 
 The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative.
 

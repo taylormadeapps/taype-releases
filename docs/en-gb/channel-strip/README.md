@@ -80,7 +80,9 @@ launches for ordinary reels; the fresh launch-created `Untitled Reel` is the
 intentional exception and still lands with Track 1's strip open until you
 close it. Clearing track selection no longer collapses the docked strip
 either, so if it is already open you simply see the muted `Select a track`
-empty state until you choose another lane.
+empty state until you choose another lane. In the normal theme, that empty
+state uses the same soft arrange-bed gradient as the timeline body; high
+contrast keeps the solid panel fill.
 On the full-width strip, the EQ mode row now matches the fader utility buttons
 instead of using old text pills: low and high shelf toggles sit dark in shelf
 mode and light up as bell glyphs when you switch them on, and the mid-band

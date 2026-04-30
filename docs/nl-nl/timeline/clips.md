@@ -26,9 +26,9 @@ This is non-destructive — you're just changing which portion of the audio file
 
 ## Gain and Fades
 
-Drag the clip gain line up or down to change that clip's level. The waveform redraws with it, so lower gain pulls the waveform inward and unity fills the clip body.
+Drag the clip gain line up or down to change that clip's level. The line, centre handle, and gain readout appear when the clip is selected or hovered. The waveform redraws with gain all the time, so lower gain pulls the waveform inward and unity still leaves a little headroom instead of pinning the clip edges.
 
-Fade-ins and fade-outs reshape the waveform too. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint.
+Fade-ins and fade-outs reshape the waveform too. Fade handles and guide curves appear when the clip is selected or hovered, while the waveform, clip name, and clip glyphs stay visible. As you edit a fade, the waveform tapers to match the level envelope instead of staying full-height under a tint.
 
 ## Crossfades
 

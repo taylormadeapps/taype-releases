@@ -8,17 +8,26 @@ The timeline is where you see your session laid out in time. Tracks run top to b
 
 The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio. When automation view is on, those same lanes show a breakpoint line over the clips for the chosen parameter.
 
+In the normal theme, the arrange background is a softer charcoal work surface
+with a quiet tonal falloff, and clip waveforms take their tone from the clip
+colour until selected, when the waveform and clip outline switch to the cream
+waveform tone. High contrast keeps the harder dark background while using the
+same selected-clip banding language.
+
 Track header colour pickers preview on single swatch click, and a swatch
 double-click commits that colour and closes the picker straight away.
 
 When you select a track, TayPE keeps the row highlight restrained: a faint fill
-with crisp white guide lines at the top and bottom of the selected lane.
-Idle track headers keep a translucent tint of the track colour. Only the
-selected header deepens into a slightly darker version of that colour, so the
-active row reads clearly without making every header a solid block.
+with soft guide lines at the top and bottom of the selected lane.
+In the normal theme, track headers use a subtle track-colour gradient with
+small lower-right button shadows. Only the selected header deepens into a
+slightly darker version of that colour, so the active row reads clearly without
+making every header a solid block. Uncovered header-column space uses the same
+soft arrange-bed gradient as the timeline body. High contrast keeps solid
+header fills.
 Bus and master rows now leave a slightly taller shared-panel seam above and
 below the coloured header body, so routed groups stand apart without blowing
-out the whole arranger spacing. The selected-lane white guide lines respect
+out the whole arranger spacing. The selected-lane guide lines respect
 that seam too, so they sit on the real bus/master row body instead of the gap.
 
 The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative. The tape-head marker stays on the timeline side of that ruler, so it doesn't crash into the left toolbar block. Track headers, selected-lane guides, drag highlights, and reorder indicators stay clipped below the ruler too, so zooming and vertical scroll can't smear lane paint into the toolbar.
