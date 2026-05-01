@@ -35,7 +35,7 @@ selected mode, so Clean stays Clean and Modern or NAM keep their settings.
 The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps the same compact control language as Modern, but swaps the voicing over to tape behaviour.
 
 - **Drive** — pushes the input harder into the tape stage.
-- **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` is where the obvious top-end slowing starts.
+- **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` gives the grittiest low-speed colour without maxing the contour.
 - **HF contour** — fixed internally to the ToTaype lane. There is no separate Dubly switch on the strip now.
 - **Output gain** — trims the level leaving the tape stage.
 
