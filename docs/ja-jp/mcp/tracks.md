@@ -81,7 +81,7 @@ volume、pan、mute、solo、monitor、preamp 系パラメータは即時反映�
 
 `set_track` は `input_id` をトラックモードに合わせて正規化します。インストゥルメントトラックでは、`"none"` 以外の非 MIDI ルートは `"midi:all"` に変換されます。非インストゥルメントトラックでは、`"midi:*"` のような MIDI ルートは既定オーディオ入力（`""`）へ戻されます。
 
-コンプレッサー関連パラメータも `set_track` で扱えます: `comp_enabled`、`comp_threshold`、`comp_ratio`、`comp_attack_ms`、`comp_release_ms`、`comp_knee`、`comp_makeup_gain`、`comp_log_release`、`comp_sidechain_low_cut`（検出側サイドチェインの固定 `80 Hz` ハイパス）。`comp_attack_ms` は **0.1–100 ms** を受け付けます。
+コンプレッサー関連パラメータも `set_track` で扱えます: `comp_enabled`、`comp_threshold`、`comp_ratio`、`comp_attack_ms`、`comp_release_ms`、`comp_knee`、`comp_makeup_gain`、`comp_wet_dry_mix`、`comp_log_release`、`comp_sidechain_low_cut`（検出側サイドチェインの固定 `80 Hz` ハイパス）。`comp_attack_ms` は **0.1–100 ms** を受け付けます。
 
 **戻り値:** 更新後のトラックオブジェクト。
 

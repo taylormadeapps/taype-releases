@@ -14,13 +14,14 @@ unity instead of leaving makeup boost in circuit.
 | Attack | 10 ms | 0.1 to 100 ms |
 | Release | 100 ms | 10 to 2,000 ms |
 | Knee | 6 dB | 0 to 120 dB |
-| Sidechain low-cut | Off | fixed 80 Hz |
+| Wet/dry | 100% wet | 0 to 100% wet |
+| Sidechain low-cut | Off | fixed 80 Hz, 12 dB/oct |
 
 ## Layout
 
-The top row shows **Threshold**, **Ratio**, and **Makeup**. The second row shows **Knee**, **Attack**, and **Release**.
+The top row shows **Threshold**, **Ratio**, and **Makeup**. The second row shows **Knee**, **Attack**, and **Release**. Wet/dry is an advanced control in the compressor popup only; if it is not 100% wet, the strip compressor popup button highlights yellow to show hidden active state.
 
-Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button cycles through **FET**, **VCA**, and **OPTO**. **VCA** is the default. The detector button is colour-coded too: **FET** shows red, **VCA** blue, and **OPTO** green, all with white text. The middle row enables a fixed **80 Hz** sidechain low-cut, and the lower button is **LOG** release.
+Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button cycles through **FET**, **VCA**, and **OPTO**. **VCA** is the default. The detector button is colour-coded too: **FET** shows red, **VCA** blue, and **OPTO** green, all with white text. The middle row enables a fixed **80 Hz, 12 dB/oct** sidechain low-cut, and the lower button is **LOG** release.
 
 The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.0 ms** in 0.1 ms steps, then **1–100 ms** in 1 ms steps.
 
@@ -28,7 +29,7 @@ The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.
 
 The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track, and click the same lit button again to close it. Opening that popup also enables the compressor on that track, because that gesture counts as explicit intent to use compression there.
 
-The window puts the incoming waveform and scrolling gain-reduction trace on the left under a **GAIN REDUCTION** title, the transfer curve in the middle under **CURVE**, and fader-style LED **IN** / **OUT** meters on the right after the curve for gain staging. That same meter lane now carries a slim dedicated **GR** bar beside the ladders, using the same top-down **0-24 dB** reduction scale as the strip. Those meter captions sit across the top of the lane, and the ladders use the same glowing segmented treatment, K-scale marks, and clip behaviour as the strip meter.
+The window puts the incoming waveform and scrolling gain-reduction trace on the left under a **GAIN REDUCTION** title, the transfer curve in the middle under **CURVE**, and fader-style LED **IN** / **OUT** meters on the right after the curve for gain staging. That same meter lane now carries a slim dedicated **GR** bar beside the ladders, using the same top-down **0-24 dB** reduction scale as the strip, with the compact wet/dry knob on the meter-panel row beside the auto-gain controls. Those meter captions sit across the top of the lane, and the ladders use the same glowing segmented treatment, K-scale marks, and clip behaviour as the strip meter.
 That scrolling lane now keeps the same full-history density from the moment audio starts, so it no longer begins stretched out and then compresses as the history buffer fills.
 The graph and transfer-curve grids are also a touch stronger now, so the popup
 stays readable at a glance without turning into graph paper.
