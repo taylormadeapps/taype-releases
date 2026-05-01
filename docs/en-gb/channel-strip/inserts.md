@@ -23,8 +23,8 @@ still remove a slot or disable an active slot; adding, changing, opening,
 bypassing, enabling, dragging, routing, wet/dry edits, and preset loads ask you
 to unarchive the track first.
 
-In the wide channel strip, loaded audio-effect rows also show a compact
-wet/dry knob immediately to the left of the slot bypass button. Full
+In the full channel strip and wide mixer strips, loaded audio-effect rows also
+show a compact wet/dry knob immediately to the left of the slot bypass button. Full
 counter-clockwise, around 7:30 on the dial, is dry; full clockwise, around
 4:30, is 100% wet. Double-click resets the slot to 100% wet.
 Bypassed inserts keep their stored wet/dry value, but TayPE ramps the slot to

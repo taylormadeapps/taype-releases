@@ -4,7 +4,9 @@ The preamp operates in four modes. Use the small yellow mode-value button on the
 
 **Clean → Modern → ToTaype → NAM → Clean**
 
-That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
+That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right; clicking that profile pill opens the browser.
+
+The Wet/Dry blend knob is shown in the full channel strip and wide mixer strips. Narrow mixer strips keep the mode, profile, and meters visible but hide Wet/Dry to preserve spacing.
 
 ## Clean Gain (default)
 
@@ -41,7 +43,7 @@ The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps 
 
 Load a Neural Amp Modeler profile of a real preamp — Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
 
-Click the **browse** button to open the Profile Browser, where you can search TONE3000's online library or pick from locally saved profiles.
+Click the profile pill to open the Profile Browser, where you can search TONE3000's online library or pick from locally saved profiles.
 
 ### Profile Browser
 
