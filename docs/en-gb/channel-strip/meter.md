@@ -6,6 +6,10 @@ or K-20. If the clip indicator lights up, your signal is hitting 0 dBFS
 somewhere on that track. If you have not picked a meter scale yet, TayPE
 starts in `K-14`.
 
+Bus strips use the same meter ballistics as ordinary tracks, so routed or
+send-fed signal should move continuously instead of flashing down between
+audio blocks.
+
 In full-width `dBFS` view, the fader meter uses a console-style ladder:
 `0`, `-3`, `-6`, `-9`, `-12`, `-15`, `-18`, `-21`, then `-36`, `-46`, and
 `-60`. That keeps the working range open and compresses the dead tail below it.
