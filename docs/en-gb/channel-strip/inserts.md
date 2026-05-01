@@ -26,7 +26,9 @@ to unarchive the track first.
 In the full channel strip and wide mixer strips, loaded audio-effect rows also
 show a compact wet/dry knob immediately to the left of the slot bypass button. Full
 counter-clockwise, around 7:30 on the dial, is dry; full clockwise, around
-4:30, is 100% wet. Double-click resets the slot to 100% wet.
+4:30, is 100% wet. The knob is a linear blend, so halfway is equal parts
+latency-aligned dry signal and processed plug-in output. Double-click resets
+the slot to 100% wet.
 Bypassed inserts keep their stored wet/dry value, but TayPE ramps the slot to
 the latency-aligned dry path while the bypass is active.
 
