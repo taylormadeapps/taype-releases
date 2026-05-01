@@ -2,13 +2,19 @@
 
 ## Selecting
 
-Click a clip to select it. The clip highlights and its track becomes selected too. Press **Escape** to deselect everything.
+Click a clip to select it. The clip highlights without changing the selected track. **Cmd-click** toggles extra clips into the selection.
+
+**Shift-click** extends by range. On the clicked track, TayPE selects every clip from that track's first selected clip to the clip you clicked, forwards or backwards. If clips are already selected on other tracks, each of those tracks uses its first selected clip as an anchor and selects clips up to the shift-clicked time point. The clip you shift-clicked becomes the primary clip. **Cmd+Shift+A** selects every clip on the currently selected tracks. Press **Escape** to deselect everything.
 
 ## Moving
 
 Drag a clip horizontally to reposition it in time. Drag vertically to move it to a different track.
 
 There's a slight resistance threshold to prevent accidental cross-track moves.
+
+## Creating Blank MIDI Clips
+
+Double-click empty arranger space on a VSTi track to create a blank MIDI clip. With loop playback off, the clip starts at the clicked grid point and lasts one bar, stopping early at the next clip boundary. With loop playback on and the click inside the loop braces, TayPE fills the empty loop gap around the click, bounded by the loop braces and neighbouring clip edges.
 
 ## Copying
 

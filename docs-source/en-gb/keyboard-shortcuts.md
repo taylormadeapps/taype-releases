@@ -51,6 +51,7 @@ This file is created automatically on first launch with sensible defaults.
 | D | Duplicate selected clip back-to-back |
 | Cmd+D | Duplicate selected track without clips |
 | Option+D | Duplicate selected track with clips |
+| Cmd+Shift+A | Select every clip on the currently selected tracks |
 | Cmd+Backspace | Archive or unarchive the selected non-master track |
 | Cmd+Delete | Delete selected non-master track |
 | Cmd+X | Cut selected clip |
@@ -79,7 +80,7 @@ The **Transport** menu now exposes the same bound transport actions directly:
 into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
 carries **Select All** / **Deselect All** alongside the split variants inside
 the **Split** submenu, while the **Tracks** menu carries track creation,
-reordering, duplication, and deletion.
+selected-track clip selection, reordering, duplication, and deletion.
 
 ### View
 
@@ -166,6 +167,7 @@ is straightforward:
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "alt+d",
+  "select_clips_on_selected_tracks": "cmd+shift+a",
   "archive_track": "cmd+backspace",
   "delete_track": "cmd+delete",
   "zoom_in_horizontal": "=",

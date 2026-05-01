@@ -3,7 +3,9 @@
 Each track header shows the following controls. At very small track heights, some labels are hidden until you zoom in.
 
 Track selection lives on the header. Clicking clips or automation points in
-the arranger does not change which track is selected.
+the arranger does not change which track is selected. **Cmd-click** toggles
+headers into or out of the track selection, including deselecting the last
+selected track. **Shift-click** extends the selection as a visible range.
 
 ![Track headers](../../../assets/img/docs/track-headers.png)
 

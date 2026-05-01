@@ -2,7 +2,7 @@
 
 ## Selecting
 
-Click a clip to select it. The clip highlights and its track becomes selected too. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. Press **Escape** to deselect everything.
+Click a clip to select it. The clip highlights without changing the selected track. **Cmd+click** adds or removes clips from the current selection, dragging in empty timeline space marquee-selects clips, and **Cmd+A** selects every clip in the current loop region when loop playback is active. **Shift-click** extends by range: on the clicked track, TayPE selects every clip from that track's first selected clip to the clip you clicked, forwards or backwards. If clips are already selected on other tracks, each of those tracks uses its first selected clip as an anchor and selects clips up to the shift-clicked time point. The clip you shift-clicked becomes the primary clip. **Cmd+Shift+A** selects every clip on the currently selected tracks. Press **Escape** to deselect everything.
 **Option-drag** on a clip body duplicates it at the drop point instead of
 moving the original.
 Hold **Shift** while dragging, or **Option+Shift** while drag-copying, to butt
@@ -14,6 +14,12 @@ clips stay on the timeline, dim visually, and do not sound. Press
 **Option-click** on a clip body does the same soft toggle directly on the clip
 you hit, or on the whole current multi-selection if that clip is already part
 of it. **Option-drag** still makes a copy instead of toggling anything.
+
+Double-click empty arranger space on a VSTi track to create a blank MIDI clip.
+With loop playback off, the clip starts at the clicked grid point and lasts one
+bar, stopping early at the next clip boundary. With loop playback on and the
+click inside the loop braces, TayPE fills the empty loop gap around the click,
+bounded by the loop braces and neighbouring clip edges.
 
 Double-click a clip to open **Taype — Clip Properties**. That's where you rename or
 recolour or disable the clip, inspect its source paths, reveal those files in

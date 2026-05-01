@@ -62,13 +62,15 @@ routing stays valid.
 with options like bypass and remove.
 
 **Track name** - single-click the title panel to select that track in the
-arranger and light its footer outline. **Cmd-click** toggles extra visible
-strips into the mixer selection, **Shift-click** extends the selection as a
-visible range, and **Cmd+A** selects every visible strip. Arranger track
-headers share the same **Cmd-click** / **Shift-click** multiselect behaviour,
-but arranger **Cmd+A** still belongs to clip selection. When more than one
-track is selected, the arranger strip stays pinned to the first selected
-track. Grouped mixer edits apply to the visible selected set only, and grouped
+arranger and light its footer outline. **Cmd-click** toggles visible strips
+into or out of the mixer selection, including deselecting the last selected
+strip, **Shift-click** extends the selection as a visible range, and **Cmd+A**
+selects every visible strip. Arranger track headers share the same
+**Cmd-click** / **Shift-click** multiselect behaviour, but arranger **Cmd+A**
+still belongs to clip selection and **Cmd+Shift+A** selects every clip on the
+currently selected tracks. When more than one track is selected, the arranger
+strip stays pinned to the first selected track. Grouped mixer edits apply to
+the visible selected set only, and grouped
 fader / pan / width drags preserve each strip's relative offset instead of
 snapping everything to one flat line. If a linked control hits its min/max
 rail, it stays pinned there until the drag comes back far enough for the

@@ -70,7 +70,7 @@ The **Transport** menu now exposes the same bound transport actions directly:
 into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
 carries **Select All** / **Deselect All** alongside the split variants inside
 the **Split** submenu, while the **Tracks** menu carries track creation,
-reordering, duplication, and deletion. On macOS those menu ticks stay in sync
+selected-track clip selection, reordering, duplication, and deletion. On macOS those menu ticks stay in sync
 with toolbar clicks, keyboard shortcuts, and other live state changes instead
 of only reflecting the last path that touched the setting.
 
@@ -87,6 +87,7 @@ of only reflecting the last path that touched the setting.
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
 | Option+D | Duplicate selected track with clips |
+| Cmd+Shift+A | Select every clip on the currently selected tracks |
 | Cmd+Backspace | Archive or unarchive the selected non-master track |
 | Cmd+Delete | Delete selected non-master track |
 | Cmd+X | Cut selected clips |
@@ -196,6 +197,7 @@ is straightforward:
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "alt+d",
+  "select_clips_on_selected_tracks": "cmd+shift+a",
   "archive_track": "cmd+backspace",
   "delete_track": "cmd+delete",
   "zoom_in_horizontal": "=",

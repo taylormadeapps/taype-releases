@@ -56,12 +56,14 @@ In the K-system scales, the printed ladder keeps the red `FS` tick at the true c
 
 The coloured title bar shows the track name as a centred pill. In the mixer,
 single-clicking that title panel selects the track and lights a white footer
-outline. Double-click the pill to rename the track. `Cmd`-click toggles extra
-visible strips into the mixer selection, `Shift`-click extends that selection
-as a visible range, and `Cmd+A` selects every visible strip. Arranger track
-headers share that same multiselect behaviour, except arranger `Cmd+A` still
-belongs to clip selection. When more than one track is selected, the docked
-arranger strip stays pinned to the first selected track. Grouped fader, pan,
+outline. Double-click the pill to rename the track. `Cmd`-click toggles visible
+strips into or out of the mixer selection, including deselecting the last
+selected strip, `Shift`-click extends that selection as a visible range, and
+`Cmd+A` selects every visible strip. Arranger track headers share that same
+multiselect behaviour, except arranger `Cmd+A` still belongs to clip selection
+and `Cmd+Shift+A` selects every clip on the currently selected tracks. When more
+than one track is selected, the docked arranger strip stays pinned to the first
+selected track. Grouped fader, pan,
 width, section power, and insert-slot power edits apply only to the visible
 selected strips, and grouped fader / pan / width drags preserve each strip's
 relative offset instead of flattening them to one value. If a linked control

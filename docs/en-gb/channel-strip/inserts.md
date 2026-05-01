@@ -256,6 +256,8 @@ the layout, including down below the default stock size.
 Click a loaded slot to open that plug-in's window. TayPE adds a slim toolbar
 across the top with **Bypass**, **Disable**, `One`, a `Preset:` label, and a
 preset menu on the left, plus a `Sidechain:` label and selector on the right.
+The native window title uses `Track Name - Plug-in Name`, so several open
+editors stay tied to their track at a glance.
 That **Disable** toggle uses the same stop-to-edit enable/disable path as the
 insert slot itself and keeps the plug-in window open instead of unloading the
 plug-in out from under it.

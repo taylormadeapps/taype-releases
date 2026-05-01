@@ -3,7 +3,9 @@
 The insert rack can host eight serial VST3 slots. By default TayPE shows slots
 1-4; click **MORE** in the rack footer to reveal slots 5-8. Click an empty
 slot to load a plugin from the scanner. Right-click a loaded slot for bypass,
-remove, or to open the plugin editor.
+remove, or to open the plugin editor. Hosted plug-in editor windows use
+`Track Name - Plug-in Name` in the native title bar so you can tell which
+track each editor belongs to.
 
 When you choose a plugin from the insert menu, TayPE loads that choice after
 the popup closes so nested submenu picks stay dependable.
