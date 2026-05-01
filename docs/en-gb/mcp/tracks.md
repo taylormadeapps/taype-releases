@@ -115,6 +115,11 @@ Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_attack_ms` accepts **0.1–100 ms**.
 `comp_knee` accepts **0–120 dB**.
 
+Preamp fields also include `preamp_wet_dry_mix` from **0.0** dry to **1.0**
+wet. Bypass and 0% wet ramp to the latency-aligned dry path without removing
+the resident processor lane, so latent classic preamp lanes stay compensated
+while the colour processor is skipped in steady state.
+
 **Returns:** Updated track object.
 
 ### `remove_track`

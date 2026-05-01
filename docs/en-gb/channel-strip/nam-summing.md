@@ -20,6 +20,7 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 - Finishing a TONE3000 download flips the browser back to the Local tab, selects the downloaded package, and expands it immediately when the package has multiple models.
 - **Drive** — how hard the summed audio pushes into the selected flavour, from 0 to +18 dB
 - **Output gain** — compensates for level changes from -18 to +12 dB
+- **Wet/Dry** — blends the selected summing colour with the latency-aligned dry path. At 0% wet, TayPE keeps the dry alignment but skips the summing colour processor.
 - **Mini meters** — with `SUM` out, the master strip shows both `IN:` and `OUT:` mini meters around the selected flavour just like the track preamp. With `SUM` in, it drops to post-sum `OUT:` only because the true-summing path has no single stereo input comparison worth faking.
 
 The body deliberately mirrors the track preamp layout so the mixer keeps one muscle memory: mode row at the top, meter cluster beneath, utility stack on the left, trim-or-drive on the left knob lane, and the right knob lane used only when a non-clean summing flavour needs output gain.
@@ -27,6 +28,9 @@ The body deliberately mirrors the track preamp layout so the mixer keeps one mus
 With `SUM` on, TayPE keeps stereo feeders as independent left/right summing
 lanes before the final stereo mix. It does not collapse a stereo feeder to
 mono first.
+Wet/Dry is applied to those independent lanes before they are added to the
+stereo master. With `SUM` off, Wet/Dry blends the post-digital-sum stereo
+path instead.
 
 ## Profile Storage
 

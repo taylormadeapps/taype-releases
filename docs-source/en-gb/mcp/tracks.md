@@ -71,13 +71,17 @@ Update a track's properties. Only provided fields are changed.
 | `preamp_drive` | number | no | Preamp drive: 0.0 to 36.0 dB |
 | `preamp_auto_gain` | boolean | no | Auto-gain compensation |
 | `preamp_manual_gain` | number | no | Manual output gain: -36.0 to +12.0 dB |
+| `preamp_wet_dry_mix` | number | no | Preamp wet/dry blend: 0.0 dry to 1.0 wet |
 | `preamp_hp_freq` | number | no | Saturation HP filter: 20.0 to 500.0 Hz |
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |
 
 Volume, pan, mute, solo, monitor, and preamp parameters take effect
-immediately (safe during playback). Name, colour, archived, bus, input,
-output, and send changes require transport to be stopped.
+immediately (safe during playback). `preamp_wet_dry_mix` and preamp bypass
+ramp to a latency-aligned dry path without removing the resident processor
+lane, so latent classic preamp lanes keep PDC in place even at 0% wet or
+powered off. Name, colour, archived, bus, input, output, and send changes
+require transport to be stopped.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous

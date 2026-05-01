@@ -72,6 +72,7 @@ const locales = {
             "feature-stems-title": "Stems, Not Folders",
             "feature-stems-body": "Stems are real summing buses. One layer deep. No nested folder hell. Your console layout stays stable and predictable.",
             "screenshots-heading": "The Console",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Built for Everyone",
             "pricing-heading": "Pricing",
             "demo-heading": "Here's the deal.",
@@ -135,7 +136,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP Native" },
             "feature-mcp-logo": { alt: "MCP logo" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -262,6 +263,7 @@ const locales = {
             "feature-stems-title": "フォルダーではなくステム",
             "feature-stems-body": "ステムは本物のサミングバスです。深さは 1 層だけ。ネストしたフォルダー地獄はありません。コンソールの見た目と流れを、安定して予測可能なまま保てます。",
             "screenshots-heading": "コンソール",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "すべての人のために",
             "pricing-heading": "価格",
             "demo-heading": "話はこうだ。",
@@ -325,7 +327,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP ネイティブ" },
             "feature-mcp-logo": { alt: "MCP ロゴ" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -452,6 +454,7 @@ const locales = {
             "feature-stems-title": "Des stems, pas des dossiers",
             "feature-stems-body": "Les stems sont de vrais bus de sommation. Un seul niveau. Pas d'enfer de dossiers imbriqués. Votre console reste stable et prévisible.",
             "screenshots-heading": "La console",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Conçu pour tout le monde",
             "pricing-heading": "Tarifs",
             "demo-heading": "Voilà le deal.",
@@ -515,7 +518,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP natif" },
             "feature-mcp-logo": { alt: "Logo MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -642,6 +645,7 @@ const locales = {
             "feature-stems-title": "Stems statt Ordner",
             "feature-stems-body": "Stems sind echte Summing-Busse. Eine Ebene tief. Kein verschachteltes Ordnerchaos. Dein Konsolenlayout bleibt stabil und berechenbar.",
             "screenshots-heading": "Die Konsole",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Für alle gebaut",
             "pricing-heading": "Preise",
             "demo-heading": "So läuft’s.",
@@ -705,7 +709,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP nativ" },
             "feature-mcp-logo": { alt: "MCP-Logo" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -832,6 +836,7 @@ const locales = {
             "feature-stems-title": "Stems, no carpetas",
             "feature-stems-body": "Los stems son buses de suma reales. Una sola capa. Nada de infierno de carpetas anidadas. El diseño de tu consola se mantiene estable y predecible.",
             "screenshots-heading": "La consola",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Hecho para todo el mundo",
             "pricing-heading": "Precios",
             "demo-heading": "El trato es así.",
@@ -895,7 +900,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP nativo" },
             "feature-mcp-logo": { alt: "Logo de MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1022,6 +1027,7 @@ const locales = {
             "feature-stems-title": "Stemmur, ekki möppur",
             "feature-stems-body": "Stemmur eru raunverulegir summing-busar. Eitt lag af dýpt. Ekkert möppuvíti innan í möppum. Console-layoutið helst stöðugt og fyrirsjáanlegt.",
             "screenshots-heading": "Console-borðið",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Byggt fyrir alla",
             "pricing-heading": "Verð",
             "demo-heading": "Hér er samningurinn.",
@@ -1085,7 +1091,7 @@ const locales = {
             "hero-mcp-logo": { alt: "Innbyggt MCP" },
             "feature-mcp-logo": { alt: "MCP merki" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1212,6 +1218,7 @@ const locales = {
             "feature-stems-title": "Stems, geen mappen",
             "feature-stems-body": "Stems zijn echte summing buses. Één laag diep. Geen geneste mappenhemel. Je consolelay-out blijft stabiel en voorspelbaar.",
             "screenshots-heading": "De console",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Gemaakt voor iedereen",
             "pricing-heading": "Prijzen",
             "demo-heading": "Zo zit het.",
@@ -1275,7 +1282,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP native" },
             "feature-mcp-logo": { alt: "MCP-logo" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1402,6 +1409,7 @@ const locales = {
             "feature-stems-title": "Stem, non cartelle",
             "feature-stems-body": "Gli stem sono veri bus di sommazione. Una sola profondità. Nessun inferno di cartelle annidate. Il layout della console rimane stabile e prevedibile.",
             "screenshots-heading": "La console",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Costruito per tutti",
             "pricing-heading": "Prezzi",
             "demo-heading": "Ecco il patto.",
@@ -1465,7 +1473,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP nativo" },
             "feature-mcp-logo": { alt: "Logo MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1592,6 +1600,7 @@ const locales = {
             "feature-stems-title": "Stemy, nie foldery",
             "feature-stems-body": "Stemy to prawdziwe magistrale sumowania. Jedno poziom głębokie. Brak zagnieżdżonego folderu piekła. Twój układ konsoli pozostaje stabilny i przewidywalny.",
             "screenshots-heading": "Konsola",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Zbudowane dla wszystkich",
             "pricing-heading": "Ceny",
             "demo-heading": "Sprawa wygląda tak.",
@@ -1655,7 +1664,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP native" },
             "feature-mcp-logo": { alt: "Logo MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1782,6 +1791,7 @@ const locales = {
             "feature-stems-title": "Стебла, а не папки",
             "feature-stems-body": "Стебла - це справжні шини сумування. Одна глибина. Немає вкладених папок пекла. Макет вашої консолі залишається стабільним і передбачуваним.",
             "screenshots-heading": "Консоль",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Побудовано для всіх",
             "pricing-heading": "Ціни",
             "demo-heading": "Угода така.",
@@ -1845,7 +1855,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP native" },
             "feature-mcp-logo": { alt: "Логотип MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
@@ -1972,6 +1982,7 @@ const locales = {
             "feature-stems-title": "Στελέχη, όχι φακέλους",
             "feature-stems-body": "Τα στελέχη είναι πραγματικές λεωφόροι άθροισης. Ένα βάθος. Κανένας φωλιασμένος κόλπος φακέλων. Η διάταξη της κονσόλας σας παραμένει σταθερή και προβλέψιμη.",
             "screenshots-heading": "Η κονσόλα",
+            "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Κατασκευασμένο για όλους",
             "pricing-heading": "Τιμολόγηση",
             "demo-heading": "Αυτή είναι η συμφωνία.",
@@ -2035,7 +2046,7 @@ const locales = {
             "hero-mcp-logo": { alt: "MCP native" },
             "feature-mcp-logo": { alt: "Λογότυπο MCP" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
-            "screenshot-2": { alt: "TayPE timeline — audio clips arranged across tracks with the focused channel strip on the left" },
+            "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
         },
         gregisms: [
