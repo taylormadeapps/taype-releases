@@ -56,9 +56,9 @@ The browser has two tabs:
 - If that package is already on disk, the same row button changes to **Downloaded**. Click it to jump straight to that package on the **Local** tab.
 - Finishing a TONE3000 download flips the browser back to **Local**, selects the downloaded package, and expands it straight away when that package contains multiple models.
 
-The **Architecture** filter lives on the **Local** tab. That is where TayPE knows the real model files on disk, so filters like **AMX Compatible**, **LSTM**, and **WaveNet** are based on known local model metadata instead of guesswork from the online catalogue.
+The **Architecture** filter lives on the **Local** tab. That is where TayPE knows the real model files on disk, so filters like **AMX Compatible**, **LSTM**, **WaveNet**, and **A2** are based on known local model metadata instead of guesswork from the online catalogue.
 
-Known NAM model types that TayPE cannot process yet stay visible as `{model type} - unsupported`, and unknown runtime types show as **Unknown**. Those rows are not loadable; if you try to activate one, TayPE shows a warning and leaves the current profile unchanged.
+A2-shaped `SlimmableContainer` files are shown as **A2** and are loadable. Other known NAM model types that TayPE cannot process yet stay visible as `{model type} - unsupported`, and unknown runtime types show as **Unknown**. Those rows are not loadable; if you try to activate one, TayPE shows a warning and leaves the current profile unchanged.
 
 If the strip already uses a profile from a downloaded TONE3000 package, opening the browser expands that local package and selects the active model straight away, even if an older search would otherwise have hidden it.
 
