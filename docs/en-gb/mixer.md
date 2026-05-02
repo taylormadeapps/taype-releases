@@ -35,6 +35,8 @@ Each strip shows (top to bottom):
   monitoring), A (archive), B (bus). The master strip swaps the normal solo
   toggle for a yellow `S`-with-`X` **Cancel Solo** button that clears every
   current solo state in one click and stays disabled when nothing is soloed.
+  `Cmd-click` on a normal S button clears other explicit solos first, then
+  solos that strip.
 - **Route-aware solo** - solo follows the live signal path: soloing a bus
   keeps its active upstream feeders, and soloing a track or bus keeps its
   active downstream bus/send path alive. `MON`-off bus ingress and dead sends

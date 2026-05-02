@@ -32,7 +32,9 @@ selected track. **Shift-click** extends the selection as a visible range.
   TayPE asks whether to flatten the group to one clip on that track, and
   confirming removes the child take tracks and leaves a normal track behind.
 - **M** — mute. When it is on, the button lights in a softer red than the record arm lamp so the two states stay related without reading the same.
-- **S** — solo
+- **S** — solo. `Cmd-click` clears other explicit solos first, then solos this
+  track while preserving the normal route-aware solo path through downstream
+  buses.
 - **Cancel Solo** — on the master header, the normal per-track **S** button is
   replaced by a yellow `S`-with-`X` button that clears every current solo in
   the session.
