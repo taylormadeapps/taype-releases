@@ -24,7 +24,7 @@ The summary includes:
 
 - **Critical path (est)** — the longest active dependency chain in the current block
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
-- **Host CPU** — total TayPE process usage across all logical cores (0–100%)
+- **CPU** — combined TayPE app plus `taype-sandbox` usage across all logical cores (0–100%), stacked green for the app and blue for the sandbox
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 
