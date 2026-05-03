@@ -9,8 +9,8 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 - **SUM** — the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in. In `ToTaype`, it now switches the grouped per-feeder tape summing path the same way it does for the other non-clean summing flavours.
 - **Power** — bypass or re-enable the selected master summing flavour without changing mode.
 - **Trim** — in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty.
-- **P/R** — switches the master summing auto-gain detector between Peak and RMS.
-- **AG** — runs a 3-second one-shot calibration and writes the compensation into the master summing output gain.
+- **P/R** — with `SUM` out, switches the master summing auto-gain detector between Peak and RMS.
+- **AG** — with `SUM` out, runs a 3-second one-shot calibration and writes the compensation into the master summing output gain. With `SUM` in, AG is hidden because true summing does not use the simple post-digital-sum auto-gain path.
 - **Tape speed** — in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`. `30` is the brightest lane, `15` stays broadly full-range, and `7.5` is where the slower top-end softening really starts to show.
 - **HF contour** — fixed internally in ToTaype mode. There is no separate Dubly switch on the master strip now.
 - **Profile pill** — opens the Profile Browser, filtered to summing packages. Download packages from TONE3000, then pick the exact local model if the package contains multiple variants.
