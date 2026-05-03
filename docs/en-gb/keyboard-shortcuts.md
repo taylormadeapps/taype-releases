@@ -27,6 +27,7 @@ switching snap mode.
 | Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
 | Return | Record-mode action |
 | C | Toggle metronome click |
+| ' | Tap tempo. TayPE sets BPM as soon as 4 taps are available, then keeps averaging the last 4 taps until 1.5 seconds without another tap ends the measurement |
 | [ | Set the left loop brace to the tape head |
 | ] | Set the right loop brace to the tape head |
 | L | Set both loop braces to the selected clips and enable loop playback |
@@ -35,6 +36,7 @@ switching snap mode.
 | , | Go to previous marker or loop brace |
 | . | Go to next marker or loop brace |
 | Cmd+/ | Set 0 at Playhead for the selected Cut |
+| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | S | Toggle timeline snap |
 | Option+S | Switch snap between absolute and relative mode |
 
@@ -64,8 +66,8 @@ currently disabled for take admission.
 
 The **Transport** menu now exposes the same bound transport actions directly:
 **Play / Stop**, **Pause**, **Stop**, **Record**, both loop-brace setters,
-**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**, **Snap**,
-**Snap Mode**, and a
+**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**,
+**Tap Tempo**, **Metronome**, **Snap**, **Snap Mode**, and a
 **Markers** submenu that also contains direct **Go to Marker** jumps split
 into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
 carries **Select All** / **Deselect All** alongside the split variants inside
@@ -179,6 +181,7 @@ is straightforward:
   "stop": "z",
   "record": "return",
   "toggle_metronome": "c",
+  "tap_tempo": "'",
   "add_marker_here": "/",
   "previous_marker": ",",
   "next_marker": ".",
