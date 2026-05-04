@@ -179,7 +179,7 @@ edge as a dedicated lane.
 Mixer visibility follows timeline view filters:
 
 - **Archive View (X)** - shows active or archived tracks to match timeline mode
-- **Focus (F)** - shows tracks with clips at the tape head position
+- **Focus (V)** - shows tracks with clips at the tape head position
 - **Spill (G)** - shows the selected spill-capable bus or buses and tracks routed to them inside the current Focus/tag filter slice
 
 The master strip stays visible through all of those filters, so the final sum

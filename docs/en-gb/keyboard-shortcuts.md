@@ -85,6 +85,7 @@ of only reflecting the last path that touched the setting.
 | Option+\ | Split all clips at the tape head |
 | Cmd+Option+\ | Split all clips at both current loop braces |
 | D | Duplicate selected clips back-to-back as a group |
+| F | Add or remove start/end fades on selected clips at the **Default Fade Length** set in **Preferences > General**. Crossfade-bound boundaries are left alone; otherwise the missing fade(s) are added, or both are removed when both are present |
 | B | Bounce selected clips to one new stem track |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
@@ -123,7 +124,7 @@ there is no separate user-facing Save command.
 | I | Toggle channel strip panel |
 | Left / Right | In timeline view, move the tape head to the previous or next visible tick. In mixer view, scroll the rack left or right |
 | Up / Down | In timeline view, scroll the track stack. In mixer view, scroll the shared strip sections up or down |
-| F | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
+| V | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle automation view |
 | Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |
 | X | Toggle archive view |
@@ -196,6 +197,7 @@ is straightforward:
   "split_all_clips_at_playhead": "alt+\\",
   "split_all_clips_at_loop_braces": "cmd+alt+\\",
   "duplicate_clip": "d",
+  "toggle_fade": "f",
   "bounce_clips_to_stem": "b",
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
@@ -213,7 +215,7 @@ is straightforward:
   "zoom_reset_vertical": "alt+shift+-",
   "zoom_max_vertical": "alt+shift+=",
   "toggle_mixer_width": "w",
-  "toggle_focus": "f",
+  "toggle_focus": "v",
   "toggle_automation_view": "a",
   "toggle_archive_view": "x",
   "toggle_snap": "s",

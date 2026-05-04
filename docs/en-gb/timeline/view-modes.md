@@ -4,7 +4,7 @@ Four transport view filters help you focus on what matters. All are toggles:
 
 | Shortcut | Mode | What It Does |
 |----------|------|-------------|
-| F | Focus | Show only tracks with clips at the tape head while it moves, or inside the active loop range |
+| V | Focus | Show only tracks with clips at the tape head while it moves, or inside the active loop range |
 | X | Archive View | Toggle between active tracks and archived tracks |
 | G | Spill | Show the selected bus or master, or all selected spill-capable buses/masters, plus tracks routed directly to them |
 | E | E-Zoom | Zoom to fit the selected clip |

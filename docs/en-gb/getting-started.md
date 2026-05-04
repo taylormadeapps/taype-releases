@@ -382,7 +382,7 @@ TayPE has three ways to think about tracks:
 **Current** - the default. These are your active, living tracks. What you
 hear during playback.
 
-**Focus** - press **F** to filter the timeline down to only the tracks
+**Focus** - press **V** to filter the timeline down to only the tracks
 that have audio at the current tape head position. If loop playback is on,
 Focus widens to the whole loop-brace range instead. With loop off, Focus
 follows manual playhead moves plus transport playback/record in real time.
