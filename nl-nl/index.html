@@ -8,9 +8,9 @@
 <meta id="meta-og-title" property="og:title" content="TayPE - Maak het record">
 <meta id="meta-og-description" property="og:description" content="Ambacht eerst. Toegankelijk door ontwerp. Robots zijn ook welkom.">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
-<meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/hero.png">
+<meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="/assets/img/logo-square.png">
+<link rel="icon" type="image/png" href="/assets/img/logo-square-256.png">
 <link id="canonical-link" rel="canonical" href="https://taype.ruminantaudioworks.com/">
 <link rel="alternate" hreflang="x-default" href="https://taype.ruminantaudioworks.com/">
 <link rel="alternate" hreflang="en-GB" href="https://taype.ruminantaudioworks.com/">
@@ -427,6 +427,11 @@ h2 {
     margin-bottom: 2rem;
 }
 
+.screenshot-block picture {
+    display: block;
+    max-width: 100%;
+}
+
 .screenshot-row img {
     max-height: 600px;
     max-width: 100%;
@@ -455,6 +460,9 @@ dialog#screenshot-zoom {
 dialog#screenshot-zoom::backdrop {
     background: rgba(0, 0, 0, 0.92);
     cursor: zoom-out;
+}
+dialog#screenshot-zoom picture {
+    display: block;
 }
 dialog#screenshot-zoom img {
     /* Show at the image's natural pixel size — user scrolls within the
@@ -824,7 +832,10 @@ footer {
 
 <nav>
     <a id="nav-home" href="/" class="nav-brand">
-        <img id="nav-logo" src="/assets/img/logo-square.png" alt="TayPE logo">
+        <picture>
+            <source type="image/webp" srcset="/assets/img/logo-square-64.webp 64w, /assets/img/logo-square-128.webp 128w" sizes="48px">
+            <img id="nav-logo" src="/assets/img/logo-square-64.png" srcset="/assets/img/logo-square-64.png 64w, /assets/img/logo-square-128.png 128w" sizes="48px" alt="TayPE logo" width="48" height="48" decoding="async">
+        </picture>
         <span>TAYPE</span>
     </a>
     <div class="nav-right">
@@ -859,7 +870,10 @@ footer {
 <!-- ============================================================ -->
 
 <section class="hero" id="top">
-    <img id="hero-logo" src="/assets/img/logo.png" alt="TayPE - tape reel logo" class="hero-logo">
+    <picture>
+        <source type="image/webp" srcset="/assets/img/logo-320.webp 320w, /assets/img/logo-480.webp 480w, /assets/img/logo-640.webp 640w, /assets/img/logo-960.webp 960w" sizes="(max-width: 720px) 70vw, 400px">
+        <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
+    </picture>
     <h1>TAYPE</h1>
     <p id="hero-descriptor" class="hero-descriptor">Multitrack DAW voor macOS</p>
     <p class="hero-tagline">
@@ -883,11 +897,17 @@ footer {
     <div class="screenshot-row">
         <figure class="screenshot-block">
             <h2 id="screenshots-heading">De console</h2>
-            <img id="screenshot-1" src="/assets/img/screenshot-mixer-1.png" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
+                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
+            </picture>
         </figure>
         <figure class="screenshot-block">
             <h2 id="screenshots-arranger-heading">The Arranger</h2>
-            <img id="screenshot-2" src="/assets/img/screenshot-mixer-2.png" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
+                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+            </picture>
         </figure>
     </div>
 </section>
@@ -1085,7 +1105,10 @@ footer {
 
 <footer>
     <div class="footer-brand">
-        <img id="footer-logo" src="/assets/img/raw-logo.png" alt="Ruminant Audio Works">
+        <picture>
+            <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w, /assets/img/raw-logo-320.webp 320w" sizes="72px">
+            <img id="footer-logo" src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w, /assets/img/raw-logo-320.png 320w" sizes="72px" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async">
+        </picture>
         <span>Ruminant Audio Works</span>
     </div>
     <div class="footer-links">
@@ -1107,7 +1130,10 @@ footer {
 
 
 <dialog id="screenshot-zoom" aria-label="Screenshot, full size">
-    <img src="" alt="">
+    <picture>
+        <source type="image/webp">
+        <img alt="">
+    </picture>
 </dialog>
 
 <script src="/assets/site.js"></script>

@@ -2336,11 +2336,15 @@ if (gregismEl) {
 (function () {
     const dialog = document.getElementById('screenshot-zoom');
     if (!dialog) return;
+    const dlgSource = dialog.querySelector('source');
     const dlgImg = dialog.querySelector('img');
     if (!dlgImg) return;
     document.querySelectorAll('.screenshot-row img').forEach(function (img) {
         img.addEventListener('click', function () {
-            dlgImg.src = img.src;
+            if (dlgSource && img.dataset.zoomWebp) {
+                dlgSource.srcset = img.dataset.zoomWebp;
+            }
+            dlgImg.src = img.dataset.zoomFallback || img.currentSrc || img.src;
             dlgImg.alt = img.alt;
             dialog.showModal();
         });
