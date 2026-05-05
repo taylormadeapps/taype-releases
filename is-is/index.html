@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TayPE - Handverkið fyrst. Aðgengilegt frá upphafi. Vélmennum er líka vel tekið.</title>
+<title>TayPE - Handverkið fyrst. Aðgengilegt frá upphafi.</title>
 <meta id="meta-description" name="description" content="TayPE er fjölrásar DAW fyrir tónlistarmenn sem vilja klára plötur, ekki berjast við hugbúnað. Markmið WCAG 2.2 AA. MCP-innfæddur — Claude eða Codex (með röddu) er aðalviðmót án sjónar. macOS.">
 <meta id="meta-og-title" property="og:title" content="TayPE - Gerðu plötuna">
-<meta id="meta-og-description" property="og:description" content="Handverkið fyrst. Aðgengilegt frá upphafi. Vélmennum er líka vel tekið.">
+<meta id="meta-og-description" property="og:description" content="Handverkið fyrst. Aðgengilegt frá upphafi.">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
@@ -343,7 +343,7 @@ h2 {
     text-align: center;
 }
 
-/* ---- Philosophy / Features ---- */
+/* ---- Philosophy ---- */
 
 .philosophy {
     text-align: center;
@@ -354,56 +354,6 @@ h2 {
     max-width: 700px;
     margin: 0 auto 1.5rem;
     font-size: 1.05rem;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.5rem;
-    transition: border-color 0.3s;
-}
-.feature-card:hover {
-    border-color: var(--brass);
-}
-
-.feature-card h3 {
-    color: var(--brass);
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.mcp-logo-inline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-}
-
-.mcp-logo-tagline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-    margin-left: 0.3em;
-    opacity: 0.7;
-}
-
-.feature-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
 }
 
 /* ---- Screenshots ---- */
@@ -777,7 +727,6 @@ footer {
     section { padding: 3rem 1.25rem; }
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(280px, 70vw); height: auto; }
-    .features-grid { grid-template-columns: 1fr; }
     .pricing-cards { grid-template-columns: 1fr; }
     .community-grid { grid-template-columns: 1fr; }
 }
@@ -822,12 +771,6 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-.tone-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
 </style>
 </head>
 <body>
@@ -842,7 +785,7 @@ footer {
             <source type="image/webp" srcset="/assets/img/logo-square-64.webp 64w, /assets/img/logo-square-128.webp 128w" sizes="48px">
             <img id="nav-logo" src="/assets/img/logo-square-64.png" srcset="/assets/img/logo-square-64.png 64w, /assets/img/logo-square-128.png 128w" sizes="48px" alt="TayPE logo" width="48" height="48" decoding="async">
         </picture>
-        <span>TAYPE</span>
+        <span>TayPE</span>
     </a>
     <div class="nav-right">
         <label class="lang-switch" for="lang-select">
@@ -880,10 +823,10 @@ footer {
         <source type="image/webp" srcset="/assets/img/logo-320.webp 320w, /assets/img/logo-480.webp 480w, /assets/img/logo-640.webp 640w, /assets/img/logo-960.webp 960w" sizes="(max-width: 720px) 70vw, 400px">
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
     </picture>
-    <h1>TAYPE</h1>
+    <h1>TayPE</h1>
     <p id="hero-descriptor" class="hero-descriptor">Fjölrása DAW fyrir macOS</p>
     <p class="hero-tagline">
-        <span id="hero-tagline-text">Handverkið fyrst. Aðgengilegt frá upphafi. Vélmennum er líka vel tekið.</span> <a href="#mcp"><img id="hero-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP Native" class="mcp-logo-tagline"></a>
+        <span id="hero-tagline-text">Handverkið fyrst. Aðgengilegt frá upphafi.</span>
     </p>
     <div class="hero-buttons">
         <a id="hero-cta" href="#download" class="btn-primary">Til verks</a>
@@ -891,6 +834,18 @@ footer {
     </div>
     <p id="hero-platform" class="hero-platform">Multitrack DAW &middot; macOS 12+ &middot; Apple Silicon native &middot; VST3 host</p>
     <p class="gregism" id="gregism"></p>
+</section>
+
+<hr class="section-divider">
+
+
+<!-- ============================================================ -->
+<!-- Philosophy                                                   -->
+<!-- ============================================================ -->
+
+<section class="philosophy" id="philosophy">
+    <h2 id="philosophy-heading">Gerðu plötuna</h2>
+    <p id="philosophy-copy-1">TayPE er til til að hjálpa þér að klára alvöru tökur, ekki sökkva í endalausa valkosti. Fjölrása DAW með sál segulbandstækis. Færri hamir, færri hnappar, meiri sannleikur.</p>
 </section>
 
 <hr class="section-divider">
@@ -943,57 +898,6 @@ footer {
     </p>
     <p id="tone-intro-2" class="tone-intro">Engin viðbót þörf. Konsólhermunin keyrir beint inni í hljóðvélinni — sameiginlegir vægitenoraf, ástand á rás, núllminni töf. Sama hugmynd og vélbúnaðarhraðað DSP, byggt inn í blandarann, ekki sett ofan á.</p>
     <p id="tone-kicker" class="tone-kicker">Handverkið fyrst. Hljóðið í kjarnanum.</p>
-
-    <div class="tone-cards">
-        <div class="feature-card">
-            <h3 id="tone-card-1-title">Mótuð preamp-stig</h3>
-            <p id="tone-card-1-body">Vélbúnaðarkarakter á rás úr fönguðum NAM-prófílum — Neve, API, SSL og fleira í gegnum TONE3000 samfélagssafnið. Mótaðu tón við upptökuna og skuldbindu þig af ásetningi. Fjórar stillingar: hrein gain, nútíma saturator, Airwindows-innblásin segulband, eða fullkomið taugaforritað magnaralíkan.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="tone-card-2-title">Console Summing</h3>
-            <p id="tone-card-2-body">NAM-knúin konsól keyrir á hverri rás — hvert lag fer í gegnum sína eigin líkönu konsólrönd áður en summan tekur, eins og að ýta 24 merkjum í gegnum alvöru hliðrænan blandara. Föngaðir prófílar skila mettun, harmónískum lit og dýnamískri svörun. Sameiginleg vægi, batched matrix inference á Apple Silicon — full konsólhermun á broti af CPU-kostnaði.</p>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ============================================================ -->
-<!-- Philosophy + Features                                        -->
-<!-- ============================================================ -->
-
-<section class="philosophy" id="philosophy">
-    <h2 id="philosophy-heading">Gerðu plötuna</h2>
-    <p id="philosophy-copy-1">TayPE er til til að hjálpa þér að klára alvöru tökur, ekki sökkva í endalausa valkosti. Fjölrása DAW með sál segulbandstækis. Færri hamir, færri hnappar, meiri sannleikur.</p>
-
-    <div class="features-grid">
-        <div class="feature-card" id="mcp">
-            <h3><span id="feature-mcp-title">MCP samþætting</span> <img id="feature-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"></h3>
-            <p id="feature-mcp-body">Valfrjáls vélræn aðstoð fyrir lotubreytingar og utanumhald sessions. Sjálfvirknivæddu umsýsluna, ekki listina. TayPE er enn determinískt og transactional í kjarnanum — MCP bætir vinnuflæði án þess að koma í stað handverksins.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-focus-title">Fókus fram yfir drasl</h3>
-            <p id="feature-focus-body">Focus mode shows only what matters at the playhead. Archive mode silences
-               dead tracks completely - no CPU, no noise. Commit over endless looping.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-strip-title">Innbyggð rásarræma</h3>
-            <p id="feature-strip-body">3-banda EQ í anda Neve, HP/LP síur, compressor með logarithmic release og 8 VST3 insert slot á hverri rás. Allt sem þú þarft, ekkert sem þú þarft ekki.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-truth-title">Sannleikur fjölrása</h3>
-            <p id="feature-truth-body">Record, arrange, and mix with a clean signal path. Real-time safe audio engine.
-               No hidden latency, no surprise. What you hear is what you get.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-ssl-title">SSL 360° samþætting</h3>
-            <p id="feature-ssl-body">Fullur stuðningur við SSL 360° með tvíátta fader- og pönnunarstýringu í gegnum UF8/UC1. Rásanöfn, litir og layout fara sjálfkrafa yfir á stjórnflötinn. Engin mapping, engin stilling — tengdu og mixaðu.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-stems-title">Stemmur, ekki möppur</h3>
-            <p id="feature-stems-body">Stemmur eru raunverulegir summing-busar. Eitt lag af dýpt. Ekkert möppuvíti innan í möppum. Console-layoutið helst stöðugt og fyrirsjáanlegt.</p>
-        </div>
-    </div>
 </section>
 
 <hr class="section-divider">
@@ -1027,7 +931,7 @@ footer {
                 <li id="price-personal-feature-1">Fullt forrit, allir eiginleikar</li>
                 <li id="price-personal-feature-2">2 aðalútgáfur af ókeypis uppfærslum</li>
             </ul>
-            <a id="price-personal-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Væntanlegt</a>
+            <a id="price-personal-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Sækja um einkabetuna</a>
         </div>
         <div class="price-card">
             <h3 id="price-commercial-title">Atvinnuleyfi</h3>
@@ -1037,7 +941,7 @@ footer {
                 <li id="price-commercial-feature-1">Fullt forrit, allir eiginleikar</li>
                 <li id="price-commercial-feature-2">2 aðalútgáfur af ókeypis uppfærslum</li>
             </ul>
-            <a id="price-commercial-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Væntanlegt</a>
+            <a id="price-commercial-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Sækja um einkabetuna</a>
         </div>
     </div>
 
@@ -1059,14 +963,10 @@ footer {
 
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Til verks</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE er í virkri þróun. Fylgstu með fyrir útgáfutilkynningar og snemmbúinn aðgang.</p>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE er í virkri þróun. Sæktu um aðgang að einkabetunni.</p>
     <!-- TODO: replace href once buildBetaApplicationForm.js has been run and Published URL is known -->
     <div style="margin-bottom: 1.5rem;">
         <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Sækja um einkabetuna</a>
-    </div>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a id="download-instagram" href="https://instagram.com/ruminantrecords" class="btn-secondary" target="_blank">Fylgja á Instagram</a>
-        <a id="download-reddit" href="https://www.reddit.com/r/taype/" class="btn-secondary" target="_blank">Fylgja á Reddit</a>
     </div>
 </section>
 
@@ -1084,11 +984,6 @@ footer {
             <h3 id="community-card-1-title">Þekkingargrunnur</h3>
             <p id="community-card-1-body">Notendahandbók, leiðbeiningar og tilvísunarskjöl. Allt sem þú þarft til að byrja og kafa dýpra.</p>
             <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the docs &rarr;</a>
-        </div>
-        <div class="community-card">
-            <h3 id="community-card-2-title">Samfélag</h3>
-            <p id="community-card-2-body">Spurningar, ráð, hugmyndir að eiginleikum og sýningar. Samkomustaður TayPE notenda.</p>
-            <a id="community-card-2-link" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Join r/taype &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-3-title">Villuskráningar</h3>

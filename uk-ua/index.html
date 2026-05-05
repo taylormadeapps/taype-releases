@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TayPE - Ремесло спочатку. Доступний за дизайном. Роботи теж вітаються.</title>
+<title>TayPE - Ремесло спочатку. Доступний за дизайном.</title>
 <meta id="meta-description" name="description" content="TayPE — це багатодоріжкова DAW для музикантів, які хочуть закінчувати платівки, а не воювати з програмою. Ціль WCAG 2.2 AA. MCP-нативно — Claude або Codex (з голосом) є основним невізуальним інтерфейсом. macOS.">
 <meta id="meta-og-title" property="og:title" content="TayPE - Зробити запис">
-<meta id="meta-og-description" property="og:description" content="Ремесло спочатку. Доступний за дизайном. Роботи теж вітаються.">
+<meta id="meta-og-description" property="og:description" content="Ремесло спочатку. Доступний за дизайном.">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
@@ -344,7 +344,7 @@ h2 {
     text-align: center;
 }
 
-/* ---- Philosophy / Features ---- */
+/* ---- Philosophy ---- */
 
 .philosophy {
     text-align: center;
@@ -355,56 +355,6 @@ h2 {
     max-width: 700px;
     margin: 0 auto 1.5rem;
     font-size: 1.05rem;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.5rem;
-    transition: border-color 0.3s;
-}
-.feature-card:hover {
-    border-color: var(--brass);
-}
-
-.feature-card h3 {
-    color: var(--brass);
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.mcp-logo-inline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-}
-
-.mcp-logo-tagline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-    margin-left: 0.3em;
-    opacity: 0.7;
-}
-
-.feature-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
 }
 
 /* ---- Screenshots ---- */
@@ -778,7 +728,6 @@ footer {
     section { padding: 3rem 1.25rem; }
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(280px, 70vw); height: auto; }
-    .features-grid { grid-template-columns: 1fr; }
     .pricing-cards { grid-template-columns: 1fr; }
     .community-grid { grid-template-columns: 1fr; }
 }
@@ -823,12 +772,6 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-.tone-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
 </style>
 </head>
 <body>
@@ -843,7 +786,7 @@ footer {
             <source type="image/webp" srcset="/assets/img/logo-square-64.webp 64w, /assets/img/logo-square-128.webp 128w" sizes="48px">
             <img id="nav-logo" src="/assets/img/logo-square-64.png" srcset="/assets/img/logo-square-64.png 64w, /assets/img/logo-square-128.png 128w" sizes="48px" alt="TayPE logo" width="48" height="48" decoding="async">
         </picture>
-        <span>TAYPE</span>
+        <span>TayPE</span>
     </a>
     <div class="nav-right">
         <label class="lang-switch" for="lang-select">
@@ -881,10 +824,10 @@ footer {
         <source type="image/webp" srcset="/assets/img/logo-320.webp 320w, /assets/img/logo-480.webp 480w, /assets/img/logo-640.webp 640w, /assets/img/logo-960.webp 960w" sizes="(max-width: 720px) 70vw, 400px">
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
     </picture>
-    <h1>TAYPE</h1>
+    <h1>TayPE</h1>
     <p id="hero-descriptor" class="hero-descriptor">Багатодоріжковий DAW для macOS</p>
     <p class="hero-tagline">
-        <span id="hero-tagline-text">Ремесло спочатку. Доступний за дизайном. Роботи теж вітаються.</span> <a href="#mcp"><img id="hero-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP Native" class="mcp-logo-tagline"></a>
+        <span id="hero-tagline-text">Ремесло спочатку. Доступний за дизайном.</span>
     </p>
     <div class="hero-buttons">
         <a id="hero-cta" href="#download" class="btn-primary">Поїхали</a>
@@ -892,6 +835,18 @@ footer {
     </div>
     <p id="hero-platform" class="hero-platform">Multitrack DAW &middot; macOS 12+ &middot; Apple Silicon native &middot; VST3 host</p>
     <p class="gregism" id="gregism"></p>
+</section>
+
+<hr class="section-divider">
+
+
+<!-- ============================================================ -->
+<!-- Philosophy                                                   -->
+<!-- ============================================================ -->
+
+<section class="philosophy" id="philosophy">
+    <h2 id="philosophy-heading">Зробити запис</h2>
+    <p id="philosophy-copy-1">TayPE існує, щоб допомогти вам закінчити справжні дубляжі, а не потонути в безкінечних опціях. Багатодоріжковий DAW з душею магнітофона. Менше режимів, менше кнопок, більше правди.</p>
 </section>
 
 <hr class="section-divider">
@@ -944,57 +899,6 @@ footer {
     </p>
     <p id="tone-intro-2" class="tone-intro">Без плагінів. Емуляція консолі працює просто всередині аудіодвигуна — спільні тензори ваг, стан на канал, нуль доданої затримки. Та сама філософія, що й апаратно-прискорений DSP, вбудована в мікшер, не приклеєна зверху.</p>
     <p id="tone-kicker" class="tone-kicker">Ремесло спочатку. Тон у центрі.</p>
-
-    <div class="tone-cards">
-        <div class="feature-card">
-            <h3 id="tone-card-1-title">Змодельовані передсилювачі</h3>
-            <p id="tone-card-1-body">Характер обладнання на канал зі схоплених NAM-профілів — Neve, API, SSL та інше через спільнотну бібліотеку TONE3000. Формуй тон на джерелі та фіксуй з наміром. Чотири режими: чистий gain, сучасний сатуратор, плівка в стилі Airwindows або повна нейронна модель підсилювача.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="tone-card-2-title">Консольне сумування</h3>
-            <p id="tone-card-2-body">Консоль на NAM працює на кожному каналі — кожна доріжка через свою змодельовану консольну смугу перед сумою, ніби пропускаєш 24 сигнали через справжній аналоговий пульт. Схоплені профілі дають сатурацію, гармонічний колір і динамічну відповідь. Спільні ваги, пакетна матрична інференція на Apple Silicon — повна емуляція консолі за частку вартості CPU.</p>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ============================================================ -->
-<!-- Philosophy + Features                                        -->
-<!-- ============================================================ -->
-
-<section class="philosophy" id="philosophy">
-    <h2 id="philosophy-heading">Зробити запис</h2>
-    <p id="philosophy-copy-1">TayPE існує, щоб допомогти вам закінчити справжні дубляжі, а не потонути в безкінечних опціях. Багатодоріжковий DAW з душею магнітофона. Менше режимів, менше кнопок, більше правди.</p>
-
-    <div class="features-grid">
-        <div class="feature-card" id="mcp">
-            <h3><span id="feature-mcp-title">Інтеграція MCP</span> <img id="feature-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"></h3>
-            <p id="feature-mcp-body">Опціональна машинна допомога для пакетного редагування та управління сеансом. Автоматизуйте адміністрацію, а не мистецтво. TayPE залишається детерміністичним і транзакційним у своій основі: MCP покращує робочий процес без заміни ремесла.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-focus-title">Фокус над безладом</h3>
-            <p id="feature-focus-body">Focus mode shows only what matters at the playhead. Archive mode silences
-               dead tracks completely - no CPU, no noise. Commit over endless looping.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-strip-title">Рідкісний канальний смуг консолі</h3>
-            <p id="feature-strip-body">3-смуговий EQ у стилі Neve, фільтри HP/LP, компресор з логарифмічним звільненням та 8 слоти вставки VST3 на доріжку. Все, що вам потрібно, нічого більше.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-truth-title">Багатодоріжкова правда</h3>
-            <p id="feature-truth-body">Record, arrange, and mix with a clean signal path. Real-time safe audio engine.
-               No hidden latency, no surprise. What you hear is what you get.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-ssl-title">Інтеграція SSL 360°</h3>
-            <p id="feature-ssl-body">Повна підтримка SSL 360° з двостороннім контролем фейдера та панорами через UF8/UC1. Назви доріжок, кольори та макет автоматично відправляються на вашу поверхню. Без картування, без конфігурації: просто підключіть і мікшуйте.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-stems-title">Стебла, а не папки</h3>
-            <p id="feature-stems-body">Стебла - це справжні шини сумування. Одна глибина. Немає вкладених папок пекла. Макет вашої консолі залишається стабільним і передбачуваним.</p>
-        </div>
-    </div>
 </section>
 
 <hr class="section-divider">
@@ -1028,7 +932,7 @@ footer {
                 <li id="price-personal-feature-1">Повна програма, всі функції</li>
                 <li id="price-personal-feature-2">2 основні версії безкоштовних оновлень</li>
             </ul>
-            <a id="price-personal-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Незабаром</a>
+            <a id="price-personal-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Подати заявку на приватну бету</a>
         </div>
         <div class="price-card">
             <h3 id="price-commercial-title">Комерційний</h3>
@@ -1038,7 +942,7 @@ footer {
                 <li id="price-commercial-feature-1">Повна програма, всі функції</li>
                 <li id="price-commercial-feature-2">2 основні версії безкоштовних оновлень</li>
             </ul>
-            <a id="price-commercial-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Незабаром</a>
+            <a id="price-commercial-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Подати заявку на приватну бету</a>
         </div>
     </div>
 
@@ -1060,14 +964,10 @@ footer {
 
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Поїхали</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE перебуває в активній розробці. Слідкуйте за нами для оголошень про випуски та ранній доступ.</p>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE перебуває в активній розробці. Подайте заявку на доступ до приватної бети.</p>
     <!-- TODO: replace href once buildBetaApplicationForm.js has been run and Published URL is known -->
     <div style="margin-bottom: 1.5rem;">
         <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Подати заявку на приватну бету</a>
-    </div>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a id="download-instagram" href="https://instagram.com/ruminantrecords" class="btn-secondary" target="_blank">Стежте в Instagram</a>
-        <a id="download-reddit" href="https://www.reddit.com/r/taype/" class="btn-secondary" target="_blank">Слідкуйте на Reddit</a>
     </div>
 </section>
 
@@ -1085,11 +985,6 @@ footer {
             <h3 id="community-card-1-title">База знань</h3>
             <p id="community-card-1-body">Посібник користувача, навчальні матеріали та довідкова документація. Все, що вам потрібно, щоб почати та поглибити.</p>
             <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the docs &rarr;</a>
-        </div>
-        <div class="community-card">
-            <h3 id="community-card-2-title">Спільнота</h3>
-            <p id="community-card-2-body">Питання, поради, прохання функцій, show-and-tell. Місце зустрічі для користувачів TayPE.</p>
-            <a id="community-card-2-link" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Join r/taype &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-3-title">Звіти про помилки</h3>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TayPE - Rzemiosło przed wszystkim. Dostępne od projektowania. Roboty też są mile widziane.</title>
+<title>TayPE - Rzemiosło przed wszystkim. Dostępne od projektowania.</title>
 <meta id="meta-description" name="description" content="TayPE to wielośladowa DAW dla muzyków, którzy chcą kończyć płyty, a nie walczyć z oprogramowaniem. Cel: WCAG 2.2 AA. Natywne MCP — Claude lub Codex (z głosem) to główny niewizualny interfejs. macOS.">
 <meta id="meta-og-title" property="og:title" content="TayPE - Stwórz rekord">
-<meta id="meta-og-description" property="og:description" content="Rzemiosło przed wszystkim. Dostępne od projektowania. Roboty też są mile widziane.">
+<meta id="meta-og-description" property="og:description" content="Rzemiosło przed wszystkim. Dostępne od projektowania.">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
@@ -344,7 +344,7 @@ h2 {
     text-align: center;
 }
 
-/* ---- Philosophy / Features ---- */
+/* ---- Philosophy ---- */
 
 .philosophy {
     text-align: center;
@@ -355,56 +355,6 @@ h2 {
     max-width: 700px;
     margin: 0 auto 1.5rem;
     font-size: 1.05rem;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 1.5rem;
-    transition: border-color 0.3s;
-}
-.feature-card:hover {
-    border-color: var(--brass);
-}
-
-.feature-card h3 {
-    color: var(--brass);
-    font-size: 0.95rem;
-    margin-bottom: 0.75rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.mcp-logo-inline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-}
-
-.mcp-logo-tagline {
-    height: 1.5em;
-    width: auto;
-    filter: invert(1) brightness(0.85) sepia(1) hue-rotate(5deg) saturate(3);
-    vertical-align: middle;
-    margin-left: 0.3em;
-    opacity: 0.7;
-}
-
-.feature-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
 }
 
 /* ---- Screenshots ---- */
@@ -778,7 +728,6 @@ footer {
     section { padding: 3rem 1.25rem; }
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(280px, 70vw); height: auto; }
-    .features-grid { grid-template-columns: 1fr; }
     .pricing-cards { grid-template-columns: 1fr; }
     .community-grid { grid-template-columns: 1fr; }
 }
@@ -823,12 +772,6 @@ footer {
     margin-bottom: 2.5rem;
 }
 
-.tone-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
 </style>
 </head>
 <body>
@@ -843,7 +786,7 @@ footer {
             <source type="image/webp" srcset="/assets/img/logo-square-64.webp 64w, /assets/img/logo-square-128.webp 128w" sizes="48px">
             <img id="nav-logo" src="/assets/img/logo-square-64.png" srcset="/assets/img/logo-square-64.png 64w, /assets/img/logo-square-128.png 128w" sizes="48px" alt="TayPE logo" width="48" height="48" decoding="async">
         </picture>
-        <span>TAYPE</span>
+        <span>TayPE</span>
     </a>
     <div class="nav-right">
         <label class="lang-switch" for="lang-select">
@@ -881,10 +824,10 @@ footer {
         <source type="image/webp" srcset="/assets/img/logo-320.webp 320w, /assets/img/logo-480.webp 480w, /assets/img/logo-640.webp 640w, /assets/img/logo-960.webp 960w" sizes="(max-width: 720px) 70vw, 400px">
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
     </picture>
-    <h1>TAYPE</h1>
+    <h1>TayPE</h1>
     <p id="hero-descriptor" class="hero-descriptor">Wielościeżkowy DAW dla macOS</p>
     <p class="hero-tagline">
-        <span id="hero-tagline-text">Rzemiosło przed wszystkim. Dostępne od projektowania. Roboty też są mile widziane.</span> <a href="#mcp"><img id="hero-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP Native" class="mcp-logo-tagline"></a>
+        <span id="hero-tagline-text">Rzemiosło przed wszystkim. Dostępne od projektowania.</span>
     </p>
     <div class="hero-buttons">
         <a id="hero-cta" href="#download" class="btn-primary">Zaczynamy</a>
@@ -892,6 +835,18 @@ footer {
     </div>
     <p id="hero-platform" class="hero-platform">Multitrack DAW &middot; macOS 12+ &middot; Apple Silicon native &middot; VST3 host</p>
     <p class="gregism" id="gregism"></p>
+</section>
+
+<hr class="section-divider">
+
+
+<!-- ============================================================ -->
+<!-- Philosophy                                                   -->
+<!-- ============================================================ -->
+
+<section class="philosophy" id="philosophy">
+    <h2 id="philosophy-heading">Stwórz rekord</h2>
+    <p id="philosophy-copy-1">TayPE istnieje, aby pomóc ci skończyć prawdziwe ujęcia, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu. Mniej trybów, mniej gałek, więcej prawdy.</p>
 </section>
 
 <hr class="section-divider">
@@ -944,57 +899,6 @@ footer {
     </p>
     <p id="tone-intro-2" class="tone-intro">Bez wtyczek. Emulacja konsoli działa bezpośrednio w silniku audio — współdzielone tensory wag, stan na kanał, zero dodanego opóźnienia. Ta sama filozofia, co DSP przyspieszane sprzętowo, wbudowana w mikser, a nie doklejona.</p>
     <p id="tone-kicker" class="tone-kicker">Rzemiosło przed wszystkim. Dźwięk w centrum.</p>
-
-    <div class="tone-cards">
-        <div class="feature-card">
-            <h3 id="tone-card-1-title">Modelowane przedwzmacniacze</h3>
-            <p id="tone-card-1-body">Charakter sprzętu na kanał z uchwyconych profili NAM — Neve, API, SSL i więcej przez społecznościową bibliotekę TONE3000. Kształtuj brzmienie u źródła i decyduj z intencją. Cztery tryby: czyste gain, nowoczesny saturator, taśma w stylu Airwindows lub pełny neuronowy model wzmacniacza.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="tone-card-2-title">Sumowanie Konsolowe</h3>
-            <p id="tone-card-2-body">Konsola napędzana przez NAM działa na każdym kanale — każdy ślad przez własny modelowany pasek konsolowy przed sumą, jak przepuszczanie 24 sygnałów przez prawdziwy analogowy stół. Uchwycone profile dostarczają nasycenia, harmonicznej barwy i dynamicznej odpowiedzi. Współdzielone wagi, wsadowa inferencja macierzowa na Apple Silicon — pełna emulacja konsoli za ułamek kosztu CPU.</p>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ============================================================ -->
-<!-- Philosophy + Features                                        -->
-<!-- ============================================================ -->
-
-<section class="philosophy" id="philosophy">
-    <h2 id="philosophy-heading">Stwórz rekord</h2>
-    <p id="philosophy-copy-1">TayPE istnieje, aby pomóc ci skończyć prawdziwe ujęcia, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu. Mniej trybów, mniej gałek, więcej prawdy.</p>
-
-    <div class="features-grid">
-        <div class="feature-card" id="mcp">
-            <h3><span id="feature-mcp-title">Integracja MCP</span> <img id="feature-mcp-logo" src="/assets/img/mcp-logo.png" alt="MCP logo" class="mcp-logo-inline"></h3>
-            <p id="feature-mcp-body">Opcjonalna asystenta maszyny do edycji wsadowych i zarządzania sesją. Automatyzuj administrację, a nie sztukę. TayPE pozostaje deterministyczne i transakcyjne w swoim rdzeniu: MCP ulepsza przepływ pracy bez zastępowania rzemiosła.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-focus-title">Fokus nad bałaganem</h3>
-            <p id="feature-focus-body">Focus mode shows only what matters at the playhead. Archive mode silences
-               dead tracks completely - no CPU, no noise. Commit over endless looping.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-strip-title">Natywny pasek kanału konsoli</h3>
-            <p id="feature-strip-body">3-pasmowy EQ w stylu Neve, filtry HP/LP, kompresor z logarytmicznym puszczaniem i 8 sloty wstawki VST3 na ścieżkę. Wszystko czego potrzebujesz, nic więcej.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-truth-title">Wielościeżkowa prawda</h3>
-            <p id="feature-truth-body">Record, arrange, and mix with a clean signal path. Real-time safe audio engine.
-               No hidden latency, no surprise. What you hear is what you get.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-ssl-title">Integracja SSL 360°</h3>
-            <p id="feature-ssl-body">Pełna obsługa SSL 360° z dwukierunkową kontrolą suwaka i panoramy przez UF8/UC1. Nazwy ścieżek, kolory i układ są automatycznie wysyłane na twoją powierzchnię. Bez mapowania, bez konfiguracji: po prostu podłącz i miksuj.</p>
-        </div>
-        <div class="feature-card">
-            <h3 id="feature-stems-title">Stemy, nie foldery</h3>
-            <p id="feature-stems-body">Stemy to prawdziwe magistrale sumowania. Jedno poziom głębokie. Brak zagnieżdżonego folderu piekła. Twój układ konsoli pozostaje stabilny i przewidywalny.</p>
-        </div>
-    </div>
 </section>
 
 <hr class="section-divider">
@@ -1028,7 +932,7 @@ footer {
                 <li id="price-personal-feature-1">Pełna aplikacja, wszystkie funkcje</li>
                 <li id="price-personal-feature-2">2 główne wersje bezpłatnych aktualizacji</li>
             </ul>
-            <a id="price-personal-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Wkrótce dostępne</a>
+            <a id="price-personal-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Aplikuj o prywatną betę</a>
         </div>
         <div class="price-card">
             <h3 id="price-commercial-title">Komercyjny</h3>
@@ -1038,7 +942,7 @@ footer {
                 <li id="price-commercial-feature-1">Pełna aplikacja, wszystkie funkcje</li>
                 <li id="price-commercial-feature-2">2 główne wersje bezpłatnych aktualizacji</li>
             </ul>
-            <a id="price-commercial-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Wkrótce dostępne</a>
+            <a id="price-commercial-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" style="font-size: 0.8rem;" target="_blank">Aplikuj o prywatną betę</a>
         </div>
     </div>
 
@@ -1060,14 +964,10 @@ footer {
 
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Zaczynamy</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE jest w aktywnym rozwoju. Obserwuj nas, aby poznać ogłoszenia o wydaniach i wczesny dostęp.</p>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">TayPE jest w aktywnym rozwoju. Zgłoś się po dostęp do prywatnej bety.</p>
     <!-- TODO: replace href once buildBetaApplicationForm.js has been run and Published URL is known -->
     <div style="margin-bottom: 1.5rem;">
         <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Aplikuj o prywatną betę</a>
-    </div>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a id="download-instagram" href="https://instagram.com/ruminantrecords" class="btn-secondary" target="_blank">Obserwuj na Instagramie</a>
-        <a id="download-reddit" href="https://www.reddit.com/r/taype/" class="btn-secondary" target="_blank">Obserwuj na Reddicie</a>
     </div>
 </section>
 
@@ -1085,11 +985,6 @@ footer {
             <h3 id="community-card-1-title">Baza wiedzy</h3>
             <p id="community-card-1-body">Przewodnik użytkownika, samouczki i dokumentacja referencyjna. Wszystko, czego potrzebujesz, aby zacząć i zagłębiać się.</p>
             <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the docs &rarr;</a>
-        </div>
-        <div class="community-card">
-            <h3 id="community-card-2-title">Społeczność</h3>
-            <p id="community-card-2-body">Pytania, porady, prośby o funkcje, show-and-tell. Miejsce spotkań dla użytkowników TayPE.</p>
-            <a id="community-card-2-link" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Join r/taype &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-3-title">Raporty błędów</h3>
