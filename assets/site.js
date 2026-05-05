@@ -84,7 +84,7 @@ const locales = {
             "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "pricing-cadence-note": "Major versions are typically released at a yearly cadence. Subsequent licence renewals are priced at 25% of RRP for existing owners.",
             "download-heading": "Let's Roll",
-            "download-copy": "TayPE is in active development. Apply for private beta access.",
+            "download-copy": "Apply for private beta access.",
             "download-apply": "Apply for the Private Beta",
             "community-heading": "Community & Support",
             "community-card-1-title": "Knowledge Base",
@@ -106,7 +106,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support is a work in progress."
+            "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface — voice control included. Native screen-reader support coming in Q3 2026."
         },
         attrs: {
             "nav-logo": { alt: "TayPE logo" },
@@ -229,7 +229,7 @@ const locales = {
             "demo-trust-framing": "TayPEは双方向の信頼で動く。",
             "demo-what-that-means": "つまり：",
             "demo-trust-1": "サブスクなし",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "DRMなし",
             "demo-trust-3": "機能制限なし",
             "demo-trust-4": "外部送信なし",
             "demo-trust-5": "デモの期限切れもノイズもなし",
@@ -251,7 +251,7 @@ const locales = {
             "accessibility-note": "学生は無料。アクセシビリティ割引あり。気軽に聞いて。",
             "pricing-cadence-note": "メジャーバージョンは通常年1回のペースでリリース。既存ユーザーへのライセンス更新は希望小売価格の25%で提供。",
             "download-heading": "さあ始めよう",
-            "download-copy": "TayPE は現在も開発中です。プライベートベータへの参加をお申し込みください。",
+            "download-copy": "プライベートベータへの参加をお申し込みください。",
             "download-apply": "プライベートベータに応募",
             "community-heading": "コミュニティとサポート",
             "community-card-1-title": "ナレッジベース",
@@ -273,7 +273,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE は Ruminant Audio Works Ltd. のプロダクトです。"
         },
         html: {
-            "a11y-copy": "<strong>クラフトにはアクセスが要る。</strong> <strong>アクセシビリティは機能ではない。土台だ。</strong>インターフェースはミュージシャンの居場所まで届かなければならないから。TayPEは全体でWCAG 2.2 AAを目指す。コントラスト比15:1+のハイコントラストモード。すべての状態は形とアイコンで伝え、色だけに頼らない。すべての操作にキーボードショートカット。視覚に頼らないワークフローでは、ClaudeまたはCodex経由のMCPが主要インターフェース — 音声コントロール対応。ネイティブのスクリーンリーダー対応は進行中。"
+            "a11y-copy": "<strong>クラフトにはアクセスが要る。</strong> <strong>アクセシビリティは機能ではない。土台だ。</strong>インターフェースはミュージシャンの居場所まで届かなければならないから。TayPEは全体でWCAG 2.2 AAを目指す。コントラスト比15:1+のハイコントラストモード。すべての状態は形とアイコンで伝え、色だけに頼らない。すべての操作にキーボードショートカット。視覚に頼らないワークフローでは、ClaudeまたはCodex経由のMCPが主要インターフェース — 音声コントロール対応。ネイティブのスクリーンリーダー対応は2026年第3四半期に登場予定。"
         },
         attrs: {
             "nav-logo": { alt: "TayPE ロゴ" },
@@ -396,7 +396,7 @@ const locales = {
             "demo-trust-framing": "TayPE fonctionne sur la confiance mutuelle.",
             "demo-what-that-means": "Ce que ça veut dire :",
             "demo-trust-1": "Pas d’abonnement",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Pas de DRM",
             "demo-trust-3": "Pas de limite de fonctionnalités",
             "demo-trust-4": "Pas de télémétrie",
             "demo-trust-5": "Pas d'expiration ni de bruit de démo",
@@ -418,7 +418,7 @@ const locales = {
             "accessibility-note": "Gratuit pour les étudiants. Tarifs préférentiels accessibilité. Demandez, simplement.",
             "pricing-cadence-note": "Les versions majeures sortent typiquement à cadence annuelle. Les renouvellements de licence sont facturés 25 % du PVC pour les propriétaires existants.",
             "download-heading": "C'est parti",
-            "download-copy": "TayPE est en développement actif. Postulez pour accéder à la beta privée.",
+            "download-copy": "Postulez pour accéder à la beta privée.",
             "download-apply": "Postuler à la beta privée",
             "community-heading": "Communauté et support",
             "community-card-1-title": "Base de connaissances",
@@ -440,7 +440,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE est un produit de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>L’artisanat demande l’accès.</strong> <strong>L’accessibilité n’est pas une fonctionnalité. C’est une fondation.</strong> Parce que l’interface doit rejoindre les musiciens là où ils sont. TayPE vise WCAG 2.2 AA partout. Mode haut contraste avec ratios texte 15:1+. Chaque état est transmis par forme et icône, jamais par la couleur seule. Raccourcis clavier pour chaque action. Pour les flux non visuels, MCP via Claude ou Codex est l’interface principale — contrôle vocal inclus. Le support natif des lecteurs d’écran est en cours."
+            "a11y-copy": "<strong>L’artisanat demande l’accès.</strong> <strong>L’accessibilité n’est pas une fonctionnalité. C’est une fondation.</strong> Parce que l’interface doit rejoindre les musiciens là où ils sont. TayPE vise WCAG 2.2 AA partout. Mode haut contraste avec ratios texte 15:1+. Chaque état est transmis par forme et icône, jamais par la couleur seule. Raccourcis clavier pour chaque action. Pour les flux non visuels, MCP via Claude ou Codex est l’interface principale — contrôle vocal inclus. Le support natif des lecteurs d’écran arrive au T3 2026."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -563,7 +563,7 @@ const locales = {
             "demo-trust-framing": "TayPE basiert auf gegenseitigem Vertrauen.",
             "demo-what-that-means": "Was das heißt:",
             "demo-trust-1": "Keine Abos",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Kein DRM",
             "demo-trust-3": "Keine Feature-Limits",
             "demo-trust-4": "Kein Nachhausetelefonieren",
             "demo-trust-5": "Keine Demo-Laufzeit, kein Demo-Rauschen",
@@ -585,7 +585,7 @@ const locales = {
             "accessibility-note": "Studierende kostenlos. Barrierefreiheits-Vergünstigungen. Frag einfach.",
             "pricing-cadence-note": "Major-Versionen erscheinen typischerweise im Jahresrhythmus. Folgende Lizenzverlängerungen kosten 25% des UVP für bestehende Besitzer.",
             "download-heading": "Los geht's",
-            "download-copy": "TayPE befindet sich in aktiver Entwicklung. Bewirb dich für den Zugang zur privaten Beta.",
+            "download-copy": "Bewirb dich für den Zugang zur privaten Beta.",
             "download-apply": "Für die Private Beta bewerben",
             "community-heading": "Community & Support",
             "community-card-1-title": "Wissensbasis",
@@ -607,7 +607,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE ist ein Produkt von Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Handwerk braucht Zugang.</strong> <strong>Barrierefreiheit ist kein Feature. Sie ist ein Fundament.</strong> Denn die Oberfläche muss Musikerinnen und Musiker dort abholen, wo sie sind. TayPE strebt durchgängig WCAG 2.2 AA an. Hochkontrast-Modus mit 15:1+ Textverhältnis. Jeder Zustand wird über Form und Icon vermittelt, nie nur über Farbe. Tastenkürzel für jede Aktion. Für nicht-visuelle Workflows ist MCP über Claude oder Codex das primäre Interface — Sprachsteuerung inklusive. Native Screenreader-Unterstützung ist in Arbeit."
+            "a11y-copy": "<strong>Handwerk braucht Zugang.</strong> <strong>Barrierefreiheit ist kein Feature. Sie ist ein Fundament.</strong> Denn die Oberfläche muss Musikerinnen und Musiker dort abholen, wo sie sind. TayPE strebt durchgängig WCAG 2.2 AA an. Hochkontrast-Modus mit 15:1+ Textverhältnis. Jeder Zustand wird über Form und Icon vermittelt, nie nur über Farbe. Tastenkürzel für jede Aktion. Für nicht-visuelle Workflows ist MCP über Claude oder Codex das primäre Interface — Sprachsteuerung inklusive. Native Screenreader-Unterstützung kommt in Q3 2026."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-Logo" },
@@ -730,7 +730,7 @@ const locales = {
             "demo-trust-framing": "TayPE funciona con confianza mutua.",
             "demo-what-that-means": "Lo que significa:",
             "demo-trust-1": "Sin suscripciones",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Sin DRM",
             "demo-trust-3": "Sin límites de funciones",
             "demo-trust-4": "Sin telemetría",
             "demo-trust-5": "Sin caducidad ni ruido de demo",
@@ -752,7 +752,7 @@ const locales = {
             "accessibility-note": "Estudiantes gratis. Concesiones de accesibilidad. Sólo pregunta.",
             "pricing-cadence-note": "Las versiones mayores se publican típicamente con cadencia anual. Las renovaciones de licencia se cobran al 25% del PVP para propietarios existentes.",
             "download-heading": "A grabar",
-            "download-copy": "TayPE está en desarrollo activo. Solicita acceso a la beta privada.",
+            "download-copy": "Solicita acceso a la beta privada.",
             "download-apply": "Solicitar la beta privada",
             "community-heading": "Comunidad y soporte",
             "community-card-1-title": "Base de conocimiento",
@@ -774,7 +774,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE es un producto de Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>El oficio requiere acceso.</strong> <strong>La accesibilidad no es una función. Es un cimiento.</strong> Porque la interfaz debe encontrarse con los músicos donde están. TayPE apunta a WCAG 2.2 AA en todo. Modo de alto contraste con ratios de texto 15:1+. Cada estado se transmite con forma e icono, nunca solo con color. Atajos de teclado para cada acción. Para flujos no visuales, MCP a través de Claude o Codex es la interfaz principal — control por voz incluido. El soporte nativo de lector de pantalla está en desarrollo."
+            "a11y-copy": "<strong>El oficio requiere acceso.</strong> <strong>La accesibilidad no es una función. Es un cimiento.</strong> Porque la interfaz debe encontrarse con los músicos donde están. TayPE apunta a WCAG 2.2 AA en todo. Modo de alto contraste con ratios de texto 15:1+. Cada estado se transmite con forma e icono, nunca solo con color. Atajos de teclado para cada acción. Para flujos no visuales, MCP a través de Claude o Codex es la interfaz principal — control por voz incluido. El soporte nativo de lector de pantalla llega en T3 2026."
         },
         attrs: {
             "nav-logo": { alt: "Logo de TayPE" },
@@ -897,7 +897,7 @@ const locales = {
             "demo-trust-framing": "TayPE byggir á gagnkvæmu trausti.",
             "demo-what-that-means": "Hvað það þýðir:",
             "demo-trust-1": "Engar áskriftir",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Ekkert DRM",
             "demo-trust-3": "Engin takmörk á eiginleikum",
             "demo-trust-4": "Ekkert kallað heim",
             "demo-trust-5": "Engin demo-tímatakmörk eða suð",
@@ -919,7 +919,7 @@ const locales = {
             "accessibility-note": "Nemendur frítt. Aðgengisívilnun. Bara spyrja.",
             "pricing-cadence-note": "Stórar útgáfur koma yfirleitt árlega. Endurnýjanir leyfis kosta 25% af leiðbeinandi verði fyrir núverandi eigendur.",
             "download-heading": "Til verks",
-            "download-copy": "TayPE er í virkri þróun. Sæktu um aðgang að einkabetunni.",
+            "download-copy": "Sæktu um aðgang að einkabetunni.",
             "download-apply": "Sækja um einkabetuna",
             "community-heading": "Samfélag og stuðningur",
             "community-card-1-title": "Þekkingargrunnur",
@@ -941,7 +941,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE er vara frá Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Iðn krefst aðgengis.</strong> <strong>Aðgengi er ekki eiginleiki. Það er grunnur.</strong>Því viðmótið verður að mæta tónlistarmönnum þar sem þeir eru. TayPE stefnir á WCAG 2.2 AA út um allt. Háskerpustilling með textahlutföll 15:1+. Hvert ástand er flutt með lögun og táknum, aldrei aðeins með lit. Lyklaborðstýra fyrir hverja aðgerð. Fyrir vinnuflæði án sjónar er MCP í gegnum Claude eða Codex aðalviðmótið — raddstýring innifalin. Innfæddur stuðningur við skjálesara er í vinnslu."
+            "a11y-copy": "<strong>Iðn krefst aðgengis.</strong> <strong>Aðgengi er ekki eiginleiki. Það er grunnur.</strong>Því viðmótið verður að mæta tónlistarmönnum þar sem þeir eru. TayPE stefnir á WCAG 2.2 AA út um allt. Háskerpustilling með textahlutföll 15:1+. Hvert ástand er flutt með lögun og táknum, aldrei aðeins með lit. Lyklaborðstýra fyrir hverja aðgerð. Fyrir vinnuflæði án sjónar er MCP í gegnum Claude eða Codex aðalviðmótið — raddstýring innifalin. Innfæddur stuðningur við skjálesara kemur á 3. ársfjórðungi 2026."
         },
         attrs: {
             "nav-logo": { alt: "TayPE merki" },
@@ -1064,7 +1064,7 @@ const locales = {
             "demo-trust-framing": "TayPE draait op wederzijds vertrouwen.",
             "demo-what-that-means": "Wat dat betekent:",
             "demo-trust-1": "Geen abonnementen",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Geen DRM",
             "demo-trust-3": "Geen functielimieten",
             "demo-trust-4": "Geen telemetrie",
             "demo-trust-5": "Geen demo-vervaldatum of -ruis",
@@ -1086,7 +1086,7 @@ const locales = {
             "accessibility-note": "Gratis voor studenten. Toegankelijkheidskortingen. Vraag het gewoon.",
             "pricing-cadence-note": "Major-versies komen doorgaans jaarlijks uit. Volgende licentievernieuwingen zijn 25% van de adviesprijs voor bestaande eigenaren.",
             "download-heading": "Laten we beginnen",
-            "download-copy": "TayPE is in actieve ontwikkeling. Meld je aan voor toegang tot de private beta.",
+            "download-copy": "Meld je aan voor toegang tot de private beta.",
             "download-apply": "Aanmelden voor de private beta",
             "community-heading": "Gemeenschap en ondersteuning",
             "community-card-1-title": "Kennisbank",
@@ -1108,7 +1108,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is een product van Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Vakmanschap vraagt toegang.</strong> <strong>Toegankelijkheid is geen feature. Het is een fundament.</strong> Want de interface moet muzikanten ontmoeten waar ze zijn. TayPE mikt overal op WCAG 2.2 AA. Hoogcontrastmodus met tekstratio’s van 15:1+. Elke status wordt overgebracht met vorm en icoon, nooit alleen met kleur. Toetsenbordkortere voor elke handeling. Voor niet-visuele workflows is MCP via Claude of Codex de primaire interface — spraakbediening inbegrepen. Native screenreader-ondersteuning is in uitvoering."
+            "a11y-copy": "<strong>Vakmanschap vraagt toegang.</strong> <strong>Toegankelijkheid is geen feature. Het is een fundament.</strong> Want de interface moet muzikanten ontmoeten waar ze zijn. TayPE mikt overal op WCAG 2.2 AA. Hoogcontrastmodus met tekstratio’s van 15:1+. Elke status wordt overgebracht met vorm en icoon, nooit alleen met kleur. Toetsenbordkortere voor elke handeling. Voor niet-visuele workflows is MCP via Claude of Codex de primaire interface — spraakbediening inbegrepen. Native screenreader-ondersteuning komt in Q3 2026."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-logo" },
@@ -1231,7 +1231,7 @@ const locales = {
             "demo-trust-framing": "TayPE si basa sulla fiducia reciproca.",
             "demo-what-that-means": "Cosa significa:",
             "demo-trust-1": "Niente abbonamenti",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Niente DRM",
             "demo-trust-3": "Niente limiti alle funzionalità",
             "demo-trust-4": "Niente telemetria",
             "demo-trust-5": "Nessuna scadenza o rumore demo",
@@ -1253,7 +1253,7 @@ const locales = {
             "accessibility-note": "Studenti gratis. Agevolazioni accessibilità. Basta chiedere.",
             "pricing-cadence-note": "Le versioni major escono tipicamente a cadenza annuale. I rinnovi di licenza sono al 25% del prezzo consigliato per chi possiede già il prodotto.",
             "download-heading": "Si parte",
-            "download-copy": "TayPE è in sviluppo attivo. Candidati per accedere alla beta privata.",
+            "download-copy": "Candidati per accedere alla beta privata.",
             "download-apply": "Candidati alla beta privata",
             "community-heading": "Comunità e supporto",
             "community-card-1-title": "Base di conoscenza",
@@ -1275,7 +1275,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE è un prodotto di Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>L’artigianato richiede accesso.</strong> <strong>L’accessibilità non è una funzionalità. È una fondazione.</strong> Perché l’interfaccia deve andare incontro ai musicisti dove sono. TayPE punta a WCAG 2.2 AA ovunque. Modalità alto contrasto con rapporti testo 15:1+. Ogni stato è espresso con forma e icona, mai solo con il colore. Scorciatoie da tastiera per ogni azione. Per i flussi non visivi, MCP tramite Claude o Codex è l’interfaccia principale — controllo vocale incluso. Il supporto nativo per screen reader è in lavorazione."
+            "a11y-copy": "<strong>L’artigianato richiede accesso.</strong> <strong>L’accessibilità non è una funzionalità. È una fondazione.</strong> Perché l’interfaccia deve andare incontro ai musicisti dove sono. TayPE punta a WCAG 2.2 AA ovunque. Modalità alto contrasto con rapporti testo 15:1+. Ogni stato è espresso con forma e icona, mai solo con il colore. Scorciatoie da tastiera per ogni azione. Per i flussi non visivi, MCP tramite Claude o Codex è l’interfaccia principale — controllo vocale incluso. Il supporto nativo per screen reader arriva nel Q3 2026."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1398,7 +1398,7 @@ const locales = {
             "demo-trust-framing": "TayPE działa na obopólnym zaufaniu.",
             "demo-what-that-means": "Co to znaczy:",
             "demo-trust-1": "Brak subskrypcji",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Brak DRM",
             "demo-trust-3": "Brak limitów funkcji",
             "demo-trust-4": "Brak telemetrii",
             "demo-trust-5": "Bez wygaśnięcia ani szumów demo",
@@ -1420,7 +1420,7 @@ const locales = {
             "accessibility-note": "Studenci za darmo. Ulgi dostępnościowe. Po prostu zapytaj.",
             "pricing-cadence-note": "Wersje główne pojawiają się zazwyczaj raz w roku. Odnowienia licencji kosztują 25% sugerowanej ceny detalicznej dla obecnych właścicieli.",
             "download-heading": "Zaczynamy",
-            "download-copy": "TayPE jest w aktywnym rozwoju. Zgłoś się po dostęp do prywatnej bety.",
+            "download-copy": "Zgłoś się po dostęp do prywatnej bety.",
             "download-apply": "Aplikuj o prywatną betę",
             "community-heading": "Społeczność i wsparcie",
             "community-card-1-title": "Baza wiedzy",
@@ -1442,7 +1442,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE jest produktem Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Rzemiosło wymaga dostępu.</strong> <strong>Dostępność nie jest funkcją. Jest fundamentem.</strong>Bo interfejs musi spotkać muzyków tam, gdzie są. TayPE celuje w WCAG 2.2 AA wszędzie. Tryb wysokiego kontrastu z proporcjami tekstu 15:1+. Każdy stan jest przekazywany kształtem i ikoną, nigdy samym kolorem. Skróty klawiszowe dla każdej akcji. Dla przepływów niewizualnych, MCP przez Claude lub Codex jest głównym interfejsem — sterowanie głosem włącznie. Natywna obsługa czytników ekranu jest w trakcie."
+            "a11y-copy": "<strong>Rzemiosło wymaga dostępu.</strong> <strong>Dostępność nie jest funkcją. Jest fundamentem.</strong>Bo interfejs musi spotkać muzyków tam, gdzie są. TayPE celuje w WCAG 2.2 AA wszędzie. Tryb wysokiego kontrastu z proporcjami tekstu 15:1+. Każdy stan jest przekazywany kształtem i ikoną, nigdy samym kolorem. Skróty klawiszowe dla każdej akcji. Dla przepływów niewizualnych, MCP przez Claude lub Codex jest głównym interfejsem — sterowanie głosem włącznie. Natywna obsługa czytników ekranu w III kwartale 2026."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1565,7 +1565,7 @@ const locales = {
             "demo-trust-framing": "TayPE працює на взаємній довірі.",
             "demo-what-that-means": "Що це означає:",
             "demo-trust-1": "Без підписок",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Без DRM",
             "demo-trust-3": "Без обмежень функцій",
             "demo-trust-4": "Без телеметрії",
             "demo-trust-5": "Без обмеження часу та шумів демо",
@@ -1587,7 +1587,7 @@ const locales = {
             "accessibility-note": "Студенти безкоштовно. Знижки за доступністю. Просто спитай.",
             "pricing-cadence-note": "Великі версії зазвичай виходять щорічно. Подальші поновлення ліцензії — 25% від рекомендованої ціни для існуючих власників.",
             "download-heading": "Поїхали",
-            "download-copy": "TayPE перебуває в активній розробці. Подайте заявку на доступ до приватної бети.",
+            "download-copy": "Подайте заявку на доступ до приватної бети.",
             "download-apply": "Подати заявку на приватну бету",
             "community-heading": "Спільнота та підтримка",
             "community-card-1-title": "База знань",
@@ -1609,7 +1609,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE - це продукт Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Ремесло потребує доступу.</strong> <strong>Доступність — не функція. Це фундамент.</strong>Бо інтерфейс має зустрічати музикантів там, де вони є. TayPE цілиться в WCAG 2.2 AA усюди. Режим високого контрасту з співвідношенням тексту 15:1+. Кожен стан передається формою та іконкою, ніколи лише кольором. Гарячі клавіші для кожної дії. Для невізуальних робочих процесів MCP через Claude чи Codex є основним інтерфейсом — голосове керування включено. Нативна підтримка скрінрідерів у роботі."
+            "a11y-copy": "<strong>Ремесло потребує доступу.</strong> <strong>Доступність — не функція. Це фундамент.</strong>Бо інтерфейс має зустрічати музикантів там, де вони є. TayPE цілиться в WCAG 2.2 AA усюди. Режим високого контрасту з співвідношенням тексту 15:1+. Кожен стан передається формою та іконкою, ніколи лише кольором. Гарячі клавіші для кожної дії. Для невізуальних робочих процесів MCP через Claude чи Codex є основним інтерфейсом — голосове керування включено. Нативна підтримка скрінрідерів у III кварталі 2026."
         },
         attrs: {
             "nav-logo": { alt: "Логотип TayPE" },
@@ -1732,7 +1732,7 @@ const locales = {
             "demo-trust-framing": "Το TayPE λειτουργεί με αμοιβαία εμπιστοσύνη.",
             "demo-what-that-means": "Τι σημαίνει αυτό:",
             "demo-trust-1": "Χωρίς συνδρομές",
-            "demo-trust-2": "No DRM",
+            "demo-trust-2": "Χωρίς DRM",
             "demo-trust-3": "Χωρίς όρια λειτουργιών",
             "demo-trust-4": "Χωρίς phone-home",
             "demo-trust-5": "Χωρίς λήξη ή θόρυβο demo",
@@ -1754,7 +1754,7 @@ const locales = {
             "accessibility-note": "Δωρεάν για φοιτητές. Παραχωρήσεις προσβασιμότητας. Απλώς ρώτα.",
             "pricing-cadence-note": "Οι μείζονες εκδόσεις κυκλοφορούν συνήθως με ετήσια συχνότητα. Οι ανανεώσεις άδειας τιμολογούνται στο 25% της προτεινόμενης τιμής για υπάρχοντες κατόχους.",
             "download-heading": "Ξεκινάμε",
-            "download-copy": "Το TayPE βρίσκεται σε ενεργή ανάπτυξη. Κάντε αίτηση για πρόσβαση στο private beta.",
+            "download-copy": "Κάντε αίτηση για πρόσβαση στο private beta.",
             "download-apply": "Αίτηση για το Private Beta",
             "community-heading": "Κοινότητα & Υποστήριξη",
             "community-card-1-title": "Βάση γνώσης",
@@ -1776,7 +1776,7 @@ const locales = {
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. Το TayPE είναι προϊόν του Ruminant Audio Works Ltd."
         },
         html: {
-            "a11y-copy": "<strong>Η τέχνη απαιτεί πρόσβαση.</strong> <strong>Η προσβασιμότητα δεν είναι λειτουργία. Είναι θεμέλιο.</strong>Γιατί το περιβάλλον πρέπει να συναντά τους μουσικούς εκεί που είναι. Το TayPE στοχεύει WCAG 2.2 AA σε όλα. Λειτουργία υψηλής αντίθεσης με αναλογίες κειμένου 15:1+. Κάθε κατάσταση μεταδίδεται με σχήμα και εικονίδιο, ποτέ μόνο με χρώμα. Συντομεύσεις πληκτρολογίου για κάθε ενέργεια. Για μη-οπτικές ροές εργασίας, το MCP μέσω Claude ή Codex είναι το κύριο περιβάλλον — με έλεγχο φωνής. Η υποστήριξη native screen reader είναι σε εξέλιξη."
+            "a11y-copy": "<strong>Η τέχνη απαιτεί πρόσβαση.</strong> <strong>Η προσβασιμότητα δεν είναι λειτουργία. Είναι θεμέλιο.</strong>Γιατί το περιβάλλον πρέπει να συναντά τους μουσικούς εκεί που είναι. Το TayPE στοχεύει WCAG 2.2 AA σε όλα. Λειτουργία υψηλής αντίθεσης με αναλογίες κειμένου 15:1+. Κάθε κατάσταση μεταδίδεται με σχήμα και εικονίδιο, ποτέ μόνο με χρώμα. Συντομεύσεις πληκτρολογίου για κάθε ενέργεια. Για μη-οπτικές ροές εργασίας, το MCP μέσω Claude ή Codex είναι το κύριο περιβάλλον — με έλεγχο φωνής. Η υποστήριξη native screen reader έρχεται το Q3 2026."
         },
         attrs: {
             "nav-logo": { alt: "Λογότυπο TayPE" },
