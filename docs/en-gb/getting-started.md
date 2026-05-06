@@ -68,10 +68,15 @@ matching action button row.
 The welcome card itself stays deliberately compact instead of stretching across
 the whole window, so the footer line and action rows feel like one focused
 panel rather than a billboard.
-Centred directly under that footer reminder, TayPE shows whether a TONE3000
-API key is stored locally, so you can see at a glance if online NAM browsing
-is wired up. That line is a local presence check only, not a live network
-verification.
+Centred directly under that footer reminder, TayPE shows whether TONE3000 is
+signed in, needs browser sign-in, or is missing its sign-in key. TayPE includes
+the normal TONE3000 publishable key and seeds it into local settings
+automatically; opening the TONE3000 browser tab starts browser sign-in when the
+cached OAuth token is missing or invalid. The Preferences override field is
+masked by default, with a Show/Hide control for support-supplied replacement
+keys. Preferences shows the cached sign-in state once browser authentication
+has returned tokens, and uses a single auth button: **Sign In** before a token
+is cached, **Sign In Again** after TayPE is already signed in.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one. At the root of the browser list, TayPE shows

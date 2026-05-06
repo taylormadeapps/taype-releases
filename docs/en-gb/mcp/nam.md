@@ -89,7 +89,9 @@ Disable NAM summing, revert to digital sum. Requires transport stopped.
 
 ### `search_tone3000`
 
-Search the TONE3000 online library for NAM packages.
+Search the TONE3000 online library for A2 NAM packages. TayPE includes the
+normal TONE3000 publishable key for OAuth PKCE and opens the browser sign-in
+flow if the cached OAuth token is missing or invalid.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
