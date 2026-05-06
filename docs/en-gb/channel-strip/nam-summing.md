@@ -18,6 +18,7 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 - In the TONE3000 tab, download happens from each package row's own button; the footer does not repeat that action.
 - If that package is already on disk, the same row button changes to **Downloaded**. Click it to jump straight to that package on the Local tab.
 - Finishing a TONE3000 download flips the browser back to the Local tab, selects the downloaded package, and expands it immediately when the package has multiple models.
+- The TONE3000 tab has a **Use A2 models** toggle at the left of the remote filter row. It is on by default; turn it off to browse and download the original NAM model lane instead. Both lanes can live on disk together.
 - A2-shaped `SlimmableContainer` files are shown as **A2** and are loadable. Other known NAM model types that TayPE cannot process yet stay visible as `{model type} - unsupported`, and unknown runtime types show as **Unknown**. Those rows are not loadable; trying to activate one shows a warning and leaves the current summing profile unchanged.
 - **Drive** — how hard the summed audio pushes into the selected flavour, from 0 to +18 dB
 - **Output gain** — compensates for level changes from -18 to +12 dB

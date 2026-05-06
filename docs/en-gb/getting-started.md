@@ -76,7 +76,10 @@ cached OAuth token is missing or invalid. The Preferences override field is
 masked by default, with a Show/Hide control for support-supplied replacement
 keys. Preferences shows the cached sign-in state once browser authentication
 has returned tokens, and uses a single auth button: **Sign In** before a token
-is cached, **Sign In Again** after TayPE is already signed in.
+is cached, **Sign In Again** after TayPE is already signed in. The TONE3000
+browser tab includes **Use A2 models**, enabled by default, at the left of the
+remote filter row; turn it off only when you want the TONE3000 browser and
+downloads to use the original NAM model lane instead.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one. At the root of the browser list, TayPE shows
