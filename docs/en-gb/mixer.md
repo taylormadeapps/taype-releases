@@ -2,16 +2,19 @@
 
 Press **M** to switch between the timeline and mixer views.
 
-Mixer view, the detached mixer window, the shared narrow/full-width desk
-mode, and the shared section-collapse posture are app-global preferences. If
-you leave TayPE with the mixer floated, the narrow desk engaged, or shared
-sections folded, the next launch comes back that way.
+Mixer view, Tape Mode, the detached mixer window, the shared narrow/full-width
+desk mode, and the shared section-collapse posture are app-global preferences.
+If you leave TayPE with the mixer floated, Tape Mode on, the narrow desk
+engaged, or shared sections folded, the next launch comes back that way.
 
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
 rack fits inside the viewport it anchors flush to the far right as its own
 lane. Adjacent bus strips keep a single visible seam between them inside a bus
 run, while the wider bus gutters still mark the outside edges of the group.
+In the main mixer, the input/output routing row and mute/solo/control row sit
+below the fader section, just above the track name. The docked arranger channel
+strip keeps its routing and controls at the top.
 Buttons, section headers, knobs, and the fader all follow the same live
 interaction rules on every strip, including the master bus, even straight
 after switching between arranger and mixer.
@@ -24,6 +27,17 @@ Scroll horizontally with the mouse wheel or trackpad to navigate across your
 channels.
 
 ![Mixer overview](../../assets/img/docs/mixer-overview.png)
+
+## Tape Mode
+
+The reel glyph beside the mixer-width button switches the main mixer into Tape
+Mode. Tape Mode replaces the upper processing lane with animated tape reels and
+keeps the normal main-mixer fader rack underneath. The reel deck scales into the
+space left above that rack; the arranger channel strip is unchanged.
+
+When the transport plays, both reels spin anti-clockwise. The left reel loses
+tape and the right reel gains it across the song length, so the take still
+reads like a tape machine without changing any audio routing or processing.
 
 ## Channel Strip Layout
 

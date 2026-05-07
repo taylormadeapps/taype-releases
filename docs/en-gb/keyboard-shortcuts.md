@@ -215,6 +215,7 @@ is straightforward:
   "zoom_reset_vertical": "alt+shift+-",
   "zoom_max_vertical": "alt+shift+=",
   "toggle_mixer_width": "w",
+  "toggle_tape_mode": "cmd+m",
   "toggle_focus": "v",
   "toggle_automation_view": "a",
   "toggle_archive_view": "x",
