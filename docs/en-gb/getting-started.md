@@ -29,9 +29,14 @@ open a `.taype` bundle or `.tpak` pack from Finder, TayPE skips the welcome
 card, opens that session first, and then chains straight into the license
 screen.
 
-Fresh launch-created reels come up with Track 1 selected and the docked
-channel strip already open, so TayPE lands in a ready-to-record state instead
-of making you pick the first working track by hand.
+Fresh launch-created reels come up in Tape Mode with the narrow mixer desk,
+eight audio tracks, Track 1 selected, and the docked channel strip already
+open, so TayPE lands in a ready-to-record state instead of making you build the
+first working desk by hand. They also include an unrouted **Taype Rooms** bus
+with the bundled room plugin loaded, plus the master bus **SUM** section set to
+ToTaype at 15ips with its default drive and output values. On first launch,
+TayPE also seeds the default mono input to input 1 when one exists, and the
+default stereo input to inputs 1-2 when the device exposes a stereo pair.
 Those launch-created `Untitled Reel` bundles live in
 `~/Documents/Taype/Reels/Starters` by default, separate from the ordinary
 manual **New Reel** flow.

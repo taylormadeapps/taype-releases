@@ -6,12 +6,18 @@ Mixer view, Tape Mode, the detached mixer window, the shared narrow/full-width
 desk mode, and the shared section-collapse posture are app-global preferences.
 If you leave TayPE with the mixer floated, Tape Mode on, the narrow desk
 engaged, or shared sections folded, the next launch comes back that way.
+On a first-run starter reel, TayPE seeds Tape Mode and the narrow mixer desk
+only when those view preferences do not already exist.
 
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
 rack fits inside the viewport it anchors flush to the far right as its own
 lane. Adjacent bus strips keep a single visible seam between them inside a bus
 run, while the wider bus gutters still mark the outside edges of the group.
+Drag a strip's title panel sideways to reorder that track with the same
+master-track and routing rules as arranger header reordering. A plain title
+click selects on mouse-up, so holding and dragging the title panel does not
+select the dragged strip first.
 In the main mixer, the input/output routing row and mute/solo/control row sit
 below the fader section, just above the track name. The docked arranger channel
 strip keeps its routing and controls at the top.
@@ -38,6 +44,14 @@ space left above that rack; the arranger channel strip is unchanged.
 When the transport plays, both reels spin anti-clockwise. The left reel loses
 tape and the right reel gains it across the song length, so the take still
 reads like a tape machine without changing any audio routing or processing.
+
+If the Cut has markers, Tape Mode shows marker pills down the left side of the
+tape deck in time order. The first row is reserved for **+**, **L**, and
+**R**: **+** adds a marker at the playhead, **L** jumps to the left loop brace,
+and **R** jumps to the right loop brace. **Cmd-click L** sets the left brace at
+the playhead; **Cmd-click R** sets the right brace there. If the left stack
+fills, later markers continue down the far right side of the deck. Marker names
+are shortened to 16 characters on the pills.
 
 ## Channel Strip Layout
 
@@ -107,6 +121,10 @@ strip stops pretending it is still on the saved preset state. TayPE also shows
 that `*` if the backing preset file has gone missing. If a recalled insert
 plug-in is not installed on this machine, TayPE skips that slot and warns you
 instead of aborting the whole strip load.
+
+The mixer keeps an empty strip column before the master lane. Its square plus
+button sits where the fader would be; click it to add a new audio track without
+leaving the mixer.
 
 The `PREAMP` header now stays a clean section label. Its mode/profile line sits
 inside the section body above the preamp mini meters, with the NAM browse
