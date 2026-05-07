@@ -42,8 +42,12 @@ keeps the normal main-mixer fader rack underneath. The reel deck scales into the
 space left above that rack; the arranger channel strip is unchanged.
 
 When the transport plays, both reels spin anti-clockwise. The left reel loses
-tape and the right reel gains it across the song length, so the take still
-reads like a tape machine without changing any audio routing or processing.
+tape and the right reel gains it against a physical 456 tape capacity: 2500 ft
+at 15 ips, or 2000 seconds. After that visual tape length, the left reel stays
+at its minimum tape pack and the right reel stays full instead of wrapping or
+extrapolating. The reels derive their rotation from constant linear tape speed:
+the supply reel accelerates as it empties and the take-up reel slows as it
+fills. The animation does not change audio routing or processing.
 
 If the Cut has markers, Tape Mode shows marker pills down the left side of the
 tape deck in time order. The first row is reserved for **+**, **L**, and
