@@ -76,10 +76,9 @@ cached OAuth token is missing or invalid. The Preferences override field is
 masked by default, with a Show/Hide control for support-supplied replacement
 keys. Preferences shows the cached sign-in state once browser authentication
 has returned tokens, and uses a single auth button: **Sign In** before a token
-is cached, **Sign In Again** after TayPE is already signed in. The TONE3000
-browser tab includes **Use A2 models**, enabled by default, at the left of the
-remote filter row; turn it off only when you want the TONE3000 browser and
-downloads to use the original NAM model lane instead.
+is cached, **Sign In Again** after TayPE is already signed in. TONE3000 browser
+search and download use the A2 model lane by default. Support can expose a
+browser lane toggle for switching to the original NAM model lane when needed.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, or create a new one. At the root of the browser list, TayPE shows
@@ -273,13 +272,15 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   if you want the worker pools constrained entirely to the performance-core
   budget. Applying that change refreshes the in-process worker pool and
   restarts the plugin sandbox.
-- **NAM AMX Acceleration** enables TayPE's Accelerate-backed LSTM path on
-  Apple Silicon, including mono/stereo LSTM instances and larger shared
-  batches. New installs and fresh preferences leave this on by default.
+- **NAM AMX Acceleration** enables TayPE's shared-state NAM acceleration path
+  on Apple Silicon. With it off, A2, WaveNet, and LSTM models run as
+  independent per-lane NAM models. New installs and fresh preferences leave
+  this on by default.
 - **True Summing** now lives on the master strip's **NAM Summing** panel.
-  It only becomes active when **NAM AMX Acceleration** is on: enabled means
-  tracks feeding the master pass through NAM before the sum; disabled means
-  audio sums first and then runs through the stereo NAM bus.
+  It stays available regardless of **NAM AMX Acceleration**: with **SUM** on,
+  tracks feeding the master pass through the selected summing lane before the
+  final stereo sum; with **SUM** off, audio sums first and then runs through
+  the stereo master-summing lane.
 
 ## Editing
 

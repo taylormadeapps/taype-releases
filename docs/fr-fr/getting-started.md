@@ -92,12 +92,13 @@ Ouvrez **Preferences** (**Cmd+,**) puis l'onglet **Audio**.
   TayPE le signale en rouge et vous demande d'activer le resampling.
 - Si **Resampling** est **on**, vous pouvez changer la fréquence de l'interface
   dans les réglages audio pendant que TayPE continue de traiter en interne à 48 kHz.
-- **NAM AMX Acceleration** active le chemin LSTM accéléré via Accelerate sur
-  Apple Silicon, y compris les instances LSTM mono/stéréo et les lots partagés.
+- **NAM AMX Acceleration** active le chemin NAM accéléré à état partagé sur
+  Apple Silicon. Désactivé, les modèles A2, WaveNet et LSTM tournent comme des
+  modèles NAM indépendants par lane.
 - **True Summing** se trouve désormais dans le panneau **NAM Summing** de la
-  tranche master. Il n'est actif que si **NAM AMX Acceleration** est activé :
-  activé, les pistes passent dans NAM avant la somme ; désactivé, l'audio est
-  d'abord sommé puis traverse le bus NAM stéréo.
+  tranche master. Il reste disponible quel que soit l'état de
+  **NAM AMX Acceleration** : avec **SUM** activé, les pistes qui alimentent le
+  master passent par la lane de sommation choisie avant la somme stéréo finale.
 
 ## Édition
 

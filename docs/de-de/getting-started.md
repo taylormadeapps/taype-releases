@@ -82,10 +82,11 @@ verschieben. Halten und ziehen scrubbt durch die Zeit.
   euch auf, Resampling zu aktivieren.
 - Wenn **Resampling** **on** ist, könnt ihr die Interface-Sample-Rate ändern,
   während TayPE intern weiter mit 48 kHz verarbeitet.
-- **NAM AMX Acceleration** aktiviert TayPEs Accelerate-gestützten LSTM-Pfad auf
-  Apple Silicon, inklusive Mono-/Stereo-LSTM-Instanzen und größeren Shared Batches.
+- **NAM AMX Acceleration** aktiviert TayPEs Shared-State-NAM-Beschleunigung auf
+  Apple Silicon. Wenn sie aus ist, laufen A2-, WaveNet- und LSTM-Modelle als
+  unabhängige NAM-Modelle pro Lane.
 - **True Summing** sitzt jetzt im **NAM Summing** Panel des Master-Strips.
-  Aktiv ist es nur, wenn **NAM AMX Acceleration** eingeschaltet ist.
+  Es bleibt unabhängig von **NAM AMX Acceleration** verfügbar.
 
 ## Editieren
 

@@ -7,7 +7,7 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 ## Controls
 
 - **SUM** — enable or disable NAM summing (requires transport stopped)
-- **TRUE** — choose TayPE's True Summing path (only active when NAM AMX Acceleration is enabled)
+- **SUM** — choose TayPE's True Summing path; it stays available regardless of NAM AMX Acceleration and requires transport stopped
 - **Przeglądaj** — open the Profil Browser, filtered to summing profiles
 - **Drive** — how hard the summed audio pushes into the model
 - **Wyjście gain** — compensates for level changes

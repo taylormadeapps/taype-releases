@@ -76,8 +76,8 @@ Open **Voorkeuren** (**Cmd+,**) en ga naar het tabblad **Audio**.
 - Met Resampling uit, probeert TayPE uw interface automatisch naar **48 kHz** om te schakelen.
 - Als uw interface niet op 48 kHz staat terwijl Resampling uit is, vlaggen TayPE dit in het rood en vertelt u Resampling in te schakelen.
 - Als **Resampling** **aan** staat, kunt u het sample rate van de interface wijzigen in de Audio-instellingen terwijl TayPE intern blijft verwerken op 48 kHz.
-- **NAM AMX-versnelling** schakelt TayPE's Accelerate-ondersteunde LSTM-pad in op Apple Silicon, inclusief mono/stereo LSTM-exemplaren en grotere gedeelde batches.
-- **True Summing** woont nu op het paneel **NAM Summing** van de masterstrip. Het wordt alleen actief wanneer **NAM AMX-versnelling** aan staat: ingeschakeld betekent dat sporen die de master voeren, vóór de som door NAM gaan; uitgeschakeld betekent dat audio eerst samenkomt en vervolgens door de stereo NAM-bus loopt.
+- **NAM AMX-versnelling** schakelt TayPE's shared-state NAM-versnellingspad in op Apple Silicon. Uit betekent dat A2-, WaveNet- en LSTM-modellen als onafhankelijke NAM-modellen per lane draaien.
+- **True Summing** woont nu op het paneel **NAM Summing** van de masterstrip. Het blijft beschikbaar ongeacht **NAM AMX-versnelling**: met **SUM** aan gaan sporen die de master voeren door de gekozen summing-lane vóór de uiteindelijke stereosom.
 
 ## Bewerken
 

@@ -63,7 +63,9 @@ Abre **Preferences** (**Cmd+,**) y ve a la pestaña **Audio**.
 - Si no está a 48 kHz, TayPE lo marca en rojo.
 - Si **Resampling** está **on**, puedes cambiar la frecuencia de la interfaz
   mientras TayPE sigue procesando a 48 kHz.
-- **NAM AMX Acceleration** activa la ruta LSTM acelerada en Apple Silicon.
+- **NAM AMX Acceleration** activa la ruta NAM acelerada de estado compartido
+  en Apple Silicon. Con ella desactivada, los modelos A2, WaveNet y LSTM se
+  ejecutan como modelos NAM independientes por lane.
 - **True Summing** vive en el panel **NAM Summing** del master.
 
 ## Edición
