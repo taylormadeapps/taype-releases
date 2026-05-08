@@ -57,6 +57,15 @@ the playhead; **Cmd-click R** sets the right brace there. If the left stack
 fills, later markers continue down the far right side of the deck. Marker names
 are shortened to 16 characters on the pills.
 
+Below the deck, a narrow tape ribbon shows the selected tape length: 5, 10,
+15, or 30 minutes from the View > Tape Length menu. It defaults to 10 minutes
+and always starts at absolute zero. Markers appear as coloured splice lines,
+timeline 0 appears as a white splice when it has been moved away from absolute
+zero, the playhead appears as a miniature playhead, and the loop braces appear
+as small read-only brace glyphs. Click the ribbon to seek to that point on the
+reel. If the song runs beyond the selected tape length, the playhead pins to
+the right edge. During recording, ribbon seeking is disabled.
+
 ## Channel Strip Layout
 
 Each strip shows (top to bottom):
