@@ -63,10 +63,12 @@ at the top while slimming the controls down to threshold, ratio, makeup, and
 release only, inserts keep their thin pre/post meter lanes
 while dropping the old PK/RMS and AUTO buttons, and the fader lane drops
 non-essential value text while keeping the post-fader scale markings. Narrow
-mixer strips also keep the same full-size machined fader handle as the
-standard strip, they now keep the fader's own left-side dB tick ladder too,
-and the insert rack now keeps the same shared `MORE` / `LESS` footer and
-four-slot default as the docked strip instead of forcing all eight slots open.
+mixer strips keep the same machined fader handle styling as the standard
+strip, but the cap now scales down when the fader dock is dragged into its
+cramped range instead of staying full-size against a shortened throw. They now
+keep the fader's own left-side dB tick ladder too, and the insert rack now
+keeps the same shared `MORE` / `LESS` footer and four-slot default as the
+docked strip instead of forcing all eight slots open.
 Those skinny EQ rows now leave a little extra room under each mini knob too, so
 the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon stays visible in both views: in mixer view it flips the
@@ -112,9 +114,11 @@ without touching the panel edges.
 The compressor now follows that same pattern with its own `IN:` / `OUT:` pair
 above the control rows, so you can see what the EQ is feeding into the comp and
 what comes out before the insert rack.
-Fresh strips now start with `INSERTS` and `SENDS` open by default, so the
-routing-heavy lower stack is ready to work without the extra click on every
-fresh strip.
+Fresh strips now start with `PREAMP`, `INSERTS`, and `SENDS` open by default,
+while `FILTER`, `EQ`, and `COMP` start collapsed so the routing-heavy lower
+stack is ready without making every fresh strip feel like a processor wall. The
+insert rack still defaults to `LESS`, so the open rack shows four slots until
+you ask for all eight.
 Its GR scale now labels the major `12 dB` ticks where there is room above the
 button stack, while the major guide marks still continue down to the bottom of
 the meter beside the controls, with the whole GR lane now scaled for a `24 dB`
@@ -223,7 +227,7 @@ the bottom of the strip, can be collapsed, and can be resized by dragging its
 top edge. In the mixer, the visible strips now share that upper scroll position
 as well as the dock height, so the desk stays lined up while you move through
 the stack. Fresh strips now open that dock at about one third of the display
-height before any manual resize.
+height minus 15px before any manual resize.
 
 Mouse wheel over the actual knob body still adjusts that knob. Labels, value
 readouts, and the padded space around the control do not count. Mouse wheel

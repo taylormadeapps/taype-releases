@@ -24,6 +24,10 @@ While you drag, the fader thumb keeps moving live with your hand. TayPE does
 not wait for playback or another screen refresh before showing the new
 position.
 
+When you resize the bottom fader dock, the metal cap scales with the available
+throw. At cramped dock heights it gets smaller instead of staying visually
+oversized.
+
 Hold **Shift** while dragging the fader, pan, or width control for a finer
 4x trim pass.
 
