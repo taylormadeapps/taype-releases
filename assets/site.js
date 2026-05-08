@@ -54,6 +54,7 @@ const locales = {
             "tone-kicker": "Craft first. Tone at the core.",
             "philosophy-heading": "Make the Record",
             "philosophy-copy-1": "TayPE exists to help you finish real takes, not drown in endless options. A multitrack DAW with the soul of a tape machine. Fewer modes, fewer knobs, more truth.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "The Console",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Built for Everyone",
@@ -111,6 +112,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "TayPE logo" },
             "hero-logo": { alt: "TayPE tape-reel logo" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -221,6 +223,7 @@ const locales = {
             "tone-kicker": "クラフト優先。音色は中核に。",
             "philosophy-heading": "レコードを作れ",
             "philosophy-copy-1": "TayPE は、無限の選択肢に溺れるためではなく、実際のテイクを仕上げるためにあります。テープマシンの魂を持ったマルチトラック DAW。モードは少なく、ノブも少なく、真実は多く。",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "コンソール",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "すべての人のために",
@@ -278,6 +281,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "TayPE ロゴ" },
             "hero-logo": { alt: "TayPE テープリールロゴ" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -388,6 +392,7 @@ const locales = {
             "tone-kicker": "Le geste d'abord. Le son au centre.",
             "philosophy-heading": "Fais le disque",
             "philosophy-copy-1": "TayPE existe pour vous aider à finir de vraies prises, pas à vous noyer dans des options sans fin. Une DAW multipiste avec l'âme d'un magnétophone. Moins de modes, moins de boutons, plus de vérité.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La console",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Conçu pour tout le monde",
@@ -445,6 +450,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
             "hero-logo": { alt: "Logo bobine TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -555,6 +561,7 @@ const locales = {
             "tone-kicker": "Handwerk zuerst. Klang im Kern.",
             "philosophy-heading": "Mach die Platte",
             "philosophy-copy-1": "TayPE ist dafür da, dir beim Fertigmachen echter Takes zu helfen, nicht beim Ertrinken in endlosen Optionen. Eine Multitrack-DAW mit der Seele einer Bandmaschine. Weniger Modi, weniger Knöpfe, mehr Wahrheit.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Die Konsole",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Für alle gebaut",
@@ -612,6 +619,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "TayPE-Logo" },
             "hero-logo": { alt: "TayPE-Spulenlogo" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -722,6 +730,7 @@ const locales = {
             "tone-kicker": "Primero el oficio. El tono en el centro.",
             "philosophy-heading": "Haz el disco",
             "philosophy-copy-1": "TayPE existe para ayudarte a terminar tomas reales, no a ahogarte en opciones infinitas. Una DAW multipista con alma de grabadora de cinta. Menos modos, menos perillas, más verdad.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La consola",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Hecho para todo el mundo",
@@ -779,6 +788,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Logo de TayPE" },
             "hero-logo": { alt: "Logo de carrete de TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -889,6 +899,7 @@ const locales = {
             "tone-kicker": "Handverkið fyrst. Hljóðið í kjarnanum.",
             "philosophy-heading": "Gerðu plötuna",
             "philosophy-copy-1": "TayPE er til til að hjálpa þér að klára alvöru tökur, ekki sökkva í endalausa valkosti. Fjölrása DAW með sál segulbandstækis. Færri hamir, færri hnappar, meiri sannleikur.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Console-borðið",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Byggt fyrir alla",
@@ -946,6 +957,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "TayPE merki" },
             "hero-logo": { alt: "TayPE spólu-merki" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -1056,6 +1068,7 @@ const locales = {
             "tone-kicker": "Ambacht eerst. Toon in het hart.",
             "philosophy-heading": "Maak het record",
             "philosophy-copy-1": "TayPE helpt je echte takes af te maken, niet verdrinken in eindeloze opties. Een multitrack DAW met het hart van een bandapparaat. Minder modi, minder knoppen, meer waarheid.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "De console",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Gemaakt voor iedereen",
@@ -1113,6 +1126,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "TayPE-logo" },
             "hero-logo": { alt: "TayPE spoelenlogo" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -1223,6 +1237,7 @@ const locales = {
             "tone-kicker": "Mestiere prima. Tono al centro.",
             "philosophy-heading": "Fai il disco",
             "philosophy-copy-1": "TayPE esiste per aiutarti a finire vere take, non per annegare in opzioni infinite. Una DAW multitraccia con l'anima di un registratore. Meno modalità, meno manopole, più verità.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La console",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Costruito per tutti",
@@ -1280,6 +1295,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
             "hero-logo": { alt: "Logo bobina TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -1390,6 +1406,7 @@ const locales = {
             "tone-kicker": "Rzemiosło przed wszystkim. Dźwięk w centrum.",
             "philosophy-heading": "Stwórz rekord",
             "philosophy-copy-1": "TayPE istnieje, aby pomóc ci skończyć prawdziwe ujęcia, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu. Mniej trybów, mniej gałek, więcej prawdy.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Konsola",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Zbudowane dla wszystkich",
@@ -1447,6 +1464,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
             "hero-logo": { alt: "Logo szpuli TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -1557,6 +1575,7 @@ const locales = {
             "tone-kicker": "Ремесло спочатку. Тон у центрі.",
             "philosophy-heading": "Зробити запис",
             "philosophy-copy-1": "TayPE існує, щоб допомогти вам закінчити справжні дубляжі, а не потонути в безкінечних опціях. Багатодоріжковий DAW з душею магнітофона. Менше режимів, менше кнопок, більше правди.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Консоль",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Побудовано для всіх",
@@ -1614,6 +1633,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Логотип TayPE" },
             "hero-logo": { alt: "Логотип котушки TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
@@ -1724,6 +1744,7 @@ const locales = {
             "tone-kicker": "Τέχνη πρώτα. Τόνος στο κέντρο.",
             "philosophy-heading": "Κάντε το δίσκο",
             "philosophy-copy-1": "Το TayPE υπάρχει για να σας βοηθήσει να τελειώσετε πραγματικές λήψεις, όχι να πνιγείτε σε ατελείωτες επιλογές. Ένα πολυτροχικό DAW με την ψυχή μιας ταινιογραφικής μηχανής. Λιγότερες λειτουργίες, λιγότερα κουμπιά, περισσότερη αλήθεια.",
+            "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Η κονσόλα",
             "screenshots-arranger-heading": "The Arranger",
             "a11y-heading": "Κατασκευασμένο για όλους",
@@ -1781,6 +1802,7 @@ const locales = {
         attrs: {
             "nav-logo": { alt: "Λογότυπο TayPE" },
             "hero-logo": { alt: "Λογότυπο κηنούλα TayPE" },
+            "screenshot-tape": { alt: "TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" },
             "screenshot-1": { alt: "TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" },
             "screenshot-2": { alt: "TayPE arranger — clips arranged across tracks with track headers and transport controls" },
             "footer-logo": { alt: "Ruminant Audio Works" }
