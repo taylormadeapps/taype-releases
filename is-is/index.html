@@ -375,6 +375,11 @@ h2 {
     margin-top: 3rem;
 }
 
+.screenshot-row--single .screenshot-block {
+    flex: 0 1 488px;
+    max-width: 100%;
+}
+
 .screenshot-block {
     display: flex;
     flex-direction: column;
@@ -858,12 +863,12 @@ footer {
 <!-- ============================================================ -->
 
 <section class="screenshots">
-    <div class="screenshot-row">
+    <div class="screenshot-row screenshot-row--single">
         <figure class="screenshot-block">
             <h2 id="screenshots-tape-heading">The Tape</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 1040px) calc(100vw - 4rem), 936px">
-                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 1040px) calc(100vw - 4rem), 936px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
