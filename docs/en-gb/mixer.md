@@ -61,10 +61,12 @@ Below the deck, a narrow tape ribbon shows the selected tape length: 5, 10,
 15, or 30 minutes from the View > Tape Length menu. It defaults to 10 minutes
 and always starts at absolute zero. Markers appear as coloured splice lines,
 timeline 0 appears as a white splice when it has been moved away from absolute
-zero, the playhead appears as a miniature playhead, and the loop braces appear
-as small read-only brace glyphs. Click the ribbon to seek to that point on the
-reel. If the song runs beyond the selected tape length, the playhead pins to
-the right edge. During recording, ribbon seeking is disabled.
+zero, the playhead appears as a miniature playhead while it is within the
+selected tape length, and the loop braces appear as small read-only brace
+glyphs. Click the ribbon to seek to that point on the reel. If the song runs
+beyond the selected tape length, the reel tape packs stay pinned at their end
+state, the reel faces keep spinning, and the ribbon playhead disappears. During
+recording, ribbon seeking is disabled.
 
 ## Channel Strip Layout
 
