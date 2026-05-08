@@ -372,6 +372,15 @@ h2 {
     margin-top: 0;
 }
 
+.screenshot-row + .screenshot-row {
+    margin-top: 3rem;
+}
+
+.screenshot-row--single .screenshot-block {
+    flex: 0 1 488px;
+    max-width: 100%;
+}
+
 .screenshot-block {
     display: flex;
     flex-direction: column;
@@ -806,7 +815,7 @@ footer {
             </select>
         </label>
         <div class="nav-links">
-            <a id="nav-features" href="#features">Χαρακτηριστικά</a>
+            <a id="nav-features" href="#philosophy">Χαρακτηριστικά</a>
             <a id="nav-pricing" href="#pricing">Pricing</a>
             <a id="nav-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
             <a id="nav-community" href="#community">Κοινότητα</a>
@@ -855,6 +864,15 @@ footer {
 <!-- ============================================================ -->
 
 <section class="screenshots">
+    <div class="screenshot-row screenshot-row--single">
+        <figure class="screenshot-block">
+            <h2 id="screenshots-tape-heading">The Tape</h2>
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </div>
     <div class="screenshot-row">
         <figure class="screenshot-block">
             <h2 id="screenshots-heading">Η κονσόλα</h2>
@@ -932,7 +950,7 @@ footer {
                 <li id="price-personal-feature-1">Πλήρη εφαρμογή, όλα τα χαρακτηριστικά</li>
                 <li id="price-personal-feature-2">2 κύριες εκδόσεις δωρεάν ενημερώσεων</li>
             </ul>
-            <a id="price-personal-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Δωρεάν κατά την ιδιωτική beta</a>
+            <a id="price-personal-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Δωρεάν χρήση κατά τη beta</a>
         </div>
         <div class="price-card">
             <h3 id="price-commercial-title">Εμπορική</h3>
@@ -942,7 +960,7 @@ footer {
                 <li id="price-commercial-feature-1">Πλήρη εφαρμογή, όλα τα χαρακτηριστικά</li>
                 <li id="price-commercial-feature-2">2 κύριες εκδόσεις δωρεάν ενημερώσεων</li>
             </ul>
-            <a id="price-commercial-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Δωρεάν κατά την ιδιωτική beta</a>
+            <a id="price-commercial-cta" href="#download" class="btn-primary" style="font-size: 0.8rem;">Δωρεάν χρήση κατά τη beta</a>
         </div>
     </div>
 
@@ -964,10 +982,10 @@ footer {
 
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Ξεκινάμε</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Κάντε αίτηση για πρόσβαση στο private beta.</p>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Μπείτε στο πρόγραμμα beta.</p>
     <!-- TODO: replace href once buildBetaApplicationForm.js has been run and Published URL is known -->
     <div style="margin-bottom: 1.5rem;">
-        <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Αίτηση για το Private Beta</a>
+        <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Μπείτε στην beta</a>
     </div>
 </section>
 
