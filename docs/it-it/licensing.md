@@ -6,14 +6,14 @@ fees, no feature gating. You buy it once and every update is free.
 ## Education
 
 TayPE is free for students. DM us on
-[Instagram](https://instagram.com/ruminantrecords) or
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) for a discount code.
+[Instagram](https://instagram.com/ruminantaudioworks) or
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) for a discount code.
 
 ## Accessibility
 
 If you have accessibility requirements, TayPE is 33% off. DM us on
-[Instagram](https://instagram.com/ruminantrecords) or
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) for a discount code.
+[Instagram](https://instagram.com/ruminantaudioworks) or
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) for a discount code.
 
 ## Evaluation
 

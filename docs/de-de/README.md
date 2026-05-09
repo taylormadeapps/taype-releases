@@ -10,4 +10,4 @@ kennen muss. Kein Technik-Tiefgang, nur wie man das Ding benutzt.
 
 Wenn etwas fehlt oder unklar ist, meldet euch bei
 [r/taype](https://www.reddit.com/r/taype/) oder per DM auf
-[Instagram](https://instagram.com/ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks).

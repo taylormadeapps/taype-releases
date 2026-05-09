@@ -10,4 +10,4 @@
 
 Εάν κάτι λείπει ή δεν είναι σαφές, επικοινωνήστε μαζί μας στο
 [r/taype](https://www.reddit.com/r/taype/) ή στείλτε μας μήνυμα στο
-[Instagram](https://instagram.com/ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks).

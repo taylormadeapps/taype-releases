@@ -6,8 +6,8 @@ cuotas recurrentes y sin bloqueo de funciones.
 ## Educación
 
 TayPE es gratis para estudiantes y educadores. Escríbenos por
-[Instagram](https://instagram.com/ruminantrecords) o
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) para
+[Instagram](https://instagram.com/ruminantaudioworks) o
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) para
 obtener un código.
 
 ## Accesibilidad

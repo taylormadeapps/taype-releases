@@ -10,4 +10,4 @@ Cette documentation couvre l'interface, le flux de travail et les fonctions
 
 S'il manque quelque chose ou si un point n'est pas clair, passez sur
 [r/taype](https://www.reddit.com/r/taype/) ou envoyez-nous un message sur
-[Instagram](https://instagram.com/ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks).

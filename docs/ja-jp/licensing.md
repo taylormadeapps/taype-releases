@@ -4,11 +4,11 @@ TayPE は、一度支払うだけで永久に所有できるアプリケーシ�
 
 ## 教育
 
-TayPE は学生と教育者にとって無料です。割引コードについては、[Instagram](https://instagram.com/ruminantrecords) または [Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) に DM でお問い合わせください。
+TayPE は学生と教育者にとって無料です。割引コードについては、[Instagram](https://instagram.com/ruminantaudioworks) または [Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) に DM でお問い合わせください。
 
 ## アクセシビリティ
 
-アクセシビリティ要件がある場合、TayPE は 33% オフです。割引コードについては、[Instagram](https://instagram.com/ruminantrecords) または [Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) に DM でお問い合わせください。
+アクセシビリティ要件がある場合、TayPE は 33% オフです。割引コードについては、[Instagram](https://instagram.com/ruminantaudioworks) または [Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) に DM でお問い合わせください。
 
 ## 評価
 

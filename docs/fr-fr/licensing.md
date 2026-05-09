@@ -7,16 +7,16 @@ l'achetez une fois, et les mises à jour prévues par votre licence sont incluse
 ## Éducation
 
 TayPE est gratuit pour les étudiants et les enseignants. Contactez-nous sur
-[Instagram](https://instagram.com/ruminantrecords) ou
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) pour
+[Instagram](https://instagram.com/ruminantaudioworks) ou
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) pour
 obtenir un code.
 
 ## Accessibilité
 
 Si vous avez des besoins d'accessibilité, TayPE est proposé avec 33 % de
 réduction. Contactez-nous sur
-[Instagram](https://instagram.com/ruminantrecords) ou
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) pour un code.
+[Instagram](https://instagram.com/ruminantaudioworks) ou
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) pour un code.
 
 ## Évaluation
 

@@ -6,8 +6,8 @@ TayPE er app sem þú greiðir einu sinni fyrir og átt síðan áfram. Engin
 ## Menntun
 
 TayPE er ókeypis fyrir nemendur og kennara. Hafðu samband á
-[Instagram](https://instagram.com/ruminantrecords) eða
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks) eða
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks).
 
 ## Aðgengi
 

@@ -6,14 +6,14 @@ wiederkehrenden Gebühren, keine künstlichen Feature-Sperren.
 ## Bildung
 
 TayPE ist für Schüler, Studierende und Lehrende kostenlos. Meldet euch auf
-[Instagram](https://instagram.com/ruminantrecords) oder
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords) für einen Code.
+[Instagram](https://instagram.com/ruminantaudioworks) oder
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) für einen Code.
 
 ## Barrierefreiheit
 
 Wenn ihr Anforderungen an Barrierefreiheit habt, gibt es 33 % Rabatt. Meldet
-euch über [Instagram](https://instagram.com/ruminantrecords) oder
-[Reddit](https://www.reddit.com/message/compose/?to=ruminantrecords).
+euch über [Instagram](https://instagram.com/ruminantaudioworks) oder
+[Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks).
 
 ## Evaluation
 

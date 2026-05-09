@@ -10,4 +10,4 @@ Velkomin í þekkingargrunn TayPE. TayPE er DAW sem leggur áherslu á handverk,
 
 Ef eitthvað vantar eða er óljóst skaltu hafa samband á
 [r/taype](https://www.reddit.com/r/taype/) eða senda skilaboð á
-[Instagram](https://instagram.com/ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks).

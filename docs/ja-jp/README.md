@@ -6,4 +6,4 @@ TayPE ナレッジ ベースへようこそ。 TayPE は、こだわり、明確
 
 ![TayPE タイムライン](../../assets/img/docs/timeline-overview.png)
 
-何か不足している場合や不明な点がある場合は、[r/タイプ](https://www.reddit.com/r/taype/) までご連絡いただくか、[Instagram](https://instagram.com/ruminantrecords) までDMしてください。
+何か不足している場合や不明な点がある場合は、[r/タイプ](https://www.reddit.com/r/taype/) までご連絡いただくか、[Instagram](https://instagram.com/ruminantaudioworks) までDMしてください。

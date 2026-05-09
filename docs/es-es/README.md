@@ -10,4 +10,4 @@ merece la pena conocer. Sin inmersiones de ingeniería: solo cómo usarlo.
 
 Si falta algo o no está claro, escríbenos en
 [r/taype](https://www.reddit.com/r/taype/) o por DM en
-[Instagram](https://instagram.com/ruminantrecords).
+[Instagram](https://instagram.com/ruminantaudioworks).

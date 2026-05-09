@@ -6,4 +6,4 @@ Questi documenti coprono l'interfaccia, il flusso di lavoro e le funzionalità c
 
 ![Timeline TayPE](../assets/img/docs/timeline-overview.png)
 
-Se manca qualcosa o non è chiaro, contattaci su [r/taype](https://www.reddit.com/r/taype/) o mandaci un messaggio diretto su [Instagram](https://instagram.com/ruminantrecords).
+Se manca qualcosa o non è chiaro, contattaci su [r/taype](https://www.reddit.com/r/taype/) o mandaci un messaggio diretto su [Instagram](https://instagram.com/ruminantaudioworks).

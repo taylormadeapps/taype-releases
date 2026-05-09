@@ -21,7 +21,7 @@ Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https:/
 - **Community:** [r/taype](https://www.reddit.com/r/taype/)
 - **Bug reports:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=bug-report.md)
 - **Feature requests:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=feature-request.md)
-- **Follow along:** [Instagram](https://instagram.com/ruminantrecords) / [Reddit](https://www.reddit.com/r/taype/)
+- **Follow along:** [Instagram](https://instagram.com/ruminantaudioworks) / [Reddit](https://www.reddit.com/r/taype/)
 
 ## Pricing
 
@@ -32,7 +32,7 @@ Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https:/
 
 All licenses include 2 major versions of free updates.
 
-**Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantrecords) or [Reddit DM](https://www.reddit.com/message/compose/?to=ruminantrecords).
+**Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantaudioworks) or [Reddit DM](https://www.reddit.com/message/compose/?to=ruminantaudioworks).
 
 ## About
 

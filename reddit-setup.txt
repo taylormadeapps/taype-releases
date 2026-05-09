@@ -19,7 +19,7 @@ WCAG 2.2 AA accessible. AI-ready via Model Context Protocol. macOS.
 Links:
 - Website: https://taype.ruminantaudioworks.com
 - Docs: https://ruminant-audio-works.gitbook.io/taype/
-- Instagram: https://instagram.com/ruminantrecords
+- Instagram: https://instagram.com/ruminantaudioworks
 - GitHub: https://github.com/taylormadeapps/taype-releases
 - Bugs: https://github.com/taylormadeapps/taype-releases/issues/new
 
