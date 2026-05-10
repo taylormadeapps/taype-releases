@@ -8,14 +8,14 @@ unity instead of leaving makeup boost in circuit.
 
 | Parameter | Default | Range |
 |-----------|---------|-------|
-| Threshold | -20 dB | -60 to 0 dB |
-| Ratio | 4:1 | 1:1 to 20:1 |
+| Threshold | -12 dB | -60 to 0 dB |
+| Ratio | 2:1 | 1:1 to 20:1 |
 | Makeup Gain | 0 dB | 0 to 24 dB |
-| Attack | 10 ms | 0.1 to 100 ms |
+| Attack | 30 ms | 0.1 to 100 ms |
 | Release | 100 ms | 10 to 2,000 ms |
 | Knee | 6 dB | 0 to 120 dB |
 | Wet/dry | 100% wet | 0 to 100% wet |
-| Sidechain low-cut | Off | fixed 80 Hz, 12 dB/oct |
+| Sidechain low-cut | On | fixed 80 Hz, 12 dB/oct |
 
 ## Layout
 
@@ -27,7 +27,7 @@ The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.
 
 ## Compressor Visualiser
 
-The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track, and click the same lit button again to close it. Opening that popup also enables the compressor on that track, because that gesture counts as explicit intent to use compression there.
+The compressor header now includes the same small spectrum visualiser button used on the filter and EQ headers, tucked immediately to the left of the section power glyph. Click it to open a floating compressor window for the current track, and click the same lit button again to close it. Opening that popup is view-only: it does not enable or bypass the compressor.
 
 The window puts the incoming waveform and scrolling gain-reduction trace on the left under a **GAIN REDUCTION** title, the transfer curve in the middle under **CURVE**, and fader-style LED **IN** / **OUT** meters on the right after the curve for gain staging. That same meter lane now carries a slim dedicated **GR** bar beside the ladders, using the same top-down **0-24 dB** reduction scale as the strip, with the compact wet/dry knob on the meter-panel row beside the auto-gain controls. Those meter captions sit across the top of the lane, and the ladders use the same glowing segmented treatment, K-scale marks, and clip behaviour as the strip meter.
 That scrolling lane now keeps the same full-history density from the moment audio starts, so it no longer begins stretched out and then compresses as the history buffer fills.

@@ -4,13 +4,13 @@ A dynamics processor for controlling level and adding punch.
 
 | Parameter | Default | Range |
 |-----------|---------|-------|
-| Soglia | -20 dB | -60 to 0 dB |
-| Rapporto | 4:1 | 1:1 to 20:1 |
+| Soglia | -12 dB | -60 to 0 dB |
+| Rapporto | 2:1 | 1:1 to 20:1 |
 | Makeup Guadagno | 0 dB | 0 to 24 dB |
-| Attacco | 10 ms | 0.1 to 100 ms |
+| Attacco | 30 ms | 0.1 to 100 ms |
 | Rilascio | 100 ms | 10 to 2,000 ms |
 | Ginocchio | 6 dB | 0 to 120 dB |
-| Catena laterale low-cut | Off | fixed 80 Hz |
+| Catena laterale low-cut | On | fixed 80 Hz |
 
 ## Layout
 

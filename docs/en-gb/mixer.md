@@ -38,8 +38,10 @@ channels.
 
 The reel glyph beside the mixer-width button switches the main mixer into Tape
 Mode. Tape Mode replaces the upper processing lane with animated tape reels and
-keeps the normal main-mixer fader rack underneath. The reel deck scales into the
-space left above that rack; the arranger channel strip is unchanged.
+keeps the normal main-mixer fader rack underneath for the track strips. The
+master bus stays pinned at the right as a full output strip, so the reel deck
+and ribbon stop before the master lane instead of covering the output bus. The
+arranger channel strip is unchanged.
 
 When the transport plays, both reels spin anti-clockwise. The left reel loses
 tape and the right reel gains it against a physical 456 tape capacity: 2500 ft
@@ -221,7 +223,8 @@ clicking away cancels.
 
 Tracks appear in the same order as the timeline. The master bus is always the
 rightmost strip, and with spare width it parks flush against the mixer's right
-edge as a dedicated lane.
+edge as a dedicated lane. Horizontal scrolling moves the track rack only; the
+master output lane remains visible.
 
 Mixer visibility follows timeline view filters:
 

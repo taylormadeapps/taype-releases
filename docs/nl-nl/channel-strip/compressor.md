@@ -4,13 +4,13 @@ A dynamics processor for controlling level and adding punch.
 
 | Parameter | Default | Range |
 |-----------|---------|-------|
-| Threshold | -20 dB | -60 to 0 dB |
-| Ratio | 4:1 | 1:1 to 20:1 |
+| Threshold | -12 dB | -60 to 0 dB |
+| Ratio | 2:1 | 1:1 to 20:1 |
 | Makeup Gain | 0 dB | 0 to 24 dB |
-| Attack | 10 ms | 0.1 to 100 ms |
+| Attack | 30 ms | 0.1 to 100 ms |
 | Release | 100 ms | 10 to 2,000 ms |
 | Knee | 6 dB | 0 to 120 dB |
-| Sidechain low-cut | Off | fixed 80 Hz |
+| Sidechain low-cut | On | fixed 80 Hz |
 
 ## Layout
 

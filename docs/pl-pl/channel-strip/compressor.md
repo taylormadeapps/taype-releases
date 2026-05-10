@@ -4,13 +4,13 @@ A dynamics processor for controlling level and adding punch.
 
 | Parameter | Domyślne | Range |
 |-----------|---------|-------|
-| Próg | -20 dB | -60 to 0 dB |
-| Stosunek | 4:1 | 1:1 to 20:1 |
+| Próg | -12 dB | -60 to 0 dB |
+| Stosunek | 2:1 | 1:1 to 20:1 |
 | Uzupełnienie Wzmocnienie | 0 dB | 0 to 24 dB |
-| Atak | 10 ms | 0.1 to 100 ms |
+| Atak | 30 ms | 0.1 to 100 ms |
 | Zwolnienie | 100 ms | 10 to 2,000 ms |
 | Kolanko | 6 dB | 0 to 120 dB |
-| Ścieżka boczna low-cut | Off | fixed 80 Hz |
+| Ścieżka boczna low-cut | On | fixed 80 Hz |
 
 ## Layout
 
