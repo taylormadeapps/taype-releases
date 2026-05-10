@@ -7,7 +7,10 @@ desk mode, and the shared section-collapse posture are app-global preferences.
 If you leave TayPE with the mixer floated, Tape Mode on, the narrow desk
 engaged, or shared sections folded, the next launch comes back that way.
 On a first-run starter reel, TayPE seeds Tape Mode and the narrow mixer desk
-only when those view preferences do not already exist.
+only when those view preferences do not already exist. Each ordinary starter
+track also has its first send routed to the Taype Rooms reverb bus with the
+send level closed at -inf, so the return is ready without adding ambience
+until you raise it.
 
 The mixer shows one channel strip per track, laid out horizontally left
 to right. The master bus is always the rightmost strip, and when the visible
