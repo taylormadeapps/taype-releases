@@ -220,6 +220,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   changes together.
 - The **Master output pair** and **Default stereo input** lists only offer
   normal stereo hardware pairs such as `1-2`, `3-4`, `5-6`, and so on.
+- The default input choices only affect tracks set to **Default**. TayPE opens
+  the selected input device with all available hardware inputs active, so a track
+  explicitly set to `3-4`, `5-6`, or another pair can record without making that
+  pair the default.
 - TayPE remembers the last input and output device you applied here, so the
   same hardware routing comes back on relaunch.
 - On a fresh install, or after upgrading from an older build that never saved
