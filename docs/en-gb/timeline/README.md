@@ -52,10 +52,9 @@ The left side of the ruler has quick controls:
 
 - **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
 - **+** — add a new track; if you already have a track selected, the new one drops in immediately after it. If that selected track belongs to a comp group, the new track lands after the whole comp block instead of inside it
-- **Snap** — toggle grid snap; press **S** to flip it from the keyboard, or **Option+S** to switch snap mode
 - **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume**, **Pan**, or **Width**
-- **Metronome** — toggle click on/off
-- **Ruler Mode** — switch between time and bars|beats
+- **Snap** — toggle grid snap; press **S** to flip it from the keyboard, or **Option+S** to switch snap mode
+- **Grid / Ruler Mode** — click to switch between time and bars|beats; right-click to choose **Auto**, a straight note value from semibreve to hemidemisemiquaver, or a triplet grid. **Shift+R** toggles between Auto and the last fixed note grid; **Shift+,** and **Shift+.** step through fixed grids only, switching out of Auto if needed. **Auto** shows joined quavers; fixed grids show the chosen note value, while the visible grid backs off when the chosen division would be too dense to read
 
 This ruler-header **A** is separate from the transport **Archive** shortcut on **X**.
 

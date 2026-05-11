@@ -132,6 +132,9 @@ there is no separate user-facing Save command.
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Add a new audio track |
 | R | Toggle ruler between time and beats |
+| Shift+R | Toggle between Auto grid and the last fixed note grid |
+| Shift+, | Choose the next coarser fixed timeline snap grid |
+| Shift+. | Choose the next finer fixed timeline snap grid |
 | K | Toggle high contrast theme |
 | Cmd+K | Open the virtual keyboard popup |
 | Backtick (\`) | Open the Performance Monitor window |
@@ -221,6 +224,9 @@ is straightforward:
   "toggle_archive_view": "x",
   "toggle_snap": "s",
   "toggle_snap_mode": "alt+s",
+  "toggle_snap_grid_auto": "shift+r",
+  "snap_grid_coarser": "shift+,",
+  "snap_grid_finer": "shift+.",
   "show_performance_monitor": "`"
 }
 ```
