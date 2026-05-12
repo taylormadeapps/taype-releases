@@ -38,11 +38,14 @@ stopped.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, or a bundled extension name/path |
+| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, a bundled extension name/path, `taype://insert/midi-out`, or `taype://insert/hardware-io` |
 | `slot` | number | no | Insert slot index 0-7 (default: 0; instruments and MIDI Out must use slot 0) |
 | `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
 | `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
 | `advance_ms` | number | no | Virtual MIDI Out early-send amount in milliseconds; omitted uses the current corrected interface round-trip estimate from Audio prefs |
+| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases |
+| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases |
+| `latency_offset_samples` | number | no | Hardware Insert signed manual latency offset |
 
 **Returns:**
 ```json
@@ -160,7 +163,12 @@ or a non-bus track ID for an external key.
 `supports_mono_main` tells you whether the plug-in exposes a mono main-bus
 layout TayPE can use on mono strips. `main_bus_channels` is the live main-bus
 width for that slot: `1` for true mono, `2` for stereo, or `0` for the
-virtual `External MIDI Out` insert.
+virtual `External MIDI Out` or `Hardware Insert`.
+
+For Hardware Inserts, `is_hardware_io` is true and the response includes
+`hardware_output_route_id`, `hardware_input_route_id`, and
+`hardware_latency_offset_samples`. These are CoreAudio I/O mapping route IDs,
+not TayPE bus routes.
 
 ### `set_insert_sidechain`
 
@@ -223,6 +231,22 @@ transport stopped.
 | `slot` | number | no | Insert slot index 0-7 (default: 0) |
 
 **Returns:** `{ "track_id": "...", "slot": 0, "preset_name": "Latency Clean", "latency_samples": 4706 }`
+
+### `set_insert_hardware_io`
+
+Configure an existing Hardware Insert.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+| `output_route_id` | string | no | Send output route ID, or empty for no send |
+| `input_route_id` | string | no | Return input route ID, or empty for silence |
+| `latency_offset_samples` | number | no | Signed manual offset in samples |
+
+**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": -64, "latency_samples": 544 }`
+
+**Requires:** transport stopped
 
 ### `open_insert_editor`
 

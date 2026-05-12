@@ -92,7 +92,17 @@ If **Menu Path** is blank, the plugin sits directly inside the top-level
 The insert picker is split into **Taype Stock**, **Effects**, and
 **Instruments**. **Taype Stock** holds TayPE-shipped inserts such as
 **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
-**Taype Comp**, and the built-in **External MIDI Out**.
+**Taype Comp**, the built-in **External MIDI Out**, and **Hardware Insert**.
+
+**Hardware Insert** is TayPE's outboard loop insert. It uses the audio I/O
+mapping aliases from Preferences, not TayPE buses: choose a physical output
+pair for the send, a physical input pair for the return, and a signed latency
+offset in samples typed directly into the latency field. Wet/dry blends use a
+latency-aligned dry path, so partial blends stay aligned with the returned
+hardware signal. The current master output pair cannot be used as the send.
+If a route is missing, TayPE fails safe: no send for missing outputs and
+silence for missing returns. Hardware Inserts are realtime only; offline
+faster-than-realtime print asks you to print the mix in realtime instead.
 
 Those Taype Stock VST3 plug-ins are limited to running inside Taype, apart
 from **Taype Drive**, which also works in standalone **Plugin Doctor** for
