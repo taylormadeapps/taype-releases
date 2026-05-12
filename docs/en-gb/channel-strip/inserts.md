@@ -101,8 +101,12 @@ offset in samples typed directly into the latency field. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
 hardware signal. The current master output pair cannot be used as the send.
 If a route is missing, TayPE fails safe: no send for missing outputs and
-silence for missing returns. Hardware Inserts are realtime only; offline
-faster-than-realtime print asks you to print the mix in realtime instead.
+silence for missing returns. A missing or unavailable return does not suppress
+the physical send. Bypassing a Hardware Insert keeps its latency in the graph
+and returns the latency-aligned dry path; disabling it removes the insert and
+its latency from the graph. Hardware Inserts are realtime only;
+offline faster-than-realtime print asks you to print the mix in realtime
+instead.
 
 Those Taype Stock VST3 plug-ins are limited to running inside Taype, apart
 from **Taype Drive**, which also works in standalone **Plugin Doctor** for

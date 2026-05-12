@@ -218,6 +218,8 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   output pair, default stereo input, default mono input, sample rate, buffer
   size, hardware error compensation, Audio worker cores, Resampling, and NAM
   changes together.
+- Editing an I/O mapping also enables **Apply Audio Changes**, even when you
+  only rename endpoints and keep the same mapping selected.
 - The **Master output pair** and **Default stereo input** lists only offer
   normal stereo hardware pairs such as `1-2`, `3-4`, `5-6`, and so on.
 - The default input choices only affect tracks set to **Default**. TayPE opens
