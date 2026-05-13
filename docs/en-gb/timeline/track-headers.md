@@ -54,6 +54,8 @@ Click **Tags** on a track header to open the tag cloud.
 - **All / Global / Reel** filters the cloud scope
 - Search field live-filters tag names
 - Click a tag to toggle it on/off for that track
+- Right-click a tag to edit its name and optional colour, or clear the colour
+- Assigning a coloured tag sets the track colour to that tag colour
 - **New Tag** opens inline creation with scope choice:
   - **Global** tags are shared across reels on this machine
   - **Reel** tags are saved in the reel and travel with it
