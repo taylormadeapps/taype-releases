@@ -58,6 +58,7 @@ Click **Tags** on a track header to open the tag cloud.
 - Assigning a coloured tag sets the track colour to that tag colour
 - **New Tag** opens inline creation with scope choice:
   - **Global** tags are shared across reels on this machine
-  - **Reel** tags are saved in the reel and travel with it
+  - **Reel** tags are saved in the reel and travel with it, including any
+    reel-local colour unless a global colour exists for the same tag
 
 The popup stays open while you assign multiple tags. Click outside or press **Done** to close.
