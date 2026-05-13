@@ -16,6 +16,11 @@ bridge between your MCP client and the running app. The bridge speaks
 standard MCP (JSON-RPC 2.0 over stdio) on one side and talks to TayPE's
 engine on the other.
 
+MCP is off by default in normal launches. In TayPE, open
+**Preferences > MCP** and enable **Enable MCP** before connecting an agent.
+TayPE will ask you to confirm before opening `localhost:18222`; review the
+data privacy and security policy for any agent or MCP client you connect.
+
 ```
 Your MCP Client (Claude Desktop, etc.)
     |
@@ -35,13 +40,14 @@ TayPE (running app)
 In TayPE, go to **Tools > LLM Integrations > Install Claude Connector**. This automatically
 configures Claude Desktop to connect to TayPE - no manual editing needed.
 Restart Claude Desktop after installing, and TayPE must be running before
-you start a conversation.
+you start a conversation. MCP must also be enabled in **Preferences > MCP**.
 
 ### Codex
 
 In TayPE, go to **Tools > LLM Integrations > Install Codex Connector**. This tells Codex to add
 TayPE as a local MCP server - no manual editing needed. Restart Codex after
 installing, and TayPE must be running before you start a session.
+MCP must also be enabled in **Preferences > MCP**.
 
 ### Manual Configuration
 
