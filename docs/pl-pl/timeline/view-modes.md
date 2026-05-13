@@ -13,7 +13,7 @@ Nagrywaj-armed and monitored tracks stay visible in clip-based Fokus. Selected
 tracks do not punch through Fokus on their own. The master track stays visible
 through every filter mode.
 
-Fokus can also be driven by MCP with a specific tag (Fokus-by-Tag). When you pick more than one tag, the transport popup's OR / AND toggle decides whether TayPE shows tracks matching any selected tag or only tracks matching them all. The transport **Tags** popup also includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud. The popup also includes a **Wybierz** button that selects all matching tracks under the current OR / AND tag mode.
+Fokus can also be driven by MCP with a specific tag (Fokus-by-Tag). When you pick more than one tag, the transport popup's OR / AND toggle decides whether any selected tag or all selected tags count as a match. The transport **Tags** popup also includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud. The popup also includes a **Wybierz** mode toggle. With **Wybierz** off, matching tracks stay visible and non-matching tracks are hidden. With **Wybierz** on, the same tag criteria select matching tracks instead and leave visibility unchanged.
 
 ## Widok automatyki
 

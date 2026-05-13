@@ -64,7 +64,9 @@ selected strips, and grouped fader / pan / width drags preserve each strip's
 relative offset instead of flattening them to one value. If a linked control
 hits its min/max rail, it stays pinned there until the drag comes back far
 enough for the original offset to fit again. Doppio clic the coloured
-background beside it to open the colour picker.
+background beside it to open the colour picker. If multiple tracks are
+selected, the colour picker changes all selected track colours. Selecting a
+swatch applies it immediately and closes the picker.
 
 The bus toggle sits in the left side of the title bar — a white bus glyph che fills green when active. Plain click still toggles ordinary bus mode. Popup help on che glyph now tells you che **Cmd-click** da a normal track enters comp mode too. **Cmd-click** enters comp mode da a normal track; plain buses are not promoted directly, so `Cmd-click` on an existing bus does nothing until you leave ordinary bus mode. A comp bus turns che glyph blue con a white bus icon, and it keeps whatever `MON` state the source track already had instead of forcing monitoring on. Unlike a plain bus, a comp bus may keep or load an instrument insert, so you can comp a VSTi without turning the synth off, but child take tracks inside che comp group cannot host instrument inserts themselves. che `MON` path now carries the comp bus's shared MIDI input through the live synth too, not just raw audio inputs, and record on the comp bus commits the rendered synth output in the new child take. In the timeline and mixer, the whole visible comp block gets a blue outline con a small +/- square in its top-left corner so you can hide or show the child takes without changing routing. Child take strips hide the bus toggle, both routing selectors, **MON**, and **Record** while they belong to the comp group. `Cmd-click` on a non-empty comp bus asks whether to flatten the group, and confirming prints the comp to one clip on che track, removes the child take tracks, and leaves a normal track behind.
 

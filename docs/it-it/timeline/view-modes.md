@@ -13,7 +13,7 @@ Record-armed and monitored tracks stay visible in clip-based Focus. Selected
 tracks do not punch through Focus on their own. The master track stays visible
 through every filter mode.
 
-Focus can also be driven by MCP con a specific tag (Focus-by-Tag). When you pick more than one tag, the transport popup's OR / AND toggle decides whether TayPE shows tracks matching any selected tag or only tracks matching them all. The transport **Tags** popup also includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud. The popup also includes a **Seleziona** button che selects all matching tracks under the current OR / AND tag mode.
+Focus can also be driven by MCP con a specific tag (Focus-by-Tag). When you pick more than one tag, the transport popup's OR / AND toggle decides whether any selected tag or all selected tags count as a match. The transport **Tags** popup also includes a **USED / ALL** toggle: **USED** shows only tags currently assigned on tracks in the open reel, while **ALL** restores the full tag cloud. The popup also includes a **Seleziona** mode toggle. With **Seleziona** off, matching tracks stay visible and non-matching tracks are hidden. With **Seleziona** on, the same tag criteria select matching tracks instead and leave visibility unchanged.
 
 ## Automation View
 

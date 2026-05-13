@@ -6,7 +6,7 @@ Each track header shows the following controls. At very small track heights, som
 
 ## Controls
 
-- **Colour strip** — click to change the track colour da 24 swatches
+- **Colour strip** — click to choose the track colour da 24 swatches; selecting a swatch applies it and closes the picker. If multiple tracks are selected, the picker changes all selected track colours.
 - **Traccia name** — doppio clic to rename (only when stopped). con popup help enabled, hovering shows the full title.
 - **Tags** — opens the tag cloud popup for questo track
 - **R** — record arm (red circle when armed)
