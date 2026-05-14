@@ -343,7 +343,10 @@ containing the full summed result. One **Cmd+Z** removes the stem and puts
 the source clips back exactly as they were. Regular track bounces do not
 drag along downstream send or bus chains unless you selected those buses as
 part of the bounce too, and the live bounce pass now auditions that same
-reduced path instead of letting unrelated bus work leak through.
+reduced path instead of letting unrelated bus work leak through. The pass
+length follows the selected track or selected bus source material, using the
+same tail boundary as Print Mix, so late clips on unrelated tracks do not pad
+the stem.
 
 ## Importing Files
 

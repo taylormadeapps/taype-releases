@@ -31,6 +31,45 @@ choose the record macro:
 - **Punch** — pressing **Return** again commits the pass and keeps playback rolling.
 - **Do-Over** — pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
 
+## Sync Slave Recording
+
+Use `Preferences > Sync` to choose the MIDI input that carries MTC/MMC from
+another DAW and enable slave mode, then use the transport **SYNC** badge to turn
+slave mode on or off. `Transport > Sync Control` only shows or hides that toolbar
+control; it does not enable the sync engine. The master timeline zero maps to
+the selected cut zero point. TayPE infers
+standard whole-hour SMPTE start offsets, so a DAW that sends `01:00:00:00` at
+its project start, or rolls from short pre-roll before the hour, still maps the
+whole-hour programme start to sync zero.
+
+While **SYNC** is on, TayPE follows external locate, play, and stop. Pressing
+**Record** does not change which tracks are armed. If transport is stopped, it
+queues a synced take on the currently armed tracks and starts recording when the
+external DAW sends Play. If transport is already rolling, it starts recording at
+the current synced position. Pressing **Record** during the take punches out and
+leaves external transport in control.
+
+MTC full-frame messages locate/update the synced position only. Quarter-frame
+MTC does not start transport by itself, but an MMC Locate followed by advancing
+MTC is treated as the external DAW rolling. MMC Play / Deferred Play, Stop, and
+Pause are also accepted, as are MIDI realtime Start, Continue, and Stop on the
+sync input. Once external sync has started transport, TayPE chases MTC while
+rolling so material drift snaps back to the mapped timecode position. If MTC
+stops arriving while TayPE is chasing, TayPE stops at the last synced timecode
+position using the normal stop fade before parking the head. Rolling locate and
+chase jumps are de-clicked so an external DAW loop wrap behaves like a short
+tail/head splice rather than a hard playhead jump.
+Turning **SYNC** off or changing the sync input discards queued external
+transport actions before local play/stop takes over again.
+The external DAW owns time in slave mode, so incoming positions are allowed to
+run past the current reel extent instead of being clamped to the end of the
+reel. Slave playback can roll on blank tape or beyond the current reel end
+without extending the local reel until you actually record there.
+
+Return, Punch, Do-Over, count-in, and loop-record modes are local recording
+helpers and are ignored in sync slave mode. External Stop commits the take and
+parks the head at the synced stop position.
+
 ## Timing
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
