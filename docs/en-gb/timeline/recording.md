@@ -57,10 +57,13 @@ sync input. Once external sync has started transport, TayPE chases MTC while
 rolling so material drift snaps back to the mapped timecode position. If MTC
 stops arriving while TayPE is chasing, TayPE stops at the last synced timecode
 position using the normal stop fade before parking the head. Rolling locate and
-chase jumps are de-clicked so an external DAW loop wrap behaves like a short
-tail/head splice rather than a hard playhead jump.
-Turning **SYNC** off or changing the sync input discards queued external
-transport actions before local play/stop takes over again.
+chase uses the normal seek boundary in this first cut; it deliberately avoids
+adding a separate splice path to ordinary playback.
+Arming **SYNC** does not change ordinary local Play, Stop, Seek, loop playback,
+or reel-end clamping. Those switch to slave timing only while external
+locate/play/chase messages are actively driving the transport. Turning
+**SYNC** off or changing the sync input discards queued external transport
+actions before local play/stop takes over again.
 The external DAW owns time in slave mode, so incoming positions are allowed to
 run past the current reel extent instead of being clamped to the end of the
 reel. Slave playback can roll on blank tape or beyond the current reel end
