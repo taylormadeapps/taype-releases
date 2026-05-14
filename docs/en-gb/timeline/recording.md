@@ -51,9 +51,10 @@ leaves external transport in control.
 
 MTC full-frame messages locate/update the synced position only. Quarter-frame
 MTC does not start transport by itself, but an MMC Locate followed by advancing
-MTC is treated as the external DAW rolling. MMC Play / Deferred Play, Stop, and
-Pause are also accepted, as are MIDI realtime Start, Continue, and Stop on the
-sync input. Once external sync has started transport, TayPE chases MTC while
+MTC is treated as the external DAW rolling. MMC Play / Deferred Play and Stop
+are accepted; MMC Pause stops while TayPE is rolling and resumes from the latest
+located sync position when TayPE is already parked by MMC Pause. MIDI realtime Start,
+Continue, and Stop are also accepted on the sync input. Once external sync has started transport, TayPE chases MTC while
 rolling so material drift snaps back to the mapped timecode position. If MTC
 stops arriving while TayPE is chasing, TayPE stops at the last synced timecode
 position using the normal stop fade before parking the head. Rolling locate and
