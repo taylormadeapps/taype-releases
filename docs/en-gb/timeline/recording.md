@@ -34,10 +34,10 @@ choose the record macro:
 ## Sync Slave Recording
 
 Use `Preferences > Sync` to choose the MIDI input that carries MTC/MMC from
-another DAW and enable slave mode, then use the transport **SYNC** badge to turn
-slave mode on or off. `Transport > Sync Control` only shows or hides that toolbar
-control; it does not enable the sync engine. The master timeline zero maps to
-the selected cut zero point. TayPE infers
+another DAW and enable the sync function, then use the transport **SYNC** badge
+to engage or disengage slave transport. `Transport > Sync Control` only shows or
+hides that toolbar control; it does not enable the sync engine. The master
+timeline zero maps to the selected cut zero point. TayPE infers
 standard whole-hour SMPTE start offsets, so a DAW that sends `01:00:00:00` at
 its project start, or rolls from short pre-roll before the hour, still maps the
 whole-hour programme start to sync zero.
@@ -60,11 +60,11 @@ stops arriving while TayPE is chasing, TayPE stops at the last synced timecode
 position using the normal stop fade before parking the head. Rolling locate and
 chase uses the normal seek boundary in this first cut; it deliberately avoids
 adding a separate splice path to ordinary playback.
-Arming **SYNC** does not change ordinary local Play, Stop, Seek, loop playback,
-or reel-end clamping. Those switch to slave timing only while external
-locate/play/chase messages are actively driving the transport. Turning
-**SYNC** off or changing the sync input discards queued external transport
-actions before local play/stop takes over again.
+Engaging **SYNC** does not change ordinary local Play, Stop, Seek, loop
+playback, or reel-end clamping. Those switch to slave timing only while external
+locate/play/chase messages are actively driving the transport. Disengaging
+**SYNC**, disabling the sync function, or changing the sync input discards
+queued external transport actions before local play/stop takes over again.
 The external DAW owns time in slave mode, so incoming positions are allowed to
 run past the current reel extent instead of being clamped to the end of the
 reel. Slave playback can roll on blank tape or beyond the current reel end

@@ -38,7 +38,9 @@ The **transport bar** runs along the bottom. It has playback controls, BPM, and 
 
 If the reel has a video reference attached, open its picture window from
 **View > Video > Show Video Reference**. The video window uses the normal
-macOS window controls, including the green fullscreen button.
+macOS window controls, including the green fullscreen button. The master row
+shows the reference as a simple timeline block so you can see where picture
+starts; use the View menu video commands to set that start point.
 
 Focus only counts enabled clips. Disabled clips do not keep a track visible, whether Focus is following the playhead or the active loop range.
 
