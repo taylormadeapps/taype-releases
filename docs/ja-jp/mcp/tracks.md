@@ -68,9 +68,9 @@
 | `position` | number | いいえ | 0 始まりの表示位置（トラック並べ替え） |
 | `tags` | array | いいえ | トラックのタグを、この配列で丸ごと置き換える |
 | `preamp_enabled` | boolean | いいえ | チャンネルプリアンプの有効 / 無効 |
-| `preamp_drive` | number | いいえ | プリアンプドライブ: Modern/NAM 0.0 から 18.0 dB、ToTaype は -0.5 から +0.5 のセンター制御 |
+| `preamp_drive` | number | いいえ | プリアンプドライブ: Modern/NAM/MD510 0.0 から 18.0 dB、ToTaype は -0.5 から +0.5 のセンター制御 |
 | `preamp_auto_gain` | boolean | いいえ | オートゲイン補正 |
-| `preamp_manual_gain` | number | いいえ | 統合プリアンプ出力ゲインへの互換エイリアス: Modern/NAM -18.0 から +12.0 dB、ToTaype は -0.5 から +0.5 のセンター制御 |
+| `preamp_manual_gain` | number | いいえ | 統合プリアンプ出力ゲインへの互換エイリアス: Modern/NAM/MD510 -18.0 から +12.0 dB、ToTaype は -0.5 から +0.5 のセンター制御 |
 | `preamp_hp_freq` | number | いいえ | サチュレーション HP フィルター: 20.0 から 500.0 Hz |
 | `preamp_lp_freq` | number | いいえ | サチュレーション LP フィルター: 2000.0 から 20000.0 Hz |
 | `preamp_safe` | boolean | いいえ | 4x オーバーサンプリング（高ドライブ時のエイリアシングを抑える） |
