@@ -49,13 +49,14 @@ List available NAM profiles from the local profiles directory.
 
 ### `set_mix_summing`
 
-Load a NAM summing profile on the master bus. Requires transport stopped.
+Configure master summing. Requires transport stopped.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
-| `profile` | string | yes | NAM profile filename |
-| `drive` | number | no | Input drive in dB, 0.0 to +18.0 (default: 0.0) |
-| `output_gain` | number | no | Output gain in dB, -18.0 to +12.0 (default: 0.0) |
+| `mode` | string | no | `clean`, `classic`, `totaype`, `nam`, or `md510` |
+| `profile` | string | NAM only | NAM profile filename |
+| `drive` | number | no | Input drive: Modern/NAM/MD510 0.0 to +18.0 dB; ToTaype centred control -0.5 to +0.5 |
+| `output_gain` | number | no | Output gain: Modern/NAM/MD510 -18.0 to +12.0 dB; ToTaype centred control -0.5 to +0.5 |
 
 **Returns:** `{ "enabled": true, "profile": "SSL_4000G.nam", "tone_id": "abc123", "architecture": "LSTM", "drive": 6.0, "output_gain": 0.0 }`
 

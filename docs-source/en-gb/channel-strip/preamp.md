@@ -1,10 +1,10 @@
 # Preamp
 
-The preamp operates in four modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
+The preamp operates in five modes. Use the mode-value button on the left of the info row to cycle through them:
 
-**Clean → Modern → ToTaype → NAM → Clean**
+**Clean → Modern → ToTaype → NAM → MD510 → Clean**
 
-That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
+That button now shows only the current mode text. Clean is outlined, Modern uses a light chip, ToTaype keeps the warm brass chip, NAM uses green, and MD510 uses baby blue. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
 
 ## Clean Gain (default)
 
@@ -17,6 +17,10 @@ A soft-clipping drive stage for adding warmth and saturation.
 - **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
 - **Safe mode** — engages oversampling for cleaner saturation at the cost of a bit more CPU.
 - **Auto-gain (AG)** — compensates for loudness changes from drive so you can compare tone instead of volume.
+
+## MD510
+
+MD510 is a MiniDisc-player-inspired colour mode for subtle finish and peak civility. It adds a small low-end support, gently relaxes the top, tightens low stereo width when a stereo lane is available, and rounds the very top of hard pushes with a tiny 0 dB soft clip.
 
 ## NAM Profile
 

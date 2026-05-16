@@ -1,10 +1,10 @@
 # Preamp
 
-The preamp operates in four modes. Use the small yellow mode-value button on the left of the info row to cycle through them:
+The preamp operates in five modes. Use the mode-value button on the left of the info row to cycle through them:
 
-**Clean → Modern → ToTaype → NAM → Clean**
+**Clean → Modern → ToTaype → NAM → MD510 → Clean**
 
-That button now shows only the current mode text. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right; clicking that profile pill opens the browser.
+That button now shows only the current mode text. Clean is outlined, Modern uses a light chip, ToTaype keeps the warm brass chip, NAM uses green, and MD510 uses baby blue. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right; clicking that profile pill opens the browser.
 
 The Wet/Dry blend knob is shown in the full channel strip and wide mixer strips. Narrow mixer strips keep the mode, profile, and meters visible but hide Wet/Dry to preserve spacing.
 
@@ -38,6 +38,10 @@ The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps 
 - **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` gives the grittiest low-speed colour without maxing the contour.
 - **HF contour** — fixed internally to the ToTaype lane. There is no separate Dubly switch on the strip now.
 - **Output gain** — trims the level leaving the tape stage.
+
+## MD510
+
+MD510 is a MiniDisc-player-inspired colour mode for subtle finish and peak civility. It adds a small low-end support, gently relaxes the top, tightens low stereo width when a stereo lane is available, and rounds the very top of hard pushes with a tiny 0 dB soft clip.
 
 ## NAM Profile
 
