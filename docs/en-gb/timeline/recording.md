@@ -31,6 +31,14 @@ choose the record macro:
 - **Punch** — pressing **Return** again commits the pass and keeps playback rolling.
 - **Do-Over** — pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
 
+Play / Pause is blocked while a recording pass is active; finish the take with
+**Record** or **Stop**.
+
+When a recorded take overlaps the head or tail of an existing clip, TayPE trims
+the older clip to the new take boundary with only a tiny anti-click fade instead
+of creating a long automatic crossfade. Recording inside an existing clip still
+splits the older clip around the new take.
+
 ## Sync Slave Recording
 
 Use `Preferences > Sync` to choose the MIDI input that carries MTC/MMC from

@@ -18,7 +18,15 @@ Right-click the ruler **A** button to choose **Volume**, **Pan**, or
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
+Wanneer een opgenomen take de kop of staart van een bestaande clip overlapt,
+knipt TayPE de oudere clip terug tot de grens van de nieuwe take en zet alleen
+een heel korte anti-click fade. Er wordt geen lange automatische crossfade
+gemaakt. Neem je midden in een bestaande clip op, dan wordt de oudere clip om de
+nieuwe take heen gesplitst.
+
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+Play / pause is geblokkeerd terwijl een opname actief is; rond de take af met
+**Record** of **Stop**.
 
 ## Input and Output Routing
 

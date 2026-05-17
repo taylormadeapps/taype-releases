@@ -23,7 +23,7 @@ switching snap mode.
 | Shortcut | Action |
 |----------|--------|
 | Space | Play / stop |
-| P | Play / pause |
+| P | Play / pause (blocked while recording) |
 | Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
 | Return | Record-mode action |
 | C | Toggle metronome click |

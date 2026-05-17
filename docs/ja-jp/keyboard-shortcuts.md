@@ -17,7 +17,7 @@ TayPE のキーボード ショートカットは完全に構成可能です。�
 | Shortcut | Action |
 |----------|--------|
 | Space | Play / stop |
-| P | Play / pause |
+| P | 再生 / 一時停止（録音中は無効） |
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
 | / | Add marker at the tape head |

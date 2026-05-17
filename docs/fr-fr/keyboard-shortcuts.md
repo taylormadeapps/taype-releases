@@ -19,7 +19,7 @@ raisonnables.
 | Raccourci | Action |
 |----------|--------|
 | Space | Lecture / arrêt |
-| P | Lecture / pause |
+| P | Lecture / pause (bloqué pendant l'enregistrement) |
 | Z | Arrêt (retour au début ; en enregistrement, se gare à la fin de la prise) |
 | Return | Démarrer / arrêter l'enregistrement |
 | / | Ajouter un marqueur à la tête |

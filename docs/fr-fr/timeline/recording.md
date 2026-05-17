@@ -10,6 +10,14 @@ par le clip définitif.
 
 Les clips enregistrés restent ancrés à la position de punch-in. La compensation
 de latence est appliquée en interne.
+Quand une prise enregistrée chevauche le début ou la fin d'un clip existant,
+TayPE coupe l'ancien clip à la limite de la nouvelle prise avec seulement un
+très court fondu anti-clic. Il ne crée pas de long crossfade automatique. Si la
+prise tombe au milieu d'un clip existant, l'ancien clip est séparé autour de la
+nouvelle prise.
+
+Lecture / pause est bloqué pendant un enregistrement actif. Terminez la prise
+avec **Record** ou **Stop**.
 
 ## Routage d'entrée et de sortie
 

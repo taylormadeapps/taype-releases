@@ -18,7 +18,14 @@ Right-click the ruler **A** button to choose **Volume**, **Pan**, or
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
+Όταν μια ηχογραφημένη λήψη επικαλύπτει την αρχή ή το τέλος ενός υπάρχοντος clip,
+το TayPE κόβει το παλιό clip στο όριο της νέας λήψης και βάζει μόνο ένα πολύ
+μικρό anti-click fade. Δεν δημιουργεί μεγάλο αυτόματο crossfade. Αν η λήψη πέσει
+μέσα σε υπάρχον clip, το παλιό clip χωρίζεται γύρω από τη νέα λήψη.
+
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+Το Play / Pause είναι ανενεργό όσο τρέχει εγγραφή· ολοκλήρωσε τη λήψη με
+**Record** ή **Stop**.
 
 ## Input and Output Routing
 

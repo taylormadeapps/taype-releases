@@ -18,7 +18,15 @@ Fai clic con il pulsante destro the ruler **A** button to choose **Volume**, **P
 
 Recorded clips stay anchored to the position where you punched in. Latenza compensation is applied internally so back-to-back takes keep the timing you performed.
 
+Quando una take registrata si sovrappone all'inizio o alla fine di un clip
+esistente, TayPE taglia il vecchio clip al bordo della nuova take e applica solo
+un piccolissimo fade anti-click. Non crea un crossfade automatico lungo. Se
+registri dentro un clip esistente, il vecchio clip viene diviso intorno alla
+nuova take.
+
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+Play / pausa è bloccato durante una registrazione attiva; chiudi la take con
+**Record** o **Stop**.
 
 ## Input and Output Routing
 
