@@ -19,6 +19,10 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 - **Option+-** — reset to the default 16-bar frame level
 - **Option+=** — jump straight to the maximum horizontal zoom
 
+At deep zoom levels, TayPE caps horizontal zoom at practical sample-level
+detail and clips offscreen waveform drawing, so very close inspection stays
+responsive.
+
 Once you have manually changed horizontal zoom, TayPE remembers that zoom
 level for the next launch. Scroll position stays transient, so a relaunch
 comes back at the current Cut zero point instead of trying to restore the old
