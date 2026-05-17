@@ -235,9 +235,12 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - The **Control Surfaces** tab reserves Mackie MCU devices away from ordinary
   MIDI routing. Fader-capable controller profiles can choose a mixer bank
   marker colour; transport-only profiles such as SSL 360 disable that colour
-  swatch because they publish no fader bank. MCU rewind/fast-forward and jog
-  move by the visible timeline ruler step, while Korg nanoKONTROL Studio uses
-  Loop held with marker previous/next to set the loop braces.
+  swatch because they publish no fader bank. Strip buttons follow the active
+  visible mixer strip order, with comp-bus child/take tracks skipped; the final
+  bank maps hardware strip 1 to the master fader. MCU rewind/fast-forward and
+  jog move by the visible timeline ruler step. Korg nanoKONTROL Studio uses
+  Loop held with marker previous/next to set the loop braces, and filters
+  fader-move select noise so moving a fader does not toggle monitoring.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
   as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
