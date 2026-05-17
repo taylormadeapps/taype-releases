@@ -19,6 +19,10 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 - **Option+-** — reset to the default 16-bar frame level
 - **Option+=** — jump straight to the maximum horizontal zoom
 
+At deep zoom levels, TayPE caps horizontal zoom at practical sample-level
+detail and clips offscreen waveform drawing, so very close inspection stays
+responsive.
+
 Once you have manually changed horizontal zoom, TayPE remembers that zoom
 level for the next launch. Scroll position stays transient, so a relaunch
 comes back at the current Cut zero point instead of trying to restore the old
@@ -59,10 +63,11 @@ Markers belong to the current Cut and stay fixed to absolute timeline time.
 Changing tempo, time signature, or the Cut zero point does not move them.
 
 - Right-click the top ruler area and choose **Add Marker at Playhead** to drop
-  a marker at the current tape head.
+  a marker at the current tape head. If the tape head is already exactly on a
+  marker, the same command removes that marker; removal is blocked during
+  recording.
 - Double-click an empty spot in the upper ruler lane to drop a marker at the
-  clicked time. Marker creation stays live during playback, but recording
-  still blocks it.
+  clicked time. Marker creation stays live during playback and recording.
 - Each marker draws as a thin vertical line through the whole timeline, with a
   small label tab to the right of the line in the ruler.
 - Drag a marker left or right to move it. When snap is on, marker drags snap
@@ -80,8 +85,9 @@ Changing tempo, time signature, or the Cut zero point does not move them.
 Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
 keyboard shortcuts page, to move between markers quickly. When the loop has
 been explicitly set or enabled, those previous/next jumps also stop at the
-loop brace points. If a jump lands outside the current view, TayPE brings the
-playhead back on screen instead of leaving it off to the side.
+loop brace points. Marker navigation is blocked during recording so the record
+head cannot jump mid-take. If a jump lands outside the current view, TayPE
+brings the playhead back on screen instead of leaving it off to the side.
 
 TayPE treats the song end as the furthest of the last clip plus a short tail,
 the latest marker, or an explicit right loop brace. Playback and Print Mix use

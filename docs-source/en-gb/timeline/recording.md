@@ -18,12 +18,19 @@ Right-click the ruler **A** button to choose **Volume**, **Pan**, or
 
 Recorded clips stay anchored to the position where you punched in. Latency compensation is applied internally so back-to-back takes keep the timing you performed.
 
+When a recorded take overlaps the head or tail of an existing clip, TayPE trims
+the older clip to the new take boundary with only a tiny anti-click fade instead
+of creating a long automatic crossfade. Recording inside an existing clip still
+splits the older clip around the new take.
+
 Use **Transport > Metronome** to toggle the click and **Transport > Count-In**
 to choose a one-shot lead-in of **Off**, **1**, **2**, or **4** bars. The
 same count-in menu is also available by right-clicking the metronome button in
 the ruler.
 
 If you press **Stop** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+Play / Pause is blocked while a recording pass is active; finish the take with
+**Record** or **Stop**.
 
 ## Input and Output Routing
 

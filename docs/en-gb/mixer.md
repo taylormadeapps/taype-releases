@@ -1,6 +1,9 @@
 # The Mixer
 
-Press **M** to switch between the timeline and mixer views.
+Press **M** to switch between the timeline and mixer views. Press
+**Cmd+Shift+M** to pop the mixer into or out of its own window. Press
+**Cmd+M** to toggle Tape Mode on the visible mixer; if the mixer is hidden,
+TayPE opens the inline mixer while changing Tape Mode.
 
 Mixer view, Tape Mode, the detached mixer window, the shared narrow/full-width
 desk mode, and the shared section-collapse posture are app-global preferences.
@@ -39,12 +42,14 @@ channels.
 
 ## Tape Mode
 
-The reel glyph beside the mixer-width button switches the main mixer into Tape
-Mode. Tape Mode replaces the upper processing lane with animated tape reels and
-keeps the normal main-mixer fader rack underneath for the track strips. The
-master bus stays pinned at the right as a full output strip, so the reel deck
-and ribbon stop before the master lane instead of covering the output bus. The
-arranger channel strip is unchanged.
+The reel glyph beside the mixer-width button switches the visible mixer into
+Tape Mode. Tape Mode replaces the upper processing lane with animated tape
+reels and keeps the normal fader rack underneath for the track strips. If
+neither the inline mixer nor the detached mixer window is showing, Tape Mode
+opens the inline mixer while it changes state. The master bus stays pinned at
+the right as a full output strip, so the reel deck and ribbon stop before the
+master lane instead of covering the output bus. The arranger channel strip is
+unchanged.
 
 When the transport plays, both reels spin anti-clockwise. The left reel loses
 tape and the right reel gains it against a physical 456 tape capacity: 2500 ft
@@ -56,14 +61,16 @@ fills. The animation does not change audio routing or processing.
 
 If the Cut has markers, Tape Mode shows marker pills down the left side of the
 tape deck in time order. The first row is reserved for **+**, **L**, and
-**R**: **+** adds a marker at the playhead, **L** jumps to the left loop brace,
+**R**: **+** adds or removes a marker at the playhead, **L** jumps to the left loop brace,
 and **R** jumps to the right loop brace. **Cmd-click L** sets the left brace at
-the playhead; **Cmd-click R** sets the right brace there. If the left stack
+the playhead; **Cmd-click R** sets the right brace there. **+** still drops a
+marker during recording, while marker-pill jumps are blocked until recording
+stops. If the left stack
 fills, later markers continue down the far right side of the deck. Marker names
 are shortened to 16 characters on the pills.
 
 Below the deck, a narrow tape ribbon shows the selected tape length: 5, 10,
-15, or 30 minutes from the View > Tape Length menu. It defaults to 10 minutes
+15, or 30 minutes from the View > Mixer > Tape Length menu. It defaults to 10 minutes
 and always starts at absolute zero. Markers appear as coloured splice lines,
 timeline 0 appears as a white splice when it has been moved away from absolute
 zero, the playhead appears as a miniature playhead while it is within the

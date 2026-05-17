@@ -92,7 +92,7 @@ its waveform.
 
 ## Playback
 
-- **P** - pause
+- **P** - play / pause
 - **Space** - play / stop
 - **Z** - stop and return to the start
 

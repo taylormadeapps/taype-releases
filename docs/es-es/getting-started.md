@@ -46,7 +46,7 @@ aparece el clip definitivo con su forma de onda.
 
 ## Reproducción
 
-- **P**: pausa
+- **P**: reproducir / pausa
 - **Space**: reproducir / detener
 - **Z**: detener y volver al inicio
 

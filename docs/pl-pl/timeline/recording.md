@@ -18,7 +18,15 @@ Right-click the ruler **A** button to choose **Głośność**, **Panorama**, or
 
 Recorded clips stay anchored to the position where you punched in. Opóźnienie compensation is applied internally so back-to-back takes keep the timing you performed.
 
+Gdy nagrane ujęcie zachodzi na początek lub koniec istniejącego klipu, TayPE
+przycina starszy klip do granicy nowego ujęcia i dodaje tylko bardzo krótki
+fade przeciw kliknięciu. Nie tworzy długiego automatycznego crossfade'u. Jeśli
+nagrywasz w środku istniejącego klipu, starszy klip zostaje podzielony wokół
+nowego ujęcia.
+
 If you press **Zatrzymaj** while recording, the head parks at the end of the committed take so what you just captured is immediately visible.
+Odtwórz / pauza jest zablokowane podczas aktywnego nagrywania; zakończ ujęcie
+przez **Record** albo **Zatrzymaj**.
 
 ## Wejście and Wyjście Routing
 

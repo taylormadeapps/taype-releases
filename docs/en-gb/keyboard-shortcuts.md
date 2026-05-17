@@ -23,7 +23,7 @@ switching snap mode.
 | Shortcut | Action |
 |----------|--------|
 | Space | Play / stop |
-| P | Pause |
+| P | Play / pause (blocked while recording) |
 | Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
 | Return | Record-mode action |
 | C | Toggle metronome click |
@@ -121,8 +121,10 @@ there is no separate user-facing Save command.
 |----------|--------|
 | M | Toggle between timeline and mixer |
 | W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
+| Cmd+M | Toggle Tape Mode on the visible mixer; opens the inline mixer if hidden |
+| Cmd+Shift+M | Pop the mixer in or out of a separate window |
 | I | Toggle channel strip panel |
-| Left / Right | In timeline view, move the tape head to the previous or next visible tick. In mixer view, scroll the rack left or right |
+| Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In mixer view, scroll the rack left or right |
 | Up / Down | In timeline view, scroll the track stack. In mixer view, scroll the shared strip sections up or down |
 | V | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle automation view |
@@ -140,8 +142,10 @@ there is no separate user-facing Save command.
 | Backtick (\`) | Open the Performance Monitor window |
 
 The **View** menu also exposes the same focus, automation, deselect, mixer,
-channel-strip, ruler, and zoom actions, grouped into
-**Automation Display**, **Horizontal Zoom**, and **Vertical Zoom** submenus.
+channel-strip, ruler, and zoom actions, with mixer, detached-window, width,
+Tape Mode, and Tape Length controls grouped under **View > Mixer**. It also
+groups automation and zoom controls into **Automation Display**,
+**Horizontal Zoom**, and **Vertical Zoom** submenus.
 The automation submenu carries both **Cycle Automation Display** and the
 direct **Show Volume / Show Pan / Show Width** picks.
 
@@ -219,6 +223,7 @@ is straightforward:
   "zoom_max_vertical": "alt+shift+=",
   "toggle_mixer_width": "w",
   "toggle_tape_mode": "cmd+m",
+  "detach_mixer": "cmd+shift+m",
   "toggle_focus": "v",
   "toggle_automation_view": "a",
   "toggle_archive_view": "x",

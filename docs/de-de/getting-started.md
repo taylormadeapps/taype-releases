@@ -58,7 +58,7 @@ mit Wellenform.
 
 ## Wiedergabe
 
-- **P**: Pause
+- **P**: Play / Pause
 - **Space**: Play / Stop
 - **Z**: Stop und zurück zum Anfang
 

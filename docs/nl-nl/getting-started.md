@@ -59,7 +59,7 @@ Tijdens de opname ziet u een rode ghostclip die op het spoor groeit en aangeeft 
 
 ## Afspelen
 
-- **P** - pause
+- **P** - play / pause
 - **Space** - afspelen / stoppen
 - **Z** - stoppen en naar het begin terugkeren
 
