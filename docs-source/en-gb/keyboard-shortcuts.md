@@ -89,7 +89,7 @@ selected-track clip selection, reordering, duplication, and deletion.
 | M | Toggle between timeline and mixer |
 | W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
 | I | Toggle channel strip panel |
-| Left / Right | In timeline view, move the tape head to the previous or next visible tick. In mixer view, scroll the rack left or right |
+| Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In mixer view, scroll the rack left or right |
 | Up / Down | In timeline view, scroll the track stack. In mixer view, scroll the shared strip sections up or down |
 | F | Focus view - show only tracks with clips at the tape head |
 | A | Toggle automation view |
