@@ -18,7 +18,7 @@ Diese Datei wird beim ersten Start automatisch mit sinnvollen Standardwerten ang
 | Kürzel | Aktion |
 |----------|--------|
 | Space | Play / Stop |
-| P | Pause |
+| P | Play / Pause |
 | Z | Stop |
 | Return | Aufnahme starten / stoppen |
 | / | Marker am Tape Head setzen |

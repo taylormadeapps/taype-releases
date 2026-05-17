@@ -18,7 +18,7 @@ Skráin verður til sjálfkrafa við fyrstu ræsingu.
 | Flýtilykill | Aðgerð |
 |----------|--------|
 | Space | Play / stop |
-| P | Pause |
+| P | Play / pause |
 | Z | Stop |
 | Return | Hefja / stöðva upptöku |
 | / | Bæta við marker við tape head |

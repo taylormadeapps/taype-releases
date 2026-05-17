@@ -18,7 +18,7 @@ Se crea automáticamente al primer arranque.
 | Atajo | Acción |
 |----------|--------|
 | Space | Reproducir / detener |
-| P | Pausa |
+| P | Reproducir / pausa |
 | Z | Detener |
 | Return | Empezar / detener grabación |
 | / | Añadir marcador en el cabezal |

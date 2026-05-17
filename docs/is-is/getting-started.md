@@ -39,7 +39,7 @@ birtist endanlegt clip með bylgjuformi.
 
 ## Spilun
 
-- **P**: pause
+- **P**: play / pause
 - **Space**: play / stop
 - **Z**: stop og fara aftur í byrjun
 

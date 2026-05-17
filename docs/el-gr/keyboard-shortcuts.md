@@ -18,7 +18,7 @@ This file is created automatically on first launch with sensible defaults.
 | Shortcut | Action |
 |----------|--------|
 | Space | Play / stop |
-| P | Pause |
+| P | Play / pause |
 | Z | Stop (returns to start; while recording, parks at take end) |
 | Return | Start / stop recording |
 | / | Add marker at the tape head |

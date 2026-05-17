@@ -51,7 +51,8 @@ Changing tempo, time signature, or the Cut zero point does not move them.
 
 - Right-click the top ruler area and choose **Add Marker at Playhead** to drop
   a marker at the current tape head. Marker creation stays live during
-  playback, but recording still blocks it.
+  playback and recording. If the tape head is already exactly on a marker,
+  the same command removes that marker; removal is blocked during recording.
 - Each marker draws as a thin vertical line through the whole timeline, with a
   small label tab to the right of the line in the ruler.
 - Drag a marker left or right to move it. When snap is on, marker drags snap
@@ -67,4 +68,5 @@ Changing tempo, time signature, or the Cut zero point does not move them.
   and collapses the duplicate.
 
 Use the transport `<` and `>` buttons, or the marker shortcuts listed in the
-keyboard shortcuts page, to move between markers quickly.
+keyboard shortcuts page, to move between markers quickly. Marker navigation is
+blocked during recording so the record head cannot jump mid-take.

@@ -56,9 +56,11 @@ fills. The animation does not change audio routing or processing.
 
 If the Cut has markers, Tape Mode shows marker pills down the left side of the
 tape deck in time order. The first row is reserved for **+**, **L**, and
-**R**: **+** adds a marker at the playhead, **L** jumps to the left loop brace,
+**R**: **+** adds or removes a marker at the playhead, **L** jumps to the left loop brace,
 and **R** jumps to the right loop brace. **Cmd-click L** sets the left brace at
-the playhead; **Cmd-click R** sets the right brace there. If the left stack
+the playhead; **Cmd-click R** sets the right brace there. **+** still drops a
+marker during recording, while marker-pill jumps are blocked until recording
+stops. If the left stack
 fills, later markers continue down the far right side of the deck. Marker names
 are shortened to 16 characters on the pills.
 

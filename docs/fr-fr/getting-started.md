@@ -67,7 +67,7 @@ avec sa forme d'onde.
 
 ## Lecture
 
-- **P** : pause
+- **P** : lecture / pause
 - **Space** : lecture / arrêt
 - **Z** : arrêt et retour au début
 
