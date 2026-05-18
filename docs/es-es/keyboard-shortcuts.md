@@ -10,10 +10,11 @@ JSON y se abren desde esa pestaña con **Editar JSON** en el editor del sistema.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE crea los perfiles integrados que falten desde el paquete de la app:
+TayPE actualiza los perfiles integrados desde el paquete de la app al arrancar:
 `Default.json` (la distribución de TayPE) e `Industry Standard Bruh.json`
 (memoria muscular de edición al estilo Pro Tools para las acciones equivalentes
-de TayPE). Los perfiles integrados son de solo lectura. Duplica uno para
+de TayPE). Los perfiles integrados son de solo lectura y pertenecen al paquete;
+las ediciones directas de esos archivos se sobrescriben. Duplica uno para
 editarlo; **Recargar** aplica los cambios después de guardar en el editor externo.
 
 Los archivos antiguos `~/Documents/Taype/keybindings.json` se importan una sola

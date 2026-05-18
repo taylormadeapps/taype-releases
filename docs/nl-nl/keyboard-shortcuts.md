@@ -10,11 +10,13 @@ vanuit die tab met **JSON bewerken** in de systeemeditor worden geopend.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE zet ontbrekende ingebouwde profielen klaar vanuit de appbundel:
+TayPE ververst ingebouwde profielen bij het starten vanuit de appbundel:
 `Default.json` (de TayPE-indeling) en `Industry Standard Bruh.json`
 (Pro Tools-achtige editspiergeheugen voor overeenkomende TayPE-acties).
-Ingebouwde profielen zijn alleen-lezen. Dupliceer er een om het te bewerken;
-**Herladen** past wijzigingen toe nadat de externe editor heeft opgeslagen.
+Ingebouwde profielen zijn alleen-lezen en eigendom van de bundel; directe
+wijzigingen aan die bestanden worden overschreven. Dupliceer er een om het te
+bewerken; **Herladen** past wijzigingen toe nadat de externe editor heeft
+opgeslagen.
 
 Oude bestanden op `~/Documents/Taype/keybindings.json` worden eenmalig in de
 profielmap geïmporteerd en als `legacy-keybindings*.bak` gearchiveerd.

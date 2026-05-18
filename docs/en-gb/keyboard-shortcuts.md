@@ -10,10 +10,12 @@ from that tab with **Edit JSON** in the system editor.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE seeds missing built-in profiles from the app bundle: `Default.json` (the
-TayPE layout) and `Industry Standard Bruh.json` (Pro Tools-style edit muscle
-memory for matching TayPE actions). Built-in profiles are read-only. Duplicate
-one to edit it; **Reload** applies changes after the external editor saves.
+TayPE refreshes built-in profiles from the app bundle when it starts:
+`Default.json` (the TayPE layout) and `Industry Standard Bruh.json` (Pro
+Tools-style edit muscle memory for matching TayPE actions). Built-in profiles
+are read-only and bundle-owned, so direct edits to those files are overwritten.
+Duplicate one to edit it; **Reload** applies changes after the external editor
+saves.
 
 Older `~/Documents/Taype/keybindings.json` files are imported once into the
 profile folder and archived as `legacy-keybindings*.bak`.

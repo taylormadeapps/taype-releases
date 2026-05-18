@@ -10,10 +10,11 @@ kerfisritlinum.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE setur inn innbyggð snið úr app-búntinum ef þau vantar: `Default.json`
+TayPE endurnýjar innbyggð snið úr app-búntinum við ræsingu: `Default.json`
 (TayPE-uppsetningin) og `Industry Standard Bruh.json` (Pro Tools-lík
 vöðvaminning fyrir sambærilegar TayPE-klippiaðgerðir). Innbyggð snið eru
-skrifvarin. Afritaðu eitt til að breyta því; **Endurhlaða** tekur breytingar
+skrifvarin og tilheyra búntinum; beinar breytingar á þeim skrám eru
+yfirskrifaðar. Afritaðu eitt til að breyta því; **Endurhlaða** tekur breytingar
 eftir að ytri ritillinn hefur vistað.
 
 Eldri `~/Documents/Taype/keybindings.json` skrár eru fluttar einu sinni inn í

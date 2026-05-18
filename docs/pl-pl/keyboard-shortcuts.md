@@ -10,11 +10,12 @@ można je otworzyć z tej karty przyciskiem **Edytuj JSON** w edytorze systemowy
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE odtwarza brakujące profile wbudowane z pakietu aplikacji: `Default.json`
-(układ TayPE) oraz `Industry Standard Bruh.json` (pamięć mięśniowa edycji w
-stylu Pro Tools dla odpowiadających jej akcji TayPE). Profile wbudowane są tylko
-do odczytu. Zduplikuj profil, aby go edytować; **Przeładuj** zastosuje zmiany po
-zapisaniu pliku w edytorze zewnętrznym.
+TayPE odświeża profile wbudowane z pakietu aplikacji podczas uruchamiania:
+`Default.json` (układ TayPE) oraz `Industry Standard Bruh.json` (pamięć
+mięśniowa edycji w stylu Pro Tools dla odpowiadających jej akcji TayPE).
+Profile wbudowane są tylko do odczytu i należą do pakietu; bezpośrednie zmiany
+tych plików są nadpisywane. Zduplikuj profil, aby go edytować; **Przeładuj**
+zastosuje zmiany po zapisaniu pliku w edytorze zewnętrznym.
 
 Starsze pliki `~/Documents/Taype/keybindings.json` są jednorazowo importowane do
 folderu profili i archiwizowane jako `legacy-keybindings*.bak`.

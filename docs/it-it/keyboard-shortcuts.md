@@ -10,11 +10,12 @@ da quella scheda con **Modifica JSON** nell'editor di sistema.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE crea i profili integrati mancanti dal bundle dell'app: `Default.json` (la
-mappatura TayPE) e `Industry Standard Bruh.json` (memoria muscolare di editing
-in stile Pro Tools per le azioni TayPE equivalenti). I profili integrati sono in
-sola lettura. Duplica un profilo per modificarlo; **Ricarica** applica le
-modifiche dopo il salvataggio nell'editor esterno.
+TayPE aggiorna i profili integrati dal bundle dell'app all'avvio: `Default.json`
+(la mappatura TayPE) e `Industry Standard Bruh.json` (memoria muscolare di
+editing in stile Pro Tools per le azioni TayPE equivalenti). I profili integrati
+sono in sola lettura e appartengono al bundle; le modifiche dirette a quei file
+vengono sovrascritte. Duplica un profilo per modificarlo; **Ricarica** applica
+le modifiche dopo il salvataggio nell'editor esterno.
 
 I vecchi file `~/Documents/Taype/keybindings.json` vengono importati una sola
 volta nella cartella dei profili e archiviati come `legacy-keybindings*.bak`.

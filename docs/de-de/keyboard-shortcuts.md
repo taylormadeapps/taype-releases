@@ -10,11 +10,12 @@ sich dort mit **JSON bearbeiten** im Systemeditor öffnen.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE legt fehlende integrierte Profile aus dem App-Bundle an: `Default.json`
-(das TayPE-Layout) und `Industry Standard Bruh.json` (Pro-Tools-artige
-Editier-Muscle-Memory für passende TayPE-Aktionen). Integrierte Profile sind
-schreibgeschützt. Dupliziert eines, um es zu bearbeiten; **Neu laden** übernimmt
-Änderungen, nachdem der externe Editor gespeichert hat.
+TayPE aktualisiert die integrierten Profile beim Start aus dem App-Bundle:
+`Default.json` (das TayPE-Layout) und `Industry Standard Bruh.json`
+(Pro-Tools-artige Editier-Muscle-Memory für passende TayPE-Aktionen).
+Integrierte Profile sind schreibgeschützt und bundle-eigen; direkte Änderungen
+an diesen Dateien werden überschrieben. Dupliziert eines, um es zu bearbeiten;
+**Neu laden** übernimmt Änderungen, nachdem der externe Editor gespeichert hat.
 
 Ältere Dateien unter `~/Documents/Taype/keybindings.json` werden einmalig in den
 Profilordner importiert und als `legacy-keybindings*.bak` archiviert.

@@ -11,11 +11,12 @@ l'éditeur système.
 ~/Documents/Taype/keybindings/
 ```
 
-TayPE installe les profils intégrés manquants depuis le bundle de l'app :
+TayPE actualise les profils intégrés depuis le bundle de l'app au démarrage :
 `Default.json` (la disposition TayPE) et `Industry Standard Bruh.json` (mémoire
 de montage façon Pro Tools pour les actions TayPE équivalentes). Les profils
-intégrés sont en lecture seule. Dupliquez-en un pour le modifier ; **Recharger**
-applique les changements après l'enregistrement dans l'éditeur externe.
+intégrés sont en lecture seule et appartiennent au bundle ; les modifications
+directes de ces fichiers sont écrasées. Dupliquez-en un pour le modifier ;
+**Recharger** applique les changements après l'enregistrement dans l'éditeur externe.
 
 Les anciens fichiers `~/Documents/Taype/keybindings.json` sont importés une fois
 dans le dossier des profils, puis archivés sous `legacy-keybindings*.bak`.
