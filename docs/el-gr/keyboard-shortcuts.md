@@ -1,15 +1,25 @@
-# Keyboard Shortcuts
+# Συντομεύσεις πληκτρολογίου
 
-TayPE's keyboard shortcuts are fully configurable. Edit the keybindings
-file and restart to apply your changes.
+Οι συντομεύσεις πληκτρολογίου του TayPE βασίζονται σε προφίλ. Επιλέξτε προφίλ
+από **Προτιμήσεις > Συντομεύσεις πληκτρολογίου**· τα προσαρμοσμένα προφίλ είναι
+αρχεία JSON και ανοίγουν από εκεί με **Επεξεργασία JSON** στον επεξεργαστή του
+συστήματος.
 
-## Keybindings File
+## Προφίλ συντομεύσεων
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-This file is created automatically on first launch with sensible defaults.
+Το TayPE δημιουργεί τα ενσωματωμένα προφίλ από το app bundle όταν λείπουν:
+`Default.json` (η διάταξη του TayPE) και `Industry Standard Bruh.json`
+(μυϊκή μνήμη επεξεργασίας τύπου Pro Tools για αντίστοιχες ενέργειες του
+TayPE). Τα ενσωματωμένα προφίλ είναι μόνο για ανάγνωση. Αντιγράψτε ένα για να
+το επεξεργαστείτε· το **Επαναφόρτωση** εφαρμόζει τις αλλαγές αφού αποθηκεύσει
+ο εξωτερικός επεξεργαστής.
+
+Παλαιότερα αρχεία `~/Documents/Taype/keybindings.json` εισάγονται μία φορά στον
+φάκελο προφίλ και αρχειοθετούνται ως `legacy-keybindings*.bak`.
 
 ## Default Shortcuts
 
@@ -99,10 +109,11 @@ there is no separate user-facing Save command.
 | Cmd+drag | Clip | Copy clip to new position |
 | Drag clip edge | Clip | Trim clip (non-destructive) |
 
-## Customising Shortcuts
+## Προσαρμογή συντομεύσεων
 
-Open `~/Documents/Taype/keybindings.json` in any text editor. The format
-is straightforward:
+Στις **Προτιμήσεις > Συντομεύσεις πληκτρολογίου**, αντιγράψτε ένα ενσωματωμένο
+προφίλ ή επιλέξτε ένα προσαρμοσμένο και πατήστε **Επεξεργασία JSON**. Αποθηκεύστε
+στον επεξεργαστή και πατήστε **Επαναφόρτωση**. Η μορφή είναι απλή:
 
 ```json
 {

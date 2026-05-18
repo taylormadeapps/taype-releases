@@ -1,15 +1,23 @@
 # Tastaturkürzel
 
-Die Tastaturkürzel von TayPE sind vollständig konfigurierbar. Bearbeitet die
-Keybindings-Datei und startet die App neu, um Änderungen zu übernehmen.
+Die Tastaturkürzel von TayPE sind profilbasiert. Wählt ein Profil unter
+**Einstellungen > Tastaturkürzel**; eigene Profile sind JSON-Dateien und lassen
+sich dort mit **JSON bearbeiten** im Systemeditor öffnen.
 
-## Keybindings-Datei
+## Tastaturkürzelprofile
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-Diese Datei wird beim ersten Start automatisch mit sinnvollen Standardwerten angelegt.
+TayPE legt fehlende integrierte Profile aus dem App-Bundle an: `Default.json`
+(das TayPE-Layout) und `Industry Standard Bruh.json` (Pro-Tools-artige
+Editier-Muscle-Memory für passende TayPE-Aktionen). Integrierte Profile sind
+schreibgeschützt. Dupliziert eines, um es zu bearbeiten; **Neu laden** übernimmt
+Änderungen, nachdem der externe Editor gespeichert hat.
+
+Ältere Dateien unter `~/Documents/Taype/keybindings.json` werden einmalig in den
+Profilordner importiert und als `legacy-keybindings*.bak` archiviert.
 
 ## Standardkürzel
 
@@ -100,8 +108,9 @@ TayPE speichert den Arbeitsstand automatisch, solange der Transport steht.
 
 ## Kürzel anpassen
 
-Öffnet `~/Documents/Taype/keybindings.json` in einem Texteditor. Das Format ist
-einfach:
+Unter **Einstellungen > Tastaturkürzel** dupliziert ein integriertes Profil oder
+wählt ein eigenes aus, dann klickt **JSON bearbeiten**. Speichert im Editor und
+klickt **Neu laden**. Das Format ist einfach:
 
 ```json
 {

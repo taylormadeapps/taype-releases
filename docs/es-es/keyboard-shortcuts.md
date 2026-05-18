@@ -1,15 +1,23 @@
 # Atajos de teclado
 
-Los atajos de TayPE son totalmente configurables. Edita el archivo de
-keybindings y reinicia para aplicar los cambios.
+Los atajos de teclado de TayPE se organizan por perfiles. Elige un perfil en
+**Preferencias > Atajos de teclado**; los perfiles personalizados son archivos
+JSON y se abren desde esa pestaña con **Editar JSON** en el editor del sistema.
 
-## Archivo de keybindings
+## Perfiles de atajos
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-Se crea automáticamente al primer arranque.
+TayPE crea los perfiles integrados que falten desde el paquete de la app:
+`Default.json` (la distribución de TayPE) e `Industry Standard Bruh.json`
+(memoria muscular de edición al estilo Pro Tools para las acciones equivalentes
+de TayPE). Los perfiles integrados son de solo lectura. Duplica uno para
+editarlo; **Recargar** aplica los cambios después de guardar en el editor externo.
+
+Los archivos antiguos `~/Documents/Taype/keybindings.json` se importan una sola
+vez en la carpeta de perfiles y se archivan como `legacy-keybindings*.bak`.
 
 ## Atajos por defecto
 
@@ -98,7 +106,9 @@ Se crea automáticamente al primer arranque.
 
 ## Personalizar atajos
 
-Abre `~/Documents/Taype/keybindings.json` en cualquier editor de texto.
+En **Preferencias > Atajos de teclado**, duplica un perfil integrado o selecciona
+uno personalizado y pulsa **Editar JSON**. Guarda en el editor y pulsa
+**Recargar**.
 
 ```json
 {

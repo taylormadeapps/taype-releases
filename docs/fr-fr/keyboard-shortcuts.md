@@ -1,16 +1,24 @@
 # Raccourcis clavier
 
-Les raccourcis clavier de TayPE sont entièrement configurables. Modifiez le
-fichier de raccourcis, puis redémarrez pour appliquer les changements.
+Les raccourcis clavier de TayPE fonctionnent par profils. Choisissez un profil
+dans **Préférences > Raccourcis clavier** ; les profils personnalisés sont des
+fichiers JSON et s'ouvrent depuis cet onglet avec **Modifier JSON** dans
+l'éditeur système.
 
-## Fichier de raccourcis
+## Profils de raccourcis
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-Ce fichier est créé automatiquement au premier lancement avec des réglages
-raisonnables.
+TayPE installe les profils intégrés manquants depuis le bundle de l'app :
+`Default.json` (la disposition TayPE) et `Industry Standard Bruh.json` (mémoire
+de montage façon Pro Tools pour les actions TayPE équivalentes). Les profils
+intégrés sont en lecture seule. Dupliquez-en un pour le modifier ; **Recharger**
+applique les changements après l'enregistrement dans l'éditeur externe.
+
+Les anciens fichiers `~/Documents/Taype/keybindings.json` sont importés une fois
+dans le dossier des profils, puis archivés sous `legacy-keybindings*.bak`.
 
 ## Raccourcis par défaut
 
@@ -102,8 +110,9 @@ arrêté, donc il n'existe pas de commande Save séparée pour l'utilisateur.
 
 ## Personnaliser les raccourcis
 
-Ouvrez `~/Documents/Taype/keybindings.json` dans n'importe quel éditeur de
-texte. Le format est simple :
+Dans **Préférences > Raccourcis clavier**, dupliquez un profil intégré ou
+sélectionnez un profil personnalisé, puis cliquez sur **Modifier JSON**.
+Enregistrez dans l'éditeur et cliquez sur **Recharger**. Le format est simple :
 
 ```json
 {

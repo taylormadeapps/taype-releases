@@ -1,15 +1,23 @@
-# Keyboard Shortcuts
+# Sneltoetsen
 
-TayPE's keyboard shortcuts are fully configurable. Edit the keybindings
-file and restart to apply your changes.
+De sneltoetsen van TayPE werken met profielen. Kies een profiel in
+**Voorkeuren > Sneltoetsen**; aangepaste profielen zijn JSON-bestanden en kunnen
+vanuit die tab met **JSON bewerken** in de systeemeditor worden geopend.
 
-## Keybindings File
+## Sneltoetsprofielen
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-This file is created automatically on first launch with sensible defaults.
+TayPE zet ontbrekende ingebouwde profielen klaar vanuit de appbundel:
+`Default.json` (de TayPE-indeling) en `Industry Standard Bruh.json`
+(Pro Tools-achtige editspiergeheugen voor overeenkomende TayPE-acties).
+Ingebouwde profielen zijn alleen-lezen. Dupliceer er een om het te bewerken;
+**Herladen** past wijzigingen toe nadat de externe editor heeft opgeslagen.
+
+Oude bestanden op `~/Documents/Taype/keybindings.json` worden eenmalig in de
+profielmap geïmporteerd en als `legacy-keybindings*.bak` gearchiveerd.
 
 ## Default Shortcuts
 
@@ -99,10 +107,11 @@ there is no separate user-facing Save command.
 | Cmd+drag | Clip | Copy clip to new position |
 | Drag clip edge | Clip | Trim clip (non-destructive) |
 
-## Customising Shortcuts
+## Sneltoetsen aanpassen
 
-Open `~/Documents/Taype/keybindings.json` in any text editor. The format
-is straightforward:
+Dupliceer in **Voorkeuren > Sneltoetsen** een ingebouwd profiel of selecteer een
+aangepast profiel en klik op **JSON bewerken**. Sla op in de editor en klik op
+**Herladen**. De indeling is eenvoudig:
 
 ```json
 {

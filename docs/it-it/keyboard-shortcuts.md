@@ -1,15 +1,23 @@
 # Scorciatoie da Tastiera
 
-TayPE's keyboard shortcuts are fully configurable. Edit the keybindings
-file and restart to apply your changes.
+Le scorciatoie da tastiera di TayPE sono basate su profili. Scegli un profilo in
+**Preferenze > Scorciatoie**; i profili personalizzati sono file JSON e si aprono
+da quella scheda con **Modifica JSON** nell'editor di sistema.
 
-## Keybindings File
+## Profili di scorciatoie
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-This file is created automatically on first launch with sensible defaults.
+TayPE crea i profili integrati mancanti dal bundle dell'app: `Default.json` (la
+mappatura TayPE) e `Industry Standard Bruh.json` (memoria muscolare di editing
+in stile Pro Tools per le azioni TayPE equivalenti). I profili integrati sono in
+sola lettura. Duplica un profilo per modificarlo; **Ricarica** applica le
+modifiche dopo il salvataggio nell'editor esterno.
+
+I vecchi file `~/Documents/Taype/keybindings.json` vengono importati una sola
+volta nella cartella dei profili e archiviati come `legacy-keybindings*.bak`.
 
 ## Default Shortcuts
 
@@ -99,10 +107,11 @@ there is no separate user-facing Save command.
 | Cmd+drag | Clip | Copy clip to new position |
 | Drag clip edge | Clip | Trim clip (non-destructive) |
 
-## Customising Shortcuts
+## Personalizzare le scorciatoie
 
-Open `~/Documents/Taype/keybindings.json` in any text editor. The format
-is straightforward:
+In **Preferenze > Scorciatoie**, duplica un profilo integrato o selezionane uno
+personalizzato, poi fai clic su **Modifica JSON**. Salva nell'editor e fai clic
+su **Ricarica**. Il formato è semplice:
 
 ```json
 {

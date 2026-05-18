@@ -1,15 +1,23 @@
 # Flýtilyklar
 
-Flýtilyklar TayPE eru fullkomlega stillanlegir. Breyttu keybindings skránni og
-endurræstu svo breytingar taki gildi.
+Flýtilyklar TayPE eru sniðabundnir. Veldu snið í **Stillingar > Flýtilyklar**;
+sérsniðin snið eru JSON-skrár og má opna þau þaðan með **Breyta JSON** í
+kerfisritlinum.
 
-## Keybindings skrá
+## Flýtilyklasnið
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-Skráin verður til sjálfkrafa við fyrstu ræsingu.
+TayPE setur inn innbyggð snið úr app-búntinum ef þau vantar: `Default.json`
+(TayPE-uppsetningin) og `Industry Standard Bruh.json` (Pro Tools-lík
+vöðvaminning fyrir sambærilegar TayPE-klippiaðgerðir). Innbyggð snið eru
+skrifvarin. Afritaðu eitt til að breyta því; **Endurhlaða** tekur breytingar
+eftir að ytri ritillinn hefur vistað.
+
+Eldri `~/Documents/Taype/keybindings.json` skrár eru fluttar einu sinni inn í
+sniðamöppuna og vistaðar sem `legacy-keybindings*.bak`.
 
 ## Sjálfgefnir flýtilyklar
 

@@ -1,15 +1,23 @@
 # Skróty klawiaturowe
 
-TayPE's keyboard shortcuts are fully configurable. Edycja the keybindings
-file and restart to apply your changes.
+Skróty klawiaturowe TayPE działają jako profile. Wybierz profil w
+**Preferencje > Skróty klawiaturowe**; profile niestandardowe są plikami JSON i
+można je otworzyć z tej karty przyciskiem **Edytuj JSON** w edytorze systemowym.
 
-## Keybindings Plik
+## Profile skrótów
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-This file is created automatically on first launch with sensible defaults.
+TayPE odtwarza brakujące profile wbudowane z pakietu aplikacji: `Default.json`
+(układ TayPE) oraz `Industry Standard Bruh.json` (pamięć mięśniowa edycji w
+stylu Pro Tools dla odpowiadających jej akcji TayPE). Profile wbudowane są tylko
+do odczytu. Zduplikuj profil, aby go edytować; **Przeładuj** zastosuje zmiany po
+zapisaniu pliku w edytorze zewnętrznym.
+
+Starsze pliki `~/Documents/Taype/keybindings.json` są jednorazowo importowane do
+folderu profili i archiwizowane jako `legacy-keybindings*.bak`.
 
 ## Domyślne Skróty
 
@@ -99,10 +107,11 @@ there is no separate user-facing Zapisz command.
 | Cmd+drag | Clip | Kopiuj clip to new position |
 | Drag clip edge | Clip | Przycięcie clip (non-destructive) |
 
-## Customising Skróty
+## Dostosowywanie skrótów
 
-Otwórz `~/Documents/Taype/keybindings.json` in any text editor. The format
-is straightforward:
+W **Preferencje > Skróty klawiaturowe** zduplikuj profil wbudowany albo wybierz
+profil niestandardowy, a następnie kliknij **Edytuj JSON**. Zapisz plik w
+edytorze i kliknij **Przeładuj**. Format jest prosty:
 
 ```json
 {

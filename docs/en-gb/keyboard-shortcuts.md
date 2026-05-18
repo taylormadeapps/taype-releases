@@ -1,20 +1,22 @@
 # Keyboard Shortcuts
 
-TayPE's keyboard shortcuts are fully configurable. Edit the keybindings
-file and restart to apply your changes.
+TayPE's keyboard shortcuts are profile-based. Choose a profile in
+**Preferences > Keybindings**; custom profiles are JSON files and can be opened
+from that tab with **Edit JSON** in the system editor.
 
-## Keybindings File
+## Keybinding Profiles
 
 ```
-~/Documents/Taype/keybindings.json
+~/Documents/Taype/keybindings/
 ```
 
-This file is created automatically on first launch with sensible defaults.
-Older bindings files still auto-migrate on load when TayPE can see they are
-just carrying an earlier default layout. That includes the old reversed loop
-pair, the older zoom layout where plain `=` / `-` changed track height, and
-the short-lived snap layout where `Option+S` toggled snap on/off instead of
-switching snap mode.
+TayPE seeds missing built-in profiles from the app bundle: `Default.json` (the
+TayPE layout) and `Industry Standard Bruh.json` (Pro Tools-style edit muscle
+memory for matching TayPE actions). Built-in profiles are read-only. Duplicate
+one to edit it; **Reload** applies changes after the external editor saves.
+
+Older `~/Documents/Taype/keybindings.json` files are imported once into the
+profile folder and archived as `legacy-keybindings*.bak`.
 
 ## Default Shortcuts
 
@@ -179,8 +181,9 @@ the native menu bar.
 
 ## Customising Shortcuts
 
-Open `~/Documents/Taype/keybindings.json` in any text editor. The format
-is straightforward:
+In **Preferences > Keybindings**, duplicate a built-in profile or select a custom
+one, then click **Edit JSON**. Save in your editor and click **Reload**. The
+format is straightforward:
 
 ```json
 {
