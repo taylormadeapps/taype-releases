@@ -43,7 +43,9 @@ selected track. **Shift-click** extends the selection as a visible range.
 - **Mini meter** — single post-fader meter. The body uses the summed RMS of
   the track, follows the same green / yellow / red meter-scale zones as the
   strip mini meters, and the separate peak tick follows the hotter channel
-  while staying neutral until clip.
+  while staying neutral until clip. Record-armed audio tracks still show live
+  input here with **MON** off, matching the channel strip, so you can check
+  incoming level without adding it to the cue mix.
 
 At medium and tall heights, the full button row stays pinned directly under the title.
 

@@ -21,7 +21,10 @@ selected track. **Shift-click** extends the selection as a visible range.
 - **S** — solo
 - **Tag pills** — at larger track heights, assigned tags appear as pills below the button row
 - **I/O labels** — input source and output destination (click to change)
-- **Mini meter** — stereo peak meter, updated at 4 Hz
+- **Mini meter** — single post-fader meter. It follows the same meter-scale
+  zones as the strip mini meters, uses a separate peak tick, and still shows
+  live input on record-armed audio tracks with **MON** off so you can check
+  incoming level without adding it to the cue mix.
 
 At medium and tall heights, the full button row stays pinned directly under the title.
 

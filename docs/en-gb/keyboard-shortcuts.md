@@ -124,8 +124,8 @@ there is no separate user-facing Save command.
 | Cmd+M | Toggle Tape Mode on the visible mixer; opens the inline mixer if hidden |
 | Cmd+Shift+M | Pop the mixer in or out of a separate window |
 | I | Toggle channel strip panel |
-| Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In mixer view, scroll the rack left or right |
-| Up / Down | In timeline view, scroll the track stack. In mixer view, scroll the shared strip sections up or down |
+| Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In the full mixer, inline or detached, scroll the rack left or right. In Tape Mode, inline or detached, also scroll the visible mixer rack left or right |
+| Up / Down | In timeline view, scroll the track stack. In the full mixer, inline or detached, scroll the shared strip sections up or down. In Tape Mode, inline or detached, move the tape head to the previous or next visible tick |
 | V | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
 | A | Toggle automation view |
 | Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |

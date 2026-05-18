@@ -31,7 +31,9 @@ TayPE opens with a taller default track height so the track controls and labels 
 
 ## E-Zoom
 
-Press **E** to zoom the view to fit the selected clip. Press **E** again to snap back to your previous zoom and scroll position.
+Press **E** to zoom the view to fit the selected clip. Press **E** again to snap back to
+your previous zoom and scroll position. If you adjust zoom or scroll while E-Zoom is
+active, **E** still returns to the saved view.
 
 ## Seeking
 
