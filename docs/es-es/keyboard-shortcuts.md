@@ -17,6 +17,10 @@ de TayPE). Los perfiles integrados son de solo lectura y pertenecen al paquete;
 las ediciones directas de esos archivos se sobrescriben. Duplica uno para
 editarlo; **Recargar** aplica los cambios después de guardar en el editor externo.
 
+`Industry Standard Bruh` mantiene las llaves de bucle en `[` / `]` y asigna
+«definir bucle desde la selección» a `Cmd+Shift+L`, para que las flechas sin
+modificadores sigan siendo navegación de TayPE.
+
 Los archivos antiguos `~/Documents/Taype/keybindings.json` se importan una sola
 vez en la carpeta de perfiles y se archivan como `legacy-keybindings*.bak`.
 
@@ -81,8 +85,8 @@ vez en la carpeta de perfiles y se archivan como `legacy-keybindings*.bak`.
 | G | Spill |
 | E | E-Zoom |
 | T | Alternar regla entre tiempo y compases |
-| K | Alternar tema de alto contraste |
-| Cmd+K | Abrir teclado virtual |
+| Cmd+K | Alternar tema de alto contraste |
+| K | Abrir teclado virtual |
 
 ## Zoom
 
@@ -133,5 +137,5 @@ Cada entrada asigna una acción a una combinación de teclas.
 
 ## Modo teclado virtual
 
-Cuando el teclado virtual está abierto (`Cmd+K`), TayPE envía todas las
+Cuando el teclado virtual está abierto (`K`), TayPE envía todas las
 pulsaciones a ese popup y pausa los atajos principales.

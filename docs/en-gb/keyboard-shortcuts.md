@@ -17,6 +17,13 @@ are read-only and bundle-owned, so direct edits to those files are overwritten.
 Duplicate one to edit it; **Reload** applies changes after the external editor
 saves.
 
+`Industry Standard Bruh` keeps loop braces on `[` / `]` and maps setting the
+loop from selection to `Cmd+Shift+L`, so the plain arrow keys remain TayPE
+navigation.
+It uses Pro Tools-style keypad chords where TayPE has clean equivalents,
+including `Numpad 7` for metronome, `Ctrl+Option+Numpad +/-` for grid size,
+`Option+-` for automation view, and `Option+K` for auto monitor.
+
 Older `~/Documents/Taype/keybindings.json` files are imported once into the
 profile folder and archived as `legacy-keybindings*.bak`.
 
@@ -141,8 +148,8 @@ there is no separate user-facing Save command.
 | Shift+R | Toggle between Auto grid and the last fixed note grid |
 | Shift+, | Choose the next coarser fixed timeline snap grid |
 | Shift+. | Choose the next finer fixed timeline snap grid |
-| K | Toggle high contrast theme |
-| Cmd+K | Open the virtual keyboard popup |
+| Cmd+K | Toggle high contrast theme |
+| K | Open the virtual keyboard popup |
 | Backtick (\`) | Open the Performance Monitor window |
 
 The **View** menu also exposes the same focus, automation, deselect, mixer,
@@ -268,6 +275,8 @@ Examples: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
 - Arrows: `up`, `down`, `left`, `right`
 - Navigation: `home`, `end`, `pageup`, `pagedown`
 - Function keys: `f1` through `f12`
+- Numeric keypad: `numpad0` through `numpad9`, `numpadplus`, `numpadminus`,
+  `numpadmultiply`, `numpaddivide`, `numpaddecimal`
 - Single characters such as `a`, `7`, `\\`, or `§`
 
 ### Platform Shortcuts
@@ -288,7 +297,7 @@ These standard shortcuts are always active and cannot be reassigned:
 
 ## Virtual Keyboard Mode
 
-When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
+When the virtual keyboard popup is open (`K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
 

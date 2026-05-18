@@ -17,6 +17,10 @@ Profile wbudowane są tylko do odczytu i należą do pakietu; bezpośrednie zmia
 tych plików są nadpisywane. Zduplikuj profil, aby go edytować; **Przeładuj**
 zastosuje zmiany po zapisaniu pliku w edytorze zewnętrznym.
 
+`Industry Standard Bruh` zostawia klamry pętli na `[` / `]` i mapuje ustawienie
+pętli z zaznaczenia na `Cmd+Shift+L`, żeby zwykłe strzałki nadal służyły do
+nawigacji TayPE.
+
 Starsze pliki `~/Documents/Taype/keybindings.json` są jednorazowo importowane do
 folderu profili i archiwizowane jako `legacy-keybindings*.bak`.
 
@@ -84,8 +88,8 @@ there is no separate user-facing Zapisz command.
 | G | Rozlanie - show selected bus and its routed tracks |
 | E | E-Powiększenie - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
-| K | Toggle high contrast theme |
-| Cmd+K | Otwórz the virtual keyboard popup |
+| Cmd+K | Toggle high contrast theme |
+| K | Otwórz the virtual keyboard popup |
 
 ### Powiększenie
 
@@ -162,6 +166,8 @@ Przykłady: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
 - Arrows: `up`, `down`, `left`, `right`
 - Navigation: `home`, `end`, `pageup`, `pagedown`
 - Function keys: `f1` through `f12`
+- Numeric keypad: `numpad0` through `numpad9`, `numpadplus`, `numpadminus`,
+  `numpadmultiply`, `numpaddivide`, `numpaddecimal`
 
 ### Platform Skróty
 
@@ -180,7 +186,7 @@ These standard shortcuts are always active and cannot be reassigned:
 
 ## Virtual Keyboard Mode
 
-When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
+When the virtual keyboard popup is open (`K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
 

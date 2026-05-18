@@ -17,6 +17,10 @@ Integrierte Profile sind schreibgeschützt und bundle-eigen; direkte Änderungen
 an diesen Dateien werden überschrieben. Dupliziert eines, um es zu bearbeiten;
 **Neu laden** übernimmt Änderungen, nachdem der externe Editor gespeichert hat.
 
+`Industry Standard Bruh` lässt die Loop-Klammern auf `[` / `]` und legt „Loop
+aus Auswahl setzen“ auf `Cmd+Shift+L`, damit die normalen Pfeiltasten
+TayPE-Navigation bleiben.
+
 Ältere Dateien unter `~/Documents/Taype/keybindings.json` werden einmalig in den
 Profilordner importiert und als `legacy-keybindings*.bak` archiviert.
 
@@ -83,8 +87,8 @@ TayPE speichert den Arbeitsstand automatisch, solange der Transport steht.
 | G | Spill |
 | E | E-Zoom |
 | T | Lineal zwischen Zeit und Takten umschalten |
-| K | High-Contrast-Theme umschalten |
-| Cmd+K | Virtuelle Tastatur öffnen |
+| Cmd+K | High-Contrast-Theme umschalten |
+| K | Virtuelle Tastatur öffnen |
 
 ### Zoom
 
@@ -170,6 +174,6 @@ Diese Standardkürzel sind immer aktiv und können nicht neu belegt werden:
 
 ## Virtuelle Tastatur
 
-Wenn die virtuelle Tastatur offen ist (`Cmd+K`), leitet TayPE alle Tasten an
+Wenn die virtuelle Tastatur offen ist (`K`), leitet TayPE alle Tasten an
 dieses Popup weiter und pausiert die normalen Timeline-/Transport-Kürzel.
 Mit `Escape` schließt ihr das Popup wieder.

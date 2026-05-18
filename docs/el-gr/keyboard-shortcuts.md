@@ -19,6 +19,10 @@ TayPE). Τα ενσωματωμένα προφίλ είναι μόνο για α
 επεξεργαστείτε· το **Επαναφόρτωση** εφαρμόζει τις αλλαγές αφού αποθηκεύσει ο
 εξωτερικός επεξεργαστής.
 
+Το `Industry Standard Bruh` κρατά τα loop braces στα `[` / `]` και αντιστοιχίζει
+το «set loop from selection» στο `Cmd+Shift+L`, ώστε τα απλά βελάκια να
+παραμένουν πλοήγηση του TayPE.
+
 Παλαιότερα αρχεία `~/Documents/Taype/keybindings.json` εισάγονται μία φορά στον
 φάκελο προφίλ και αρχειοθετούνται ως `legacy-keybindings*.bak`.
 
@@ -86,8 +90,8 @@ there is no separate user-facing Save command.
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
-| K | Toggle high contrast theme |
-| Cmd+K | Open the virtual keyboard popup |
+| Cmd+K | Toggle high contrast theme |
+| K | Open the virtual keyboard popup |
 
 ### Zoom
 
@@ -164,6 +168,8 @@ Examples: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
 - Arrows: `up`, `down`, `left`, `right`
 - Navigation: `home`, `end`, `pageup`, `pagedown`
 - Function keys: `f1` through `f12`
+- Numeric keypad: `numpad0` through `numpad9`, `numpadplus`, `numpadminus`,
+  `numpadmultiply`, `numpaddivide`, `numpaddecimal`
 
 ### Platform Shortcuts
 
@@ -182,7 +188,7 @@ These standard shortcuts are always active and cannot be reassigned:
 
 ## Virtual Keyboard Mode
 
-When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
+When the virtual keyboard popup is open (`K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
 

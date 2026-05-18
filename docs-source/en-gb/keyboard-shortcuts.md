@@ -99,8 +99,8 @@ selected-track clip selection, reordering, duplication, and deletion.
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Add a new audio track |
 | R | Toggle ruler between time and beats |
-| K | Toggle high contrast theme |
-| Cmd+K | Open the virtual keyboard popup |
+| Cmd+K | Toggle high contrast theme |
+| K | Open the virtual keyboard popup |
 | Backtick (\`) | Open the Performance Monitor window |
 
 The **View** menu also exposes the same focus, automation, mixer,
@@ -215,6 +215,8 @@ Examples: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
 - Arrows: `up`, `down`, `left`, `right`
 - Navigation: `home`, `end`, `pageup`, `pagedown`
 - Function keys: `f1` through `f12`
+- Numeric keypad: `numpad0` through `numpad9`, `numpadplus`, `numpadminus`,
+  `numpadmultiply`, `numpaddivide`, `numpaddecimal`
 
 ### Platform Shortcuts
 
@@ -233,7 +235,7 @@ These standard shortcuts are always active and cannot be reassigned:
 
 ## Virtual Keyboard Mode
 
-When the virtual keyboard popup is open (`Cmd+K`), TayPE routes all key presses
+When the virtual keyboard popup is open (`K`), TayPE routes all key presses
 to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
 to close the popup and return to normal shortcut control.
 

@@ -16,6 +16,10 @@ Pro Tools 風の編集操作向けプロファイルです。組み込みプロ�
 バンドル管理のファイルです。直接編集した内容は上書きされます。編集するには複製し、
 外部エディタで保存したあと **再読み込み** を押します。
 
+`Industry Standard Bruh` ではループブレースを `[` / `]` のままにし、
+選択範囲からループを設定する操作を `Cmd+Shift+L` に割り当てます。
+修飾なしの矢印キーは TayPE のナビゲーション用に残します。
+
 古い `~/Documents/Taype/keybindings.json` は一度だけプロファイルフォルダへ取り込まれ、
 `legacy-keybindings*.bak` として保管されます。
 
@@ -82,8 +86,8 @@ TayPE は、トランスポートが停止している間、動作状態を自�
 | G | Spill - show selected bus and its routed tracks |
 | E | E-Zoom - zoom to selected clip (press again to restore) |
 | T | Toggle ruler between time and beats |
-| K | Toggle high contrast theme |
-| Cmd+K | Open the virtual keyboard popup |
+| Cmd+K | Toggle high contrast theme |
+| K | Open the virtual keyboard popup |
 
 ### ズーム
 
@@ -170,6 +174,6 @@ TayPE は、トランスポートが停止している間、動作状態を自�
 
 ## 仮想キーボードモード
 
-仮想キーボード ポップアップが開いているとき (`Cmd+K`)、TayPE はすべてのキー押下をポップアップにルーティングし、メインのタイムライン/トランスポート ショートカットを一時停止します。 `Escape` を押してポップアップを閉じ、通常のショートカット コントロールに戻ります。
+仮想キーボード ポップアップが開いているとき (`K`)、TayPE はすべてのキー押下をポップアップにルーティングし、メインのタイムライン/トランスポート ショートカットを一時停止します。 `Escape` を押してポップアップを閉じ、通常のショートカット コントロールに戻ります。
 
 macOS では、TayPE は、メニューが開いているときに、ネイティブ メニュー バー内の一致するメニュー項目の横にこれらのショートカットも表示します。

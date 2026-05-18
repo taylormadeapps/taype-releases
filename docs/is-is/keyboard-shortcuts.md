@@ -17,6 +17,10 @@ skrifvarin og tilheyra búntinum; beinar breytingar á þeim skrám eru
 yfirskrifaðar. Afritaðu eitt til að breyta því; **Endurhlaða** tekur breytingar
 eftir að ytri ritillinn hefur vistað.
 
+`Industry Standard Bruh` heldur lykkjusvigunum á `[` / `]` og setur að búa til
+lykkju úr vali á `Cmd+Shift+L`, svo hreinu örvatakkarnir haldist
+TayPE-leiðsögn.
+
 Eldri `~/Documents/Taype/keybindings.json` skrár eru fluttar einu sinni inn í
 sniðamöppuna og vistaðar sem `legacy-keybindings*.bak`.
 
@@ -63,5 +67,5 @@ sniðamöppuna og vistaðar sem `legacy-keybindings*.bak`.
 | G | Spill |
 | E | E-Zoom |
 | T | Skipta reglustiku milli tíma og takta |
-| K | High contrast þema |
-| Cmd+K | Opna sýndarlyklaborð |
+| Cmd+K | High contrast þema |
+| K | Opna sýndarlyklaborð |

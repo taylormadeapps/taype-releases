@@ -18,6 +18,10 @@ intégrés sont en lecture seule et appartiennent au bundle ; les modifications
 directes de ces fichiers sont écrasées. Dupliquez-en un pour le modifier ;
 **Recharger** applique les changements après l'enregistrement dans l'éditeur externe.
 
+`Industry Standard Bruh` garde les accolades de boucle sur `[` / `]` et place
+« définir la boucle depuis la sélection » sur `Cmd+Shift+L`, afin que les
+flèches seules restent dédiées à la navigation TayPE.
+
 Les anciens fichiers `~/Documents/Taype/keybindings.json` sont importés une fois
 dans le dossier des profils, puis archivés sous `legacy-keybindings*.bak`.
 
@@ -85,8 +89,8 @@ arrêté, donc il n'existe pas de commande Save séparée pour l'utilisateur.
 | G | Spill : afficher le bus sélectionné et les pistes qui y sont routées |
 | E | E-Zoom : zoomer sur le clip sélectionné |
 | T | Basculer la règle entre temps et mesures |
-| K | Basculer le thème à contraste élevé |
-| Cmd+K | Ouvrir le clavier virtuel |
+| Cmd+K | Basculer le thème à contraste élevé |
+| K | Ouvrir le clavier virtuel |
 
 ### Zoom
 
@@ -175,7 +179,7 @@ Ces raccourcis standard sont toujours actifs et ne peuvent pas être réassigné
 
 ## Mode clavier virtuel
 
-Quand le clavier virtuel est ouvert (`Cmd+K`), TayPE route toutes les frappes
+Quand le clavier virtuel est ouvert (`K`), TayPE route toutes les frappes
 vers la fenêtre du clavier et suspend les raccourcis principaux de la timeline
 et du transport. Appuyez sur `Escape` pour refermer la fenêtre et revenir au
 contrôle normal.
