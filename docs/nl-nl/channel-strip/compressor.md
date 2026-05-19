@@ -16,7 +16,7 @@ A dynamics processor for controlling level and adding punch.
 
 The top row shows **Threshold**, **Ratio**, and **Makeup**. The second row shows **Knee**, **Attack**, and **Release**.
 
-Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button flips between **RMS** and **PK**. **RMS** is the default. The middle row enables a fixed **80 Hz** sidechain low-cut, and the lower button is **LOG** release.
+Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button flips between **RMS** and **PK**. **RMS** is the default. The middle row enables a fixed **80 Hz** sidechain low-cut, and the lower button cycles release mode: **OFF**, **LAZY**, **KEEN**.
 
 The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.0 ms** in 0.1 ms steps, then **1–100 ms** in 1 ms steps.
 
@@ -30,7 +30,7 @@ stays readable at a glance without turning into graph paper.
 In K-system views, that popup ladder now keeps both the red `FS` ceiling tick
 and the highlighted `0` reference line instead of dropping the K reference.
 
-The bottom control area now has its own **COMPRESSOR** section header with the strip-style power glyph on the far right, so enable / disable stays implicit in the same visual language as the channel strip. Under that header, the six knobs now follow the EQ popup's tighter spacing: names above the knobs, live values tucked in close underneath, less dead air above and below the control lane, and a stronger label / lighter value text hierarchy. The far-right stack keeps **DETECTOR**, **BASS RELIEF**, and **LOG RELEASE** beside the exact same small compressor buttons used in the strip, with the detector button text switching between **RMS** and **PK**.
+The bottom control area now has its own **COMPRESSOR** section header with the strip-style power glyph on the far right, so enable / disable stays implicit in the same visual language as the channel strip. Under that header, the six knobs now follow the EQ popup's tighter spacing: names above the knobs, live values tucked in close underneath, less dead air above and below the control lane, and a stronger label / lighter value text hierarchy. The far-right stack keeps **DETECTOR**, **BASS RELIEF**, and **RELEASE MODE** beside the exact same small compressor buttons used in the strip, with the detector button cycling through **FET**, **VCA**, and **OPTO** and the release button cycling **OFF**, **LAZY**, and **KEEN**.
 
 That popup **COMPRESSOR** header also carries the same preset badge
 language as the strip. Right-click it to load or save a compressor preset

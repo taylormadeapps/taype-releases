@@ -18,7 +18,7 @@ La rangée du haut affiche **Threshold**, **Ratio**, **Makeup**. La seconde
 rangée affiche **Knee**, **Attack**, **Release**.
 
 Entre les potards du bas et le meter de réduction de gain se trouve une colonne
-de boutons : en haut le low-cut sidechain fixe **80 Hz**, en bas le mode **LOG**.
+de boutons : en haut le low-cut sidechain fixe **80 Hz**, en bas le mode de release **OFF** / **LAZY** / **KEEN**.
 
 ## Meter de réduction
 
