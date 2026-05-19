@@ -131,7 +131,7 @@ there is no separate user-facing Save command.
 | Shortcut | Action |
 |----------|--------|
 | M | Toggle between timeline and mixer |
-| W | Toggle the active desk width: mixer rack inline or detached, docked channel strip in arranger view |
+| W | Toggle the focused width context: arranger strip in arranger view, mixer rack in mixer view or detached mixer window |
 | Cmd+M | Toggle Tape Mode on the visible mixer; opens the inline mixer if hidden |
 | Cmd+Shift+M | Pop the mixer in or out of a separate window |
 | I | Toggle channel strip panel |

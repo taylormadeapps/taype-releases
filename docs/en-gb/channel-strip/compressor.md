@@ -21,7 +21,7 @@ unity instead of leaving makeup boost in circuit.
 
 The top row shows **Threshold**, **Ratio**, and **Makeup**. The second row shows **Knee**, **Attack**, and **Release**. Wet/dry is an advanced control in the compressor popup only; if it is not 100% wet, the strip compressor popup button highlights yellow to show hidden active state.
 
-Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button cycles through **FET**, **VCA**, and **OPTO**. **VCA** is the default. The detector button is colour-coded too: **FET** shows red, **VCA** blue, and **OPTO** green, all with white text. The middle row enables a fixed **80 Hz, 12 dB/oct** sidechain low-cut, and the lower button cycles release mode: **OFF**, **LAZY**, **KEEN**.
+Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button cycles through **FET**, **VCA**, and **OPTO**. **VCA** is the default. The detector button is colour-coded too: **FET** shows red, **VCA** blue, and **OPTO** green, all with white text. The middle row enables a fixed **80 Hz, 12 dB/oct** sidechain low-cut, and the lower button cycles release mode on left-click and opens direct mode selection on right-click: **OFF**, **LAZY**, **KEEN**.
 
 The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.0 ms** in 0.1 ms steps, then **1–100 ms** in 1 ms steps.
 
@@ -36,7 +36,7 @@ stays readable at a glance without turning into graph paper.
 In K-system views, that popup ladder now keeps both the red `FS` ceiling tick
 and the highlighted `0` reference line instead of dropping the K reference.
 
-The bottom control area now has its own **COMPRESSOR** section header with the strip-style power glyph on the far right, so enable / disable stays implicit in the same visual language as the channel strip. Under that header, the six knobs now follow the EQ popup's tighter spacing: names above the knobs, live values tucked in close underneath, less dead air above and below the control lane, and a stronger label / lighter value text hierarchy. The far-right stack keeps **DETECTOR**, **BASS RELIEF**, and **RELEASE MODE** beside the exact same small compressor buttons used in the strip, with the detector button text cycling through **FET**, **VCA**, and **OPTO** and the release button cycling **OFF**, **LAZY**, and **KEEN**.
+The bottom control area now has its own **COMPRESSOR** section header with the strip-style power glyph on the far right, so enable / disable stays implicit in the same visual language as the channel strip. Under that header, the six knobs now follow the EQ popup's tighter spacing: names above the knobs, live values tucked in close underneath, less dead air above and below the control lane, and a stronger label / lighter value text hierarchy. The far-right stack keeps **DETECTOR**, **BASS RELIEF**, and **RELEASE MODE** beside the exact same small compressor buttons used in the strip, with the detector button text cycling through **FET**, **VCA**, and **OPTO** and the release button cycling **OFF**, **LAZY**, and **KEEN** on left-click and opening direct mode selection on right-click.
 
 That popup **COMPRESSOR** header also carries the same preset badge
 language as the strip. Right-click it to load or save a compressor preset

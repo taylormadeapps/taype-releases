@@ -5,12 +5,14 @@ Press **M** to switch between the timeline and mixer views. Press
 **Cmd+M** to toggle Tape Mode on the visible mixer; if the mixer is hidden,
 TayPE opens the inline mixer while changing Tape Mode.
 
-Mixer view, Tape Mode, the detached mixer window, the shared narrow/full-width
+Mixer view, Tape Mode, the detached mixer window, the mixer narrow/full-width
 desk mode, and the shared section-collapse posture are app-global preferences.
-If you leave TayPE with the mixer floated, Tape Mode on, the narrow desk
-engaged, or shared sections folded, the next launch comes back that way.
-On a first-run starter reel, TayPE seeds Tape Mode and the narrow mixer desk
-only when those view preferences do not already exist. Each ordinary starter
+The mixer desk width is separate from the docked arranger strip width, so a
+wide arranger and skinny mixer can persist together. If you leave TayPE with
+the mixer floated, Tape Mode on, the narrow desk engaged, or shared sections
+folded, the next launch comes back that way. On a first-run starter reel,
+TayPE seeds Tape Mode and the narrow mixer desk only when those view
+preferences do not already exist. Each ordinary starter
 track also has its first send routed to the Taype Rooms reverb bus with the
 send level closed at -inf, so the return is ready without adding ambience
 until you raise it.

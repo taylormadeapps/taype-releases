@@ -217,7 +217,7 @@ the output back by the same amount of drive after the full signal is
 recombined, so you can judge tone instead of loudness.
 
 **Taype Drive** brings the strip preamp out as a standalone insert. It keeps
-the same four modes: **Clean**, **Builtin**, **Tape**, and **NAM**. The editor
+the same five modes: **Clean**, **Builtin**, **Tape**, **NAM**, and **MD510**. The editor
 stays compact and fixed-size: mode and measurement at the top, shared NAM
 profile browsing in the middle, then **Drive**, **Output**, **Tape Speed**,
 and **Measure**. **Measure** runs the same output-match idea as the
@@ -260,7 +260,9 @@ default stock size.
 **Taype Comp** is the strip compressor as its own insert. The editor keeps the
 live waveform history, the transfer curve, and the same core controls:
 **Threshold**, **Ratio**, **Attack**, **Release**, **Knee**, **Makeup**,
-detector mode, **Log Release**, and **Sidechain HP**. Readouts on the right
+detector mode, release mode, and **Sidechain HP**. The release-mode button
+cycles **OFF**, **LAZY**, and **KEEN** with left-click, and opens a direct
+picker with right-click. Readouts on the right
 show current detector level and gain reduction so you can see what the
 compressor is actually hearing and taking off, with 3 dB tick spacing on the
 gain-reduction scales for finer readout. Its window is now fixed-aspect
@@ -333,15 +335,19 @@ Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.
 
-## Comparison Meters
+## Comparison Meters And Block Trim
 
 The insert panel shows two thin gain-staging meters. The bar above the slots
 shows the level **into** the plugin chain. The bar below shows the level
-**coming out**.
+after the whole insert block, including its output trim.
 
-These meters now use the same RMS-body + peak-tick treatment as the preamp
-meters, and they follow the global meter scale setting. The old **PK/RMS**
-mode button and insert **AUTO** gain-match button are gone.
+In wide channel-strip mode, the block controls sit to the right of those
+meters. **PK** / **RMS** chooses the measurement basis, **AG** listens to the
+whole insert block and writes a matching trim, and **OUT** is the manual output
+trim for the complete rack. These controls are per insert block, not per insert
+slot.
+
+Narrow strips keep the meters visible but hide the block controls.
 
 ## Plugin Sandboxing
 

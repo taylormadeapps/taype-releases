@@ -74,13 +74,15 @@ the frequency and gain readouts stop crashing into the hardware. The transport
 bar's Mixer Width icon stays visible in both views: in mixer view it flips the
 whole visible mixer rack between that narrow desk and the full-width strip
 view, and in timeline view it does the same for the docked channel strip,
-opening that strip if it was hidden. A floated mixer stays in step with that
-toggle too, but it no longer steals the arranger width control away from the
-docked strip underneath it. TayPE also remembers the docked strip's explicit
-show/hide choice, width mode, and the shared section-collapse posture across
-launches for ordinary reels; the fresh launch-created `Untitled Reel` is the
-intentional exception and still lands with Track 1's strip open until you
-close it. Clearing track selection no longer collapses the docked strip
+opening that strip if it was hidden. TayPE remembers those width modes
+separately, defaulting to a wide arranger strip and a skinny mixer when the
+preferences do not exist yet. A floated mixer follows its own focused `W`
+shortcut, while the focused arranger still controls the docked strip underneath
+it. TayPE also remembers the docked strip's explicit show/hide choice, width
+mode, and the shared section-collapse posture across launches for ordinary
+reels; the fresh launch-created `Untitled Reel` is the intentional exception
+and still lands with Track 1's strip open until you close it. Clearing track
+selection no longer collapses the docked strip
 either, so if it is already open you simply see the muted `Select a track`
 empty state until you choose another lane. In the normal theme, that empty
 state uses the same soft arrange-bed gradient as the timeline body; high

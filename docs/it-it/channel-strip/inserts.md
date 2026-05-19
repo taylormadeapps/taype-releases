@@ -92,13 +92,13 @@ Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.
 
-## Comparison Meters
+## Comparison Meters And Block Trim
 
-The insert panel shows two thin comparison meters for gain staging. The bar above the slots shows the level **in** the plugin chain. The bar below shows the level **coming out**.
+The insert panel shows two thin comparison meters for gain staging. The bar above the slots shows the level **into** the plugin chain. The bar below shows the level after the whole insert block, including its output trim.
 
-The top meter carries a **PK** / **RMS** mode button. The bottom meter has an **AUTO** button — click it and TayPE listens for about 3 seconds, then writes a hidden post-insert trim so the output matches the input level.
+In wide channel-strip mode, the block controls sit to the right of those meters. **PK** / **RMS** chooses the measurement basis, **AG** listens to the whole insert block and writes a matching trim, and **OUT** is the manual output trim for the complete rack. These controls are per insert block, not per insert slot.
 
-The AUTO button stays dim on instrument insert chains, since there's no meaningful pre-rack audio reference to match against.
+Narrow strips keep the meters visible but hide the block controls.
 
 ## Plugin Sandboxing
 
