@@ -44,8 +44,8 @@ Start or stop realtime Print Mix capture on the current reel.
 |-------|------|----------|-------------|
 | `enabled` | bool | yes | `true` starts Print Mix, `false` stops and commits it |
 
-Starting requires a loaded reel, audible clips on the timeline, and a device
-sample rate that matches the reel.
+Starting requires a loaded reel, a stopped transport, audible clips on the
+timeline, and a device sample rate that matches the reel.
 
 **Returns:**
 ```json
