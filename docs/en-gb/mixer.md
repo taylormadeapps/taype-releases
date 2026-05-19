@@ -172,9 +172,10 @@ saved plug-in cannot be restored.
 **Faders and knobs** - click and drag vertically. Each drag is a single
 undoable action.
 
-Send level knobs are safe to move while the transport is running. Changing the
-main output route or picking a different send target still requires playback to
-be stopped because those edits rebuild routing.
+Send level knobs are safe to move while the transport is running. Changing
+track input/output routing, the main output route, or a send target is also
+playback-live now: TayPE may briefly fade or skip audio while it swaps the
+routing graph, but the playback clock keeps moving.
 The `SENDS` header mode button flips the whole strip between `POST` and `PRE`.
 `POST` follows the fader; `PRE` keeps the send alive with the fader down. The
 new SENDS power button sits to the right of that mode switch and bypasses send
@@ -204,7 +205,8 @@ latch, so it comes back live when you re-enable it. Drag a loaded slot to move
 it within that chain or to a
 different strip; **Cmd-drag** copies instead. Drop on a slot to replace it, or
 drop between rows to insert and shift later slots down. If playback is already
-running, the empty-slot click warns immediately instead of opening the picker.
+running, insert picking stays available and TayPE swaps the graph without
+stopping the clock.
 If the loaded plug-in name clips, hovering that row reveals the full plug-in
 name with its latency on a second line, even with Popup Help turned off.
 

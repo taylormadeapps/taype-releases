@@ -67,11 +67,12 @@ stricter, so those edits wait until the take stops. Edits that have to print
 new audio or replace committed media still ask you to stop first through the
 same transport warning banner used elsewhere in the timeline.
 
-**Option+double-click** on an audio clip opens Melodyne for that clip. If
-playback is already running, TayPE only does that live on clips that already
-have committed derived audio to reopen from; otherwise it keeps the usual
-**Stop playback first** warning. While Melodyne is open, TayPE lets you hear
-the live edit through the main transport.
+**Option+double-click** on an audio clip opens Melodyne for that clip. While
+playback is already running, TayPE can open, reopen, commit, or revert
+Melodyne work without stopping the transport; if a revert has to rebuild a
+stretch-only file first, playback keeps rolling on the current audio until the
+replacement is ready. While Melodyne is open, TayPE lets you hear the live edit
+through the main transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,
 closes that session, and reopens Melodyne on the newly selected clip. Ordinary
 focus changes do not close Melodyne, but Melodyne and the **Taype — MIDI Clip Editor** are
@@ -152,8 +153,10 @@ strength, and capture controls. TayPE defaults that strip to
 `1/16`, `100%` strength, and `100%` capture on first open, then keeps those
 settings globally across MIDI editor windows. If you already have notes
 selected, Quantise only moves those notes; if nothing is selected, it works on
-the whole clip. This pass only moves note starts. If the ruler is in beats and
-your chosen quantise note value is finer than the main beat grid, TayPE
+the whole clip. This pass only moves note starts, and it stays live during
+playback because it edits the open editor's note layout and live preview rather
+than printing new audio. If the ruler is in beats and your chosen quantise note
+value is finer than the main beat grid, TayPE
 overlays that quantise rail on top and snaps notes and header seeks to that
 finer visible rail until the main beat grid catches up.
 

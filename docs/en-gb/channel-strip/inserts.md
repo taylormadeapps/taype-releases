@@ -10,11 +10,11 @@ inserts in the rack still run in order.
 
 Each loaded row now carries its own small power button on the right. Click it
 to bypass just that slot, or **Option-click** to disable / re-enable the
-plug-in through the normal stopped-transport path. Plain clicks on a disabled
-row stay inert; use that power button or the row context menu to bring the
-plug-in back online. Disabled slots stay loaded for state/editor recall, but
-they leave the audio graph, contribute no latency, and receive no sandbox
-processing until re-enabled.
+plug-in. Playback keeps rolling while TayPE swaps the graph; recording still
+blocks it. Plain clicks on a disabled row stay inert; use that power button or
+the row context menu to bring the plug-in back online. Disabled slots stay
+loaded for state/editor recall, but they leave the audio graph, contribute no
+latency, and receive no sandbox processing until re-enabled.
 
 On archived tracks, active or bypassed insert rows show as offline red in
 Archive View. The stored plugin state is kept for unarchiving, but the hosted
@@ -274,7 +274,7 @@ across the top with **Bypass**, **Disable**, `One`, a `Preset:` label, and a
 preset menu on the left, plus a `Sidechain:` label and selector on the right.
 The native window title uses `Track Name - Plug-in Name`, so several open
 editors stay tied to their track at a glance.
-That **Disable** toggle uses the same stop-to-edit enable/disable path as the
+That **Disable** toggle uses the same playback-live enable/disable path as the
 insert slot itself and keeps the plug-in window open instead of unloading the
 plug-in out from under it.
 When `One` is enabled, opening another plug-in reuses the current plug-in
@@ -308,22 +308,21 @@ strip can put the rack back exactly as saved. If a saved plug-in is missing,
 TayPE skips that slot and warns you instead of throwing away the rest of the
 strip recall.
 
-Loading a plug-in preset follows the same stopped-transport rule as other
-insert edits. TayPE now fully reloads that insert from the saved preset chunk,
-so processors that ignore hot state swaps still come back in the recalled
-state instead of quietly snapping to the default patch.
+Loading a plug-in preset is recording-blocked but playback-live. TayPE fully
+reloads that insert from the saved preset chunk, so processors that ignore hot
+state swaps still come back in the recalled state instead of quietly snapping to
+the default patch.
 
-Bypass can still toggle while the transport is running. **Disable** cannot:
-if you try it from the plug-in window while playback is rolling, TayPE warns
-you to stop transport first.
+Bypass and **Disable** can both toggle while playback is running. If you try
+either one while recording, TayPE asks you to stop recording first.
 
 If the loaded plug-in exposes a sidechain input, the plug-in window shows a
 working `Sidechain:` selector. It offers `None`, `Self`, and every non-bus
 track in the session. `Self` feeds the receiver's own pre-strip input to the
 plug-in's sidechain bus for self-ducking or self-pumping. Choosing another
 track feeds that track's raw pre-strip input instead. The selector is hidden
-for plug-ins that do not expose a sidechain input bus, and changing the source
-follows the usual stopped-transport insert-edit rule.
+for plug-ins that do not expose a sidechain input bus. Changing the source is
+recording-blocked but playback-live.
 
 Open **MIDI Out** to choose the Core MIDI destination, pick `Any` or a fixed
 channel, and set a timing advance. TayPE starts new MIDI Out inserts at the

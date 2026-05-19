@@ -233,12 +233,11 @@ Mouse wheel over the actual knob body still adjusts that knob. Labels, value
 readouts, and the padded space around the control do not count. Mouse wheel
 anywhere else in the strip's upper lane scrolls the section stack instead.
 
-Send level knobs are safe during playback. Changing the track output or the
-send target itself still needs stopped transport, because that changes routing
-topology rather than just the live gain on an existing send.
-If you click a playback-blocked structural control such as routing, bus,
-strip mode, Mix FX, or a pending rename commit, TayPE now flashes the
-transport warning banner instead of just swallowing the click.
+Send level knobs are safe during playback. Changing track input/output routing
+or the send target itself is also playback-live now: TayPE may briefly fade or
+skip audio while it swaps the routing graph, but the playback clock keeps
+moving. Recording still blocks routing, bus, strip-mode, and pending rename
+commits.
 The `SENDS` header now carries a `POST` / `PRE` button for the whole track.
 `POST` is the normal mix-bus behaviour: pull the fader down and the send comes
 down with it. `PRE` moves the send to the pre-fader tap, so the send keeps
@@ -284,7 +283,7 @@ Popup help on that bus glyph now spells this out too, so hovering it tells you t
 
 **Cmd-click** that same title-bar bus glyph to enter **comp mode** from a normal track. In comp mode the bus glyph flips to a blue button with a white bus icon. A comp bus is workflow sugar over normal routing: new takes are still ordinary tracks routed to that bus, they appear directly below it, and while that comp group is non-empty the strip cannot be downgraded back to a normal bus with a plain click. Plain buses are not a stepping stone here: if the track is already a regular bus, `Cmd-click` does nothing until you leave ordinary bus mode. Entering comp mode preserves the track's existing `MON` state instead of forcing it on. The comp-bus MON lamp now follows the same colour rules as an ordinary track: VSTi-hosting comp buses use the instrument-monitor blue, otherwise they use the normal monitor accent, even though the bus glyph and group frame stay blue. `Cmd-click` on a non-empty comp bus now asks whether to flatten the group; if you confirm, TayPE prints the current comp bus to one clip on that track, removes the child take tracks, and leaves a normal track behind. In the timeline and mixer, the whole visible comp block gets a blue outline with a small +/- square in its top-left corner so you can hide or show the child take rows without changing any routing. Child take strips hide the bus toggle, both routing selectors, **MON**, and **Record** while they belong to the comp group. Unlike a plain bus, a comp bus may keep or load an instrument insert, so you can comp a VSTi without turning the synth off, but child take tracks inside that comp group cannot host instrument inserts themselves. Record-arm on the comp bus creates a new take track, and if that bus is taking MIDI into a live instrument insert the committed child clip is captured from the rendered synth output. `MON` on the comp bus now behaves like normal software monitoring for the group's shared comp input, including live VSTi output when that shared input is a MIDI route. During a live comp-take pass, the existing comp-group playback drops out until the pass ends, so the old takes do not keep blasting underneath the new one.
 
-The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record**. The Tracks menu includes **Auto Monitor** and **Record Follows Select**. Auto Monitor is off by default; when enabled, regular audio tracks mirror record-arm changes into MON, while buses, the master, comp-child, and instrument tracks are excluded. Record Follows Select is on by default; a non-empty track selection arms the selected recordable tracks and disarms records outside the selection. On instrument tracks, Record still forces MON on when arming, but disarming leaves MON alone so you can keep auditioning the live instrument feed. MON stays independently clickable throughout. Input and output routing share one row at the top of the strip.
+The tool row shows: **Mute**, **Solo**, **Tag**, **Archive**, **MON**, **Record**. The Tracks menu includes **Auto Monitor** and **Record Follows Select**. Auto Monitor is off by default; when enabled, regular audio and instrument tracks mirror record-arm changes into MON, while buses, the master, and comp-child tracks are excluded. Record Follows Select is on by default; a non-empty track selection arms the selected recordable tracks and disarms records outside the selection. With Auto Monitor off, Record on an instrument track still forces MON on when arming, but disarming leaves MON alone so you can keep auditioning the live instrument feed. MON stays independently clickable throughout, including during playback; recording and mix-print still block MON and Record changes. Input and output routing share one row at the top of the strip.
 Solo now follows the live signal path instead of just the lit button. Solo a
 bus and TayPE keeps the active upstream tracks and buses feeding it; solo a
 track or bus and TayPE keeps the active downstream bus path alive too,
