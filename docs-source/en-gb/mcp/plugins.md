@@ -34,11 +34,18 @@ stopped.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
-| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, or a bundled extension name/path |
+| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, a bundled extension name/path, `taype://insert/midi-out`, or `taype://insert/hardware-io` |
 | `slot` | number | no | Insert slot index 0-7 (default: 0; instruments and MIDI Out must use slot 0) |
 | `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
 | `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
 | `advance_ms` | number | no | Virtual MIDI Out playback lead in milliseconds |
+| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
+| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases; mono and stereo endpoints are valid |
+| `latency_offset_samples` | number | no | Hardware Insert non-negative extra compensation delay; negative values clamp to 0 |
+| `hardware_input_trim_db` | number | no | Hardware Insert send trim in dB, clamped to -24..+12 |
+| `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
+| `hardware_ag_measure_mode` | number | no | Hardware Insert auto-gain mode: `0` Peak, `1` RMS |
+| `hardware_color` | string | no | Optional Hardware Insert slot colour; empty uses the track colour |
 
 **Returns:**
 ```json
@@ -232,6 +239,26 @@ Get the current Mix FX state (Softube Multitrack Tape on the master bus).
 ```
 
 `available` is true when Softube Multitrack Tape is installed.
+
+### `set_insert_hardware_io`
+
+Configure an existing Hardware Insert. Any omitted popup field keeps its
+current value; older reels that do not contain these fields use the defaults
+shown here.
+
+| Param | Type | Required | Description |
+|-------|------|----------|-------------|
+| `track_id` | string | yes | Target track |
+| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+| `output_route_id` | string | no | Send output route ID, or empty for no send; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
+| `input_route_id` | string | no | Return input route ID, or empty for silence; mono and stereo endpoints are valid |
+| `latency_offset_samples` | number | no | Non-negative extra compensation delay in samples; negative values clamp to 0 |
+| `hardware_input_trim_db` | number | no | Send trim in dB, clamped to -24..+12; default 0 |
+| `hardware_output_trim_db` | number | no | Return trim in dB, clamped to -24..+12; default 0 |
+| `hardware_ag_measure_mode` | number | no | Auto-gain mode: `0` Peak, `1` RMS; default 0 |
+| `hardware_color` | string | no | Optional slot colour; empty uses the track colour |
+
+**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": 64, "hardware_input_trim_db": 0.0, "hardware_output_trim_db": -1.5, "hardware_ag_measure_mode": 0, "hardware_color": "ff4fb3ff", "latency_samples": 672 }`
 
 ### `set_mix_fx`
 

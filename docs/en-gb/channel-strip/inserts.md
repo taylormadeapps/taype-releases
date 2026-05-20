@@ -95,11 +95,26 @@ The insert picker is split into **Taype Stock**, **Effects**, and
 **Taype Comp**, the built-in **External MIDI Out**, and **Hardware Insert**.
 
 **Hardware Insert** is TayPE's outboard loop insert. It uses the audio I/O
-mapping aliases from Preferences, not TayPE buses: choose a physical output
-pair for the send, a physical input pair for the return, and a signed latency
-offset in samples typed directly into the latency field. Wet/dry blends use a
+mapping aliases from Preferences, not TayPE buses: choose a physical mono or
+stereo output endpoint for the send, a physical mono or stereo input endpoint
+for the return, and extra latency compensation. The sample field is the stored
+non-negative delay value; the millisecond field is calculated from the current
+processing sample rate and writes back to samples when edited. Negative values
+clamp to zero because TayPE can add delay, not send audio to future hardware.
+Click the same Hardware Insert row
+again to close that track/slot window. The native insert window also lets
+you rename the slot, pick a slot colour under the name field, set input and
+output trim plus wet/dry along the bottom of the left plate, and watch the
+send/return mini meters in the right plate with auto-gain and Peak/RMS directly
+under the meters on the left plus the same slot bypass power control on
+the right. Reels with no stored name
+or no newer Hardware Insert fields still use the default **Hardware Insert**
+label, 0 dB trims, Peak auto-gain, and the track colour. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
-hardware signal. The current master output pair cannot be used as the send.
+hardware signal. Any route overlapping the current master output pair cannot be
+used as the send. TayPE fans mono strips out to stereo hardware, averages
+stereo strips into mono sends, fans mono returns into stereo strips, and
+averages stereo returns into mono strips.
 If a route is missing, TayPE fails safe: no send for missing outputs and
 silence for missing returns. A missing or unavailable return does not suppress
 the physical send. Bypassing a Hardware Insert keeps its latency in the graph

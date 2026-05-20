@@ -43,9 +43,13 @@ stopped.
 | `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
 | `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
 | `advance_ms` | number | no | Virtual MIDI Out early-send amount in milliseconds; omitted uses the current corrected interface round-trip estimate from Audio prefs |
-| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases |
-| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases |
-| `latency_offset_samples` | number | no | Hardware Insert signed manual latency offset |
+| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
+| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases; mono and stereo endpoints are valid |
+| `latency_offset_samples` | number | no | Hardware Insert non-negative extra compensation delay; negative values clamp to 0 |
+| `hardware_input_trim_db` | number | no | Hardware Insert send trim in dB, clamped to -24..+12 |
+| `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
+| `hardware_ag_measure_mode` | number | no | Hardware Insert auto-gain mode: `0` Peak, `1` RMS |
+| `hardware_color` | string | no | Optional Hardware Insert slot colour; empty uses the track colour |
 
 **Returns:**
 ```json
@@ -167,8 +171,12 @@ virtual `External MIDI Out` or `Hardware Insert`.
 
 For Hardware Inserts, `is_hardware_io` is true and the response includes
 `hardware_output_route_id`, `hardware_input_route_id`, and
-`hardware_latency_offset_samples`. These are CoreAudio I/O mapping route IDs,
-not TayPE bus routes.
+`hardware_latency_offset_samples`, plus the popup fields
+`hardware_input_trim_db`, `hardware_output_trim_db`,
+`hardware_ag_measure_mode`, and `hardware_color`. These are CoreAudio I/O
+mapping route IDs, not TayPE bus routes. Mono and stereo endpoints are both
+valid; the realtime hardware stage fans out or averages at the device boundary
+to match the track strip width.
 
 ### `set_insert_sidechain`
 
@@ -234,17 +242,23 @@ transport stopped.
 
 ### `set_insert_hardware_io`
 
-Configure an existing Hardware Insert.
+Configure an existing Hardware Insert. Any omitted popup field keeps its
+current value; older reels that do not contain these fields use the defaults
+shown here.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `track_id` | string | yes | Target track |
 | `slot` | number | no | Insert slot index 0-7 (default: 0) |
-| `output_route_id` | string | no | Send output route ID, or empty for no send |
-| `input_route_id` | string | no | Return input route ID, or empty for silence |
-| `latency_offset_samples` | number | no | Signed manual offset in samples |
+| `output_route_id` | string | no | Send output route ID, or empty for no send; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
+| `input_route_id` | string | no | Return input route ID, or empty for silence; mono and stereo endpoints are valid |
+| `latency_offset_samples` | number | no | Non-negative extra compensation delay in samples; negative values clamp to 0 |
+| `hardware_input_trim_db` | number | no | Send trim in dB, clamped to -24..+12; default 0 |
+| `hardware_output_trim_db` | number | no | Return trim in dB, clamped to -24..+12; default 0 |
+| `hardware_ag_measure_mode` | number | no | Auto-gain mode: `0` Peak, `1` RMS; default 0 |
+| `hardware_color` | string | no | Optional slot colour; empty uses the track colour |
 
-**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": -64, "latency_samples": 544 }`
+**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": 64, "hardware_input_trim_db": 0.0, "hardware_output_trim_db": -1.5, "hardware_ag_measure_mode": 0, "hardware_color": "ff4fb3ff", "latency_samples": 672 }`
 
 **Requires:** transport stopped
 
