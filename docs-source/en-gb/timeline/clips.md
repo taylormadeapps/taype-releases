@@ -50,3 +50,10 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 - **Cmd+C** — copy
 - **Cmd+V** — paste at the tape head position on the selected track
 - **Cmd+D** — duplicate back-to-back (immediately after the original)
+
+## Melodyne
+
+**Option+double-click** on an audio clip opens Melodyne for that clip. Transfer,
+reopen, commit, and revert all stay live during playback. Recording still
+blocks Melodyne changes. Melodyne is a clip editor in TayPE, not an insert, so
+it does not appear in the insert picker.

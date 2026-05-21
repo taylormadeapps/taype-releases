@@ -536,9 +536,9 @@ dialog#screenshot-zoom img {
     line-height: 1.55;
 }
 
-/* ---- Demoware notice ---- */
+/* ---- Trustware notice ---- */
 
-.demoware-notice {
+.trustware-notice {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -547,27 +547,27 @@ dialog#screenshot-zoom img {
     text-align: center;
 }
 
-.demoware-notice h3 {
+.trustware-notice h3 {
     color: var(--text);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
 }
 
-.demoware-notice p {
+.trustware-notice p {
     color: var(--text-muted);
     font-size: 0.9rem;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.demoware-notice .demoware-meta {
+.trustware-notice .trustware-meta {
     font-size: 0.8rem;
     color: var(--text-dim, var(--text-muted));
     margin-bottom: 0.25rem;
     margin-top: 0.75rem;
 }
 
-.demoware-notice ul.demoware-trust-list {
+.trustware-notice ul.trustware-trust-list {
     list-style: none;
     padding: 0;
     margin: 0.25rem auto 0.75rem;
@@ -580,12 +580,12 @@ dialog#screenshot-zoom img {
     justify-content: center;
 }
 
-.demoware-notice ul.demoware-trust-list li::before {
+.trustware-notice ul.trustware-trust-list li::before {
     content: "\2713\00a0";
     color: var(--accent, #f0c96a);
 }
 
-.demoware-notice #demo-connector {
+.trustware-notice #demo-connector {
     margin-top: 0.5rem;
 }
 
@@ -922,16 +922,16 @@ footer {
 <section id="pricing">
     <h2 id="pricing-heading">Pricing</h2>
 
-    <div class="demoware-notice">
+    <div class="trustware-notice">
         <h3 id="demo-heading">Zo zit het.</h3>
         <p id="demo-trust-framing">TayPE draait op wederzijds vertrouwen.</p>
-        <p id="demo-what-that-means" class="demoware-meta">Wat dat betekent:</p>
-        <ul class="demoware-trust-list">
+        <p id="demo-what-that-means" class="trustware-meta">Wat dat betekent:</p>
+        <ul class="trustware-trust-list">
             <li id="demo-trust-1">Geen abonnementen</li>
             <li id="demo-trust-2">Geen DRM</li>
             <li id="demo-trust-3">Geen functielimieten</li>
             <li id="demo-trust-4">Geen telemetrie</li>
-            <li id="demo-trust-5">Geen demo-vervaldatum of -ruis</li>
+            <li id="demo-trust-5">Geen demo-beperkingen, vervaldatum of ruis</li>
         </ul>
         <p id="demo-connector">Als het voor jou werkt, koop dan alsjeblieft een eeuwigdurende licentie. Dat is wat TayPE vooruit blijft drijven en bugs platlegt.</p>
     </div>
@@ -977,10 +977,9 @@ footer {
 
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Laten we beginnen</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Doe mee aan het betaprogramma.</p>
-    <!-- TODO: replace href once buildBetaApplicationForm.js has been run and Published URL is known -->
-    <div style="margin-bottom: 1.5rem;">
-        <a id="download-apply" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="btn-primary" target="_blank">Doe mee aan de beta</a>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Trustware. Geen demo-beperkingen, vervaldatum of ruis.</p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
+        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/latest" class="btn-primary" target="_blank" rel="noopener">Nu downloaden</a>
     </div>
 </section>
 
@@ -998,6 +997,11 @@ footer {
             <h3 id="community-card-1-title">Kennisbank</h3>
             <p id="community-card-1-body">Gebruikershandleiding, tutorials en referentiedocumentatie. Alles wat je nodig hebt om aan de slag te gaan en diep in te duiken.</p>
             <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
+        </div>
+        <div class="community-card">
+            <h3 id="community-card-2-title">Betaprogramma</h3>
+            <p id="community-card-2-body">Krijg vroege builds, release candidates en de feedbacklus.</p>
+            <a id="community-card-2-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="link-arrow" target="_blank" rel="noopener">Doe mee aan het betaprogramma &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-3-title">Neem contact op</h3>

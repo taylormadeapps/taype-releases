@@ -55,6 +55,11 @@ pick plugins from the channel strip.
 If **Menu Path** is blank, the plugin sits directly inside the top-level
 **Effects** or **Instruments** menu.
 
+Melodyne does not appear in the insert picker. Open it from an audio clip
+instead: **Option+double-click** the clip, double-click its Melodyne glyph, or
+use **Taype — Clip Properties**. TayPE keeps Melodyne out of insert slots so
+the clip-wide ARA workflow stays consistent.
+
 Its bundled Factory IR bank is normalised automatically to TayPE's house
 format on bootstrap, so the shipped rooms actually appear in the selector
 instead of getting dropped for being out of spec.

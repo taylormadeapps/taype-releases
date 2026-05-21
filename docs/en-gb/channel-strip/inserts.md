@@ -94,6 +94,11 @@ The insert picker is split into **Taype Stock**, **Effects**, and
 **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
 **Taype Comp**, the built-in **External MIDI Out**, and **Hardware Insert**.
 
+Melodyne does not appear in the insert picker. Open it from an audio clip
+instead: **Option+double-click** the clip, double-click its Melodyne glyph, or
+use **Taype — Clip Properties**. TayPE keeps Melodyne out of insert slots so
+the clip-wide ARA workflow stays consistent.
+
 **Hardware Insert** is TayPE's outboard loop insert. It uses the audio I/O
 mapping aliases from Preferences, not TayPE buses: choose a physical mono or
 stereo output endpoint for the send, a physical mono or stereo input endpoint

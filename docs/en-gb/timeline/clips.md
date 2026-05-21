@@ -67,12 +67,10 @@ stricter, so those edits wait until the take stops. Edits that have to print
 new audio or replace committed media still ask you to stop first through the
 same transport warning banner used elsewhere in the timeline.
 
-**Option+double-click** on an audio clip opens Melodyne for that clip. While
-playback is already running, TayPE only opens Melodyne on clips that already
-have committed derived audio; fresh transfers ask you to stop playback first.
-Committed Melodyne work can still reopen, commit, or revert without stopping
-the transport, and if a revert has to rebuild a stretch-only file first,
-playback keeps rolling on the current audio until the replacement is ready.
+**Option+double-click** on an audio clip opens Melodyne for that clip. Transfer,
+reopen, commit, and revert all stay live during playback. If a revert has to
+rebuild a stretch-only file first, playback keeps rolling on the current audio
+until the replacement is ready. Recording still blocks Melodyne changes.
 While Melodyne is open, TayPE lets you hear the live edit through the main
 transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,

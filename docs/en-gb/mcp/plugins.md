@@ -9,6 +9,8 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 Return the scanned VST3 plugin catalogue plus TayPE's bundled
 **Taype Stock** entries such as **Taype Rooms**, **Ache-Delay**,
 **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**.
+Melodyne is omitted because it opens through the clip-scoped ARA tools, not as
+an insert.
 
 Those Taype Stock VST3 entries are Taype-only: outside Taype they warn on
 open and stay dry/pass-through instead of processing audio.
@@ -71,6 +73,7 @@ stopped.
 
 **Errors:**
 - `Only the first insert slot can host instruments or MIDI Out`
+- `Open Melodyne from a clip, not an insert slot.`
 
 Bundled stock names from `list_plugins` can be loaded directly through
 `plugin_id`, including **Taype Drive**, **Taype EQ**, and **Taype Comp**.

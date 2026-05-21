@@ -8,6 +8,8 @@ Tools for managing VST3 plugin inserts and the Mix FX bus.
 
 Return the scanned VST3 plugin catalogue plus TayPE's bundled
 **Stock** entries such as **Tape Rooms** and **Ache-Delay**.
+Melodyne is omitted because it opens through the clip-scoped ARA tools, not as
+an insert.
 
 **Returns:**
 ```json
@@ -46,6 +48,8 @@ stopped.
 | `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
 | `hardware_ag_measure_mode` | number | no | Hardware Insert auto-gain mode: `0` Peak, `1` RMS |
 | `hardware_color` | string | no | Optional Hardware Insert slot colour; empty uses the track colour |
+
+Melodyne cannot be loaded through `add_insert`; open it from a clip instead.
 
 **Returns:**
 ```json
