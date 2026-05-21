@@ -1,6 +1,6 @@
 const PUBLIC_SITE_URL = "https://taype.ruminantaudioworks.com";
 const DOCS_BASE_URL = "https://ruminant-audio-works.gitbook.io/taype/";
-const LATEST_RELEASE_URL = "https://github.com/taylormadeapps/taype-releases/releases/latest";
+const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v0.18.0/Taype-0.18.0-universal.pkg";
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
 
 const localeAliasMap = {
@@ -2071,7 +2071,7 @@ function applyLocale(localeKey) {
     if (navHome) navHome.setAttribute("href", getSitePath(currentLocale));
 
     const downloadApply = document.getElementById("download-apply");
-    if (downloadApply) downloadApply.setAttribute("href", LATEST_RELEASE_URL);
+    if (downloadApply) downloadApply.setAttribute("href", DOWNLOAD_URL);
 
     const betaProgrammeLink = document.getElementById("community-card-2-link");
     if (betaProgrammeLink) betaProgrammeLink.setAttribute("href", BETA_PROGRAMME_URL);
