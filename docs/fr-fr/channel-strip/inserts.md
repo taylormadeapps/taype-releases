@@ -42,3 +42,7 @@ silences. Appuyer sur **Stop** efface ces tails.
 
 - Avec un instrument insert, le menu d'entrée montre uniquement des sources MIDI
 - Sans instrument insert, il montre uniquement des sources audio
+
+## Taype Drive XTALK
+
+Taype Drive mirrors the channel-strip preamp XTALK control. In stereo non-clean modes, XTALK blends left and right into each other before the drive/preamp stage, using the same power-law taper and defaulting to `0.0`.

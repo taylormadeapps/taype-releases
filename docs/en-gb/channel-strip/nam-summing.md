@@ -41,3 +41,7 @@ Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`. Downloaded
 If the bus already uses a model from a downloaded package, opening **Browse** expands that local package and selects the active model straight away. The browser search bar also keeps an `x` button beside it so you can clear the current search and refresh the list without closing the picker.
 
 When summing is disabled, the master bus uses standard digital summing with zero CPU overhead.
+
+## XTALK
+
+XTALK appears on the stereo master summing strip when a non-clean summing flavour is active. With True Summing off, it blends the post-digital-sum stereo path before the master summing colour stage. With True Summing on, it blends each stereo feeder pair before Classic, ToTaype, NAM, or MD510 true-summing processing. It uses the same power-law taper as the track preamp and is hidden on mono strips.

@@ -46,3 +46,7 @@ TONE3000 行には、モデルのサムネイル、タイプ、作成者、ア�
 ダウンロードされたプロファイルはモデル タイトルのメタデータを保持するため、ストリップとブラウザにはハッシュされたファイル名の代わりにプロファイル タイトルが表示されます。サムネイルはオフラインで閲覧できるようにローカルにキャッシュされます。
 
 プロファイルを選択する前にストリップを NAM モードに切り替えることができます。TayPE は警告を表示し、モデルがロードされるまでクリーンな状態を保ちます。
+
+## XTALK
+
+XTALK appears in stereo non-clean preamp modes. It blends the left and right channels into each other before the preamp colour stage, so it is different from the mixer Width control. The control uses a power-law taper: low values stay subtle, and at full value both channels receive a unity `(L + R) / 2` blend. It is hidden on mono strips.

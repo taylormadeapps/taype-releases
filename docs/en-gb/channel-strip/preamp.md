@@ -91,3 +91,7 @@ Downloaded packages keep their package and model metadata, so the strip and brow
 If a reel opens with a missing TONE3000-backed preamp or summing profile, TayPE stops and asks whether to **Download** the missing package or **Skip** it. Skip keeps the clean fallback alive and the profile stays marked offline until the model is restored.
 
 You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.
+
+## XTALK
+
+XTALK appears in stereo non-clean preamp modes. It blends the left and right channels into each other before the preamp colour stage, so it is different from the mixer Width control. The control uses a power-law taper: low values stay subtle, and at full value both channels receive a unity `(L + R) / 2` blend. It is hidden on mono strips.

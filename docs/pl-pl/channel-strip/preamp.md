@@ -46,3 +46,7 @@ Profil are `.nam` files stored in `~/Documents/TayPE/NAM/Przedwzmacniacze/`. Dow
 Downloaded profiles keep their model title metadata, so the strip and browser show the profile title instead of hashed filenames. Thumbnails are cached locally for offline browsing.
 
 You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.
+
+## XTALK
+
+XTALK appears in stereo non-clean preamp modes. It blends the left and right channels into each other before the preamp colour stage, so it is different from the mixer Width control. The control uses a power-law taper: low values stay subtle, and at full value both channels receive a unity `(L + R) / 2` blend. It is hidden on mono strips.

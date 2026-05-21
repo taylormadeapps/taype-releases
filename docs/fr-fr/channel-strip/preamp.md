@@ -29,3 +29,7 @@ dans TONE3000 ou choisir parmi les profils locaux.
 - **Output Gain**
 - **Auto-gain (AG)**
 - **SAFE** n'apparaît pas en mode NAM
+
+## XTALK
+
+XTALK appears in stereo non-clean preamp modes. It blends the left and right channels into each other before the preamp colour stage, so it is different from the mixer Width control. The control uses a power-law taper: low values stay subtle, and at full value both channels receive a unity `(L + R) / 2` blend. It is hidden on mono strips.

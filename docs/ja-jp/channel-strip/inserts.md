@@ -51,3 +51,7 @@ VST3 プラグイン用の 8 つのシリアル プラグイン スロット。�
 ホストされているインストゥルメントは TayPE のトランスポート タイミングを受信するため、テンポ同期されたプラグインは DAW の BPM、再生ヘッドの位置、拍子記号にロックされます。
 
 プロジェクトが使用できない MIDI デバイスを参照している場合、ストリップには **MIDI デバイス (オフライン)** と表示されます。保存したルートを保持したり、同じメニューから別の入力に切り替えることができます。
+
+## Taype Drive XTALK
+
+Taype Drive mirrors the channel-strip preamp XTALK control. In stereo non-clean modes, XTALK blends left and right into each other before the drive/preamp stage, using the same power-law taper and defaulting to `0.0`.

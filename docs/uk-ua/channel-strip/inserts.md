@@ -24,3 +24,7 @@
 - **Вмкл/Викл** - переведіть плагін або весь рак на/вимкнено
 - **Редактор** - відкрийте інтерфейс плагіна
 - **Видалити** - вилучіть плагін зі слоту
+
+## Taype Drive XTALK
+
+Taype Drive mirrors the channel-strip preamp XTALK control. In stereo non-clean modes, XTALK blends left and right into each other before the drive/preamp stage, using the same power-law taper and defaulting to `0.0`.
