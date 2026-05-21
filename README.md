@@ -10,7 +10,7 @@ Grab the latest release from the [Releases page](https://github.com/taylormadeap
 
 **Requirements:** macOS 12+ (Monterey or later). Apple Silicon native with Intel support. VST3 plugin hosting.
 
-TayPE is trustware - download it, use it, make records. When you're ready, purchase a license.
+TayPE is fully functional trustware - download it, use it, make records. When you're ready, purchase a license.
 
 ## Documentation
 
