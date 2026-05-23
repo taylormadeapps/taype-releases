@@ -45,10 +45,10 @@ Use `Preferences > Sync` to choose the MIDI input that carries MTC/MMC from
 another DAW and enable the sync function, then use the transport **SYNC** badge
 to engage or disengage slave transport. `Transport > Sync Control` only shows or
 hides that toolbar control; it does not enable the sync engine. The master
-timeline zero maps to the selected cut zero point. TayPE infers
-standard whole-hour SMPTE start offsets, so a DAW that sends `01:00:00:00` at
-its project start, or rolls from short pre-roll before the hour, still maps the
-whole-hour programme start to sync zero.
+timeline zero maps to the selected cut zero point. The sync tab's **SMPTE Zero**
+field is editable in `HH:MM:SS:FF` form and chooses which incoming timecode
+maps to that point. It defaults to `01:00:00:00`, and short pre-roll before the
+selected timecode still lands on sync zero.
 
 While **SYNC** is on, TayPE follows external locate, play, and stop. Pressing
 **Record** does not change which tracks are armed. If transport is stopped, it
