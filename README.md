@@ -16,6 +16,8 @@ TayPE is fully functional trustware - download it, use it, make records. When yo
 
 Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https://ruminant-audio-works.gitbook.io/taype/)
 
+MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
+
 ## Community
 
 - **Community:** [r/taype](https://www.reddit.com/r/taype/)
