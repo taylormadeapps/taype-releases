@@ -125,9 +125,10 @@ If a route is missing, TayPE fails safe: no send for missing outputs and
 silence for missing returns. A missing or unavailable return does not suppress
 the physical send. Bypassing a Hardware Insert keeps its latency in the graph
 and returns the latency-aligned dry path; disabling it removes the insert and
-its latency from the graph. Hardware Inserts are realtime only;
-offline faster-than-realtime print asks you to print the mix in realtime
-instead.
+its latency from the graph. Hardware Inserts are realtime only; offline
+faster-than-realtime print warns when enabled Hardware Inserts are present, then
+prints them as latency-aligned dry bypass. Use realtime print when you need to
+capture the outboard hardware.
 
 Those Taype Stock VST3 plug-ins are limited to running inside Taype, apart
 from **Taype Drive**, which also works in standalone **Plugin Doctor** for
