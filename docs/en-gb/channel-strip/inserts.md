@@ -117,9 +117,10 @@ or no newer Hardware Insert fields still use the default **Hardware Insert**
 label, 0 dB trims, Peak auto-gain, and the track colour. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
 hardware signal. Any route overlapping the current master output pair cannot be
-used as the send. TayPE fans mono strips out to stereo hardware, averages
-stereo strips into mono sends, fans mono returns into stereo strips, and
-averages stereo returns into mono strips.
+used as the send, and any route already used as a direct hardware output is
+also unavailable for Hardware Insert sends. TayPE fans mono strips out to
+stereo hardware, averages stereo strips into mono sends, fans mono returns
+into stereo strips, and averages stereo returns into mono strips.
 If a route is missing, TayPE fails safe: no send for missing outputs and
 silence for missing returns. A missing or unavailable return does not suppress
 the physical send. Bypassing a Hardware Insert keeps its latency in the graph

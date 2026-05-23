@@ -101,8 +101,9 @@ Each strip shows (top to bottom):
   path show a softer yellow solo lamp instead of the full hard-solo state.
   Click a dim inherited solo lamp to drop that strip out of the current solo
   group, and click it again to let it back into the inherited path.
-- **Output selector** - where the track sends its audio, with a destination
-  track tint that keeps the routed hue clean against the dark strip
+- **Output selector** - where the track sends its audio: master, a bus, or an
+  available direct stereo hardware output, with a destination track tint that
+  keeps the routed hue clean against the dark strip
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window

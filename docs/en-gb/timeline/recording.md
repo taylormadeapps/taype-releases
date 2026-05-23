@@ -120,6 +120,9 @@ During any pre-roll, TayPE can force the
 metronome on only where the lead-in would otherwise be silent.
 The metronome enabled state and the chosen pre-roll bars are app-global
 preferences, so TayPE brings them back on the next launch.
+The click output is also set in **Preferences > Audio**: **Master output**
+follows the current master hardware pair, or you can choose an explicit stereo
+output pair.
 
 If you press **Stop** while recording, TayPE always commits the current pass first. In **Return** mode it then lands back at the pass start; in **Punch** and **Do-Over** it parks at the end of the committed take so what you just captured is immediately visible.
 
@@ -156,6 +159,10 @@ later re-render stay where you actually heard the note land.
 Armed tracks stay armed while you switch Cuts inside the same reel. Loading a
 different reel still clears that arm state.
 
-**Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
+**Output** — click the output label to choose where the track sends its audio:
+**Master**, any bus track you've created, or an available direct stereo
+hardware output. Direct outputs use I/O mapping names, cannot overlap the
+master output pair, cannot overlap a Hardware Insert send, and cannot be
+shared by another direct output.
 
 If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out — the setting is preserved until you plug it back in.

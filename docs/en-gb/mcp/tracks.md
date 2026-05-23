@@ -64,7 +64,7 @@ Update a track's properties. Only provided fields are changed.
 | `comp_bus` | boolean | no | Comp-bus designation (implies `is_bus`) |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `comp_input_id` | string | no | Shared visible input choice for a comp bus |
-| `output_id` | string | no | Output target: "master" or bus track ID |
+| `output_id` | string | no | Output target: "master", bus track ID, or `hardware:<stereo route>` for a direct hardware output |
 | `sends` | array | no | Additional fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0}]` |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
@@ -84,6 +84,11 @@ stopped transport, but changing only a send's `level` on an existing send is
 safe during playback.
 `preamp_manual_gain` now writes the same output-gain stage used by AG and NAM
 output compensation, so manual trims and automatic trims stay in one lane.
+
+Direct hardware output IDs use I/O mapping route IDs, for example
+`hardware:3-4`. Direct outputs are stereo-only, cannot overlap the master
+output pair, cannot overlap another direct output, and cannot overlap a
+Hardware Insert send output. Sends remain bus-only.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous

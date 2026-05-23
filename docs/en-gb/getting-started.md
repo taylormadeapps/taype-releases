@@ -209,19 +209,22 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 - TayPE runs internally at **48 kHz**.
 - The Audio tab keeps the hardware selector rows at the top through **Audio
   buffer size**. That top block includes output device, input device, master
-  output pair, default stereo input, and default mono input. The device
-  status, Audio worker cores, resampling, NAM, and **Apply Audio Changes**
-  controls sit underneath.
+  output pair, metronome output, default stereo input, and default mono input.
+  The device status, Audio worker cores, resampling, NAM, and **Apply Audio
+  Changes** controls sit underneath.
 - Every control on this tab is staged. TayPE does not reopen the live audio
   device when you change a field; it waits for **Apply Audio Changes**.
 - Use **Apply Audio Changes** to commit output device, input device, master
-  output pair, default stereo input, default mono input, sample rate, buffer
-  size, hardware error compensation, Audio worker cores, Resampling, and NAM
-  changes together.
+  output pair, metronome output, default stereo input, default mono input,
+  sample rate, buffer size, hardware error compensation, Audio worker cores,
+  Resampling, and NAM changes together.
 - Editing an I/O mapping also enables **Apply Audio Changes**, even when you
   only rename endpoints and keep the same mapping selected.
 - The **Master output pair** and **Default stereo input** lists only offer
   normal stereo hardware pairs such as `1-2`, `3-4`, `5-6`, and so on.
+- The **Metronome output** list can follow **Master output** or target an
+  explicit stereo hardware pair. Choosing the same physical pair as master is
+  allowed.
 - The default input choices only affect tracks set to **Default**. TayPE opens
   the selected input device with all available hardware inputs active, so a track
   explicitly set to `3-4`, `5-6`, or another pair can record without making that
