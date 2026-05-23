@@ -48,6 +48,24 @@ Next to the DSP meter there's a small lock indicator. It reads **MCP** and light
 
 With **Help → Popup Help** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
 
+## Printing The Mix
+
+Use **File > Print Mix** or **Cmd+P** to print the full reel from zero through
+the normal tail boundary. Use **File > Print Loop** or **Cmd+Option+P** to print
+from the left loop brace through the right loop brace, then let tails decay.
+
+The export dialog defaults to **Master**. Turn on **Stems** and click
+**Choose Stems...** to print selected unarchived tracks and buses as separate
+files. The selector can show all eligible stems, only tracks, only buses, or
+only tracks currently visible in the Mixer after tags, Focus, and Spill are
+applied. The target list scrolls, uses alternating rows, and can select every
+currently shown stem in one click. Archived tracks are not eligible. Stem files
+are direct post-fader taps: after the selected track or bus strip, fader, and
+pan, before it routes onward to another bus, hardware output, or master. TayPE
+writes them to a versioned stems folder in the print location and keeps the
+files sample-aligned with one another and with the final master-output time.
+Leave **Master** on with **Stems** to add `00-Master.wav` to that folder.
+
 ### Ruler Header Controls
 
 The left side of the ruler has quick controls:

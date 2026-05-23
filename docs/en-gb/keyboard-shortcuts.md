@@ -37,6 +37,8 @@ profile folder and archived as `legacy-keybindings*.bak`.
 | P | Play / pause (blocked while recording) |
 | Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
 | Return | Record-mode action |
+| Cmd+P | Print Mix |
+| Cmd+Option+P | Print Loop |
 | C | Toggle metronome click |
 | ' | Tap tempo. TayPE sets BPM as soon as 4 taps are available, then keeps averaging the last 4 taps until 1.5 seconds without another tap ends the measurement |
 | [ | Set the left loop brace to the tape head |
