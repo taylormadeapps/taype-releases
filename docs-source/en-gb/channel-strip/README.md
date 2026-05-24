@@ -16,7 +16,7 @@ Double-click any gain or balance knob to reset it to zero. Double-click the fade
 
 In the compressor section, knob labels switch to the live value while your mouse is over that knob.
 
-Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. On the knobs, that contact spot now stays only a few pixels tighter than the real knob body diameter rather than shrinking down to a tiny blot, and it pushes far enough into the 225-degree lower-left seat to read past the radial light. The fader cap itself is now a slightly taller silver-based metal handle, but it still scales back with shorter dock throws so the strip keeps its proportion instead of going weird.
+Knobs and the fader now cast a darker bottom-left contact shadow, so the controls read as seated hardware instead of floating on the panel. On the knobs, that contact spot now stays only a few pixels tighter than the real knob body diameter rather than shrinking down to a tiny blot, and it pushes far enough into the 225-degree lower-left seat to read past the radial light. Zero-position mini knobs, including the small wet/dry and crosstalk utility controls, keep a neutral rim and unlit arc visible on dark strip surfaces without using the brass active-value colour. The fader cap itself is now a slightly taller silver-based metal handle, but it still scales back with shorter dock throws so the strip keeps its proportion instead of going weird.
 
 Preamp, filter, EQ, and compressor controls now sit inside a shared centred control band with matched top and bottom breathing room, instead of pinning the knobs to the panel edge.
 
