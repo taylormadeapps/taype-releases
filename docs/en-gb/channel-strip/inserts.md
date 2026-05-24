@@ -74,6 +74,8 @@ pick plugins from the channel strip.
 
 - The **Enabled** checkbox controls whether a validated plugin appears in the insert menu.
 - **Status** shows whether a plugin is **Validated**, **Disabled**, **Needs Attention**, **Failed**, or queued for **Rescan** on the next launch.
+- **Delete Missing Plugins** removes catalogue rows whose plugin bundle has
+  disappeared from disk.
 - **Type** separates instruments from effects.
 - **Manufacturer** helps sort and filter larger collections.
 - **Menu Path** lets you build your own nested insert menus. Type a path like
@@ -356,6 +358,11 @@ return can record back in time on the track's audio input.
 Use the row-level **Rescan** button to queue just one plugin for revalidation
 next time TayPE launches. Use **Invalidate Cache** to queue a full catalogue
 rescan; the current list stays visible and every row is marked for rescan.
+Use **Delete Missing Plugins** to remove stale rows for plugin bundles that are
+no longer installed.
+If TayPE finds a plugin bundle on disk but its catalogue row is missing, the
+next startup scan treats it as newly added so it can reappear as **Validated**,
+**Failed**, or **Needs Attention** instead of vanishing.
 
 ## Comparison Meters And Block Trim
 
