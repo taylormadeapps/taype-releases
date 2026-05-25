@@ -13,8 +13,9 @@ to bypass just that slot, or **Option-click** to disable / re-enable the
 plug-in. Playback keeps rolling while TayPE swaps the graph; recording still
 blocks it. Plain clicks on a disabled row stay inert; use that power button or
 the row context menu to bring the plug-in back online. Disabled slots stay
-loaded for state/editor recall, but they leave the audio graph, contribute no
-latency, and receive no sandbox processing until re-enabled.
+assigned in the reel with their saved state, but TayPE unloads the sandbox
+plugin instance, removes the slot from the audio graph, contributes no latency,
+and does no sandbox processing until re-enabled.
 
 On archived tracks, active or bypassed insert rows show as offline red in
 Archive View. The stored plugin state is kept for unarchiving, but the hosted

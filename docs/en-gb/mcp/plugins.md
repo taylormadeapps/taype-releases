@@ -103,9 +103,10 @@ Toggle bypass on a track's insert. Safe during playback.
 
 ### `disable_insert`
 
-Disable a plugin in one insert slot. The plugin stays loaded for state/editor
-recall, but it leaves the audio graph, receives no sandbox processing, burns no
-processing CPU, and contributes zero latency. Requires transport stopped.
+Disable a plugin in one insert slot. The assignment and saved state stay in the
+reel, but TayPE unloads the plugin from the sandbox. It leaves the audio graph,
+receives no sandbox processing, burns no processing CPU, and contributes zero
+latency. Requires transport stopped.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -116,8 +117,9 @@ processing CPU, and contributes zero latency. Requires transport stopped.
 
 ### `enable_insert`
 
-Re-enable a previously disabled plugin. The resident plugin rejoins the audio
-graph, sandbox dispatch, and PDC graph. Requires transport stopped.
+Re-enable a previously disabled plugin. TayPE loads the plugin from the stored
+state chunk, then rejoins the audio graph, sandbox dispatch, and PDC graph.
+Requires transport stopped.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -289,7 +291,12 @@ Close the plugin editor window.
 
 ### `restart_sandbox`
 
-Restart the plugin sandbox host process. Requires transport stopped.
+Reinitialise the plugin sandbox host. If the process is alive, TayPE keeps
+hosted plugins resident. When the audio format is unchanged it only rebuilds
+sandbox workers so they rejoin the current audio device workgroup; sample-rate
+or block-size changes still require plugin prepare. If it is dead, TayPE
+launches a fresh sandbox and reloads live insert slots from cached state.
+Requires transport stopped.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
