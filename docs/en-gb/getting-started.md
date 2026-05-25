@@ -39,7 +39,11 @@ TayPE also seeds the default mono input to input 1 when one exists, and the
 default stereo input to inputs 1-2 when the device exposes a stereo pair.
 Those launch-created `Untitled Reel` bundles live in
 `~/Documents/Taype/Reels/Starters` by default, separate from the ordinary
-manual **New Reel** flow.
+manual **New Reel** flow. TayPE also keeps reel templates in
+`~/Documents/Taype/Reels/Templates`. On launch it makes sure
+`Default.taype` exists there; if it is missing, TayPE creates it from the
+same ready-to-record starter desk. Startup reels and **New Reel...** both use
+that default template.
 
 `~/Documents/Taype` is TayPE's preferred user folder. If macOS blocks access to
 the configured folder during startup, TayPE falls back to `~/Music/Taype`,
@@ -86,7 +90,7 @@ search and download use the A2 model lane by default. Support can expose a
 browser lane toggle for switching to the original NAM model lane when needed.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
-one, or create a new one. At the root of the browser list, TayPE shows
+one, create a new one, or branch from a template. At the root of the browser list, TayPE shows
 **Recents** first, then **Starter Reels**, then your other folders, and then
 any reels that live directly at the top level. When you enter a folder, the
 first row becomes **↩ Back** so you can climb back out. Folder rows are
@@ -110,6 +114,9 @@ browser first.
 
 When a reel is already open, the browser action row starts with **Media**,
 which opens that reel's `media/` folder in Finder without closing the browser.
+**Save Template...** copies the current reel into the Templates folder without
+switching the live session. TayPE flushes the current reel first so the template
+matches what you are working on.
 With popup help enabled, the browser's action buttons and history entries also
 answer hover help, so long version rows still tell the truth when the visible
 line has to clip.
@@ -133,7 +140,9 @@ When you create a reel manually, TayPE opens a native save dialog rooted at
 the active TayPE reel library, `~/Documents/Taype/Reels` by default, and
 suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
-that one step.
+that one step. **Create from Template...** is a two-step version of the same
+flow: choose a `.taype` template from TayPE's Templates list, then choose the
+destination and name for the new independent reel in the normal reels folder.
 
 Fresh reels open with one armed audio track and the transport set to **90 BPM**.
 

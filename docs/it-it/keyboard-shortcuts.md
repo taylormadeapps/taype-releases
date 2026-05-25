@@ -62,7 +62,7 @@ volta nella cartella dei profili e archiviati come `legacy-keybindings*.bak`.
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Delete selected non-master tracks |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -181,7 +181,7 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+C | Copy |
 | Cmd+V | Paste |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Delete selected non-master tracks |
 | Cmd+, | Open Preferences |
 
 ## Virtual Keyboard Mode

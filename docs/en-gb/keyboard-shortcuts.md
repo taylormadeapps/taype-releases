@@ -105,7 +105,7 @@ of only reflecting the last path that touched the setting.
 | Option+D | Duplicate selected track with clips |
 | Cmd+Shift+A | Select every clip on the currently selected tracks |
 | Cmd+Backspace | Archive or unarchive the selected non-master track |
-| Cmd+Delete | Delete selected non-master track |
+| Cmd+Delete | Delete selected non-master tracks |
 | Cmd+X | Cut selected clips |
 | Cmd+C | Copy selected clips |
 | Cmd+V | Paste copied clip group at tape head position |
@@ -113,7 +113,7 @@ of only reflecting the last path that touched the setting.
 | Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
 | Backspace | Delete selected clips |
 | Delete | Disable selected clips |
-| Cmd+Option+Backspace | Delete selected non-master track |
+| Cmd+Option+Backspace | Delete selected non-master tracks |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -294,7 +294,7 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+V | Paste |
 | Backspace | Delete selected clip |
 | Delete | Disable selected clips |
-| Cmd+Option+Backspace | Delete selected non-master track |
+| Cmd+Option+Backspace | Delete selected non-master tracks |
 | Cmd+, | Open Preferences |
 
 ## Virtual Keyboard Mode

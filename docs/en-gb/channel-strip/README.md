@@ -302,7 +302,8 @@ and it rejoins the inherited path without becoming the explicit solo source.
 ## Popup Help
 
 With **Help → Popup Help** enabled, the strip shows hover help after about **0.7 seconds** for knobs, routing selectors, section headers, insert slots, meters, and toggle buttons.
-If popup help is off, TayPE still reveals the full text for clipped name pills only: the track title, truncated section preset pills, and a clipped NAM profile pill still answer hover with the full name.
+Routing selectors put the full selected input or output route on the first line of that help bubble.
+If popup help is off, TayPE still reveals the full selected route text for input and output selectors. It also reveals full text for clipped name pills: the track title, truncated section preset pills, and a clipped NAM profile pill still answer hover with the full name.
 Clipped insert slot names still answer too, and add the slot latency on a new line.
 If part of the upper section stack is scrolled out of view, that clipped area
 stops answering popup help until you bring it back on screen.

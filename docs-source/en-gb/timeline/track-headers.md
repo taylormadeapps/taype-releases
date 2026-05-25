@@ -20,7 +20,7 @@ selected track. **Shift-click** extends the selection as a visible range.
 - **M** — mute (speaker icon, crossed out when muted)
 - **S** — solo
 - **Tag pills** — at larger track heights, assigned tags appear as pills below the button row
-- **I/O labels** — input source and output destination (click to change)
+- **I/O labels** — input source and output destination (click to change). With popup help enabled, hovering an I/O label shows the full selected route before the selector help. If popup help is off, the label still hover-reveals the full selected route text.
 - **Mini meter** — single post-fader meter. It follows the same meter-scale
   zones as the strip mini meters, uses a separate peak tick, and still shows
   live input on record-armed audio tracks with **MON** off so you can check

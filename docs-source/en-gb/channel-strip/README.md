@@ -82,3 +82,4 @@ Below the title bar, the tool row shows: **Mute**, **Solo**, **Tag**, **Archive*
 ## Popup Help
 
 With **Help → Popup Help** enabled, the strip shows hover help after about **0.7 seconds** for knobs, routing selectors, section headers, insert slots, meters, and toggle buttons.
+Routing selectors put the full selected input or output route on the first line of that help bubble. If popup help is off, those same selectors still reveal the full selected route text on hover.

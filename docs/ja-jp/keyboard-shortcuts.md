@@ -61,7 +61,7 @@ Pro Tools 風の編集操作向けプロファイルです。組み込みプロ�
 | Cmd+C | Copy selected clip |
 | Cmd+V | Paste clip at tape head position |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Delete selected non-master tracks |
 | Cmd+Z | Undo |
 | Cmd+Shift+Z | Redo |
 | Escape | Deselect clip and track |
@@ -169,7 +169,7 @@ TayPE は、トランスポートが停止している間、動作状態を自�
 | Cmd+C | Copy |
 | Cmd+V | Paste |
 | Backspace | Delete selected clip |
-| Delete | Delete selected non-master track |
+| Delete | Delete selected non-master tracks |
 | Cmd+, | Open Preferences |
 
 ## 仮想キーボードモード

@@ -42,7 +42,9 @@ selected track. **Shift-click** extends the selection as a visible range.
 - **I/O labels** — input source and output destination (click to change).
   Header routing changes are live during playback, with the same brief graph
   fade/skip policy as the channel strip. Recording still blocks routing
-  changes.
+  changes. With popup help enabled, hovering an I/O label shows the full
+  selected route before the selector help. If popup help is off, the label
+  still hover-reveals the full selected route text.
 - **Mini meter** — single post-fader meter. The body uses the summed RMS of
   the track, follows the same green / yellow / red meter-scale zones as the
   strip mini meters, and the separate peak tick follows the hotter channel

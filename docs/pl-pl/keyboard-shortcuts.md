@@ -62,7 +62,7 @@ folderu profili i archiwizowane jako `legacy-keybindings*.bak`.
 | Cmd+C | Kopiuj selected clip |
 | Cmd+V | Wklej clip at tape head position |
 | Backspace | Usuń selected clip |
-| Usuń | Usuń selected non-master track |
+| Usuń | Usuń selected non-master tracks |
 | Cmd+Z | Cofnij |
 | Cmd+Shift+Z | Powtórz |
 | Escape | Odznacz clip and track |
@@ -181,7 +181,7 @@ These standard shortcuts are always active and cannot be reassigned:
 | Cmd+C | Kopiuj |
 | Cmd+V | Wklej |
 | Backspace | Usuń selected clip |
-| Usuń | Usuń selected non-master track |
+| Usuń | Usuń selected non-master tracks |
 | Cmd+, | Otwórz Preferencje |
 
 ## Virtual Keyboard Mode
