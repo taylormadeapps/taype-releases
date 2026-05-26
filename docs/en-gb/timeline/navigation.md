@@ -16,7 +16,7 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 - **Cmd + mouse wheel** — zoom in/out, centred on the tape head
 - **Right-click drag up/down** — drag down to zoom in, up to zoom out
 - **=** / **-** — zoom in / out from keyboard around the tape head
-- **Option+-** — reset to the default 16-bar frame level
+- **Option+-** — reset to the default 8-bar frame level
 - **Option+=** — jump straight to the maximum horizontal zoom
 
 At deep zoom levels, TayPE caps horizontal zoom at practical sample-level

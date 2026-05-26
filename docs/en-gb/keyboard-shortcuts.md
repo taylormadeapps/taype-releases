@@ -175,7 +175,7 @@ direct **Show Volume / Show Pan / Show Width** picks.
 | Option + mouse wheel | Vertical zoom (anchored to selected track) |
 | = | Zoom the timeline in around the tape head |
 | - | Zoom the timeline out around the tape head |
-| Option+- | Reset the timeline to the default 16-bar frame level |
+| Option+- | Reset the timeline to the default 8-bar frame level |
 | Option+= | Jump the timeline to maximum horizontal zoom |
 | Shift+= | Zoom in tracks |
 | Shift+- | Zoom out tracks |

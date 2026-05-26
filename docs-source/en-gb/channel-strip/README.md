@@ -4,7 +4,7 @@ Every track in TayPE has a built-in channel strip. The signal flows through each
 
 **Input → Trim → Preamp → Filters → EQ → Compressor → Inserts → Fader → Pan → Output**
 
-Each section can be enabled or bypassed independently. The on/off state does not control whether the body is open: if you leave a section expanded, it stays expanded and simply renders dimmed while bypassed.
+Each section can be enabled or bypassed independently. The on/off state does not control whether the body is open: if you leave a section expanded, it stays expanded and simply renders dimmed while bypassed. The default reel starts with the master bus compressor enabled; regular track compressors start bypassed.
 
 ![Channel strip overview](../../assets/img/docs/timeline-with-strip.png)
 

@@ -228,7 +228,7 @@ layer for the new clip so later edits can diverge cleanly.
 
 The timeline ruler always shows loop braces. Drag the handles to set the loop
 start and end, or drag the top ruler space between them to move the whole
-range without changing its width. The untouched default span is 16 bars. The
+range without changing its width. The untouched default span is 8 bars. The
 brace handles sit in the top marker lane as little muted-orange **L** and **R** tabs by the
 brace lines, so
 the lower ruler zoom band stays clear. When loop playback is on, the brace
