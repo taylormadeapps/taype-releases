@@ -26,25 +26,11 @@ automation view before using it.
 ## Record Modes
 
 Right-click the transport record button or open `Transport > Record Stop Mode` to
-choose the record macro:
+choose what happens when you stop an ordinary take from the record button:
 
 - **Return** — pressing **Return** again commits the pass, stops transport, and returns to the pass start.
 - **Punch** — pressing **Return** again commits the pass and keeps playback rolling.
 - **Do-Over** — pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
-- **Sooper-Looper** — requires active loop braces. TayPE snapshots the armed
-  tracks in visible order, records the first armed track for one loop pass,
-  plays the loop once, then records the next armed track. After the final pass,
-  playback keeps looping with recording off.
-
-Sooper-Looper uses your current count-in for the first pass only. If the
-metronome is enabled when you start, TayPE mutes the runtime click after that
-first recorded pass so the later layers can ride on the groove instead of the
-click. That mute does not rewrite your saved metronome preference.
-
-During the run, record-arm buttons show the handoff: the next track flashes
-during count-in and playback laps, the track currently recording is solid, and
-the other armed tracks are dimmed.
-
 Play / Pause is blocked while a recording pass is active; finish the take with
 **Record** or **Stop**.
 
@@ -92,7 +78,7 @@ run past the current reel extent instead of being clamped to the end of the
 reel. Slave playback can roll on blank tape or beyond the current reel end
 without extending the local reel until you actually record there.
 
-Return, Punch, Do-Over, Sooper-Looper, count-in, and loop-record modes are local recording
+Return, Punch, Do-Over, count-in, and loop-record modes are local recording
 helpers and are ignored in sync slave mode. External Stop commits the take and
 parks the head at the synced stop position.
 
@@ -113,6 +99,19 @@ If the loop braces are active, right-click the loop button or open
   enabled by default. Automation capture wraps too and commits the latest
   completed touched pass when one exists, otherwise the current touched
   partial.
+- **Sooper-Looper** — requires active loop braces. TayPE snapshots the armed
+  tracks in visible order, records the first armed track for one loop pass,
+  plays the loop once, then records the next armed track. After the final pass,
+  playback keeps looping with recording off.
+
+Sooper-Looper uses your current count-in for the first pass only. If the
+metronome is enabled when you start, TayPE mutes the runtime click after that
+first recorded pass so the later layers can ride on the groove instead of the
+click. That mute does not rewrite your saved metronome preference.
+
+During the run, record-arm buttons show the handoff: the next track flashes
+during count-in and playback laps, the track currently recording is solid, and
+the other armed tracks are dimmed.
 
 Latency compensation still keeps committed takes reaching the visible timing
 window instead of ending short.

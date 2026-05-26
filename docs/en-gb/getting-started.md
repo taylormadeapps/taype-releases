@@ -334,7 +334,8 @@ The **Edit** menu carries all split variants, including loop-brace splits,
 "split all" actions, and **Bounce Clips to Stem**. The **Tracks** menu carries
 track duplication/deletion plus **Bounce Tracks to Stem**, and the
 **Transport** menu now carries **Loop Selected**, a ticked **Metronome**
-toggle, the **Count-In** submenu, and the **Record Stop Mode** submenu.
+toggle, the **Count-In** submenu, **Record Stop Mode**, and
+**Loop Record Mode**.
 
 Drag the edges of a clip to trim it. This is non-destructive - your
 original audio is never modified.

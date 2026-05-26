@@ -67,15 +67,18 @@ profile folder and archived as `legacy-keybindings*.bak`.
 ## Record Modes
 
 Right-click the transport record button or use **Transport > Record Stop Mode** to
-choose what **Return** does during a take:
+choose what **Return** does when it stops an ordinary take:
 that right-click menu still works even when the record button itself is
 currently disabled for take admission.
 
 - **Return** — commit the pass, stop transport, and go back to the pass start.
 - **Punch** — commit the pass and keep playback rolling.
 - **Do-Over** — commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
-- **Sooper-Looper** — with loop braces active, record each armed track for one
-  loop pass in visible order, with one playback lap between passes.
+
+Choose **Sooper-Looper** from the loop button context menu or
+**Transport > Loop Record Mode**. With loop braces active, **Return** then
+records each armed track for one loop pass in visible order, with one playback
+lap between passes.
 
 **Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end. In Sooper-Looper it keeps any current partial pass and stops the macro.
 
