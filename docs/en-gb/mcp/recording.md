@@ -7,6 +7,10 @@ macro. `get_loop_record_mode` / `set_loop_record_mode` control whether loop
 braces auto-punch or wrap during record. `record_start` / `record_stop` stay
 low-level and let MCP clients drive the take lifecycle directly.
 
+`sooper_looper` is a transport-button macro. It snapshots the armed tracks in
+visible order and walks them one at a time across the active loop; low-level
+`record_start` still records the supplied target list directly.
+
 ---
 
 ### `get_record_mode`
@@ -28,7 +32,7 @@ itself.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
-| `record_mode` | string | yes | `"return"`, `"punch"`, or `"do_over"` |
+| `record_mode` | string | yes | `"return"`, `"punch"`, `"do_over"`, or `"sooper_looper"` |
 
 **Returns:**
 ```json

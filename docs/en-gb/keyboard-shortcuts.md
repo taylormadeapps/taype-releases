@@ -74,8 +74,10 @@ currently disabled for take admission.
 - **Return** — commit the pass, stop transport, and go back to the pass start.
 - **Punch** — commit the pass and keep playback rolling.
 - **Do-Over** — commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
+- **Sooper-Looper** — with loop braces active, record each armed track for one
+  loop pass in visible order, with one playback lap between passes.
 
-**Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end.
+**Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end. In Sooper-Looper it keeps any current partial pass and stops the macro.
 
 The **Transport** menu now exposes the same bound transport actions directly:
 **Play / Stop**, **Pause**, **Stop**, **Record**, both loop-brace setters,
