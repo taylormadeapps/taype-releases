@@ -231,6 +231,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   only rename endpoints and keep the same mapping selected.
 - The **Master output pair** and **Default stereo input** lists only offer
   normal stereo hardware pairs such as `1-2`, `3-4`, `5-6`, and so on.
+- The **Master output pair** remains choosable when switching to a smaller
+  device even if a Hardware Insert or direct hardware output in the reel still
+  has that route stored. The master output wins; reroute the hardware path if
+  you want to use it again.
 - The **Metronome output** list can follow **Master output** or target an
   explicit stereo hardware pair. Choosing the same physical pair as master is
   allowed.

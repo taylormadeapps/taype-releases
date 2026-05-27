@@ -114,14 +114,17 @@ again to close that track/slot window. The native insert window also lets
 you rename the slot, pick a slot colour under the name field, set input and
 output trim plus wet/dry along the bottom of the left plate, and watch the
 send/return mini meters in the right plate with auto-gain and Peak/RMS directly
-under the meters on the left plus the same slot bypass power control on
-the right. Reels with no stored name
+under the meters on the left. The latency ping drives those mini meters while
+it sends the pulse train and listens for the return. The same slot bypass
+power control sits on the right. Reels with no stored name
 or no newer Hardware Insert fields still use the default **Hardware Insert**
 label, 0 dB trims, Peak auto-gain, and the track colour. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
 hardware signal. Any route overlapping the current master output pair cannot be
 used as the send, and any route already used as a direct hardware output is
-also unavailable for Hardware Insert sends. TayPE fans mono strips out to
+also unavailable for Hardware Insert sends. If the master output is moved onto
+an existing Hardware Insert send route, the master output wins until the insert
+is rerouted. TayPE fans mono strips out to
 stereo hardware, averages stereo strips into mono sends, fans mono returns
 into stereo strips, and averages stereo returns into mono strips.
 If a route is missing, TayPE fails safe: no send for missing outputs and

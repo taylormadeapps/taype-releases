@@ -210,6 +210,16 @@ different strip; **Cmd-drag** copies instead. Drop on a slot to replace it, or
 drop between rows to insert and shift later slots down. If playback is already
 running, insert picking stays available and TayPE swaps the graph without
 stopping the clock.
+Hardware Insert slots can store one or more recall photos with the reel. Choose
+the photo or photos from the Hardware Insert popup; TayPE copies them into the
+reel and shows the first thumbnail beside the Recall field with a `+x` badge
+when more are stored. Click the thumbnail to open the floating viewer. Use the
+previous/next buttons, click the left or right half of the viewer, or use the
+arrow keys to move through the stored photos; Esc closes the viewer.
+The same popup also has low-cut and high-cut filters on the hardware wet path.
+The PRE/POST switch places those filters before the send or after the return,
+and the Ping button measures the external round-trip latency while transport is
+stopped. The popup `IN` and `OUT` trims mark and detent at 0 dB.
 If the loaded plug-in name clips, hovering that row reveals the full plug-in
 name with its latency on a second line, even with Popup Help turned off.
 

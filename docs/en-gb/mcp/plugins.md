@@ -52,6 +52,10 @@ stopped.
 | `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
 | `hardware_ag_measure_mode` | number | no | Hardware Insert auto-gain mode: `0` Peak, `1` RMS |
 | `hardware_color` | string | no | Optional Hardware Insert slot colour; empty uses the track colour |
+| `hardware_recall_image_path` | string | no | Optional Hardware Insert recall photo path, or newline-separated paths, under `media/recall-images/`; empty means no photo |
+| `hardware_low_cut_hz` | number | no | Hardware Insert low-cut frequency in Hz, clamped to 20..1000; 20 disables low cut |
+| `hardware_high_cut_hz` | number | no | Hardware Insert high-cut frequency in Hz, clamped to 2000..20000; 20000 disables high cut |
+| `hardware_filter_position` | string | no | `before` filters before the hardware send; `after` filters after the return |
 
 **Returns:**
 ```json
@@ -178,10 +182,12 @@ For Hardware Inserts, `is_hardware_io` is true and the response includes
 `hardware_output_route_id`, `hardware_input_route_id`, and
 `hardware_latency_offset_samples`, plus the popup fields
 `hardware_input_trim_db`, `hardware_output_trim_db`,
-`hardware_ag_measure_mode`, and `hardware_color`. These are CoreAudio I/O
-mapping route IDs, not TayPE bus routes. Mono and stereo endpoints are both
-valid; the realtime hardware stage fans out or averages at the device boundary
-to match the track strip width.
+`hardware_ag_measure_mode`, `hardware_color`, and
+`hardware_recall_image_path`, `hardware_low_cut_hz`,
+`hardware_high_cut_hz`, and `hardware_filter_position`. These are CoreAudio
+I/O mapping route IDs, not TayPE bus routes. Mono and stereo endpoints are
+both valid; the realtime hardware stage fans out or averages at the device
+boundary to match the track strip width.
 
 ### `set_insert_sidechain`
 
@@ -262,8 +268,12 @@ shown here.
 | `hardware_output_trim_db` | number | no | Return trim in dB, clamped to -24..+12; default 0 |
 | `hardware_ag_measure_mode` | number | no | Auto-gain mode: `0` Peak, `1` RMS; default 0 |
 | `hardware_color` | string | no | Optional slot colour; empty uses the track colour |
+| `hardware_recall_image_path` | string | no | Optional recall photo path, or newline-separated paths, under `media/recall-images/`; empty clears all recall photos |
+| `hardware_low_cut_hz` | number | no | Low-cut frequency in Hz, clamped to 20..1000; 20 disables low cut |
+| `hardware_high_cut_hz` | number | no | High-cut frequency in Hz, clamped to 2000..20000; 20000 disables high cut |
+| `hardware_filter_position` | string | no | `before` for send-side filtering or `after` for return-side filtering |
 
-**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": 64, "hardware_input_trim_db": 0.0, "hardware_output_trim_db": -1.5, "hardware_ag_measure_mode": 0, "hardware_color": "ff4fb3ff", "latency_samples": 672 }`
+**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": 64, "hardware_input_trim_db": 0.0, "hardware_output_trim_db": -1.5, "hardware_ag_measure_mode": 0, "hardware_color": "ff4fb3ff", "hardware_recall_image_path": "media/recall-images/guitar-pedal-a1b2c3d4e5f6.jpg", "hardware_low_cut_hz": 80.0, "hardware_high_cut_hz": 12000.0, "hardware_filter_position": "before", "latency_samples": 672 }`
 
 **Requires:** transport stopped
 
