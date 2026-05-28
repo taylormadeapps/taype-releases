@@ -116,7 +116,9 @@ output trim plus wet/dry along the bottom of the left plate, and watch the
 send/return mini meters in the right plate with auto-gain and Peak/RMS directly
 under the meters on the left. The latency ping drives those mini meters while
 it sends the pulse train and listens for the return. The same slot bypass
-power control sits on the right. Reels with no stored name
+power control sits on the right. Keyboard shortcuts still reach TayPE while the
+Hardware Insert window is focused, text entry stays with the name and latency
+fields, and `Escape` closes the window. Reels with no stored name
 or no newer Hardware Insert fields still use the default **Hardware Insert**
 label, 0 dB trims, Peak auto-gain, and the track colour. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
@@ -134,7 +136,9 @@ and returns the latency-aligned dry path; disabling it removes the insert and
 its latency from the graph. Hardware Inserts are realtime only; offline
 faster-than-realtime print warns when enabled Hardware Inserts are present, then
 prints them as latency-aligned dry bypass. Use realtime print when you need to
-capture the outboard hardware.
+capture the outboard hardware. When a MIDI clip editor is open on a track
+feeding that insert path, the live preview follows the same latency compensation
+as the printed clip, so edited notes audition in time with the reel.
 
 Those Taype Stock VST3 plug-ins are limited to running inside Taype, apart
 from **Taype Drive**, which also works in standalone **Plugin Doctor** for
@@ -316,7 +320,7 @@ the hosted editor with it, and if the editor asks for a new size, the wrapper
 follows. Fixed-size editors stay at their intended size instead of stretching.
 Like TayPE's own popup windows, hosted plug-in windows stay above TayPE while
 TayPE or the hosted editor is frontmost, but they yield properly when you
-switch to another app.
+switch to another app. `Escape` closes the hosted plug-in window.
 The window still follows the plug-in's own resize rules, so it can't be dragged
 smaller than the plug-in's minimum size, larger than its maximum, or into a
 cropped shape that breaks the editor's aspect. TayPE's own resizable stock
