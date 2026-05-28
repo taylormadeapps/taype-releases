@@ -300,7 +300,12 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   the driver report. Positive values mean "this box is actually later than
   Core Audio says." TayPE folds that trim, driver latency, and any boundary
   resampling latency into recording compensation and the default MIDI Out timing
-  estimate.
+  estimate. Use **Measure latency** beside the field when you want TayPE to
+  ping a loopback cable for you: choose the physical output and input in the
+  popup, press **PING**, then press **Apply** to stage the measured correction
+  back into Audio preferences. Hardware Insert ping then measures any extra
+  insert delay on top of that corrected base. The main **Apply Audio Changes**
+  button still commits it with the rest of the staged audio setup.
 - **Audio worker cores** defaults to **Allow efficiency cores**. On
   heterogeneous Apple Silicon systems, that lets TayPE use a `total_cores - 1`
   worker pool while still reserving the `performance_cores - 1` heavy lanes
