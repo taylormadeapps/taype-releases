@@ -81,7 +81,11 @@ opening that strip if it was hidden. TayPE remembers those width modes
 separately, defaulting to a wide arranger strip and a skinny mixer when the
 preferences do not exist yet. A floated mixer follows its own focused `W`
 shortcut, while the focused arranger still controls the docked strip underneath
-it. TayPE also remembers the docked strip's explicit show/hide choice, width
+it. Use **View > UI Scale**, or **Cmd+Option+-** / **Cmd+Option+=**, when you
+want smaller overview controls or larger physical controls across the whole app
+without changing the strip's narrow/full-width layout; at larger scales the transport bar uses compact
+breakpoints rather than shrinking the strip controls back down. TayPE also
+remembers the docked strip's explicit show/hide choice, width
 mode, and the shared section-collapse posture across launches for ordinary
 reels; the fresh launch-created `Untitled Reel` is the intentional exception
 and still lands with Track 1's strip open until you close it. Clearing track

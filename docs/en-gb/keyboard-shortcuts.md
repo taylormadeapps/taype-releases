@@ -156,6 +156,8 @@ there is no separate user-facing Save command.
 | Shift+, | Choose the next coarser fixed timeline snap grid |
 | Shift+. | Choose the next finer fixed timeline snap grid |
 | Cmd+K | Toggle high contrast theme |
+| Cmd+Option+- | Decrease the app-global UI scale to the next smaller preset |
+| Cmd+Option+= | Increase the app-global UI scale to the next larger preset |
 | K | Open the virtual keyboard popup |
 | Backtick (\`) | Open the Performance Monitor window |
 
@@ -163,7 +165,10 @@ The **View** menu also exposes the same focus, automation, deselect, mixer,
 channel-strip, ruler, and zoom actions, with mixer, detached-window, width,
 Tape Mode, and Tape Length controls grouped under **View > Mixer**. It also
 groups automation and zoom controls into **Automation Display**,
-**Horizontal Zoom**, and **Vertical Zoom** submenus.
+**Horizontal Zoom**, **Vertical Zoom**, and **UI Scale** submenus. **UI Scale**
+offers 75%, 80%, 90%, 100%, 110%, 125%, and 150%, and is remembered globally
+for the app. Use `Cmd+Option+-` and `Cmd+Option+=` to step through those scale
+presets without opening the menu.
 The automation submenu carries both **Cycle Automation Display** and the
 direct **Show Volume / Show Pan / Show Width** picks.
 
@@ -181,6 +186,8 @@ direct **Show Volume / Show Pan / Show Width** picks.
 | Shift+- | Zoom out tracks |
 | Option+Shift+- | Reset track height to default |
 | Option+Shift+= | Jump track height to maximum |
+| Cmd+Option+- | Decrease app UI scale |
+| Cmd+Option+= | Increase app UI scale |
 
 On macOS, those same zoom bindings show beside their **View** menu entries in
 the native menu bar.
@@ -240,6 +247,8 @@ format is straightforward:
   "zoom_out_vertical": "shift+-",
   "zoom_reset_vertical": "alt+shift+-",
   "zoom_max_vertical": "alt+shift+=",
+  "ui_scale_down": "cmd+alt+-",
+  "ui_scale_up": "cmd+alt+=",
   "toggle_mixer_width": "w",
   "toggle_tape_mode": "cmd+m",
   "detach_mixer": "cmd+shift+m",
