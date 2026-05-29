@@ -62,7 +62,7 @@ The browser has two tabs:
 
 The **Architecture** filter lives on the **Local** tab. That is where TayPE knows the real model files on disk, so filters like **AMX Compatible**, **LSTM**, **WaveNet**, and **A2** are based on known local model metadata instead of guesswork from the online catalogue.
 
-Online TONE3000 search and download use the A2 model lane by default where TONE3000 has converted the package. Support can expose a browser **Use A2 models** toggle for switching to the original NAM model lane; both lanes can live on disk together.
+Online TONE3000 search and download use the selected model lane. The browser shows **Use A2 models** for switching between the original NAM lane and the A2 lane where TONE3000 has converted the package; both lanes can live on disk together.
 
 A2-shaped `SlimmableContainer` files are shown as **A2** and are loadable. Other known NAM model types that TayPE cannot process yet stay visible as `{model type} - unsupported`, and unknown runtime types show as **Unknown**. Those rows are not loadable; if you try to activate one, TayPE shows a warning and leaves the current profile unchanged.
 

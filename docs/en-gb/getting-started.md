@@ -86,8 +86,9 @@ masked by default, with a Show/Hide control for support-supplied replacement
 keys. Preferences shows the cached sign-in state once browser authentication
 has returned tokens, and uses a single auth button: **Sign In** before a token
 is cached, **Sign In Again** after TayPE is already signed in. TONE3000 browser
-search and download use the A2 model lane by default. Support can expose a
-browser lane toggle for switching to the original NAM model lane when needed.
+search and download use the selected model lane. The browser shows **Use A2
+models** for switching between the original NAM lane and the A2 lane where
+TONE3000 has converted the package.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, create a new one, or branch from a template. At the root of the browser list, TayPE shows
