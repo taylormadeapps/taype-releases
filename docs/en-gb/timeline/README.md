@@ -53,6 +53,8 @@ With **Help → Popup Help** enabled, hover help appears after about **0.7 secon
 Use **File > Print Mix** or **Cmd+P** to print the full reel from zero through
 the normal tail boundary. Use **File > Print Loop** or **Cmd+Option+P** to print
 from the left loop brace through the right loop brace, then let tails decay.
+The export dialog can print WAV, FLAC, AAC `.m4a`, and MP3. MP3 exports are
+fixed at 320 kbps constant bit rate stereo.
 
 The export dialog defaults to **Master**. Turn on **Stems** and click
 **Choose Stems...** to print selected unarchived tracks and buses as separate
