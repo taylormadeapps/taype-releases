@@ -3,7 +3,8 @@
 Press **M** to switch between the timeline and mixer views. Press
 **Cmd+Shift+M** to pop the mixer into or out of its own window. Press
 **Cmd+M** to toggle Tape Mode on the visible mixer; if the mixer is hidden,
-TayPE opens the inline mixer while changing Tape Mode.
+TayPE opens the inline mixer while changing Tape Mode. Press **Option+M** to
+toggle La Forge on the visible mixer.
 
 Mixer view, Tape Mode, the detached mixer window, the mixer narrow/full-width
 desk mode, and the shared section-collapse posture are app-global preferences.
@@ -104,16 +105,37 @@ Each strip shows (top to bottom):
 - **Output selector** - where the track sends its audio: master, a bus, or an
   available direct stereo hardware output, with a destination track tint that
   keeps the routed hue clean against the dark strip
-- **Mastering meter** - on the master strip, the otherwise empty routing slot
-  below Mute becomes an eye button. Click it to open the mixer Mastering Meter
-  overlay, which uses the same upper mixer space as Tape Mode and takes priority
-  over the reels while it is visible. It shows momentary, short-term, and
-  integrated LUFS traces, Max Peak and Max True Peak readouts, plus a spectral
-  phase/correlation panel with mid/side and correlation views. Loudness and
+- **La Forge** - on the master strip, the otherwise empty routing slot below
+  Mute becomes a La Forge glyph button. Click it to open the mixer La Forge overlay, which
+  uses the same upper mixer space as Tape Mode and takes priority over the reels
+  while it is visible. There is no overall title bar; the Loudness Graph,
+  Loudness Stats, and Stereo panels each use compact section headers. At larger
+  UI Scale presets, La Forge keeps its own meter text, strokes, and stats rows
+  density-compensated so the readouts do not inflate or clip. It shows LUFS history as
+  2 px French-flag lines: momentary blue, short-term white, and integrated red.
+  Optional DR overlays use the same colours as 1 px dotted lines on the left
+  Dynamics axis with 3 dB tick steps, with readable lower-contrast dotted guides for the selected current DR
+  values and LUFS on the right axis. During no-signal spans the DR readout sits at
+  `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, and after on, with before/after hidden until the
+  limiter lane exists. The compact Loudness Stats panel shows LUFS, DR, Max Peak, and
+  Max True Peak readouts, and the narrower Stereo panel shows
+  spectral width/phase with Width and Phase views, smoothed
+  ballistics, log-frequency y-axis ticks, green positive / red negative phase colours, and
+  three-second floating band peaks. The Stereo ballistics pause with the
+  visible-overlay measurement instead of decaying while transport is paused or
+  stopped. In Width mode each band shows a split
+  mid/side energy graph: Mid fills the left half from the outside edge toward
+  centre, Sides fills the right half from the outside edge toward centre, and
+  the wideband meter uses the same split. In Phase mode the graph labels the
+  halves Uncorrelated and Correlated, and the wideband meter shows phase
+  correlation. During
+  silent playback the spectral panel falls to zero instead of amplifying FFT
+  residuals. Loudness and
   spectral measurement only runs while that overlay is visible, so integrated
   LUFS and max peaks begin from the moment you open it. Starting playback fresh
-  resets those accumulated readings; pause freezes the measurement and resume
-  continues from the same values. Until the integrated limiter is engaged, the
+  resets those accumulated readings; pause freezes the measurement and Stereo
+  ballistics, then resume continues from the same values. Stop also freezes the
+  visible graph, stats, and Stereo ballistics until the next fresh play start. Until the integrated limiter is engaged, the
   overlay shows the before-limiter lane only; later before and after limiter
   lanes can be viewed separately or together.
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
