@@ -104,6 +104,18 @@ Each strip shows (top to bottom):
 - **Output selector** - where the track sends its audio: master, a bus, or an
   available direct stereo hardware output, with a destination track tint that
   keeps the routed hue clean against the dark strip
+- **Mastering meter** - on the master strip, the otherwise empty routing slot
+  below Mute becomes an eye button. Click it to open the mixer Mastering Meter
+  overlay, which uses the same upper mixer space as Tape Mode and takes priority
+  over the reels while it is visible. It shows momentary, short-term, and
+  integrated LUFS traces, Max Peak and Max True Peak readouts, plus a spectral
+  phase/correlation panel with mid/side and correlation views. Loudness and
+  spectral measurement only runs while that overlay is visible, so integrated
+  LUFS and max peaks begin from the moment you open it. Starting playback fresh
+  resets those accumulated readings; pause freezes the measurement and resume
+  continues from the same values. Until the integrated limiter is engaged, the
+  overlay shows the before-limiter lane only; later before and after limiter
+  lanes can be viewed separately or together.
 - **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
   mode-dependent Drive or NAM Output Gain
 - **Filter section** - high-pass and low-pass filters with a spectrum button for the shared EQ Visualiser window
