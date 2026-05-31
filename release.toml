@@ -1,29 +1,45 @@
 # Machine-readable release metadata.
-# Updated by gogogo during the release procedure.
+# Updated during checkpoints and releases.
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "0.2.1"
-date = "2026-02-16"
-commit = "b27e8af"
+version = "0.20.0"
+date = "2026-06-01"
+commit = "495bcbb4"
 
-# Human-written summary of what changed - the story, not the log.
-# Written by Claude during gogogo, reviewed by the developer.
 summary = """\
-Release infrastructure hardening. DMG installers are now signed with a \
-Developer ID Application certificate so macOS Gatekeeper no longer blocks \
-the app on first launch. The packaging script auto-detects the signing \
-identity, deep-signs all nested binaries with hardened runtime, and has \
-notarization support ready for when credentials are configured. Release \
-assets now land in a structured dist/mac/<arch>/ directory tree, and the \
-gogogo procedure publishes to the taype-releases repo with tags and \
-GitHub releases.
+Added Sooper-Looper workflow refinements, clearer tape reel motion cues, and smoother loop recording behaviour.
+Reworked hardware insert routing, recall, calibration, and latency detection for more reliable outboard workflows.
+Added the LaForgé master limiter and mastering meter overlay, with clearer peak/guard metering and smoother master protection.
+Added named marker print/export support, bundled MP3 export support, and offline print stability fixes.
+Added in-app update checking from the About box and welcome dialog with a manual download/install flow.
+Updated reel persistence and migration support for the new mastering and print/export settings.
 """
 
-# Verbatim git log from previous release tag to this release.
+# Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-bb9bd41 Bump version to 0.2.1
-9206236 Add Developer ID signing and notarization to release pipeline
-a7d9533 Release infra: dist/mac/<arch> layout, taype-releases publishing, sync metadata
+329d9e56 Beta checkpoint v0.20.0b3
+94864b5e Tune LaForgé limiter and beta packaging
+155a7c2d Refresh beta checkpoint v0.20.0b2 metadata
+63f3a23f Update LaForgé limiter contract expectations
+44903afe Refresh beta checkpoint v0.20.0b2 metadata
+a057f0d8 Update LaForgé limiter tooltip copy
+a92196a9 Clarify LaForgé limiter oversampling contract
+4ba99cb0 Route LaForgé limiter through oversampled clipping
+a97a5b05 Beta checkpoint v0.20.0b2
+3071207b Handle beta checkpoint reruns after failed packaging
+4688c6b2 Fix beta checkpoint packaging contract
+a37c8b2b Refine master guard release recovery
+4c1b3b1f Beta checkpoint v0.20.0b1
+eb967889 Smooth LaForgé limiter guard recovery
+4ebc3c2b Polish beta number wording
+c0574e4c Refine release tooling and export flows
+c354dc1d Add named marker prints and beta build tooling
+0b3f4d2e Refine LaForgé limiter naming and stats
+8eced265 Add La Forge limiter peak modes
+6f82df23 Refine La Forge metering UI
+2b37953f Add La Forge limiter overlay
+af06b9d0 Refine La Forge master overlay
+9f083f54 Add mastering meter overlay
 """
