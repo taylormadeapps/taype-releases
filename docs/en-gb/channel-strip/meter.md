@@ -58,6 +58,6 @@ meter tap on that track, not just the main post-fader display.
 On the master strip, the LaForgé button opens the master loudness view above
 the faders. The LaForgé Limiter section has three top-row toggles: power,
 LOW LATENCY/HIGH QUALITY, and SAFE PEAK/HOT PEAK. SAFE PEAK keeps the current
--1.0 dBTP true-peak guard. HOT PEAK uses a -0.5 dB digital peak guard while
-still reporting true-peak stats honestly. In the Stats panel, Max Peak turns
+-1.0 dB ceiling in the selected oversampled limiter path. HOT PEAK uses a
+-0.5 dB ceiling. In the Stats panel, Max Peak turns
 red above 0.0 dBFS, while Max True Peak turns orange/amber above 0.0 dB.

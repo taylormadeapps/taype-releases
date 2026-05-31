@@ -149,11 +149,11 @@ Each strip shows (top to bottom):
   visible graph, stats, and Stereo ballistics until the next fresh play start.
   The integrated LaForgé Limiter panel sits at the left of LaForgé. Power enables the
   post-fader master limiter; one LOW LATENCY/HIGH QUALITY toggle switches
-  between low latency and deeper 8x true-peak protection. Drive adds clean gain into the
+  between low latency and deeper 8x oversampling. Drive adds clean gain into the
   oversampled clipper/guard path with finer fader resolution at the loud end, Release sets how quickly guard attenuation lets go when Auto is off
   and uses slow relative log drag rather than click-to-position jumps,
   and Lift raises useful body and detail from the no-Drive peak budget while
-  tapering near the guarded driven envelope. At zero, Lift applies no upward gain. The limiter aims at a virtual guard 0.5 dB below the selected ceiling; the narrow soft-clip safety knee then catches residual excess into the actual ceiling in the oversampled audio path. The guard moves in that same timebase rather than stepping at callback-block edges. Release uses an adaptive two-stage tail so dense limiting does not pump back toward unity between hits. Drive and Lift are paired vertical faders beside the metering. Its compact meters follow the
+  tapering near the selected ceiling before the limiter. At zero, Lift applies no upward gain. LOW LATENCY and HIGH QUALITY both aim the limiter at the selected ceiling; the final clipper starts its safety knee 0.20 dB below the positive ceiling and 0.22 dB above the negative ceiling, then clamps both rails. The guard moves in that same timebase rather than stepping at callback-block edges. Release uses an adaptive two-stage tail with a light short hold and reduced slow-lane share, so dense limiting does not pin the gain floor or pump back toward unity between hits. Lift and Drive are paired vertical faders beside the metering. Its compact meters follow the
   compressor popup style: IN/OUT ladders use an absolute `0` to `-60` LUFS
   scale, show momentary LUFS as the body and short-term LUFS as the marker tick,
   and tap IN before Drive gain with OUT after the limiter. The LED colour zones
