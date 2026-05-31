@@ -153,7 +153,7 @@ Each strip shows (top to bottom):
   guard with finer fader resolution at the loud end, Release sets how quickly guard attenuation lets go when Auto is off
   and uses slow relative log drag rather than click-to-position jumps,
   and Lift raises useful body and detail from the no-Drive peak budget while
-  tapering near the guarded driven envelope. At zero, Lift applies no upward gain. The guard moves from the lookahead feed sample by sample and holds true-peak targets across the lookahead window rather than stepping at callback-block edges. Drive and Lift are paired vertical faders beside the metering. Its compact meters follow the
+  tapering near the guarded driven envelope. At zero, Lift applies no upward gain. The guard moves from the lookahead feed sample by sample and holds true-peak targets across the lookahead window rather than stepping at callback-block edges. Release uses an adaptive two-stage tail so dense limiting does not pump back toward unity between hits. Drive and Lift are paired vertical faders beside the metering. Its compact meters follow the
   compressor popup style: IN/OUT ladders use an absolute `0` to `-60` LUFS
   scale, show momentary LUFS as the body and short-term LUFS as the marker tick,
   and tap IN before Drive gain with OUT after the limiter. The LED colour zones
