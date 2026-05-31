@@ -121,7 +121,7 @@ Each strip shows (top to bottom):
   values and LUFS on the right axis. The graph uses a fixed 20-second time window
   with the newest point on the right, so fresh partial history is not stretched
   across the whole plot. During no-signal spans the DR readout sits at
-  `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, and after on, with before/after hidden until the
+  `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, after on, and Width mode for the Stereo panel. Those graph filters and the Width/Phase tab are remembered globally, with before/after hidden until the
   Limiter is on. The compact Loudness Stats panel shows Max True Peak and Max
   Peak first, then Momentary, Short Term, and Integrated LUFS/DR pairs. Max Peak
   uses the green strip, Max True Peak uses the yellow strip. Max Peak turns red
@@ -153,7 +153,7 @@ Each strip shows (top to bottom):
   guard with finer fader resolution at the loud end, Release sets how quickly guard attenuation lets go when Auto is off
   and uses slow relative log drag rather than click-to-position jumps,
   and Lift raises useful body and detail from the no-Drive peak budget while
-  tapering near the guarded driven envelope. Drive and Lift are paired vertical faders beside the metering. Its compact meters follow the
+  tapering near the guarded driven envelope. At zero, Lift applies no upward gain. The guard moves from the lookahead feed sample by sample rather than stepping at callback-block edges. Drive and Lift are paired vertical faders beside the metering. Its compact meters follow the
   compressor popup style: IN/OUT ladders use an absolute `0` to `-60` LUFS
   scale, show momentary LUFS as the body and short-term LUFS as the marker tick,
   and tap IN before Drive gain with OUT after the limiter. The LED colour zones

@@ -36,6 +36,10 @@ The paired welcome logos sit in matched square tiles, and the tape mark now
 gets its own square badge with extra background instead of being stretched to
 fake the RAW block.
 
+The welcome card also has **Check for Updates** in its bottom-right utility
+area. It only checks the public release feed when you press it, and downloads
+an installer only after you choose where to save it.
+
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
 
@@ -178,6 +182,10 @@ Use the **TayPE** application menu to open licensing:
 Use **TayPE > About TayPE** to view the exact app version/build and the
 shipped dependency versions and licences (JUCE, Signalsmith Stretch,
 NeuralAmpModelerCore, and the system Git runtime used for reel history).
+The About box also includes **Check for Updates**. If a newer public release is
+available, TayPE offers to download the `.pkg` installer to a location you
+choose, then can open the installer with macOS and close itself cleanly.
+Installing a new TayPE build does not overwrite your settings or reels.
 
 ## Popup Help
 

@@ -90,6 +90,10 @@ search and download use the selected model lane. The browser shows **Use A2
 models** for switching between the original NAM lane and the A2 lane where
 TONE3000 has converted the package.
 
+The welcome card also has **Check for Updates** in its bottom-right utility
+area. It only runs when you press it, checks the public TayPE release feed, and
+downloads an installer only after you choose a save location.
+
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, create a new one, or branch from a template. At the root of the browser list, TayPE shows
 **Recents** first, then **Starter Reels**, then your other folders, and then
@@ -369,6 +373,10 @@ Use the **TayPE** application menu to open licensing:
 Use **TayPE > About TayPE** to view the exact app version/build and the
 shipped dependency versions and licences (JUCE, Signalsmith Stretch,
 NeuralAmpModelerCore, and the system Git runtime used for reel history).
+The About box also includes **Check for Updates**. If a newer public release is
+available, TayPE offers to download the `.pkg` installer to a location you
+choose, then can open the installer with macOS and close itself cleanly.
+Installing a new TayPE build does not overwrite your settings or reels.
 
 ## Popup Help
 
