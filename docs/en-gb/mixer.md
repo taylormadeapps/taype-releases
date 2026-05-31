@@ -110,34 +110,35 @@ Each strip shows (top to bottom):
   uses the same upper mixer space as Tape Mode and takes priority over the reels
   while it is visible. It replaces the tape deck panel but keeps the narrow tape
   timeline navigator visible and seekable underneath. There is no overall title
-  bar; the Limiter,
+  bar; the LaForgé Limiter,
   Loudness Stats, Loudness Graph, and Stereo panels each use compact section headers. At larger
   UI Scale presets, La Forge keeps its own meter text, strokes, and stats rows
   density-compensated so the readouts do not inflate or clip. It shows LUFS history as
   2 px French-flag lines: momentary blue, short-term white, and integrated red.
-  The right LUFS scale uses the same console-style shape as the strip dBFS meters,
-  with dense 0 to -21 markings and a compressed lower tail to -60.
+  The right LUFS scale is linear from 0 to -60 with even 6 LU tick spacing.
   Optional DR overlays use the same colours as 1 px dotted lines on the left
   Dynamics axis with 3 dB tick steps, with readable lower-contrast solid guides for the selected current DR
   values and LUFS on the right axis. The graph uses a fixed 20-second time window
   with the newest point on the right, so fresh partial history is not stretched
   across the whole plot. During no-signal spans the DR readout sits at
   `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, and after on, with before/after hidden until the
-  Limiter is on. The compact Loudness Stats panel shows Max Peak and Max True
-  Peak first, then LUFS, then DR. Max Peak uses the green strip, Max True Peak
-  uses the yellow strip, and either peak value turns red once its latched value
-  crosses 0.0 dB until the next play-start reset. The Stats panel always shows
+  Limiter is on. The compact Loudness Stats panel shows Max True Peak and Max
+  Peak first, then Momentary, Short Term, and Integrated LUFS/DR pairs. Max Peak
+  uses the green strip, Max True Peak uses the yellow strip, and either peak
+  value turns red once its latched value crosses 0.0 dB until the next
+  play-start reset. The Stats panel always shows
   before/after columns while the limiter is on.
   The narrower Stereo panel shows
   spectral width/phase with Width and Phase views, smoothed
   ballistics, log-frequency y-axis ticks, green positive / red negative phase colours, and
-  three-second floating band peaks. The Stereo ballistics pause with the
+  three-second floating band peaks. Negative phase bars are dimmed by band
+  activity so quiet FFT residue does not read like the main problem. The Stereo ballistics pause with the
   visible-overlay measurement instead of decaying while transport is paused or
   stopped. In Width mode each band shows a split
   mid/side RMS-strength graph: Mid fills the left half from the outside edge
   toward centre, Sides fills the right half from the outside edge toward centre,
   and the wideband meter uses the same fixed-reference split. In Phase mode the graph labels the
-  halves Uncorrelated and Correlated, and the wideband meter shows phase
+  halves Negative and Correlated, and the wideband meter shows phase
   correlation. During
   silent playback the spectral panel falls to zero instead of amplifying FFT
   residuals. Loudness and
@@ -146,7 +147,7 @@ Each strip shows (top to bottom):
   resets those accumulated readings; pause freezes the measurement and Stereo
   ballistics, then resume continues from the same values. Stop also freezes the
   visible graph, stats, and Stereo ballistics until the next fresh play start.
-  The integrated Limiter panel sits at the left of La Forge. Power enables the
+  The integrated LaForgé Limiter panel sits at the left of La Forge. Power enables the
   post-fader master limiter; one LOW LATENCY/HIGH QUALITY toggle switches
   between low latency and deeper 8x true-peak protection. Drive adds clean gain into the
   guard with finer fader resolution at the loud end, Release sets how quickly guard attenuation lets go when Auto is off
