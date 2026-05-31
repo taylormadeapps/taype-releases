@@ -4,7 +4,7 @@ Press **M** to switch between the timeline and mixer views. Press
 **Cmd+Shift+M** to pop the mixer into or out of its own window. Press
 **Cmd+M** to toggle Tape Mode on the visible mixer; if the mixer is hidden,
 TayPE opens the inline mixer while changing Tape Mode. Press **Option+M** to
-toggle La Forge on the visible mixer.
+toggle LaForgé on the visible mixer.
 
 Mixer view, Tape Mode, the detached mixer window, the mixer narrow/full-width
 desk mode, and the shared section-collapse posture are app-global preferences.
@@ -105,14 +105,14 @@ Each strip shows (top to bottom):
 - **Output selector** - where the track sends its audio: master, a bus, or an
   available direct stereo hardware output, with a destination track tint that
   keeps the routed hue clean against the dark strip
-- **La Forge** - on the master strip, the otherwise empty routing slot below
-  Mute becomes a La Forge glyph button. Click it to open the mixer La Forge overlay, which
+- **LaForgé** - on the master strip, the otherwise empty routing slot below
+  Mute becomes a LaForgé glyph button. Click it to open the mixer LaForgé overlay, which
   uses the same upper mixer space as Tape Mode and takes priority over the reels
   while it is visible. It replaces the tape deck panel but keeps the narrow tape
   timeline navigator visible and seekable underneath. There is no overall title
   bar; the LaForgé Limiter,
   Loudness Stats, Loudness Graph, and Stereo panels each use compact section headers. At larger
-  UI Scale presets, La Forge keeps its own meter text, strokes, and stats rows
+  UI Scale presets, LaForgé keeps its own meter text, strokes, and stats rows
   density-compensated so the readouts do not inflate or clip. It shows LUFS history as
   2 px French-flag lines: momentary blue, short-term white, and integrated red.
   The right LUFS scale is linear from 0 to -60 with even 6 LU tick spacing.
@@ -124,9 +124,9 @@ Each strip shows (top to bottom):
   `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, and after on, with before/after hidden until the
   Limiter is on. The compact Loudness Stats panel shows Max True Peak and Max
   Peak first, then Momentary, Short Term, and Integrated LUFS/DR pairs. Max Peak
-  uses the green strip, Max True Peak uses the yellow strip, and either peak
-  value turns red once its latched value crosses 0.0 dB until the next
-  play-start reset. The Stats panel always shows
+  uses the green strip, Max True Peak uses the yellow strip. Max Peak turns red
+  above 0.0 dBFS, while Max True Peak turns orange/amber above 0.0 dB until the
+  next play-start reset. The Stats panel always shows
   before/after columns while the limiter is on.
   The narrower Stereo panel shows
   spectral width/phase with Width and Phase views, smoothed
@@ -147,7 +147,7 @@ Each strip shows (top to bottom):
   resets those accumulated readings; pause freezes the measurement and Stereo
   ballistics, then resume continues from the same values. Stop also freezes the
   visible graph, stats, and Stereo ballistics until the next fresh play start.
-  The integrated LaForgé Limiter panel sits at the left of La Forge. Power enables the
+  The integrated LaForgé Limiter panel sits at the left of LaForgé. Power enables the
   post-fader master limiter; one LOW LATENCY/HIGH QUALITY toggle switches
   between low latency and deeper 8x true-peak protection. Drive adds clean gain into the
   guard with finer fader resolution at the loud end, Release sets how quickly guard attenuation lets go when Auto is off

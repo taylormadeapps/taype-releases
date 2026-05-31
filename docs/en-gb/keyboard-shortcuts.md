@@ -140,7 +140,7 @@ there is no separate user-facing Save command.
 | M | Toggle between timeline and mixer |
 | W | Toggle the focused width context: arranger strip in arranger view, mixer rack in mixer view or detached mixer window |
 | Cmd+M | Toggle Tape Mode on the visible mixer; opens the inline mixer if hidden |
-| Option+M | Toggle La Forge on the visible mixer; opens the inline mixer if hidden |
+| Option+M | Toggle LaForgé on the visible mixer; opens the inline mixer if hidden |
 | Cmd+Shift+M | Pop the mixer in or out of a separate window |
 | I | Toggle channel strip panel |
 | Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In the full mixer, inline or detached, scroll the rack left or right. In Tape Mode, inline or detached, also scroll the visible mixer rack left or right |
@@ -164,7 +164,7 @@ there is no separate user-facing Save command.
 
 The **View** menu also exposes the same focus, automation, deselect, mixer,
 channel-strip, ruler, and zoom actions, with mixer, detached-window, width,
-Tape Mode, La Forge, and Tape Length controls grouped under **View > Mixer**. It also
+Tape Mode, LaForgé, and Tape Length controls grouped under **View > Mixer**. It also
 groups automation and zoom controls into **Automation Display**,
 **Horizontal Zoom**, **Vertical Zoom**, and **UI Scale** submenus. **UI Scale**
 offers 75%, 80%, 90%, 100%, 110%, 125%, and 150%, and is remembered globally
