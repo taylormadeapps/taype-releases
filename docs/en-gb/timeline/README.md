@@ -53,6 +53,13 @@ With **Help → Popup Help** enabled, hover help appears after about **0.7 secon
 Use **File > Print Mix** or **Cmd+P** to print the full reel from zero through
 the normal tail boundary. Use **File > Print Loop** or **Cmd+Option+P** to print
 from the left loop brace through the right loop brace, then let tails decay.
+Use **File > Print Named Markers** to batch-print the currently selected Cut
+from each named marker to the next named marker, or to song end for the final
+named marker. Number-only markers are ignored, so automatic marker numbers do
+not split the batch. If there are no printable named-marker ranges, TayPE shows
+the normal yellow warning bar instead of opening an export dialog.
+In a live named-marker print, Stop or spacebar commits the current range and
+ends the rest of the batch.
 The export dialog can print WAV, FLAC, AAC `.m4a`, and MP3. MP3 exports are
 fixed at 320 kbps constant bit rate stereo.
 
@@ -67,6 +74,10 @@ pan, before it routes onward to another bus, hardware output, or master. TayPE
 writes them to a versioned stems folder in the print location and keeps the
 files sample-aligned with one another and with the final master-output time.
 Leave **Master** on with **Stems** to add `00-Master.wav` to that folder.
+
+Print filenames follow the selected Cut. The main Cut keeps the old names. Any
+other Cut adds its name after the reel name, before `Loop`, marker names, or
+`Stems`; named-marker prints use only the start marker name in the filename.
 
 ### Ruler Header Controls
 
