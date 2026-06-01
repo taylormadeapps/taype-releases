@@ -149,8 +149,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 
 ## Editing
 
-Editing only happens when the transport is stopped. This is by design -
-TayPE keeps playback clean and separate from structural changes.
+Editing follows the playback-safe policy. Core clip actions, channel-strip
+changes, routing, and prepared graph swaps stay live during playback. Actions
+that need to print or replace media stop playback first, then continue.
+Recording still blocks edit actions until the take is finished.
 
 - **Click a clip** to select it
 - **Drag a clip** to move it (horizontally for time, vertically to change

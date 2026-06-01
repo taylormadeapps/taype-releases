@@ -331,8 +331,9 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 ## Editing
 
 Editing follows the playback-safe policy. Core clip actions, channel-strip
-changes, routing, and prepared graph swaps stay live during playback; recording
-and render-backed media jobs still stop first.
+changes, routing, and prepared graph swaps stay live during playback. Actions
+that need to print or replace media stop playback first, then continue.
+Recording still blocks edit actions until the take is finished.
 
 - **Click a clip** to select it
 - **Drag a clip** to move it (horizontally for time, vertically to change

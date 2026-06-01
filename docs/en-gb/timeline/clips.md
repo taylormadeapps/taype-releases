@@ -64,8 +64,8 @@ During playback, TayPE keeps the core clip workflow live: you can rename,
 recolour, disable, trim, move, split, delete, duplicate, copy, paste, and
 adjust clip gain or fade shape without stopping first. Recording is still
 stricter, so those edits wait until the take stops. Edits that have to print
-new audio or replace committed media still ask you to stop first through the
-same transport warning banner used elsewhere in the timeline.
+new audio or replace committed media stop playback first, then continue.
+Recording still blocks those render-backed edits until the take stops.
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. Transfer,
 reopen, commit, and revert all stay live during playback. If a revert has to
@@ -255,9 +255,8 @@ still win pointer hits over the loop drag strip, so marker drag and marker
 menus keep working inside the loop range. Playback-safe clip tweaks such as
 disable, rename, recolour, gain, fades, straightforward trims, body drags,
 copy/paste, duplicate, split, and delete stay live during playback. Stretch,
-pitch, bounce, join, and other render-backed clip edits still flash the
-transport warning banner until you stop. Recording still blocks all of those
-clip edits.
+pitch, bounce, join, and other render-backed clip edits stop playback first,
+then continue. Recording still blocks all of those clip edits.
 
 ## Splitting
 

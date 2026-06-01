@@ -51,6 +51,10 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 - **Cmd+V** — paste at the tape head position on the selected track
 - **Cmd+D** — duplicate back-to-back (immediately after the original)
 
+During playback, core clip edits stay live. Render-backed edits such as stretch,
+pitch, bounce, and join stop playback first, then continue. Recording still
+blocks clip edits until the take is finished.
+
 ## Melodyne
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. Transfer,
