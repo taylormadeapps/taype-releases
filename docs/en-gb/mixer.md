@@ -118,7 +118,7 @@ Each strip shows (top to bottom):
   The right LUFS scale is linear from 0 to -60 with even 6 LU tick spacing.
   Optional DR overlays use the same colours as 1 px dotted lines on the left
   Dynamics axis with 3 dB tick steps, with readable lower-contrast solid guides for the selected current DR
-  values and LUFS on the right axis. The graph uses a fixed 20-second time window
+  values. With the limiter off, those guides follow the visible before-limiter lane. With the limiter on, before-only and after-only views show the selected lane's guides; when both lanes are visible, the graph draws one after-limiter guide set. LUFS remains on the right axis. The graph uses a fixed 20-second time window
   with the newest point on the right, so fresh partial history is not stretched
   across the whole plot. During no-signal spans the DR readout sits at
   `0.0 dB` and the dotted DR trace collapses to the zero line. The filter defaults are Show Loudness on, Show Dynamics off, momentary off, short-term on, integrated off, before off, after on, and Width mode for the Stereo panel. Those graph filters and the Width/Phase tab are remembered globally, with before/after hidden until the

@@ -40,8 +40,7 @@ The summary includes:
 - **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
 - **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
 - **CPU** — combined TayPE app plus `taype-sandbox` usage across all logical cores (0–100%), stacked green for the app and blue for the sandbox
-- **Preamp topology** — NAM batches still show as per-group rows with channel count plus small/turbo and worker/inline state, while Modern, ToTaype, and MD510 worker preamps show as `W1`, `W2`, etc. so you can see which assigned worker lane each non-NAM set landed on instead of reading one giant aggregate block
-- **Master true summing** — grouped Classic/ToTaype/MD510 true-summing lanes, including channel count and whether each group ran inline or on a worker
+- **Preamp / SUM Grouping** — opens the grouping matrix for track preamps, bus-level preamp groups, and master true-summing groups
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 
