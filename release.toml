@@ -3,27 +3,28 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "0.2.1"
-date = "2026-02-16"
-commit = "b27e8af"
+version = "0.21.0"
+date = "2026-06-02"
+commit = "cc993cee"
 
 # Human-written summary of what changed - the story, not the log.
 # Written by Claude during gogogo, reviewed by the developer.
 summary = """\
-Release infrastructure hardening. DMG installers are now signed with a \
-Developer ID Application certificate so macOS Gatekeeper no longer blocks \
-the app on first launch. The packaging script auto-detects the signing \
-identity, deep-signs all nested binaries with hardened runtime, and has \
-notarization support ready for when credentials are configured. Release \
-assets now land in a structured dist/mac/<arch>/ directory tree, and the \
-gogogo procedure publishes to the taype-releases repo with tags and \
-GitHub releases.
+Enabled TONE3000 A2 NAM support.
+Added beta-aware update checking with Google Drive beta build discovery, release-note buttons, and an opt-in startup update check that stays silent when no update is available.
+Expanded playback-safe editing so allowed timeline, channel-strip, routing, preamp/summing, and plugin graph changes can continue during playback, while denied reel/media/export/device actions stop playback before continuing and recording remains protected.
+Added bus-DAG preamp and SUM worker grouping for virtual-console workflows, with a clearer DSP monitor grouping view and default-on NAM AMX behaviour for fresh configurations.
+Fixed direct insert drag/drop so moves onto empty slots or existing inserts preserve sparse slot positions and work correctly on tracks, busses, and the master strip.
 """
 
 # Verbatim git log from previous release tag to this release.
 # Raw commit history for traceability.
 git_log = """\
-bb9bd41 Bump version to 0.2.1
-9206236 Add Developer ID signing and notarization to release pipeline
-a7d9533 Release infra: dist/mac/<arch> layout, taype-releases publishing, sync metadata
+cef2aa25 Fix insert slot drag targets
+0539ee04 Add beta update checks and test cache seeding
+640b90d5 Respect test app support for license state
+6734534d Stop playback for transport-denied UI actions
+7a9fe102 Add beta DSP grouping and harness state restore
+ae968949 Add Republic of TayPE logo assets
+2ac7a68e Stabilize flaky UI and restart tests
 """
