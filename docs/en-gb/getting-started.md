@@ -92,7 +92,9 @@ TONE3000 has converted the package.
 
 The welcome card also has **Check for Updates** in its bottom-right utility
 area. It only runs when you press it, checks the public TayPE release feed, and
-downloads an installer only after you choose a save location.
+downloads an installer only after you choose a save location. You can also
+enable **Preferences > General > Check for updates on startup** if you want
+TayPE to run the same check once after the first reel has loaded.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, create a new one, or branch from a template. At the root of the browser list, TayPE shows
@@ -378,6 +380,8 @@ The About box also includes **Check for Updates**. If a newer public release is
 available, TayPE offers to download the `.pkg` installer to a location you
 choose, then can open the installer with macOS and close itself cleanly.
 Installing a new TayPE build does not overwrite your settings or reels.
+The optional startup update check lives in **Preferences > General** and is off
+by default.
 
 ## Popup Help
 

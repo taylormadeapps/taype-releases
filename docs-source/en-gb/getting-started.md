@@ -37,8 +37,10 @@ gets its own square badge with extra background instead of being stretched to
 fake the RAW block.
 
 The welcome card also has **Check for Updates** in its bottom-right utility
-area. It only checks the public release feed when you press it, and downloads
-an installer only after you choose where to save it.
+area. It checks the public release feed when you press it, and downloads an
+installer only after you choose where to save it. You can also enable
+**Preferences > General > Check for updates on startup** if you want TayPE to
+run the same check once after the first reel has loaded.
 
 Use **Open From File...** in the Reel Browser when the reel or pack you want
 is outside your normal library.
@@ -188,6 +190,8 @@ The About box also includes **Check for Updates**. If a newer public release is
 available, TayPE offers to download the `.pkg` installer to a location you
 choose, then can open the installer with macOS and close itself cleanly.
 Installing a new TayPE build does not overwrite your settings or reels.
+The optional startup update check lives in **Preferences > General** and is off
+by default.
 
 ## Popup Help
 
