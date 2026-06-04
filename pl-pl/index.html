@@ -3,28 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TayPE - Rzemiosło przed wszystkim. Dostępne od projektowania.</title>
-<meta id="meta-description" name="description" content="TayPE to wielośladowa DAW dla muzyków, którzy chcą kończyć płyty, a nie walczyć z oprogramowaniem. Cel: WCAG 2.2 AA. Natywne MCP — Claude lub Codex (z głosem) to główny niewizualny interfejs. macOS.">
-<meta id="meta-og-title" property="og:title" content="TayPE - Stwórz rekord">
-<meta id="meta-og-description" property="og:description" content="Rzemiosło przed wszystkim. Dostępne od projektowania.">
+<title>TayPE - Craft first. Accessible by design.</title>
+<meta id="meta-description" name="description" content="TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 accessible. MCP native. macOS.">
+<meta id="meta-og-title" property="og:title" content="TayPE - Make the Record">
+<meta id="meta-og-description" property="og:description" content="Craft first. Accessible by design.">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="/assets/img/logo-square-256.png">
 <link id="canonical-link" rel="canonical" href="https://taype.ruminantaudioworks.com/">
-<link rel="alternate" hreflang="x-default" href="https://taype.ruminantaudioworks.com/">
-<link rel="alternate" hreflang="en-GB" href="https://taype.ruminantaudioworks.com/">
-<link rel="alternate" hreflang="ja-JP" href="https://taype.ruminantaudioworks.com/ja-jp/">
-<link rel="alternate" hreflang="fr-FR" href="https://taype.ruminantaudioworks.com/fr-fr/">
-<link rel="alternate" hreflang="de-DE" href="https://taype.ruminantaudioworks.com/de-de/">
-<link rel="alternate" hreflang="es-ES" href="https://taype.ruminantaudioworks.com/es-es/">
-<link rel="alternate" hreflang="is-IS" href="https://taype.ruminantaudioworks.com/is-is/">
-<link rel="alternate" hreflang="nl-NL" href="https://taype.ruminantaudioworks.com/nl-nl/">
-<link rel="alternate" hreflang="it-IT" href="https://taype.ruminantaudioworks.com/it-it/">
-<link rel="alternate" hreflang="pl-PL" href="https://taype.ruminantaudioworks.com/pl-pl/">
-<link rel="alternate" hreflang="uk-UA" href="https://taype.ruminantaudioworks.com/uk-ua/">
-<link rel="alternate" hreflang="el-GR" href="https://taype.ruminantaudioworks.com/el-gr/">
-<link rel="alternate" hreflang="pl-PL" href="https://taype.ruminantaudioworks.com/pl-pl/">
+<!-- hreflang tags removed — locale subpaths serve JS-swapped English HTML,
+     which Google sees as duplicate content. Restore when locale pages are
+     pre-rendered with native-language HTML. See ops backlog: "Pre-rendered
+     i18n for SEO". -->
 
 <!-- Press Start 2P from Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -224,7 +215,7 @@ nav .nav-links a:hover { color: var(--brass); }
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 6rem 2rem 4rem;
+    padding: 4.75rem 2rem 3rem;
     position: relative;
     overflow: hidden;
 }
@@ -238,9 +229,9 @@ nav .nav-links a:hover { color: var(--brass); }
 }
 
 .hero-logo {
-    width: min(400px, 80vw);
+    width: min(300px, 64vw);
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     filter: drop-shadow(0 0 60px rgba(240, 201, 106, 0.15));
 }
 
@@ -249,7 +240,7 @@ nav .nav-links a:hover { color: var(--brass); }
     font-size: clamp(1.4rem, 4vw, 2.8rem);
     color: var(--brass);
     letter-spacing: 4px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-shadow: 0 0 40px rgba(240, 201, 106, 0.3);
 }
 
@@ -265,7 +256,24 @@ nav .nav-links a:hover { color: var(--brass); }
     font-size: clamp(0.95rem, 2vw, 1.2rem);
     color: var(--text-muted);
     max-width: 600px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.hero-philosophy {
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.hero-philosophy h2 {
+    margin-bottom: 1rem;
+}
+
+.hero-philosophy p {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05rem;
     line-height: 1.8;
 }
 
@@ -384,16 +392,26 @@ h2 {
     margin-top: 3rem;
 }
 
-.screenshot-row--single .screenshot-block {
-    flex: 0 1 488px;
-    max-width: 100%;
-}
-
 .screenshot-block {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
+    /* Match the paragraph max-width used by .philosophy p and
+       .tone-arch .tone-intro so screenshots aren't visibly narrower
+       than the surrounding body copy. The two-image row wraps to
+       stacked at this width because 2×700px exceeds section inner
+       width. */
+    flex: 0 1 700px;
+    max-width: 100%;
+}
+
+.screenshot-block--wide {
+    flex-basis: 1000px;
+}
+
+.screenshot-block--wide img {
+    max-height: 700px;
 }
 
 .screenshot-block h2 {
@@ -641,26 +659,53 @@ dialog#screenshot-zoom img {
     font-weight: 600;
 }
 
-/* ---- Accessibility banner ---- */
-
-.a11y-banner {
-    background: var(--panel);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 3rem 2rem;
+.screenshot-callout {
+    max-width: 700px;
+    margin: 2rem auto 0;
     text-align: center;
 }
 
-.a11y-banner p {
-    max-width: 700px;
+.screenshot-callout h2 {
+    margin-bottom: 1rem;
+}
+
+.screenshot-callout p {
     margin: 0 auto;
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.8;
 }
 
-.a11y-banner strong {
+.screenshot-callout strong {
     color: var(--text);
+}
+
+.screenshot-callout .finish-kicker {
+    color: var(--text);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.laforge-glyph {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 1rem auto 1.25rem;
+}
+
+.download-category {
+    color: var(--text-dim);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.download-platform {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    margin: 0 auto 1.5rem;
+    max-width: 700px;
 }
 
 /* ---- Footer ---- */
@@ -746,7 +791,7 @@ footer {
     #download { padding-bottom: 2rem; }
     #pricing { padding-top: 2.5rem; }
     .hero { padding: 7.5rem 1.25rem 3rem; }
-    .hero-logo { width: min(280px, 70vw); height: auto; }
+    .hero-logo { width: min(240px, 62vw); height: auto; }
     .pricing-cards { grid-template-columns: 1fr; }
     .community-grid { grid-template-columns: 1fr; }
 }
@@ -759,7 +804,7 @@ footer {
     font-weight: var(--heading-weight);
     color: var(--text-dim);
     letter-spacing: var(--micro-heading-letter-spacing);
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     min-height: 1.5em;
     transition: opacity 0.5s;
 }
@@ -809,7 +854,7 @@ footer {
     </a>
     <div class="nav-right">
         <label class="lang-switch" for="lang-select">
-            <span id="lang-switch-label" class="lang-switch-label">Język</span>
+            <span id="lang-switch-label" class="lang-switch-label">Language</span>
             <select id="lang-select" class="lang-select" aria-label="Language">
                 <option value="en-gb">English (UK)</option>
                 <option value="ja-jp" lang="ja">日本語</option>
@@ -825,11 +870,11 @@ footer {
             </select>
         </label>
         <div class="nav-links">
-            <a id="nav-features" href="#philosophy">Funkcje</a>
+            <a id="nav-features" href="#philosophy">Features</a>
             <a id="nav-pricing" href="#pricing">Pricing</a>
             <a id="nav-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
-            <a id="nav-community" href="#community">Społeczność</a>
-            <a id="nav-download-link" href="#download" class="nav-cta">Zaczynamy</a>
+            <a id="nav-community" href="#community">Community</a>
+            <a id="nav-download-link" href="#download" class="nav-cta">Get TayPE</a>
         </div>
     </div>
 </nav>
@@ -844,27 +889,18 @@ footer {
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
     </picture>
     <h1>TayPE</h1>
-    <p id="hero-descriptor" class="hero-descriptor">Wielościeżkowy DAW dla macOS</p>
     <p class="hero-tagline">
-        <span id="hero-tagline-text">Rzemiosło przed wszystkim. Dostępne od projektowania.</span>
+        <span id="hero-tagline-text">Craft first. Accessible by design.</span>
     </p>
-    <div class="hero-buttons">
-        <a id="hero-cta" href="#download" class="btn-primary">Zaczynamy</a>
+    <div class="hero-philosophy" id="philosophy">
+        <h2 id="philosophy-heading">Make the Record</h2>
+        <p id="philosophy-copy-1">
+            Taylor's Performance Environment exists to help you make the record,
+            not drown in endless options. A multitrack DAW with the soul of a tape
+            machine. Fewer modes, fewer knobs, more truth.
+        </p>
     </div>
-    <p id="hero-platform" class="hero-platform">Multitrack DAW &middot; macOS Monterey+ &middot; Apple Silicon Native + Intel &middot; VST3 host</p>
     <p class="gregism" id="gregism"></p>
-</section>
-
-<hr class="section-divider">
-
-
-<!-- ============================================================ -->
-<!-- Philosophy                                                   -->
-<!-- ============================================================ -->
-
-<section class="philosophy" id="philosophy">
-    <h2 id="philosophy-heading">Stwórz rekord</h2>
-    <p id="philosophy-copy-1">TayPE istnieje, aby pomóc ci skończyć prawdziwe ujęcia, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu. Mniej trybów, mniej gałek, więcej prawdy.</p>
 </section>
 
 <hr class="section-divider">
@@ -878,24 +914,30 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-tape-heading">The Tape</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
-                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
+    <section class="screenshot-callout" id="features">
+        <h2 id="a11y-heading">Built for Everyone</h2>
+        <p id="a11y-copy">
+            <strong>Craft requires access.</strong>
+            <strong>Accessibility is not a feature. It's a foundation.</strong>
+            Because the interface must meet musicians where they are.
+            TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
+            Every state is conveyed with shape and icon, never colour alone.
+            Keyboard shortcuts for every action. For non-visual workflows, MCP through
+            Claude or Codex is the primary interface — voice control included.
+            Native screen-reader support coming in Q3 2026.
+        </p>
+    </section>
     <div class="screenshot-row">
         <figure class="screenshot-block">
-            <h2 id="screenshots-heading">Konsola</h2>
+            <h2 id="screenshots-heading">The Mixing Console</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
-                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
-            </picture>
-        </figure>
-        <figure class="screenshot-block">
-            <h2 id="screenshots-arranger-heading">The Arranger</h2>
-            <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px">
-                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 488px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
+                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -904,28 +946,62 @@ footer {
 <hr class="section-divider">
 
 <!-- ============================================================ -->
-<!-- Accessibility Banner                                         -->
-<!-- ============================================================ -->
-
-<div class="a11y-banner" id="features">
-    <h2 id="a11y-heading">Zbudowane dla wszystkich</h2>
-    <p id="a11y-copy"><strong>Rzemiosło wymaga dostępu.</strong> <strong>Dostępność nie jest funkcją. Jest fundamentem.</strong>Bo interfejs musi spotkać muzyków tam, gdzie są. TayPE celuje w WCAG 2.2 AA wszędzie. Tryb wysokiego kontrastu z proporcjami tekstu 15:1+. Każdy stan jest przekazywany kształtem i ikoną, nigdy samym kolorem. Skróty klawiszowe dla każdej akcji. Dla przepływów niewizualnych, MCP przez Claude lub Codex jest głównym interfejsem — sterowanie głosem włącznie. Natywna obsługa czytników ekranu w III kwartale 2026.</p>
-</div>
-
-<!-- ============================================================ -->
 <!-- Tone Architecture                                            -->
 <!-- ============================================================ -->
 
 <section class="tone-arch" id="tone">
-    <h2 id="tone-heading">Architektura dźwięku</h2>
+    <h2 id="tone-heading">Tone Architecture</h2>
     <p id="tone-intro-1" class="tone-intro">
         TayPE isn't a flat digital mixer.
         Every channel can run through a modelled preamp stage — real hardware character
         captured by Neural Amp Modeler and applied at the source. On the mixbus,
         a modelled summing engine adds console-style saturation, cohesion, and drive.
     </p>
-    <p id="tone-intro-2" class="tone-intro">Bez wtyczek. Emulacja konsoli działa bezpośrednio w silniku audio — współdzielone tensory wag, stan na kanał, zero dodanego opóźnienia. Ta sama filozofia, co DSP przyspieszane sprzętowo, wbudowana w mikser, a nie doklejona.</p>
-    <p id="tone-kicker" class="tone-kicker">Rzemiosło przed wszystkim. Dźwięk w centrum.</p>
+    <p id="tone-intro-2" class="tone-intro">
+        No plugins needed. The console emulation runs
+        directly in the audio engine — shared weight tensors, per-channel state,
+        zero added latency. Same philosophy as hardware-accelerated DSP, built into
+        the mixer, not bolted on.
+    </p>
+    <p id="tone-kicker" class="tone-kicker">Craft first. Tone at the core.</p>
+</section>
+
+<hr class="section-divider">
+
+<section class="screenshots">
+    <div class="screenshot-row screenshot-row--single">
+        <figure class="screenshot-block">
+            <h2 id="screenshots-arranger-heading">The Arranger</h2>
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
+                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </div>
+    <section class="screenshot-callout">
+        <h2 id="finish-heading">Finish Without Leaving the Flow</h2>
+        <p id="finish-kicker" class="finish-kicker">Look. Listen. Adjust. Finish.</p>
+        <picture>
+            <source type="image/webp" srcset="/assets/img/laforge-glyph-256.webp">
+            <img class="laforge-glyph" src="/assets/img/laforge-glyph-256.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+        </picture>
+        <p id="finish-copy">
+            LaForgé is a finishing room and a window onto your mix. The last mile is
+            where many records stall. As loudness comes up and the finish line approaches,
+            stressed mixes begin to reveal themselves. LaForgé helps you reveal what is
+            really there, stay connected to the music, and make the final decisions that
+            turn a mix into a record.
+        </p>
+    </section>
+    <div class="screenshot-row screenshot-row--single">
+        <figure class="screenshot-block screenshot-block--wide">
+            <h2 id="screenshots-laforge-heading">LaForgé</h2>
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-laforge" src="/assets/img/screenshot-laforge-1280.jpg" srcset="/assets/img/screenshot-laforge-640.jpg 640w, /assets/img/screenshot-laforge-960.jpg 960w, /assets/img/screenshot-laforge-1280.jpg 1280w, /assets/img/screenshot-laforge-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-laforge-1920.webp" data-zoom-fallback="/assets/img/screenshot-laforge-1920.jpg" alt="TayPE LaForgé mastering view — limiter, loudness statistics, loudness graph, stereo tools, mixer channels, and master bus" width="1280" height="788" loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </div>
 </section>
 
 <hr class="section-divider">
@@ -935,11 +1011,17 @@ footer {
 <!-- ============================================================ -->
 
 <section id="download" style="text-align: center;">
-    <h2 id="download-heading">Zaczynamy</h2>
-    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">W pełni funkcjonalne Trustware. Bez ograniczeń demo, bez wygaśnięcia, bez szumów.</p>
+    <h2 id="download-heading">Let's Roll</h2>
+    <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+        Fully Functional Trustware. No demo limitations, No expiry, No noise.
+    </p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
-        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.20.0/Taype-0.20.0.pkg" class="btn-primary" target="_blank" rel="noopener">Pobierz teraz</a>
+        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.20.0/Taype-0.20.0.pkg" class="btn-primary" target="_blank" rel="noopener">
+            Download now
+        </a>
     </div>
+    <p id="hero-descriptor" class="download-category">Multitrack DAW for macOS</p>
+    <p id="hero-platform" class="download-platform">macOS Monterey+ &middot; Apple Silicon Native + Intel &middot; VST3 host</p>
 </section>
 
 <hr class="section-divider">
@@ -952,46 +1034,49 @@ footer {
     <h2 id="pricing-heading">Pricing</h2>
 
     <div class="trustware-notice">
-        <h3 id="demo-heading">Sprawa wygląda tak.</h3>
-        <p id="demo-trust-framing">TayPE działa na obopólnym zaufaniu.</p>
-        <p id="demo-what-that-means" class="trustware-meta">Co to znaczy:</p>
+        <h3 id="demo-heading">Here's the deal.</h3>
+        <p id="demo-trust-framing">TayPE runs on two-way trust.</p>
+        <p id="demo-what-that-means" class="trustware-meta">What that means:</p>
         <ul class="trustware-trust-list">
-            <li id="demo-trust-1">Brak subskrypcji</li>
-            <li id="demo-trust-2">Brak DRM</li>
-            <li id="demo-trust-3">Brak limitów funkcji</li>
-            <li id="demo-trust-4">Brak telemetrii</li>
+            <li id="demo-trust-1">No subscriptions</li>
+            <li id="demo-trust-2">No DRM</li>
+            <li id="demo-trust-3">No feature limits</li>
+            <li id="demo-trust-4">No phone home</li>
         </ul>
-        <p id="demo-connector">Jeśli ci pasuje, kup proszę licencję wieczystą. To pozwala TayPE iść naprzód, a bugi iść spać.</p>
+        <p id="demo-connector">If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.</p>
     </div>
 
     <div class="pricing-cards">
         <div class="price-card featured">
-            <h3 id="price-personal-title">Osobisty</h3>
+            <h3 id="price-personal-title">Personal</h3>
             <div class="price">£75</div>
-            <p id="price-personal-note" class="price-note">jednorazowy zakup</p>
+            <p id="price-personal-note" class="price-note">one-time purchase</p>
             <ul>
-                <li id="price-personal-feature-1">Pełna aplikacja, wszystkie funkcje</li>
-                <li id="price-personal-feature-2">2 główne wersje bezpłatnych aktualizacji</li>
+                <li id="price-personal-feature-1">Full application, all features</li>
+                <li id="price-personal-feature-2">2 major versions of free updates</li>
             </ul>
-            <a id="price-personal-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/b1c9ff08-4518-43a2-8d82-8c31bb2fa8f1" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Kup teraz</a>
+            <a id="price-personal-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/b1c9ff08-4518-43a2-8d82-8c31bb2fa8f1" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Buy Now</a>
         </div>
         <div class="price-card">
-            <h3 id="price-commercial-title">Komercyjny</h3>
+            <h3 id="price-commercial-title">Commercial</h3>
             <div class="price">£150</div>
-            <p id="price-commercial-note" class="price-note">jednorazowy zakup</p>
+            <p id="price-commercial-note" class="price-note">one-time purchase</p>
             <ul>
-                <li id="price-commercial-feature-1">Pełna aplikacja, wszystkie funkcje</li>
-                <li id="price-commercial-feature-2">2 główne wersje bezpłatnych aktualizacji</li>
+                <li id="price-commercial-feature-1">Full application, all features</li>
+                <li id="price-commercial-feature-2">2 major versions of free updates</li>
             </ul>
-            <a id="price-commercial-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/c5688bcd-0bdd-40a6-a540-c8d880c66b91" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Kup teraz</a>
+            <a id="price-commercial-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/c5688bcd-0bdd-40a6-a540-c8d880c66b91" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Buy Now</a>
         </div>
     </div>
 
-    <p id="pricing-cadence-note" class="pricing-cadence-note">Wersje główne pojawiają się zazwyczaj raz w roku. Aktualizacje licencji kosztują 25% sugerowanej ceny detalicznej dla obecnych właścicieli.</p>
+    <p id="pricing-cadence-note" class="pricing-cadence-note">
+        Major versions are typically released at a yearly cadence.
+        Subsequent licence upgrades are priced at 25% of RRP for existing owners.
+    </p>
 
     <div class="price-accessibility">
         <p>
-            <span id="accessibility-note">Studenci za darmo. Ulgi dostępnościowe. Po prostu zapytaj.</span>
+            <span id="accessibility-note">Students free. Accessibility concessions. Just ask.</span>
             <br><a id="accessibility-mailto" href="mailto:concessions@ruminantaudioworks.com">concessions@ruminantaudioworks.com</a>
         </p>
     </div>
@@ -1008,18 +1093,20 @@ footer {
 
     <div class="community-grid">
         <div class="community-card">
-            <h3 id="community-card-1-title">Baza wiedzy</h3>
-            <p id="community-card-1-body">Przewodnik użytkownika, samouczki i dokumentacja referencyjna. Wszystko, czego potrzebujesz, aby zacząć i zagłębiać się.</p>
+            <h3 id="community-card-1-title">Knowledge Base</h3>
+            <p id="community-card-1-body">User guide, tutorials, and reference documentation. Everything you need to get started and go deep.</p>
             <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
         </div>
         <div class="community-card">
-            <h3 id="community-card-3-title">Skontaktuj się</h3>
-            <p id="community-card-3-body">Błąd, pytanie, czy po prostu chcesz się przywitać? Napisz do nas &mdash; anonimowo też jest ok, ale zostaw e-mail, jeśli chcesz odpowiedź.</p>
-            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Skontaktuj się &rarr;</a>
+            <h3 id="community-card-3-title">Get in Touch</h3>
+            <p id="community-card-3-body">Bug to report, question, or just want to say hi? Drop us a line &mdash; anonymous is fine, but leave your email if you'd like a reply.</p>
+            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Get in touch &rarr;</a>
         </div>
         <div class="community-card">
-            <h3 id="community-card-4-title">Śledzenie postępu</h3>
-            <p id="community-card-4-body">Aktualizacje programistyczne, sesje studyjne i kulisy Ruminant Audio Works.</p>
+            <h3 id="community-card-4-title">Follow Along</h3>
+            <p id="community-card-4-body">Development updates, studio sessions, and behind-the-scenes from Ruminant Audio Works.</p>
+            <a id="community-card-4-newsletter" href="https://docs.google.com/forms/d/e/1FAIpQLSeIHpJy7bcYi09VlkZ_sK7amYLtec3mPtDL2r2Qc9NUf0RqYw/viewform" class="link-arrow" target="_blank">Newsletter &rarr;</a>
+            <span style="color: var(--text-dim); margin: 0 0.5rem;">&middot;</span>
             <a id="community-card-4-instagram" href="https://instagram.com/ruminantaudioworks" class="link-arrow" target="_blank">Instagram &rarr;</a>
             <br>
             <a id="community-card-4-youtube" href="https://www.youtube.com/@ruminantaudioworks" class="link-arrow" target="_blank">YouTube &rarr;</a>
@@ -1027,9 +1114,9 @@ footer {
             <a id="community-card-4-reddit" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Reddit &rarr;</a>
         </div>
         <div class="community-card">
-            <h3 id="community-card-2-title">Program beta</h3>
-            <p id="community-card-2-body">Wczesne buildy i release candidates zanim zmieni się publiczny download.</p>
-            <a id="community-card-2-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="link-arrow" target="_blank" rel="noopener">Dołącz do programu beta &rarr;</a>
+            <h3 id="community-card-2-title">Beta Programme</h3>
+            <p id="community-card-2-body">Get early builds and release candidates before the public download moves.</p>
+            <a id="community-card-2-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="link-arrow" target="_blank" rel="noopener">Join the beta programme &rarr;</a>
         </div>
     </div>
 </section>
@@ -1047,12 +1134,13 @@ footer {
         <span>Ruminant Audio Works</span>
     </div>
     <div class="footer-links">
-        <a id="footer-features" href="#features">Funkcje</a>
+        <a id="footer-features" href="#features">Features</a>
         <a id="footer-pricing" href="#pricing">Pricing</a>
-        <a id="footer-download" href="#download">Zaczynamy</a>
+        <a id="footer-download" href="#download">Let's Roll</a>
         <a id="footer-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
-        <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Społeczność</a>
-        <a id="footer-bug" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Kontakt</a>
+        <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
+        <a id="footer-bug" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Get in Touch</a>
+        <a id="footer-privacy" href="/privacy/">Privacy</a>
     </div>
     <p id="footer-copy" class="footer-copy">
         &copy; 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales.

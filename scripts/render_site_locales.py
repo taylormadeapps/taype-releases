@@ -5,7 +5,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "index.html"
-LOCALES = ["ja-jp", "fr-fr", "de-de", "es-es", "is-is"]
+LOCALES = [
+    "de-de",
+    "el-gr",
+    "es-es",
+    "fr-fr",
+    "is-is",
+    "it-it",
+    "ja-jp",
+    "nl-nl",
+    "pl-pl",
+    "uk-ua",
+]
 
 
 def main() -> None:
