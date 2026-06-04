@@ -42,9 +42,10 @@ If that fresh print rings longer than the previous one, TayPE lets the clip
 grow to keep the new tail instead of chopping it back to the old right edge.
 The dialog now groups file references into a collapsible **Media Paths**
 section that starts closed so the main clip controls stay up top. `Clip Audio
-Actual` and `Clip MIDI Actual` show the current live truth as absolute paths,
-`Reel Store Audio` and `Reel Store MIDI` stay relative to the reel bundle so
-you see paths like `media/imports-midi/...`, and `Import Source` stays
+Actual` and `Clip MIDI Actual` show the current live truth only when it differs
+from the matching reel-store row, so ordinary duplicates read `n/a` instead of
+repeating the same bundle path. `Reel Store Audio` and `Reel Store MIDI` stay
+relative so you see paths like `media/imports-midi/...`, and `Import Source` stays
 absolute when the clip came from outside the reel. When the section is closed,
 the file rows stay hidden instead of sitting there half-open. Missing rows
 read `n/a` instead of disappearing.
