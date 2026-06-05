@@ -398,21 +398,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    /* Match the paragraph max-width used by .philosophy p and
-       .tone-arch .tone-intro so screenshots aren't visibly narrower
-       than the surrounding body copy. The two-image row wraps to
-       stacked at this width because 2×700px exceeds section inner
-       width. */
-    flex: 0 1 700px;
+    flex: 0 1 1000px;
     max-width: 100%;
-}
-
-.screenshot-block--wide {
-    flex-basis: 1000px;
-}
-
-.screenshot-block--wide img {
-    max-height: 700px;
 }
 
 .screenshot-block h2 {
@@ -425,7 +412,7 @@ h2 {
 }
 
 .screenshot-row img {
-    max-height: 600px;
+    max-height: 700px;
     max-width: 100%;
     width: auto;
     height: auto;
@@ -916,8 +903,8 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-tape-heading">The Tape</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w, /assets/img/screenshot-tape-machine-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w, /assets/img/screenshot-tape-machine-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -946,8 +933,8 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-heading">The Mixing Console</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w, /assets/img/screenshot-mixer-1-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w, /assets/img/screenshot-mixer-1-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -983,8 +970,8 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-arranger-heading">The Arranger</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w, /assets/img/screenshot-mixer-2-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w, /assets/img/screenshot-mixer-2-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -1012,7 +999,7 @@ footer {
 
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
-        <figure class="screenshot-block screenshot-block--wide">
+        <figure class="screenshot-block">
             <h2 id="screenshots-laforge-heading">LaForgé</h2>
             <picture>
                 <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
@@ -1111,16 +1098,6 @@ footer {
 
     <div class="community-grid">
         <div class="community-card">
-            <h3 id="community-card-1-title">Knowledge Base</h3>
-            <p id="community-card-1-body">User guide, tutorials, and reference documentation. Everything you need to get started and go deep.</p>
-            <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
-        </div>
-        <div class="community-card">
-            <h3 id="community-card-3-title">Get in Touch</h3>
-            <p id="community-card-3-body">Bug to report, question, or just want to say hi? Drop us a line &mdash; anonymous is fine, but leave your email if you'd like a reply.</p>
-            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Get in touch &rarr;</a>
-        </div>
-        <div class="community-card">
             <h3 id="community-card-4-title">Follow Along</h3>
             <p id="community-card-4-body">Development updates, studio sessions, and behind-the-scenes from Ruminant Audio Works.</p>
             <a id="community-card-4-newsletter" href="https://docs.google.com/forms/d/e/1FAIpQLSeIHpJy7bcYi09VlkZ_sK7amYLtec3mPtDL2r2Qc9NUf0RqYw/viewform" class="link-arrow" target="_blank">Newsletter &rarr;</a>
@@ -1130,6 +1107,16 @@ footer {
             <a id="community-card-4-youtube" href="https://www.youtube.com/@ruminantaudioworks" class="link-arrow" target="_blank">YouTube &rarr;</a>
             <span style="color: var(--text-dim); margin: 0 0.5rem;">&middot;</span>
             <a id="community-card-4-reddit" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Reddit &rarr;</a>
+        </div>
+        <div class="community-card">
+            <h3 id="community-card-3-title">Get in Touch</h3>
+            <p id="community-card-3-body">Bug to report, question, or just want to say hi? Drop us a line &mdash; anonymous is fine, but leave your email if you'd like a reply.</p>
+            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Get in touch &rarr;</a>
+        </div>
+        <div class="community-card">
+            <h3 id="community-card-1-title">Knowledge Base</h3>
+            <p id="community-card-1-body">User guide and reference documentation. Everything you need to get started and go deep.</p>
+            <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-2-title">Beta Programme</h3>
