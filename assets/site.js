@@ -2048,6 +2048,18 @@ let currentLocaleData = locales["en-gb"];
 let currentGregisms = currentLocaleData.gregisms;
 let gregismIndex = 0;
 
+function pickRandomGregismIndex(previousIndex = -1) {
+    const count = currentGregisms.length;
+    if (count <= 1) return 0;
+
+    let nextIndex = Math.floor(Math.random() * count);
+    if (nextIndex === previousIndex) {
+        nextIndex = (nextIndex + 1 + Math.floor(Math.random() * (count - 1))) % count;
+    }
+
+    return nextIndex;
+}
+
 function normalizeLocale(value) {
     if (!value) return null;
     const normalised = String(value).trim().toLowerCase().replace(/_/g, "-");
@@ -2130,7 +2142,7 @@ function applyLocale(localeKey) {
     currentLocale = locales[localeKey] ? localeKey : "en-gb";
     currentLocaleData = locales[currentLocale];
     currentGregisms = currentLocaleData.gregisms;
-    gregismIndex = Math.floor(Math.random() * currentGregisms.length);
+    gregismIndex = pickRandomGregismIndex(gregismIndex);
 
     docEl.lang = currentLocaleData.lang;
     docEl.dataset.fontMode = currentLocaleData.fontMode;
@@ -2233,7 +2245,7 @@ if (gregismEl) {
     window.setInterval(() => {
         gregismEl.style.opacity = "0";
         window.setTimeout(() => {
-            gregismIndex = (gregismIndex + 1) % currentGregisms.length;
+            gregismIndex = pickRandomGregismIndex(gregismIndex);
             showGregism();
             gregismEl.style.opacity = "1";
         }, 500);
