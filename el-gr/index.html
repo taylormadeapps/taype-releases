@@ -653,6 +653,10 @@ dialog#screenshot-zoom img {
     text-align: center;
 }
 
+.screenshot-callout--long {
+    max-width: 850px;
+}
+
 .screenshot-callout h2 {
     margin-bottom: 1rem;
 }
@@ -662,6 +666,10 @@ dialog#screenshot-zoom img {
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.screenshot-callout p + p {
+    margin-top: 1rem;
 }
 
 .screenshot-callout strong {
@@ -979,20 +987,15 @@ footer {
 
 <hr class="section-divider">
 
-<section class="screenshot-callout">
-    <h2 id="finish-heading">Finish Without Leaving the Flow</h2>
-    <p id="finish-kicker" class="finish-kicker">Look. Listen. Adjust. Finish.</p>
-    <picture>
-        <source type="image/webp" srcset="/assets/img/laforge-glyph-256.webp">
-        <img class="laforge-glyph" src="/assets/img/laforge-glyph-256.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
-    </picture>
-    <p id="finish-copy">
-        LaForgé is a finishing room and a window onto your mix. The last mile is
-        where many records stall. As loudness comes up and the finish line approaches,
-        stressed mixes begin to reveal themselves. LaForgé helps you reveal what is
-        really there, stay connected to the music, and make the final decisions that
-        turn a mix into a record.
-    </p>
+<section class="screenshot-callout screenshot-callout--long" id="arranger-flow">
+    <h2 id="arranger-flow-heading">Built for finishing records, not just sketching ideas</h2>
+    <p id="arranger-flow-copy-1">TayPE’s arranger is deliberately lean, but it’s not a toy.</p>
+    <p id="arranger-flow-copy-2">Edit audio directly on the timeline. Move, trim and shape performances with the speed and precision demanded by professional recording workflows, without getting buried under windows, dialogs and endless configuration.</p>
+    <p id="arranger-flow-copy-3">Record software instruments as audio while keeping the original MIDI performance attached as a sidecar. Capture the sound that inspired the take while retaining the freedom to change notes, timing or instrumentation later.</p>
+    <p id="arranger-flow-copy-4">Commit to sound without committing forever.</p>
+    <p id="arranger-flow-copy-5">If Melodyne is installed, it’s available wherever you need it. Open any clip and start editing immediately — no dedicated tracks, no plugin management, no setup ritual.</p>
+    <p id="arranger-flow-copy-6">TayPE includes the “Industry Standard” keybinding profile for producers whose workflows are already committed to wetware. Prefer something else? Every shortcut is configurable, so you’re free to build your own.</p>
+    <p id="arranger-flow-copy-7">The result is a workflow that stays creative when you’re writing and stays flexible when you’re producing.</p>
 </section>
 
 <hr class="section-divider">
@@ -1007,6 +1010,24 @@ footer {
             </picture>
         </figure>
     </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="screenshot-callout">
+    <h2 id="finish-heading">Finish Without Leaving the Flow</h2>
+    <p id="finish-kicker" class="finish-kicker">Look. Listen. Adjust. Finish.</p>
+    <picture>
+        <source type="image/webp" srcset="/assets/img/laforge-glyph-256.webp">
+        <img class="laforge-glyph" src="/assets/img/laforge-glyph-256.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+    </picture>
+    <p id="finish-copy">
+        LaForgé is a finishing room and a window onto your mix. The last mile is
+        where many records stall. As loudness comes up and the finish line approaches,
+        stressed mixes begin to reveal themselves. LaForgé helps you reveal what is
+        really there, stay connected to the music, and make the final decisions that
+        turn a mix into a record.
+    </p>
 </section>
 
 <hr class="section-divider">
