@@ -117,8 +117,8 @@ Compressor fields are also supported through `set_track`: `comp_enabled`,
 `comp_threshold`, `comp_ratio`, `comp_attack_ms`, `comp_release_ms`,
 `comp_knee`, `comp_makeup_gain`, `comp_wet_dry_mix`, `comp_detector`, `comp_release_mode`, `comp_log_release`, and
 `comp_sidechain_low_cut` (fixed `80 Hz`, 12 dB/oct high-pass on the detector sidechain).
-`comp_attack_ms` accepts **0.1–100 ms**.
-`comp_knee` accepts **0–120 dB**.
+`comp_attack_ms` accepts **0.1-100 ms**.
+`comp_knee` accepts **0-120 dB**.
 
 Preamp fields also include `preamp_wet_dry_mix` from **0.0** dry to **1.0**
 wet. Bypass and 0% wet ramp to the latency-aligned dry path without removing

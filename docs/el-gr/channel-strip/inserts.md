@@ -102,7 +102,7 @@ Narrow strips keep the meters visible but hide the block controls.
 
 ## Plugin Sandboxing
 
-Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running — the slot shows an error state and you can reload or remove it.
+Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running - the slot shows an error state and you can reload or remove it.
 
 The crash alert names the culprit plugin when possible. If TayPE can't attribute it, it says the culprit is unknown and keeps audio running dry.
 

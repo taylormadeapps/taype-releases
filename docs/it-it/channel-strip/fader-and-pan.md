@@ -1,7 +1,7 @@
 # Cursore e Panorama
 
-- **Cursore** — 0 to +12 dB range. Trascina vertically.
-- **Pan** — full left to full right. Equal-power panning law so the centre doesn't sound louder than the sides.
+- **Cursore** - 0 to +12 dB range. Trascina vertically.
+- **Pan** - full left to full right. Equal-power panning law so the centre doesn't sound louder than the sides.
 
 The fader has a detent at unity (0 dB) che snaps forgivingly. Trascina to just above or below the line and TayPE drops it onto exact unity, then lets go again as soon as you keep moving.
 

@@ -71,9 +71,9 @@ choose what **Return** does when it stops an ordinary take:
 that right-click menu still works even when the record button itself is
 currently disabled for take admission.
 
-- **Return** — commit the pass, stop transport, and go back to the pass start.
-- **Punch** — commit the pass and keep playback rolling.
-- **Do-Over** — commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
+- **Return** - commit the pass, stop transport, and go back to the pass start.
+- **Punch** - commit the pass and keep playback rolling.
+- **Do-Over** - commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
 
 Choose **Sooper-Looper** from the loop button context menu or
 **Transport > Loop Record Mode**. With loop braces active, **Return** then

@@ -13,7 +13,7 @@
   * [Trim](channel-strip/trim.md)
   * [Preamp](channel-strip/preamp.md)
   * [Filters (HP/LP)](channel-strip/filters.md)
-  * [EQ — 3-Band Parametric](channel-strip/eq.md)
+  * [EQ - 3-Band Parametric](channel-strip/eq.md)
   * [Compressor](channel-strip/compressor.md)
   * [Insert Slots](channel-strip/inserts.md)
   * [NAM Summing (Master Bus)](channel-strip/nam-summing.md)

@@ -1,4 +1,4 @@
-# EQ — paramétrica de 3 bandas
+# EQ - paramétrica de 3 bandas
 
 Una EQ paramétrica de 3 bandas inspirada en Neve.
 

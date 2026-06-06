@@ -26,18 +26,18 @@ The PREAMP header always carries its own power button. That button bypasses or
 re-enables the whole preamp section during playback without changing the
 selected mode, so Clean stays Clean and Modern or NAM keep their settings.
 
-- **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
-- **Oversampling** — always on for the Modern saturator.
-- **Auto-gain (AG)** — compensates for loudness changes from drive so you can compare tone instead of volume.
+- **Drive** - how hard you push the signal into the clipper. Higher values mean more saturation.
+- **Oversampling** - always on for the Modern saturator.
+- **Auto-gain (AG)** - compensates for loudness changes from drive so you can compare tone instead of volume.
 
 ## ToTaype
 
 The tape mode ports the ToTape9-inspired DSP into TayPE's preamp lane. It keeps the same compact control language as Modern, but swaps the voicing over to tape behaviour.
 
-- **Drive** — pushes the input harder into the tape stage.
-- **Tape speed** — cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` gives the grittiest low-speed colour without maxing the contour.
-- **HF contour** — fixed internally to the ToTaype lane. There is no separate Dubly switch on the strip now.
-- **Output gain** — trims the level leaving the tape stage.
+- **Drive** - pushes the input harder into the tape stage.
+- **Tape speed** - cycles `7.5`, `15`, and `30` ips. The pill is red at `7.5`, green at `15`, and blue at `30`. `30` stays the brightest and tightest, `15` is the middle tape lane, and `7.5` gives the grittiest low-speed colour without maxing the contour.
+- **HF contour** - fixed internally to the ToTaype lane. There is no separate Dubly switch on the strip now.
+- **Output gain** - trims the level leaving the tape stage.
 
 ## MD510
 
@@ -45,7 +45,7 @@ MD510 is a MiniDisc-player-inspired colour mode for subtle finish and peak civil
 
 ## NAM Profile
 
-Load a Neural Amp Modeler profile of a real preamp — Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
+Load a Neural Amp Modeler profile of a real preamp - Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
 
 Click the profile pill to open the Profile Browser, where you can search TONE3000's online library or pick from locally saved profiles.
 
@@ -76,7 +76,7 @@ Downloading from TONE3000 pulls the whole package, not just one file. Once the p
 
 ### NAM Controls
 
-- **Trim** is always visible and always pre-NAM — higher trim drives the model harder, like pushing a real preamp.
+- **Trim** is always visible and always pre-NAM - higher trim drives the model harder, like pushing a real preamp.
 - **Drive** still applies before the NAM model itself, from 0 to +18 dB, even when **NAM AMX Acceleration** is grouping multiple strips behind the scenes, so grouped NAM tracks react to drive the same way as standalone ones.
 - **Output Gain** trims the level after the model from -18 to +12 dB.
 - **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
@@ -90,7 +90,7 @@ Downloaded packages keep their package and model metadata, so the strip and brow
 
 If a reel opens with a missing TONE3000-backed preamp or summing profile, TayPE stops and asks whether to **Download** the missing package or **Skip** it. Skip keeps the clean fallback alive and the profile stays marked offline until the model is restored.
 
-You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.
+You can switch a strip to NAM mode before choosing a profile - TayPE shows a warning and stays clean until a model is loaded.
 
 ## XTALK
 

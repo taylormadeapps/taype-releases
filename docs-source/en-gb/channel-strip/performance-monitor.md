@@ -15,22 +15,22 @@ The **Lvl** column shows routing depth from master (L0 = master, deeper levels f
 Stage colour bands are per-node hints:
 
 - Green: < 12%
-- Amber: 12–25%
+- Amber: 12-25%
 - Red: > 25%
 
-These are per-track hints, not a global overload alarm — use the top DSP gauge for that.
+These are per-track hints, not a global overload alarm - use the top DSP gauge for that.
 
 ## Session Summary
 
 The summary includes:
 
-- **Critical path (est)** — the longest active dependency chain in the current block
-- **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
-- **Software monitor** — the current monitor reference latency plus how many live monitored paths are active
-- **Host CPU** — total TayPE process usage across all logical cores (0–100%)
-- **NAM preamp** — a per-group list showing each batch's channel count plus whether it ran inline or on a worker
-- **Preamp topology** — NAM batches show as per-group rows, while Modern, ToTaype, and MD510 worker preamps show as `W1`, `W2`, etc. so you can see which assigned worker lane each non-NAM set landed on
-- **Master true summing** — grouped Classic/ToTaype/MD510 true-summing lanes, including channel count and inline/worker dispatch
+- **Critical path (est)** - the longest active dependency chain in the current block
+- **Scheduler** - levels, max width, workers used, utilisation, and compute/wait/merge timing
+- **Software monitor** - the current monitor reference latency plus how many live monitored paths are active
+- **Host CPU** - total TayPE process usage across all logical cores (0-100%)
+- **NAM preamp** - a per-group list showing each batch's channel count plus whether it ran inline or on a worker
+- **Preamp topology** - NAM batches show as per-group rows, while Modern, ToTaype, and MD510 worker preamps show as `W1`, `W2`, etc. so you can see which assigned worker lane each non-NAM set landed on
+- **Master true summing** - grouped Classic/ToTaype/MD510 true-summing lanes, including channel count and inline/worker dispatch
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 

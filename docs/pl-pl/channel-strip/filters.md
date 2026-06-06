@@ -4,8 +4,8 @@ High-pass and low-pass filters for cleaning up the frequency extremes. These hav
 
 | Filtr | Domyślne | Range |
 |--------|---------|-------|
-| High-pass | 30 Hz | 20 – 1,000 Hz |
-| Low-pass | 18,000 Hz | 2,000 – 20,000 Hz |
+| High-pass | 30 Hz | 20 - 1,000 Hz |
+| Low-pass | 18,000 Hz | 2,000 - 20,000 Hz |
 
 The high-pass is your rumble killer. The low-pass tames harshness up top.
 Both are 12 dB/oct second-order curves with a small fixed resonant lift at

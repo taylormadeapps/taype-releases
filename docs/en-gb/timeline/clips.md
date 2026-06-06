@@ -21,15 +21,15 @@ bar, stopping early at the next clip boundary. With loop playback on and the
 click inside the loop braces, TayPE fills the empty loop gap around the click,
 bounded by the loop braces and neighbouring clip edges.
 
-Double-click a clip to open **Taype — Clip Properties**. That's where you rename or
+Double-click a clip to open **Taype - Clip Properties**. That's where you rename or
 recolour or disable the clip, inspect its source paths, reveal those files in
 Finder from the little open icons, and, for MIDI-origin clips, use **Edit MIDI** to open
-TayPE's **Taype — MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
+TayPE's **Taype - MIDI Clip Editor** or **Re-render from MIDI** to print a fresh render
 through the clip's current instrument. For comp takes, that means the
 instrument on the parent comp track, not the child take lane. The same dialog
 now shows the clip's current source window, stretch ratio, and offline pitch in **semitones** plus
 **cents**, with an **Apply** button beside those pitch fields. If the clip you
-double-click is part of the current multi-selection, **Taype — Clip Properties**
+double-click is part of the current multi-selection, **Taype - Clip Properties**
 flips into a batch mode: clip colour and the disable toggle still edit the
 whole selection, the pitch fields stay live as **deltas** added onto each
 selected clip, and the per-clip name, source, and MIDI actions are greyed out.
@@ -75,21 +75,21 @@ While Melodyne is open, TayPE lets you hear the live edit through the main
 transport.
 If you select a different clip, TayPE auto-commits the current Melodyne work,
 closes that session, and reopens Melodyne on the newly selected clip. Ordinary
-focus changes do not close Melodyne, but Melodyne and the **Taype — MIDI Clip Editor** are
+focus changes do not close Melodyne, but Melodyne and the **Taype - MIDI Clip Editor** are
 globally mutually exclusive, so if one is open the other will not launch until
 it closes. Clips with committed Melodyne work also
 show a small tuning-fork glyph in the clip pill; double-click that glyph to
 open Melodyne directly. If a reel arrives from another system with committed
 Melodyne audio but Melodyne is not installed here, TayPE still shows the glyph
 so the clip's state is honest, hides **Edit in Melodyne**, and keeps **Revert
-Melodyne** available in **Taype — Clip Properties**.
+Melodyne** available in **Taype - Clip Properties**.
 
-## Taype — MIDI Clip Editor
+## Taype - MIDI Clip Editor
 
-**Cmd+double-click** a MIDI-origin clip to open the floating **Taype — MIDI
+**Cmd+double-click** a MIDI-origin clip to open the floating **Taype - MIDI
 Clip Editor**. Double-clicking the note glyph does the same thing, and that
 launch stays live during playback. A regular double-click on the clip body
-still opens **Taype — Clip Properties**.
+still opens **Taype - Clip Properties**.
 
 This phase is melodic-first. The editor opens around the clip's used note
 range, gives you a proper piano keyboard down the left edge, and leaves
@@ -280,7 +280,7 @@ still wraps the whole move as one undo step.
 
 Hover near the lower half of the left or right edge of a clip until the cursor changes to a resize arrow. Drag to trim.
 
-This is non-destructive — you're just changing which portion of the audio file is visible.
+This is non-destructive - you're just changing which portion of the audio file is visible.
 If the clip you grabbed is part of the current selection, TayPE trims the whole
 selected set with the same edge delta. Left trims move each clip's start and
 clip-start offset together, right trims resize the whole set together, and if
@@ -316,10 +316,10 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 
 ## Clipboard
 
-- **Cmd+X** — cut the selected clip set
-- **Cmd+C** — copy the selected clip set
-- **Cmd+V** — paste the copied clip set at the tape head
-- **D** — duplicate the selected clip set back-to-back
+- **Cmd+X** - cut the selected clip set
+- **Cmd+C** - copy the selected clip set
+- **Cmd+V** - paste the copied clip set at the tape head
+- **D** - duplicate the selected clip set back-to-back
 
 When more than one clip is in the clipboard or duplicate set, TayPE preserves
 the spacing between them. Paste uses the selected track as the anchor for the
@@ -333,12 +333,12 @@ clips to one new stereo stem track in real time. TayPE plays the selected
 range, records the summed channel output to the new stem, then disables the
 source clips when the pass is done. Before the pass starts, TayPE asks you to
 confirm that those selected clips will be disabled and reminds you that bounce
-consolidates audio only — no MIDI stem is created.
+consolidates audio only - no MIDI stem is created.
 
 Press **Cmd+B** or choose **Tracks -> Bounce Tracks to Stem** to print the
 selected tracks to one new stereo stem track in real time. When the pass
 completes, TayPE archives those source tracks. That confirm also spells out
-that bounce consolidates audio only — no MIDI stem is created.
+that bounce consolidates audio only - no MIDI stem is created.
 
 If the selection spans more than one track, TayPE still makes one stem track
 containing the full summed result. One **Cmd+Z** removes the stem and puts

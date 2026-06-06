@@ -16,13 +16,13 @@ Hold **Cmd** while dragging a clip to copy it. The original stays put and a dupl
 
 ## Splitting
 
-Wybierz a clip, position the tape head where you want the split, and press **S**. The clip divides into two at that point. Both halves reference the same audio file — nothing is destroyed.
+Wybierz a clip, position the tape head where you want the split, and press **S**. The clip divides into two at that point. Both halves reference the same audio file - nothing is destroyed.
 
 ## Trimming
 
 Hover near the left or right edge of a clip until the cursor changes to a resize arrow. Drag to trim.
 
-This is non-destructive — you're just changing which portion of the audio file is visible.
+This is non-destructive - you're just changing which portion of the audio file is visible.
 
 ## Wzmocnienie and Fades
 
@@ -40,7 +40,7 @@ Drag vertically anywhere in the overlap region to shape the curve. Both sides mo
 
 ## Clipboard
 
-- **Cmd+X** — cut (copy and delete)
-- **Cmd+C** — copy
-- **Cmd+V** — paste at the tape head position on the selected track
-- **Cmd+D** — duplicate back-to-back (immediately after the original)
+- **Cmd+X** - cut (copy and delete)
+- **Cmd+C** - copy
+- **Cmd+V** - paste at the tape head position on the selected track
+- **Cmd+D** - duplicate back-to-back (immediately after the original)

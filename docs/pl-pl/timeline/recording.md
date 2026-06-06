@@ -30,7 +30,7 @@ przez **Record** albo **Zatrzymaj**.
 
 ## Wejście and Wyjście Routing
 
-**Wejście** — click the input label in the track header.
+**Wejście** - click the input label in the track header.
 
 - Audio tracks (no instrument insert): audio inputs only (Domyślne, Brak, mono channels, stereo pairs).
 - Instrument tracks (instrument insert present): MIDI inputs only (Wszystkie MIDI, Virtual Keyboard, hardware MIDI devices, Brak).
@@ -38,8 +38,8 @@ przez **Record** albo **Zatrzymaj**.
 
 When a track switches into instrument mode, input routes automatically change to **Wszystkie MIDI**. When it switches back, MIDI routes reset to default audio input.
 
-**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
+**MON** - click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
 
-**Wyjście** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
+**Wyjście** - click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 
-If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out — the setting is preserved until you plug it back in.
+If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out - the setting is preserved until you plug it back in.

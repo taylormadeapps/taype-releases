@@ -1,20 +1,20 @@
-# EQ — 3-Band Parametric
+# EQ - 3-Band Parametric
 
 A 3-band Neve-family parametric EQ. Low and High each avere:
 
-- **Frequenza** — where the band is centred
-- **Guadagno** — boost or cut, da -18 dB to +18 dB
-- **Shelf/Bell toggle** — switches between a shelf curve and a bell (peaking) curve
-- **Wide/Narrow toggle** — wider or tighter bandwidth
+- **Frequenza** - where the band is centred
+- **Guadagno** - boost or cut, da -18 dB to +18 dB
+- **Shelf/Bell toggle** - switches between a shelf curve and a bell (peaking) curve
+- **Wide/Narrow toggle** - wider or tighter bandwidth
 
 Mid keeps the same frequency, gain, and `HI-Q` contour control, but it stays a
 bell in the supported UI path.
 
 | Band | Default Frequenza | Range |
 |------|------------------|-------|
-| Low | 220 Hz | 60 – 800 Hz |
-| Mid | 1,200 Hz | 300 – 8,000 Hz |
-| High | 3,200 Hz | 1,500 – 16,000 Hz |
+| Low | 220 Hz | 60 - 800 Hz |
+| Mid | 1,200 Hz | 300 - 8,000 Hz |
+| High | 3,200 Hz | 1,500 - 16,000 Hz |
 
 Low and High default to shelf mode. Mid defaults to bell and stays che way.
 

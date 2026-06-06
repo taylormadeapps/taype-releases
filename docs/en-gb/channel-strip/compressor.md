@@ -23,7 +23,7 @@ The top row shows **Threshold**, **Ratio**, and **Makeup**. The second row shows
 
 Between the lower-row knobs and the gain-reduction meter sits a vertical button stack: the top row is labelled **DETECTOR**, and its button cycles through **FET**, **VCA**, and **OPTO**. **VCA** is the default. The detector button is colour-coded too: **FET** shows red, **VCA** blue, and **OPTO** green, all with white text. The middle row enables a fixed **80 Hz, 12 dB/oct** sidechain low-cut, and the lower button cycles release mode on left-click and opens direct mode selection on right-click: **OFF**, **LAZY**, **KEEN**.
 
-The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1–1.0 ms** in 0.1 ms steps, then **1–100 ms** in 1 ms steps.
+The attack knob starts at **0.1 ms**. The fast end of the dial covers **0.1-1.0 ms** in 0.1 ms steps, then **1-100 ms** in 1 ms steps.
 
 ## Compressor Visualiser
 
@@ -56,4 +56,4 @@ The GR display is a vertical top-down bar with a tick scale beside it. No fill m
 
 Enabled by default. When the compressor is working harder, the release time stretches automatically.
 
-This gives a more musical, breathing feel — the compressor recovers faster on gentle compression and slower on heavy hits, which prevents pumping on big transients. Turn it off for strict, clinical compression.
+This gives a more musical, breathing feel - the compressor recovers faster on gentle compression and slower on heavy hits, which prevents pumping on big transients. Turn it off for strict, clinical compression.

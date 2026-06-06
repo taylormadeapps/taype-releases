@@ -1,12 +1,12 @@
 # The Oś czasu
 
-The timeline is where you see your session laid out in time. Ścieżki run top to bottom, time runs left to right. The tape head — a vertical line — shows the current playback position.
+The timeline is where you see your session laid out in time. Ścieżki run top to bottom, time runs left to right. The tape head - a vertical line - shows the current playback position.
 
 ![Oś czasu overview](../../assets/img/docs/timeline-overview.png)
 
 ## Layout
 
-The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio.
+The left column shows **track headers** with controls. The main area shows **clips** - rectangles filled with waveforms representing your audio.
 
 When you select a track, TayPE keeps the row highlight restrained: a faint fill
 with soft guide lines at the top and bottom of the selected lane.
@@ -25,7 +25,7 @@ The ruler header also carries the global **A** automation toggle. Left-click
 it to switch the whole timeline between clip editing and automation view.
 Right-click it to choose **Głośność**, **Panorama**, or **Szerokość**.
 
-Dalej to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active — right-click it to abort the lock.
+Dalej to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active - right-click it to abort the lock.
 
 With **Pomoc → Popup Pomoc** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
 
@@ -33,16 +33,16 @@ With **Pomoc → Popup Pomoc** enabled, hover help appears after about **0.7 sec
 
 The left side of the ruler has quick controls:
 
-- **Pasek kanału** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
-- **+** — add a new track
-- **A** — toggle automation view; right-click chooses **Głośność**, **Panorama**, or **Szerokość**
-- **Metronome** — toggle click on/off
-- **Przyciąganie** — toggle grid snap
-- **Ruler Mode** — switch between time and bars|beats
+- **Pasek kanału** - show/hide the channel strip side panel; track selection updates it only when the panel is already open
+- **+** - add a new track
+- **A** - toggle automation view; right-click chooses **Głośność**, **Panorama**, or **Szerokość**
+- **Metronome** - toggle click on/off
+- **Przyciąganie** - toggle grid snap
+- **Ruler Mode** - switch between time and bars|beats
 
 Right-click in the upper ruler area to open the zero-point menu:
 
-- **Set 0 at Playhead** — make the current tape-head position the selected Wytnij's new `0:00`
-- **Resetuj 0 to Start** — restore that Wytnij's zero point to the beginning
+- **Set 0 at Playhead** - make the current tape-head position the selected Wytnij's new `0:00`
+- **Resetuj 0 to Start** - restore that Wytnij's zero point to the beginning
 
 The lower ruler tick band keeps the existing right-drag pan/zoom gesture.

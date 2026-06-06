@@ -1,26 +1,26 @@
 # Voice Control
 
 TayPE can be controlled entirely by voice when connected to a Claude
-session via MCP. You speak natural commands — "solo track one", "turn
-down the guitars", "add a new track" — and they're interpreted and
+session via MCP. You speak natural commands - "solo track one", "turn
+down the guitars", "add a new track" - and they're interpreted and
 executed on TayPE automatically.
 
 No special syntax. No menu diving. Just say what you want done.
 
 This works through a macOS Shortcut that captures your speech, sends it
 to Claude, and Claude talks to TayPE. Everything runs locally on your
-Mac — your voice never leaves your machine.
+Mac - your voice never leaves your machine.
 
 ## Two Modes
 
 Voice control has two modes, each with its own keyboard shortcut:
 
-**Studio mode** — for quick commands while you're working in TayPE.
+**Studio mode** - for quick commands while you're working in TayPE.
 You press the shortcut, speak, and focus snaps back to TayPE. You never
 leave your session. Best for things like "play", "stop", "solo track
 two", "undo that".
 
-**Brain mode** — for when you want to have a conversation with Claude.
+**Brain mode** - for when you want to have a conversation with Claude.
 You press a different shortcut, speak, and focus stays on the Claude
 chat so you can read the response. Best for questions like "how should
 I route these stems?" or "what's a good compressor setting for a
@@ -164,7 +164,7 @@ You can say anything in natural language. Here are some examples:
 - "start recording on track two at bar five"
 - "set the tempo to 95"
 
-You don't need to know the exact parameter names or values — just
+You don't need to know the exact parameter names or values - just
 describe what you want and Claude figures out the rest.
 
 ## Hardware Controllers
@@ -172,9 +172,9 @@ describe what you want and Claude figures out the rest.
 You can map the keyboard shortcuts to physical buttons for a true
 hands-free setup:
 
-- **Stream Deck** — assign a button to each shortcut
-- **Foot pedal** — keeps both hands on your instrument
-- **Any USB macro pad** — if it can send a key combo, it works
+- **Stream Deck** - assign a button to each shortcut
+- **Foot pedal** - keeps both hands on your instrument
+- **Any USB macro pad** - if it can send a key combo, it works
 
 ## Full Hands-Free (No Keyboard)
 
@@ -188,16 +188,16 @@ features that can trigger these shortcuts by voice alone:
    become the command
 
 macOS also supports head tracking and switch control for users with
-motor limitations — both can trigger keyboard shortcuts through
+motor limitations - both can trigger keyboard shortcuts through
 adaptive input devices.
 
 ## Tips
 
-- You don't need to say "tape" — the shortcut adds it automatically
+- You don't need to say "tape" - the shortcut adds it automatically
 - Speak clearly, but don't worry about perfect grammar or punctuation
 - If dictation gets a word wrong, Claude is usually smart enough to
   figure out what you meant
-- Keep one Claude chat session open with TayPE connected — if multiple
+- Keep one Claude chat session open with TayPE connected - if multiple
   chats are open, the command might land in the wrong one
 - In a noisy studio, speak closer to your Mac's microphone or use a
   headset mic for better recognition

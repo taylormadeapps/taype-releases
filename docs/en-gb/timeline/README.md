@@ -1,12 +1,12 @@
 # The Timeline
 
-The timeline is where you see your session laid out in time. Tracks run top to bottom, time runs left to right. The tape head — a vertical line — shows the current playback position.
+The timeline is where you see your session laid out in time. Tracks run top to bottom, time runs left to right. The tape head - a vertical line - shows the current playback position.
 
 ![Timeline overview](../../../assets/img/docs/timeline-overview.png)
 
 ## Layout
 
-The left column shows **track headers** with controls. The main area shows **clips** — rectangles filled with waveforms representing your audio. When automation view is on, those same lanes show a breakpoint line over the clips for the chosen parameter.
+The left column shows **track headers** with controls. The main area shows **clips** - rectangles filled with waveforms representing your audio. When automation view is on, those same lanes show a breakpoint line over the clips for the chosen parameter.
 
 In the normal theme, the arrange background is a softer charcoal work surface
 with a quiet tonal falloff, and clip waveforms take their tone from the clip
@@ -90,17 +90,17 @@ exports share the same version sequence.
 
 The left side of the ruler has quick controls:
 
-- **Channel Strip** — show/hide the channel strip side panel; track selection updates it only when the panel is already open
-- **+** — add a new track; if you already have a track selected, the new one drops in immediately after it. If that selected track belongs to a comp group, the new track lands after the whole comp block instead of inside it
-- **A** — automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume**, **Pan**, or **Width**
-- **Snap** — toggle grid snap; press **S** to flip it from the keyboard, or **Option+S** to switch snap mode
-- **Grid / Ruler Mode** — click to switch between time and bars|beats; right-click to choose **Auto**, a straight note value from semibreve to hemidemisemiquaver, or a triplet grid. **Shift+R** toggles between Auto and the last fixed note grid; **Shift+,** and **Shift+.** step through fixed grids only, switching out of Auto if needed. **Auto** keeps beat and time ticks dense while spacing labels separately; fixed grids show the chosen note value, while the visible grid backs off when the chosen division would be too dense to read
+- **Channel Strip** - show/hide the channel strip side panel; track selection updates it only when the panel is already open
+- **+** - add a new track; if you already have a track selected, the new one drops in immediately after it. If that selected track belongs to a comp group, the new track lands after the whole comp block instead of inside it
+- **A** - automation view; left-click toggles automation editing for all visible tracks, right-click chooses whether the overlay shows **Volume**, **Pan**, or **Width**
+- **Snap** - toggle grid snap; press **S** to flip it from the keyboard, or **Option+S** to switch snap mode
+- **Grid / Ruler Mode** - click to switch between time and bars|beats; right-click to choose **Auto**, a straight note value from semibreve to hemidemisemiquaver, or a triplet grid. **Shift+R** toggles between Auto and the last fixed note grid; **Shift+,** and **Shift+.** step through fixed grids only, switching out of Auto if needed. **Auto** keeps beat and time ticks dense while spacing labels separately; fixed grids show the chosen note value, while the visible grid backs off when the chosen division would be too dense to read
 
 This ruler-header **A** is separate from the transport **Archive** shortcut on **X**.
 
 Right-click in the upper ruler area to open the zero-point menu:
 
-- **Set 0 at Playhead** — make the current tape-head position the selected Cut's new `0:00`
-- **Reset 0 to Start** — restore that Cut's zero point to the beginning
+- **Set 0 at Playhead** - make the current tape-head position the selected Cut's new `0:00`
+- **Reset 0 to Start** - restore that Cut's zero point to the beginning
 
 The lower ruler tick band keeps the existing right-drag pan/zoom gesture.

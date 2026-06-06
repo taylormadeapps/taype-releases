@@ -2,9 +2,9 @@
 
 ## Scrolling
 
-- **Mouse wheel** — scroll up/down through tracks
-- **Trackpad horizontal swipe** — scroll left/right through time
-- **Fai clic con il pulsante destro drag left/right** — pan through time
+- **Mouse wheel** - scroll up/down through tracks
+- **Trackpad horizontal swipe** - scroll left/right through time
+- **Fai clic con il pulsante destro drag left/right** - pan through time
 
 Thin overlay scrollbars appear when you scroll and fade away after a moment. You can also drag the scrollbar thumbs directly.
 
@@ -13,14 +13,14 @@ During playback, the timeline uses paged follow: when the tape head reaches the 
 ## Zooming
 
 **Horizontal zoom** (time):
-- **Cmd + mouse wheel** — zoom in/out, centred on the tape head
-- **Fai clic con il pulsante destro drag up/down** — drag down to zoom in, up to zoom out
+- **Cmd + mouse wheel** - zoom in/out, centred on the tape head
+- **Fai clic con il pulsante destro drag up/down** - drag down to zoom in, up to zoom out
 
 **Vertical zoom** (track height):
-- **Option + mouse wheel** — zoom in/out, anchored to the selected track
-- **=** / **-** — zoom in / out da keyboard
-- **Shift+-** — reset to default track height
-- **Shift+=** — jump straight to the maximum track height
+- **Option + mouse wheel** - zoom in/out, anchored to the selected track
+- **=** / **-** - zoom in / out da keyboard
+- **Shift+-** - reset to default track height
+- **Shift+=** - jump straight to the maximum track height
 
 When you use the right-click drag pan/zoom gesture, TayPE switches to a
 magnifier cursor until you let go. Holding **Command** or **Option** over

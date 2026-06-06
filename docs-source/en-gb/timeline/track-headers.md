@@ -11,17 +11,17 @@ selected track. **Shift-click** extends the selection as a visible range.
 
 ## Controls
 
-- **Colour strip** — click to change the track colour from 24 swatches
-- **Track name** — double-click to rename (only when stopped). With popup help enabled, hovering shows the full title.
-- **Tags** — opens the tag cloud popup for this track
-- **R** — record arm (red circle when armed)
-- **MON** — software monitoring (hear input through the track channel strip)
-- **Bus** — the arranger header badge is display-only. Plain bus toggling and **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead. In comp groups, child take headers hide **R**, **MON**, and both I/O selectors because the comp bus owns those controls for the whole group. The comp bus header also draws a blue outline around the whole visible comp block, with a small +/- square in the top-left corner to hide or show the child take headers. The mixer shows that same blue comp-group frame and collapse toggle across the visible bus-plus-child strip run. That folded/expanded state is saved with the reel. On the arranger lane itself, the comp bus also paints faint, non-editable quasi clips wherever hidden or visible child takes contain clips, so you still get a read on where audio lives when the group is folded up. `Cmd-click` on a non-empty comp bus asks whether to flatten the group to one clip on that track; confirming removes the child take tracks and leaves a normal track behind.
-- **M** — mute (speaker icon, crossed out when muted)
-- **S** — solo
-- **Tag pills** — at larger track heights, assigned tags appear as pills below the button row
-- **I/O labels** — input source and output destination (click to change). With popup help enabled, hovering an I/O label shows the full selected route before the selector help. If popup help is off, the label still hover-reveals the full selected route text.
-- **Mini meter** — single post-fader meter. It follows the same meter-scale
+- **Colour strip** - click to change the track colour from 24 swatches
+- **Track name** - double-click to rename (only when stopped). With popup help enabled, hovering shows the full title.
+- **Tags** - opens the tag cloud popup for this track
+- **R** - record arm (red circle when armed)
+- **MON** - software monitoring (hear input through the track channel strip)
+- **Bus** - the arranger header badge is display-only. Plain bus toggling and **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead. In comp groups, child take headers hide **R**, **MON**, and both I/O selectors because the comp bus owns those controls for the whole group. The comp bus header also draws a blue outline around the whole visible comp block, with a small +/- square in the top-left corner to hide or show the child take headers. The mixer shows that same blue comp-group frame and collapse toggle across the visible bus-plus-child strip run. That folded/expanded state is saved with the reel. On the arranger lane itself, the comp bus also paints faint, non-editable quasi clips wherever hidden or visible child takes contain clips, so you still get a read on where audio lives when the group is folded up. `Cmd-click` on a non-empty comp bus asks whether to flatten the group to one clip on that track; confirming removes the child take tracks and leaves a normal track behind.
+- **M** - mute (speaker icon, crossed out when muted)
+- **S** - solo
+- **Tag pills** - at larger track heights, assigned tags appear as pills below the button row
+- **I/O labels** - input source and output destination (click to change). With popup help enabled, hovering an I/O label shows the full selected route before the selector help. If popup help is off, the label still hover-reveals the full selected route text.
+- **Mini meter** - single post-fader meter. It follows the same meter-scale
   zones as the strip mini meters, uses a separate peak tick, and still shows
   live input on record-armed audio tracks with **MON** off so you can check
   incoming level without adding it to the cue mix.

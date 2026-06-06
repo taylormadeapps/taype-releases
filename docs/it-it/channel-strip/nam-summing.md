@@ -1,16 +1,16 @@
 # NAM Summing (Master Bus)
 
-The master bus channel strip has a Summing section. Carica a NAM profile of a real console's summing amplifier — SSL 4000G, Neve 8816, and more — and the digital sum passes through the captured hardware's character.
+The master bus channel strip has a Summing section. Carica a NAM profile of a real console's summing amplifier - SSL 4000G, Neve 8816, and more - and the digital sum passes through the captured hardware's character.
 
 On the master strip, questo section occupies the preamp slot so section rows stay vertically aligned across the mixer.
 
 ## Controls
 
-- **SUM** — enable or disable NAM summing (requires transport stopped)
-- **SUM** — choose TayPE's True Summing path; it stays available regardless of NAM AMX Acceleration and requires transport stopped
-- **Browse** — open the Profile Browser, filtered to summing profiles
-- **Drive** — how hard the summed audio pushes in the model
-- **Output gain** — compensates for level changes
+- **SUM** - enable or disable NAM summing (requires transport stopped)
+- **SUM** - choose TayPE's True Summing path; it stays available regardless of NAM AMX Acceleration and requires transport stopped
+- **Browse** - open the Profile Browser, filtered to summing profiles
+- **Drive** - how hard the summed audio pushes in the model
+- **Output gain** - compensates for level changes
 
 ## Profile Storage
 

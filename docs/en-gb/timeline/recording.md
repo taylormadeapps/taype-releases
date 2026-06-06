@@ -14,8 +14,8 @@ breakpoints, not capturing new audio.
 The ruler header has an **A** automation button. That button decides what the
 transport **Record** button means.
 
-- **A off** — Record captures audio or instrument takes as normal, but only when at least one track is armed. Existing automation still plays, but TayPE does not write new automation.
-- **A on** — Record captures automation for the parameter currently shown in the ruler header. Right-click the ruler **A** button to choose **Volume**, **Pan**, or **Width**. The transport **Record** button shows a white **A** badge in this mode. Move the relevant track control during the pass and TayPE writes breakpoint automation instead of creating new clips. Those breakpoint points draw live in the lane while the pass is still running. When the pass finishes, the line stays latched at the last value you wrote until a later breakpoint changes it.
+- **A off** - Record captures audio or instrument takes as normal, but only when at least one track is armed. Existing automation still plays, but TayPE does not write new automation.
+- **A on** - Record captures automation for the parameter currently shown in the ruler header. Right-click the ruler **A** button to choose **Volume**, **Pan**, or **Width**. The transport **Record** button shows a white **A** badge in this mode. Move the relevant track control during the pass and TayPE writes breakpoint automation instead of creating new clips. Those breakpoint points draw live in the lane while the pass is still running. When the pass finishes, the line stays latched at the last value you wrote until a later breakpoint changes it.
 
 Playback always follows existing automation whenever the transport is running,
 including ordinary audio recording. **Return**, **Punch**, and **Do-Over**
@@ -28,9 +28,9 @@ automation view before using it.
 Right-click the transport record button or open `Transport > Record Stop Mode` to
 choose what happens when you stop an ordinary take from the record button:
 
-- **Return** — pressing **Return** again commits the pass, stops transport, and returns to the pass start.
-- **Punch** — pressing **Return** again commits the pass and keeps playback rolling.
-- **Do-Over** — pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
+- **Return** - pressing **Return** again commits the pass, stops transport, and returns to the pass start.
+- **Punch** - pressing **Return** again commits the pass and keeps playback rolling.
+- **Do-Over** - pressing **Return** again commits only the current pass, deletes those just-recorded clips, seeks back to the pass start, and restarts recording through the current pre-roll / count-in path.
 Play / Pause is blocked while a recording pass is active; finish the take with
 **Record** or **Stop**.
 
@@ -89,17 +89,17 @@ Recorded clips stay anchored to the position where you punched in. Latency compe
 If the loop braces are active, right-click the loop button or open
 `Transport > Loop Record Mode` to choose what record means:
 
-- **Auto Punch Record** — TayPE treats the left brace as punch-in and the right
+- **Auto Punch Record** - TayPE treats the left brace as punch-in and the right
   brace as punch-out, with playback staying linear after the punch instead
   of wrapping back around. When automation view is on, the same punch window
   applies to automation capture.
-- **Loop Record** — transport wraps like playback while recording. Ordinary tracks
+- **Loop Record** - transport wraps like playback while recording. Ordinary tracks
   keep the last full lap, or the first partial lap if you stop before the
   first wrap. Comp passes keep each lap as comp history, with the newest lap
   enabled by default. Automation capture wraps too and commits the latest
   completed touched pass when one exists, otherwise the current touched
   partial.
-- **Sooper-Looper** — requires active loop braces. TayPE snapshots the armed
+- **Sooper-Looper** - requires active loop braces. TayPE snapshots the armed
   tracks in visible order, records the first armed track for one loop pass,
   plays the loop once, then records the next armed track. After the final pass,
   playback keeps looping with recording off.
@@ -141,7 +141,7 @@ If you press **Stop** while recording, TayPE always commits the current pass fir
 
 ## Input and Output Routing
 
-**Input** — click the input label in the track header.
+**Input** - click the input label in the track header.
 
 - Audio tracks (no instrument insert): audio inputs only (Default, None, mono channels, stereo pairs).
 - Instrument tracks (instrument insert present): MIDI inputs only (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
@@ -159,7 +159,7 @@ to **All MIDI** and `MON` comes on straight away so the new instrument is live
 without another click. When it switches back, MIDI routes reset to default
 audio input.
 
-**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. **Auto Monitor** in the Tracks menu is off by default; when enabled, record-arm changes on regular audio and instrument tracks turn MON on and off with record arm. MON remains independently clickable, including during playback; recording and mix-print still block MON and record-arm changes. Buses, the master, and comp-child tracks are excluded from Auto Monitor. Instrument tracks keep MON visible too, and loading an instrument turns MON on immediately. With Auto Monitor off, record-arm on an instrument track only forces MON on when arming, and disarming leaves MON alone for live audition. **Record Follows Select** is on by default: selecting tracks arms the selected recordable tracks and disarms record arms outside that selection, while empty selection leaves the current armed set alone. On a plain bus, record-arm captures the routed sum feeding that bus, including direct output routes and sends; `MON` only decides whether you hear that bus through its strip during the pass. On a comp bus, `MON` now behaves like normal software monitoring for the group's shared comp input. Record-arm on the comp bus creates a new take track. Comp child tracks do not expose their own MON or record-arm controls in the UI while they belong to the group. During a live comp-take pass, the existing comp group stays silent so the new pass is not fighting the old takes in the speakers.
+**MON** - click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play. **Auto Monitor** in the Tracks menu is off by default; when enabled, record-arm changes on regular audio and instrument tracks turn MON on and off with record arm. MON remains independently clickable, including during playback; recording and mix-print still block MON and record-arm changes. Buses, the master, and comp-child tracks are excluded from Auto Monitor. Instrument tracks keep MON visible too, and loading an instrument turns MON on immediately. With Auto Monitor off, record-arm on an instrument track only forces MON on when arming, and disarming leaves MON alone for live audition. **Record Follows Select** is on by default: selecting tracks arms the selected recordable tracks and disarms record arms outside that selection, while empty selection leaves the current armed set alone. On a plain bus, record-arm captures the routed sum feeding that bus, including direct output routes and sends; `MON` only decides whether you hear that bus through its strip during the pass. On a comp bus, `MON` now behaves like normal software monitoring for the group's shared comp input. Record-arm on the comp bus creates a new take track. Comp child tracks do not expose their own MON or record-arm controls in the UI while they belong to the group. During a live comp-take pass, the existing comp group stays silent so the new pass is not fighting the old takes in the speakers.
 On instrument tracks, live MIDI monitoring now keeps the note's played phase
 inside the block but hands it to the next guaranteed sandbox block, so you
 get one steady shove of latency instead of random timing wobble that kills
@@ -172,10 +172,10 @@ later re-render stay where you actually heard the note land.
 Armed tracks stay armed while you switch Cuts inside the same reel. Loading a
 different reel still clears that arm state.
 
-**Output** — click the output label to choose where the track sends its audio:
+**Output** - click the output label to choose where the track sends its audio:
 **Master**, any bus track you've created, or an available direct stereo
 hardware output. Direct outputs use I/O mapping names, cannot overlap the
 master output pair, cannot overlap a Hardware Insert send, and cannot be
 shared by another direct output.
 
-If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out — the setting is preserved until you plug it back in.
+If you turn off bus mode on a track, any tracks routed to that bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out - the setting is preserved until you plug it back in.

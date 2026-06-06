@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Confirming… — TayPE</title>
+<title>Confirming… - TayPE</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="/assets/img/logo-square.png">
 <link rel="canonical" href="https://taype.ruminantaudioworks.com/confirm/">
@@ -173,7 +173,7 @@ a:hover { color: var(--brass-hover); }
     var resultEl  = document.getElementById('result');
 
     function showResult(title, html) {
-        document.title = title + ' — TayPE';
+        document.title = title + ' - TayPE';
         loadingEl.style.display = 'none';
         resultEl.style.display = 'block';
         resultEl.innerHTML =
@@ -194,7 +194,7 @@ a:hover { color: var(--brass-hover); }
         return;
     }
 
-    // Build the API URL — request JSON response
+    // Build the API URL - request JSON response
     var apiUrl = WEBAPP_URL +
         '?action=' + encodeURIComponent(action) +
         '&token='  + encodeURIComponent(token) +
@@ -220,7 +220,7 @@ a:hover { color: var(--brass-hover); }
             handleResponse(data);
         })
         .catch(function(err) {
-            // CORS likely blocked the redirect — fall back to script injection (JSONP)
+            // CORS likely blocked the redirect - fall back to script injection (JSONP)
             console.log('fetch failed, trying JSONP fallback:', err.message);
             tryJsonp(apiUrl);
         });
@@ -229,7 +229,7 @@ a:hover { color: var(--brass-hover); }
         // Apps Script doesn't support JSONP natively, so if fetch failed
         // due to CORS, we'll use an iframe + postMessage approach,
         // or just redirect the user directly to the Apps Script URL.
-        // The direct redirect works in most cases — the /u/N/ issue
+        // The direct redirect works in most cases - the /u/N/ issue
         // only affects users already logged into Google in this browser
         // session. For non-Google users, direct redirect works fine.
         //

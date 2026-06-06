@@ -16,13 +16,13 @@ Hold **Cmd** while dragging a clip to copy it. The original stays put and a dupl
 
 ## Splitting
 
-Seleziona a clip, position the tape head where you want the split, and press **S**. The clip divides in two at che point. Both halves reference the same audio file — nothing is destroyed.
+Seleziona a clip, position the tape head where you want the split, and press **S**. The clip divides in two at che point. Both halves reference the same audio file - nothing is destroyed.
 
 ## Trimming
 
 Hover near the left or right edge of a clip until the cursor changes to a resize arrow. Trascina to trim.
 
-questo is non-destructive — you're just changing which portion of the audio file is visible.
+questo is non-destructive - you're just changing which portion of the audio file is visible.
 
 ## Guadagno and Fades
 
@@ -40,7 +40,7 @@ Trascina vertically anywhere in the overlap region to shape the curve. Both side
 
 ## Clipboard
 
-- **Cmd+X** — cut (copy and delete)
-- **Cmd+C** — copy
-- **Cmd+V** — paste at the tape head position on the selected track
-- **Cmd+D** — duplicate back-to-back (immediately after the original)
+- **Cmd+X** - cut (copy and delete)
+- **Cmd+C** - copy
+- **Cmd+V** - paste at the tape head position on the selected track
+- **Cmd+D** - duplicate back-to-back (immediately after the original)

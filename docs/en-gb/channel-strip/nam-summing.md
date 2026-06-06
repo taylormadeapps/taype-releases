@@ -1,29 +1,29 @@
 # Summing (Master Bus)
 
-The master bus channel strip has a Summing section. Load a NAM profile of a real console's summing amplifier — SSL 4000G, Neve 8816, and more — and the digital sum passes through the captured hardware's character.
+The master bus channel strip has a Summing section. Load a NAM profile of a real console's summing amplifier - SSL 4000G, Neve 8816, and more - and the digital sum passes through the captured hardware's character.
 
 On the master strip, this section occupies the preamp slot so section rows stay vertically aligned across the mixer.
 
 ## Controls
 
-- **SUM** — the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in. In `ToTaype`, it now switches the grouped per-feeder tape summing path the same way it does for the other non-clean summing flavours.
-- **Power** — bypass or re-enable the selected master summing flavour without changing mode.
-- **Trim** — in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty. It is only DSP-active while clean summing is selected and the section power is on; bypassing the section or switching to Classic, ToTaype, NAM, or MD510 bypasses that stored trim.
-- **P/R** — with `SUM` out, switches the master summing auto-gain detector between Peak and RMS.
-- **AG** — with `SUM` out, runs a 3-second one-shot calibration and writes the compensation into the master summing output gain. With `SUM` in, AG is hidden because true summing does not use the simple post-digital-sum auto-gain path.
-- **Tape speed** — in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`. `30` is the brightest lane, `15` stays broadly full-range, and `7.5` is where the slower top-end softening really starts to show.
-- **HF contour** — fixed internally in ToTaype mode. There is no separate Dubly switch on the master strip now.
-- **Profile pill** — opens the Profile Browser, filtered to summing packages. Download packages from TONE3000, then pick the exact local model if the package contains multiple variants.
+- **SUM** - the small header button just left of the section power button. It enables or disables the global summing path, replaces the old `TRUE` label, and requires transport stopped. In `Clean`, it stays visible but disabled because there is no analogue summing stage to switch in. In `ToTaype`, it now switches the grouped per-feeder tape summing path the same way it does for the other non-clean summing flavours.
+- **Power** - bypass or re-enable the selected master summing flavour without changing mode.
+- **Trim** - in `Clean`, the master summing lane keeps the same trim control position as the channel preamp instead of leaving the body empty. It is only DSP-active while clean summing is selected and the section power is on; bypassing the section or switching to Classic, ToTaype, NAM, or MD510 bypasses that stored trim.
+- **P/R** - with `SUM` out, switches the master summing auto-gain detector between Peak and RMS.
+- **AG** - with `SUM` out, runs a 3-second one-shot calibration and writes the compensation into the master summing output gain. With `SUM` in, AG is hidden because true summing does not use the simple post-digital-sum auto-gain path.
+- **Tape speed** - in ToTaype mode, cycles `7.5`, `15`, and `30` ips. The pill uses the same colour convention as the compressor detector: red `7.5`, green `15`, blue `30`. `30` is the brightest lane, `15` stays broadly full-range, and `7.5` is where the slower top-end softening really starts to show.
+- **HF contour** - fixed internally in ToTaype mode. There is no separate Dubly switch on the master strip now.
+- **Profile pill** - opens the Profile Browser, filtered to summing packages. Download packages from TONE3000, then pick the exact local model if the package contains multiple variants.
 - Tone-backed package rows in both tabs show a yellow **More info >>** link that opens that package page on tone3000.com.
 - In the TONE3000 tab, download happens from each package row's own button; the footer does not repeat that action.
 - If that package is already on disk, the same row button changes to **Downloaded**. Click it to jump straight to that package on the Local tab.
 - Finishing a TONE3000 download flips the browser back to the Local tab, selects the downloaded package, and expands it immediately when the package has multiple models.
 - Online TONE3000 search and download use the selected model lane. The browser shows **Use A2 models** for switching between the original NAM lane and the A2 lane; both lanes can live on disk together.
 - A2-shaped `SlimmableContainer` files are shown as **A2** and are loadable. Other known NAM model types that TayPE cannot process yet stay visible as `{model type} - unsupported`, and unknown runtime types show as **Unknown**. Those rows are not loadable; trying to activate one shows a warning and leaves the current summing profile unchanged.
-- **Drive** — how hard the summed audio pushes into the selected flavour, from 0 to +18 dB
-- **Output gain** — compensates for level changes from -18 to +12 dB
-- **Wet/Dry** — blends the selected summing colour with the latency-aligned dry path. At 0% wet, TayPE keeps the dry alignment but skips the summing colour processor. The knob is shown in the full channel strip and wide mixer strips, and hidden in narrow mixer strips.
-- **Mini meters** — with `SUM` out, the master strip shows both `IN:` and `OUT:` mini meters around the selected flavour just like the track preamp. With `SUM` in, it drops to post-sum `OUT:` only because the true-summing path has no single stereo input comparison worth faking.
+- **Drive** - how hard the summed audio pushes into the selected flavour, from 0 to +18 dB
+- **Output gain** - compensates for level changes from -18 to +12 dB
+- **Wet/Dry** - blends the selected summing colour with the latency-aligned dry path. At 0% wet, TayPE keeps the dry alignment but skips the summing colour processor. The knob is shown in the full channel strip and wide mixer strips, and hidden in narrow mixer strips.
+- **Mini meters** - with `SUM` out, the master strip shows both `IN:` and `OUT:` mini meters around the selected flavour just like the track preamp. With `SUM` in, it drops to post-sum `OUT:` only because the true-summing path has no single stereo input comparison worth faking.
 
 The body deliberately mirrors the track preamp layout so the mixer keeps one muscle memory: mode row at the top, meter cluster beneath, utility stack on the left, trim-or-drive on the left knob lane, and the right knob lane used only when a non-clean summing flavour needs output gain.
 

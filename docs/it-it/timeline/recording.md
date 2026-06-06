@@ -30,7 +30,7 @@ Play / pausa è bloccato durante una registrazione attiva; chiudi la take con
 
 ## Input and Output Routing
 
-**Input** — click the input label in the track header.
+**Input** - click the input label in the track header.
 
 - Audio tracks (no instrument insert): audio inputs only (Default, None, mono channels, stereo pairs).
 - Instrument tracks (instrument insert present): MIDI inputs only (All MIDI, Virtual Keyboard, hardware MIDI devices, None).
@@ -38,8 +38,8 @@ Play / pausa è bloccato durante una registrazione attiva; chiudi la take con
 
 When a track switches in instrument mode, input routes automatically change to **All MIDI**. When it switches back, MIDI routes reset to default audio input.
 
-**MON** — click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
+**MON** - click the MON button to hear live input through the full track channel strip and inserts. When transport is stopped, MON passes live input only; timeline clips stay silent until you press play.
 
-**Output** — click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
+**Output** - click the output label to choose where the track sends its audio: "Master" or any bus track you've created.
 
-If you turn off bus mode on a track, any tracks routed to che bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out — the setting is preserved until you plug it back in.
+If you turn off bus mode on a track, any tracks routed to che bus are disconnected automatically. If your audio interface changes and a track references a missing channel, the input label appears greyed out - the setting is preserved until you plug it back in.

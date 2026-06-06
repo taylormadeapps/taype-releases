@@ -13,18 +13,18 @@ The **Lvl** column shows routing depth from master (L0 = master, deeper levels f
 Stage colour bands are per-node hints:
 
 - Green: < 12%
-- Amber: 12–25%
+- Amber: 12-25%
 - Red: > 25%
 
-These are per-track hints, not a global overload alarm — use the top DSP gauge for that.
+These are per-track hints, not a global overload alarm - use the top DSP gauge for that.
 
 ## Session Summary
 
 The summary includes:
 
-- **Critical path (est)** — the longest active dependency chain in the current block
-- **Scheduler** — levels, max width, workers used, utilisation, and compute/wait/merge timing
-- **CPU** — combined TayPE app plus `taype-sandbox` usage across all logical cores (0–100%), stacked green for the app and blue for the sandbox
+- **Critical path (est)** - the longest active dependency chain in the current block
+- **Scheduler** - levels, max width, workers used, utilisation, and compute/wait/merge timing
+- **CPU** - combined TayPE app plus `taype-sandbox` usage across all logical cores (0-100%), stacked green for the app and blue for the sandbox
 
 Per-track CPU values are smoothed for readability (quick rise, slower fall).
 

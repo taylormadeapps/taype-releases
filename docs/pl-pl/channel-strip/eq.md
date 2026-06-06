@@ -1,20 +1,20 @@
-# Korektor — 3-Band Parametric
+# Korektor - 3-Band Parametric
 
 A 3-band Neve-family parametric Korektor. Low and High each have:
 
-- **Częstotliwość** — where the band is centred
-- **Wzmocnienie** — boost or cut, from -18 dB to +18 dB
-- **Półka/Dzwon toggle** — switches between a shelf curve and a bell (peaking) curve
-- **Wide/Narrow toggle** — wider or tighter bandwidth
+- **Częstotliwość** - where the band is centred
+- **Wzmocnienie** - boost or cut, from -18 dB to +18 dB
+- **Półka/Dzwon toggle** - switches between a shelf curve and a bell (peaking) curve
+- **Wide/Narrow toggle** - wider or tighter bandwidth
 
 Mid keeps the same frequency, gain, and `HI-Q` contour control, but it stays a
 bell in the supported UI path.
 
 | Band | Domyślne Częstotliwość | Range |
 |------|------------------|-------|
-| Low | 220 Hz | 60 – 800 Hz |
-| Mid | 1,200 Hz | 300 – 8,000 Hz |
-| High | 3,200 Hz | 1,500 – 16,000 Hz |
+| Low | 220 Hz | 60 - 800 Hz |
+| Mid | 1,200 Hz | 300 - 8,000 Hz |
+| High | 3,200 Hz | 1,500 - 16,000 Hz |
 
 Low and High default to shelf mode. Mid defaults to bell and stays that way.
 

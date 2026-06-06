@@ -11,7 +11,7 @@ de bus restent lisibles.
 ## Code couleur
 
 - Vert : < 12 %
-- Ambre : 12–25 %
+- Ambre : 12-25 %
 - Rouge : > 25 %
 
 ## Résumé de session
@@ -20,4 +20,4 @@ Le résumé inclut :
 
 - **Critical path (est)**
 - **Scheduler**
-- **CPU** — utilisation combinee de l'app TayPE et de `taype-sandbox` sur tous les cœurs logiques (0–100 %), en vert pour l'app et en bleu pour le sandbox
+- **CPU** - utilisation combinee de l'app TayPE et de `taype-sandbox` sur tous les cœurs logiques (0-100 %), en vert pour l'app et en bleu pour le sandbox

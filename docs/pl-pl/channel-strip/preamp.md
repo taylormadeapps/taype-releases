@@ -14,13 +14,13 @@ The preamp is off. Your trim setting passes through with no colour or saturation
 
 A soft-clipping drive stage for adding warmth and saturation.
 
-- **Drive** — how hard you push the signal into the clipper. Higher values mean more saturation.
-- **Safe mode** — engages oversampling for cleaner saturation at the cost of a bit more CPU.
-- **Auto-gain (AG)** — compensates for loudness changes from drive so you can compare tone instead of volume.
+- **Drive** - how hard you push the signal into the clipper. Higher values mean more saturation.
+- **Safe mode** - engages oversampling for cleaner saturation at the cost of a bit more CPU.
+- **Auto-gain (AG)** - compensates for loudness changes from drive so you can compare tone instead of volume.
 
 ## NAM Profil
 
-Załaduj a Neural Amp Modeler profile of a real preamp — Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
+Załaduj a Neural Amp Modeler profile of a real preamp - Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
 
 Click the **browse** button to open the Profil Browser, where you can search TONE3000's online library or pick from locally saved profiles.
 
@@ -34,7 +34,7 @@ A spinner appears while search, favourites refresh, or download metadata is load
 
 ### NAM Controls
 
-- **Przycięcie** is always visible and always pre-NAM — higher trim drives the model harder, like pushing a real preamp.
+- **Przycięcie** is always visible and always pre-NAM - higher trim drives the model harder, like pushing a real preamp.
 - **Wyjście Wzmocnienie** is a level control after the model.
 - **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
 - **SAFE** is not shown in NAM mode.
@@ -45,7 +45,7 @@ Profil are `.nam` files stored in `~/Documents/TayPE/NAM/Przedwzmacniacze/`. Dow
 
 Downloaded profiles keep their model title metadata, so the strip and browser show the profile title instead of hashed filenames. Thumbnails are cached locally for offline browsing.
 
-You can switch a strip to NAM mode before choosing a profile — TayPE shows a warning and stays clean until a model is loaded.
+You can switch a strip to NAM mode before choosing a profile - TayPE shows a warning and stays clean until a model is loaded.
 
 ## XTALK
 

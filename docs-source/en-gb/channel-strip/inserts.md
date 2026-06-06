@@ -57,7 +57,7 @@ If **Menu Path** is blank, the plugin sits directly inside the top-level
 
 Melodyne does not appear in the insert picker. Open it from an audio clip
 instead: **Option+double-click** the clip, double-click its Melodyne glyph, or
-use **Taype — Clip Properties**. TayPE keeps Melodyne out of insert slots so
+use **Taype - Clip Properties**. TayPE keeps Melodyne out of insert slots so
 the clip-wide ARA workflow stays consistent.
 
 Its bundled Factory IR bank is normalised automatically to TayPE's house
@@ -142,7 +142,7 @@ Narrow strips keep the meters visible but hide the block controls.
 
 ## Plugin Sandboxing
 
-Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running — the slot shows an error state and you can reload or remove it.
+Plugins run in a sandboxed process. If a plugin crashes, TayPE keeps running - the slot shows an error state and you can reload or remove it.
 
 The crash alert names the culprit plugin when possible. If TayPE can't attribute it, it says the culprit is unknown and keeps audio running dry.
 
