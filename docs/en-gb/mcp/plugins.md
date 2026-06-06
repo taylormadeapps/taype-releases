@@ -45,8 +45,8 @@ stopped.
 | `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
 | `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
 | `advance_ms` | number | no | Virtual MIDI Out early-send amount in milliseconds; omitted uses the current corrected interface round-trip estimate from Audio prefs |
-| `output_route_id` | string | no | Hardware Insert send output route ref from I/O mapping; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
-| `input_route_id` | string | no | Hardware Insert return input route ref from I/O mapping; mono and stereo endpoints are valid |
+| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
+| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases; mono and stereo endpoints are valid |
 | `latency_offset_samples` | number | no | Hardware Insert non-negative extra compensation delay; negative values clamp to 0 |
 | `hardware_input_trim_db` | number | no | Hardware Insert send trim in dB, clamped to -24..+12 |
 | `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
@@ -184,8 +184,8 @@ For Hardware Inserts, `is_hardware_io` is true and the response includes
 `hardware_input_trim_db`, `hardware_output_trim_db`,
 `hardware_ag_measure_mode`, `hardware_color`, and
 `hardware_recall_image_path`, `hardware_low_cut_hz`,
-`hardware_high_cut_hz`, and `hardware_filter_position`. These are I/O mapping
-route refs, not TayPE bus routes. Mono and stereo endpoints are
+`hardware_high_cut_hz`, and `hardware_filter_position`. These are CoreAudio
+I/O mapping route IDs, not TayPE bus routes. Mono and stereo endpoints are
 both valid; the realtime hardware stage fans out or averages at the device
 boundary to match the track strip width.
 

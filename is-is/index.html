@@ -398,21 +398,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin: 0;
-    /* Match the paragraph max-width used by .philosophy p and
-       .tone-arch .tone-intro so screenshots aren't visibly narrower
-       than the surrounding body copy. The two-image row wraps to
-       stacked at this width because 2×700px exceeds section inner
-       width. */
-    flex: 0 1 700px;
+    flex: 0 1 1000px;
     max-width: 100%;
-}
-
-.screenshot-block--wide {
-    flex-basis: 1000px;
-}
-
-.screenshot-block--wide img {
-    max-height: 700px;
 }
 
 .screenshot-block h2 {
@@ -425,7 +412,7 @@ h2 {
 }
 
 .screenshot-row img {
-    max-height: 600px;
+    max-height: 700px;
     max-width: 100%;
     width: auto;
     height: auto;
@@ -666,6 +653,10 @@ dialog#screenshot-zoom img {
     text-align: center;
 }
 
+.screenshot-callout--long {
+    max-width: 850px;
+}
+
 .screenshot-callout h2 {
     margin-bottom: 1rem;
 }
@@ -675,6 +666,10 @@ dialog#screenshot-zoom img {
     color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.8;
+}
+
+.screenshot-callout p + p {
+    margin-top: 1rem;
 }
 
 .screenshot-callout strong {
@@ -827,7 +822,8 @@ footer {
     line-height: 1.8;
 }
 
-.tone-arch .tone-kicker {
+.tone-arch .tone-kicker,
+.screenshot-callout .tone-kicker {
     font-family: var(--heading-font);
     font-size: clamp(0.6rem, 1.2vw, 0.75rem);
     font-weight: var(--heading-weight);
@@ -916,8 +912,8 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-tape-heading">The Tape</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w, /assets/img/screenshot-tape-machine-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w, /assets/img/screenshot-tape-machine-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -946,8 +942,8 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-heading">The Mixing Console</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w, /assets/img/screenshot-mixer-1-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w, /assets/img/screenshot-mixer-1-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -983,8 +979,32 @@ footer {
         <figure class="screenshot-block">
             <h2 id="screenshots-arranger-heading">The Arranger</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px">
-                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 700px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w, /assets/img/screenshot-mixer-2-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w, /assets/img/screenshot-mixer-2-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="screenshot-callout screenshot-callout--long" id="arranger-flow">
+    <h2 id="arranger-flow-heading">Built for finishing records, not just sketching ideas</h2>
+    <p id="arranger-flow-copy-1">TayPE’s arranger is deliberately lean, but it’s not a toy. Edit audio directly on the timeline with the speed and precision demanded by professional recording workflows, without getting buried under windows, dialogs and endless configuration. The focus is on finishing records, not managing software.</p>
+    <p id="arranger-flow-copy-2">Record software instruments as audio while keeping the original MIDI performance attached underneath. Change notes, timing or instrumentation later if you need to. Commit to sound without committing forever.</p>
+    <p id="arranger-flow-copy-3">If Melodyne is installed, pitch editing is available wherever you need it. Open any clip and start working — no dedicated tracks, plugin management or setup ritual. TayPE also includes the “Industry Standard” keybinding profile for producers whose wetware is already mapped to Pro Tools, helping experienced hands feel at home from day one.</p>
+    <p id="arranger-flow-kicker" class="tone-kicker">Capture the sound that inspired the take.</p>
+</section>
+
+<hr class="section-divider">
+
+<section class="screenshots">
+    <div class="screenshot-row screenshot-row--single">
+        <figure class="screenshot-block">
+            <h2 id="screenshots-laforge-heading">LaForgé</h2>
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-laforge" src="/assets/img/screenshot-laforge-1280.jpg" srcset="/assets/img/screenshot-laforge-640.jpg 640w, /assets/img/screenshot-laforge-960.jpg 960w, /assets/img/screenshot-laforge-1280.jpg 1280w, /assets/img/screenshot-laforge-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-laforge-1920.webp" data-zoom-fallback="/assets/img/screenshot-laforge-1920.jpg" alt="TayPE LaForgé mastering view — limiter, loudness statistics, loudness graph, stereo tools, mixer channels, and master bus" width="1280" height="788" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -1010,20 +1030,6 @@ footer {
 
 <hr class="section-divider">
 
-<section class="screenshots">
-    <div class="screenshot-row screenshot-row--single">
-        <figure class="screenshot-block screenshot-block--wide">
-            <h2 id="screenshots-laforge-heading">LaForgé</h2>
-            <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-laforge" src="/assets/img/screenshot-laforge-1280.jpg" srcset="/assets/img/screenshot-laforge-640.jpg 640w, /assets/img/screenshot-laforge-960.jpg 960w, /assets/img/screenshot-laforge-1280.jpg 1280w, /assets/img/screenshot-laforge-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-laforge-1920.webp" data-zoom-fallback="/assets/img/screenshot-laforge-1920.jpg" alt="TayPE LaForgé mastering view — limiter, loudness statistics, loudness graph, stereo tools, mixer channels, and master bus" width="1280" height="788" loading="lazy" decoding="async">
-            </picture>
-        </figure>
-    </div>
-</section>
-
-<hr class="section-divider">
-
 <!-- ============================================================ -->
 <!-- Download                                                     -->
 <!-- ============================================================ -->
@@ -1034,7 +1040,7 @@ footer {
         Fully Functional Trustware. No demo limitations, No expiry, No noise.
     </p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
-        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.20.0/Taype-0.20.0.pkg" class="btn-primary" target="_blank" rel="noopener">
+        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.21.0/Taype-0.21.0.pkg" class="btn-primary" target="_blank" rel="noopener">
             Download now
         </a>
     </div>
@@ -1111,16 +1117,6 @@ footer {
 
     <div class="community-grid">
         <div class="community-card">
-            <h3 id="community-card-1-title">Knowledge Base</h3>
-            <p id="community-card-1-body">User guide, tutorials, and reference documentation. Everything you need to get started and go deep.</p>
-            <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
-        </div>
-        <div class="community-card">
-            <h3 id="community-card-3-title">Get in Touch</h3>
-            <p id="community-card-3-body">Bug to report, question, or just want to say hi? Drop us a line &mdash; anonymous is fine, but leave your email if you'd like a reply.</p>
-            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Get in touch &rarr;</a>
-        </div>
-        <div class="community-card">
             <h3 id="community-card-4-title">Follow Along</h3>
             <p id="community-card-4-body">Development updates, studio sessions, and behind-the-scenes from Ruminant Audio Works.</p>
             <a id="community-card-4-newsletter" href="https://docs.google.com/forms/d/e/1FAIpQLSeIHpJy7bcYi09VlkZ_sK7amYLtec3mPtDL2r2Qc9NUf0RqYw/viewform" class="link-arrow" target="_blank">Newsletter &rarr;</a>
@@ -1130,6 +1126,16 @@ footer {
             <a id="community-card-4-youtube" href="https://www.youtube.com/@ruminantaudioworks" class="link-arrow" target="_blank">YouTube &rarr;</a>
             <span style="color: var(--text-dim); margin: 0 0.5rem;">&middot;</span>
             <a id="community-card-4-reddit" href="https://www.reddit.com/r/taype/" class="link-arrow" target="_blank">Reddit &rarr;</a>
+        </div>
+        <div class="community-card">
+            <h3 id="community-card-3-title">Get in Touch</h3>
+            <p id="community-card-3-body">Bug to report, question, or just want to say hi? Drop us a line &mdash; anonymous is fine, but leave your email if you'd like a reply.</p>
+            <a id="community-card-3-link" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" class="link-arrow" target="_blank">Get in touch &rarr;</a>
+        </div>
+        <div class="community-card">
+            <h3 id="community-card-1-title">Knowledge Base</h3>
+            <p id="community-card-1-body">User guide and reference documentation. Everything you need to get started and go deep.</p>
+            <a id="community-card-1-link" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" class="link-arrow" target="_blank">Read the fine manual &rarr;</a>
         </div>
         <div class="community-card">
             <h3 id="community-card-2-title">Beta Programme</h3>
@@ -1159,7 +1165,7 @@ footer {
         <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
         <a id="footer-bug" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Get in Touch</a>
         <a id="footer-privacy" href="/privacy/">Privacy</a>
-        <a id="footer-cookies" href="/cookies/">Cookies</a>
+        <a href="/cookies/">Cookie Policy</a>
     </div>
     <p id="footer-copy" class="footer-copy">
         &copy; 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales.

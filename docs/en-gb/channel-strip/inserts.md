@@ -102,10 +102,10 @@ instead: **Option+double-click** the clip, double-click its Melodyne glyph, or
 use **Taype — Clip Properties**. TayPE keeps Melodyne out of insert slots so
 the clip-wide ARA workflow stays consistent.
 
-**Hardware Insert** is TayPE's outboard loop insert. It uses audio I/O mapping
-route refs from Preferences, not TayPE buses: choose a physical mono or stereo
-output endpoint for the send, a physical mono or stereo input endpoint for the
-return, and extra latency compensation. The sample field is the stored
+**Hardware Insert** is TayPE's outboard loop insert. It uses the audio I/O
+mapping aliases from Preferences, not TayPE buses: choose a physical mono or
+stereo output endpoint for the send, a physical mono or stereo input endpoint
+for the return, and extra latency compensation. The sample field is the stored
 non-negative delay value; the millisecond field is calculated from the current
 processing sample rate and writes back to samples when edited. Negative values
 clamp to zero because TayPE can add delay, not send audio to future hardware.
