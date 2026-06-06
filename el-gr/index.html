@@ -822,7 +822,8 @@ footer {
     line-height: 1.8;
 }
 
-.tone-arch .tone-kicker {
+.tone-arch .tone-kicker,
+.screenshot-callout .tone-kicker {
     font-family: var(--heading-font);
     font-size: clamp(0.6rem, 1.2vw, 0.75rem);
     font-weight: var(--heading-weight);
@@ -902,24 +903,6 @@ footer {
 
 <hr class="section-divider">
 
-<!-- ============================================================ -->
-<!-- Screenshots                                                  -->
-<!-- ============================================================ -->
-
-<section class="screenshots">
-    <div class="screenshot-row screenshot-row--single">
-        <figure class="screenshot-block">
-            <h2 id="screenshots-tape-heading">The Tape</h2>
-            <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w, /assets/img/screenshot-tape-machine-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w, /assets/img/screenshot-tape-machine-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
-            </picture>
-        </figure>
-    </div>
-</section>
-
-<hr class="section-divider">
-
 <section class="screenshot-callout" id="features">
     <h2 id="a11y-heading">Built for Everyone</h2>
     <p id="a11y-copy">
@@ -936,13 +919,17 @@ footer {
 
 <hr class="section-divider">
 
+<!-- ============================================================ -->
+<!-- Screenshots                                                  -->
+<!-- ============================================================ -->
+
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
         <figure class="screenshot-block">
-            <h2 id="screenshots-heading">The Mixing Console</h2>
+            <h2 id="screenshots-tape-heading">The Tape</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w, /assets/img/screenshot-mixer-1-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w, /assets/img/screenshot-mixer-1-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w, /assets/img/screenshot-tape-machine-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-tape" src="/assets/img/screenshot-tape-machine-960.jpg" srcset="/assets/img/screenshot-tape-machine-640.jpg 640w, /assets/img/screenshot-tape-machine-960.jpg 960w, /assets/img/screenshot-tape-machine-1280.jpg 1280w, /assets/img/screenshot-tape-machine-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-tape-machine-1920.webp" data-zoom-fallback="/assets/img/screenshot-tape-machine-1920.jpg" alt="TayPE tape machine — reel-to-reel tape transport above multitrack mixer channels" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -976,10 +963,10 @@ footer {
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
         <figure class="screenshot-block">
-            <h2 id="screenshots-arranger-heading">The Arranger</h2>
+            <h2 id="screenshots-heading">The Mixing Console</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w, /assets/img/screenshot-mixer-2-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w, /assets/img/screenshot-mixer-2-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w, /assets/img/screenshot-mixer-1-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w, /assets/img/screenshot-mixer-1-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer — multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -989,13 +976,10 @@ footer {
 
 <section class="screenshot-callout screenshot-callout--long" id="arranger-flow">
     <h2 id="arranger-flow-heading">Built for finishing records, not just sketching ideas</h2>
-    <p id="arranger-flow-copy-1">TayPE’s arranger is deliberately lean, but it’s not a toy.</p>
-    <p id="arranger-flow-copy-2">Edit audio directly on the timeline. Move, trim and shape performances with the speed and precision demanded by professional recording workflows, without getting buried under windows, dialogs and endless configuration.</p>
-    <p id="arranger-flow-copy-3">Record software instruments as audio while keeping the original MIDI performance attached as a sidecar. Capture the sound that inspired the take while retaining the freedom to change notes, timing or instrumentation later.</p>
-    <p id="arranger-flow-copy-4">Commit to sound without committing forever.</p>
-    <p id="arranger-flow-copy-5">If Melodyne is installed, it’s available wherever you need it. Open any clip and start editing immediately — no dedicated tracks, no plugin management, no setup ritual.</p>
-    <p id="arranger-flow-copy-6">TayPE includes the “Industry Standard” keybinding profile for producers whose workflows are already committed to wetware. Prefer something else? Every shortcut is configurable, so you’re free to build your own.</p>
-    <p id="arranger-flow-copy-7">The result is a workflow that stays creative when you’re writing and stays flexible when you’re producing.</p>
+    <p id="arranger-flow-copy-1">TayPE’s arranger is deliberately lean, but it’s not a toy. Edit audio directly on the timeline with the speed and precision demanded by professional recording workflows, without getting buried under windows, dialogs and endless configuration. The focus is on finishing records, not managing software.</p>
+    <p id="arranger-flow-copy-2">Record software instruments as audio while keeping the original MIDI performance attached underneath. Change notes, timing or instrumentation later if you need to. Commit to sound without committing forever.</p>
+    <p id="arranger-flow-copy-3">If Melodyne is installed, pitch editing is available wherever you need it. Open any clip and start working — no dedicated tracks, plugin management or setup ritual. TayPE also includes the “Industry Standard” keybinding profile for producers whose wetware is already mapped to Pro Tools.</p>
+    <p id="arranger-flow-kicker" class="tone-kicker">Capture the sound that inspired the take.</p>
 </section>
 
 <hr class="section-divider">
@@ -1003,10 +987,10 @@ footer {
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
         <figure class="screenshot-block">
-            <h2 id="screenshots-laforge-heading">LaForgé</h2>
+            <h2 id="screenshots-arranger-heading">The Arranger</h2>
             <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-laforge" src="/assets/img/screenshot-laforge-1280.jpg" srcset="/assets/img/screenshot-laforge-640.jpg 640w, /assets/img/screenshot-laforge-960.jpg 960w, /assets/img/screenshot-laforge-1280.jpg 1280w, /assets/img/screenshot-laforge-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-laforge-1920.webp" data-zoom-fallback="/assets/img/screenshot-laforge-1920.jpg" alt="TayPE LaForgé mastering view — limiter, loudness statistics, loudness graph, stereo tools, mixer channels, and master bus" width="1280" height="788" loading="lazy" decoding="async">
+                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w, /assets/img/screenshot-mixer-2-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w, /assets/img/screenshot-mixer-2-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger — clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
             </picture>
         </figure>
     </div>
@@ -1028,6 +1012,20 @@ footer {
         really there, stay connected to the music, and make the final decisions that
         turn a mix into a record.
     </p>
+</section>
+
+<hr class="section-divider">
+
+<section class="screenshots">
+    <div class="screenshot-row screenshot-row--single">
+        <figure class="screenshot-block">
+            <h2 id="screenshots-laforge-heading">LaForgé</h2>
+            <picture>
+                <source type="image/webp" srcset="/assets/img/screenshot-laforge-640.webp 640w, /assets/img/screenshot-laforge-960.webp 960w, /assets/img/screenshot-laforge-1280.webp 1280w, /assets/img/screenshot-laforge-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
+                <img id="screenshot-laforge" src="/assets/img/screenshot-laforge-1280.jpg" srcset="/assets/img/screenshot-laforge-640.jpg 640w, /assets/img/screenshot-laforge-960.jpg 960w, /assets/img/screenshot-laforge-1280.jpg 1280w, /assets/img/screenshot-laforge-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-laforge-1920.webp" data-zoom-fallback="/assets/img/screenshot-laforge-1920.jpg" alt="TayPE LaForgé mastering view — limiter, loudness statistics, loudness graph, stereo tools, mixer channels, and master bus" width="1280" height="788" loading="lazy" decoding="async">
+            </picture>
+        </figure>
+    </div>
 </section>
 
 <hr class="section-divider">
