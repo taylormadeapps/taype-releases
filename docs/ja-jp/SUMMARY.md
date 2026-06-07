@@ -9,6 +9,7 @@
   * [表示モード](timeline/view-modes.md)
   * [録音](timeline/recording.md)
 * [ミキサー](mixer.md)
+* [Stem Splitter](stem-splitter.md)
 * [チャンネルストリップ](channel-strip/README.md)
   * [トリム](channel-strip/trim.md)
   * [プリアンプ](channel-strip/preamp.md)

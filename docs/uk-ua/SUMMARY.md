@@ -36,3 +36,4 @@
   * [Операції (MCP)](mcp/transactions.md)
   * [Утиліти (MCP)](mcp/utilities.md)
   * [Особистості (MCP)](mcp/personalities.md)
+* [Stem Splitter](stem-splitter.md)

@@ -9,6 +9,7 @@
   * [Ansichtsmodi](timeline/view-modes.md)
   * [Aufnahme](timeline/recording.md)
 * [Der Mixer](mixer.md)
+* [Stem Splitter](stem-splitter.md)
 * [Channel Strip](channel-strip/README.md)
   * [Trim](channel-strip/trim.md)
   * [Preamp](channel-strip/preamp.md)

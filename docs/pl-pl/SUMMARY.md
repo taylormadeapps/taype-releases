@@ -9,6 +9,7 @@
   * [Widok Modes](timeline/view-modes.md)
   * [Nagrywanie](timeline/recording.md)
 * [The Mixer](mixer.md)
+* [Stem Splitter](stem-splitter.md)
 * [Pasek kanału](channel-strip/README.md)
   * [Przycięcie](channel-strip/trim.md)
   * [Przedwzmacniacz](channel-strip/preamp.md)

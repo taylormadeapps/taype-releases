@@ -9,6 +9,7 @@
   * [Sýnarhamir](timeline/view-modes.md)
   * [Upptaka](timeline/recording.md)
 * [Hljóðmixerinn](mixer.md)
+* [Stem Splitter](stem-splitter.md)
 * [Rásarræman](channel-strip/README.md)
   * [Trim](channel-strip/trim.md)
   * [Formagnari](channel-strip/preamp.md)
