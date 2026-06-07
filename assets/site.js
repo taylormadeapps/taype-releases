@@ -2042,11 +2042,15 @@ const metaOgTitle = document.getElementById("meta-og-title");
 const metaOgDescription = document.getElementById("meta-og-description");
 const metaOgUrl = document.getElementById("meta-og-url");
 const docEl = document.documentElement;
+const navEl = document.querySelector("nav");
+const anchorSettleDelays = [0, 120, 360, 900, 1600];
 
 let currentLocale = "en-gb";
 let currentLocaleData = locales["en-gb"];
 let currentGregisms = currentLocaleData.gregisms;
 let gregismIndex = 0;
+let activeAnchorHash = null;
+let activeAnchorUntil = 0;
 
 function pickRandomGregismIndex(previousIndex = -1) {
     const count = currentGregisms.length;
@@ -2120,6 +2124,81 @@ function getDocsUrl(locale) {
     return `${DOCS_BASE_URL}${locale}/`;
 }
 
+function updateAnchorOffset() {
+    const navHeight = navEl ? navEl.getBoundingClientRect().height : 56;
+    const offset = Math.ceil(navHeight + 24);
+    docEl.style.setProperty("--nav-anchor-offset", `${offset}px`);
+    return offset;
+}
+
+function getHashTarget(hash) {
+    if (!hash || hash === "#") return null;
+
+    const rawId = hash.slice(1);
+    if (!rawId) return null;
+
+    try {
+        return document.getElementById(decodeURIComponent(rawId));
+    } catch (error) {
+        return document.getElementById(rawId);
+    }
+}
+
+function scrollInstantlyTo(top) {
+    const previousScrollBehavior = docEl.style.scrollBehavior;
+    docEl.style.scrollBehavior = "auto";
+    window.scrollTo({ top, behavior: "auto" });
+    docEl.style.scrollBehavior = previousScrollBehavior;
+}
+
+function scrollToHashTarget(hash, behavior = "auto") {
+    const target = getHashTarget(hash);
+    if (!target) return false;
+
+    const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - updateAnchorOffset());
+    if (behavior === "auto") scrollInstantlyTo(top);
+    else window.scrollTo({ top, behavior });
+
+    return true;
+}
+
+function settleHashScroll(hash, behavior = "auto") {
+    if (!getHashTarget(hash)) return;
+
+    activeAnchorHash = hash;
+    activeAnchorUntil = window.performance.now() + 2500;
+
+    anchorSettleDelays.forEach((delay, index) => {
+        window.setTimeout(() => {
+            if (activeAnchorHash !== hash || window.performance.now() > activeAnchorUntil) return;
+            scrollToHashTarget(hash, index === 0 ? behavior : "auto");
+        }, delay);
+    });
+}
+
+function settleActiveHashScroll() {
+    if (!activeAnchorHash || window.performance.now() > activeAnchorUntil) return;
+    scrollToHashTarget(activeAnchorHash, "auto");
+}
+
+function handleHashAnchorClick(event) {
+    const target = event.target instanceof Element ? event.target : null;
+    const link = target ? target.closest('a[href^="#"]') : null;
+    if (!link) return;
+
+    const hash = link.getAttribute("href");
+    if (!getHashTarget(hash)) return;
+
+    event.preventDefault();
+
+    if (window.location.hash !== hash) {
+        window.history.pushState({}, "", `${window.location.pathname}${window.location.search}${hash}`);
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    settleHashScroll(hash, prefersReducedMotion ? "auto" : "smooth");
+}
+
 function navigateToLocale(locale, options = {}) {
     const target = `${getSitePath(locale)}${window.location.hash || ""}`;
     if (options.replace) window.location.replace(target);
@@ -2189,6 +2268,7 @@ function applyLocale(localeKey) {
 
     updateDocsLinks(currentLocale);
     showGregism();
+    window.requestAnimationFrame(updateAnchorOffset);
 }
 
 function initSite() {
@@ -2231,6 +2311,38 @@ function initSite() {
 }
 
 initSite();
+
+updateAnchorOffset();
+
+if (window.location.hash) {
+    window.requestAnimationFrame(() => settleHashScroll(window.location.hash, "auto"));
+}
+
+document.addEventListener("click", handleHashAnchorClick);
+
+window.addEventListener("resize", () => {
+    updateAnchorOffset();
+    settleActiveHashScroll();
+});
+
+window.addEventListener("hashchange", () => {
+    if (window.location.hash) settleHashScroll(window.location.hash, "auto");
+});
+
+window.addEventListener("popstate", () => {
+    if (window.location.hash) settleHashScroll(window.location.hash, "auto");
+});
+
+window.addEventListener("load", () => {
+    updateAnchorOffset();
+    if (window.location.hash) settleHashScroll(window.location.hash, "auto");
+});
+
+document.querySelectorAll("img").forEach((img) => {
+    if (img.complete) return;
+    img.addEventListener("load", settleActiveHashScroll, { once: true });
+    img.addEventListener("error", settleActiveHashScroll, { once: true });
+});
 
 if (langSelect) {
     langSelect.addEventListener("change", (event) => {
