@@ -31,6 +31,12 @@ oversized.
 Hold **Shift** while dragging the fader, pan, or width control for a finer
 4x trim pass.
 
+Right-click the width knob or its readout to open the width split controls.
+**OFF** keeps the width knob working across the full stereo image. **ABOVE**
+applies the width move above the split frequency, and **BELOW** applies it
+below the split frequency. The split frequency defaults to **150 Hz**. These
+split controls are direct channel settings, not automation lanes.
+
 Hovering the fader thumb, rail, or dB readout also lets the mouse wheel trim
 the level directly in fine sub-dB steps. Hold **Shift** there as well for the
 same finer 4x pass.

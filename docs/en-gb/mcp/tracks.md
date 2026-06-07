@@ -25,6 +25,9 @@ List all tracks with their channel settings.
       "channel": {
         "volume": 1.0,
         "pan": 0.0,
+        "width": 0.0,
+        "width_band_mode": "off",
+        "width_split_hz": 150.0,
         "mute": false,
         "solo": false,
         "trim": 0.0
@@ -57,6 +60,9 @@ Update a track's properties. Only provided fields are changed.
 | `archived` | boolean | no | Archive state (currently mutes track audio) |
 | `volume` | number | no | 0.0 to 3.9810717 (0 dB default at 1.0; +12 dB max) |
 | `pan` | number | no | -1.0 to +1.0 |
+| `width` | number | no | -100.0 to +100.0 |
+| `width_band_mode` | string | no | `off`, `high`, or `low`; default `off` |
+| `width_split_hz` | number | no | Width split point from 40.0 to 12000.0 Hz; default 150.0 |
 | `mute` | boolean | no | Mute state |
 | `solo` | boolean | no | Solo state |
 | `monitor` | boolean | no | Software monitoring (tracks: hear live input through the strip; buses: audition routed bus audio through the strip) |
@@ -77,7 +83,7 @@ Update a track's properties. Only provided fields are changed.
 | `preamp_lp_freq` | number | no | Saturation LP filter: 2000.0 to 20000.0 Hz |
 | `preamp_safe` | boolean | no | 4x oversampling (eliminates aliasing at high drive) |
 
-Volume, pan, mute, solo, monitor, and preamp parameters take effect
+Volume, pan, width, width split, mute, solo, monitor, and preamp parameters take effect
 immediately (safe during playback). Name, colour, archived, bus, input, and
 output changes require transport to be stopped. Send target changes still need
 stopped transport, but changing only a send's `level` on an existing send is
