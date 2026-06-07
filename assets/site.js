@@ -79,7 +79,7 @@ const locales = {
             "demo-trust-2": "No DRM",
             "demo-trust-3": "No feature limits",
             "demo-trust-4": "No phone home",
-            "demo-connector": "If it works for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
+            "demo-connector": "If it's working out for you, please purchase a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.",
             "price-personal-title": "Personal",
             "price-personal-note": "one-time purchase",
             "price-personal-feature-1": "Full application, all features",
