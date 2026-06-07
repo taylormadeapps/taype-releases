@@ -28,11 +28,15 @@ TayPE's **Taype - MIDI Clip Editor** or **Re-render from MIDI** to print a fresh
 through the clip's current instrument. For comp takes, that means the
 instrument on the parent comp track, not the child take lane. The same dialog
 now shows the clip's current source window, stretch ratio, and offline pitch in **semitones** plus
-**cents**, with an **Apply** button beside those pitch fields. If the clip you
+**cents**, with an **Apply** button beside those pitch fields. **Reverse**
+prints the current audible clip window, including any existing derived audio,
+into a new reversed derived file; it is a one-shot audio commit, not a stored
+reverse switch. If the clip you
 double-click is part of the current multi-selection, **Taype - Clip Properties**
 flips into a batch mode: clip colour and the disable toggle still edit the
 whole selection, the pitch fields stay live as **deltas** added onto each
-selected clip, and the per-clip name, source, and MIDI actions are greyed out.
+selected clip, **Reverse** applies to the whole selection, and the per-clip
+name, source, and MIDI actions are greyed out.
 Clip Properties now opens without dropping the typing caret straight into the
 name field, so transport and marker shortcuts keep working until you click
 into a text box.
@@ -64,7 +68,8 @@ During playback, TayPE keeps the core clip workflow live: you can rename,
 recolour, disable, trim, move, split, delete, duplicate, copy, paste, and
 adjust clip gain or fade shape without stopping first. Recording is still
 stricter, so those edits wait until the take stops. Edits that have to print
-new audio or replace committed media stop playback first, then continue.
+new audio or replace committed media, including Reverse, stop playback first,
+then continue.
 Recording still blocks those render-backed edits until the take stops.
 
 **Option+double-click** on an audio clip opens Melodyne for that clip. Transfer,
