@@ -257,6 +257,13 @@ around each send knob is an RMS-only hint of what is actually being sent. A
 matching SENDS power button sits to the right of the mode switch and bypasses
 send processing without deleting or rerouting the stored sends. When you kill
 that section, the downstream bus feed and the send meter ring both shut up.
+Right-click an assigned send knob to open its send prep panel. Each send can
+filter its feed with low and high cuts, add clean predelay in samples or
+milliseconds, and show the mono send level arriving at that edge. The prep is
+stored on the source send itself, so several source tracks can feed the same
+reverb bus with different filtering and predelay while a single source still
+has only one send edge to that target. A lighter send knob means that edge has
+non-default filtering or predelay.
 
 The master strip's `NAM SUMMING` block lives in the same vertical lane as the ordinary `PREAMP` block. In the mixer, collapsing either one now collapses that whole shared lane across every visible strip, so the desk stays aligned.
 The mixer master strip also carries a blank spacer below `INSERTS`, sized so

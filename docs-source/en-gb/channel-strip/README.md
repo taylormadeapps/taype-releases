@@ -45,7 +45,13 @@ so lowering the low-pass cutoff lights more of the arc instead of less.
 
 The `SENDS` header carries a `POST` / `PRE` button for the whole track. `PRE`
 moves every send to the pre-fader tap, and the thin ring around each send knob
-is a simple RMS hint of what is feeding that send.
+is a simple RMS hint of what is feeding that send. Right-click an assigned send
+knob to open its send prep panel, where that source send can apply low and high
+cuts plus clean predelay in samples or milliseconds before it reaches the bus.
+The prep belongs to the source send edge: several source tracks can feed the
+same reverb bus with different filtering and predelay, while a single source
+still keeps only one send edge to that target. A lighter send knob means that
+edge has non-default filtering or predelay.
 
 Section headers collapse or reopen on **double-click** across the title band,
 while the little chevron on the left stays a single-click toggle.

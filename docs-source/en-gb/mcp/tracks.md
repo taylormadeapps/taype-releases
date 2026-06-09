@@ -69,7 +69,7 @@ Update a track's properties. Only provided fields are changed.
 | `is_bus` | boolean | no | Bus designation |
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `output_id` | string | no | Output target: "master" or bus track ID |
-| `sends` | array | no | Additional fan-out routes: `[{"target_id":"<bus-or-master>","level":0.0-4.0}]` |
+| `sends` | array | no | Additional per-source fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0,"low_cut_hz":0.0-1000.0,"high_cut_hz":2000.0-20000.0,"delay_samples":0-48000}]`. `delay_ms` is also accepted and converted to samples. |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
 | `tags` | array | no | Replace track tags with an array of tag strings |
@@ -86,8 +86,10 @@ Volume, pan, width, width split, mute, solo, monitor, and preamp parameters take
 immediately (safe during playback). `preamp_wet_dry_mix` and preamp bypass
 ramp to a latency-aligned dry path without removing the resident processor
 lane, so latent classic preamp lanes keep PDC in place even at 0% wet or
-powered off. Name, colour, archived, bus, input, output, and send changes
-require transport to be stopped.
+powered off. Name, colour, archived, bus, input, output, and send target
+changes require transport to be stopped. Changing an existing send's `level`,
+`low_cut_hz`, `high_cut_hz`, `delay_samples`, or `delay_ms` is safe during
+playback.
 
 Setting `is_bus: true` automatically sets the track's input to "none"
 (buses receive from routed tracks, not the audio interface). The previous

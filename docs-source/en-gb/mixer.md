@@ -32,7 +32,7 @@ Each strip shows (top to bottom):
 - **EQ section** - 3-band parametric equaliser with a spectrum button for the shared EQ Visualiser
 - **Compressor section** - dynamics processing
 - **Insert slots** - up to 8 slots for VST3 plugins
-- **Sends section** - bus sends with a `POST` / `PRE` mode switch
+- **Sends section** - bus sends with a `POST` / `PRE` mode switch and per-send prep
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -48,9 +48,12 @@ every section.
 undoable action.
 
 The `SENDS` header flips the whole track between `POST` and `PRE`, and the
-thin ring around each send knob is a live RMS hint. The EQ header's spectrum
-button opens the shared floating **EQ Visualiser** window for that strip, and
-while it stays open it follows the currently selected track automatically.
+thin ring around each send knob is a live RMS hint. Right-click an assigned
+send knob to add per-send low/high filtering and clean predelay before that
+feed reaches its bus; configured sends use a lighter knob shade. The EQ
+header's spectrum button opens the shared floating **EQ Visualiser** window
+for that strip, and while it stays open it follows the currently selected
+track automatically.
 
 **Buttons** (mute, solo, etc.) - single click to toggle.
 

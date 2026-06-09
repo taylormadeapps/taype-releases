@@ -172,7 +172,7 @@ Each strip shows (top to bottom):
 - **EQ section** - 3-band parametric equaliser with the same shared EQ Visualiser button
 - **Compressor section** - dynamics processing
 - **Insert slots** - up to 8 slots for VST3 plugins, with per-slot power buttons, a hover latency readout that stays clear of that switch, and clear drag/drop ghost + target cues while you reorder or copy inserts, including the empty-top-slot drop shortcut
-- **Sends section** - bus sends with a `POST` / `PRE` mode switch, a section power button, and live RMS hint rings
+- **Sends section** - bus sends with a `POST` / `PRE` mode switch, a section power button, live RMS hint rings, and right-click per-send filter/predelay settings
 - **Pan knob** - stereo position
 - **Fader** - volume, with dB readout
 - **Peak meter** - stereo level meter with clip indicator
@@ -237,9 +237,14 @@ saved plug-in cannot be restored.
 **Faders and knobs** - click and drag vertically. Each drag is a single
 undoable action.
 
-Send level knobs are safe to move while the transport is running. Changing
-track input/output routing, the main output route, or a send target is also
-playback-live now: TayPE may briefly fade or skip audio while it swaps the
+Send level knobs are safe to move while the transport is running. Right-click
+an assigned send knob to open its send prep panel: low-cut, high-cut, and
+predelay shape that one source-to-bus feed before it reaches the bus. Use it
+for reverb feeds where one reverb bus needs several different predelays or
+filtered sends. A light send knob means that send has non-default prep.
+
+Changing track input/output routing, the main output route, or a send target is
+also playback-live now: TayPE may briefly fade or skip audio while it swaps the
 routing graph, but the playback clock keeps moving.
 The `SENDS` header mode button flips the whole strip between `POST` and `PRE`.
 `POST` follows the fader; `PRE` keeps the send alive with the fader down. The

@@ -71,7 +71,7 @@ Update a track's properties. Only provided fields are changed.
 | `input_id` | string | no | Input route: audio ("1", "1-2", etc.) or MIDI ("midi:all", "midi:virtual:keyboard", "midi:<device-id>") |
 | `comp_input_id` | string | no | Shared visible input choice for a comp bus |
 | `output_id` | string | no | Output target: "master", bus track ID, or `hardware:<stereo route>` for a direct hardware output |
-| `sends` | array | no | Additional fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0}]` |
+| `sends` | array | no | Additional per-source fan-out routes to downstream buses only: `[{"target_id":"<bus>","level":0.0-4.0,"low_cut_hz":0.0-1000.0,"high_cut_hz":2000.0-20000.0,"delay_samples":0-48000}]`. `delay_ms` is also accepted and converted to samples. |
 | `trim` | number | no | Input trim: -36.0 to +12.0 dB |
 | `position` | number | no | 0-based display index (reorders track) |
 | `tags` | array | no | Replace track tags with an array of tag strings |
@@ -86,8 +86,8 @@ Update a track's properties. Only provided fields are changed.
 Volume, pan, width, width split, mute, solo, monitor, and preamp parameters take effect
 immediately (safe during playback). Name, colour, archived, bus, input, and
 output changes require transport to be stopped. Send target changes still need
-stopped transport, but changing only a send's `level` on an existing send is
-safe during playback.
+stopped transport, but changing an existing send's `level`, `low_cut_hz`,
+`high_cut_hz`, `delay_samples`, or `delay_ms` is safe during playback.
 `preamp_manual_gain` now writes the same output-gain stage used by AG and NAM
 output compensation, so manual trims and automatic trims stay in one lane.
 
