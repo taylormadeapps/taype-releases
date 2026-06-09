@@ -1,7 +1,7 @@
 # Fader and Pan
 
 - **Fader** - 0 to +12 dB range. Drag vertically.
-- **Pan** - full left to full right. Equal-power panning law so the centre doesn't sound louder than the sides.
+- **Pan** - full left to full right. Mono strips use equal-power pan. Stereo strips use Image Position by default, or Balance for older reels migrated into the compatibility mode.
 - **Width** - shown on stereo strips only. Mono strips hide it because there is no stereo image to widen before pan.
 - **ST / MONO** - switch a regular track's strip between stereo and mono processing.
 - **INV** - flip polarity on the strip output.
@@ -30,6 +30,12 @@ oversized.
 
 Hold **Shift** while dragging the fader, pan, or width control for a finer
 4x trim pass.
+
+Right-click the pan knob on a stereo strip to choose **Balance** or
+**Image Position**. **Image Position** moves the stereo image with one knob. **Balance** keeps the
+legacy behaviour where panning left attenuates the right channel and panning
+right attenuates the left channel. Existing reels open in Balance so old mixes
+stay unchanged; newly created stereo strips start in Image Position.
 
 Right-click the width knob or its readout to open the width split controls.
 **OFF** keeps the width knob working across the full stereo image. **ABOVE**
