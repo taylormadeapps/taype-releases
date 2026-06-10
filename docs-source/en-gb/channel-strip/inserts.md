@@ -115,11 +115,11 @@ processing sample rate and writes back to samples when edited. Negative values
 clamp to zero because TayPE can add delay, not send audio to future hardware.
 Click the same Hardware Insert row
 again to close that track/slot window. The native insert window also lets
-you rename the slot, pick a slot colour under the name field, set input and
-output trim plus wet/dry along the bottom of the left plate, and watch the
-send/return mini meters in the right plate with auto-gain and Peak/RMS directly
-under the meters on the left plus the same slot bypass power control on
-the right. Reels with no stored name
+you rename the slot, bypass or disable it from the top bar, open its preset
+menu, pick a slot colour under the name field, set input and output trim plus
+wet/dry along the bottom of the left plate, and watch the send/return mini
+meters in the right plate with auto-gain and Peak/RMS directly under the
+meters on the left. Reels with no stored name
 or no newer Hardware Insert fields still use the default **Hardware Insert**
 label, 0 dB trims, Peak auto-gain, and the track colour. Wet/dry blends use a
 latency-aligned dry path, so partial blends stay aligned with the returned
@@ -150,6 +150,15 @@ Loading a saved plug-in preset happens with transport stopped. TayPE fully
 reloads that insert from the saved preset chunk so processors that ignore hot
 state swaps still come back in the recalled state instead of slipping back to
 the default patch.
+
+Hardware Insert presets live in `Documents/Taype/Presets/Hardware Inserts`.
+They save the open slot only: routes, latency, trims, wet/dry, filters, colour,
+enable/bypass state, and recall photos. Recall photos are copied into the
+preset's own asset folder on save. Loading a preset copies those photos back
+into the current reel and stores reel-relative paths on the insert. Send and
+return routes restore as a pair: if either side is missing, unavailable, or
+already in use, TayPE keeps the current hardware routes and latency offset,
+warns you, and still loads the rest of the preset.
 
 ## Tail Handling
 

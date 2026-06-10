@@ -90,11 +90,20 @@ search and download use the selected model lane. The browser shows **Use A2
 models** for switching between the original NAM lane and the A2 lane where
 TONE3000 has converted the package.
 
-The welcome card also has **Check for Updates** in its bottom-right utility
-area. It only runs when you press it, checks the public TayPE release feed, and
-downloads an installer only after you choose a save location. You can also
-enable **Preferences > General > Check for updates on startup** if you want
-TayPE to run the same check once after the first reel has loaded.
+The welcome card also has small bottom-right utility actions. **Newsletter**
+opens a small local prompt only when you press it. **Subscribe** opens the
+public newsletter subscribe page in your browser; **Cancel** closes the prompt
+without opening the browser. The prompt's **Don't show again in Welcome**
+checkbox starts unchecked from the welcome card; leave it unchecked to keep the
+small **Newsletter** button there. Pressing **Subscribe**, or explicitly ticking
+that checkbox, hides the welcome-card newsletter button on future opens. TayPE
+does not check whether you signed up.
+**Check for Updates** only runs when you press it, checks the public TayPE
+release feed, and downloads an installer only after you choose a save location.
+Use **Preferences > General > Show Welcome Card on Startup** to choose whether
+the welcome card appears on future launches. You can also enable
+**Preferences > General > Check for updates on startup** if you want TayPE to
+run the same check once after the first reel has loaded.
 
 The **Reel Browser** is where you open an existing reel, jump into a recent
 one, create a new one, or branch from a template. At the root of the browser list, TayPE shows
@@ -396,6 +405,9 @@ control does.
 Use **Help -> Read the Fine Manual** to open the matching TayPE GitBook
 language in your browser when that translation exists. If your current app
 locale does not have a published docs section yet, TayPE falls back to English.
+Use **Help -> Join the Newsletter** to open the same newsletter prompt later
+without reopening the welcome card. Untick **Don't show again in Welcome**
+there if you want the welcome-card button back.
 
 On macOS, use the search field at the top of the **Help** menu to search the
 docs. Pressing Return there, or clicking the search button, opens that search

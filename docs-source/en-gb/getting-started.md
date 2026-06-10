@@ -38,7 +38,9 @@ fake the RAW block.
 
 The welcome card also has **Check for Updates** in its bottom-right utility
 area. It checks the public release feed when you press it, and downloads an
-installer only after you choose where to save it. You can also enable
+installer only after you choose where to save it. The small **Don't show this
+again** checkbox above it hides the welcome card on future launches without
+closing the current card immediately. You can also enable
 **Preferences > General > Check for updates on startup** if you want TayPE to
 run the same check once after the first reel has loaded.
 

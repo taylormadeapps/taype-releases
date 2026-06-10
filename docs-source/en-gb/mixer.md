@@ -62,7 +62,9 @@ input. Turning **B** off disconnects any tracks routed to that bus so your
 routing stays valid.
 
 **Insert slots** - click to load a plugin, right-click for a context menu
-with options like bypass and remove.
+with options like bypass and remove. Hardware Insert popup presets save and
+recall the open outboard slot, including recall photos; route restore is
+all-or-nothing for the send/return pair.
 
 **Track name** - single-click the title panel to select that track in the
 arranger and light its footer outline. **Cmd-click** toggles visible strips

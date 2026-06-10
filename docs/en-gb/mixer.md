@@ -286,7 +286,9 @@ arrow keys to move through the stored photos; Esc closes the viewer.
 The same popup also has low-cut and high-cut filters on the hardware wet path.
 The PRE/POST switch places those filters before the send or after the return,
 and the Ping button measures the external round-trip latency while transport is
-stopped. The popup `IN` and `OUT` trims mark and detent at 0 dB.
+stopped. The popup `IN` and `OUT` trims mark and detent at 0 dB. Its Presets
+menu saves and recalls the open Hardware Insert slot, including recall photos;
+route restore is all-or-nothing for the send/return pair.
 If the loaded plug-in name clips, hovering that row reveals the full plug-in
 name with its latency on a second line, even with Popup Help turned off.
 
