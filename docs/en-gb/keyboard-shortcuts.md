@@ -22,7 +22,7 @@ loop from selection to `Cmd+Shift+L`, so the plain arrow keys remain TayPE
 navigation.
 It uses Pro Tools-style keypad chords where TayPE has clean equivalents,
 including `Numpad 7` for metronome, `Ctrl+Option+Numpad +/-` for grid size,
-`Option+-` for automation view, and `Option+K` for auto monitor.
+`Option+-` for automation view, and `Option+K` for auto monitor. Industry Standard Bruh maps external clip bounce to Cmd+Shift+K, matching Pro Tools' Export Clips as Files shortcut.
 
 Older `~/Documents/Taype/keybindings.json` files are imported once into the
 profile folder and archived as `legacy-keybindings*.bak`.
@@ -105,6 +105,7 @@ of only reflecting the last path that touched the setting.
 | D | Duplicate selected clips back-to-back as a group |
 | F | Add or remove start/end fades on selected clips at the **Default Fade Length** set in **Preferences > General**. Crossfade-bound boundaries are left alone; otherwise the missing fade(s) are added, or both are removed when both are present |
 | B | Bounce selected clips to one new stem track |
+| Option+B | Bounce selected clips to an external WAV; defaults to `[TAYPE_HOME]/bounces` and lets you choose the file |
 | Cmd+D | Duplicate selected track without clips |
 | Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
 | Option+D | Duplicate selected track with clips |
@@ -233,6 +234,7 @@ format is straightforward:
   "duplicate_clip": "d",
   "toggle_fade": "f",
   "bounce_clips_to_stem": "b",
+  "bounce_external": "alt+b",
   "bounce_tracks_to_stem": "cmd+b",
   "duplicate_track_without_content": "cmd+d",
   "duplicate_track": "alt+d",

@@ -340,6 +340,15 @@ source clips when the pass is done. Before the pass starts, TayPE asks you to
 confirm that those selected clips will be disabled and reminds you that bounce
 consolidates audio only - no MIDI stem is created.
 
+Press **Option+B** or choose **Edit -> Bounce External...** to print the
+selected clips to a standalone WAV without changing the reel. The save panel
+defaults to `[TAYPE_HOME]/bounces` with a name based on the reel, track, and
+clip, but you can choose another folder or filename before the realtime pass
+starts. When the pass completes, TayPE reveals the written WAV and leaves the
+source clips exactly as they were. In the **Industry Standard Bruh** profile,
+the same command is **Cmd+Shift+K** to match Pro Tools' Export Clips as Files
+shortcut.
+
 Press **Cmd+B** or choose **Tracks -> Bounce Tracks to Stem** to print the
 selected tracks to one new stereo stem track in real time. When the pass
 completes, TayPE archives those source tracks. That confirm also spells out
