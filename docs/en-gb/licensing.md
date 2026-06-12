@@ -1,7 +1,12 @@
 # Licensing
 
 TayPE is a pay-once, own-forever application. No subscriptions, no recurring
-fees, no feature gating. You buy it once and every update is free.
+fees, no feature gating. A licence includes the current major version (Era)
+and the next, with included updates during those Eras. Major versions are
+typically released at a yearly cadence; the latest Era receives feature
+updates and the previous Era receives Long Term Support (LTS) maintenance and
+bug-fix releases. On renewal, existing users receive a significant discount
+when moving from any previous version.
 
 ## Education
 
