@@ -2239,6 +2239,27 @@ function showGregism() {
     gregismEl.textContent = `${currentLocaleData.quoteOpen}${currentGregisms[gregismIndex]}${currentLocaleData.quoteClose}`;
 }
 
+function applyPricingEraLinks() {
+    ["price-personal-feature-2", "price-commercial-feature-2"].forEach((id) => {
+        const node = document.getElementById(id);
+        const text = currentLocaleData.text[id];
+        if (!node || !text) return;
+
+        const match = text.match(/(\(Eras\)|（Eras）|\(Era's\))/);
+        if (!match || match.index === undefined) return;
+
+        const before = text.slice(0, match.index);
+        const after = text.slice(match.index + match[0].length);
+        const link = document.createElement("a");
+        link.href = "#pricing-cadence-note";
+        link.className = "era-link";
+        link.textContent = match[0];
+
+        node.textContent = "";
+        node.append(document.createTextNode(before), link, document.createTextNode(after));
+    });
+}
+
 function applyLocale(localeKey) {
     currentLocale = locales[localeKey] ? localeKey : "en-gb";
     currentLocaleData = locales[currentLocale];
@@ -2260,6 +2281,8 @@ function applyLocale(localeKey) {
         const node = document.getElementById(id);
         if (node) node.textContent = value;
     });
+
+    applyPricingEraLinks();
 
     Object.entries(currentLocaleData.html || {}).forEach(([id, value]) => {
         const node = document.getElementById(id);
