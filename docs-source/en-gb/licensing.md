@@ -20,11 +20,11 @@ If you have accessibility requirements, TayPE is 33% off. DM us on
 [Instagram](https://instagram.com/ruminantaudioworks) or
 [Reddit](https://www.reddit.com/message/compose/?to=ruminantaudioworks) for a discount code.
 
-## Evaluation
+## Trustware Demo
 
-TayPE includes a generous evaluation period so you can try it properly before
-buying. No nag screens, no watermarks on your audio, no artificial limitations
-during the trial.
+TayPE is fully functional trustware. There are no demo limitations, no expiry,
+no noise bursts, no watermarks on your audio, and no artificial restrictions.
+Use the full app properly; if it is working for you, buy a perpetual licence.
 
 ## Agreement
 
