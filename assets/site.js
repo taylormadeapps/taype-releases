@@ -1,6 +1,6 @@
 const PUBLIC_SITE_URL = "https://taype.ruminantaudioworks.com";
 const DOCS_BASE_URL = "https://ruminant-audio-works.gitbook.io/taype/";
-const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v0.21.0/Taype-0.21.0.pkg";
+const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v0.22.0/Taype-0.22.0.pkg";
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
 
 const localeAliasMap = {
@@ -83,20 +83,21 @@ const locales = {
             "price-personal-title": "Personal",
             "price-personal-note": "one-time purchase",
             "price-personal-feature-1": "Full application, all features",
-            "price-personal-feature-2": "2 major versions of free updates",
+            "price-personal-feature-2": "2 major versions (Eras) of included updates",
             "price-personal-cta": "Buy Now",
             "price-commercial-title": "Commercial",
             "price-commercial-note": "one-time purchase",
             "price-commercial-feature-1": "Full application, all features",
-            "price-commercial-feature-2": "2 major versions of free updates",
+            "price-commercial-feature-2": "2 major versions (Eras) of included updates",
             "price-commercial-cta": "Buy Now",
             "education-heading": "Education",
             "education-copy": "Free for students. DM us for a discount code.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Students free. Accessibility concessions. Just ask.",
-            "pricing-cadence-note": "Major versions are typically released at a yearly cadence. Subsequent licence upgrades are priced at 25% of RRP for existing owners.",
+            "pricing-cadence-note": "Major versions (Eras) are typically released at a yearly cadence.\n\nThe latest Era receives new features. The previous Era stays in Long Term Support (LTS), with maintenance and bug-fix releases.\n\nYour licence includes the current Era and the next, usually giving you 2 years of feature updates and 3 years of maintenance coverage.\n\nOn renewal, existing users receive a significant discount when moving from any previous version.",
             "pricing-ownership-note": "Your licensed Eras remain yours. They do not stop working when support coverage ends.",
+
             "download-heading": "Let's Roll",
             "download-copy": "Fully Functional Trustware. No demo limitations, No expiry, No noise.",
             "download-apply": "Download now",
@@ -272,20 +273,21 @@ const locales = {
             "price-personal-title": "個人",
             "price-personal-note": "買い切り",
             "price-personal-feature-1": "フルアプリケーション、全機能込み",
-            "price-personal-feature-2": "2 メジャーバージョン分の無償アップデート",
+            "price-personal-feature-2": "2 つのメジャーバージョン（Eras）のアップデート込み",
             "price-personal-cta": "今すぐ購入",
             "price-commercial-title": "商用",
             "price-commercial-note": "買い切り",
             "price-commercial-feature-1": "フルアプリケーション、全機能込み",
-            "price-commercial-feature-2": "2 メジャーバージョン分の無償アップデート",
+            "price-commercial-feature-2": "2 つのメジャーバージョン（Eras）のアップデート込み",
             "price-commercial-cta": "今すぐ購入",
             "education-heading": "教育",
             "education-copy": "学生と教育機関は無償です。割引コードが必要なら DM をください。",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "学生は無料。アクセシビリティ割引あり。気軽に聞いて。",
-            "pricing-cadence-note": "メジャーバージョンは通常年1回のペースでリリース。既存ユーザーへのライセンスアップグレードは希望小売価格の25%で提供。",
+            "pricing-cadence-note": "メジャーバージョン（Eras）は通常、年1回のペースでリリースされます。\n\n最新の Era には新機能が追加されます。ひとつ前の Era は Long Term Support (LTS) として、メンテナンスとバグ修正リリースを継続します。\n\nライセンスには現在の Era と次の Era が含まれ、通常は2年分の機能アップデートと3年分のメンテナンス範囲になります。\n\n更新時には、既存ユーザーはどの旧バージョンからでも大幅な割引で移行できます。",
             "pricing-ownership-note": "ライセンス済みの Era はあなたのものとして残ります。サポート期間が終了しても動作しなくなることはありません。",
+
             "download-heading": "さあ始めよう",
             "download-copy": "フル機能のTrustware。デモの制限なし、期限切れなし、ノイズなし。",
             "download-apply": "今すぐダウンロード",
@@ -461,20 +463,21 @@ const locales = {
             "price-personal-title": "Personnel",
             "price-personal-note": "achat unique",
             "price-personal-feature-1": "Application complète, toutes les fonctions",
-            "price-personal-feature-2": "2 versions majeures de mises à jour gratuites",
+            "price-personal-feature-2": "2 versions majeures (Eras) de mises à jour incluses",
             "price-personal-cta": "Acheter maintenant",
             "price-commercial-title": "Commercial",
             "price-commercial-note": "achat unique",
             "price-commercial-feature-1": "Application complète, toutes les fonctions",
-            "price-commercial-feature-2": "2 versions majeures de mises à jour gratuites",
+            "price-commercial-feature-2": "2 versions majeures (Eras) de mises à jour incluses",
             "price-commercial-cta": "Acheter maintenant",
             "education-heading": "\u00c9ducation",
             "education-copy": "Gratuit pour les étudiant·es et les enseignant·es. Envoyez-nous un message pour un code de réduction.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Gratuit pour les étudiants. Tarifs préférentiels accessibilité. Demandez, simplement.",
-            "pricing-cadence-note": "Les versions majeures sortent typiquement à cadence annuelle. Les mises à niveau de licence sont facturés 25 % du PVC pour les propriétaires existants.",
+            "pricing-cadence-note": "Les versions majeures (Eras) sont généralement publiées à cadence annuelle.\n\nLa dernière Era reçoit de nouvelles fonctionnalités. L’Era précédente reste en Long Term Support (LTS), avec des versions de maintenance et de correction de bugs.\n\nVotre licence inclut l’Era actuelle et la suivante, ce qui donne généralement 2 ans de mises à jour de fonctionnalités et 3 ans de couverture de maintenance.\n\nAu renouvellement, les utilisateurs existants bénéficient d’une remise importante pour passer depuis n’importe quelle version précédente.",
             "pricing-ownership-note": "Vos Eras sous licence restent à vous. Elles ne cessent pas de fonctionner quand la période de support prend fin.",
+
             "download-heading": "C'est parti",
             "download-copy": "Trustware entièrement fonctionnel. Pas de limitations de démo, pas d'expiration, pas de bruit.",
             "download-apply": "Télécharger maintenant",
@@ -650,20 +653,21 @@ const locales = {
             "price-personal-title": "Privat",
             "price-personal-note": "Einmalkauf",
             "price-personal-feature-1": "Vollständige Anwendung, alle Funktionen",
-            "price-personal-feature-2": "2 Hauptversionen kostenloser Updates",
+            "price-personal-feature-2": "2 Hauptversionen (Eras) mit enthaltenen Updates",
             "price-personal-cta": "Jetzt kaufen",
             "price-commercial-title": "Gewerblich",
             "price-commercial-note": "Einmalkauf",
             "price-commercial-feature-1": "Vollständige Anwendung, alle Funktionen",
-            "price-commercial-feature-2": "2 Hauptversionen kostenloser Updates",
+            "price-commercial-feature-2": "2 Hauptversionen (Eras) mit enthaltenen Updates",
             "price-commercial-cta": "Jetzt kaufen",
             "education-heading": "Bildung",
             "education-copy": "Kostenlos für Studierende und Lehrende. Schreib uns für einen Rabattcode.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Studierende kostenlos. Barrierefreiheits-Vergünstigungen. Frag einfach.",
-            "pricing-cadence-note": "Major-Versionen erscheinen typischerweise im Jahresrhythmus. Folgende Lizenz-Upgrades kosten 25% des UVP für bestehende Besitzer.",
+            "pricing-cadence-note": "Major-Versionen (Eras) erscheinen typischerweise in einem jährlichen Rhythmus.\n\nDie neueste Era erhält neue Funktionen. Die vorherige Era bleibt im Long Term Support (LTS), mit Wartungs- und Fehlerbehebungs-Releases.\n\nDeine Lizenz umfasst die aktuelle Era und die nächste, normalerweise also 2 Jahre Funktionsupdates und 3 Jahre Wartungsabdeckung.\n\nBei der Verlängerung erhalten bestehende Nutzer einen deutlichen Rabatt beim Wechsel von jeder früheren Version.",
             "pricing-ownership-note": "Deine lizenzierten Eras bleiben deine. Sie funktionieren weiter, auch wenn der Supportzeitraum endet.",
+
             "download-heading": "Los geht's",
             "download-copy": "Voll funktionsfähige Trustware. Keine Demo-Einschränkungen, kein Ablaufdatum, kein Rauschen.",
             "download-apply": "Jetzt herunterladen",
@@ -839,20 +843,21 @@ const locales = {
             "price-personal-title": "Personal",
             "price-personal-note": "pago único",
             "price-personal-feature-1": "Aplicación completa, todas las funciones",
-            "price-personal-feature-2": "2 versiones mayores de actualizaciones gratuitas",
+            "price-personal-feature-2": "2 versiones mayores (Eras) de actualizaciones incluidas",
             "price-personal-cta": "Comprar ahora",
             "price-commercial-title": "Comercial",
             "price-commercial-note": "pago único",
             "price-commercial-feature-1": "Aplicación completa, todas las funciones",
-            "price-commercial-feature-2": "2 versiones mayores de actualizaciones gratuitas",
+            "price-commercial-feature-2": "2 versiones mayores (Eras) de actualizaciones incluidas",
             "price-commercial-cta": "Comprar ahora",
             "education-heading": "Educación",
             "education-copy": "Gratis para estudiantes y docentes. Escríbenos para conseguir un código de descuento.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Estudiantes gratis. Concesiones de accesibilidad. Sólo pregunta.",
-            "pricing-cadence-note": "Las versiones mayores se publican típicamente con cadencia anual. Las actualizaciones de licencia se cobran al 25% del PVP para propietarios existentes.",
+            "pricing-cadence-note": "Las versiones mayores (Eras) se publican normalmente con cadencia anual.\n\nLa Era más reciente recibe funciones nuevas. La Era anterior permanece en Long Term Support (LTS), con versiones de mantenimiento y corrección de bugs.\n\nTu licencia incluye la Era actual y la siguiente, normalmente 2 años de actualizaciones de funciones y 3 años de cobertura de mantenimiento.\n\nAl renovar, los usuarios existentes reciben un descuento significativo al pasar desde cualquier versión anterior.",
             "pricing-ownership-note": "Tus Eras con licencia siguen siendo tuyas. No dejan de funcionar cuando termina la cobertura de soporte.",
+
             "download-heading": "A grabar",
             "download-copy": "Trustware totalmente funcional. Sin limitaciones de demo, sin caducidad, sin ruido.",
             "download-apply": "Descargar ahora",
@@ -1028,20 +1033,21 @@ const locales = {
             "price-personal-title": "Einstaklingar",
             "price-personal-note": "eitt skipti",
             "price-personal-feature-1": "Fullt forrit, allir eiginleikar",
-            "price-personal-feature-2": "2 aðalútgáfur af ókeypis uppfærslum",
+            "price-personal-feature-2": "2 aðalútgáfur (Eras) með inniföldum uppfærslum",
             "price-personal-cta": "Kaupa núna",
             "price-commercial-title": "Atvinnuleyfi",
             "price-commercial-note": "eitt skipti",
             "price-commercial-feature-1": "Fullt forrit, allir eiginleikar",
-            "price-commercial-feature-2": "2 aðalútgáfur af ókeypis uppfærslum",
+            "price-commercial-feature-2": "2 aðalútgáfur (Eras) með inniföldum uppfærslum",
             "price-commercial-cta": "Kaupa núna",
             "education-heading": "Menntun",
             "education-copy": "Ókeypis fyrir nemendur og kennara. Sendu okkur skilaboð fyrir afsláttarkóða.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Nemendur frítt. Aðgengisívilnun. Bara spyrja.",
-            "pricing-cadence-note": "Stórar útgáfur koma yfirleitt árlega. Uppfærslur leyfis kosta 25% af leiðbeinandi verði fyrir núverandi eigendur.",
+            "pricing-cadence-note": "Stórar útgáfur (Eras) koma venjulega út með árlegri tíðni.\n\nNýjasta Era fær nýja eiginleika. Fyrri Era helst í Long Term Support (LTS), með viðhalds- og villuleiðréttingum.\n\nLeyfið þitt innifelur núverandi Era og þá næstu, yfirleitt 2 ár af eiginleikauppfærslum og 3 ár af viðhaldsumfjöllun.\n\nVið endurnýjun fá núverandi notendur verulegan afslátt þegar þeir færa sig frá hvaða fyrri útgáfu sem er.",
             "pricing-ownership-note": "Útgáfurnar sem leyfið þitt nær yfir eru áfram þínar. Þær hætta ekki að virka þegar stuðningstímabilinu lýkur.",
+
             "download-heading": "Til verks",
             "download-copy": "Fullvirkt Trustware. Engar demo-takmarkanir, engin fyrning, ekkert suð.",
             "download-apply": "Sækja núna",
@@ -1217,20 +1223,21 @@ const locales = {
             "price-personal-title": "Persoonlijk",
             "price-personal-note": "eenmalige aankoop",
             "price-personal-feature-1": "Volledige toepassing, alle functies",
-            "price-personal-feature-2": "2 grote versies gratis updates",
+            "price-personal-feature-2": "2 grote versies (Era's) met inbegrepen updates",
             "price-personal-cta": "Nu kopen",
             "price-commercial-title": "Commercieel",
             "price-commercial-note": "eenmalige aankoop",
             "price-commercial-feature-1": "Volledige toepassing, alle functies",
-            "price-commercial-feature-2": "2 grote versies gratis updates",
+            "price-commercial-feature-2": "2 grote versies (Era's) met inbegrepen updates",
             "price-commercial-cta": "Nu kopen",
             "education-heading": "Onderwijs",
             "education-copy": "Gratis voor studenten. Stuur ons een DM voor een kortingscode.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Gratis voor studenten. Toegankelijkheidskortingen. Vraag het gewoon.",
-            "pricing-cadence-note": "Major-versies komen doorgaans jaarlijks uit. Volgende licentie-upgrades zijn 25% van de adviesprijs voor bestaande eigenaren.",
+            "pricing-cadence-note": "Major-versies (Era's) komen doorgaans uit in een jaarlijks ritme.\n\nDe nieuwste Era krijgt nieuwe functies. De vorige Era blijft in Long Term Support (LTS), met onderhouds- en bugfix-releases.\n\nJe licentie bevat de huidige Era en de volgende, meestal goed voor 2 jaar functie-updates en 3 jaar onderhoudsdekking.\n\nBij verlenging krijgen bestaande gebruikers een flinke korting bij overstap vanaf elke eerdere versie.",
             "pricing-ownership-note": "Je gelicentieerde Eras blijven van jou. Ze stoppen niet met werken wanneer de ondersteuningsperiode eindigt.",
+
             "download-heading": "Laten we beginnen",
             "download-copy": "Volledig functionele Trustware. Geen demo-beperkingen, geen vervaldatum, geen ruis.",
             "download-apply": "Nu downloaden",
@@ -1406,20 +1413,21 @@ const locales = {
             "price-personal-title": "Personale",
             "price-personal-note": "acquisto una tantum",
             "price-personal-feature-1": "Applicazione completa, tutte le funzioni",
-            "price-personal-feature-2": "2 versioni principali di aggiornamenti gratuiti",
+            "price-personal-feature-2": "2 versioni principali (Eras) di aggiornamenti inclusi",
             "price-personal-cta": "Acquista ora",
             "price-commercial-title": "Commerciale",
             "price-commercial-note": "acquisto una tantum",
             "price-commercial-feature-1": "Applicazione completa, tutte le funzioni",
-            "price-commercial-feature-2": "2 versioni principali di aggiornamenti gratuiti",
+            "price-commercial-feature-2": "2 versioni principali (Eras) di aggiornamenti inclusi",
             "price-commercial-cta": "Acquista ora",
             "education-heading": "Istruzione",
             "education-copy": "Gratuito per studenti. Inviaci un DM per un codice sconto.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Studenti gratis. Agevolazioni accessibilità. Basta chiedere.",
-            "pricing-cadence-note": "Le versioni major escono tipicamente a cadenza annuale. Gli upgrade di licenza sono al 25% del prezzo consigliato per chi possiede già il prodotto.",
+            "pricing-cadence-note": "Le versioni principali (Eras) escono tipicamente con cadenza annuale.\n\nL’Era più recente riceve nuove funzionalità. L’Era precedente resta in Long Term Support (LTS), con rilasci di manutenzione e correzione bug.\n\nLa licenza include l’Era corrente e quella successiva, di solito 2 anni di aggiornamenti funzionali e 3 anni di copertura di manutenzione.\n\nAl rinnovo, gli utenti esistenti ricevono uno sconto significativo passando da qualsiasi versione precedente.",
             "pricing-ownership-note": "Le Eras incluse nella tua licenza restano tue. Non smettono di funzionare quando termina la copertura di supporto.",
+
             "download-heading": "Si parte",
             "download-copy": "Trustware pienamente funzionante. Nessuna limitazione demo, nessuna scadenza, nessun rumore.",
             "download-apply": "Scarica ora",
@@ -1595,20 +1603,21 @@ const locales = {
             "price-personal-title": "Osobisty",
             "price-personal-note": "jednorazowy zakup",
             "price-personal-feature-1": "Pełna aplikacja, wszystkie funkcje",
-            "price-personal-feature-2": "2 główne wersje bezpłatnych aktualizacji",
+            "price-personal-feature-2": "2 główne wersje (Eras) z aktualizacjami w cenie",
             "price-personal-cta": "Kup teraz",
             "price-commercial-title": "Komercyjny",
             "price-commercial-note": "jednorazowy zakup",
             "price-commercial-feature-1": "Pełna aplikacja, wszystkie funkcje",
-            "price-commercial-feature-2": "2 główne wersje bezpłatnych aktualizacji",
+            "price-commercial-feature-2": "2 główne wersje (Eras) z aktualizacjami w cenie",
             "price-commercial-cta": "Kup teraz",
             "education-heading": "Edukacja",
             "education-copy": "Bezpłatnie dla studentów. Wyślij nam DM, aby uzyskać kod rabatowy.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Studenci za darmo. Ulgi dostępnościowe. Po prostu zapytaj.",
-            "pricing-cadence-note": "Wersje główne pojawiają się zazwyczaj raz w roku. Aktualizacje licencji kosztują 25% sugerowanej ceny detalicznej dla obecnych właścicieli.",
+            "pricing-cadence-note": "Wersje główne (Eras) ukazują się zwykle w rocznej kadencji.\n\nNajnowsza Era otrzymuje nowe funkcje. Poprzednia Era pozostaje w Long Term Support (LTS), z wydaniami konserwacyjnymi i poprawkami błędów.\n\nLicencja obejmuje bieżącą Erę i następną, zwykle dając 2 lata aktualizacji funkcji i 3 lata utrzymania.\n\nPrzy odnowieniu obecni użytkownicy otrzymują znaczącą zniżkę przy przejściu z dowolnej wcześniejszej wersji.",
             "pricing-ownership-note": "Ery objęte twoją licencją pozostają twoje. Nie przestają działać po zakończeniu okresu wsparcia.",
+
             "download-heading": "Zaczynamy",
             "download-copy": "W pełni funkcjonalne Trustware. Bez ograniczeń demo, bez wygaśnięcia, bez szumów.",
             "download-apply": "Pobierz teraz",
@@ -1784,20 +1793,21 @@ const locales = {
             "price-personal-title": "Особистий",
             "price-personal-note": "одноразова покупка",
             "price-personal-feature-1": "Повна програма, всі функції",
-            "price-personal-feature-2": "2 основні версії безкоштовних оновлень",
+            "price-personal-feature-2": "2 основні версії (Eras) з включеними оновленнями",
             "price-personal-cta": "Купити зараз",
             "price-commercial-title": "Комерційний",
             "price-commercial-note": "одноразова покупка",
             "price-commercial-feature-1": "Повна програма, всі функції",
-            "price-commercial-feature-2": "2 основні версії безкоштовних оновлень",
+            "price-commercial-feature-2": "2 основні версії (Eras) з включеними оновленнями",
             "price-commercial-cta": "Купити зараз",
             "education-heading": "Освіта",
             "education-copy": "Безпечно для студентів. Надішліть нам DM для кодексу дисконту.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Студенти безкоштовно. Знижки за доступністю. Просто спитай.",
-            "pricing-cadence-note": "Великі версії зазвичай виходять щорічно. Подальші оновлення ліцензії - 25% від рекомендованої ціни для існуючих власників.",
+            "pricing-cadence-note": "Основні версії (Eras) зазвичай виходять із річною періодичністю.\n\nНайновіша Era отримує нові функції. Попередня Era залишається в Long Term Support (LTS), з релізами обслуговування та виправлення помилок.\n\nЛіцензія включає поточну Era і наступну, зазвичай даючи 2 роки функціональних оновлень і 3 роки обслуговування.\n\nПід час поновлення чинні користувачі отримують значну знижку при переході з будь-якої попередньої версії.",
             "pricing-ownership-note": "Ери, включені до вашої ліцензії, залишаються вашими. Вони не припиняють працювати після завершення періоду підтримки.",
+
             "download-heading": "Поїхали",
             "download-copy": "Повністю функціональна Trustware. Без демо-обмежень, без завершення терміну дії, без шумів.",
             "download-apply": "Завантажити зараз",
@@ -1973,20 +1983,21 @@ const locales = {
             "price-personal-title": "Προσωπικό",
             "price-personal-note": "αγορά μιας φοράς",
             "price-personal-feature-1": "Πλήρη εφαρμογή, όλα τα χαρακτηριστικά",
-            "price-personal-feature-2": "2 κύριες εκδόσεις δωρεάν ενημερώσεων",
+            "price-personal-feature-2": "2 κύριες εκδόσεις (Eras) με συμπεριλαμβανόμενες ενημερώσεις",
             "price-personal-cta": "Αγορά τώρα",
             "price-commercial-title": "Εμπορική",
             "price-commercial-note": "αγορά μιας φοράς",
             "price-commercial-feature-1": "Πλήρη εφαρμογή, όλα τα χαρακτηριστικά",
-            "price-commercial-feature-2": "2 κύριες εκδόσεις δωρεάν ενημερώσεων",
+            "price-commercial-feature-2": "2 κύριες εκδόσεις (Eras) με συμπεριλαμβανόμενες ενημερώσεις",
             "price-commercial-cta": "Αγορά τώρα",
             "education-heading": "Εκπαίδευση",
             "education-copy": "Δωρεάν για φοιτητές. Στείλτε μας ένα DM για κωδικό έκπτωσης.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
             "accessibility-note": "Δωρεάν για φοιτητές. Παραχωρήσεις προσβασιμότητας. Απλώς ρώτα.",
-            "pricing-cadence-note": "Οι μείζονες εκδόσεις κυκλοφορούν συνήθως με ετήσια συχνότητα. Οι αναβαθμίσεις άδειας τιμολογούνται στο 25% της προτεινόμενης τιμής για υπάρχοντες κατόχους.",
+            "pricing-cadence-note": "Οι κύριες εκδόσεις (Eras) κυκλοφορούν συνήθως με ετήσια συχνότητα.\n\nΗ νεότερη Era λαμβάνει νέες λειτουργίες. Η προηγούμενη Era παραμένει σε Long Term Support (LTS), με εκδόσεις συντήρησης και διορθώσεων σφαλμάτων.\n\nΗ άδειά σας περιλαμβάνει την τρέχουσα Era και την επόμενη, συνήθως δίνοντας 2 χρόνια ενημερώσεων λειτουργιών και 3 χρόνια κάλυψης συντήρησης.\n\nΚατά την ανανέωση, οι υπάρχοντες χρήστες λαμβάνουν σημαντική έκπτωση όταν μετακινούνται από οποιαδήποτε προηγούμενη έκδοση.",
             "pricing-ownership-note": "Οι Eras που καλύπτει η άδειά σου παραμένουν δικές σου. Δεν σταματούν να λειτουργούν όταν λήγει η περίοδος υποστήριξης.",
+
             "download-heading": "Ξεκινάμε",
             "download-copy": "Πλήρως λειτουργικό Trustware. Χωρίς περιορισμούς demo, χωρίς λήξη, χωρίς θόρυβο.",
             "download-apply": "Λήψη τώρα",
@@ -2294,6 +2305,27 @@ function showGregism() {
     gregismEl.textContent = `${currentLocaleData.quoteOpen}${currentGregisms[gregismIndex]}${currentLocaleData.quoteClose}`;
 }
 
+function applyPricingEraLinks() {
+    ["price-personal-feature-2", "price-commercial-feature-2"].forEach((id) => {
+        const node = document.getElementById(id);
+        const text = currentLocaleData.text[id];
+        if (!node || !text) return;
+
+        const match = text.match(/(\(Eras\)|（Eras）|\(Era's\))/);
+        if (!match || match.index === undefined) return;
+
+        const before = text.slice(0, match.index);
+        const after = text.slice(match.index + match[0].length);
+        const link = document.createElement("a");
+        link.href = "#pricing-cadence-note";
+        link.className = "era-link";
+        link.textContent = match[0];
+
+        node.textContent = "";
+        node.append(document.createTextNode(before), link, document.createTextNode(after));
+    });
+}
+
 function applyLocale(localeKey) {
     currentLocale = locales[localeKey] ? localeKey : "en-gb";
     currentLocaleData = locales[currentLocale];
@@ -2315,6 +2347,8 @@ function applyLocale(localeKey) {
         const node = document.getElementById(id);
         if (node) node.textContent = value;
     });
+
+    applyPricingEraLinks();
 
     Object.entries(currentLocaleData.html || {}).forEach(([id, value]) => {
         const node = document.getElementById(id);

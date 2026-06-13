@@ -530,6 +530,24 @@ dialog#screenshot-zoom img {
     color: var(--brass);
 }
 
+.price-card ul li a.era-link {
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-decoration-color: rgba(240, 201, 106, 0.55);
+    text-underline-offset: 3px;
+}
+
+.price-card ul li a.era-link:hover,
+.price-card ul li a.era-link:focus {
+    color: var(--brass);
+}
+
+.price-card ul li a.era-link:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+}
+
 .price-card ul {
     list-style: none;
     text-align: left;
@@ -580,6 +598,7 @@ dialog#screenshot-zoom img {
     max-width: 600px;
     margin: 1.5rem auto 0;
     line-height: 1.55;
+    white-space: pre-line;
 }
 
 .pricing-ownership-note {
@@ -1086,7 +1105,7 @@ footer {
         Fully Functional Trustware. No demo limitations, No expiry, No noise.
     </p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 0.75rem;">
-        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.21.0/Taype-0.21.0.pkg" class="btn-primary" target="_blank" rel="noopener">
+        <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.22.0/Taype-0.22.0.pkg" class="btn-primary" target="_blank" rel="noopener">
             Download now
         </a>
     </div>
@@ -1126,7 +1145,7 @@ footer {
             <p id="price-personal-note" class="price-note">one-time purchase</p>
             <ul>
                 <li id="price-personal-feature-1">Full application, all features</li>
-                <li id="price-personal-feature-2">2 major versions of free updates</li>
+                <li id="price-personal-feature-2">2 major versions <a href="#pricing-cadence-note" class="era-link">(Eras)</a> of included updates</li>
             </ul>
             <a id="price-personal-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/b1c9ff08-4518-43a2-8d82-8c31bb2fa8f1" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Buy Now</a>
             <p class="try-first-note"><a id="price-personal-try-first" href="#download">Be sure to download and try before you buy.</a></p>
@@ -1137,20 +1156,12 @@ footer {
             <p id="price-commercial-note" class="price-note">one-time purchase</p>
             <ul>
                 <li id="price-commercial-feature-1">Full application, all features</li>
-                <li id="price-commercial-feature-2">2 major versions of free updates</li>
+                <li id="price-commercial-feature-2">2 major versions <a href="#pricing-cadence-note" class="era-link">(Eras)</a> of included updates</li>
             </ul>
             <a id="price-commercial-cta" href="https://ruminantaudioworks.lemonsqueezy.com/checkout/buy/c5688bcd-0bdd-40a6-a540-c8d880c66b91" target="_blank" rel="noopener" class="btn-primary" style="font-size: 0.8rem;">Buy Now</a>
             <p class="try-first-note"><a id="price-commercial-try-first" href="#download">Be sure to download and try before you buy.</a></p>
         </div>
     </div>
-
-    <p id="pricing-cadence-note" class="pricing-cadence-note">
-        Major versions are typically released at a yearly cadence.
-        Subsequent licence upgrades are priced at 25% of RRP for existing owners.
-    </p>
-    <p id="pricing-ownership-note" class="pricing-ownership-note">
-        Your licensed Eras remain yours. They do not stop working when support coverage ends.
-    </p>
 
     <div class="price-accessibility">
         <p>
@@ -1158,6 +1169,19 @@ footer {
             <br><a id="accessibility-mailto" href="mailto:concessions@ruminantaudioworks.com">concessions@ruminantaudioworks.com</a>
         </p>
     </div>
+
+    <p id="pricing-cadence-note" class="pricing-cadence-note">
+        Major versions (Eras) are typically released at a yearly cadence.
+
+        The latest Era receives new features. The previous Era stays in Long Term Support (LTS), with maintenance and bug-fix releases.
+
+        Your licence includes the current Era and the next, usually giving you 2 years of feature updates and 3 years of maintenance coverage.
+
+        On renewal, existing users receive a significant discount when moving from any previous version.
+    </p>
+    <p id="pricing-ownership-note" class="pricing-ownership-note">
+        Your licensed Eras remain yours. They do not stop working when support coverage ends.
+    </p>
 </section>
 
 <hr class="section-divider">

@@ -32,7 +32,7 @@ MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
 | Personal                  | £75 | Individual artists, hobbyists, small studios |
 | Commercial | TBC | Businesses and organisations |
 
-All licenses include 2 major versions of free updates.
+All licenses include 2 major versions (Eras) of included updates.
 
 **Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantaudioworks) or [Reddit DM](https://www.reddit.com/message/compose/?to=ruminantaudioworks).
 
