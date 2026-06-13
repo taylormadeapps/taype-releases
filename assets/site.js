@@ -123,7 +123,7 @@ const locales = {
             "footer-community": "Community",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
-            "footer-cookies": "Cookie Policy",
+            "footer-site-data": "Cookie Policy",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -312,7 +312,7 @@ const locales = {
             "footer-community": "コミュニティ",
             "footer-terms": "T&Cs",
             "footer-privacy": "プライバシー",
-            "footer-cookies": "Cookie ポリシー",
+            "footer-site-data": "Cookie ポリシー",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE は Ruminant Audio Works Ltd. のプロダクトです。 Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -501,7 +501,7 @@ const locales = {
             "footer-community": "Communauté",
             "footer-terms": "T&Cs",
             "footer-privacy": "Confidentialité",
-            "footer-cookies": "Politique cookies",
+            "footer-site-data": "Politique cookies",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE est un produit de Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -690,7 +690,7 @@ const locales = {
             "footer-community": "Community",
             "footer-terms": "T&Cs",
             "footer-privacy": "Datenschutz",
-            "footer-cookies": "Cookie-Richtlinie",
+            "footer-site-data": "Cookie-Richtlinie",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE ist ein Produkt von Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -879,7 +879,7 @@ const locales = {
             "footer-community": "Comunidad",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacidad",
-            "footer-cookies": "Política de cookies",
+            "footer-site-data": "Política de cookies",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE es un producto de Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -1068,7 +1068,7 @@ const locales = {
             "footer-community": "Samfélag",
             "footer-terms": "T&Cs",
             "footer-privacy": "Persónuvernd",
-            "footer-cookies": "Vefkökustefna",
+            "footer-site-data": "Vefkökustefna",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE er vara frá Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -1257,7 +1257,7 @@ const locales = {
             "footer-community": "Gemeenschap",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
-            "footer-cookies": "Cookiebeleid",
+            "footer-site-data": "Cookiebeleid",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE is een product van Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -1446,7 +1446,7 @@ const locales = {
             "footer-community": "Comunità",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
-            "footer-cookies": "Informativa cookie",
+            "footer-site-data": "Informativa cookie",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE è un prodotto di Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -1635,7 +1635,7 @@ const locales = {
             "footer-community": "Społeczność",
             "footer-terms": "T&Cs",
             "footer-privacy": "Prywatność",
-            "footer-cookies": "Polityka cookies",
+            "footer-site-data": "Polityka cookies",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE jest produktem Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -1824,7 +1824,7 @@ const locales = {
             "footer-community": "Спільнота",
             "footer-terms": "T&Cs",
             "footer-privacy": "Конфіденційність",
-            "footer-cookies": "Політика cookies",
+            "footer-site-data": "Політика cookies",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. TayPE - це продукт Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
@@ -2013,7 +2013,7 @@ const locales = {
             "footer-community": "Κοινότητα",
             "footer-terms": "T&Cs",
             "footer-privacy": "Απόρρητο",
-            "footer-cookies": "Πολιτική cookies",
+            "footer-site-data": "Πολιτική cookies",
             "footer-copy": "\u00a9 2026 Ruminant Audio Works. Το TayPE είναι προϊόν του Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales."
         },
         html: {
