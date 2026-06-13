@@ -92,7 +92,7 @@ nav .nav-links a {
 nav .nav-links a:hover { color: var(--brass); }
 
 .policy-content {
-    max-width: 720px;
+    max-width: 920px;
     margin: 0 auto;
     padding: 96px 2rem 4rem;
 }
@@ -125,32 +125,86 @@ nav .nav-links a:hover { color: var(--brass); }
     margin-bottom: 1rem;
 }
 
-.plain-summary {
+.licence-panel {
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 8px;
-    margin: 2rem 0 2.5rem;
+    margin: 2rem 0;
     padding: 1.5rem;
 }
 
-.plain-summary h2 {
+.licence-panel h2 {
     margin-top: 0;
 }
 
-.plain-summary ul {
+.licence-panel h3 {
+    color: var(--brass);
+    font-size: 0.95rem;
+    margin: 1.5rem 0 0.6rem;
+}
+
+.summary-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.summary-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.summary-list li {
     color: var(--text-muted);
-    margin: 0 0 1rem;
-    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.6rem;
+    position: relative;
 }
 
-.plain-summary li {
-    margin-bottom: 0.6rem;
+.summary-list li::before {
+    color: var(--brass);
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+    top: 0;
 }
 
-.plain-summary .summary-note {
+.summary-list.can li::before { content: "\2713"; }
+.summary-list.no li::before { content: "\2715"; }
+.summary-list.risk li::before { content: "\26A0"; }
+
+.licence-panel .summary-note {
     color: var(--text-dim);
     font-size: 0.85rem;
+    margin-top: 1.25rem;
     margin-bottom: 0;
+}
+
+.full-eula {
+    background: transparent;
+}
+
+.full-eula h3 {
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+}
+
+.full-eula h3:first-of-type {
+    margin-top: 0;
+}
+
+.full-eula h3,
+.full-eula p {
+    max-width: 720px;
+}
+
+@media (max-width: 760px) {
+    .summary-grid { grid-template-columns: 1fr; }
 }
 
 footer {
@@ -222,74 +276,115 @@ footer {
 <h1>Terms &amp; Conditions</h1>
 <p class="last-updated">TayPE End User Licence Agreement</p>
 
-<section class="plain-summary" aria-labelledby="plain-summary-heading">
-    <h2 id="plain-summary-heading">Plain English Summary</h2>
-    <ul>
-        <li>You can use TayPE to make records, mixes, demos, edits, and client work.</li>
-        <li>Your licence lets you use TayPE on the machines and in the ways allowed by your licence tier.</li>
-        <li>TayPE is licensed, not sold. Installing, opening, or using it means you accept the licence below.</li>
-        <li>TayPE is provided as-is. We do not promise it will be error-free, uninterrupted, or right for every studio setup.</li>
-        <li>You are responsible for backups, exports, compatibility checks, and the decisions you make while using it.</li>
-        <li>Third-party components, drivers, plug-ins, and operating-system services may have their own terms and may affect how TayPE behaves.</li>
-        <li>Updates may change features, fix bugs, introduce new bugs, or change compatibility.</li>
-    </ul>
+<section class="licence-panel short-version" aria-labelledby="short-version-heading">
+    <h2 id="short-version-heading">The short version</h2>
     <p class="summary-note">
-        This summary is here to make the licence easier to read. It is not a
-        separate licence; the full agreement below is the one that applies.
+        This is a plain-English guide to the licence. The full EULA below is the
+        agreement that applies.
     </p>
+
+    <div class="summary-grid">
+        <div>
+            <h3>You can</h3>
+            <ul class="summary-list can">
+                <li>Use TayPE to make records, mixes, demos, edits, and other audio work.</li>
+                <li>Use a Personal licence for your own music, your band, your writing, production, and artist projects.</li>
+                <li>Use a Commercial licence for studios, labels, paid client work, business use, selling or licensing audio work, or commercially distributing music.</li>
+                <li>Move from Personal to Commercial if your use changes.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Do not</h3>
+            <ul class="summary-list no">
+                <li>Do not use a Personal licence for commercial work.</li>
+                <li>Do not assume TayPE is guaranteed to be perfect.</li>
+                <li>Do not skip backups, exports, or session checks.</li>
+                <li>Do not rely on TayPE being right for every plugin, driver, setup, session, or workflow.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>The risk bit</h3>
+            <ul class="summary-list risk">
+                <li>TayPE is provided as-is.</li>
+                <li>We do not promise it will be error-free, uninterrupted, secure, or suitable for your setup.</li>
+                <li>If TayPE loses work, corrupts data, crashes, misbehaves, or disappoints you, that risk stays with you.</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<h2>Full Licence</h2>
-<p>
-    TayPE is licensed, not sold. By installing, opening, or using TayPE, you are
-    accepting this agreement.
-</p>
+<section class="licence-panel full-eula" aria-labelledby="full-eula-heading">
+    <h2 id="full-eula-heading">Full EULA</h2>
+    <p>
+        TayPE is licensed, not sold. By installing, opening, or using TayPE, you
+        are accepting this agreement.
+    </p>
 
-<h2>What you can do</h2>
-<p>
-    Use TayPE on the machines and in the ways allowed by your licence tier. You
-    may make records, mixes, edits, demos, and client work with it.
-</p>
+    <h3>What you can do</h3>
+    <p>
+        Use TayPE on the machines and in the ways allowed by your licence tier. You
+        may make records, mixes, edits, demos, and other audio works with it.
+    </p>
 
-<h2>What you cannot claim</h2>
-<p>
-    TayPE is provided "as is". No warranty whatsoever is provided. There is no
-    promise that TayPE is error-free, uninterrupted, secure, or suitable for any
-    particular studio, session, system, or workflow.
-</p>
-<p>
-    There is no guarantee of fitness for any purpose. If TayPE loses work,
-    corrupts data, misbehaves, crashes, or fails to meet your expectations, that
-    risk stays with you.
-</p>
+    <h3>Licence tiers</h3>
+    <p>
+        A Personal licence is for individual musicians, bands, writers, producers,
+        and artist projects using TayPE for their own music and creative work.
+    </p>
+    <p>
+        A Commercial licence is required when TayPE is used as part of a business,
+        organisation, studio, label, production company, paid service, or other
+        commercial operation. It is also required if you are commercially
+        distributing music, selling or licensing audio work, producing client work,
+        or otherwise making money from works on a commercial basis.
+    </p>
+    <p>
+        If your use moves from Personal to Commercial, you must move to the
+        Commercial licence tier before continuing that commercial use.
+    </p>
 
-<h2>Risk</h2>
-<p>
-    Use of TayPE is entirely at your own risk. You are responsible for backups,
-    exports, session checks, compatibility checks, and any decisions you make
-    while using the software.
-</p>
+    <h3>What you cannot claim</h3>
+    <p>
+        TayPE is provided "as is". No warranty whatsoever is provided. There is no
+        promise that TayPE is error-free, uninterrupted, secure, or suitable for any
+        particular studio, session, system, or workflow.
+    </p>
+    <p>
+        There is no guarantee of fitness for any purpose. If TayPE loses work,
+        corrupts data, misbehaves, crashes, or fails to meet your expectations, that
+        risk stays with you.
+    </p>
 
-<h2>Liability</h2>
-<p>
-    To the fullest extent allowed by law, Ruminant Audio Works is not liable for
-    any loss, damage, cost, claim, or consequence arising from your use of TayPE
-    or your inability to use it.
-</p>
+    <h3>Risk</h3>
+    <p>
+        Use of TayPE is entirely at your own risk. You are responsible for backups,
+        exports, session checks, compatibility checks, and any decisions you make
+        while using the software.
+    </p>
 
-<h2>Third-party software</h2>
-<p>
-    TayPE may rely on third-party components, operating-system services, audio
-    drivers, plug-ins, or external tools. Those dependencies are provided under
-    their own terms and may affect behaviour, compatibility, or availability.
-</p>
+    <h3>Liability</h3>
+    <p>
+        To the fullest extent allowed by law, Ruminant Audio Works is not liable for
+        any loss, damage, cost, claim, or consequence arising from your use of TayPE
+        or your inability to use it.
+    </p>
 
-<h2>Updates</h2>
-<p>
-    TayPE may change over time. New builds may alter features, fix bugs,
-    introduce new bugs, or change compatibility. This agreement applies to those
-    builds unless a later version of the agreement replaces it.
-</p>
+    <h3>Third-party software</h3>
+    <p>
+        TayPE may rely on third-party components, operating-system services, audio
+        drivers, plug-ins, or external tools. Those dependencies are provided under
+        their own terms and may affect behaviour, compatibility, or availability.
+    </p>
+
+    <h3>Updates</h3>
+    <p>
+        TayPE may change over time. New builds may alter features, fix bugs,
+        introduce new bugs, or change compatibility. This agreement applies to those
+        builds unless a later version of the agreement replaces it.
+    </p>
+</section>
 
 </main>
 
@@ -302,8 +397,7 @@ footer {
         <a href="/">Home</a>
         <a href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
         <a href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
-        <a href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Get in Touch</a>
-        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/terms/">T&amp;Cs</a>
         <a href="/privacy/">Privacy</a>
         <a href="/cookies/">Cookie Policy</a>
     </div>
