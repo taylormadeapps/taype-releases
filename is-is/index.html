@@ -572,13 +572,18 @@ dialog#screenshot-zoom img {
     font-size: 0.9rem;
 }
 
-.pricing-cadence-note {
+.pricing-cadence-note,
+.pricing-ownership-note {
     text-align: center;
     color: var(--text-muted);
     font-size: 0.9rem;
     max-width: 600px;
     margin: 1.5rem auto 0;
     line-height: 1.55;
+}
+
+.pricing-ownership-note {
+    margin-top: 0.75rem;
 }
 
 /* ---- Trustware notice ---- */
@@ -728,6 +733,18 @@ dialog#screenshot-zoom img {
     font-size: 0.8rem;
     margin: 0 auto 1.5rem;
     max-width: 700px;
+}
+
+.download-terms {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin: 0 auto 1.5rem;
+    max-width: 500px;
+}
+
+.download-terms a {
+    color: var(--brass);
 }
 
 /* ---- Footer ---- */
@@ -1068,11 +1085,14 @@ footer {
     <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
         Fully Functional Trustware. No demo limitations, No expiry, No noise.
     </p>
-    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem;">
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 0.75rem;">
         <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v0.21.0/Taype-0.21.0.pkg" class="btn-primary" target="_blank" rel="noopener">
             Download now
         </a>
     </div>
+    <p id="download-terms" class="download-terms">
+        By downloading TayPE, you agree to the <a href="/terms/">Terms &amp; Conditions</a>.
+    </p>
     <p id="hero-descriptor" class="download-category">Multitrack DAW for macOS</p>
     <p id="hero-platform" class="download-platform">macOS Monterey+ &middot; Apple Silicon Native + Intel &middot; VST3 host</p>
 </section>
@@ -1127,6 +1147,9 @@ footer {
     <p id="pricing-cadence-note" class="pricing-cadence-note">
         Major versions are typically released at a yearly cadence.
         Subsequent licence upgrades are priced at 25% of RRP for existing owners.
+    </p>
+    <p id="pricing-ownership-note" class="pricing-ownership-note">
+        Your licensed Eras remain yours. They do not stop working when support coverage ends.
     </p>
 
     <div class="price-accessibility">
@@ -1195,8 +1218,9 @@ footer {
         <a id="footer-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
         <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
         <a id="footer-bug" href="https://docs.google.com/forms/d/1SW4npUBUkT6HBYqD7yHdVwrCljGzncLh3yWPBKW4skY/viewform" target="_blank">Get in Touch</a>
+        <a id="footer-terms" href="/terms/">Terms &amp; Conditions</a>
         <a id="footer-privacy" href="/privacy/">Privacy</a>
-        <a href="/cookies/">Cookie Policy</a>
+        <a id="footer-cookies" href="/cookies/">Cookie Policy</a>
     </div>
     <p id="footer-copy" class="footer-copy">
         &copy; 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales.
