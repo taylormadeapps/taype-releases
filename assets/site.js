@@ -130,7 +130,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Craft requires access.</strong> <strong>Accessibility is not a feature. It's a foundation.</strong> Because the interface must meet musicians where they are. TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios. Every state is conveyed with shape and icon, never colour alone. Keyboard shortcuts for every action. For non-visual workflows, MCP through Claude or Codex is the primary interface - voice control included. Native screen-reader support coming in Q3 2026.",
-            "download-terms": "By downloading TayPE, you agree to the <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">Terms &amp; Conditions</a>."
         },
         attrs: {
             "nav-logo": { alt: "TayPE logo" },
@@ -321,7 +320,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>クラフトにはアクセスが要る。</strong> <strong>アクセシビリティは機能ではない。土台だ。</strong>インターフェースはミュージシャンの居場所まで届かなければならないから。TayPEは全体でWCAG 2.2 AAを目指す。コントラスト比15:1+のハイコントラストモード。すべての状態は形とアイコンで伝え、色だけに頼らない。すべての操作にキーボードショートカット。視覚に頼らないワークフローでは、ClaudeまたはCodex経由のMCPが主要インターフェース - 音声コントロール対応。ネイティブのスクリーンリーダー対応は2026年第3四半期に登場予定。",
-            "download-terms": "TayPEをダウンロードすると、<a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">利用規約</a>に同意したものとみなされます。"
         },
         attrs: {
             "nav-logo": { alt: "TayPE ロゴ" },
@@ -512,7 +510,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>L’artisanat demande l’accès.</strong> <strong>L’accessibilité n’est pas une fonctionnalité. C’est une fondation.</strong> Parce que l’interface doit rejoindre les musiciens là où ils sont. TayPE vise WCAG 2.2 AA partout. Mode haut contraste avec ratios texte 15:1+. Chaque état est transmis par forme et icône, jamais par la couleur seule. Raccourcis clavier pour chaque action. Pour les flux non visuels, MCP via Claude ou Codex est l’interface principale - contrôle vocal inclus. Le support natif des lecteurs d’écran arrive au T3 2026.",
-            "download-terms": "En téléchargeant TayPE, vous acceptez les <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">conditions générales</a>."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -703,7 +700,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Handwerk braucht Zugang.</strong> <strong>Barrierefreiheit ist kein Feature. Sie ist ein Fundament.</strong> Denn die Oberfläche muss Musikerinnen und Musiker dort abholen, wo sie sind. TayPE strebt durchgängig WCAG 2.2 AA an. Hochkontrast-Modus mit 15:1+ Textverhältnis. Jeder Zustand wird über Form und Icon vermittelt, nie nur über Farbe. Tastenkürzel für jede Aktion. Für nicht-visuelle Workflows ist MCP über Claude oder Codex das primäre Interface - Sprachsteuerung inklusive. Native Screenreader-Unterstützung kommt in Q3 2026.",
-            "download-terms": "Mit dem Download von TayPE stimmst du den <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">AGB</a> zu."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-Logo" },
@@ -894,7 +890,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>El oficio requiere acceso.</strong> <strong>La accesibilidad no es una función. Es un cimiento.</strong> Porque la interfaz debe encontrarse con los músicos donde están. TayPE apunta a WCAG 2.2 AA en todo. Modo de alto contraste con ratios de texto 15:1+. Cada estado se transmite con forma e icono, nunca solo con color. Atajos de teclado para cada acción. Para flujos no visuales, MCP a través de Claude o Codex es la interfaz principal - control por voz incluido. El soporte nativo de lector de pantalla llega en T3 2026.",
-            "download-terms": "Al descargar TayPE, aceptas los <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">términos y condiciones</a>."
         },
         attrs: {
             "nav-logo": { alt: "Logo de TayPE" },
@@ -1085,7 +1080,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Iðn krefst aðgengis.</strong> <strong>Aðgengi er ekki eiginleiki. Það er grunnur.</strong>Því viðmótið verður að mæta tónlistarmönnum þar sem þeir eru. TayPE stefnir á WCAG 2.2 AA út um allt. Háskerpustilling með textahlutföll 15:1+. Hvert ástand er flutt með lögun og táknum, aldrei aðeins með lit. Lyklaborðstýra fyrir hverja aðgerð. Fyrir vinnuflæði án sjónar er MCP í gegnum Claude eða Codex aðalviðmótið - raddstýring innifalin. Innfæddur stuðningur við skjálesara kemur á 3. ársfjórðungi 2026.",
-            "download-terms": "Með því að sækja TayPE samþykkir þú <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">skilmálana</a>."
         },
         attrs: {
             "nav-logo": { alt: "TayPE merki" },
@@ -1276,7 +1270,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Vakmanschap vraagt toegang.</strong> <strong>Toegankelijkheid is geen feature. Het is een fundament.</strong> Want de interface moet muzikanten ontmoeten waar ze zijn. TayPE mikt overal op WCAG 2.2 AA. Hoogcontrastmodus met tekstratio’s van 15:1+. Elke status wordt overgebracht met vorm en icoon, nooit alleen met kleur. Toetsenbordkortere voor elke handeling. Voor niet-visuele workflows is MCP via Claude of Codex de primaire interface - spraakbediening inbegrepen. Native screenreader-ondersteuning komt in Q3 2026.",
-            "download-terms": "Door TayPE te downloaden ga je akkoord met de <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">algemene voorwaarden</a>."
         },
         attrs: {
             "nav-logo": { alt: "TayPE-logo" },
@@ -1467,7 +1460,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>L’artigianato richiede accesso.</strong> <strong>L’accessibilità non è una funzionalità. È una fondazione.</strong> Perché l’interfaccia deve andare incontro ai musicisti dove sono. TayPE punta a WCAG 2.2 AA ovunque. Modalità alto contrasto con rapporti testo 15:1+. Ogni stato è espresso con forma e icona, mai solo con il colore. Scorciatoie da tastiera per ogni azione. Per i flussi non visivi, MCP tramite Claude o Codex è l’interfaccia principale - controllo vocale incluso. Il supporto nativo per screen reader arriva nel Q3 2026.",
-            "download-terms": "Scaricando TayPE accetti i <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">termini e condizioni</a>."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1658,7 +1650,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Rzemiosło wymaga dostępu.</strong> <strong>Dostępność nie jest funkcją. Jest fundamentem.</strong>Bo interfejs musi spotkać muzyków tam, gdzie są. TayPE celuje w WCAG 2.2 AA wszędzie. Tryb wysokiego kontrastu z proporcjami tekstu 15:1+. Każdy stan jest przekazywany kształtem i ikoną, nigdy samym kolorem. Skróty klawiszowe dla każdej akcji. Dla przepływów niewizualnych, MCP przez Claude lub Codex jest głównym interfejsem - sterowanie głosem włącznie. Natywna obsługa czytników ekranu w III kwartale 2026.",
-            "download-terms": "Pobierając TayPE, akceptujesz <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">regulamin</a>."
         },
         attrs: {
             "nav-logo": { alt: "Logo TayPE" },
@@ -1849,7 +1840,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Ремесло потребує доступу.</strong> <strong>Доступність - не функція. Це фундамент.</strong>Бо інтерфейс має зустрічати музикантів там, де вони є. TayPE цілиться в WCAG 2.2 AA усюди. Режим високого контрасту з співвідношенням тексту 15:1+. Кожен стан передається формою та іконкою, ніколи лише кольором. Гарячі клавіші для кожної дії. Для невізуальних робочих процесів MCP через Claude чи Codex є основним інтерфейсом - голосове керування включено. Нативна підтримка скрінрідерів у III кварталі 2026.",
-            "download-terms": "Завантажуючи TayPE, ви погоджуєтеся з <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">умовами використання</a>."
         },
         attrs: {
             "nav-logo": { alt: "Логотип TayPE" },
@@ -2040,7 +2030,6 @@ const locales = {
         },
         html: {
             "a11y-copy": "<strong>Η τέχνη απαιτεί πρόσβαση.</strong> <strong>Η προσβασιμότητα δεν είναι λειτουργία. Είναι θεμέλιο.</strong>Γιατί το περιβάλλον πρέπει να συναντά τους μουσικούς εκεί που είναι. Το TayPE στοχεύει WCAG 2.2 AA σε όλα. Λειτουργία υψηλής αντίθεσης με αναλογίες κειμένου 15:1+. Κάθε κατάσταση μεταδίδεται με σχήμα και εικονίδιο, ποτέ μόνο με χρώμα. Συντομεύσεις πληκτρολογίου για κάθε ενέργεια. Για μη-οπτικές ροές εργασίας, το MCP μέσω Claude ή Codex είναι το κύριο περιβάλλον - με έλεγχο φωνής. Η υποστήριξη native screen reader έρχεται το Q3 2026.",
-            "download-terms": "Κατεβάζοντας το TayPE, αποδέχεσαι τους <a href=\"/terms/\" target=\"_blank\" rel=\"noopener\">όρους και προϋποθέσεις</a>."
         },
         attrs: {
             "nav-logo": { alt: "Λογότυπο TayPE" },
