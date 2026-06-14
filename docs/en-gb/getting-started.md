@@ -55,6 +55,8 @@ current library into it; you can switch to that folder and restart, or cancel.
 The welcome card points you at the green **Let's Roll** button first, waits a
 second for the card to settle, and then flashes it three times at 3 Hz so the
 main path into the reel is obvious without turning startup into a wizard.
+Click **Let's Roll** or press **Escape** to dismiss the card and stay on the
+fresh reel.
 The right-hand action stack keeps **Open Reel Browser** as the standout branch,
 with **Audio Preferences** and **Plugin Manager** as the supporting secondary
 buttons beneath the main reel path. The supporting copy on the left starts
