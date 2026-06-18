@@ -3,55 +3,33 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "0.22.0"
-date = "2026-06-10"
-commit = "d6629cae"
+version = "1.0.1"
+date = "2026-06-18"
+commit = "153d5470"
 
 summary = """\
-Added ONNX stem splitting with model onboarding, dependency reporting, and reel-aware stem split persistence.
-Added stereo pan modes, frequency-dependent width splitting, and aux send preprocessing controls for more flexible mix shaping.
-Added portable I/O route references so reels preserve hardware/plugin routing more reliably across sessions and devices.
-Added clip reverse rendering and clearer clip media path display in Clip Properties.
-Added bulk track workflows, improved import progress feedback, and fixed import progress repainting.
-Added channel strip, section, and hardware insert preset workflows.
-Improved timeline and mixer refresh cadence, reduced runtime telemetry overhead, and fixed channel strip hit testing.
-Refreshed launch/licensing presentation and fixed the Claude connector menu command.
+Added selected-clip WAV bounce for external editing workflows, with default and Industry Standard Bruh shortcuts plus save-panel naming.
+Improved Taype Drive and TONE3000 browsing, including faster browser opening and more reliable profile/plugin state handling.
+Fixed transient detection, tab-to-transient navigation, plugin preset/state-copy handling, mixer refresh behaviour, and recording/profile-browser regressions.
+Updated licence and EULA presentation across the About box, installer flow, and licensing dialog, including clearer trustware tier wording and heading rendering.
+Added Escape-key dismissal for the welcome card.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-17bc7268 Refresh hardware popup contract tests
-7f541780 Fix Claude connector menu command
-2f30114c Add newsletter prompt and insert preset workflows
-a1ffdc3b Refresh stale test contracts
-1e65c7c3 Add stereo pan mode support
-87b9022f Make audio import progress modal repaint reliably
-4cbbdaf7 Add bulk track workflows and import progress
-a1ad80f6 Optimise timeline and mixer refresh cadence
-f5e0cebd Beta checkpoint v0.22.0b3
-a2bd2db9 Add user report notes
-d2248011 Add aux send preprocessing controls
-0ce07b7a Force NAM AMX on for release boot
-78643c47 Beta checkpoint v0.22.0b2
-7ce5239a Allow beta checkpoints on beta branches
-349b2fa0 Fix stale contract tests
-399bfc3b Clean up stem splitter locale strings
-3a6970c4 Update licensing prompt copy
-49188a1e Add ONNX stem splitter onboarding
-567374a4 Update taype-releases pricing links
-10e07cd5 Add clip reverse derived audio action
-3fad4ab5 Update taype-releases anchor navigation
-edfde8d0 Add frequency-dependent width split
-6665e2df Fix arranger channel strip hit testing
-593e4c55 Restore ops push branch handling
-b05dbb7c Reduce runtime telemetry overhead
-534abdf1 Update website section rhythm pointer
-8aa6cdef Update website cookie policy pointer
-e5fe3bf2 Update website hero order pointer
-0a4fbf62 Update website homepage pointer
-948c2dbc Store portable I/O route refs in reels
-a89c3b7a Add beta 0.22 clip path and metrics changes
-5e7e50ae Beta checkpoint v0.22.0b1
-298864b3 Refresh splash and social launch assets
+43743f33 Beta checkpoint v0.23.0b1
+174e32a8 Address beta mix workflow feedback
+8b8d719d Improve TONE3000 browser open latency
+3977094e Fix transient, plugin, and mixer regressions
+1e5aa7e4 Fix recording, mixer, and profile browser regressions
+dc7a673b Update taype-releases terms page
+d0de8faa Update EULA licence tier terms
+64bbe019 Beta checkpoint v0.23.0b2
+fd352ffd Fix EULA markdown heading rendering
+f08ee114 Beta checkpoint v0.23.0b3
+bca47911 Clarify trustware licensing dialog
+042c65fc Dismiss welcome card with Escape
+b0ea1a89 Update releases site terms placement
+a0a92dc5 Track taype-releases terms cleanup
 """
