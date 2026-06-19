@@ -245,6 +245,10 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   output pair, metronome output, default stereo input, default mono input,
   sample rate, buffer size, hardware error compensation, Audio worker cores,
   Resampling, and NAM changes together.
+- On macOS, if you change the output device while the input selector is
+  separate, TayPE stages **Input Device** as **No device** by default. Choose
+  an input again before applying if you want to record or monitor through that
+  device. Playback-only Bluetooth and speaker changes stay output-only.
 - Editing an I/O mapping also enables **Apply Audio Changes**, even when you
   only rename endpoints and keep the same mapping selected.
 - The **Master output pair** and **Default stereo input** lists only offer
