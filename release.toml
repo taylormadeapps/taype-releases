@@ -3,33 +3,18 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.0.1"
-date = "2026-06-18"
-commit = "153d5470"
+version = "1.0.2"
+date = "2026-06-22"
+commit = "65b00d6d"
 
 summary = """\
-Added selected-clip WAV bounce for external editing workflows, with default and Industry Standard Bruh shortcuts plus save-panel naming.
-Improved Taype Drive and TONE3000 browsing, including faster browser opening and more reliable profile/plugin state handling.
-Fixed transient detection, tab-to-transient navigation, plugin preset/state-copy handling, mixer refresh behaviour, and recording/profile-browser regressions.
-Updated licence and EULA presentation across the About box, installer flow, and licensing dialog, including clearer trustware tier wording and heading rendering.
-Added Escape-key dismissal for the welcome card.
+Improves Core Audio handling for output-only Bluetooth speakers and amps, keeping playback-only devices out of recording input selection.
+Adds a Submit Feedback button to the welcome screen, opening the existing TayPE feedback dialog from startup.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-43743f33 Beta checkpoint v0.23.0b1
-174e32a8 Address beta mix workflow feedback
-8b8d719d Improve TONE3000 browser open latency
-3977094e Fix transient, plugin, and mixer regressions
-1e5aa7e4 Fix recording, mixer, and profile browser regressions
-dc7a673b Update taype-releases terms page
-d0de8faa Update EULA licence tier terms
-64bbe019 Beta checkpoint v0.23.0b2
-fd352ffd Fix EULA markdown heading rendering
-f08ee114 Beta checkpoint v0.23.0b3
-bca47911 Clarify trustware licensing dialog
-042c65fc Dismiss welcome card with Escape
-b0ea1a89 Update releases site terms placement
-a0a92dc5 Track taype-releases terms cleanup
+6cc93783 Update ops website copy
+d590dbd6 Promote beta 1.0.2 changes to unstable
 """
