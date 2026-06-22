@@ -97,6 +97,9 @@ const locales = {
             "accessibility-note": "Students free. Accessibility concessions. Just ask.",
             "pricing-cadence-note": "Major versions (Eras) are typically released at a yearly cadence.\n\nThe latest Era receives new features. The previous Era stays in Long Term Support (LTS), with maintenance and bug-fix releases.\n\nYour licence includes the current Era and the next, usually giving you 2 years of feature updates and 3 years of maintenance coverage.\n\nOn renewal, existing users receive a significant discount when moving from any previous version.",
             "pricing-ownership-note": "Your licensed Eras remain yours. They do not stop working when support coverage ends.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Rough around the edges, useful on purpose. Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.",
+            "tape-sessions-youtube": "Open the playlist on YouTube \u2192",
 
             "download-heading": "Let's Roll",
             "download-copy": "Fully Functional Trustware. No demo limitations, No expiry, No noise.",
@@ -285,6 +288,9 @@ const locales = {
             "accessibility-note": "学生は無料。アクセシビリティ割引あり。気軽に聞いて。",
             "pricing-cadence-note": "メジャーバージョン（Eras）は通常、年1回のペースでリリースされます。\n\n最新の Era には新機能が追加されます。ひとつ前の Era は Long Term Support (LTS) として、メンテナンスとバグ修正リリースを継続します。\n\nライセンスには現在の Era と次の Era が含まれ、通常は2年分の機能アップデートと3年分のメンテナンス範囲になります。\n\n更新時には、既存ユーザーはどの旧バージョンからでも大幅な割引で移行できます。",
             "pricing-ownership-note": "ライセンス済みの Era はあなたのものとして残ります。サポート期間が終了しても動作しなくなることはありません。",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "端は少し粗い。でもその分実際的です。TTがTayPEで作業する実際の流れを、一発撮りで、磨き込みなしに見せます。",
+            "tape-sessions-youtube": "YouTubeでプレイリストを開く \u2192",
 
             "download-heading": "さあ始めよう",
             "download-copy": "フル機能のTrustware。デモの制限なし、期限切れなし、ノイズなし。",
@@ -473,6 +479,9 @@ const locales = {
             "accessibility-note": "Gratuit pour les étudiants. Tarifs préférentiels accessibilité. Demandez, simplement.",
             "pricing-cadence-note": "Les versions majeures (Eras) sont généralement publiées à cadence annuelle.\n\nLa dernière Era reçoit de nouvelles fonctionnalités. L’Era précédente reste en Long Term Support (LTS), avec des versions de maintenance et de correction de bugs.\n\nVotre licence inclut l’Era actuelle et la suivante, ce qui donne généralement 2 ans de mises à jour de fonctionnalités et 3 ans de couverture de maintenance.\n\nAu renouvellement, les utilisateurs existants bénéficient d’une remise importante pour passer depuis n’importe quelle version précédente.",
             "pricing-ownership-note": "Vos Eras sous licence restent à vous. Elles ne cessent pas de fonctionner quand la période de support prend fin.",
+            "tape-sessions-heading": "Sessions Tape",
+            "tape-sessions-copy": "Un peu rugueuses, volontairement utiles. Regardez TT travailler dans TayPE sur de vraies sessions : une prise, pas de vernis, le flux tel qu’il est.",
+            "tape-sessions-youtube": "Ouvrir la playlist sur YouTube \u2192",
 
             "download-heading": "C'est parti",
             "download-copy": "Trustware entièrement fonctionnel. Pas de limitations de démo, pas d'expiration, pas de bruit.",
@@ -661,6 +670,9 @@ const locales = {
             "accessibility-note": "Studierende kostenlos. Barrierefreiheits-Vergünstigungen. Frag einfach.",
             "pricing-cadence-note": "Major-Versionen (Eras) erscheinen typischerweise in einem jährlichen Rhythmus.\n\nDie neueste Era erhält neue Funktionen. Die vorherige Era bleibt im Long Term Support (LTS), mit Wartungs- und Fehlerbehebungs-Releases.\n\nDeine Lizenz umfasst die aktuelle Era und die nächste, normalerweise also 2 Jahre Funktionsupdates und 3 Jahre Wartungsabdeckung.\n\nBei der Verlängerung erhalten bestehende Nutzer einen deutlichen Rabatt beim Wechsel von jeder früheren Version.",
             "pricing-ownership-note": "Deine lizenzierten Eras bleiben deine. Sie funktionieren weiter, auch wenn der Supportzeitraum endet.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Rau an den Kanten, absichtlich nützlich. Schau TT bei echten TayPE-Sessions zu: ein Take, kein Polieren, einfach der Workflow, wie er ist.",
+            "tape-sessions-youtube": "Playlist auf YouTube öffnen \u2192",
 
             "download-heading": "Los geht's",
             "download-copy": "Voll funktionsfähige Trustware. Keine Demo-Einschränkungen, kein Ablaufdatum, kein Rauschen.",
@@ -849,6 +861,9 @@ const locales = {
             "accessibility-note": "Estudiantes gratis. Concesiones de accesibilidad. Sólo pregunta.",
             "pricing-cadence-note": "Las versiones mayores (Eras) se publican normalmente con cadencia anual.\n\nLa Era más reciente recibe funciones nuevas. La Era anterior permanece en Long Term Support (LTS), con versiones de mantenimiento y corrección de bugs.\n\nTu licencia incluye la Era actual y la siguiente, normalmente 2 años de actualizaciones de funciones y 3 años de cobertura de mantenimiento.\n\nAl renovar, los usuarios existentes reciben un descuento significativo al pasar desde cualquier versión anterior.",
             "pricing-ownership-note": "Tus Eras con licencia siguen siendo tuyas. No dejan de funcionar cuando termina la cobertura de soporte.",
+            "tape-sessions-heading": "Sesiones Tape",
+            "tape-sessions-copy": "Con bordes ásperos, útiles a propósito. Mira a TT trabajar en TayPE en sesiones reales: una toma, sin pulido, el flujo tal como es.",
+            "tape-sessions-youtube": "Abrir la playlist en YouTube \u2192",
 
             "download-heading": "A grabar",
             "download-copy": "Trustware totalmente funcional. Sin limitaciones de demo, sin caducidad, sin ruido.",
@@ -1037,6 +1052,9 @@ const locales = {
             "accessibility-note": "Nemendur frítt. Aðgengisívilnun. Bara spyrja.",
             "pricing-cadence-note": "Stórar útgáfur (Eras) koma venjulega út með árlegri tíðni.\n\nNýjasta Era fær nýja eiginleika. Fyrri Era helst í Long Term Support (LTS), með viðhalds- og villuleiðréttingum.\n\nLeyfið þitt innifelur núverandi Era og þá næstu, yfirleitt 2 ár af eiginleikauppfærslum og 3 ár af viðhaldsumfjöllun.\n\nVið endurnýjun fá núverandi notendur verulegan afslátt þegar þeir færa sig frá hvaða fyrri útgáfu sem er.",
             "pricing-ownership-note": "Útgáfurnar sem leyfið þitt nær yfir eru áfram þínar. Þær hætta ekki að virka þegar stuðningstímabilinu lýkur.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Óslípuð á köntunum, gagnleg viljandi. Horfðu á TT vinna í TayPE í alvöru lotum: ein taka, engin fínpússun, bara vinnuflæðið eins og það er.",
+            "tape-sessions-youtube": "Opna spilunarlistann á YouTube \u2192",
 
             "download-heading": "Til verks",
             "download-copy": "Fullvirkt Trustware. Engar demo-takmarkanir, engin fyrning, ekkert suð.",
@@ -1225,6 +1243,9 @@ const locales = {
             "accessibility-note": "Gratis voor studenten. Toegankelijkheidskortingen. Vraag het gewoon.",
             "pricing-cadence-note": "Major-versies (Era's) komen doorgaans uit in een jaarlijks ritme.\n\nDe nieuwste Era krijgt nieuwe functies. De vorige Era blijft in Long Term Support (LTS), met onderhouds- en bugfix-releases.\n\nJe licentie bevat de huidige Era en de volgende, meestal goed voor 2 jaar functie-updates en 3 jaar onderhoudsdekking.\n\nBij verlenging krijgen bestaande gebruikers een flinke korting bij overstap vanaf elke eerdere versie.",
             "pricing-ownership-note": "Je gelicentieerde Eras blijven van jou. Ze stoppen niet met werken wanneer de ondersteuningsperiode eindigt.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Ruw aan de randen, bewust nuttig. Kijk hoe TT in echte TayPE-sessies werkt: één take, geen poetsbeurt, gewoon de workflow zoals die is.",
+            "tape-sessions-youtube": "Playlist openen op YouTube \u2192",
 
             "download-heading": "Laten we beginnen",
             "download-copy": "Volledig functionele Trustware. Geen demo-beperkingen, geen vervaldatum, geen ruis.",
@@ -1413,6 +1434,9 @@ const locales = {
             "accessibility-note": "Studenti gratis. Agevolazioni accessibilità. Basta chiedere.",
             "pricing-cadence-note": "Le versioni principali (Eras) escono tipicamente con cadenza annuale.\n\nL’Era più recente riceve nuove funzionalità. L’Era precedente resta in Long Term Support (LTS), con rilasci di manutenzione e correzione bug.\n\nLa licenza include l’Era corrente e quella successiva, di solito 2 anni di aggiornamenti funzionali e 3 anni di copertura di manutenzione.\n\nAl rinnovo, gli utenti esistenti ricevono uno sconto significativo passando da qualsiasi versione precedente.",
             "pricing-ownership-note": "Le Eras incluse nella tua licenza restano tue. Non smettono di funzionare quando termina la copertura di supporto.",
+            "tape-sessions-heading": "Sessioni Tape",
+            "tape-sessions-copy": "Ruvide ai bordi, utili apposta. Guarda TT lavorare in TayPE su sessioni reali: una presa, niente lucidatura, solo il flusso così com’è.",
+            "tape-sessions-youtube": "Apri la playlist su YouTube \u2192",
 
             "download-heading": "Si parte",
             "download-copy": "Trustware pienamente funzionante. Nessuna limitazione demo, nessuna scadenza, nessun rumore.",
@@ -1601,6 +1625,9 @@ const locales = {
             "accessibility-note": "Studenci za darmo. Ulgi dostępnościowe. Po prostu zapytaj.",
             "pricing-cadence-note": "Wersje główne (Eras) ukazują się zwykle w rocznej kadencji.\n\nNajnowsza Era otrzymuje nowe funkcje. Poprzednia Era pozostaje w Long Term Support (LTS), z wydaniami konserwacyjnymi i poprawkami błędów.\n\nLicencja obejmuje bieżącą Erę i następną, zwykle dając 2 lata aktualizacji funkcji i 3 lata utrzymania.\n\nPrzy odnowieniu obecni użytkownicy otrzymują znaczącą zniżkę przy przejściu z dowolnej wcześniejszej wersji.",
             "pricing-ownership-note": "Ery objęte twoją licencją pozostają twoje. Nie przestają działać po zakończeniu okresu wsparcia.",
+            "tape-sessions-heading": "Sesje Tape",
+            "tape-sessions-copy": "Trochę surowe, celowo użyteczne. Zobacz, jak TT pracuje w TayPE podczas prawdziwych sesji: jedno ujęcie, bez wygładzania, po prostu rzeczywisty workflow.",
+            "tape-sessions-youtube": "Otwórz playlistę w YouTube \u2192",
 
             "download-heading": "Zaczynamy",
             "download-copy": "W pełni funkcjonalne Trustware. Bez ograniczeń demo, bez wygaśnięcia, bez szumów.",
@@ -1789,6 +1816,9 @@ const locales = {
             "accessibility-note": "Студенти безкоштовно. Знижки за доступністю. Просто спитай.",
             "pricing-cadence-note": "Основні версії (Eras) зазвичай виходять із річною періодичністю.\n\nНайновіша Era отримує нові функції. Попередня Era залишається в Long Term Support (LTS), з релізами обслуговування та виправлення помилок.\n\nЛіцензія включає поточну Era і наступну, зазвичай даючи 2 роки функціональних оновлень і 3 роки обслуговування.\n\nПід час поновлення чинні користувачі отримують значну знижку при переході з будь-якої попередньої версії.",
             "pricing-ownership-note": "Ери, включені до вашої ліцензії, залишаються вашими. Вони не припиняють працювати після завершення періоду підтримки.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Трохи шорсткі, зате навмисно корисні. Дивіться, як TT працює в TayPE у реальних сесіях: один дубль, без полірування, просто робочий процес як є.",
+            "tape-sessions-youtube": "Відкрити плейлист на YouTube \u2192",
 
             "download-heading": "Поїхали",
             "download-copy": "Повністю функціональна Trustware. Без демо-обмежень, без завершення терміну дії, без шумів.",
@@ -1977,6 +2007,9 @@ const locales = {
             "accessibility-note": "Δωρεάν για φοιτητές. Παραχωρήσεις προσβασιμότητας. Απλώς ρώτα.",
             "pricing-cadence-note": "Οι κύριες εκδόσεις (Eras) κυκλοφορούν συνήθως με ετήσια συχνότητα.\n\nΗ νεότερη Era λαμβάνει νέες λειτουργίες. Η προηγούμενη Era παραμένει σε Long Term Support (LTS), με εκδόσεις συντήρησης και διορθώσεων σφαλμάτων.\n\nΗ άδειά σας περιλαμβάνει την τρέχουσα Era και την επόμενη, συνήθως δίνοντας 2 χρόνια ενημερώσεων λειτουργιών και 3 χρόνια κάλυψης συντήρησης.\n\nΚατά την ανανέωση, οι υπάρχοντες χρήστες λαμβάνουν σημαντική έκπτωση όταν μετακινούνται από οποιαδήποτε προηγούμενη έκδοση.",
             "pricing-ownership-note": "Οι Eras που καλύπτει η άδειά σου παραμένουν δικές σου. Δεν σταματούν να λειτουργούν όταν λήγει η περίοδος υποστήριξης.",
+            "tape-sessions-heading": "Tape Sessions",
+            "tape-sessions-copy": "Λίγο ακατέργαστα, επίτηδες χρήσιμα. Δες τον TT να δουλεύει στο TayPE σε πραγματικές συνεδρίες: μία λήψη, χωρίς γυάλισμα, απλώς η ροή όπως είναι.",
+            "tape-sessions-youtube": "Άνοιγμα playlist στο YouTube \u2192",
 
             "download-heading": "Ξεκινάμε",
             "download-copy": "Πλήρως λειτουργικό Trustware. Χωρίς περιορισμούς demo, χωρίς λήξη, χωρίς θόρυβο.",
