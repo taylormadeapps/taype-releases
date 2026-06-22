@@ -658,6 +658,60 @@ dialog#screenshot-zoom img {
     margin-top: 0.5rem;
 }
 
+/* ---- Tape Sessions ---- */
+
+.tape-sessions {
+    max-width: 1100px;
+}
+
+.tape-sessions-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.35fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.tape-sessions-copy {
+    max-width: 420px;
+}
+
+.tape-sessions-copy h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.tape-sessions-copy p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.tape-sessions-link {
+    display: inline-flex;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.tape-sessions-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.tape-sessions-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* ---- Community ---- */
 
 .community-grid {
@@ -842,6 +896,9 @@ footer {
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(240px, 62vw); height: auto; }
     .pricing-cards { grid-template-columns: 1fr; }
+    .tape-sessions-layout { grid-template-columns: 1fr; }
+    .tape-sessions-copy { max-width: none; }
+    .tape-sessions-copy h2 { text-align: center; }
     .community-grid { grid-template-columns: 1fr; }
 }
 
@@ -1167,6 +1224,25 @@ footer {
     <p id="pricing-ownership-note" class="pricing-ownership-note">
         Your licensed Eras remain yours. They do not stop working when support coverage ends.
     </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- Tape Sessions                                                -->
+<!-- ============================================================ -->
+
+<section id="tape-sessions" class="tape-sessions">
+    <div class="tape-sessions-layout">
+        <div class="tape-sessions-copy">
+            <h2 id="tape-sessions-heading">Tape Sessions</h2>
+            <p id="tape-sessions-copy">Rough around the edges, useful on purpose. Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.</p>
+            <a id="tape-sessions-youtube" class="tape-sessions-link" href="https://www.youtube.com/playlist?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" target="_blank" rel="noopener">Open the playlist on YouTube &rarr;</a>
+        </div>
+        <div class="tape-sessions-video">
+            <iframe id="tape-sessions-embed" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" title="TayPE Tape Sessions YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 </section>
 
 <hr class="section-divider">
