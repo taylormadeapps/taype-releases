@@ -3,18 +3,20 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.0.2"
+version = "1.0.3"
 date = "2026-06-22"
-commit = "65b00d6d"
+commit = "a5f2d898"
 
 summary = """\
-Improves Core Audio handling for output-only Bluetooth speakers and amps, keeping playback-only devices out of recording input selection.
-Adds a Submit Feedback button to the welcome screen, opening the existing TayPE feedback dialog from startup.
+Fixes the welcome-screen feedback path so opening feedback from Welcome no longer leaves the welcome card blocking the feedback dialog.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-6cc93783 Update ops website copy
-d590dbd6 Promote beta 1.0.2 changes to unstable
+94b386a3 Keep unstable release pointer during checkpoint history merge
+f05e70ba Handle main release pointer history in checkpoint
+7456f6f8 Restore unstable-first checkpoint flow
+3dfd2c73 Let welcome overlay yield to dialogs
+04b4418c Track taype-releases v1.0.2
 """
