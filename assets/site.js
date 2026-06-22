@@ -98,7 +98,7 @@ const locales = {
             "pricing-cadence-note": "Major versions (Eras) are typically released at a yearly cadence.\n\nThe latest Era receives new features. The previous Era stays in Long Term Support (LTS), with maintenance and bug-fix releases.\n\nYour licence includes the current Era and the next, usually giving you 2 years of feature updates and 3 years of maintenance coverage.\n\nOn renewal, existing users receive a significant discount when moving from any previous version.",
             "pricing-ownership-note": "Your licensed Eras remain yours. They do not stop working when support coverage ends.",
             "tape-sessions-heading": "Tape Sessions",
-            "tape-sessions-copy": "Rough around the edges, useful on purpose. Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.",
+            "tape-sessions-copy": "Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.",
             "tape-sessions-youtube": "Open the playlist on YouTube \u2192",
 
             "download-heading": "Let's Roll",
