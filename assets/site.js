@@ -102,7 +102,7 @@ const locales = {
             "tape-sessions-youtube": "Open the playlist on YouTube \u2192",
 
             "download-heading": "Let's Roll",
-            "download-copy": "Fully Functional Trustware. No demo limitations, No expiry, No noise.",
+            "download-copy": "Fully Functional Demo, No Expiry, No Interruptions.",
             "download-apply": "Download now",
             "community-heading": "Community & Support",
             "community-card-1-title": "Knowledge Base",
@@ -293,7 +293,7 @@ const locales = {
             "tape-sessions-youtube": "YouTubeでプレイリストを開く \u2192",
 
             "download-heading": "さあ始めよう",
-            "download-copy": "フル機能のTrustware。デモの制限なし、期限切れなし、ノイズなし。",
+            "download-copy": "全機能デモ、期限切れなし、中断なし。",
             "download-apply": "今すぐダウンロード",
             "community-heading": "コミュニティとサポート",
             "community-card-1-title": "ナレッジベース",
@@ -484,7 +484,7 @@ const locales = {
             "tape-sessions-youtube": "Ouvrir la playlist sur YouTube \u2192",
 
             "download-heading": "C'est parti",
-            "download-copy": "Trustware entièrement fonctionnel. Pas de limitations de démo, pas d'expiration, pas de bruit.",
+            "download-copy": "Démo entièrement fonctionnelle, pas d'expiration, pas d'interruptions.",
             "download-apply": "Télécharger maintenant",
             "community-heading": "Communauté et support",
             "community-card-1-title": "Base de connaissances",
@@ -675,7 +675,7 @@ const locales = {
             "tape-sessions-youtube": "Playlist auf YouTube öffnen \u2192",
 
             "download-heading": "Los geht's",
-            "download-copy": "Voll funktionsfähige Trustware. Keine Demo-Einschränkungen, kein Ablaufdatum, kein Rauschen.",
+            "download-copy": "Voll funktionsfähige Demo, kein Ablaufdatum, keine Unterbrechungen.",
             "download-apply": "Jetzt herunterladen",
             "community-heading": "Community & Support",
             "community-card-1-title": "Wissensbasis",
@@ -866,7 +866,7 @@ const locales = {
             "tape-sessions-youtube": "Abrir la playlist en YouTube \u2192",
 
             "download-heading": "A grabar",
-            "download-copy": "Trustware totalmente funcional. Sin limitaciones de demo, sin caducidad, sin ruido.",
+            "download-copy": "Demo totalmente funcional, sin caducidad, sin interrupciones.",
             "download-apply": "Descargar ahora",
             "community-heading": "Comunidad y soporte",
             "community-card-1-title": "Base de conocimiento",
@@ -1057,7 +1057,7 @@ const locales = {
             "tape-sessions-youtube": "Opna spilunarlistann á YouTube \u2192",
 
             "download-heading": "Til verks",
-            "download-copy": "Fullvirkt Trustware. Engar demo-takmarkanir, engin fyrning, ekkert suð.",
+            "download-copy": "Fullvirkt demo, engin fyrning, engar truflanir.",
             "download-apply": "Sækja núna",
             "community-heading": "Samfélag og stuðningur",
             "community-card-1-title": "Þekkingargrunnur",
@@ -1248,7 +1248,7 @@ const locales = {
             "tape-sessions-youtube": "Playlist openen op YouTube \u2192",
 
             "download-heading": "Laten we beginnen",
-            "download-copy": "Volledig functionele Trustware. Geen demo-beperkingen, geen vervaldatum, geen ruis.",
+            "download-copy": "Volledig functionele demo, geen vervaldatum, geen onderbrekingen.",
             "download-apply": "Nu downloaden",
             "community-heading": "Gemeenschap en ondersteuning",
             "community-card-1-title": "Kennisbank",
@@ -1439,7 +1439,7 @@ const locales = {
             "tape-sessions-youtube": "Apri la playlist su YouTube \u2192",
 
             "download-heading": "Si parte",
-            "download-copy": "Trustware pienamente funzionante. Nessuna limitazione demo, nessuna scadenza, nessun rumore.",
+            "download-copy": "Demo pienamente funzionante, nessuna scadenza, nessuna interruzione.",
             "download-apply": "Scarica ora",
             "community-heading": "Comunità e supporto",
             "community-card-1-title": "Base di conoscenza",
@@ -1630,7 +1630,7 @@ const locales = {
             "tape-sessions-youtube": "Otwórz playlistę w YouTube \u2192",
 
             "download-heading": "Zaczynamy",
-            "download-copy": "W pełni funkcjonalne Trustware. Bez ograniczeń demo, bez wygaśnięcia, bez szumów.",
+            "download-copy": "W pełni funkcjonalne demo, bez wygaśnięcia, bez przerw.",
             "download-apply": "Pobierz teraz",
             "community-heading": "Społeczność i wsparcie",
             "community-card-1-title": "Baza wiedzy",
@@ -1821,7 +1821,7 @@ const locales = {
             "tape-sessions-youtube": "Відкрити плейлист на YouTube \u2192",
 
             "download-heading": "Поїхали",
-            "download-copy": "Повністю функціональна Trustware. Без демо-обмежень, без завершення терміну дії, без шумів.",
+            "download-copy": "Повністю функціональна демоверсія, без завершення терміну дії, без переривань.",
             "download-apply": "Завантажити зараз",
             "community-heading": "Спільнота та підтримка",
             "community-card-1-title": "База знань",
@@ -2012,7 +2012,7 @@ const locales = {
             "tape-sessions-youtube": "Άνοιγμα playlist στο YouTube \u2192",
 
             "download-heading": "Ξεκινάμε",
-            "download-copy": "Πλήρως λειτουργικό Trustware. Χωρίς περιορισμούς demo, χωρίς λήξη, χωρίς θόρυβο.",
+            "download-copy": "Πλήρως λειτουργικό demo, χωρίς λήξη, χωρίς διακοπές.",
             "download-apply": "Λήψη τώρα",
             "community-heading": "Κοινότητα & Υποστήριξη",
             "community-card-1-title": "Βάση γνώσης",
