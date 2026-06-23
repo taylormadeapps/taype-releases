@@ -662,6 +662,7 @@ dialog#screenshot-zoom img {
 
 .tape-sessions {
     max-width: 1100px;
+    margin: 3rem auto 0;
 }
 
 .tape-sessions-layout {
@@ -675,7 +676,12 @@ dialog#screenshot-zoom img {
     max-width: 420px;
 }
 
-.tape-sessions-copy h2 {
+.tape-sessions-copy h3 {
+    font-family: var(--heading-font);
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    font-weight: var(--heading-weight);
+    color: var(--brass);
+    letter-spacing: var(--heading-letter-spacing);
     text-align: left;
     margin-bottom: 1rem;
 }
@@ -898,7 +904,7 @@ footer {
     .pricing-cards { grid-template-columns: 1fr; }
     .tape-sessions-layout { grid-template-columns: 1fr; }
     .tape-sessions-copy { max-width: none; }
-    .tape-sessions-copy h2 { text-align: center; }
+    .tape-sessions-copy h3 { text-align: center; }
     .community-grid { grid-template-columns: 1fr; }
 }
 
@@ -1229,25 +1235,6 @@ footer {
 <hr class="section-divider">
 
 <!-- ============================================================ -->
-<!-- Tape Sessions                                                -->
-<!-- ============================================================ -->
-
-<section id="tape-sessions" class="tape-sessions">
-    <div class="tape-sessions-layout">
-        <div class="tape-sessions-copy">
-            <h2 id="tape-sessions-heading">Tape Sessions</h2>
-            <p id="tape-sessions-copy">Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.</p>
-            <a id="tape-sessions-youtube" class="tape-sessions-link" href="https://www.youtube.com/playlist?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" target="_blank" rel="noopener">Open the playlist on YouTube &rarr;</a>
-        </div>
-        <div class="tape-sessions-video">
-            <iframe id="tape-sessions-embed" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" title="TayPE Tape Sessions YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ============================================================ -->
 <!-- Community                                                    -->
 <!-- ============================================================ -->
 
@@ -1280,6 +1267,19 @@ footer {
             <h3 id="community-card-2-title">Beta Programme</h3>
             <p id="community-card-2-body">Get early builds and release candidates before the public download moves.</p>
             <a id="community-card-2-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="link-arrow" target="_blank" rel="noopener">Join the beta programme &rarr;</a>
+        </div>
+    </div>
+
+    <div id="tape-sessions" class="tape-sessions">
+        <div class="tape-sessions-layout">
+            <div class="tape-sessions-copy">
+                <h3 id="tape-sessions-heading">Tape Sessions</h3>
+                <p id="tape-sessions-copy">Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.</p>
+                <a id="tape-sessions-youtube" class="tape-sessions-link" href="https://www.youtube.com/playlist?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" target="_blank" rel="noopener">Open the playlist on YouTube &rarr;</a>
+            </div>
+            <div class="tape-sessions-video">
+                <iframe id="tape-sessions-embed" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" title="TayPE Tape Sessions YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </section>
