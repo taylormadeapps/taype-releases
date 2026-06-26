@@ -15,7 +15,7 @@ caractère capturé.
 ## Stockage des profils
 
 Les profils sont des fichiers `.nam` stockés dans
-`~/Documents/TayPE/NAM/Summing/`.
+`[TayPE user root]/NAM/Summing/`.
 
 ## XTALK
 

@@ -42,7 +42,7 @@ NAM プリアンププロファイル、ミックスバスサミング、TONE300
   "profiles": [
     { "filename": "1073_Hot.nam", "size_bytes": 2200000 }
   ],
-  "directory": "/Users/.../Documents/TayPE/NAM/Preamps",
+  "directory": "/Users/.../Documents/Taype/NAM/Preamps",
   "count": 1
 }
 ```

@@ -14,7 +14,7 @@ On the master strip, questo section occupies the preamp slot so section rows sta
 
 ## Profile Storage
 
-Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`. Downloaded profiles show their model title when metadata is available.
+Profiles are `.nam` files stored in `[TayPE user root]/NAM/Summing/`. Downloaded profiles show their model title when metadata is available.
 
 When summing is disabled, the master bus uses standard digital summing con zero CPU overhead.
 

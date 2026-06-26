@@ -84,7 +84,7 @@ Downloading from TONE3000 pulls the whole package, not just one file. Once the p
 
 ### Profile Storage
 
-Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Preamps/`. Downloaded TONE3000 packages are kept in their own folders under that directory, with the package metadata, model files, and cached artwork together in one place. They work offline from that point.
+Profiles are `.nam` files stored in `[TayPE user root]/NAM/Preamps/`. Downloaded TONE3000 packages are kept in their own folders under that directory, with the package metadata, model files, and cached artwork together in one place. They work offline from that point.
 
 Downloaded packages keep their package and model metadata, so the strip and browser stay locked to the right variant instead of drifting to the wrong file. Thumbnails are cached locally for offline browsing.
 

@@ -41,7 +41,7 @@ A spinner appears while search, favourites refresh, or download metadata is load
 
 ### Profil Storage
 
-Profil are `.nam` files stored in `~/Documents/TayPE/NAM/Przedwzmacniacze/`. Downloaded profiles work offline from that point.
+Profil are `.nam` files stored in `[TayPE user root]/NAM/Preamps/`. Downloaded profiles work offline from that point.
 
 Downloaded profiles keep their model title metadata, so the strip and browser show the profile title instead of hashed filenames. Thumbnails are cached locally for offline browsing.
 

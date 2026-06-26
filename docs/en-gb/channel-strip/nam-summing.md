@@ -36,7 +36,7 @@ path instead.
 
 ## Profile Storage
 
-Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`. Downloaded TONE3000 packages are kept in their own folders under that directory, with the package metadata, model files, and cached artwork together in one place. Multi-model downloads expand inline in the Local tab so you can pick the right summing variant. If the current local list contains favourites, TayPE splits it into **Favourites** and **All**; if not, it stays as one flat list.
+Profiles are `.nam` files stored in `[TayPE user root]/NAM/Summing/`. Downloaded TONE3000 packages are kept in their own folders under that directory, with the package metadata, model files, and cached artwork together in one place. Multi-model downloads expand inline in the Local tab so you can pick the right summing variant. If the current local list contains favourites, TayPE splits it into **Favourites** and **All**; if not, it stays as one flat list.
 
 If the bus already uses a model from a downloaded package, opening **Browse** expands that local package and selects the active model straight away. The browser search bar also keeps an `x` button beside it so you can clear the current search and refresh the list without closing the picker.
 
