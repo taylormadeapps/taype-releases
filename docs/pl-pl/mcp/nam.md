@@ -79,11 +79,11 @@ Search the TONE3000 online library for NAM profiles.
 |-------|------|----------|-------------|
 | `query` | string | yes | Search query |
 | `sort` | string | no | "trending", "newest", "oldest". Omit for default (relevance). |
-| `category` | string | no | "all", "amp", "pedal", "full-rig", "ir", "outboard" |
+| `category` | string | no | "all", "amp-cab", "amp", "cab", "pedal", "outboard", "space", "experimental". Legacy "full-rig" maps to "amp-cab"; legacy "ir" filters `format="ir"`. |
 | `architecture` | string | no | "amx", "lstm", "wavenet", "convnet", "linear", "a2" |
 | `page` | number | no | Page number (default: 1) |
 
-**Returns:** Array of results with id, name, creator, gear, `thumbnail_url`, download count, `architecture`, and `amx_eligible`. Architecture-filtered searches resolve those fields before filtering; unfiltered searches may return an empty `architecture` string when TONE3000 omits it.
+**Returns:** Array of results with id, name, creator, gear, `format`, `thumbnail_url`, download count, `architecture`, and `amx_eligible`. TONE3000 gear is the captured form factor; NAM/IR lives in `format`. Architecture-filtered searches resolve those fields before filtering; unfiltered searches may return an empty `architecture` string when TONE3000 omits it.
 
 ### `download_tone3000`
 

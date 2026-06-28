@@ -79,11 +79,11 @@ TONE3000 のオンラインライブラリで NAM プロファイルを検索し
 |-------|------|----------|-------------|
 | `query` | string | はい | 検索語 |
 | `sort` | string | いいえ | `"trending"`、`"newest"`、`"oldest"`。省略時はデフォルト（関連性順）。 |
-| `category` | string | いいえ | `"all"`、`"amp"`、`"pedal"`、`"full-rig"`、`"ir"`、`"outboard"` |
+| `category` | string | いいえ | `"all"`、`"amp-cab"`、`"amp"`、`"cab"`、`"pedal"`、`"outboard"`、`"space"`、`"experimental"`。従来の `"full-rig"` は `"amp-cab"`、従来の `"ir"` は `format="ir"` として扱います。 |
 | `architecture` | string | いいえ | `"amx"`、`"lstm"`、`"wavenet"`、`"convnet"`、`"linear"`、`"a2"` |
 | `page` | number | いいえ | ページ番号（既定: 1） |
 
-**戻り値:** id、name、creator、gear、`thumbnail_url`、download count、`architecture`、`amx_eligible` を含む検索結果配列。アーキテクチャ指定検索では、それらの値を解決してから絞り込みます。未指定検索では、TONE3000 側に情報が無い場合 `architecture` が空文字になることがあります。
+**戻り値:** id、name、creator、gear、`format`、`thumbnail_url`、download count、`architecture`、`amx_eligible` を含む検索結果配列。TONE3000 の gear はキャプチャの形態を表し、NAM/IR は `format` に入ります。アーキテクチャ指定検索では、それらの値を解決してから絞り込みます。未指定検索では、TONE3000 側に情報が無い場合 `architecture` が空文字になることがあります。
 
 ### `download_tone3000`
 

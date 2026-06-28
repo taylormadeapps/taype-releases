@@ -98,10 +98,10 @@ flow if the cached OAuth token is missing or invalid.
 |-------|------|----------|-------------|
 | `query` | string | yes | Search query |
 | `sort` | string | no | "trending", "newest", "oldest". Omit for default (relevance). |
-| `category` | string | no | "all", "amp", "pedal", "full-rig", "ir", "outboard" |
+| `category` | string | no | "all", "amp-cab", "amp", "cab", "pedal", "outboard", "space", "experimental". Legacy "full-rig" maps to "amp-cab"; legacy "ir" filters `format="ir"`. |
 | `page` | number | no | Page number (default: 1) |
 
-**Returns:** Array of package results with id, name, creator, gear, `thumbnail_url`, download count, package-level `architecture` / `amx_eligible`, and a full `models` list.
+**Returns:** Array of package results with id, name, creator, gear, `format`, `thumbnail_url`, download count, package-level `architecture` / `amx_eligible`, and a full `models` list. TONE3000 gear is the captured form factor; NAM/IR lives in `format`.
 
 ### `list_local_profiles`
 
