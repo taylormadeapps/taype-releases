@@ -122,6 +122,8 @@ head to that position. Hold and drag to scrub.
 Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
 
 - TayPE runs internally at **48 kHz**.
+- Imported audio at other sample rates is converted to 48 kHz without lowering
+  its decoded sample peak.
 - The Audio tab keeps the hardware selector rows at the top through **Audio
   buffer size**. The device status, resampling, NAM, and **Apply Audio
   Changes** controls sit underneath.
