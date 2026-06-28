@@ -160,7 +160,7 @@ after you add other IR libraries.
 Inside **Taype Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
 That flow asks you to accept Samplicity's terms, gives the first alert a
 real **View Samplicity T&Cs** button, then has TayPE download and install
-the official archive automatically into `Documents/Taype/IRs/Bricasti M7`,
+the official archive automatically into `[TAPE_HOME]/IRs/Bricasti M7`,
 organised by register. That preflight still appears before install or
 reinstall, even after TayPE has remembered acceptance. If TayPE already has
 that managed Bricasti folder, it asks before replacing it. It also warns that
@@ -328,8 +328,8 @@ cropped shape that breaks the editor's aspect. TayPE's own resizable stock
 plug-ins can now shrink to roughly two-thirds of their default open size within
 those declared limits.
 
-Plug-in presets live in `Documents/Taype/Presets/FX` for effects and
-`Documents/Taype/Presets/Instruments` for instruments. TayPE keeps each
+Plug-in presets live in `[TAPE_HOME]/Presets/FX` for effects and
+`[TAPE_HOME]/Presets/Instruments` for instruments. TayPE keeps each
 plug-in's own library in a clean plug-in-name subfolder there. Older preset
 folders saved with the previous UID suffix still load. If the preset name contains `/`,
 TayPE mirrors that path as nested folders on disk and nested submenus in the
@@ -348,7 +348,7 @@ reloads that insert from the saved preset chunk, so processors that ignore hot
 state swaps still come back in the recalled state instead of quietly snapping to
 the default patch.
 
-Hardware Insert presets live in `Documents/Taype/Presets/Hardware Inserts`.
+Hardware Insert presets live in `[TAPE_HOME]/Presets/Hardware Inserts`.
 They save the open slot only: routes, latency, trims, wet/dry, filters, colour,
 enable/bypass state, and recall photos. Recall photos are copied into the
 preset's own asset folder on save. Loading a preset copies those photos back

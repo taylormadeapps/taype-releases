@@ -70,7 +70,7 @@ after you add other IR libraries.
 Inside **Tape Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
 That flow asks you to accept Samplicity's terms, gives the first alert a
 real **View Samplicity T&Cs** button, then has TayPE download and install
-the official archive automatically into `Documents/Taype/IRs/Bricasti M7`,
+the official archive automatically into `[TAPE_HOME]/IRs/Bricasti M7`,
 organised by register. That preflight still appears before install or
 reinstall, even after TayPE has remembered acceptance. If TayPE already has
 that managed Bricasti folder, it asks before replacing it. It also warns that
@@ -151,7 +151,7 @@ reloads that insert from the saved preset chunk so processors that ignore hot
 state swaps still come back in the recalled state instead of slipping back to
 the default patch.
 
-Hardware Insert presets live in `Documents/Taype/Presets/Hardware Inserts`.
+Hardware Insert presets live in `[TAPE_HOME]/Presets/Hardware Inserts`.
 They save the open slot only: routes, latency, trims, wet/dry, filters, colour,
 enable/bypass state, and recall photos. Recall photos are copied into the
 preset's own asset folder on save. Loading a preset copies those photos back

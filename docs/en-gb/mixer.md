@@ -186,7 +186,7 @@ section folded TayPE brings every desk surface back that way on next launch.
 
 Right-click any section header to load a preset for just that section or use
 **Save Section As...** at the top of the menu to save into that section's
-folder under `Documents/Taype/Presets/Channel Strip Section`. If the strip
+folder under `[TAPE_HOME]/Presets/Channel Strip Section`. If the strip
 section already came from a preset, TayPE pre-fills that preset name in the
 save dialog so you can rename or overwrite it without typing from scratch. If
 the preset name contains `/`, TayPE stores it in nested folders under that
@@ -197,9 +197,9 @@ active at all. Older libraries saved in the previous section-preset folder
 still load.
 
 Right-click the strip title bar to load or save a full channel strip preset.
-Those live under `Documents/Taype/Presets/Channel Strip`. Each strip preset
+Those live under `[TAPE_HOME]/Presets/Channel Strip`. Each strip preset
 stores the fader panel state directly and recalls the rest of the strip through
-section presets under `Documents/Taype/Presets/Channel Strip Section/<Section Name>/CSP/<Preset Name>`.
+section presets under `[TAPE_HOME]/Presets/Channel Strip Section/<Section Name>/CSP/<Preset Name>`.
 The strip file also carries the full `INSERTS` rack state inline, so loading a
 strip preset brings the saved plug-in chunks back with it instead of relying on
 whatever state those plug-ins happen to be in now.

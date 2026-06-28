@@ -52,7 +52,7 @@ after you add other IR libraries.
 Inside **Tape Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
 That flow asks you to accept Samplicity's terms, gives the first alert a
 real **Widok Samplicity T&Cs** button, then has TayPE download and install
-the official archive automatically into `Documents/Taype/IRs/Bricasti M7`,
+the official archive automatically into `[TAPE_HOME]/IRs/Bricasti M7`,
 organised by register. That preflight still appears before install or
 reinstall, even after TayPE has remembered acceptance. If TayPE already has
 that managed Bricasti folder, it asks before replacing it. It also warns that

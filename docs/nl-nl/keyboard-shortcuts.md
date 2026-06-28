@@ -7,7 +7,7 @@ vanuit die tab met **JSON bewerken** in de systeemeditor worden geopend.
 ## Sneltoetsprofielen
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE ververst ingebouwde profielen bij het starten vanuit de appbundel:
@@ -22,7 +22,7 @@ opgeslagen.
 selectie instellen” op `Cmd+Shift+L`, zodat de gewone pijltjestoetsen
 TayPE-navigatie blijven.
 
-Oude bestanden op `~/Documents/Taype/keybindings.json` worden eenmalig in de
+Oude bestanden op `[TAPE_HOME]/keybindings.json` worden eenmalig in de
 profielmap geïmporteerd en als `legacy-keybindings*.bak` gearchiveerd.
 
 ## Default Shortcuts

@@ -27,7 +27,7 @@ pas conservés dans Recents, pour éviter de polluer votre liste normale avec de
 tests ou des déballages.
 
 Quand vous créez un reel, TayPE ouvre une boîte de dialogue de sauvegarde
-native ancrée sur `~/Documents/Taype/Reels` et propose un nom comme
+native ancrée sur `[TAPE_HOME]/Reels` et propose un nom comme
 `Untitled Reel.taype`. Vous pouvez changer le nom et l'emplacement à cette
 même étape.
 

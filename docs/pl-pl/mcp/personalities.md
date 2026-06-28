@@ -33,7 +33,7 @@ can have different engineers.
 
 ## Niestandardowe Osobowości
 
-Drop a JSON file in `~/Documents/Taype/Osobowości/`:
+Drop a JSON file in `[TAPE_HOME]/Osobowości/`:
 
 ```json
 {

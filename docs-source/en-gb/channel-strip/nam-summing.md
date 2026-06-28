@@ -15,7 +15,7 @@ On the master strip, this section occupies the preamp slot so section rows stay 
 
 ## Profile Storage
 
-Profiles are `.nam` files stored in `~/Documents/TayPE/NAM/Summing/`. Downloaded profiles show their model title when metadata is available.
+Profiles are `.nam` files stored in `[TAPE_HOME]/NAM/Summing/`. Downloaded profiles show their model title when metadata is available.
 
 With `SUM` on, Wet/Dry is applied to each feeder lane before the final stereo
 mix. With `SUM` off, Wet/Dry blends the post-digital-sum stereo path. When

@@ -121,7 +121,7 @@ List saved TayPE plug-in presets that match the current insert slot.
   "presets": [
     {
       "name": "Opóźnienie Clean",
-      "path": "/Users/you/Documents/Taype/Presety/FX/Master Plan/Opóźnienie Clean"
+      "path": "[TAPE_HOME]/Presety/FX/Master Plan/Opóźnienie Clean"
     }
   ]
 }

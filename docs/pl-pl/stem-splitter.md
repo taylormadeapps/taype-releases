@@ -13,7 +13,7 @@ The default download target is HT-Demucs ONNX, a MIT-labelled 4-stem model that 
 TayPE installs packages into:
 
 ```text
-~/Documents/Taype/Stem-Models
+[TAPE_HOME]/Stem-Models
 ```
 
 Advanced users can also place compatible TayPE stem package folders there manually. TayPE picks them up automatically; there is no in-app import or arbitrary model URL step. Packages must be ONNX based; PyTorch files such as `.pt`, `.pth`, `.ckpt`, and `.safetensors` are not supported.

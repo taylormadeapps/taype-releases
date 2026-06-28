@@ -52,7 +52,7 @@ Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
 When you create a reel, TayPE opens a native save dialog rooted at
-`~/Documents/Taype/Reele` and suggests a bundle name like
+`[TAPE_HOME]/Reele` and suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step.
 

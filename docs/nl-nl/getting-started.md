@@ -40,7 +40,7 @@ Wanneer een reel al open is, begint de browseractierij met **Media**, waarmee de
 
 Tijdelijke bundels die uit systeemtempmappe worden geopend, worden niet in Recent bewaard, dus test- of uitpakwerk vervuilt uw normale reellijst niet.
 
-Wanneer u een reel aanmaakt, opent TayPE een native opslaan dialoog in `~/Documents/Taype/Reels` en stelt een bundelnaam voor zoals `Untitled Reel.taype`. U kunt in één stap zowel de locatie als de reelnaam wijzigen.
+Wanneer u een reel aanmaakt, opent TayPE een native opslaan dialoog in `[TAPE_HOME]/Reels` en stelt een bundelnaam voor zoals `Untitled Reel.taype`. U kunt in één stap zowel de locatie als de reelnaam wijzigen.
 
 De werkingstatus wordt automatisch opgeslagen wanneer het transport is gestopt. Er is geen apart opslaancommando om te beheren. Druk op **Cmd+S** als u een benoemd checkpoint wilt maken: een bewuste lijn die u later kunt herstellen.
 

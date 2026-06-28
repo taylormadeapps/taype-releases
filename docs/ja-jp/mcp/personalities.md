@@ -28,7 +28,7 @@ TayPE には 11 種類のスタジオテックキャラクターが最初から�
 
 ## カスタムパーソナリティ
 
-`~/Documents/TayPE/Personalities/` に JSON ファイルを置くと、独自パーソナリティを追加できます。
+`[TAPE_HOME]/Personalities/` に JSON ファイルを置くと、独自パーソナリティを追加できます。
 
 ```json
 {

@@ -7,7 +7,7 @@ można je otworzyć z tej karty przyciskiem **Edytuj JSON** w edytorze systemowy
 ## Profile skrótów
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE odświeża profile wbudowane z pakietu aplikacji podczas uruchamiania:
@@ -21,7 +21,7 @@ zastosuje zmiany po zapisaniu pliku w edytorze zewnętrznym.
 pętli z zaznaczenia na `Cmd+Shift+L`, żeby zwykłe strzałki nadal służyły do
 nawigacji TayPE.
 
-Starsze pliki `~/Documents/Taype/keybindings.json` są jednorazowo importowane do
+Starsze pliki `[TAPE_HOME]/keybindings.json` są jednorazowo importowane do
 folderu profili i archiwizowane jako `legacy-keybindings*.bak`.
 
 ## Domyślne Skróty

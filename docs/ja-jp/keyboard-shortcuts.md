@@ -7,7 +7,7 @@ TayPE のキーボードショートカットはプロファイル方式です�
 ## キーバインドプロファイル
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 組み込みプロファイルは起動時にアプリバンドルから更新されます。`Default.json` は
@@ -20,7 +20,7 @@ Pro Tools 風の編集操作向けプロファイルです。組み込みプロ�
 選択範囲からループを設定する操作を `Cmd+Shift+L` に割り当てます。
 修飾なしの矢印キーは TayPE のナビゲーション用に残します。
 
-古い `~/Documents/Taype/keybindings.json` は一度だけプロファイルフォルダへ取り込まれ、
+古い `[TAPE_HOME]/keybindings.json` は一度だけプロファイルフォルダへ取り込まれ、
 `legacy-keybindings*.bak` として保管されます。
 
 ## デフォルトのショートカット

@@ -8,7 +8,7 @@ l'éditeur système.
 ## Profils de raccourcis
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE actualise les profils intégrés depuis le bundle de l'app au démarrage :
@@ -22,7 +22,7 @@ directes de ces fichiers sont écrasées. Dupliquez-en un pour le modifier ;
 « définir la boucle depuis la sélection » sur `Cmd+Shift+L`, afin que les
 flèches seules restent dédiées à la navigation TayPE.
 
-Les anciens fichiers `~/Documents/Taype/keybindings.json` sont importés une fois
+Les anciens fichiers `[TAPE_HOME]/keybindings.json` sont importés une fois
 dans le dossier des profils, puis archivés sous `legacy-keybindings*.bak`.
 
 ## Raccourcis par défaut

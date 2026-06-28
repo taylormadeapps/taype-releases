@@ -21,7 +21,7 @@ Notaðu **Open From File...** ef reel eða pack er utan venjulegrar safnslóðar
 Tímabundin bundle úr kerfistemp-möppum fara ekki í Recents.
 
 Þegar þú býrð til reel opnar TayPE venjulegan save-glugga undir
-`~/Documents/Taype/Reels` og stingur upp á nafni eins og `Untitled Reel.taype`.
+`[TAPE_HOME]/Reels` og stingur upp á nafni eins og `Untitled Reel.taype`.
 
 Vinnustaða er vistuð sjálfkrafa þegar transport er stöðvað. Það er engin
 sérstök Save skipun fyrir daglega notkun. Ýttu á **Cmd+S** þegar þú vilt búa

@@ -52,7 +52,7 @@ after you add other IR libraries.
 Inside **Tape Rooms**, the IR section now includes **Get Bricasti M7 IRs**.
 che flow asks you to accept Samplicity's terms, gives the first alert a
 real **View Samplicity T&Cs** button, then has TayPE download and install
-the official archive automatically in `Documents/Taype/IRs/Bricasti M7`,
+the official archive automatically in `[TAPE_HOME]/IRs/Bricasti M7`,
 organised by register. che preflight still appears before install or
 reinstall, even after TayPE has remembered acceptance. If TayPE already has
 che managed Bricasti folder, it asks before replacing it. It also warns che

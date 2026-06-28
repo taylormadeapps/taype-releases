@@ -33,7 +33,7 @@ can avere different engineers.
 
 ## Custom Personalità
 
-Rilascia a JSON file in `~/Documents/Taype/Personalità/`:
+Rilascia a JSON file in `[TAPE_HOME]/Personalità/`:
 
 ```json
 {

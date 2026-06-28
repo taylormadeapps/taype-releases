@@ -33,7 +33,7 @@ stays put across restarts until you change it again.
 
 ## Custom Personalities
 
-Drop a JSON file in `~/Documents/Taype/Personalities/`:
+Drop a JSON file in `[TAPE_HOME]/Personalities/`:
 
 ```json
 {

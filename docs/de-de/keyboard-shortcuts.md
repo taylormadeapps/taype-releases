@@ -7,7 +7,7 @@ sich dort mit **JSON bearbeiten** im Systemeditor öffnen.
 ## Tastaturkürzelprofile
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE aktualisiert die integrierten Profile beim Start aus dem App-Bundle:
@@ -21,7 +21,7 @@ an diesen Dateien werden überschrieben. Dupliziert eines, um es zu bearbeiten;
 aus Auswahl setzen“ auf `Cmd+Shift+L`, damit die normalen Pfeiltasten
 TayPE-Navigation bleiben.
 
-Ältere Dateien unter `~/Documents/Taype/keybindings.json` werden einmalig in den
+Ältere Dateien unter `[TAPE_HOME]/keybindings.json` werden einmalig in den
 Profilordner importiert und als `legacy-keybindings*.bak` archiviert.
 
 ## Standardkürzel

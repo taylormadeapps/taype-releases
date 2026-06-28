@@ -42,7 +42,7 @@ List available NAM profiles from the local profiles directory.
   "profiles": [
     { "filename": "1073_Hot.nam", "size_bytes": 2200000 }
   ],
-  "directory": "/Users/.../Documents/Taype/NAM/Preamps",
+  "directory": "[TAPE_HOME]/NAM/Preamps",
   "count": 1
 }
 ```

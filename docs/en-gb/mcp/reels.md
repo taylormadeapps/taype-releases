@@ -24,7 +24,7 @@ empty reel with that name.
 
 Open an existing reel by name. TayPE persists the current reel's working state
 before switching. Name lookup scans the reel library under
-`~/Documents/Taype/Reels/`, including subfolders such as `Starters/`.
+`[TAPE_HOME]/Reels/`, including subfolders such as `Starters/`.
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -35,7 +35,7 @@ before switching. Name lookup scans the reel library under
 ### `list_reels`
 
 List all available reel names from the reel library under
-`~/Documents/Taype/Reels/`, including subfolders.
+`[TAPE_HOME]/Reels/`, including subfolders.
 
 **Returns:** `{ "reels": ["Default", "MyReel", "Demo"] }`
 
@@ -218,7 +218,7 @@ Unpack a `.tpak` archive into a `.taype` bundle and open the unpacked reel.
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
 | `path` | string | yes | Path to the `.tpak` archive |
-| `destination` | string | no | Target `.taype` bundle path; defaults to a unique name in `~/Documents/Taype/Reels/Starters/` |
+| `destination` | string | no | Target `.taype` bundle path; defaults to a unique name in `[TAPE_HOME]/Reels/Starters/` |
 
 **Returns:** `{ "unpacked": true, "bundle_path": "/path/to/MyReel.taype" }`
 

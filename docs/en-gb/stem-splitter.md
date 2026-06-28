@@ -21,7 +21,7 @@ All three output vocals, drums, bass, and other stems.
 TayPE installs the bundle into:
 
 ```text
-~/Documents/Taype/Stem-Models
+[TAPE_HOME]/Stem-Models
 ```
 
 Advanced users can also place compatible TayPE stem bundle folders there manually. TayPE picks them up automatically; there is no in-app import or arbitrary model URL step. Bundles must be ONNX based; PyTorch files such as `.pt`, `.pth`, `.ckpt`, and `.safetensors` are not supported.

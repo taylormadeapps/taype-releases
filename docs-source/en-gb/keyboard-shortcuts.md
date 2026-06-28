@@ -6,7 +6,7 @@ file and restart to apply your changes.
 ## Keybindings File
 
 ```
-~/Documents/Taype/keybindings.json
+[TAPE_HOME]/keybindings.json
 ```
 
 This file is created automatically on first launch with sensible defaults.
@@ -139,7 +139,7 @@ the native menu bar.
 
 ## Customising Shortcuts
 
-Open `~/Documents/Taype/keybindings.json` in any text editor. The format
+Open `[TAPE_HOME]/keybindings.json` in any text editor. The format
 is straightforward:
 
 ```json

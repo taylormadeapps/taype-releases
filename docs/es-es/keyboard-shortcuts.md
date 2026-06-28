@@ -7,7 +7,7 @@ JSON y se abren desde esa pestaña con **Editar JSON** en el editor del sistema.
 ## Perfiles de atajos
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE actualiza los perfiles integrados desde el paquete de la app al arrancar:
@@ -21,7 +21,7 @@ editarlo; **Recargar** aplica los cambios después de guardar en el editor exter
 «definir bucle desde la selección» a `Cmd+Shift+L`, para que las flechas sin
 modificadores sigan siendo navegación de TayPE.
 
-Los archivos antiguos `~/Documents/Taype/keybindings.json` se importan una sola
+Los archivos antiguos `[TAPE_HOME]/keybindings.json` se importan una sola
 vez en la carpeta de perfiles y se archivan como `legacy-keybindings*.bak`.
 
 ## Atajos por defecto

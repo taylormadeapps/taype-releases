@@ -52,7 +52,7 @@ timeline, and a device sample rate that matches the reel.
 {
   "enabled": true,
   "printing": true,
-  "file": "/Users/you/Documents/Taype/Prints/My Reel/My Reel-01.wav"
+  "file": "[TAPE_HOME]/Prints/My Reel/My Reel-01.wav"
 }
 ```
 

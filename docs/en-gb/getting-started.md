@@ -38,14 +38,14 @@ ToTaype at 15ips with its default drive and output values. On first launch,
 TayPE also seeds the default mono input to input 1 when one exists, and the
 default stereo input to inputs 1-2 when the device exposes a stereo pair.
 Those launch-created `Untitled Reel` bundles live in
-`~/Documents/Taype/Reels/Starters` by default, separate from the ordinary
+`[TAPE_HOME]/Reels/Starters` by default, separate from the ordinary
 manual **New Reel** flow. TayPE also keeps reel templates in
-`~/Documents/Taype/Reels/Templates`. On launch it makes sure
+`[TAPE_HOME]/Reels/Templates`. On launch it makes sure
 `Default.taype` exists there; if it is missing, TayPE creates it from the
 same ready-to-record starter desk. Startup reels and **New Reel...** both use
 that default template.
 
-`~/Documents/Taype` is TayPE's preferred user folder. If macOS blocks access to
+`[TAPE_HOME]` is TayPE's preferred user folder. If macOS blocks access to
 the configured folder during startup, TayPE falls back to `~/Music/Taype`,
 remembers that folder, and tells you it is using the fallback. You can see or
 change the active folder in **Preferences > General**.
@@ -155,7 +155,7 @@ Temporary bundles opened from system temp folders are not kept in Recents, so
 test or unpack scratch work does not pollute your normal reel list.
 
 When you create a reel manually, TayPE opens a native save dialog rooted at
-the active TayPE reel library, `~/Documents/Taype/Reels` by default, and
+the active TayPE reel library, `[TAPE_HOME]/Reels` by default, and
 suggests a bundle name like
 `Untitled Reel.taype`. You can change both the location and the reel name in
 that one step. **Create from Template...** is a two-step version of the same

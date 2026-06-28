@@ -166,7 +166,7 @@ List saved TayPE plug-in presets that match the current insert slot.
   "presets": [
     {
       "name": "Latency Clean",
-      "path": "/Users/you/Documents/Taype/Presets/FX/Master Plan/Latency Clean"
+      "path": "[TAPE_HOME]/Presets/FX/Master Plan/Latency Clean"
     }
   ]
 }

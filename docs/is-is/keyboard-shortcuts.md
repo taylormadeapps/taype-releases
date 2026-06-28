@@ -7,7 +7,7 @@ kerfisritlinum.
 ## Flýtilyklasnið
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE endurnýjar innbyggð snið úr app-búntinum við ræsingu: `Default.json`
@@ -21,7 +21,7 @@ eftir að ytri ritillinn hefur vistað.
 lykkju úr vali á `Cmd+Shift+L`, svo hreinu örvatakkarnir haldist
 TayPE-leiðsögn.
 
-Eldri `~/Documents/Taype/keybindings.json` skrár eru fluttar einu sinni inn í
+Eldri `[TAPE_HOME]/keybindings.json` skrár eru fluttar einu sinni inn í
 sniðamöppuna og vistaðar sem `legacy-keybindings*.bak`.
 
 ## Sjálfgefnir flýtilyklar

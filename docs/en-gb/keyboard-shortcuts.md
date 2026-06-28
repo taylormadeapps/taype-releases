@@ -7,7 +7,7 @@ from that tab with **Edit JSON** in the system editor.
 ## Keybinding Profiles
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE refreshes built-in profiles from the app bundle when it starts:
@@ -24,7 +24,7 @@ It uses Pro Tools-style keypad chords where TayPE has clean equivalents,
 including `Numpad 7` for metronome, `Ctrl+Option+Numpad +/-` for grid size,
 `Option+-` for automation view, and `Option+K` for auto monitor. Industry Standard Bruh maps external clip bounce to Cmd+Shift+K, matching Pro Tools' Export Clips as Files shortcut.
 
-Older `~/Documents/Taype/keybindings.json` files are imported once into the
+Older `[TAPE_HOME]/keybindings.json` files are imported once into the
 profile folder and archived as `legacy-keybindings*.bak`.
 
 ## Default Shortcuts

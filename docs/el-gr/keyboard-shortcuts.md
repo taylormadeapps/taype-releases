@@ -8,7 +8,7 @@
 ## Προφίλ συντομεύσεων
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 Το TayPE ανανεώνει τα ενσωματωμένα προφίλ από το app bundle κατά την εκκίνηση:
@@ -23,7 +23,7 @@ TayPE). Τα ενσωματωμένα προφίλ είναι μόνο για α
 το «set loop from selection» στο `Cmd+Shift+L`, ώστε τα απλά βελάκια να
 παραμένουν πλοήγηση του TayPE.
 
-Παλαιότερα αρχεία `~/Documents/Taype/keybindings.json` εισάγονται μία φορά στον
+Παλαιότερα αρχεία `[TAPE_HOME]/keybindings.json` εισάγονται μία φορά στον
 φάκελο προφίλ και αρχειοθετούνται ως `legacy-keybindings*.bak`.
 
 ## Default Shortcuts

@@ -24,7 +24,7 @@ Los bundles temporales abiertos desde carpetas temporales del sistema no se
 guardan en Recents, así que las pruebas no ensucian tu lista normal.
 
 Cuando creas un reel, TayPE abre un diálogo nativo de guardado en
-`~/Documents/Taype/Reels` y propone un nombre como `Untitled Reel.taype`.
+`[TAPE_HOME]/Reels` y propone un nombre como `Untitled Reel.taype`.
 
 El estado de trabajo se guarda automáticamente mientras el transporte está
 parado. No hay un comando Save separado. Pulsa **Cmd+S** para crear un

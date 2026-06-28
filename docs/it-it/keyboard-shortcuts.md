@@ -7,7 +7,7 @@ da quella scheda con **Modifica JSON** nell'editor di sistema.
 ## Profili di scorciatoie
 
 ```
-~/Documents/Taype/keybindings/
+[TAPE_HOME]/keybindings/
 ```
 
 TayPE aggiorna i profili integrati dal bundle dell'app all'avvio: `Default.json`
@@ -21,7 +21,7 @@ le modifiche dopo il salvataggio nell'editor esterno.
 “imposta loop dalla selezione” a `Cmd+Shift+L`, così le frecce senza modificatori
 restano per la navigazione TayPE.
 
-I vecchi file `~/Documents/Taype/keybindings.json` vengono importati una sola
+I vecchi file `[TAPE_HOME]/keybindings.json` vengono importati una sola
 volta nella cartella dei profili e archiviati come `legacy-keybindings*.bak`.
 
 ## Default Shortcuts

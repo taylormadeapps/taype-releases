@@ -25,7 +25,7 @@ Temporäre Bundles aus System-Temp-Ordnern werden nicht in Recents gespeichert,
 damit Tests und Entpack-Aktionen eure eigentliche Reel-Liste nicht zumüllen.
 
 Beim Anlegen eines Reels öffnet TayPE einen nativen Save-Dialog unter
-`~/Documents/Taype/Reels` und schlägt einen Namen wie `Untitled Reel.taype`
+`[TAPE_HOME]/Reels` und schlägt einen Namen wie `Untitled Reel.taype`
 vor. Ort und Name lassen sich in diesem einen Schritt ändern.
 
 Der Arbeitszustand wird automatisch gespeichert, solange der Transport steht.
