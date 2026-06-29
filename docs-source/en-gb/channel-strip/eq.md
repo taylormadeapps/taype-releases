@@ -71,6 +71,8 @@ lives at max.
 The analyser itself now reads more like a proper RTA too: it compensates the
 window loss and draws log-band energy instead of skinny raw FFT bins, so
 broadband material no longer hugs the graph floor for no good reason.
+Spectrum that falls below the visible graph floor drops out of view instead of
+turning into a false flat line along the bottom edge.
 That popup graph keeps `0 dBFS` pinned to the top edge, opens fully zoomed in
 at `-36 dBFS`, and moves the floor in `6 dB` steps. In K-system modes it
 still shows the K-scale labels and highlighted `0` reference line on that

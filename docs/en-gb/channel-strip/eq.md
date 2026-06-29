@@ -76,7 +76,8 @@ K-scale while still keeping absolute `0 dBFS` pinned to the top edge.
 The popup opens fully zoomed in at `-36 dBFS`, and each zoom step drops or
 raises the floor by `6 dB` while keeping `0 dBFS` pinned to the top edge.
 The right-side EQ labels still show the available boost and cut span around
-`0 dB`.
+`0 dB`. Spectrum that falls below the visible graph floor drops out of view
+instead of turning into a false flat line along the bottom edge.
 Both popup filter knobs now read from the right-hand side of the ring. `LO`
 fills from the right as you raise the cutoff, and `HI` also starts from the
 right so a lower low-pass cutoff shows a fuller lit arc while the off state
