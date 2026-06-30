@@ -2,6 +2,7 @@ const PUBLIC_SITE_URL = "https://taype.ruminantaudioworks.com";
 const DOCS_BASE_URL = "https://ruminant-audio-works.gitbook.io/taype/";
 const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v1.0.3/Taype-1.0.3.pkg";
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
+const PLATFORM_INTEREST_URL = "/other-platforms/";
 
 const localeAliasMap = {
     "en": "en-gb",
@@ -101,7 +102,17 @@ const locales = {
 
             "download-heading": "Let's Roll",
             "download-copy": "Fully Functional Demo, No Expiry, No Interruptions.",
+            "download-macos-status": "Available now",
+            "download-macos-title": "macOS",
             "download-apply": "Download now",
+            "download-linux-status": "Alpha coming soon",
+            "download-linux-title": "Linux",
+            "download-linux-copy": "ETA: late July.",
+            "download-linux-apply": "Register interest",
+            "download-windows-status": "Interest list open",
+            "download-windows-title": "Windows",
+            "download-windows-copy": "Register interest for Windows.",
+            "download-windows-apply": "Register interest",
             "community-heading": "Community & Support",
             "community-card-1-title": "Knowledge Base",
             "community-card-1-body": "User guide and reference documentation. Everything you need to get started and go deep.",
@@ -2362,6 +2373,10 @@ function applyLocale(localeKey) {
 
     const downloadApply = document.getElementById("download-apply");
     if (downloadApply) downloadApply.setAttribute("href", DOWNLOAD_URL);
+
+    document.querySelectorAll("[data-platform-interest-link]").forEach((link) => {
+        link.setAttribute("href", PLATFORM_INTEREST_URL);
+    });
 
     const betaProgrammeLink = document.getElementById("community-card-2-link");
     if (betaProgrammeLink) betaProgrammeLink.setAttribute("href", BETA_PROGRAMME_URL);

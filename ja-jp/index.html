@@ -354,6 +354,55 @@ section {
     padding-bottom: 2.75rem;
 }
 
+.download-platform-interest {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 18rem));
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+    margin: 2rem auto 0;
+    max-width: 760px;
+    text-align: left;
+}
+
+.download-platform-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.download-platform-status {
+    color: var(--brass);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.download-platform-card h3 {
+    color: var(--text);
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.download-platform-card p {
+    color: var(--text-muted);
+}
+
+.download-platform-card .download-platform-copy {
+    flex: 1;
+}
+
+.download-platform-action {
+    margin-top: auto;
+}
+
 #pricing {
     padding-top: 3.5rem;
 }
@@ -898,6 +947,7 @@ footer {
     }
     section { padding: 3rem 1.25rem; }
     #download { padding-bottom: 2rem; }
+    .download-platform-interest { grid-template-columns: 1fr; }
     #pricing { padding-top: 2.5rem; }
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(240px, 62vw); height: auto; }
@@ -1162,6 +1212,30 @@ footer {
     </div>
     <p id="hero-descriptor" class="download-category">Multitrack DAW for macOS</p>
     <p id="hero-platform" class="download-platform">macOS Monterey+ &middot; Apple Silicon Native + Intel &middot; VST3 host</p>
+
+    <div class="download-platform-interest">
+        <article class="download-platform-card">
+            <p id="download-linux-status" class="download-platform-status">Alpha coming soon</p>
+            <h3 id="download-linux-title">Linux</h3>
+            <p id="download-linux-copy" class="download-platform-copy">ETA: late July.</p>
+            <div class="download-platform-action">
+                <a id="download-linux-apply" href="/other-platforms/" class="btn-secondary" data-platform-interest-link>
+                    Register interest
+                </a>
+            </div>
+        </article>
+
+        <article class="download-platform-card">
+            <p id="download-windows-status" class="download-platform-status">Interest list open</p>
+            <h3 id="download-windows-title">Windows</h3>
+            <p id="download-windows-copy" class="download-platform-copy">Register interest for Windows.</p>
+            <div class="download-platform-action">
+                <a id="download-windows-apply" href="/other-platforms/" class="btn-secondary" data-platform-interest-link>
+                    Register interest
+                </a>
+            </div>
+        </article>
+    </div>
 </section>
 
 <hr class="section-divider">

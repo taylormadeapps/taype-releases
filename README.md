@@ -12,6 +12,9 @@ Grab the latest release from the [Releases page](https://github.com/taylormadeap
 
 TayPE is fully functional trustware - download it, use it, make records. When you're ready, purchase a license.
 
+Linux alpha ETA: late July. Windows interest list:
+[taype.ruminantaudioworks.com/other-platforms/](https://taype.ruminantaudioworks.com/other-platforms/).
+
 ## Documentation
 
 Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https://ruminant-audio-works.gitbook.io/taype/)
