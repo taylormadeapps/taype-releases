@@ -879,6 +879,13 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.footer-brand a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+}
+
 .footer-brand img {
     height: 88px;
     width: auto;
@@ -908,6 +915,18 @@ footer {
 .footer-copy {
     color: var(--text-dim);
     font-size: 0.75rem;
+}
+
+.footer-copy a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-color: rgba(240, 201, 106, 0.45);
+    text-underline-offset: 3px;
+}
+
+.footer-copy a:hover,
+.footer-copy a:focus {
+    color: var(--brass);
 }
 
 /* ---- Responsive ---- */
@@ -1316,7 +1335,7 @@ footer {
     <div class="community-grid">
         <div class="community-card">
             <h3 id="community-card-4-title">Follow Along</h3>
-            <p id="community-card-4-body">Development updates, studio sessions, and behind-the-scenes from Ruminant Audio Works.</p>
+            <p id="community-card-4-body">Development updates, studio sessions, and behind-the-scenes from <a href="/ruminant-audio-works/">Ruminant Audio Works</a>.</p>
             <a id="community-card-4-newsletter" href="/newsletter-subscribe/" class="link-arrow" target="_blank">Newsletter &rarr;</a>
             <span style="color: var(--text-dim); margin: 0 0.5rem;">&middot;</span>
             <a id="community-card-4-instagram" href="https://instagram.com/ruminantaudioworks" class="link-arrow" target="_blank">Instagram &rarr;</a>
@@ -1362,11 +1381,13 @@ footer {
 
 <footer>
     <div class="footer-brand">
-        <picture>
-            <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w, /assets/img/raw-logo-320.webp 320w" sizes="72px">
-            <img id="footer-logo" src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w, /assets/img/raw-logo-320.png 320w" sizes="72px" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async">
-        </picture>
-        <span>Ruminant Audio Works</span>
+        <a href="/ruminant-audio-works/" aria-label="Ruminant Audio Works about page">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w, /assets/img/raw-logo-320.webp 320w" sizes="72px">
+                <img id="footer-logo" src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w, /assets/img/raw-logo-320.png 320w" sizes="72px" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async">
+            </picture>
+            <span>Ruminant Audio Works</span>
+        </a>
     </div>
     <div class="footer-links">
         <a id="footer-features" href="#features">Features</a>
@@ -1379,7 +1400,7 @@ footer {
         <a id="footer-site-data" href="/site-data/">Cookie Policy</a>
     </div>
     <p id="footer-copy" class="footer-copy">
-        &copy; 2026 Ruminant Audio Works. TayPE is a product of Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales.
+        &copy; 2026 <a href="/ruminant-audio-works/">Ruminant Audio Works</a>. TayPE is a product of <a href="/ruminant-audio-works/">Ruminant Audio Works</a> Ltd. Company No. 16978494. Registered in England and Wales.
     </p>
 </footer>
 

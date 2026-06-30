@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruminant Audio Works - Independent audio software from the South Downs</title>
+<meta name="description" content="Ruminant Audio Works is an independent UK audio software company based in the South Downs, building TayPE and tools that help musicians make records.">
+<meta property="og:title" content="Ruminant Audio Works">
+<meta property="og:description" content="Independent audio software from the South Downs, UK.">
+<meta property="og:url" content="https://taype.ruminantaudioworks.com/ruminant-audio-works/">
+<meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/about/ruminant-south-downs-hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/assets/img/logo-square-256.png">
+<link rel="canonical" href="https://taype.ruminantaudioworks.com/ruminant-audio-works/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0e0d0b;
+    --panel: #1b1813;
+    --surface: #26211a;
+    --surface-soft: #16130f;
+    --text: #f5f1e8;
+    --text-muted: #e2d8c7;
+    --text-dim: #a79d8b;
+    --brass: #f0c96a;
+    --brass-hover: #e0a84e;
+    --border: #2a2520;
+    --paper: #eee7d8;
+    --paper-ink: #18130e;
+    --paper-muted: #5b5145;
+    --heading-font: "Press Start 2P", monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--brass);
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: var(--brass-hover);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+}
+
+.site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.35rem 2rem;
+    background: rgba(14, 13, 11, 0.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.brand-link,
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.brand-link {
+    gap: 0.75rem;
+    color: var(--text);
+}
+
+.brand-link img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.brand-link span,
+.nav-links a,
+.eyebrow,
+.micro-heading,
+.footer-wordmark {
+    font-family: var(--heading-font);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.brand-link span,
+.nav-links a {
+    font-size: 0.62rem;
+}
+
+.brand-link span,
+.eyebrow,
+.micro-heading {
+    color: var(--brass);
+}
+
+.nav-links {
+    gap: 1.4rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+}
+
+.nav-links .nav-cta {
+    padding: 0.55rem 0.9rem;
+    border-radius: 4px;
+    background: var(--brass);
+    color: var(--bg);
+}
+
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus {
+    background: var(--brass-hover);
+    color: var(--bg);
+}
+
+.hero {
+    position: relative;
+    min-height: clamp(520px, 45vw, 650px);
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.hero::before {
+    z-index: -2;
+    background: url("/assets/img/about/ruminant-south-downs-hero.webp") center / cover;
+    filter: saturate(1.12) contrast(1.04);
+}
+
+.hero::after {
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(14, 13, 11, 0.18) 0%, rgba(14, 13, 11, 0.06) 36%, rgba(14, 13, 11, 0) 70%),
+        linear-gradient(180deg, rgba(14, 13, 11, 0) 0%, rgba(14, 13, 11, 0) 38%, rgba(14, 13, 11, 0.44) 72%, rgba(14, 13, 11, 0.82) 100%),
+        radial-gradient(ellipse at 20% 78%, rgba(240, 201, 106, 0.10), transparent 42%);
+}
+
+.hero-inner {
+    width: min(1180px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 6rem 0 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+    gap: 2rem;
+    align-items: end;
+}
+
+.eyebrow,
+.micro-heading {
+    font-size: 0.62rem;
+    line-height: 1.7;
+    letter-spacing: 0.12em;
+}
+
+.eyebrow {
+    max-width: 70ch;
+    margin-bottom: 1.1rem;
+}
+
+h1 {
+    max-width: 650px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.2rem, 8vw, 7.6rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: 0;
+}
+
+h1 span {
+    display: block;
+}
+
+h1,
+.hero-copy,
+.place-note {
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.82);
+}
+
+.hero-copy {
+    max-width: 610px;
+    margin-top: 1.35rem;
+    color: var(--text-muted);
+    font-size: clamp(1.04rem, 1.4vw, 1.22rem);
+    line-height: 1.75;
+}
+
+.place-note {
+    justify-self: end;
+    width: min(100%, 340px);
+    padding-left: 1rem;
+    border-left: 1px solid rgba(240, 201, 106, 0.45);
+}
+
+.place-note h2 {
+    margin-bottom: 0.4rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.place-note p {
+    color: var(--text-muted);
+    font-size: 0.86rem;
+}
+
+.page-section {
+    width: min(1180px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.intro-grid,
+.paper-grid {
+    display: grid;
+    gap: clamp(2rem, 6vw, 5.5rem);
+    align-items: center;
+}
+
+.intro-grid {
+    grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.4fr);
+    align-items: start;
+}
+
+.paper-grid {
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1fr);
+}
+
+.lead {
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.9rem, 3vw, 3.1rem);
+    line-height: 1.12;
+}
+
+.body-copy {
+    color: var(--text-muted);
+    font-size: 1.03rem;
+}
+
+.body-copy p + p {
+    margin-top: 1rem;
+}
+
+.body-copy strong {
+    color: var(--text);
+}
+
+.micro-heading {
+    margin-bottom: 1rem;
+}
+
+.trust-band {
+    padding: 4.5rem 0;
+    background: var(--surface-soft);
+    border-block: 1px solid var(--border);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    padding: 0;
+    background: var(--border);
+}
+
+.trust-item {
+    min-width: 0;
+    min-height: 190px;
+    padding: 1.35rem;
+    background: var(--panel);
+}
+
+.trust-item .mark {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(240, 201, 106, 0.52);
+    border-radius: 50%;
+    color: var(--brass);
+    font-weight: 800;
+}
+
+.trust-item h2 {
+    margin-bottom: 0.55rem;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.trust-item p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    overflow-wrap: break-word;
+}
+
+.paper-band {
+    background: var(--paper);
+    color: var(--paper-ink);
+}
+
+.paper-band .page-section {
+    padding-block: 4.5rem;
+}
+
+.paper-band .micro-heading {
+    color: #7b5b17;
+}
+
+.paper-band .body-copy,
+.paper-band p {
+    color: var(--paper-muted);
+}
+
+.paper-band strong {
+    color: var(--paper-ink);
+}
+
+.founder-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.founder-photo {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 720px;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 6px;
+    filter: saturate(0.92) contrast(1.02);
+}
+
+.signature {
+    margin-top: 1.4rem;
+    color: var(--paper-ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.closing {
+    text-align: center;
+}
+
+.closing h2 {
+    max-width: 780px;
+    margin: 0 auto 1rem;
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 4vw, 4rem);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.closing p {
+    max-width: 690px;
+    margin: 0 auto;
+    color: var(--text-muted);
+    font-size: 1.06rem;
+}
+
+.closing-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.86rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background: var(--brass);
+    color: var(--bg);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(240, 201, 106, 0.62);
+    color: var(--brass);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--brass-hover);
+    color: var(--bg);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: rgba(240, 201, 106, 0.08);
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+}
+
+.footer-mark {
+    display: inline-block;
+}
+
+.footer-mark img {
+    width: 96px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-wordmark {
+    color: var(--text-muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.16em;
+    overflow-wrap: break-word;
+}
+
+.footer-copy {
+    max-width: 740px;
+    margin: 1rem auto 0;
+    color: var(--text-dim);
+    font-size: 0.78rem;
+}
+
+.footer-copy a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-color: rgba(240, 201, 106, 0.45);
+    text-underline-offset: 3px;
+}
+
+.footer-copy a:hover,
+.footer-copy a:focus {
+    color: var(--brass);
+}
+
+@media (max-width: 860px) {
+    .site-nav {
+        padding: 0.65rem 1rem;
+    }
+
+    .brand-link span {
+        display: none;
+    }
+
+    .nav-links {
+        flex: 0 0 auto;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+
+    .nav-links a {
+        font-size: 0.56rem;
+    }
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero::before {
+        background-position: 38% center;
+    }
+
+    .hero-inner,
+    .intro-grid,
+    .paper-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-inner,
+    .page-section {
+        width: calc(100% - 2rem);
+        max-width: 1180px;
+    }
+
+    .place-note {
+        justify-self: stretch;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .founder-photo {
+        max-height: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-links {
+        display: none;
+    }
+
+    .site-nav {
+        justify-content: flex-start;
+    }
+
+    h1 {
+        max-width: 330px;
+        font-size: clamp(2.65rem, 17vw, 3.85rem);
+    }
+
+    .eyebrow {
+        max-width: 31ch;
+        font-size: 0.54rem;
+        line-height: 1.9;
+    }
+
+    .hero-copy {
+        max-width: 34ch;
+    }
+
+    .hero-inner {
+        padding-bottom: 2.7rem;
+    }
+
+    .page-section {
+        padding: 3.5rem 0;
+    }
+
+    .lead {
+        max-width: 18ch;
+        font-size: clamp(1.65rem, 7vw, 2.1rem);
+    }
+
+    .body-copy {
+        max-width: 34ch;
+        font-size: 0.98rem;
+        overflow-wrap: break-word;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-item {
+        min-height: 0;
+    }
+
+    .trust-item p {
+        max-width: 28ch;
+        font-size: 0.86rem;
+        line-height: 1.6;
+    }
+
+    .closing h2 {
+        max-width: 14ch;
+        font-size: clamp(1.9rem, 9vw, 2.25rem);
+    }
+
+    .closing p {
+        max-width: 32ch;
+    }
+
+    .closing-actions {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .closing-actions .btn {
+        width: min(100%, 240px);
+    }
+
+    .footer-wordmark {
+        max-width: 28ch;
+        margin-inline: auto;
+        line-height: 1.8;
+    }
+}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary">
+    <a class="brand-link" href="/ruminant-audio-works/" aria-current="page">
+        <picture>
+            <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w" sizes="44px">
+            <img src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w" sizes="44px" alt="Ruminant Audio Works" width="160" height="196" decoding="async">
+        </picture>
+        <span>Ruminant Audio Works</span>
+    </a>
+    <div class="nav-links">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#founder">Founder</a>
+        <a href="/">TayPE</a>
+        <a class="nav-cta" href="/#download">Get TayPE</a>
+    </div>
+</nav>
+
+<main>
+    <header class="hero">
+        <div class="hero-inner">
+            <div>
+                <p class="eyebrow">Independent audio software from the South Downs, UK</p>
+                <h1><span>Ruminant</span><span>Audio</span><span>Works</span></h1>
+                <p class="hero-copy">Looking out to sea gives us room to ruminate. The Downs behind us, the Channel ahead, and enough quiet to let ideas earn their keep before they become software.</p>
+            </div>
+            <aside class="place-note" aria-label="Location note">
+                <h2>The Seven Sisters, from Seaford</h2>
+                <p>Ruminant Audio Works is based in the South Downs, just outside Brighton. The headspace matters.</p>
+            </aside>
+        </div>
+    </header>
+
+    <section id="philosophy" class="page-section intro-grid">
+        <div>
+            <p class="micro-heading">From place to practice</p>
+            <p class="lead">Technology should disappear, so the music can take centre stage.</p>
+        </div>
+        <div class="body-copy">
+            <p>Recording software has become more powerful, but often at the expense of clarity. More menus. More modes. More decisions before the first note is even recorded.</p>
+            <p>We build in the opposite direction: fewer distractions, stronger defaults, and tools that quietly support the creative process.</p>
+            <p>TayPE carries forward the parts of analogue recording that genuinely helped people make better records: <strong>immediacy, focus, confidence, and musical momentum.</strong></p>
+        </div>
+    </section>
+
+    <section class="trust-band" aria-label="Trust principles">
+        <div class="page-section trust-grid">
+            <article class="trust-item">
+                <span class="mark">P</span>
+                <h2>Fair pricing</h2>
+                <p>Clear perpetual licences, no pricing theatre, no subscription treadmill.</p>
+            </article>
+            <article class="trust-item">
+                <span class="mark">D</span>
+                <h2>No DRM</h2>
+                <p>The relationship between developer and musician should begin with trust, not restriction.</p>
+            </article>
+            <article class="trust-item">
+                <span class="mark">T</span>
+                <h2>Trustware</h2>
+                <p>Take your time. Use the software properly. If it earns a place, support it.</p>
+            </article>
+            <article class="trust-item">
+                <span class="mark">R</span>
+                <h2>Roadmap driven by craft</h2>
+                <p>Thoughtful engineering beats feature-checklist churn. The work has to help someone make a better record.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="founder" class="paper-band">
+        <div class="page-section paper-grid">
+            <div class="founder-media">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/about/tom-taylor-founder-full.webp">
+                    <img class="founder-photo" src="/assets/img/about/tom-taylor-founder-full.jpg" alt="Tom Taylor, founder of Ruminant Audio Works" width="1200" height="1600" loading="eager" decoding="async">
+                </picture>
+            </div>
+            <div>
+                <p class="micro-heading">Meet the founder</p>
+                <div class="body-copy">
+                    <p>I'm Tom Taylor, founder of Ruminant Audio Works. I've spent my life performing, recording, engineering, and obsessing over the details that make records connect.</p>
+                    <p>TayPE is the distillation of that journey: a recording environment built around commitment, flow, and the feeling that the machine is helping rather than asking to be managed.</p>
+                    <p>If you've found your way here, thank you for giving TayPE a look. I hope it helps you <strong>make something you're proud of.</strong></p>
+                </div>
+                <p class="signature">Tom Taylor</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section closing">
+        <p class="micro-heading">Make the Record</p>
+        <h2>Does this help someone make a better record?</h2>
+        <p>If the answer is yes, we're interested. If it adds complexity for its own sake, we're probably not. That's the philosophy behind TayPE, and it will continue to guide everything we build.</p>
+        <div class="closing-actions">
+            <a class="btn btn-primary" href="/">Explore TayPE</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <a class="footer-mark" href="/ruminant-audio-works/" aria-label="Ruminant Audio Works about page">
+        <picture>
+            <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w" sizes="96px">
+            <img src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w" sizes="96px" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async">
+        </picture>
+    </a>
+    <p class="footer-wordmark"><a href="/ruminant-audio-works/">Ruminant Audio Works</a> &middot; South Downs, UK</p>
+    <p class="footer-copy"><a href="/ruminant-audio-works/">Ruminant Audio Works</a> Ltd. Company No. 16978494. Registered in England and Wales.</p>
+</footer>
+</body>
+</html>

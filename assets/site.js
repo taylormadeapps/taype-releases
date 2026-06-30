@@ -3,6 +3,7 @@ const DOCS_BASE_URL = "https://ruminant-audio-works.gitbook.io/taype/";
 const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v1.0.3/Taype-1.0.3.pkg";
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
 const PLATFORM_INTEREST_URL = "/other-platforms/";
+const RAW_ABOUT_URL = "/ruminant-audio-works/";
 
 const localeAliasMap = {
     "en": "en-gb",
@@ -2326,6 +2327,43 @@ function applyPricingEraLinks() {
     });
 }
 
+function linkCompanyReferences() {
+    ["community-card-4-body", "footer-copy"].forEach((id) => {
+        const node = document.getElementById(id);
+        if (!node) return;
+
+        const text = node.textContent || "";
+        const companyName = "Ruminant Audio Works";
+        const firstIndex = text.indexOf(companyName);
+        if (firstIndex === -1) return;
+
+        const fragment = document.createDocumentFragment();
+        let cursor = 0;
+        let index = firstIndex;
+
+        while (index !== -1) {
+            if (index > cursor) {
+                fragment.append(document.createTextNode(text.slice(cursor, index)));
+            }
+
+            const link = document.createElement("a");
+            link.href = RAW_ABOUT_URL;
+            link.textContent = companyName;
+            fragment.append(link);
+
+            cursor = index + companyName.length;
+            index = text.indexOf(companyName, cursor);
+        }
+
+        if (cursor < text.length) {
+            fragment.append(document.createTextNode(text.slice(cursor)));
+        }
+
+        node.textContent = "";
+        node.append(fragment);
+    });
+}
+
 function applyLocale(localeKey) {
     currentLocale = locales[localeKey] ? localeKey : "en-gb";
     currentLocaleData = locales[currentLocale];
@@ -2381,6 +2419,7 @@ function applyLocale(localeKey) {
     const betaProgrammeLink = document.getElementById("community-card-2-link");
     if (betaProgrammeLink) betaProgrammeLink.setAttribute("href", BETA_PROGRAMME_URL);
 
+    linkCompanyReferences();
     updateDocsLinks(currentLocale);
     showGregism();
     window.requestAnimationFrame(updateAnchorOffset);
