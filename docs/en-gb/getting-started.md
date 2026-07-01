@@ -466,6 +466,16 @@ Guild Picks carries this disclaimer:
 The list is grouped into **Free**, **Honourware**, **Paid Sleepers**, and
 **Paid Premium**, and each item opens the official vendor page in your browser.
 
+## MIDI Monitor
+
+Use **Tools -> MIDI Monitor** when you need to capture what a controller or
+keyboard is actually sending. Choose a MIDI input, press **Start**, move the
+hardware controls you want to report, then press **Stop** and **Export CSV**.
+
+The monitor keeps a generous in-window event buffer with decoded MIDI message
+types and raw bytes, so it is useful for support reports about transport
+buttons, faders, encoders, pedals, and other controller behaviour.
+
 ## Track States
 
 TayPE has three ways to think about tracks:
