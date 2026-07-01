@@ -277,10 +277,15 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   marker colour; transport-only profiles such as SSL 360 disable that colour
   swatch because they publish no fader bank. Strip buttons follow the active
   visible mixer strip order, with comp-bus child/take tracks skipped; the final
-  bank maps hardware strip 1 to the master fader. MCU rewind/fast-forward and
-  jog move by the visible timeline ruler step. Korg nanoKONTROL Studio uses
-  Loop held with marker previous/next to set the loop braces, and filters
-  fader-move select noise so moving a fader does not toggle monitoring.
+  bank maps hardware strip 1 to the master fader. MCU channel left/right nudges
+  a bank by one strip. MCU rewind/fast-forward and jog move by the visible
+  timeline ruler step. Korg nanoKONTROL Studio uses Loop held with marker
+  previous/next to set the loop braces, and ignores SEL notes because its fader
+  movement can emit nuisance select messages. Behringer X-Touch One uses its
+  single fader and encoder on the selected mixer strip; its channel buttons move
+  the selected strip by one, and its bank buttons jump by eight visible strips.
+  The dialect folder includes a `Default Transport Template` example file; copy
+  it, rename the copy to end in `.json`, then edit the copy for custom hardware.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
   as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
