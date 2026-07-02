@@ -4,7 +4,7 @@ Every track in TayPE has a built-in channel strip. The signal flows through each
 
 **Input → Trim → Preamp → Filters → EQ → Compressor → Inserts → Fader → Pan → Output**
 
-Each section can be enabled or bypassed independently. The on/off state does not control whether the body is open: if you leave a section expanded, it stays expanded and simply renders dimmed while bypassed. The default reel starts with the master bus compressor enabled; regular track compressors start bypassed.
+Each section can be enabled or bypassed independently. The on/off state does not control whether the body is open: if you leave a section expanded, it stays expanded and simply renders dimmed while bypassed. The insert picker has a top-right close button for dismissing it without a keyboard. The default reel starts with the master bus compressor enabled; regular track compressors start bypassed.
 
 ![Channel strip overview](../../../assets/img/docs/timeline-with-strip.png)
 
@@ -165,11 +165,15 @@ If that row clips the plug-in name, hovering it now reveals the full plug-in
 name with the latency on a second line, even if Popup Help is turned off.
 If loaded inserts are hiding in slots 5-8 while the rack is still on `LESS`,
 that footer label warns in yellow so you do not miss the extra loaded slots.
-The insert picker now also carries a top-level `MIDI Out` entry. That creates
-TayPE's built-in `External MIDI Out` insert, which keeps the track playing as
-normal while mirroring MIDI clip playback to a chosen Core MIDI destination.
-`Instruments` and `MIDI Out` only live on insert `1`; slots `2-8` stay
-audio-effects only.
+The insert picker opens as a searchable chooser with `Stock`, `Effects`, and
+`Instruments` exclusive first-branch tabs. Empty search browses your plug-in
+folders inside the picker with a fixed `Back` path strip; typing switches to
+flat search results. The selected tab is remembered while TayPE is running.
+The `Stock` tab includes
+TayPE's built-in
+`External MIDI Out` insert, which keeps the track playing as normal while
+mirroring MIDI clip playback to a chosen Core MIDI destination. `Instruments`
+and `MIDI Out` only live on insert `1`; slots `2-8` stay audio-effects only.
 Unlike an instrument insert, `MIDI Out` does not switch the track into
 MIDI-only recording mode; audio takes still print from the track's audio input.
 If you swap a VSTi lane over to `MIDI Out`, TayPE drops any stale MIDI input

@@ -4,7 +4,8 @@ The insert rack can host eight serial VST3 slots. In the full-width docked
 strip TayPE shows slots 1-4 by default; click **MORE** in the rack footer to
 reveal slots 5-8. Narrow mixer strips now keep that same **MORE** / **LESS**
 footer instead of forcing the full rack open. Click an empty slot to load a
-plugin from the insert picker. Right-click a loaded slot for bypass, remove, or
+plugin from the insert picker; its top-right close button dismisses the picker
+without choosing anything. Right-click a loaded slot for bypass, remove, or
 to open the plugin editor. Bypassing one slot only takes that slot dry; later
 inserts in the rack still run in order.
 
@@ -79,23 +80,28 @@ pick plugins from the channel strip.
   disappeared from disk.
 - **Type** separates instruments from effects.
 - **Manufacturer** helps sort and filter larger collections.
-- **Menu Path** lets you build your own nested insert menus. Type a path like
-  `Dynamics/Compressors/Classics` and TayPE will create those child menus under
-  **Effects** or **Instruments**. Slashes are the separator; backslashes are
-  converted automatically when you commit the field.
+- **Menu Path** gives larger catalogues a folder taxonomy in the insert picker.
+  Type a path like `Dynamics/Compressors/Classics` and TayPE lets you browse
+  those folders inside the picker while also indexing the path for search.
+  Slashes are the separator; backslashes are converted automatically when you
+  commit the field.
 
 If a plug-in lands in **Needs Attention**, TayPE timed out waiting for it
 during the background scan but keeps it available so you can try loading it
 deliberately from an insert slot once you are ready to deal with any auth or
 vendor UI.
 
-If **Menu Path** is blank, the plugin sits directly inside the top-level
-**Effects** or **Instruments** menu.
-
-The insert picker is split into **Taype Stock**, **Effects**, and
-**Instruments**. **Taype Stock** holds TayPE-shipped inserts such as
+The insert picker opens as a searchable chooser with **Stock**, **Effects**,
+and **Instruments** exclusive first-branch tabs across the top. The selected tab is
+remembered while TayPE is running; the search field starts fresh each time you
+open the picker. With an empty search field, the chooser preserves your plug-in
+folder hierarchy with a fixed **Back** path strip; as soon as you type, it
+switches to a flat search results list.
+**Taype Stock** holds TayPE-shipped inserts such as
 **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**,
 **Taype Comp**, the built-in **External MIDI Out**, and **Hardware Insert**.
+Only insert **1** can host instruments or **External MIDI Out**, so later slots
+show audio effects and stock audio utilities only.
 
 Melodyne does not appear in the insert picker. Open it from an audio clip
 instead: **Option+double-click** the clip, double-click its Melodyne glyph, or
