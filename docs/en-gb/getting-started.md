@@ -283,7 +283,12 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   previous/next to set the loop braces, and ignores SEL notes because its fader
   movement can emit nuisance select messages. Behringer X-Touch One uses its
   single fader and encoder on the selected mixer strip; its channel buttons move
-  the selected strip by one, and its bank buttons jump by eight visible strips.
+  the selected strip by one, its bank buttons jump by eight visible strips, its
+  Marker button sets/removes a TayPE marker, and its dedicated Solo button
+  toggles solo on the selected strip. With **Grouped Track Controls** enabled,
+  selected-targeting controller fader, pan, record-arm, mute, and solo changes
+  apply to the visible selected strip set; channel and bank buttons still move
+  the focused strip.
   The dialect folder includes a `Default Transport Template` example file; copy
   it, rename the copy to end in `.json`, then edit the copy for custom hardware.
 - If that preferred input or output device is missing when TayPE launches, the
