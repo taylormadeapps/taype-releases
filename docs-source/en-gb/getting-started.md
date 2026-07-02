@@ -236,6 +236,10 @@ registration step. If you add or remove valid language CSV files in your TayPE
 language folder yourself, that menu updates to match what is actually
 installed.
 
+The current bundled app packs include **English (UK)**, **American English**,
+**Français**, **Deutsch**, **Español**, **Íslenska**, **Esperanto**,
+**العربية**, **日本語**, **한국어**, and **简体中文**.
+
 ## Guild Picks
 
 Use **Tools -> Guild Picks** for a small curated list of plugins we rate for

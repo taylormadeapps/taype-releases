@@ -452,6 +452,10 @@ registration step. If you add or remove valid language CSV files in your TayPE
 language folder yourself, that menu updates to match what is actually
 installed.
 
+The current bundled app packs include **English (UK)**, **American English**,
+**Français**, **Deutsch**, **Español**, **Íslenska**, **Esperanto**,
+**العربية**, **日本語**, **한국어**, and **简体中文**.
+
 The startup splash and plugin-scan splash follow that same selected app
 language for their rotating gregisms, but those lines stay bundled inside
 the app rather than coming from the editable CSV language packs. When the
