@@ -284,9 +284,9 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   while fader-touch select noise is filtered. Behringer X-Touch One uses its
   single fader and encoder as one MCU strip at the current controller bank
   offset; its channel buttons move the addressed strip by one, its bank buttons
-  jump by eight visible strips, SEL focuses the addressed strip, its Marker
-  button sets/removes a TayPE marker, and its dedicated Solo button toggles
-  solo on the addressed strip. With **Grouped Track Controls** enabled,
+  jump by eight visible strips, SEL toggles monitoring on the addressed strip,
+  its Marker button sets/removes a TayPE marker, and its dedicated Solo button
+  toggles solo on the addressed strip. With **Grouped Track Controls** enabled,
   selected-targeting controller fader, pan, record-arm, mute, and solo changes
   apply to the visible selected strip set; channel and bank buttons still move
   the focused strip.
