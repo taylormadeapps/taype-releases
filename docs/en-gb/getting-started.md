@@ -280,12 +280,13 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   bank maps hardware strip 1 to the master fader. MCU channel left/right nudges
   a bank by one strip. MCU rewind/fast-forward and jog move by the visible
   timeline ruler step. Korg nanoKONTROL Studio uses Loop held with marker
-  previous/next to set the loop braces, and ignores SEL notes because its fader
-  movement can emit nuisance select messages. Behringer X-Touch One uses its
-  single fader and encoder on the selected mixer strip; its channel buttons move
-  the selected strip by one, its bank buttons jump by eight visible strips, its
-  Marker button sets/removes a TayPE marker, and its dedicated Solo button
-  toggles solo on the selected strip. With **Grouped Track Controls** enabled,
+  previous/next to set the loop braces, and its SEL buttons toggle monitoring
+  while fader-touch select noise is filtered. Behringer X-Touch One uses its
+  single fader and encoder as one MCU strip at the current controller bank
+  offset; its channel buttons move the addressed strip by one, its bank buttons
+  jump by eight visible strips, SEL toggles monitoring on the addressed strip,
+  its Marker button sets/removes a TayPE marker, and its dedicated Solo button
+  toggles solo on the addressed strip. With **Grouped Track Controls** enabled,
   selected-targeting controller fader, pan, record-arm, mute, and solo changes
   apply to the visible selected strip set; channel and bank buttons still move
   the focused strip.
