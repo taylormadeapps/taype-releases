@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "index.html"
 LOCALES = [
+    "ar",
     "de-de",
     "el-gr",
     "es-es",
@@ -13,8 +14,10 @@ LOCALES = [
     "is-is",
     "it-it",
     "ja-jp",
+    "ko-kr",
     "nl-nl",
     "pl-pl",
+    "zh-cn",
     "uk-ua",
 ]
 

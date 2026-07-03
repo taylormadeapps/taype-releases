@@ -329,10 +329,11 @@ transport controls instead of sitting on top of them.
 TayPE's own floating utility windows still hand unhandled key presses back to
 the main app shortcut path. That means `Space`, transport keys, and the rest
 still work while the EQ visualiser, compressor visualiser, MIDI clip editor,
-Hardware Insert, Performance Monitor, video reference, or floating Melodyne
-window has focus. Press `Escape` to close those floating windows before Escape
-falls through to the main app's deselect command. The detached mixer window is
-the exception and keeps its mixer-focus shortcut behaviour.
+Hardware Insert, Performance Monitor, MIDI Monitor, video reference, or
+floating Melodyne window has focus. Press `Escape` to close those floating
+windows before Escape falls through to the main app's deselect command. The
+detached mixer window is the exception and keeps its mixer-focus shortcut
+behaviour.
 
 Those windows stay above TayPE while TayPE is frontmost, and yield when you
 switch to another application.

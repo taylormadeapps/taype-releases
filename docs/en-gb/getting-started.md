@@ -277,10 +277,20 @@ Open **Preferences** (**Cmd+,**) and go to the **Audio** tab.
   marker colour; transport-only profiles such as SSL 360 disable that colour
   swatch because they publish no fader bank. Strip buttons follow the active
   visible mixer strip order, with comp-bus child/take tracks skipped; the final
-  bank maps hardware strip 1 to the master fader. MCU rewind/fast-forward and
-  jog move by the visible timeline ruler step. Korg nanoKONTROL Studio uses
-  Loop held with marker previous/next to set the loop braces, and filters
-  fader-move select noise so moving a fader does not toggle monitoring.
+  bank maps hardware strip 1 to the master fader. MCU channel left/right nudges
+  a bank by one strip. MCU rewind/fast-forward and jog move by the visible
+  timeline ruler step. Korg nanoKONTROL Studio uses Loop held with marker
+  previous/next to set the loop braces, and ignores SEL notes because its fader
+  movement can emit nuisance select messages. Behringer X-Touch One uses its
+  single fader and encoder on the selected mixer strip; its channel buttons move
+  the selected strip by one, its bank buttons jump by eight visible strips, its
+  Marker button sets/removes a TayPE marker, and its dedicated Solo button
+  toggles solo on the selected strip. With **Grouped Track Controls** enabled,
+  selected-targeting controller fader, pan, record-arm, mute, and solo changes
+  apply to the visible selected strip set; channel and bank buttons still move
+  the focused strip.
+  The dialect folder includes a `Default Transport Template` example file; copy
+  it, rename the copy to end in `.json`, then edit the copy for custom hardware.
 - If that preferred input or output device is missing when TayPE launches, the
   app stays up on the live fallback device but keeps the missing choice staged
   as `{device_name} (unplugged - fallback to {fallback_device_name})` in the
@@ -442,6 +452,10 @@ registration step. If you add or remove valid language CSV files in your TayPE
 language folder yourself, that menu updates to match what is actually
 installed.
 
+The current bundled app packs include **English (UK)**, **American English**,
+**Français**, **Deutsch**, **Español**, **Íslenska**, **Esperanto**,
+**العربية**, **日本語**, **한국어**, and **简体中文**.
+
 The startup splash and plugin-scan splash follow that same selected app
 language for their rotating gregisms, but those lines stay bundled inside
 the app rather than coming from the editable CSV language packs. When the
@@ -460,6 +474,16 @@ Guild Picks carries this disclaimer:
 
 The list is grouped into **Free**, **Honourware**, **Paid Sleepers**, and
 **Paid Premium**, and each item opens the official vendor page in your browser.
+
+## MIDI Monitor
+
+Use **Tools -> MIDI Monitor** when you need to capture what a controller or
+keyboard is actually sending. Choose a MIDI input, press **Start**, move the
+hardware controls you want to report, then press **Stop** and **Export CSV**.
+
+The monitor keeps a generous in-window event buffer with decoded MIDI message
+types and raw bytes, so it is useful for support reports about transport
+buttons, faders, encoders, pedals, and other controller behaviour.
 
 ## Track States
 

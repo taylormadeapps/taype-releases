@@ -247,7 +247,7 @@ transport controls instead of sitting on top of them.
 TayPE's own floating utility windows still hand unhandled key presses back to
 the main app shortcut path. That means `Space`, transport keys, and the rest
 still work while the EQ visualiser, compressor visualiser, MIDI clip editor,
-Performance Monitor, or floating Melodyne window has focus.
+Performance Monitor, MIDI Monitor, or floating Melodyne window has focus.
 
 Hosted plugin editors are the exception. Those windows keep their own key
 handling.

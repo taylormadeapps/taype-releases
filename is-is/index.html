@@ -45,6 +45,7 @@
     --heading-weight: 400;
     --heading-letter-spacing: 2px;
     --micro-heading-letter-spacing: 2px;
+    --body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --nav-anchor-offset: 88px;
 }
 
@@ -56,7 +57,16 @@ html[data-font-mode="sans"] {
 }
 
 html[data-font-mode="cjk"] {
-    --heading-font: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    --heading-font: "Hiragino Sans", "Yu Gothic", "Apple SD Gothic Neo", "PingFang SC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK SC", sans-serif;
+    --body-font: "Hiragino Sans", "Yu Gothic", "Apple SD Gothic Neo", "PingFang SC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK SC", sans-serif;
+    --heading-weight: 700;
+    --heading-letter-spacing: 0.08em;
+    --micro-heading-letter-spacing: 0.08em;
+}
+
+html[data-font-mode="arabic"] {
+    --heading-font: "Geeza Pro", "Noto Sans Arabic", "Arial", sans-serif;
+    --body-font: "Geeza Pro", "Noto Sans Arabic", "Arial", sans-serif;
     --heading-weight: 700;
     --heading-letter-spacing: 0.08em;
     --micro-heading-letter-spacing: 0.08em;
@@ -72,7 +82,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--body-font);
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -211,6 +221,18 @@ nav .nav-links a:hover { color: var(--brass); }
 .lang-select:focus {
     outline: 2px solid var(--brass);
     outline-offset: 2px;
+}
+
+html[dir="rtl"] .nav-brand,
+html[dir="rtl"] .pixel-font {
+    direction: ltr;
+}
+
+html[dir="rtl"] .lang-select {
+    padding: 0.4rem 0.8rem 0.4rem 2.1rem;
+    background-position:
+        1rem calc(50% - 0.15rem),
+        0.65rem calc(50% - 0.15rem);
 }
 
 /* ---- Hero ---- */
@@ -964,6 +986,9 @@ footer {
         font-size: 0.75rem;
         padding: 0.35rem 1.9rem 0.35rem 0.7rem;
     }
+    html[dir="rtl"] .lang-select {
+        padding: 0.35rem 0.7rem 0.35rem 1.9rem;
+    }
     section { padding: 3rem 1.25rem; }
     #download { padding-bottom: 2rem; }
     .download-platform-interest { grid-template-columns: 1fr; }
@@ -1039,7 +1064,10 @@ footer {
             <span id="lang-switch-label" class="lang-switch-label">Language</span>
             <select id="lang-select" class="lang-select" aria-label="Language">
                 <option value="en-gb">English (UK)</option>
+                <option value="ar" lang="ar" dir="rtl">العربية</option>
                 <option value="ja-jp" lang="ja">日本語</option>
+                <option value="ko-kr" lang="ko">한국어</option>
+                <option value="zh-cn" lang="zh-Hans">简体中文</option>
                 <option value="fr-fr" lang="fr">Français</option>
                 <option value="de-de" lang="de">Deutsch</option>
                 <option value="es-es" lang="es">Español</option>
