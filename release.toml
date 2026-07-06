@@ -3,20 +3,65 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.0.3"
-date = "2026-06-22"
-commit = "a5f2d898"
+version = "1.0.4"
+date = "2026-07-06"
+commit = "c7cf007b"
 
 summary = """\
-Fixes the welcome-screen feedback path so opening feedback from Welcome no longer leaves the welcome card blocking the feedback dialog.
+Improves waveform rendering and audio import peak handling so clips draw at the correct scale and imported audio shows reliable peak detail.
+Adds the MIDI monitor window, arranger follow-playhead toggle, and expanded Mackie MCU / X-Touch One control-surface behaviour.
+Improves insert workflows with a custom plugin picker, more reliable sparse insert slots, sidechain bus activation, and chained sidechain routing.
+Improves TONE3000 and NAM handling, including user-root NAM profile paths, metadata/auth fixes, typed send schemas, and preserving NAM Drive/Output when switching models.
+Fixes mixer selected-track focus, EQ RTA graph floor clipping, MIDI graph-rebuild safety, feedback-dialog focus, and TAPE_HOME content path handling.
+Fixes contained clip drops so replacing material inside an existing clip does not create an unwanted auto-crossfade.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-94b386a3 Keep unstable release pointer during checkpoint history merge
-f05e70ba Handle main release pointer history in checkpoint
-7456f6f8 Restore unstable-first checkpoint flow
-3dfd2c73 Let welcome overlay yield to dialogs
-04b4418c Track taype-releases v1.0.2
+3a529f03 Preserve NAM preamp gain on profile switch
+a33851f1 Fix contained clip auto-crossfade resolution
+b5f4a01d Fix docs contract tests and test audio isolation
+f9f8ff8a Sync public docs cleanup
+6a243e3c Track taype-releases unstable merge
+e07d94f4 Fix brittle insert and fixture tests
+c655c4e2 Beta checkpoint v1.0.4b7
+4defe8ae Fix insert gaps and sidechain bus activation
+de151ecc Beta checkpoint v1.0.4b6
+bdc8b0c6 Fix chained insert sidechain lanes
+6435b658 Beta checkpoint v1.0.4b5
+3242e52c Fix localisation and harness contract failures
+3132fdb3 Add arranger follow-playhead toggle
+be79702f Guard MIDI pump during graph rebuilds
+d33bbbd2 Fix telemetry worker sandbox crash reports
+f5f059ae Fix X-Touch One MCU virtual strip control
+563aecd0 Set X-Touch One select to monitor
+23b52132 Fix X-Touch One MCU banking
+551d7321 Harden ops push branch hygiene
+98faa02b Update releases site locale pages
+0755c548 Beta checkpoint v1.0.4b4
+cde59b40 Stabilise feedback focus and beta locale coverage
+0348bd26 Wire X-Touch One selected-group controls
+62a3d75b Add custom insert plugin picker
+0dcbd5f7 Add Discord link to beta welcome email
+6a017d3e Update website docs pointer
+798e7f54 Add MIDI monitor diagnostic window
+864d8556 Add Mackie MCU focus profiles and template seeding
+9147d483 Beta checkpoint v1.0.4b3
+362f07ce Fix TONE3000 auth callback lifetime
+0b6719e9 Add platform interest assets and docs
+bd7fffb0 Add Fostex B16 asset
+9b8dbc19 Fix mixer width selected-track focus
+75d0dbfd Fix EQ RTA graph floor clipping
+ab72d625 Beta checkpoint v1.0.4b2
+acec5aa2 Fix TAPE_HOME content path handling
+fe4242e2 Fix TONE3000 metadata and feedback focus
+a684b337 Stamp 1.0.4 beta metadata
+df07fb66 Fix waveform display and import peaks
+640106fa Fix scaled waveform rendering
+2d08ad74 Fix clip waveform vertical scaling
+3bbfc0b2 Use user root NAM paths and typed send schemas
+e484113b Track taype-releases pricing cleanup
+34fa4953 Track taype-releases beta updates
+bdc8ef17 Track taype-releases v1.0.3
 """
