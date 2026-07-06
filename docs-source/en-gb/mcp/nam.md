@@ -10,7 +10,7 @@ Read or change the global True Summing preference for the master summing path. C
 
 ### `set_preamp_nam`
 
-Load a NAM profile into a track preamp.
+Load a NAM profile into a track preamp. If you do not pass a new output gain, TayPE keeps the track's current NAM Drive and Output settings.
 
 ### `clear_preamp_nam`
 

@@ -18,6 +18,8 @@ MD510 is a more characterful mode with stronger attitude. Use it when a source n
 
 NAM mode loads amp, pedal, or preamp captures from the profile browser. Local profiles and downloaded TONE3000 packages appear in the browser.
 
+Changing the selected NAM profile keeps the current NAM Drive and Output settings, so you can compare models without losing your gain staging.
+
 ## Gain Staging
 
 The preamp shows input/output metering so you can add tone without accidentally fooling yourself with loudness. Level-match before judging the colour.
