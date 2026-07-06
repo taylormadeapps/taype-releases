@@ -2,7 +2,7 @@
 
 The timeline is where you record, edit, navigate, and arrange the reel.
 
-![Timeline overview](../../../assets/img/docs/timeline-overview.png)
+![Timeline overview](../../.gitbook/assets/timeline-overview.png)
 
 ## Layout
 
@@ -24,6 +24,6 @@ Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, 
 
 ## Related Timeline Workflows
 
-- [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
-- [Varispeed](varispeed.md): rehearse or record at a different playback speed while preserving pitch.
-- [Video Reference](video-reference.md): keep one picture reference in sync with the reel for scoring work.
+* [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
+* [Varispeed](varispeed.md): rehearse or record at a different playback speed while preserving pitch.
+* [Video Reference](video-reference.md): keep one picture reference in sync with the reel for scoring work.

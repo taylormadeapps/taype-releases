@@ -4,7 +4,7 @@ Every track has a built-in channel strip. Signal flows through the strip in this
 
 **Input -> Trim -> Preamp -> Filters -> EQ -> Compressor -> Inserts -> Fader -> Pan -> Output**
 
-![Channel strip overview](../../../assets/img/docs/timeline-with-strip.png)
+![Channel strip overview](../../.gitbook/assets/timeline-with-strip.png)
 
 ## Strip Controls
 
