@@ -1,52 +1,23 @@
 # Preamp
 
-The preamp operates in five modes. Use the mode-value button on the left of the info row to cycle through them:
+The Preamp section adds input character before the main tone-shaping stages.
 
-**Clean → Modern → ToTaype → NAM → MD510 → Clean**
+## Clean Gain
 
-That button now shows only the current mode text. Clean is outlined, Modern uses a light chip, ToTaype keeps the warm brass chip, NAM uses green, and MD510 uses baby blue. In ToTaype mode, the speed pill sits to its right and follows the same colour language as the compressor detector button: red `7.5`, green `15`, blue `30`. In NAM mode, the loaded profile name sits in its own dark pill to the right, while the `…` browse button stays on the far right.
-
-## Clean Gain (default)
-
-The preamp starts enabled in its neutral clean mode. Your trim setting passes through with no colour or saturation until you switch into a colour stage. Every new track starts here.
+Clean mode is the default gain stage. It is useful for level matching without added colour.
 
 ## Modern
 
-A soft-clipping drive stage for adding warmth and saturation.
-
-- **Drive** - how hard you push the signal into the clipper. Higher values mean more saturation.
-- **Safe mode** - engages oversampling for cleaner saturation at the cost of a bit more CPU.
-- **Auto-gain (AG)** - compensates for loudness changes from drive so you can compare tone instead of volume.
+Modern adds driven console-style colour. Use Drive for weight and Output to level-match the result.
 
 ## MD510
 
-MD510 is a MiniDisc-player-inspired colour mode for subtle finish and peak civility. It adds a small low-end support, gently relaxes the top, tightens low stereo width when a stereo lane is available, and rounds the very top of hard pushes with a tiny 0 dB soft clip.
+MD510 is a more characterful mode with stronger attitude. Use it when a source needs bite, density, or a less polite edge.
 
 ## NAM Profile
 
-Load a Neural Amp Modeler profile of a real preamp - Neve 1073, API 512, SSL E, Trident, and thousands more. The profile replaces the built-in saturator entirely.
+NAM mode loads amp, pedal, or preamp captures from the profile browser. Local profiles and downloaded TONE3000 packages appear in the browser.
 
-Click the **browse** button to open the Profile Browser, where you can search TONE3000's online library or pick from locally saved profiles.
+## Gain Staging
 
-### Profile Browser
-
-TONE3000 rows show the model thumbnail, type, creator, architecture, and an AMX badge for LSTM/AMX-compatible captures. Use the **View Profile** link at the bottom right of a row to open its page on tone3000.com.
-
-The **AMX Compatible** filter narrows results to LSTM captures that qualify for TayPE's accelerated path. The browser searches forward through the library until it finds matching rows.
-
-A spinner appears while search, favourites refresh, or download metadata is loading. If TONE3000 favourite sync is temporarily unavailable, starred profiles are still saved locally.
-
-### NAM Controls
-
-- **Trim** is always visible and always pre-NAM - higher trim drives the model harder, like pushing a real preamp.
-- **Output Gain** is a level control after the model.
-- **Auto-gain (AG)** measures pre/post NAM level and applies smooth compensation to keep perceived loudness stable.
-- **SAFE** is not shown in NAM mode.
-
-### Profile Storage
-
-Profiles are `.nam` files stored in `[TAPE_HOME]/NAM/Preamps/`. Downloaded profiles work offline from that point.
-
-Downloaded profiles keep their model title metadata, so the strip and browser show the profile title instead of hashed filenames. Thumbnails are cached locally for offline browsing.
-
-You can switch a strip to NAM mode before choosing a profile - TayPE shows a warning and stays clean until a model is loaded.
+The preamp shows input/output metering so you can add tone without accidentally fooling yourself with loudness. Level-match before judging the colour.

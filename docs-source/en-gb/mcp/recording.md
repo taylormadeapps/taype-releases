@@ -1,38 +1,25 @@
 # Recording
 
-Tools for recording audio input.
+### `get_record_mode` / `set_record_mode`
 
----
+Read or change the active record-stop behaviour.
+
+### `get_loop_record_mode` / `set_loop_record_mode`
+
+Read or change loop-record behaviour.
 
 ### `record_start`
 
-Start recording audio input onto a track. Transport begins playback for
-overdub monitoring.
+Start recording armed tracks.
 
-This tool does not require `tx_begin`, but it is rejected while an MCP
-transaction is active. TayPE expects MCP clients to keep transactions short
-and get back out before transport work.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Track to record onto |
-
-**Returns:** `{ "recording": true, "track_id": "track_2", "position": 5.0 }`
+Provide `track_id` for a single track or `track_ids` for a multitrack start. If Automation View is enabled, `record_start` starts automation capture instead and track IDs are optional.
 
 ### `record_stop`
 
-Stop recording, finalize the WAV file, add the recorded clip to the track, and
-persist the reel working state immediately.
+Stop the active recording pass using the selected record mode.
 
-This tool does not require `tx_begin`, but it is rejected while an MCP
-transaction is active.
+When automation capture is active, `record_stop` commits touched automation and returns the touched parameter count instead of clips.
 
-**Returns:**
-```json
-{
-  "recording": false,
-  "clip_id": "clip_3",
-  "time": 5.0,
-  "duration": 12.5
-}
-```
+### `inject_midi`
+
+Inject MIDI into the live path for testing, virtual control, or assisted workflows.

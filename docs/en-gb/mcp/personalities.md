@@ -1,56 +1,39 @@
 # Personalities
 
-Personalities are studio tech characters that shape how an AI assistant
-interacts with you through MCP. Each personality has a distinct approach
-to mixing, production philosophy, and communication style.
-
-Think of them as different engineers sitting at the desk. The tools and
-the engine are the same - the advice and the vibe change.
+Personalities change how an AI assistant talks and frames suggestions while using TayPE. They do not change the audio engine, routing, saving, or session safety.
 
 ## Built-In Personalities
 
-TayPE ships with eleven built-in studio tech characters:
+TayPE ships a roster of studio-tech personalities with different working styles: cohesive bus-first mixing, bold live-room energy, polished depth, intimate texture, cinematic space, modern precision, gritty character, minimal documentation, loud competitive finishing, late-night warmth, and a direct mentor voice.
 
-| Name | Vibe |
-|------|------|
-| **Glue & Weight** | Bus-first thinking, compression, cohesion. The default. |
-| **Arena Push** | Bold, assertive, stadium-sized mixes |
-| **Polished Depth** | Dimensional, elegant, radio-ready polish |
-| **Intimate Front** | Close, textured, honest - lo-fi meets intention |
-| **Cinematic Air** | Spatial design, reverb as architecture |
-| **Tight & Modern** | Precision transients, streaming-ready |
-| **Dirty Authority** | Saturation, grit, character - tape and tubes |
-| **Minimal Truth** | Minimal processing, document the performance as-is |
-| **Loud & Proud** | Impact, loudness as skill, competitive |
-| **Late-Night Glow** | Warmth, harmonic richness, vibe |
-| **Greg Zenner** | No-bs mentor. Feel over fidelity. |
+The names shown in the app are the source of truth. The public docs describe the working style rather than borrowing real-world producer names.
 
 ## Switching Personalities
 
-Use the `set_personality` tool to switch, or ask your AI assistant to
-change character. The active personality is an app-global preference, so it
-stays put across restarts until you change it again.
+Use the personality picker or MCP personality tools. The active personality persists as an app preference, not as hidden audio state inside the reel.
+
+### `list_personalities`
+
+List available studio-tech personalities.
+
+### `set_personality`
+
+Set the active personality by name.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `name` | Personality name |
+
+### `get_personality`
+
+Return the currently active personality.
 
 ## Custom Personalities
 
-Drop a JSON file in `[TAPE_HOME]/Personalities/`:
+Advanced users can add custom personality JSON files to the TayPE personality folder. Keep prompts focused on communication style and workflow help, not engine rules.
 
-```json
-{
-  "name": "My Custom Tech",
-  "prompt": "You are a laid-back studio tech who speaks like a surfer..."
-}
-```
+## What They Can And Cannot Do
 
-Any `.json` file in this folder is picked up automatically and appears
-after the built-in personalities in the picker.
-
-## What Personalities Can and Cannot Do
-
-Personalities shape tone, suggestions, and workflow defaults. They never
-affect the engine, the audio, or how your session is saved. A personality
-cannot break your mix or corrupt your data - it just changes who is
-sitting at the desk.
-
-Personality is not part of `get_project` or the reel schema. Use
-`get_personality` or `status` when you need to read it through MCP.
+Personalities can influence tone, defaults, and suggestions. They cannot change the sound by themselves, bypass safety rules, corrupt routing, or rewrite how TayPE saves the reel.

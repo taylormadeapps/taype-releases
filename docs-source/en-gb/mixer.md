@@ -1,97 +1,34 @@
 # The Mixer
 
-Press **M** to switch between the timeline and mixer views.
+The mixer is the desk view: many channel strips side by side, with faders, meters, inserts, routing, buses, and selected-track focus visible at once.
 
-The mixer shows one channel strip per track, laid out horizontally left
-to right. The master bus is always on the far right. Adjacent bus strips keep
-a single visible seam between them inside a bus run. Scroll horizontally with
-the mouse wheel or trackpad to navigate across your channels.
-Buttons, section headers, knobs, and the fader all follow the same live
-interaction rules on every strip, including the master bus, even straight
-after switching between arranger and mixer.
-Comp buses add the same snap-blue group frame used in the arranger, with a
-small +/- square in the top-left corner so you can collapse or expand the
-visible child take strips without changing any routing. That folded state is
-saved with the reel, so reopening the session restores the same comp-group
-desk shape.
+![Mixer overview](../../assets/img/docs/mixer-overview.png)
 
-![Mixer overview](../assets/img/docs/mixer-overview.png)
+## Width Modes
 
-## Channel Strip Layout
+The mixer has two width modes:
 
-Each strip shows (top to bottom):
+- **Narrow desk mode** shows compact strips so more tracks fit on screen.
+- **Full strip mode** gives each track the wider channel-strip layout.
 
-- **Track name** - double-click to rename
-- **Input selector** - which audio interface input the track records from
-- **Control buttons** - M (mute), S (solo), R (record arm), MON (software
-  monitoring), A (archive), B (bus)
-- **Output selector** - where the track sends its audio
-- **Preamp section** - MODE/AG/SAFE controls with always-visible Trim and
-  mode-dependent Drive or NAM Output Gain
-- **Filter section** - high-pass and low-pass filters
-- **EQ section** - 3-band parametric equaliser with a spectrum button for the shared EQ Visualiser
-- **Compressor section** - dynamics processing
-- **Insert slots** - up to 8 slots for VST3 plugins
-- **Sends section** - bus sends with a `POST` / `PRE` mode switch and per-send prep
-- **Pan knob** - stereo position
-- **Fader** - volume, with dB readout
-- **Peak meter** - stereo level meter with clip indicator
-  (display updates at 4 Hz and keeps transient peaks per update window)
+Press **W** while the mixer is focused, or use the Mixer Width toolbar button. The timeline's docked strip has its own width mode, so changing mixer width does not clobber the arranger strip width.
 
-Each processing section can be expanded or collapsed with its header
-toggle. See the [Channel Strip](channel-strip/README.md) page for details on
-every section.
+When a track is selected, width changes keep that selected strip in view. TayPE should not jump to an arbitrary centre point just because the strip layout changed.
 
-## Using the Controls
+## Track Selection
 
-**Faders and knobs** - click and drag vertically. Each drag is a single
-undoable action.
+Click a strip title to select it. **Cmd-click** toggles tracks into the visible selection. **Shift-click** extends a visible range. Grouped fader, pan, width, section power, and insert power edits apply to the visible selected strips while preserving relative offsets where that matters.
 
-The `SENDS` header flips the whole track between `POST` and `PRE`, and the
-thin ring around each send knob is a live RMS hint. Right-click an assigned
-send knob to add per-send low/high filtering and clean predelay before that
-feed reaches its bus; configured sends use a lighter knob shade. The EQ
-header's spectrum button opens the shared floating **EQ Visualiser** window
-for that strip, and while it stays open it follows the currently selected
-track automatically.
+The first selected track stays the primary track for the docked strip and focused operations.
 
-**Buttons** (mute, solo, etc.) - single click to toggle.
+## Channel Order
 
-Turning **B** on makes the track a bus and switches its input to no device
-input. Turning **B** off disconnects any tracks routed to that bus so your
-routing stays valid.
+Mixer strips follow the reel's track order. Ordinary tracks sit together. Bus and master strips open a stronger separator so routing landmarks stand out.
 
-**Insert slots** - click to load a plugin, right-click for a context menu
-with options like bypass and remove. Hardware Insert popup presets save and
-recall the open outboard slot, including recall photos; route restore is
-all-or-nothing for the send/return pair.
+## Scrolling
 
-**Track name** - single-click the title panel to select that track in the
-arranger and light its footer outline. **Cmd-click** toggles visible strips
-into or out of the mixer selection, including deselecting the last selected
-strip, **Shift-click** extends the selection as a visible range, and **Cmd+A**
-selects every visible strip. Arranger track headers share the same
-**Cmd-click** / **Shift-click** multiselect behaviour, but arranger **Cmd+A**
-still belongs to clip selection and **Cmd+Shift+A** selects every clip on the
-currently selected tracks. When more than one track is selected, the arranger
-strip stays pinned to the first selected track. Grouped mixer edits apply to
-the visible selected set only, and grouped
-fader / pan / width drags preserve each strip's relative offset instead of
-snapping everything to one flat line. If a linked control hits its min/max
-rail, it stays pinned there until the drag comes back far enough for the
-original offset to fit again. Double-click the name pill to edit inline (only
-when transport is stopped).
+Use the horizontal scroll gesture, arrow keys when the mixer is focused, or the visible rack controls to move through large sessions. The selected track should remain easy to find after width changes, scale changes, or switching between inline and detached mixer windows.
 
-## Track Order
+## Detached Mixer
 
-Tracks appear in the same order as the timeline. The master bus is always
-the rightmost strip.
-
-Mixer visibility follows timeline view filters:
-
-- **Archive View (X)** - shows active or archived tracks to match timeline mode
-- **Focus (F)** - shows tracks with clips at the tape head position
-- **Spill (G)** - shows the selected bus and tracks routed to it
-
-The master strip stays visible through all of those filters, so the final sum
-never drops out of the desk.
+Use **Cmd+Shift+M** to pop the mixer into a separate window. The detached mixer has its own focus for keyboard shortcuts. A focused detached mixer controls its own width with **W** while the arranger underneath keeps its own docked strip state.

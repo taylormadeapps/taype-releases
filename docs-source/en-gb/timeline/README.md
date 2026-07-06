@@ -1,54 +1,29 @@
 # The Timeline
 
-The timeline is where you see your session laid out in time. Tracks run top to bottom, time runs left to right. The tape head - a vertical line - shows the current playback position.
+The timeline is where you record, edit, navigate, and arrange the reel.
 
-![Timeline overview](../../assets/img/docs/timeline-overview.png)
+![Timeline overview](../../../assets/img/docs/timeline-overview.png)
 
 ## Layout
 
-The left column shows **track headers** with controls. The main area shows **clips** - rectangles filled with waveforms representing your audio.
+The top ruler shows time or bars/beats. The tape head marks the current play position. Tracks run vertically down the left, with clips arranged on lanes to the right.
 
-In the normal theme, the arrange background is a softer charcoal work surface
-with a quiet tonal falloff, and clip waveforms take their tone from the clip
-colour until selected, when the waveform and clip outline switch to the cream
-waveform tone. High contrast keeps the harder dark background while using the
-same selected-clip banding language.
+The selected track drives the docked channel strip, hardware-control focus, and many keyboard operations. TayPE keeps that selection visible when you change view, scale, or strip width.
 
-When you select a track, TayPE keeps the row highlight restrained: a faint fill
-with soft guide lines at the top and bottom of the selected lane.
-In the normal theme, track headers use a subtle track-colour gradient with
-small lower-right button shadows. Only the selected header deepens into a
-slightly darker version of that colour, so the active row reads clearly without
-making every header a solid block. Uncovered header-column space uses the same
-soft arrange-bed gradient as the timeline body. High contrast keeps solid
-header fills.
+## Ruler Header Controls
 
-The **ruler** along the top shows time. Press **T** to toggle between minutes:seconds and bars|beats. Each Cut can define its own zero point, so the ruler and transport counter can read from a section start instead of absolute timeline start. In bars|beats mode, that zero point becomes bar `1.1`, and bars to the left read as negative.
+The ruler header includes controls for follow-playhead behaviour, mixer width, track creation, archive view, and other view tools. Follow keeps the playhead visible during playback without yanking your edit focus while you are making a deliberate selection or drag.
 
-The **transport bar** runs along the bottom. It has playback controls, BPM, and position readout in the middle, then a Cut actions menu for **New / Duplicate / Rename / Delete** and a Cut selector showing the active Cut name at the start of the right-hand utility cluster. The Cut actions menu sits immediately to the left of the selector. The left-side view buttons are: **Show Mixer**, **Focus**, **Tags**, **Spill**, **Archive**. The **?** popup-help toggle lives at the far right of the transport bar. Playback-denied edits stop transport first and then proceed; recording still blocks them.
+## Track States
 
-The ruler header also carries the global **A** automation toggle. Left-click
-it to switch the whole timeline between clip editing and automation view.
-Right-click it to choose **Volume**, **Pan**, or **Width**.
+A track can be current, focused, muted, soloed, record-armed, monitored, archived, or part of a bus/comp group. TayPE uses these states to keep busy reels readable: focus narrows attention, archive hides finished material, and grouped controls let selected tracks move together without flattening their relative balances.
 
-Next to the DSP meter there's a small **MCP** lock indicator. It lights red while an MCP transaction is active - right-click it to abort the lock.
+## Editing Model
 
-With **Help → Popup Help** enabled, hover help appears after about **0.7 seconds** on ruler buttons, track-header controls, clips, fades, gain lines, and crossfade regions.
+Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, and disabling clips change the reel state without rewriting the original media. Use checkpoints when you want a named recovery point before a bigger move.
 
-### Ruler Header Controls
+## Related Timeline Workflows
 
-The left side of the ruler has quick controls:
-
-- **Channel Strip** - show/hide the channel strip side panel; track selection updates it only when the panel is already open
-- **+** - add a new track
-- **A** - toggle automation view; right-click chooses **Volume**, **Pan**, or **Width**
-- **Metronome** - toggle click on/off
-- **Snap** - toggle grid snap
-- **Ruler Mode** - switch between time and bars|beats
-
-Right-click in the upper ruler area to open the zero-point menu:
-
-- **Set 0 at Playhead** - make the current tape-head position the selected Cut's new `0:00`
-- **Reset 0 to Start** - restore that Cut's zero point to the beginning
-
-The lower ruler tick band keeps the existing right-drag pan/zoom gesture.
+- [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
+- [Varispeed](varispeed.md): rehearse or record at a different playback speed while preserving pitch.
+- [Video Reference](video-reference.md): keep one picture reference in sync with the reel for scoring work.

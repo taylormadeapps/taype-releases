@@ -1,69 +1,57 @@
 # Clips
 
-Tools for placing, moving, and managing audio clips on the timeline.
-
----
-
 ### `add_clip`
 
-Place an audio file on a track at a timeline position.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track ID |
-| `path` | string | yes | Absolute path to audio file |
-| `time` | number | no | Timeline position in seconds (default: 0.0) |
-| `duration` | number | no | Clip duration in seconds (default: full file length) |
-| `clip_start` | number | no | Offset into source file in seconds |
-| `name` | string | no | Clip name |
-
-**Returns:** `{ "id": "clip_1", "time": 0.0, "duration": 45.2 }`
+Create or import a clip onto a track.
 
 ### `set_clip`
 
-Move a clip on the timeline or between tracks.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | Clip ID |
-| `time` | number | no | New timeline position in seconds |
-| `track_id` | string | no | Target track ID (for cross-track moves) |
-
-At least one of `time` or `track_id` must be provided.
-
-**Returns:** Updated clip object.
+Move, trim, rename, disable, adjust gain, or update fades for a clip.
 
 ### `remove_clip`
 
-Remove a clip.
+Remove a clip from the reel.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | Clip ID |
+### `rerender_midi_clip`
 
-**Returns:** `{ "removed": "clip_1" }`
+Render a MIDI clip through its source instrument path where supported.
 
 ### `get_clips`
 
-List clips, optionally filtered by track.
+List clips and their timing, track, media, and state.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | no | Filter by track (omit for all) |
+### `select_clip`
 
-**Returns:**
-```json
-{
-  "clips": [
-    {
-      "id": "clip_1",
-      "name": "take1.wav",
-      "track_id": "track_1",
-      "time": 0.0,
-      "duration": 45.2,
-      "clip_start": 0.0,
-      "file": "/path/to/take1.wav"
-    }
-  ]
-}
-```
+Select a clip by ID. Selecting a clip also selects its owning track.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `clip_id` | Clip ID |
+
+## Melodyne / ARA
+
+Melodyne opens from clips, not as a normal insert. These tools are available when the ARA/Melodyne lane is available in the running build.
+
+### `ara2_transfer`
+
+Transfer a clip's audio to Melodyne for pitch/time editing. Playback may continue; recording must be stopped.
+
+### `ara2_commit`
+
+Render Melodyne's processed output and make it the clip's committed playback source. Playback may continue; recording must be stopped.
+
+### `ara2_revert`
+
+Remove Melodyne from a clip and return to the raw source or rebuilt stretch-only audio. Playback may continue; recording must be stopped.
+
+### `ara2_status`
+
+Return the current Melodyne state for a clip: none, analysing, editing, or committed.
+
+ARA tools use:
+
+| Param | Description |
+|---|---|
+| `clip_id` | Clip ID |

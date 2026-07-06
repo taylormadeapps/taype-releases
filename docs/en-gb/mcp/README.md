@@ -1,145 +1,42 @@
 # MCP Integration
 
-TayPE exposes its engine over the Model Context Protocol (MCP), an open
-standard for connecting AI assistants to tools and applications. Any MCP
-client - Claude Desktop, custom agents, or your own tools - can connect
-to a running TayPE instance and control it programmatically.
-
-This means you can talk to your DAW. Ask it to add tracks, move clips,
-set levels, load plugins, start recording - all through natural language
-via an AI assistant, or through direct tool calls from your own code.
+TayPE exposes a Model Context Protocol surface so AI clients and local tools can control a running TayPE session.
 
 ## How It Works
 
-TayPE ships with a companion process called `taype-mcp` that acts as a
-bridge between your MCP client and the running app. The bridge speaks
-standard MCP (JSON-RPC 2.0 over stdio) on one side and talks to TayPE's
-engine on the other.
-
-MCP is off by default in normal launches. In TayPE, open
-**Preferences > MCP** and enable **Enable MCP** before connecting an agent.
-TayPE will ask you to confirm before opening `localhost:18222`; review the
-data privacy and security policy for any agent or MCP client you connect.
-
-```
-Your MCP Client (Claude Desktop, etc.)
-    |
-    |  JSON-RPC 2.0 over stdio
-    v
-taype-mcp (bridge process)
-    |
-    |  Internal protocol over localhost
-    v
-TayPE (running app)
-```
+The MCP bridge connects your client to the running app. Tool calls can query session state, control transport, create tracks, edit clips, manage inserts, work with reels, and change view state.
 
 ## Connecting
 
-### Claude Desktop
+Use TayPE's connector installer where available for your MCP client, then restart the client and keep TayPE running while you use the tools.
 
-In TayPE, go to **Tools > LLM Integrations > Install Claude Connector**. This automatically
-configures Claude Desktop to connect to TayPE - no manual editing needed.
-Restart Claude Desktop after installing, and TayPE must be running before
-you start a conversation. MCP must also be enabled in **Preferences > MCP**.
-
-### Codex
-
-In TayPE, go to **Tools > LLM Integrations > Install Codex Connector**. This tells Codex to add
-TayPE as a local MCP server - no manual editing needed. Restart Codex after
-installing, and TayPE must be running before you start a session.
-MCP must also be enabled in **Preferences > MCP**.
-
-### Manual Configuration
-
-If you prefer to set it up yourself, or you're using a different MCP
-client, add TayPE to your MCP configuration:
-
-For Claude Desktop:
-
-```json
-{
-  "mcpServers": {
-    "taype": {
-      "command": "/Applications/Taype.app/Contents/MacOS/taype-mcp"
-    }
-  }
-}
-```
-
-For Codex:
-
-```toml
-[mcp_servers.taype]
-command = "/Applications/Taype.app/Contents/MacOS/taype-mcp"
-```
-
-### Other MCP Clients
-
-Any client that supports the MCP stdio transport can connect by launching
-`taype-mcp` as a subprocess. The bridge handles the handshake and exposes
-all available tools.
-
-If a client sends malformed JSON, the bridge returns the standard JSON-RPC
-parse error (`-32700`). If the JSON is valid but not a valid request object,
-the bridge returns `-32600` (`Invalid Request`).
-
-## What You Get
-
-On connection, the MCP handshake returns:
-
-- **Server info** - app name and version
-- **Tool list** - all available tools (documented in the sub-pages below)
-- **Instructions** - a preamble with links to these docs, plus the active
-  studio tech personality if one is set (see [Personalities](personalities.md))
+Manual client configuration is possible for MCP clients that support stdio bridge commands. Use the connector workflow first unless you know you need manual setup.
 
 ## Concepts
 
-### Stop to Edit
+### Stop To Edit
 
-TayPE follows a strict "stop to edit" rule. Structural changes - adding
-tracks, loading plugins, removing clips - can only happen when transport
-is stopped. Playback is for listening and performing. This keeps the
-engine predictable and prevents the kind of race conditions that crash
-other DAWs.
-
-Tools that require stopped transport will return an error if you call them
-during playback. The `status` tool tells you the current transport state.
+Some edits are safe during playback. Others require transport to stop. Recording is stricter than playback because TayPE protects the active take.
 
 ### Transactions
 
-When you need to make multiple changes as a single undo step, wrap them
-in a transaction using `tx_begin` and `tx_commit`. While a transaction
-is active, the UI locks structural edits to prevent the human user from
-interfering with your edit sequence. Transactions are meant to be brief:
-transport and recording commands are rejected until you commit or abort.
+Use transactions when a tool or assistant needs several edits to land as one undoable operation.
 
-If the connection drops mid-transaction, TayPE automatically aborts and
-rolls back to the pre-transaction state. The user can also manually
-release the lock from the Edit menu. A successful `tx_commit` releases the
-lock and lets ordinary save boundaries resume; it does not force an immediate
-disk write.
+### Feedback
 
-### Feedback and Problem Reporting
+MCP includes a feedback tool so an assistant can prepare a user-visible problem report or suggestion without hiding what will be sent.
 
-The `submit_feedback` tool lets you file bug reports and feedback on behalf
-of the user. It collects system info (version, OS, CPU, audio config,
-plugins, license tier) and posts it to the TayPE team.
+## Tool Areas
 
-Before submitting, you must show the user everything that will be sent
-and get their explicit approval. Nothing leaves the machine without
-consent.
-
-## Next Steps
-
-- [Transport](transport.md) - playback, tempo, metronome
-- [Cuts](cuts.md) - alternate timeline pages inside one reel
-- [Reel Management](reels.md) - save, open, list reels
-- [Tracks](tracks.md) - add, edit, remove tracks
-- [Clips](clips.md) - add, edit, remove clips
-- [Recording](recording.md) - start and stop recording
-- [Plugins](plugins.md) - VST3 inserts, sandbox, Mix FX
-- [View & Session](view-and-session.md) - view state, undo, theme, personality, status
-- [NAM Console Engine](nam.md) - preamp profiles, mix summing, TONE3000
-- [Transactions](transactions.md) - batch changes as single undo steps
-- [Utilities](utilities.md) - feedback, licensing
-- [Personalities](personalities.md) - studio tech characters that shape the AI interaction
+- [Transport](transport.md)
+- [Cuts](cuts.md)
+- [Reel Management](reels.md)
+- [Tracks](tracks.md)
+- [Clips](clips.md)
+- [Recording](recording.md)
+- [Plugins](plugins.md)
+- [View & Session](view-and-session.md)
+- [NAM Console Engine](nam.md)
+- [Transactions](transactions.md)
+- [Utilities](utilities.md)
+- [Personalities](personalities.md)

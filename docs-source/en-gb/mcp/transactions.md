@@ -1,46 +1,17 @@
 # Transactions
 
-Tools for grouping multiple changes into a single undo step.
-
----
+Transactions group several tool calls into one undoable change.
 
 ### `tx_begin`
 
-Begin an explicit transaction. Groups multiple changes into a single undo
-step. Requires transport stopped.
-
-Transactions are meant to be short-lived. While a transaction is active:
-
-- structural UI edits are locked
-- undo/redo are locked
-- transport commands (`play`, `stop`, `seek`) are rejected
-- recording commands (`record_start`, `record_stop`) are rejected
-- autosave is paused
-
-If the connection drops, the transaction is automatically aborted and rolled
-back. The user can also release the lock from Edit > **Release MCP Lock...**
-or by right-clicking the red **MCP** indicator beside the transport DSP meter.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `label` | string | yes | Undo label for this transaction |
-
-**Returns:** `{ "tx_id": "uuid-...", "label": "Batch edit" }`
+Start a transaction. Give it a short human-readable label.
 
 ### `tx_commit`
 
-Commit the transaction. Pushes the undo snapshot and immediately persists the
-reel working state if it changed.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `tx_id` | string | yes | Transaction ID from `tx_begin` |
+Commit the transaction.
 
 ### `tx_abort`
 
-Abort the transaction. Rolls back to pre-transaction state, rebuilds the
-engine from that restored model, and discards any deferred autosave.
+Abort the transaction and discard its pending edits.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `tx_id` | string | yes | Transaction ID from `tx_begin` |
+Use transactions for multi-step operations such as creating tracks, routing them, loading inserts, and setting initial levels as one user-facing action.

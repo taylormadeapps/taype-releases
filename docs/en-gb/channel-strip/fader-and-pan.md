@@ -1,55 +1,15 @@
 # Fader and Pan
 
-- **Fader** - 0 to +12 dB range. Drag vertically.
-- **Pan** - full left to full right. Mono strips use equal-power pan. Stereo strips use Image Position by default, or Balance for older reels migrated into the compatibility mode.
-- **Width** - shown on stereo strips only. Mono strips hide it because there is no stereo image to widen before pan.
-- **ST / MONO** - switch a regular track's strip between stereo and mono processing.
-- **INV** - flip polarity on the strip output.
+The fader is the final track level control before output routing. Pan and width decide where the track sits in the stereo field.
 
-The fader moves continuously through unity (0 dB). There is no sticky catch on
-the centre line, so short automation rides and hand moves keep tracking exactly
-with the pointer.
+## Fader
 
-The printed ruler beside the fader is grouped for readability rather than
-trying to show every quiet-tail step. At the normal dock height it shows
-`+12`, `+9`, `+6`, `+3`, `0`, `-3`, `-6`, `-9`, `-12`, `-18`, `-24`, `-36`,
-`-48`, and `-60`, then a separate `-inf` mute mark below the throw. If you
-shrink the fader dock far enough, TayPE drops the `-60` label before the tail
-ticks start bunching up.
+Drag for level rides. Double-click to return to unity. The fader follows the visible throw honestly and does not pretend it can travel past its end stops.
 
-That `-60` mark sits one full ladder step above the mute stop. Dragging to the
-very bottom still gives `-inf`.
+## Pan and Width
 
-While you drag, the fader thumb keeps moving live with your hand. TayPE does
-not wait for playback or another screen refresh before showing the new
-position.
+Mono tracks show pan. Stereo tracks show pan plus width. The mono/stereo badge shows the current topology. On the master strip, mono monitoring folds the hardware output for checking without changing the mix bus or print capture.
 
-When you resize the bottom fader dock, the metal cap scales with the available
-throw. At cramped dock heights it gets smaller instead of staying visually
-oversized.
+## Exact Values
 
-Hold **Shift** while dragging the fader, pan, or width control for a finer
-4x trim pass.
-
-Right-click the pan knob on a stereo strip to choose **Balance** or
-**Image Position**. **Image Position** moves the stereo image with one knob. **Balance** keeps the
-legacy behaviour where panning left attenuates the right channel and panning
-right attenuates the left channel. Existing reels open in Balance so old mixes
-stay unchanged; newly created stereo strips start in Image Position.
-
-Right-click the width knob or its readout to open the width split controls.
-**OFF** keeps the width knob working across the full stereo image. **ABOVE**
-applies the width move above the split frequency, and **BELOW** applies it
-below the split frequency. The split frequency defaults to **150 Hz**. These
-split controls are direct channel settings, not automation lanes.
-
-Hovering the fader thumb, rail, or dB readout also lets the mouse wheel trim
-the level directly in fine sub-dB steps. Hold **Shift** there as well for the
-same finer 4x pass.
-
-Double-click the fader readout to type an exact value. Finite entries stay
-readable down to **-80.0 dB**; only an exact mute reads as **-inf**.
-
-The fader cap keeps the track colour so you can read the strip at a glance.
-
-Mono strip mode sums stereo sources before the strip, runs the strip in mono, then turns the result back into dual-mono before pan. That means pan still behaves normally. Bus and master strips always stay stereo, so they do not show the `ST / MONO` switch.
+Double-click the fader or pan readout to type exact values where the readout is editable. Return commits. Escape or clicking away cancels.

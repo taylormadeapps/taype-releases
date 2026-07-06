@@ -1,59 +1,17 @@
 # Utilities
 
-Tools for feedback reporting and license management.
-
----
-
 ## Feedback
 
 ### `submit_feedback`
 
-Submit a feedback or crash report. Collects live system info (version,
-OS, CPU architecture, audio interface, sample rate, buffer size, loaded
-plugins, track count, transport state, license tier) and posts to the
-TayPE team along with the user's description.
+Prepare and submit a user-visible feedback, crash, or issue report. The user sees what will be sent and can copy or save it when offline.
 
-Before calling this tool, you must show the user everything that will
-be sent and get their explicit confirmation. Nothing leaves the machine
-without approval.
-
-If TayPE itself crashed in the previous session, the app surfaces the same
-kind of payload in its restart-time crash recovery dialog. That handoff stays
-inside TayPE; you should not get bounced through a separate macOS reopen prompt.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `description` | string | yes | User's description of the issue |
-| `type` | string | no | "feedback" (default) or "crash" |
-
-**Returns:** The collected payload (so you can confirm what was sent).
-
----
-
-## License
+## Licence
 
 ### `get_license_status`
 
-Get the current license state.
-
-**Returns:**
-```json
-{
-  "licensed": true,
-  "founder": true,
-  "licensee": "Tom Taylor",
-  "tier": "founder",
-  "sequence": 1,
-  "valid_from": "2025-01-01",
-  "valid_to": "2026-01-01",
-  "era": 1
-}
-```
+Return the current licence state.
 
 ### `show_license_dialog`
 
-Show the license dialog.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `type` | string | no | "nag", "licensed", or "auto" (default) |
+Open the licence dialog in TayPE.

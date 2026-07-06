@@ -1,47 +1,15 @@
-# Taype - Performance Monitor
+# Performance Monitor
 
-The **Taype - Performance Monitor** shows per-track DSP breakdown with separate **Preamp/Summing** and **Plugin** CPU columns. On the master track, the Preamp/Summing column reflects NAM summing CPU.
-
-Open it from **Tools -> DSP Monitor**, press the backtick key, or click the transport DSP gauge.
+The Performance Monitor shows where processing time is being spent.
 
 ## Routing Tree
 
-Rows display as a routing tree under the master bus, so bus chains are nested visually instead of appearing as a flat list.
-
-The **Lvl** column shows routing depth from master (L0 = master, deeper levels further upstream). Each stage shows `% | ms` per track, and the table includes per-track enabled plugin count to spot heavy chains quickly.
-
-The timing columns now split playback and monitoring truth explicitly:
-
-- **Chain** - the track's own insert/strip latency
-- **Live** - the downstream live-path latency a monitored source would feel to the output
-- **PDC** - playback compensation applied to prerecorded material
-- **Mon** - software-monitor alignment state for active monitored paths
-
-In the **Mon** column:
-
-- `Ref` means this track is one of the current slowest monitored reference paths
-- `+N smp` means TayPE is delaying this track's live monitored contribution by `N` samples so it lands with the reference
+Use it to see track, bus, insert, and sandbox processing in context. It helps distinguish a heavy plugin from a routing or monitoring problem.
 
 ## Colour Coding
 
-Stage colour bands are per-node hints:
-
-- Green: < 12%
-- Amber: 12-25%
-- Red: > 25%
-
-These are per-track hints, not a global overload alarm - use the top DSP gauge for that.
+Rows use colour to separate healthy, busy, and risky processing areas. Treat it as a guide for troubleshooting, not a musical judgement.
 
 ## Session Summary
 
-The summary includes:
-
-- **Critical path (est)** - the longest active dependency chain in the current block
-- **Scheduler** - levels, max width, workers used, utilisation, and compute/wait/merge timing
-- **Software monitor** - the current monitor reference latency plus how many live monitored paths are active
-- **CPU** - combined TayPE app plus `taype-sandbox` usage across all logical cores (0-100%), stacked green for the app and blue for the sandbox
-- **Preamp / SUM Grouping** - opens the grouping matrix for track preamps, bus-level preamp groups, and master true-summing groups
-
-Per-track CPU values are smoothed for readability (quick rise, slower fall).
-
-The monitor stays on top of the main window, is resizable, and the track table expands to fill the available width. It refreshes 10 times per second by default.
+The summary view helps identify whether a reel is light enough for live work or should be printed, archived, or simplified before a serious take.

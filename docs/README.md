@@ -1,14 +1,7 @@
 # TayPE Documentation
 
-Choose your language.
+TayPE's public manual is maintained in English.
 
-- [English (UK)](en-gb/README.md)
-- [日本語](ja-jp/README.md)
-- [Français](fr-fr/README.md)
-- [Deutsch](de-de/README.md)
-- [Español](es-es/README.md)
-- [Íslenska](is-is/README.md)
+Your browser can translate these pages when you need a different reading language. The TayPE app itself remains localised for day-to-day operation, and the short website/landing pages may still be translated as a courtesy.
 
-TayPE is a craft-first DAW built around commitment, clarity, and getting the
-record made. These docs cover the interface, the workflow, and the features
-you need to know.
+Start here: [Welcome to TayPE](en-gb/README.md).

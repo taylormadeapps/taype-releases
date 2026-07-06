@@ -1,237 +1,108 @@
-# View State & Session
-
-Tools for view state, undo/redo, theme, personality, and session status.
-
----
+# View & Session
 
 ## View State
 
 ### `get_view_state`
 
-Get the current visibility and display state. Focus, Archive View, Spill,
-and tag-filter state are transient session view modes, while ruler mode
-and other explicit app preferences persist separately.
+Return current view, selected track, focus, archive view, spill, E-Zoom, ruler mode, mixer width, and related UI state.
 
-**Returns:**
-```json
-{
-  "focus": false,
-  "focus_tag": "",
-  "focus_tags": [],
-  "tag_filter_mode": "or",
-  "archive_view": false,
-  "spill": false,
-  "can_spill": false,
-  "e_zoom": false,
-  "ruler_mode": "time",
-  "selected_track": ""
-}
-```
+### `set_view_state`
+
+Change view-related state in one call.
+
+### `set_automation_view`
+
+Enable or disable Automation View and optionally choose the displayed parameter.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `enabled` | Whether Automation View is shown |
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `display` | `volume`, `pan`, or `width` |
 
 ### `set_focus`
 
-Toggle Focus mode (shows only relevant tracks).
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | Focus on/off |
-| `tag` | string | no | Optional focus tag (Focus-by-Tag) |
-| `tags` | string[] | no | Optional multiple focus tags |
-| `filter_mode` | string | no | `"or"` (default) or `"and"` for multi-tag focus |
+Focus the working view on a track or context.
 
 ### `set_archive_view`
 
-Toggle Archive View (show archived tracks).
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | Archive view on/off |
+Show or hide archived tracks.
 
 ### `set_spill`
 
-Toggle Spill (show tracks routed to the selected bus or master).
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | Spill on/off |
-
-Requires a bus or master track to be selected.
-
-Focus, Archive View, Spill, and tag-filter state are not reel data and reset
-on relaunch. Ruler mode, automation view, and meter scale still persist as
-app-global preferences.
+Show a narrowed working set.
 
 ### `set_e_zoom`
 
-Toggle E-Zoom (zoom to selected clip).
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | E-Zoom on/off |
+Enable or disable E-Zoom.
 
 ### `set_ruler_mode`
 
-Set the ruler display to time or beats.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `mode` | string | yes | "time" or "beats" |
+Switch ruler display.
 
 ### `select_track`
 
-Select a track (or deselect all).
+Select a track by ID.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | no | Track ID (omit to deselect) |
+### `select_clip`
 
----
+Select a clip by ID. The owning track becomes selected too.
+
+### `tab_to_transient`
+
+Move the transport to the next or previous transient. TayPE uses the selected clip where possible, otherwise it scans clips on the selected track.
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `direction` | `next` or `previous` |
+
+## Automation Data
+
+### `get_automation_points`
+
+Get automation points for one track parameter in the selected cut.
+
+### `set_automation_points`
+
+Replace automation points for one track parameter in the selected cut. Points must be sorted by time.
+
+### `clear_automation`
+
+Remove all automation points for one track parameter in the selected cut.
+
+Automation data tools use:
+
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+| `parameter` | `volume`, `pan`, or `width` |
 
 ## Undo / Redo
 
-### `undo`
+### `undo` / `redo` / `get_undo_state`
 
-Undo the last change.
-
-Undo is unavailable while an offline clip render is pending. Wait for the clip
-spinner to clear, then call `undo` again.
-
-**Returns:**
-```json
-{
-  "undone": "Add track",
-  "canUndo": true,
-  "canRedo": true,
-  "undoLabel": "Set transport",
-  "redoLabel": "Add track"
-}
-```
-
-### `redo`
-
-Redo the last undone change. Same return shape as `undo`.
-
-### `get_undo_state`
-
-Check undo/redo availability without performing any action.
-
-`canUndo` and `canRedo` return `false` while an offline clip render is pending,
-even if undo history exists.
-
-**Returns:**
-```json
-{
-  "canUndo": true,
-  "canRedo": false,
-  "undoLabel": "Add track",
-  "redoLabel": ""
-}
-```
-
----
+Move through undo history and inspect whether undo/redo is available.
 
 ## Theme
 
-### `set_theme`
+### `set_theme` / `get_theme`
 
-Switch between normal and high-contrast themes. Takes effect immediately
-and persists across sessions.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `theme` | string | yes | "normal" or "high_contrast" |
-
-### `get_theme`
-
-Get the current theme.
-
-**Returns:** `{ "theme": "normal" }`
-
----
-
-## Personality
-
-### `list_personalities`
-
-List all available studio tech personalities.
-
-**Returns:**
-```json
-{
-  "personalities": [
-    { "name": "Glue & Weight", "prompt": "..." },
-    ...
-  ]
-}
-```
-
-### `set_personality`
-
-Set the active personality by name. See [Personalities](personalities.md).
-This is an app-global preference, not reel data, and it does not create a
-project undo step.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `name` | string | yes | Personality name |
-
-### `get_personality`
-
-Get the currently active personality.
-Use this or `status` for personality state; `get_project` does not include it.
-
-**Returns:** `{ "name": "Glue & Weight", "prompt": "..." }`
-
----
+Change or inspect theme and contrast state.
 
 ## Session
 
 ### `status`
 
-Comprehensive session snapshot - reel info, transport, selected Cut, Cut list,
-all tracks with five meter taps, call sign, undo/redo state, personality,
-theme, view state, and metronome. Use this to load context at the start of a
-conversation.
-
-Note: app state can change at any time due to UI interaction. Always
-re-check via `status` before assuming previous values are still valid.
-
-**Returns:**
-```json
-{
-  "reel": { "name": "Default", "directory": "...", "sample_rate": 44100, "device_sr_matched": true },
-  "transport": { "playing": false, "recording": false, "record_mode": "return", "loop_record_mode": "auto_punch", "position": 0.0, "duration": 0.0, "tempo": 120.0, "numerator": 4, "denominator": 4 },
-  "selected_cut_name": "Main Cut",
-  "cuts": ["Main Cut", "Verse", "Chorus"],
-  "tracks": [ {
-    "id": "track_1",
-    "name": "Audio 1",
-    "tags": ["Vocals"],
-    "volume": 1.0,
-    "pan": 0.0,
-    "mute": false,
-    "solo": false,
-    "meters": {
-      "pre_preamp":  { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
-      "post_preamp": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
-      "pre_inserts": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
-      "post_inserts": { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false },
-      "post_fader":  { "peak_l": 0.0, "peak_r": 0.0, "rms_l": 0.0, "rms_r": 0.0, "clipping": false }
-    }
-  } ],
-  "call_sign": "tape",
-  "undo": { "can_undo": false, "can_redo": false, "undo_label": "", "redo_label": "" },
-  "personality": { "name": "Glue & Weight", "system_prompt": "..." },
-  "theme": "normal",
-  "view": { "focus": false, "focus_tag": "", "focus_tags": [], "tag_filter_mode": "or", "archive_view": false, "spill": false, "can_spill": false, "e_zoom": false, "ruler_mode": "time", "meter_scale": "dbfs", "selected_track": "" },
-  "metronome": { "enabled": false, "pre_roll_bars": 0, "pre_roll_forced": false }
-}
-```
+Return a high-level app and session status.
 
 ### `callsign_get` / `callsign_set`
 
-Get or set the app's call sign (a short identifier, default: "tape").
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `call_sign` | string | yes (set only) | New call sign |
+Read or set the studio callsign used by assistant workflows.

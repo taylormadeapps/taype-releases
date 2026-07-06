@@ -1,130 +1,106 @@
 # Transport
 
-Tools for controlling playback, tempo, and the metronome.
-
-Tempo and time signature live on the **currently selected Cut**. Use the
-Cut tools to switch pages before calling `set_transport` if you want to edit
-a different Cut's tempo map.
-
----
+Transport tools control playback, printing, seeking, tempo, metronome, and cut zero.
 
 ### `play`
 
-Start audio playback.
-
-**Returns:** `{ "playing": true }`
+Start playback.
 
 ### `stop`
 
-Stop playback. While transport is running, TayPE returns the head to the
-current play-pass origin. If playback has already auto-ended, that return has
-already happened, so a stopped-state `stop` call returns the head to the
-selected Cut's zero point. If a recording pass is active, **Return** mode
-commits the pass and lands back at the pass start, while **Punch** and
-**Do-Over** commit the pass and park at the committed take end.
-
-**Returns:** `{ "playing": false, "position": 0.0 }`
+Stop transport. While recording, stop follows the active record mode and safety rules.
 
 ### `get_state`
 
-Get current transport state.
-
-**Returns:**
-```json
-{
-  "playing": false,
-  "position": 12.5,
-  "duration": 180.0,
-  "printing": false,
-  "zero_time_seconds": 8.0,
-  "loop_enabled": false,
-  "loop_start_seconds": 0.0,
-  "loop_end_seconds": 0.0,
-  "recording": false,
-  "record_mode": "return",
-  "loop_record_mode": "auto_punch"
-}
-```
+Return transport, reel, selection, tempo, marker, and current-track state.
 
 ### `print_mix`
 
-Start or stop realtime Print Mix capture on the current reel.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | bool | yes | `true` starts Print Mix, `false` stops and commits it |
-
-Starting requires a loaded reel, a stopped transport, audible clips on the
-timeline, and a device sample rate that matches the reel.
-
-**Returns:**
-```json
-{
-  "enabled": true,
-  "printing": true,
-  "file": "[TAPE_HOME]/Prints/My Reel/My Reel-01.wav"
-}
-```
+Render the current mix to an audio file.
 
 ### `seek`
 
-Set the playback position.
+Move the playhead.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `position` | number | yes | Position in seconds |
+### `set_cut_zero` / `reset_cut_zero`
 
-**Returns:** `{ "position": 12.5 }`
-
-### `set_cut_zero`
-
-Set the selected Cut's zero point at the playhead.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `position` | number | no | Zero point in seconds; defaults to current playhead |
-
-**Returns:** `{ "selected": "Verse", "zero_time_seconds": 8.0 }`
-
-### `reset_cut_zero`
-
-Reset the selected Cut's zero point back to timeline start.
-
-**Returns:** `{ "selected": "Verse", "zero_time_seconds": 0.0 }`
+Set or clear the selected cut's zero point.
 
 ### `set_transport`
 
-Set tempo, time signature, and/or playback loop range. Only provided fields
-are changed.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `tempo` | number | no | BPM |
-| `numerator` | number | no | Time signature numerator |
-| `denominator` | number | no | Time signature denominator |
-| `loop_enabled` | bool | no | Enable or disable loop playback |
-| `loop_start_seconds` | number | no | Absolute loop start in seconds |
-| `loop_end_seconds` | number | no | Absolute loop end in seconds |
-
-Loop range updates require both loop endpoints and at least `0.5` seconds of
-width.
-
-**Returns:** Current transport state after changes, including the loop fields.
+Set tempo, loop, count-in, ruler, or related transport settings.
 
 ### `set_metronome`
 
-Enable or disable the metronome click and/or set record pre-roll bars.
+Enable, disable, or configure metronome behaviour.
 
-When playback starts, the click stays locked to the transport grid even though
-TayPE still applies a short fixed anti-pop fade to the program mix underneath.
-The metronome enabled state and `pre_roll_bars` persist as app-global
-preferences across relaunches.
+## Varispeed
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | bool | no | true to enable, false to disable |
-| `pre_roll_bars` | integer | no | record pre-roll bars: `0`, `1`, `2`, or `4` |
+### `set_varispeed`
 
-Pass at least one of `enabled` or `pre_roll_bars`.
+Set the transport-level varispeed multiplier. Valid range is `0.5` to `2.0`. Pitch is preserved. Recording is allowed under varispeed, but changing varispeed is blocked while a take is running.
 
-**Returns:** `{ "enabled": true, "pre_roll_bars": 2, "pre_roll_forced": false }`
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `multiplier` | Playback speed multiplier |
+
+Example:
+
+```json
+{ "multiplier": 0.75 }
+```
+
+### `get_varispeed`
+
+Return the current multiplier and effective tempo.
+
+## Performance and Diagnostics
+
+### `get_performance`
+
+Return audio-engine performance metrics such as DSP load, render timing, overrun state, latency, active track/plugin counts, and optional per-track rows.
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `include_track_rows` | Include raw per-track performance rows |
+
+### `set_detailed_performance_telemetry`
+
+Enable or disable detailed performance telemetry for a measured diagnostic window.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `enabled` | Whether detailed telemetry collection is enabled |
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `reset` | Clear existing detailed telemetry while changing state |
+
+### `get_thread_scheduling`
+
+Capture thread scheduling snapshots for the TayPE process and, optionally, the connected sandbox.
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `include_sandbox` | Include the connected sandbox process where available |
+| `sample_ms` | Sample briefly and return rolled-up thread CPU/lifetime data |
+
+### `set_dev_taype_rooms_host_mode`
+
+Developer diagnostic switch for Taype Rooms hosting. This is for support and diagnostics, not ordinary session control.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `mode` | `environment`, `sandbox`, or `in_app` |

@@ -1,9 +1,7 @@
 # Trim
 
-Clean gain control before any processing. Use this to set your input level right before the signal hits the preamp, filters, or EQ.
+Trim is the first level control after input routing. Use it to set a sensible level before the preamp, filters, EQ, compressor, and inserts.
 
-| Parameter | Range |
-|-----------|-------|
-| Trim | -36 dB to +12 dB |
+Trim is for gain staging, not final balance. Use the fader for mix rides and Trim when the track is entering the strip too hot or too quiet.
 
-The trim knob shows a small 0 dB reference tick so you can quickly spot unity. Trim is always active - it cannot be bypassed.
+Double-click the knob to return to 0 dB.

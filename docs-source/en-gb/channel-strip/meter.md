@@ -1,10 +1,15 @@
 # Meter
 
-Stereo peak meter with a clip indicator at the top. If the clip indicator lights up, your signal is hitting 0 dBFS - back off the fader or trim.
+Meters show signal level through the strip and mixer.
 
-The meter refreshes at 4 updates per second. Each update shows the highest peak seen in the previous quarter-second, so very short transients still show up instead of being missed between redraws.
+## K-System Scale
 
-In the K-system scales, the printed ladder keeps the red `FS` ceiling marker,
-labels the highlighted K reference as `0`, adds `+3 dB` marks above that
-reference up toward `0 dBFS`, then steps down in `-3 dB` marks to `-21 dB`
-and `6 dB` marks below.
+The printed ladder keeps the true ceiling visible, marks the 0 VU reference, and gives useful dB steps above and below it.
+
+## Peak Hold
+
+Held peaks help catch clips and fast transients. The held value appears beside the meter without shortening the main meter throw.
+
+## Input and Output Hints
+
+Preamp, compressor, inserts, sends, and the EQ Visualiser use compact input/output meters where comparing level helps you make a better decision.

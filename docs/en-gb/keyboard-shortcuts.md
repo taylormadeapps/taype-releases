@@ -1,352 +1,145 @@
 # Keyboard Shortcuts
 
-TayPE's keyboard shortcuts are profile-based. Choose a profile in
-**Preferences > Keybindings**; custom profiles are JSON files and can be opened
-from that tab with **Edit JSON** in the system editor.
+TayPE ships editable shortcut profiles. Built-in profiles are read-only; custom profiles can override them from Preferences.
 
-## Keybinding Profiles
-
-```
-[TAPE_HOME]/keybindings/
-```
-
-TayPE refreshes built-in profiles from the app bundle when it starts:
-`Default.json` (the TayPE layout) and `Industry Standard Bruh.json` (Pro
-Tools-style edit muscle memory for matching TayPE actions). Built-in profiles
-are read-only and bundle-owned, so direct edits to those files are overwritten.
-Duplicate one to edit it; **Reload** applies changes after the external editor
-saves.
-
-`Industry Standard Bruh` keeps loop braces on `[` / `]` and maps setting the
-loop from selection to `Cmd+Shift+L`, so the plain arrow keys remain TayPE
-navigation.
-It uses Pro Tools-style keypad chords where TayPE has clean equivalents,
-including `Numpad 7` for metronome, `Ctrl+Option+Numpad +/-` for grid size,
-`Option+-` for automation view, and `Option+K` for auto monitor. Industry Standard Bruh maps external clip bounce to Cmd+Shift+K, matching Pro Tools' Export Clips as Files shortcut.
-
-Older `[TAPE_HOME]/keybindings.json` files are imported once into the
-profile folder and archived as `legacy-keybindings*.bak`.
+Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled separately from the editable TayPE shortcut profile.
 
 ## Default Shortcuts
 
 ### Transport
 
-| Shortcut | Action |
-|----------|--------|
-| Space | Play / stop |
-| P | Play / pause (blocked while recording) |
-| Z | Stop (returns to start; while recording, Return goes back to the pass start and Punch / Do-Over park at the take end) |
-| Return | Record-mode action |
-| Cmd+P | Print Mix |
-| Cmd+Option+P | Print Loop |
-| C | Toggle metronome click |
-| ' | Tap tempo. TayPE sets BPM as soon as 4 taps are available, then keeps averaging the last 4 taps until 1.5 seconds without another tap ends the measurement |
-| [ | Set the left loop brace to the tape head |
-| ] | Set the right loop brace to the tape head |
-| L | Set both loop braces to the selected clips and enable loop playback |
-| Cmd+L | Toggle loop playback on or off |
-| / | Add marker at the tape head |
-| , | Go to previous marker or loop brace |
-| . | Go to next marker or loop brace |
-| Cmd+/ | Set 0 at Playhead for the selected Cut |
-| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
-| S | Toggle timeline snap |
-| Option+S | Switch snap between absolute and relative mode |
-
-### Markers
-
-| Shortcut | Action |
-|----------|--------|
-| 1 through 9 | Go to markers 1 through 9 |
-| 0 | Go to marker 10 |
-| Cmd+1 through Cmd+9 | Go to markers 11 through 19 |
-| Cmd+0 | Go to marker 20 |
-| Cmd+Shift+1 through Cmd+9 | Go to markers 21 through 29 |
-| Cmd+Shift+0 | Go to marker 30 |
-
-## Record Modes
-
-Right-click the transport record button or use **Transport > Record Stop Mode** to
-choose what **Return** does when it stops an ordinary take:
-that right-click menu still works even when the record button itself is
-currently disabled for take admission.
-
-- **Return** - commit the pass, stop transport, and go back to the pass start.
-- **Punch** - commit the pass and keep playback rolling.
-- **Do-Over** - commit only the current pass, delete those just-recorded clips, and restart from the same pass start using the current pre-roll / count-in settings.
-
-Choose **Sooper-Looper** from the loop button context menu or
-**Transport > Loop Record Mode**. With loop braces active, **Return** then
-records each armed track for one loop pass in visible order, with one playback
-lap between passes.
-
-**Z** stays the escape hatch. In Return mode it lands back at the pass start; in Punch and Do-Over it commits the pass and parks at the committed take end. In Sooper-Looper it keeps any current partial pass and stops the macro.
-
-The **Transport** menu now exposes the same bound transport actions directly:
-**Play / Stop**, **Pause**, **Stop**, **Record**, both loop-brace setters,
-**Loop Selected**, **Set 0 at Playhead**, **Tab to Transient**,
-**Tap Tempo**, **Metronome**, **Snap**, **Snap Mode**, and a
-**Markers** submenu that also contains direct **Go to Marker** jumps split
-into fixed **1-10**, **11-20**, and **21-30** folders. The **Edit** menu
-carries **Select All** / **Deselect All** alongside the split variants inside
-the **Split** submenu, while the **Tracks** menu carries track creation,
-selected-track clip selection, reordering, duplication, and deletion. On macOS those menu ticks stay in sync
-with toolbar clicks, keyboard shortcuts, and other live state changes instead
-of only reflecting the last path that touched the setting.
+| Action | Shortcut |
+|---|---|
+| Play / stop | Space |
+| Play / pause | P |
+| Stop / escape pass | Z |
+| Record | Return |
+| Return to zero | Home |
+| Print mix | Cmd+P |
+| Print loop | Cmd+Option+P |
+| Toggle metronome | C |
+| Tap tempo | ' |
+| Set cut zero at playhead | Cmd+/ |
 
 ### Editing
 
-| Shortcut | Action |
-|----------|--------|
-| \ | Split selected clips that cross the tape head |
-| Cmd+\ | Split selected clips at both current loop braces |
-| Option+\ | Split all clips at the tape head |
-| Cmd+Option+\ | Split all clips at both current loop braces |
-| D | Duplicate selected clips back-to-back as a group |
-| F | Add or remove start/end fades on selected clips at the **Default Fade Length** set in **Preferences > General**. Crossfade-bound boundaries are left alone; otherwise the missing fade(s) are added, or both are removed when both are present |
-| B | Bounce selected clips to one new stem track |
-| Option+B | Bounce selected clips to an external WAV; defaults to `[TAYPE_HOME]/bounces` and lets you choose the file |
-| Cmd+D | Duplicate selected track without clips |
-| Cmd+B | Bounce selected tracks to one new stem track and archive the sources |
-| Option+D | Duplicate selected track with clips |
-| Cmd+Shift+A | Select every clip on the currently selected tracks |
-| Cmd+Backspace | Archive or unarchive the selected non-master track |
-| Cmd+Delete | Delete selected non-master tracks |
-| Cmd+X | Cut selected clips |
-| Cmd+C | Copy selected clips |
-| Cmd+V | Paste copied clip group at tape head position |
-| Cmd+A | Select all visible mixer strips when mixer view has focus; otherwise select all clips, or all clips overlapping the loop when loop is active. In the MIDI editor, select all notes in the open clip |
-| Tab | Jump to the next transient on the selected clip, or the selected track when no clip is selected |
-| Backspace | Delete selected clips |
-| Delete | Disable selected clips |
-| Cmd+Option+Backspace | Delete selected non-master tracks |
-| Cmd+Z | Undo |
-| Cmd+Shift+Z | Redo |
-| Escape | Deselect clip and track |
+| Action | Shortcut |
+|---|---|
+| Split selected clips at playhead | `\` |
+| Split selected clips at loop braces | `Cmd+\` |
+| Split all clips at playhead | `Option+\` |
+| Split all clips at loop braces | `Cmd+Option+\` |
+| Toggle fade | F |
+| Duplicate selected clips | D |
+| Select clips on selected tracks | Cmd+Shift+A |
+| Join clips | J |
+| Bounce selected clips to stem | B |
+| Bounce selected clips to external WAV | Option+B |
+| Disable selected clips | Backspace |
+| Delete selected clips | Delete |
+| Cut / copy / paste clips | Cmd+X / Cmd+C / Cmd+V |
 
-### Reel
+### Tracks
 
-| Shortcut | Action |
-|----------|--------|
-| Cmd+S | Create checkpoint |
-| Cmd+R | Open Reel Browser |
+| Action | Shortcut |
+|---|---|
+| Add audio track | T |
+| Bulk add tracks | Cmd+T |
+| Duplicate selected track without clips | Cmd+D |
+| Duplicate selected track with clips | Option+D |
+| Bounce selected tracks to stem | Cmd+B |
+| Archive selected track | Cmd+Backspace |
+| Delete selected track | Cmd+Delete |
+| Move selected track up / down | Cmd+Option+Up / Cmd+Option+Down |
+| Toggle grouped track controls | Cmd+G |
 
-TayPE persists working state automatically while transport is stopped, so
-there is no separate user-facing Save command.
+### Loop, Markers, and Navigation
+
+| Action | Shortcut |
+|---|---|
+| Set left loop brace | [ |
+| Set right loop brace | ] |
+| Toggle loop | Cmd+L |
+| Set loop from selection | L |
+| Add marker at playhead | / |
+| Previous marker or loop brace | , |
+| Next marker or loop brace | . |
+| Go to markers 1-10 | 1-9, 0 |
+| Go to markers 11-20 | Cmd+1-9, Cmd+0 |
+| Go to markers 21-30 | Cmd+Shift+1-9, Cmd+Shift+0 |
+| Next transient | Tab |
+| Previous transient | Option+Tab |
 
 ### View
 
-| Shortcut | Action |
-|----------|--------|
-| M | Toggle between timeline and mixer |
-| W | Toggle the focused width context: arranger strip in arranger view, mixer rack in mixer view or detached mixer window |
-| Cmd+M | Toggle Tape Mode on the visible mixer; opens the inline mixer if hidden |
-| Option+M | Toggle LaForgé on the visible mixer; opens the inline mixer if hidden |
-| Cmd+Shift+M | Pop the mixer in or out of a separate window |
-| I | Toggle channel strip panel |
-| Left / Right | In timeline view, move the tape head to the previous or next visible tick. Held/repeated presses keep stepping from the last tick anchor while playback is rolling, so rewind can move backwards against the transport. In the full mixer, inline or detached, scroll the rack left or right. In Tape Mode, inline or detached, also scroll the visible mixer rack left or right |
-| Up / Down | In timeline view, scroll the track stack. In the full mixer, inline or detached, scroll the shared strip sections up or down. In Tape Mode, inline or detached, move the tape head to the previous or next visible tick |
-| V | Focus view - show only tracks with clips at the tape head, or inside the active loop range |
-| A | Toggle automation view |
-| Shift+A | Cycle automation display: Volume -> Pan -> Width and enter automation view if needed |
-| X | Toggle archive view |
-| G | Spill - show selected bus and its routed tracks |
-| E | E-Zoom - zoom to selected clip (press again to restore) |
-| T | Add a new audio track |
-| R | Toggle ruler between time and beats |
-| Shift+R | Toggle between Auto grid and the last fixed note grid |
-| Shift+, | Choose the next coarser fixed timeline snap grid |
-| Shift+. | Choose the next finer fixed timeline snap grid |
-| Cmd+K | Toggle high contrast theme |
-| Cmd+Option+- | Decrease the app-global UI scale to the next smaller preset |
-| Cmd+Option+= | Increase the app-global UI scale to the next larger preset |
-| K | Open the virtual keyboard popup |
-| Backtick (\`) | Open the Performance Monitor window |
+| Action | Shortcut |
+|---|---|
+| Toggle focus view | V |
+| Toggle automation view | A |
+| Cycle automation display | Shift+A |
+| Toggle archive view | X |
+| Toggle spill view | G |
+| Toggle E-Zoom | E |
+| Toggle snap | S |
+| Toggle snap mode | Option+S |
+| Snap grid finer / coarser | Shift+. / Shift+, |
+| Toggle Auto grid | Shift+R |
+| Toggle ruler time/beats | R |
+| Toggle mixer | M |
+| Toggle mixer width / focused width | W |
+| Toggle Tape Mode | Cmd+M |
+| Toggle LaForgé mastering meter | Option+M |
+| Toggle channel strip | I |
+| Open virtual keyboard | K |
+| Detach mixer | Cmd+Shift+M |
+| Toggle high contrast | Cmd+K |
+| Increase UI scale | Cmd+Option+= |
+| Decrease UI scale | Cmd+Option+- |
 
-The **View** menu also exposes the same focus, automation, deselect, mixer,
-channel-strip, ruler, and zoom actions, with mixer, detached-window, width,
-Tape Mode, LaForgé, and Tape Length controls grouped under **View > Mixer**. It also
-groups automation and zoom controls into **Automation Display**,
-**Horizontal Zoom**, **Vertical Zoom**, and **UI Scale** submenus. **UI Scale**
-offers 75%, 80%, 90%, 100%, 110%, 125%, and 150%, and is remembered globally
-for the app. Use `Cmd+Option+-` and `Cmd+Option+=` to step through those scale
-presets without opening the menu.
-The automation submenu carries both **Cycle Automation Display** and the
-direct **Show Volume / Show Pan / Show Width** picks.
+### Zoom and Scroll
 
-### Zoom
+| Action | Shortcut |
+|---|---|
+| Horizontal zoom in / out | = / - |
+| Reset horizontal zoom | Option+- |
+| Maximum horizontal zoom | Option+= |
+| Vertical zoom in / out | Shift+= / Shift+- |
+| Reset vertical zoom | Option+Shift+- |
+| Maximum vertical zoom | Option+Shift+= |
+| Mouse wheel | Vertical scroll or focused lane scroll |
+| Cmd+wheel | Horizontal zoom |
+| Option+wheel | Vertical zoom anchored to selected track |
+| Right-drag horizontally | Timeline pan |
+| Right-drag vertically | Timeline zoom |
 
-| Shortcut | Action |
-|----------|--------|
-| Cmd + mouse wheel | Horizontal zoom (centred on tape head) |
-| Option + mouse wheel | Vertical zoom (anchored to selected track) |
-| = | Zoom the timeline in around the tape head |
-| - | Zoom the timeline out around the tape head |
-| Option+- | Reset the timeline to the default 8-bar frame level |
-| Option+= | Jump the timeline to maximum horizontal zoom |
-| Shift+= | Zoom in tracks |
-| Shift+- | Zoom out tracks |
-| Option+Shift+- | Reset track height to default |
-| Option+Shift+= | Jump track height to maximum |
-| Cmd+Option+- | Decrease app UI scale |
-| Cmd+Option+= | Increase app UI scale |
+### Utility Windows and Session Tools
 
-On macOS, those same zoom bindings show beside their **View** menu entries in
-the native menu bar.
-
-### Mouse
-
-| Input | Context | Action |
-|-------|---------|--------|
-| Option+click | Timeline | Seek tape head (even over clips) |
-| Right-click drag left/right | Timeline | Scroll through time |
-| Right-click drag up/down | Timeline | Horizontal zoom |
-| Option+drag | Clip | Copy clip to new position |
-| Drag clip edge | Clip | Trim clip (non-destructive) |
+| Action | Shortcut |
+|---|---|
+| Show Performance Monitor | Backtick |
+| Kill live MIDI / all notes off | Section sign key |
+| Toggle video reference window | Q |
+| Toggle video reference audio | Shift+Q |
+| Toggle video burn-in | Option+Q |
+| Toggle Record Follows Select | ; |
+| Toggle Auto Monitor | Shift+; |
+| Select all in current context | Cmd+A |
+| Open Preferences | Cmd+, |
 
 ## Customising Shortcuts
 
-In **Preferences > Keybindings**, duplicate a built-in profile or select a custom
-one, then click **Edit JSON**. Save in your editor and click **Reload**. The
-format is straightforward:
+Open the shortcut/profile controls from Preferences. Built-in profiles refresh from the app bundle after updates. Custom profiles remain yours.
 
-```json
-{
-  "play_pause": "space",
-  "pause": "p",
-  "stop": "z",
-  "record": "return",
-  "toggle_metronome": "c",
-  "tap_tempo": "'",
-  "add_marker_here": "/",
-  "previous_marker": ",",
-  "next_marker": ".",
-  "set_left_loop_brace": "[",
-  "set_right_loop_brace": "]",
-  "toggle_loop": "cmd+l",
-  "set_loop_from_selection": "l",
-  "set_zero_here": "cmd+/",
-  "go_to_marker_1": "1",
-  "split_clip": "\\",
-  "split_clip_at_loop_braces": "cmd+\\",
-  "split_all_clips_at_playhead": "alt+\\",
-  "split_all_clips_at_loop_braces": "cmd+alt+\\",
-  "duplicate_clip": "d",
-  "toggle_fade": "f",
-  "bounce_clips_to_stem": "b",
-  "bounce_external": "alt+b",
-  "bounce_tracks_to_stem": "cmd+b",
-  "duplicate_track_without_content": "cmd+d",
-  "duplicate_track": "alt+d",
-  "select_clips_on_selected_tracks": "cmd+shift+a",
-  "archive_track": "cmd+backspace",
-  "delete_track": "cmd+delete",
-  "zoom_in_horizontal": "=",
-  "zoom_out_horizontal": "-",
-  "zoom_reset_horizontal": "alt+-",
-  "zoom_max_horizontal": "alt+=",
-  "cycle_automation_display": "shift+a",
-  "zoom_in_vertical": "shift+=",
-  "zoom_out_vertical": "shift+-",
-  "zoom_reset_vertical": "alt+shift+-",
-  "zoom_max_vertical": "alt+shift+=",
-  "ui_scale_down": "cmd+alt+-",
-  "ui_scale_up": "cmd+alt+=",
-  "toggle_mixer_width": "w",
-  "toggle_tape_mode": "cmd+m",
-  "toggle_mastering_meter": "alt+m",
-  "detach_mixer": "cmd+shift+m",
-  "toggle_focus": "v",
-  "toggle_automation_view": "a",
-  "toggle_archive_view": "x",
-  "toggle_snap": "s",
-  "toggle_snap_mode": "alt+s",
-  "toggle_snap_grid_auto": "shift+r",
-  "snap_grid_coarser": "shift+,",
-  "snap_grid_finer": "shift+.",
-  "show_performance_monitor": "`"
-}
-```
+TayPE validates shortcut files and falls back to defaults if a profile is broken. Older shortcut layouts are migrated when TayPE can recognise them.
 
-Each entry maps an action name to a key combination.
+## Record Modes
 
-**Set 0 at Playhead** defaults to `Cmd+/`. Override it with a
-`set_zero_here` entry if you want a different key. For example,
-`"set_zero_here": "0"` would move it to the `0` key. Marker actions use
-`add_marker_here`, `previous_marker`, `next_marker`, and `go_to_marker_N`
-for direct jumps.
-
-### Key Combination Format
-
-Combine modifiers with `+`:
-
-- **cmd** - Command key
-- **ctrl** - Control key
-- **shift** - Shift key
-- **alt** or **option** - Alt / Option key
-
-Examples: `"cmd+s"`, `"ctrl+shift+z"`, `"alt+3"`
-
-### Available Key Names
-
-- Letters: `a` through `z`
-- Numbers: `0` through `9`
-- Special: `space`, `return`, `tab`, `escape`, `delete`, `backspace`
-- Arrows: `up`, `down`, `left`, `right`
-- Navigation: `home`, `end`, `pageup`, `pagedown`
-- Function keys: `f1` through `f12`
-- Numeric keypad: `numpad0` through `numpad9`, `numpadplus`, `numpadminus`,
-  `numpadmultiply`, `numpaddivide`, `numpaddecimal`
-- Single characters such as `a`, `7`, `\\`, or `§`
-
-### Platform Shortcuts
-
-These standard shortcuts are always active and cannot be reassigned:
-
-| Shortcut | Action |
-|----------|--------|
-| Cmd+Z | Undo |
-| Cmd+Shift+Z | Redo |
-| Cmd+X | Cut |
-| Cmd+C | Copy |
-| Cmd+V | Paste |
-| Backspace | Delete selected clip |
-| Delete | Disable selected clips |
-| Cmd+Option+Backspace | Delete selected non-master tracks |
-| Cmd+, | Open Preferences |
+The Record shortcut follows your selected record mode. **Return** commits and returns, **Punch** commits and parks at the end, and **Do-Over** restarts after discarding the just-recorded pass. **Z** always stops safely.
 
 ## Virtual Keyboard Mode
 
-When the virtual keyboard popup is open (`K`), TayPE routes all key presses
-to the popup and pauses the main timeline/transport shortcuts. Press `Escape`
-to close the popup and return to normal shortcut control.
+When the virtual keyboard popup is open, it consumes keyboard input so note keys do not accidentally trigger timeline shortcuts. Close it to return shortcuts to the main UI.
 
-The popup is anchored above the transport lane so it stays clear of the
-transport controls instead of sitting on top of them.
+## Floating Windows
 
-## Floating Window Shortcut Pass-Through
-
-TayPE's own floating utility windows still hand unhandled key presses back to
-the main app shortcut path. That means `Space`, transport keys, and the rest
-still work while the EQ visualiser, compressor visualiser, MIDI clip editor,
-Hardware Insert, Performance Monitor, MIDI Monitor, video reference, or
-floating Melodyne window has focus. Press `Escape` to close those floating
-windows before Escape falls through to the main app's deselect command. The
-detached mixer window is the exception and keeps its mixer-focus shortcut
-behaviour.
-
-Those windows stay above TayPE while TayPE is frontmost, and yield when you
-switch to another application.
-
-Hosted plugin editors keep their own key handling for other keys, but `Escape`
-closes the hosted editor wrapper.
-
-## MIDI Clip Editor
-
-- `Up` / `Down` move the selected notes by one octave.
-- `Cmd` / `Ctrl` + `Up` / `Down` move the selected notes by one semitone.
-- `Left` / `Right` move the selected notes by one current quantise interval.
-- `Delete` / `Backspace` deletes the current note selection.
-
-On macOS, TayPE also shows these shortcuts beside the matching menu items in
-the native menu bar when the menus are open.
+Floating windows such as the EQ Visualiser, Performance Monitor, Hardware Insert recall, video reference, MIDI Monitor, Melodyne, MIDI editor, and plugin editors keep enough shortcut pass-through for transport and common session actions while protecting text fields and plugin focus.

@@ -1,281 +1,120 @@
 # Plugins
 
-Tools for managing VST3 plugin inserts and the Mix FX bus.
-
----
+Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI Out, sidechains, presets, and plugin editor windows.
 
 ### `list_plugins`
 
-Return the scanned VST3 plugin catalogue plus TayPE's bundled
-**Stock** entries such as **Tape Rooms** and **Ache-Delay**.
-Melodyne is omitted because it opens through the clip-scoped ARA tools, not as
-an insert.
+Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. Melodyne is not listed as a normal insert because it opens from clips.
 
-**Returns:**
-```json
-{
-  "plugins": [
-    {
-      "name": "ValhallaRoom",
-      "vendor": "Valhalla DSP",
-      "category": "Reverb",
-      "format": "VST3",
-      "path": "/Library/Audio/Plug-Ins/VST3/ValhallaRoom.vst3",
-      "uid": 12345678
-    }
-  ],
-  "count": 1
-}
-```
+### `list_midi_outputs`
+
+List available Core MIDI output destinations for the MIDI Out insert.
 
 ### `add_insert`
 
-Load a plugin into one of a track's 8 insert slots. Requires transport
-stopped.
+Load a plugin into an insert slot.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `plugin_id` | string | yes | Plugin path or UID from `list_plugins`, a bundled extension name/path, `taype://insert/midi-out`, or `taype://insert/hardware-io` |
-| `slot` | number | no | Insert slot index 0-7 (default: 0; instruments and MIDI Out must use slot 0) |
-| `device_id` | string | no | Initial Core MIDI destination for TayPE's virtual MIDI Out insert |
-| `channel` | number | no | Virtual MIDI Out channel override: `0` keeps the source channel; `1-16` force a channel |
-| `advance_ms` | number | no | Virtual MIDI Out playback lead in milliseconds |
-| `output_route_id` | string | no | Hardware Insert send output route from I/O mapping aliases; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
-| `input_route_id` | string | no | Hardware Insert return input route from I/O mapping aliases; mono and stereo endpoints are valid |
-| `latency_offset_samples` | number | no | Hardware Insert non-negative extra compensation delay; negative values clamp to 0 |
-| `hardware_input_trim_db` | number | no | Hardware Insert send trim in dB, clamped to -24..+12 |
-| `hardware_output_trim_db` | number | no | Hardware Insert return trim in dB, clamped to -24..+12 |
-| `hardware_ag_measure_mode` | number | no | Hardware Insert auto-gain mode: `0` Peak, `1` RMS |
-| `hardware_color` | string | no | Optional Hardware Insert slot colour; empty uses the track colour |
+Important parameters:
 
-Melodyne cannot be loaded through `add_insert`; open it from a clip instead.
-
-**Returns:**
-```json
-{
-  "track_id": "...",
-  "slot": 0,
-  "plugin_name": "ValhallaRoom",
-  "bypass": false,
-  "enabled": true,
-  "latency_samples": 0
-}
-```
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+| `plugin_id` | Plugin ID, path, bundled stock name, hardware insert URI, or MIDI Out URI |
+| `slot` | Insert slot index, 0-7 |
+| `device_id` | MIDI Out destination |
+| `channel` | MIDI Out channel, or 0 to keep source channel |
+| `advance_ms` | MIDI Out early-send timing |
+| `output_route_id` / `input_route_id` | Hardware Insert send and return routes |
+| `latency_offset_samples` | Extra hardware compensation |
+| `hardware_input_trim_db` / `hardware_output_trim_db` | Hardware send and return trims |
+| `hardware_low_cut_hz` / `hardware_high_cut_hz` | Hardware Insert filters |
+| `hardware_filter_position` | Whether hardware filters sit before send or after return |
 
 ### `remove_insert`
 
-Unload the plugin from a track's insert slot. Requires transport stopped.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns:** `{ "track_id": "...", "slot": 0, "removed": true }`
+Unload an insert slot.
 
 ### `bypass_insert`
 
-Toggle bypass on a track's insert. Safe during playback. Audio-FX bypass keeps
-the plug-in in the sandbox chain and ramps that slot to latency-aligned dry
-audio, so PDC remains unchanged.
+Bypass an insert while keeping latency-aligned dry audio.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `bypass` | boolean | no | Bypass state (default: true) |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+### `set_insert_wet_dry_mix`
 
-**Returns:** `{ "track_id": "...", "slot": 0, "bypass": true }`
+Set the wet/dry blend for an insert. `0.0` is dry, `1.0` is wet. This can be changed while playing and TayPE ramps the change.
 
-### `disable_insert`
+Required parameters:
 
-Disable a plugin in one insert slot. The plugin stays loaded for state/editor
-recall, but it leaves the audio graph, receives no sandbox processing, burns no
-processing CPU, and contributes zero latency. Requires transport stopped.
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+| `wet_dry_mix` | Blend from `0.0` to `1.0` |
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+Optional parameters:
 
-**Returns:** `{ "track_id": "...", "slot": 0, "enabled": false }`
+| Param | Description |
+|---|---|
+| `slot` | Insert slot index, 0-7 |
 
-### `enable_insert`
+### `disable_insert` / `enable_insert`
 
-Re-enable a previously disabled plugin. The resident plugin rejoins the audio
-graph, sandbox dispatch, and PDC graph. Requires transport stopped.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns:** `{ "track_id": "...", "slot": 0, "enabled": true }`
+Disable removes an insert from processing while keeping its assignment and state. Enable restores it to the graph.
 
 ### `get_insert_info`
 
-Get the current state of a track's insert slot.
+Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
+### `list_insert_presets` / `load_insert_preset`
 
-**Returns (loaded):**
-```json
-{
-  "track_id": "...",
-  "slot": 0,
-  "loaded": true,
-  "plugin_name": "ValhallaRoom",
-  "plugin_id": "/Library/Audio/Plug-Ins/VST3/ValhallaRoom.vst3",
-  "uid": "12345678",
-  "bypass": false,
-  "enabled": true,
-  "latency_samples": 512,
-  "supports_mono_main": true,
-  "main_bus_channels": 1
-}
-```
+List and load presets for the insert.
 
-**Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false }`
+### `open_insert_editor` / `close_insert_editor`
 
-`supports_mono_main` tells you whether that plug-in offers a mono main-bus
-layout TayPE can use on mono strips. `main_bus_channels` is the live main-bus
-width for the loaded slot: `1` for true mono, `2` for stereo, or `0` for the
-virtual `External MIDI Out` insert.
-
-### `list_insert_presets`
-
-List saved TayPE plug-in presets that match the current insert slot.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns (loaded):**
-```json
-{
-  "track_id": "...",
-  "slot": 0,
-  "loaded": true,
-  "plugin_name": "Master Plan",
-  "count": 1,
-  "presets": [
-    {
-      "name": "Latency Clean",
-      "path": "[TAPE_HOME]/Presets/FX/Master Plan/Latency Clean"
-    }
-  ]
-}
-```
-
-**Returns (empty):** `{ "track_id": "...", "slot": 0, "loaded": false, "count": 0, "presets": [] }`
-
-### `load_insert_preset`
-
-Load a saved TayPE plug-in preset into the current insert slot. Requires
-transport stopped.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `preset_name` | string | yes | Saved preset name/path from `list_insert_presets` |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns:** `{ "track_id": "...", "slot": 0, "preset_name": "Latency Clean", "latency_samples": 4706 }`
-
-### `open_insert_editor`
-
-Open the plugin editor window.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns:** `{ "track_id": "...", "slot": 0, "editor_open": true }`
-
-### `close_insert_editor`
-
-Close the plugin editor window.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-
-**Returns:** `{ "track_id": "...", "slot": 0, "editor_open": false }`
+Open or close the plugin editor window.
 
 ### `restart_sandbox`
 
-Restart the plugin sandbox host process. Requires transport stopped.
-
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| _(none)_ | | | |
-
-**Returns (success):** `{ "success": true }`
-
-**Returns (failure):**
-```json
-{ "success": false, "error": "..." }
-```
-
----
-
-## Mix FX (Tape Summing)
-
-### `get_mix_fx`
-
-Get the current Mix FX state (Softube Multitrack Tape on the master bus).
-
-**Returns:**
-```json
-{
-  "enabled": false,
-  "plugin_loaded": false,
-  "plugin_name": "Tape Multi Track",
-  "available": true
-}
-```
-
-`available` is true when Softube Multitrack Tape is installed.
+Restart the sandbox for a plugin that has become unhealthy.
 
 ### `set_insert_hardware_io`
 
-Configure an existing Hardware Insert. Any omitted popup field keeps its
-current value; older reels that do not contain these fields use the defaults
-shown here.
+Update Hardware Insert routing, trim, latency, filtering, colour, and recall image settings.
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `track_id` | string | yes | Target track |
-| `slot` | number | no | Insert slot index 0-7 (default: 0) |
-| `output_route_id` | string | no | Send output route ID, or empty for no send; mono and stereo endpoints are valid, and routes overlapping the master output are rejected |
-| `input_route_id` | string | no | Return input route ID, or empty for silence; mono and stereo endpoints are valid |
-| `latency_offset_samples` | number | no | Non-negative extra compensation delay in samples; negative values clamp to 0 |
-| `hardware_input_trim_db` | number | no | Send trim in dB, clamped to -24..+12; default 0 |
-| `hardware_output_trim_db` | number | no | Return trim in dB, clamped to -24..+12; default 0 |
-| `hardware_ag_measure_mode` | number | no | Auto-gain mode: `0` Peak, `1` RMS; default 0 |
-| `hardware_color` | string | no | Optional slot colour; empty uses the track colour |
+### `set_insert_sidechain`
 
-**Returns:** `{ "track_id": "...", "slot": 2, "hardware_output_route_id": "3-4", "hardware_input_route_id": "3-4", "hardware_latency_offset_samples": 64, "hardware_input_trim_db": 0.0, "hardware_output_trim_db": -1.5, "hardware_ag_measure_mode": 0, "hardware_color": "ff4fb3ff", "latency_samples": 672 }`
+Set or clear the sidechain source for one insert slot. Use `self` for self-keying, a source track ID for external keying, or an empty string to clear. Requires stopped transport.
 
-### `set_mix_fx`
+Required parameters:
 
-Enable or disable tape summing. Requires transport stopped.
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
 
-| Param | Type | Required | Description |
-|-------|------|----------|-------------|
-| `enabled` | boolean | yes | true to enable, false to disable |
+Optional parameters:
 
-**Returns:** `{ "enabled": true, "plugin_loaded": true }`
+| Param | Description |
+|---|---|
+| `slot` | Insert slot index, 0-7 |
+| `sidechain_source` | `self`, source track ID, or empty string |
 
-### `open_mix_fx_editor`
+### `set_insert_midi_output`
 
-Open the Softube Tape plugin editor window.
+Configure the device and channel for a MIDI Out insert. Requires stopped transport.
 
-**Returns:** `{ "editor_open": true }`
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `slot` | Insert slot index |
+| `device_id` | Core MIDI output destination |
+| `channel` | MIDI channel, or `0` to keep source channels |
+| `advance_ms` | Early-send timing compensation |
+
+## Sidechains
+
+Sidechain-capable plugins can receive eligible source taps. Use insert info and `set_insert_sidechain` to inspect and set sidechain state. TayPE validates sidechain choices so a plugin cannot be fed by an invalid or unsafe source.

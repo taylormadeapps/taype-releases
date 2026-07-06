@@ -1,42 +1,30 @@
 # Track Headers
 
-Each track header shows the following controls. At very small track heights, some labels are hidden until you zoom in.
+![Track headers](../../../assets/img/docs/track-headers.png)
 
-Track selection lives on the header. Clicking clips or automation points in
-the arranger does not change which track is selected. **Cmd-click** toggles
-headers into or out of the track selection, including deselecting the last
-selected track. **Shift-click** extends the selection as a visible range.
-
-![Track headers](../../assets/img/docs/track-headers.png)
+Track headers hold the controls you need before reaching for the mixer.
 
 ## Controls
 
-- **Colour strip** - click to change the track colour from 24 swatches
-- **Track name** - double-click to rename (only when stopped). With popup help enabled, hovering shows the full title.
-- **Tags** - opens the tag cloud popup for this track
-- **R** - record arm (red circle when armed)
-- **MON** - software monitoring (hear input through the track channel strip)
-- **Bus** - the arranger header badge is display-only. Plain bus toggling and **Cmd-click** comp-mode entry live on the channel-strip bus glyph instead. In comp groups, child take headers hide **R**, **MON**, and both I/O selectors because the comp bus owns those controls for the whole group. The comp bus header also draws a blue outline around the whole visible comp block, with a small +/- square in the top-left corner to hide or show the child take headers. The mixer shows that same blue comp-group frame and collapse toggle across the visible bus-plus-child strip run. That folded/expanded state is saved with the reel. On the arranger lane itself, the comp bus also paints faint, non-editable quasi clips wherever hidden or visible child takes contain clips, so you still get a read on where audio lives when the group is folded up. `Cmd-click` on a non-empty comp bus asks whether to flatten the group to one clip on that track; confirming removes the child take tracks and leaves a normal track behind.
-- **M** - mute (speaker icon, crossed out when muted)
-- **S** - solo
-- **Tag pills** - at larger track heights, assigned tags appear as pills below the button row
-- **I/O labels** - input source and output destination (click to change). With popup help enabled, hovering an I/O label shows the full selected route before the selector help. If popup help is off, the label still hover-reveals the full selected route text.
-- **Mini meter** - single post-fader meter. It follows the same meter-scale
-  zones as the strip mini meters, uses a separate peak tick, and still shows
-  live input on record-armed audio tracks with **MON** off so you can check
-  incoming level without adding it to the cue mix.
+- **Name**: double-click to rename.
+- **Mute / Solo**: silence or isolate tracks.
+- **Tag**: apply and filter by track tags.
+- **Archive**: move a finished track out of the main working set.
+- **MON**: monitor input or instrument output.
+- **Record**: arm the track for recording.
+- **Input / Output**: choose routing.
+- **Bus**: turn a track into a bus or comp group where supported.
 
-At medium and tall heights, the full button row stays pinned directly under the title.
+The follow-playhead control lives in the timeline header toolbar, not inside each track header. It keeps playback visible while leaving selected-track focus alone.
+
+## Selection
+
+Click a header to select the track. Cmd-click toggles tracks into the visible selection. Shift-click extends a range. The first selected track remains the primary track for the docked strip and focused hardware control.
 
 ## Tag Cloud
 
-Click **Tags** on a track header to open the tag cloud.
+The Tag popup lets you add labels such as `Vocal`, `Guitar`, `Print`, or your own categories. Tags help with filtering, selection, and keeping large reels sane.
 
-- **Both / Global / Reel** filters the cloud scope
-- Search field live-filters tag names
-- Click a tag to toggle it on/off for that track
-- **New Tag** opens inline creation with scope choice:
-  - **Global** tags are shared across reels on this machine
-  - **Reel** tags are saved in the reel and travel with it
+## Archive View
 
-The popup stays open while you assign multiple tags. Click outside or press **Done** to close.
+Archived tracks are kept with the reel but hidden from the main working surface until Archive View is enabled. Use archive for printed stems, safety tracks, old takes, and anything you want preserved without cluttering the current pass.

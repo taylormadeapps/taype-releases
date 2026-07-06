@@ -1,12 +1,10 @@
-# Filters (HP/LP)
+# Filters
 
-High-pass and low-pass filters for cleaning up the frequency extremes. These have their own bypass toggle, separate from the EQ.
+Filters sit before EQ and compressor.
 
-| Filter | Default | Range |
-|--------|---------|-------|
-| High-pass | 30 Hz | 20 - 1,000 Hz |
-| Low-pass | 18,000 Hz | 2,000 - 20,000 Hz |
+- **LO / high-pass** removes low-frequency rumble.
+- **HI / low-pass** removes high-frequency hash or narrows the top end.
 
-The high-pass is your rumble killer. The low-pass tames harshness up top.
-Both are 12 dB/oct second-order curves with a small fixed resonant lift at
-cutoff, so they feel a bit more alive than dead-flat Butterworth filters.
+The HI filter lamp fills in reverse: lowering the low-pass cutoff lights more of the arc because more top end is being removed.
+
+Use filters for cleanup before you reach for EQ boosts.

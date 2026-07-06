@@ -1,83 +1,19 @@
-# EQ - 3-Band Parametric
+# EQ
 
-A 3-band Neve-family parametric EQ. Low and High each have:
+TayPE's channel EQ is a three-band musical EQ with high-pass and low-pass filtering in the same visualiser workflow.
 
-- **Frequency** - where the band is centred
-- **Gain** - boost or cut, from -18 dB to +18 dB
-- **Shelf/Bell toggle** - switches between a shelf curve and a bell (peaking) curve
-- **Wide/Narrow toggle** - wider or tighter bandwidth
+## Bands
 
-Mid keeps the same frequency, gain, and `HI-Q` contour control, but it stays a
-bell in the supported UI path.
+- **LOW** controls the low band and can switch shelf/bell shape.
+- **MID** controls the mid band and can switch into a tighter `HI-Q` mode.
+- **HIGH** controls the high band and can switch shelf/bell shape.
 
-| Band | Default Frequency | Range |
-|------|------------------|-------|
-| Low | 220 Hz | 60 - 800 Hz |
-| Mid | 1,200 Hz | 300 - 8,000 Hz |
-| High | 3,200 Hz | 1,500 - 16,000 Hz |
+Each band has gain and frequency controls. The strip uses compact controls; the floating EQ Visualiser gives more space and shows the live response curve.
 
-Low and High default to shelf mode. Mid defaults to bell and stays that way.
+## RTA and Response
 
-Bell bands still use proportional Q, but the broad setting now starts a lot
-wider and more flattering than the old pointy pass. Bigger moves still focus
-up, cuts still run a touch tighter than boosts, and `HI-Q` gives you the
-more pinched contour when you actually want it.
+The EQ Visualiser can show input and output spectrum traces plus the EQ response. Traces disappear when they fall below the visible graph range; they do not draw a false flat line along the bottom.
 
-Shelf mode is no longer a dead generic ramp either. The `HI-Q` toggle and
-gain amount now push the shelf contour harder, and that musical turnover
-"nose" now starts showing from around `+6 dB` and leaning in more clearly
-through the mid-gain range instead of only waking up near full boost.
+## Workflow
 
-The separate HP/LP filters are still 12 dB/oct curves, but the high-pass now
-gets a slightly more open shoulder so low cuts do not feel cramped, while the
-low-pass stays gentler and more damped.
-
-New channels start with both the `FILTER` and `EQ` sections switched on, but
-the filter is parked at its neutral endpoints: low cut at `0` (`20 Hz`
-stored) and high cut at max (`20 kHz` stored). At those endpoints the filter
-section stays lit but does not process audio. The EQ likewise idles with flat
-static gains and zero dynamic ranges, so it only burns DSP once a band is
-actually doing something.
-
-The EQ header's small spectrum button opens the shared floating **EQ
-Visualiser** window for the current track with the live response curve,
-small `IN` / `OUT` spectrum toggles in the graph's top-right corner, a little
-square `+` / `-` zoom column tucked into the top-left dB gutter beside the
-scale labels, and split
-`FILTER` / `EQ` control panels that mirror the strip's header power toggles
-and EQ glyph buttons. The window title carries the track name, so the graph
-itself stays uncluttered. Once open, that shared window follows whichever
-track is currently selected. The popup now defaults to its tightest useful
-graph view with `+18 dB` pinned at the top and `-18 dB` at the floor, and
-those zoom buttons move the floor in `3 dB` steps while still letting you zoom
-all the way back out to `-90 dB`. The `FILTER` side now stacks `LO` over `HI`
-in one centred
-column so those knobs line up with the EQ rows, and the right-hand `EQ` panel
-now gives `IN` / `OUT` metering its own dedicated inset well on the far
-right, using the same segmented K-scale / clip ladder look as the main meters
-while showing signal into the EQ after the preamp and out of the EQ before
-the compressor. Its parameter labels now take the stronger panel-label
-treatment while the live values stay lighter.
-Those popup gain knobs now keep the same sticky `0 dB` centre detent as the
-strip, and double-clicking any of the three resets it straight back to zero.
-The graph grid is also a touch stronger now, so the popup reads faster without
-turning into graph paper.
-In K-system views, that popup ladder keeps both the red `FS` ceiling tick and
-the highlighted `0` reference line too.
-Both popup filter knobs now read from the right-hand side of the ring. `LO`
-fills from the right as you raise the cutoff, and `HI` also starts from the
-right so a lower low-pass cutoff shows a fuller lit arc while the off state
-lives at max.
-The analyser itself now reads more like a proper RTA too: it compensates the
-window loss and draws log-band energy instead of skinny raw FFT bins, so
-broadband material no longer hugs the graph floor for no good reason.
-Spectrum that falls below the visible graph floor drops out of view instead of
-turning into a false flat line along the bottom edge.
-That popup graph keeps `0 dBFS` pinned to the top edge, opens fully zoomed in
-at `-36 dBFS`, and moves the floor in `6 dB` steps. In K-system modes it
-still shows the K-scale labels and highlighted `0` reference line on that
-same geometry.
-
-Those popup `FILTER` and `EQ` headers also keep the same preset badge
-language as the strip. Right-click either one to load or save a filter or
-EQ preset without dropping back to the docked strip.
+Use filters first, broad EQ moves second, and narrow mid moves only when you know what problem you are chasing. Keep the output level honest when judging boosts.
