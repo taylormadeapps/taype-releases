@@ -24,7 +24,7 @@ Drag clip edges to trim. The original media stays intact; the clip simply plays 
 
 ## Gain, Fades, and Crossfades
 
-Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet.
+Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
 
 ## Clipboard
 
