@@ -9,7 +9,13 @@ Use the insert picker to choose scanned VST3 plugins, bundled TayPE stock plugin
 The insert picker is a searchable chooser with `Stock`, `Effects`, and `Instruments` exclusive first-branch tabs. Empty search browses the plug-in folder hierarchy inside the custom picker with a fixed Back/path strip. The selected tab is
 remembered while TayPE is running.
 
+In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
+
+In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
+
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+
+If a matching plug-in preset is named `Default`, TayPE loads it automatically when you add that plug-in. The plug-in window preset menu includes **Save as Default** to update that default from the current plug-in state.
 
 ## Bypass vs Disable
 
