@@ -15,6 +15,8 @@ TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Ta
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable unloads the insert from the processing graph while keeping the assignment and saved state in the reel.
 
+The Inserts section power button bypasses or re-enables the rack without changing each slot's own bypass state. Option-click the same button to toggle a red rack override that forces all insert plug-ins offline without changing each slot's stored enable or bypass state.
+
 In Archive View, active or bypassed insert rows show as offline red and plugin edits stay locked until you unarchive the track.
 
 ## Instruments and MIDI Out
