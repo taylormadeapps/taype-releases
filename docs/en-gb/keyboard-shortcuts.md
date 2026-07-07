@@ -8,18 +8,18 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 
 ### Transport
 
-| Action | Shortcut |
+| Shortcut | Action |
 |---|---|
-| Play / stop | Space |
-| Play / pause | P |
-| Stop / escape pass | Z |
-| Record | Return |
-| Return to zero | Home |
-| Print mix | Cmd+P |
-| Print loop | Cmd+Option+P |
-| Toggle metronome | C |
-| Tap tempo | ' |
-| Set cut zero at playhead | Cmd+/ |
+| Space | Play / stop |
+| P | Play / pause (blocked while recording) |
+| Z | Stop / escape pass |
+| Return | Record |
+| Home | Return to zero |
+| Cmd+P | Print mix |
+| Cmd+Option+P | Print loop |
+| C | Toggle metronome |
+| ' | Tap tempo |
+| Cmd+/ | Set cut zero at playhead |
 
 ### Editing
 

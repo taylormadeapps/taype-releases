@@ -2,6 +2,8 @@
 
 The Preamp section adds input character before the main tone-shaping stages.
 
+The mode button cycles **Clean → Modern → ToTaype → NAM → MD510 → Clean**.
+
 ## Clean Gain
 
 Clean mode is the default gain stage. It is useful for level matching without added colour.

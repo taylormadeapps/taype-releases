@@ -22,6 +22,14 @@ Split selected clips at the playhead with `\`. The split commands also live in t
 
 Drag clip edges to trim. The original media stays intact; the clip simply plays a different range.
 
+## Clip Properties
+
+Open Clip Properties for exact clip details and destructive clip actions. **Reverse** renders a reversed copy through the model transaction system, so the reel owns the derived audio and undo/redo treats the change like any other clip edit.
+
+### Media Paths
+
+Clip Properties shows reel-owned media paths relative to the reel where possible. **Reel Store Audio** shows the stored audio inside the reel, and **Import Source** shows the original imported file when TayPE still knows it. Duplicate actual/store paths are collapsed, and unavailable rows display `n/a`.
+
 ## Gain, Fades, and Crossfades
 
 Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.

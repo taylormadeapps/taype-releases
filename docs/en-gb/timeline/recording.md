@@ -16,9 +16,27 @@ Audio tracks record audio input. Instrument tracks can record MIDI and render th
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
 
+Play / Pause is blocked while a recording pass is active; finish the take with **Record** or **Stop**.
+
+When a recorded take overlaps the head or tail of an existing clip, TayPE trims the older clip to the new take boundary with only a tiny anti-click fade instead of creating a long automatic crossfade. Recording inside an existing clip still splits the older clip around the new take.
+
+## External Sync Recording
+
+When TayPE is slaved to MTC/MMC, MMC Locate followed by advancing timecode can start playback or recording from the mapped position. MMC Pause stops while TayPE is rolling and resumes from the last synced timecode position when the matching pause command arrives again. Slave stop parks the head at the synced stop position.
+
+External sync recording uses the tracks you already armed in TayPE. It does not change which tracks are armed, and it bypasses the local Return, Punch, and Do-Over record modes.
+
+Set **SMPTE Zero** in Sync preferences when an external rig uses a different timecode origin. A short pre-roll before the selected timecode still maps correctly to the reel instead of wrapping to the wrong day.
+
+During external sync, incoming positions are allowed to run past the current reel extent. Slave playback can roll on blank tape until the external transport stops or relocates.
+
+TayPE chases MTC while rolling so material drift snaps back to the mapped timecode position.
+
 ## Input and Output Routing
 
 Inputs and outputs can be selected from track headers or strips. Mono and stereo choices are remembered separately so changing channel mode does not force the wrong route shape into place.
+
+For bus tracks, the label reads **Sender** for orientation only; bus routing is managed from sends and outputs.
 
 ## Record Follows Select and Auto Monitor
 

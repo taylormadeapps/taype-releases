@@ -10,6 +10,8 @@ The MCP bridge connects your client to the running app. Tool calls can query ses
 
 Use TayPE's connector installer where available for your MCP client, then restart the client and keep TayPE running while you use the tools.
 
+The desktop connector installers live under **Tools > LLM Integrations**.
+
 Manual client configuration is possible for MCP clients that support stdio bridge commands. Use the connector workflow first unless you know you need manual setup.
 
 ## Concepts

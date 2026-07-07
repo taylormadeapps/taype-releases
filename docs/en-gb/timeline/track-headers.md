@@ -1,19 +1,19 @@
 # Track Headers
 
-![Track headers](../../../assets/img/docs/track-headers.png)
+![Track headers](../../.gitbook/assets/track-headers.png)
 
 Track headers hold the controls you need before reaching for the mixer.
 
 ## Controls
 
-- **Name**: double-click to rename.
-- **Mute / Solo**: silence or isolate tracks.
-- **Tag**: apply and filter by track tags.
-- **Archive**: move a finished track out of the main working set.
-- **MON**: monitor input or instrument output.
-- **Record**: arm the track for recording.
-- **Input / Output**: choose routing.
-- **Bus**: turn a track into a bus or comp group where supported.
+* **Name**: double-click to rename.
+* **Mute / Solo**: silence or isolate tracks.
+* **Tag**: apply and filter by track tags.
+* **Archive**: move a finished track out of the main working set.
+* **MON**: monitor input or instrument output.
+* **Record**: arm the track for recording.
+* **Input / Output**: choose routing.
+* **Bus**: turn a track into a bus or comp group where supported.
 
 The follow-playhead control lives in the timeline header toolbar, not inside each track header. It keeps playback visible while leaving selected-track focus alone.
 

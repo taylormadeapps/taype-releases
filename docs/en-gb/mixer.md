@@ -2,14 +2,14 @@
 
 The mixer is the desk view: many channel strips side by side, with faders, meters, inserts, routing, buses, and selected-track focus visible at once.
 
-![Mixer overview](../../assets/img/docs/mixer-overview.png)
+![Mixer overview](../.gitbook/assets/mixer-overview.png)
 
 ## Width Modes
 
 The mixer has two width modes:
 
-- **Narrow desk mode** shows compact strips so more tracks fit on screen.
-- **Full strip mode** gives each track the wider channel-strip layout.
+* **Narrow desk mode** shows compact strips so more tracks fit on screen.
+* **Full strip mode** gives each track the wider channel-strip layout.
 
 Press **W** while the mixer is focused, or use the Mixer Width toolbar button. The timeline's docked strip has its own width mode, so changing mixer width does not clobber the arranger strip width.
 

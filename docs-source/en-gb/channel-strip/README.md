@@ -14,9 +14,14 @@ Double-click gain and balance knobs to reset them to zero. Double-click the fade
 
 Section headers collapse or reopen on double-click across the title band. The chevron is a single-click toggle. Section power and section visibility are separate: a bypassed section can remain open and visibly dimmed.
 
+Empty search browses your plug-in
+folders in the insert picker while the Back/path strip stays fixed.
+
 ## EQ Visualiser
 
 The EQ header has a spectrum button. It opens one shared floating **EQ Visualiser** for the current track. The window follows track selection, shows input/output spectrum toggles, the live EQ response, filter controls, EQ controls, and an input/output meter lane.
+
+On the strip EQ row, low and high bands sit dark in shelf mode and light up as bell glyphs when you switch them on. The `HI-Q` label now uses the same strip text size as the rest of the panel copy.
 
 The RTA graph draws only what is visible. If the analyser falls below the visible range, the line drops out instead of flatlining along the bottom edge.
 
@@ -27,6 +32,8 @@ The Sends section sits with Inserts because both are routing decisions. The trac
 ## Strip Header
 
 The coloured title bar selects, renames, and identifies the track. Mixer title clicks select strips; Cmd-click and Shift-click build visible track selections. Grouped edits apply to visible selected strips while preserving relative offsets where possible.
+
+The comp-bus MON lamp now follows the same colour rules as an ordinary track. Its MON lamp follows the same colour rules as an ordinary track.
 
 ## Popup Help
 
