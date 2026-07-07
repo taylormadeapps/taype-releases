@@ -24,6 +24,14 @@ Hardware Insert sends audio out to external gear and returns it to the strip. Ch
 
 Plugins with sidechain inputs can receive an eligible source tap. Sidechain assignments are part of the insert state and follow the reel.
 
+## Listen Bus
+
+The master strip has an ear button for the global Listen Bus. It is a monitor-only insert rack after the master fader and LaForgé processing, with the same insert mini meters, wet/dry controls, output trim, and gain compensation controls as a channel insert section.
+
+By default the Listen Bus processes the main master monitor path. If you choose a spare stereo hardware output, TayPE taps the master output into the Listen Bus and sends the processed monitor chain to that output while keeping the normal master output time-aligned.
+
+Listen Bus settings are saved globally in TayPE, not in the reel, and are not included in normal exports or prints.
+
 ## Sandboxing
 
 Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, restart its sandbox from the insert tools.
