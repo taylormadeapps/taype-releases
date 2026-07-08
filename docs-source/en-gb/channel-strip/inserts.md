@@ -11,6 +11,8 @@ remembered while TayPE is running.
 
 In search results, Shift-click selects a visible range and Command-click toggles separate audio-effect or hardware-insert rows. The picker then shows a footer with selected/addable status text and **Add** so you can load the selected rows in result order from the opened slot onward. Existing inserts in those destination slots are replaced, and TayPE stops when the rack runs out of slots. Instruments and MIDI Out stay single-select because they can only live in slot 1.
 
+Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
+
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
 
 ## Bypass vs Disable
