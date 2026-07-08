@@ -6,6 +6,12 @@ TayPE supports Mackie MCU-style control surfaces for hands-on transport, banking
 
 Control-surface profiles describe how a device maps its buttons, faders, encoders, and transport controls to TayPE. TayPE ships built-in Mackie MCU profiles, including X-Touch One support.
 
+## Grouping Surfaces
+
+By default, every configured surface is standalone. To make two or more MCU surfaces bank together, give them the same Group value in Control Surface Preferences and set their Slot order.
+
+Grouped surfaces share one bank position. Slot 1 controls the first strip slice, Slot 2 controls the next slice, and so on. Bank controls move the whole group as one wider surface, while each profile keeps its own button behaviour.
+
 ## X-Touch One
 
 The X-Touch One profile is built around a selected-track workflow. The hardware strip follows the current TayPE track, and the Select control is used to keep hardware focus and software focus in agreement.

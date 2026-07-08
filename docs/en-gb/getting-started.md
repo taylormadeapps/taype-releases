@@ -75,7 +75,7 @@ Use the MIDI Monitor when you need to see what TayPE is receiving from controlle
 
 TayPE supports Mackie MCU-style control surfaces, including focused support for X-Touch One workflows. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, and monitor/select behaviour.
 
-The built-in **Korg nanoKONTROL Studio** profile keeps the familiar MCU transport layout while its SEL buttons toggle monitoring. The **Behringer X-Touch One** profile is built for a selected-track workflow: its single motor fader follows the focused virtual strip, the channel buttons select the previous or next virtual strip, and the hardware Master path focuses and controls TayPE's master fader. **Clear Solo** clears all solo states.
+The built-in **Korg nanoKONTROL Studio** profile keeps the familiar MCU transport layout while its SEL buttons toggle monitoring. The **Behringer X-Touch One** profile is built for a selected-track workflow: its single motor fader follows the focused virtual strip, the channel buttons select the previous or next virtual strip, and the hardware Master path focuses and controls TayPE's master fader. To bank multiple MCU surfaces together, give them the same Group value and order them by Slot in Control Surface Preferences. **Clear Solo** clears all solo states.
 
 To create a custom MCU profile, copy the **Default Transport Template** from TayPE's Control Surfaces folder, rename the copy to end in `.json`, then edit the JSON mapping.
 
