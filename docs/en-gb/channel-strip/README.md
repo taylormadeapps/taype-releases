@@ -16,6 +16,9 @@ Section headers collapse or reopen on double-click across the title band. The ch
 
 Empty search browses your plug-in
 folders in the insert picker while the Back/path strip stays fixed.
+In search results, Shift-click or Command-click enters multi-select mode for
+audio-effect and hardware-insert rows; the footer shows what will fit and
+**Add** loads as many selected rows as fit from the opened slot onward.
 
 ## EQ Visualiser
 
