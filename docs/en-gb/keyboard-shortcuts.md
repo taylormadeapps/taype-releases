@@ -30,6 +30,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Split all clips at playhead | `Option+\` |
 | Split all clips at loop braces | `Cmd+Option+\` |
 | Toggle fade | F |
+| Slip waveform inside fixed clip | Cmd+Option+drag clip body |
 | Duplicate selected clips | D |
 | Select clips on selected tracks | Cmd+Shift+A |
 | Join clips | J |

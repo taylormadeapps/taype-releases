@@ -6,7 +6,9 @@ Clips are the audio or MIDI regions on the timeline.
 
 Click a clip to select it. Use multi-select gestures for grouped edits. Clip selection and track selection are related but not identical: a selected clip can live on a selected track, while track commands still target the current track set.
 
-Cmd-click toggles clips into or out of the clip selection on mouse-up. Cmd-drag starts a timeline range split instead: drag across one or more tracks, release, and TayPE cuts clips that cross the range boundaries while selecting the pieces inside the dragged range. When snap is enabled, the range edges magnetise to nearby clip edges and markers before falling back to the current grid; the live preview still follows your raw drag immediately.
+Cmd-click toggles clips into or out of the clip selection on mouse-up. Cmd-drag starts a timeline range split instead: drag across one or more tracks, release, and TayPE cuts clips that cross the range boundaries while selecting the pieces inside the dragged range. When snap is enabled, the range edges magnetise to nearby clip edges and markers before falling back to the current grid; the live preview sticks to those snapped edges once they form a span, and falls back to raw drag feedback only while both edges are on the same snap point.
+
+Cmd+Option-drag on a clip body slips the waveform inside the fixed clip. Drag right to move the waveform right; drag left to move it left. If you slip beyond the source edges, TayPE pads the clip with silence instead of moving or resizing the clip.
 
 On comp take tracks, Cmd-drag uses the horizontal range to split every take lane in the comp bus. The vertical lanes you drag across are promoted for that time range, and sibling take lanes are muted. Option-click promotes or demotes the clicked take range and flips the siblings; Shift+Option-click keeps the plain disable toggle for that take.
 
@@ -25,6 +27,10 @@ Split selected clips at the playhead with `\`. The split commands also live in t
 ## Trimming
 
 Drag clip edges to trim. The original media stays intact; the clip simply plays a different range.
+
+## Slipping
+
+Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open for Melodyne editing.
 
 ## Clip Properties
 

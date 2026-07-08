@@ -6,7 +6,8 @@ Create or import a clip onto a track.
 
 ### `set_clip`
 
-Move, trim, rename, disable, adjust gain, or update fades for a clip.
+Move, trim, slip, rename, disable, adjust gain, or update fades for a clip.
+Use `slip_offset` for signed waveform slip inside the fixed clip window; `clip_start` remains the trim/source anchor.
 
 ### `remove_clip`
 
@@ -19,6 +20,7 @@ Render a MIDI clip through its source instrument path where supported.
 ### `get_clips`
 
 List clips and their timing, track, media, and state.
+Clip objects include `clip_start` and `slip_offset`; the audible source start is `clip_start + slip_offset`.
 
 ### `select_clip`
 
