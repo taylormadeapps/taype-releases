@@ -14,7 +14,7 @@ On comp take tracks, Cmd-drag uses the horizontal range to split every take lane
 
 ## Moving
 
-Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them.
+Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes cannot initiate a move; they can still be selected and promoted from the bottom strip or with Option-click.
 
 ## Creating Blank MIDI Clips
 
@@ -26,7 +26,7 @@ Split selected clips at the playhead with `\`. The split commands also live in t
 
 ## Trimming
 
-Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing an enabled clip into an enabled sibling take cuts the sibling at the new boundary and mutes only the covered section.
+Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes cannot initiate an edge resize. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
 
 ## Slipping
 
@@ -42,7 +42,7 @@ Clip Properties shows reel-owned media paths relative to the reel where possible
 
 ## Gain, Fades, and Crossfades
 
-Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Comp take tracks do not auto-crossfade when edits overlap sibling takes; TayPE uses the default fade length on the splice edges instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into an enabled sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
+Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Comp take tracks do not auto-crossfade when edits overlap sibling takes; TayPE uses the default fade length on the splice edges instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into a sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment; sibling material that was already muted remains muted and does not block the edit. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
 
 ## Clipboard
 

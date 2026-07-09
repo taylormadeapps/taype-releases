@@ -8,7 +8,7 @@ Click a clip to select it. Use multi-select gestures for grouped edits. Clip sel
 
 ## Moving
 
-Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them.
+Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes cannot initiate a move; they can still be selected and promoted from the bottom strip or with Option-click.
 
 ## Creating Blank MIDI Clips
 
@@ -20,7 +20,7 @@ Split selected clips at the playhead with `\`. The split commands also live in t
 
 ## Trimming
 
-Drag clip edges to trim. The original media stays intact; the clip simply plays a different range.
+Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes cannot initiate an edge resize. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end.
 
 ## Clip Properties
 
