@@ -1,10 +1,18 @@
 # Control Surfaces
 
-TayPE supports Mackie MCU-style control surfaces for hands-on transport, banking, selection, and focused strip control.
+TayPE supports Mackie MCU-style control surfaces and CM Labs MotorMix in Pro Tools/HUI mode for hands-on transport, banking, selection, and focused strip control.
 
 ## Mackie MCU Profiles
 
 Control-surface profiles describe how a device maps its buttons, faders, encoders, and transport controls to TayPE. TayPE ships built-in Mackie MCU profiles, including X-Touch One support.
+
+## CM Labs MotorMix
+
+Choose **CM Labs MotorMix (Pro Tools/HUI Mode)** in Control Surface Preferences when the unit is left in its Pro Tools/HUI personality. MotorMix support is built in; it does not use the Mackie MCU JSON profile folder.
+
+The first MotorMix pass covers the eight faders, fader touch tracking, select, mute, solo, record-arm, rotary pan, encoder jog, transport, previous/next marker, channel navigation, bank navigation, motor fader feedback, LEDs, and basic scribble-strip labels. MotorMix has no dedicated transport record button, so TayPE maps the `REC/RDY` function key A to transport record while the strip `REC/RDY` buttons remain track record-arm.
+
+MotorMix fader touch is tracked internally for future automation work, but it does not yet change automation state in TayPE.
 
 ## Grouping Surfaces
 
