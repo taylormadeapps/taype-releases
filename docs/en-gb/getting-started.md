@@ -43,7 +43,7 @@ If imported media needs resampling, TayPE handles it during import or playback s
 
 ## Editing
 
-Select clips, split at the playhead, trim edges, drag clips between compatible tracks, adjust clip gain, and add fades. Crossfades are created by overlapping clip edges where the clips can share the same lane.
+Select clips, split at the playhead, trim edges, drag clips between compatible tracks, adjust clip gain, and add fades. Splitting adds the current default clip fade at the new cut edges. Crossfades are created by overlapping clip edges where the clips can share the same lane.
 
 MIDI clips open in the MIDI editor. Melodyne opens from a clip, not as a normal insert.
 

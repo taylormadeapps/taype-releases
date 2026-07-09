@@ -20,7 +20,7 @@ A track can be current, focused, muted, soloed, record-armed, monitored, archive
 
 ## Editing Model
 
-Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, and disabling clips change the reel state without rewriting the original media. Use checkpoints when you want a named recovery point before a bigger move.
+Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, and disabling clips change the reel state without rewriting the original media. Splitting clips adds the current default fade at the new cut edges. Use checkpoints when you want a named recovery point before a bigger move.
 
 ## Related Timeline Workflows
 
