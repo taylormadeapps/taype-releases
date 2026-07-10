@@ -10,7 +10,11 @@ Control-surface profiles describe how a device maps its buttons, faders, encoder
 
 Choose **CM Labs MotorMix (Pro Tools/HUI Mode)** in Control Surface Preferences when the unit is left in its Pro Tools/HUI personality. MotorMix support is built in; it does not use the Mackie MCU JSON profile folder.
 
-The first MotorMix pass covers the eight faders, fader touch tracking, select, mute, solo, record-arm, rotary pan, encoder jog, transport, previous/next marker, channel navigation, bank navigation, motor fader feedback, LEDs, and basic scribble-strip labels. MotorMix has no dedicated transport record button, so TayPE maps the `REC/RDY` function key A to transport record while the strip `REC/RDY` buttons remain track record-arm.
+When the MotorMix connects, TayPE briefly greets the unit with **THE FIRST RULE OF TAYPE: / YOU DO NOT TALK ABOUT PRO TOOLS.** The display then changes to the normal track labels.
+
+MotorMix support covers the eight faders, fader touch tracking, select, mute, solo, record-arm, rotary pan, encoder jog, transport, return-to-zero, loop, channel navigation, bank navigation, motor-fader feedback, LEDs, and scribble-strip labels. The UNDO button follows TayPE's available history: it undoes while undo is available and redoes when only redo is available.
+
+MotorMix buttons for plugin pages, automation modes, and other Pro Tools-specific workflows remain inactive where TayPE has no equivalent operation.
 
 MotorMix fader touch is tracked internally for future automation work, but it does not yet change automation state in TayPE.
 
