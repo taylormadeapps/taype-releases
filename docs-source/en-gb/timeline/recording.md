@@ -18,6 +18,8 @@ Count-in, pre-roll, punch, loop, and record mode settings decide how the transpo
 
 Play / Pause is blocked while a recording pass is active; finish the take with **Record** or **Stop**.
 
+In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
+
 When a recorded take overlaps the head or tail of an existing clip, TayPE trims the older clip to the new take boundary with only a tiny anti-click fade instead of creating a long automatic crossfade. Recording inside an existing clip still splits the older clip around the new take.
 
 ## External Sync Recording
