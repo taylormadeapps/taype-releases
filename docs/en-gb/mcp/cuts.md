@@ -48,7 +48,7 @@ Optional parameters:
 
 ### `set_marker`
 
-Update a marker's position, name, or colour. This is allowed during playback but not while recording.
+Update a marker's position, name, colour, or Main Cut Cut assignment. This is allowed during playback but not while recording.
 
 Required parameters:
 
@@ -63,6 +63,20 @@ Optional parameters:
 | `position` | New marker position |
 | `name` | New marker name |
 | `color` | New marker colour value |
+| `cut_region` | `none`, `blank`, or `cut` |
+| `assigned_cut_id` | Non-Main Cut ID for a Cut assignment |
+
+### `set_marker_cut_assignment`
+
+Set a Main Cut marker to `none`, `blank`, or an assigned non-Main Cut. Assigning a Cut renames the marker to the Cut name, adding a number when needed to avoid duplicating an existing marker name.
+
+### `populate_marker_from_cut`
+
+Copy the assigned Cut into the marker range, overwriting clips in that range and changing the marker to Blank.
+
+### `delete_marker_time` / `insert_marker_time`
+
+Delete or insert time over the marker range. Delete removes the start marker and shifts later material back; insert keeps the start marker fixed and shifts later material forward.
 
 ### `remove_marker`
 

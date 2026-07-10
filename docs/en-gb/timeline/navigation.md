@@ -20,6 +20,12 @@ Click the ruler to seek. Option-click in the timeline can seek even over clips. 
 
 Use `/` to add or remove a marker at the playhead. Use `,` and `.` to move to previous and next markers or loop braces. Number keys jump to marker slots.
 
+On the Main Cut, right-click a marker and use **Assign Cut** to turn it into a Cut range. Choose **Blank** for an empty range, **None** to return to a normal marker, or a non-Main Cut to play that Cut from its own zero across the marker range. Assigning a Cut renames the marker to the Cut name, adding a number when needed to keep marker names distinct. **Populate from Cut** copies the assigned Cut into the range and leaves the marker as Blank. **Delete Time** and **Insert Time** work over the marker-to-next-marker range.
+
+Use **File > Print Marker Ranges** to export each explicit Cut or Blank range on the selected Cut in order. Normal markers can end a range but do not start prints. Unnamed ranged markers use a generated marker label in the output filename.
+
+Realtime prints never pause the audio engine for disk access. If storage cannot keep up, TayPE keeps the print but warns after completion that audio may be missing; use **Offline Render** to guarantee that every rendered block reaches the output file.
+
 ## Snap and Transients
 
 Use `S` to toggle timeline snap. Use **Option+S** to switch between absolute and relative snap. **Shift+.** makes the fixed grid finer, **Shift+,** makes it coarser, and **Shift+R** toggles Auto grid.
