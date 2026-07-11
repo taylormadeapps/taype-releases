@@ -22,6 +22,14 @@ NAM mode loads amp, pedal, or preamp captures from the profile browser. Local pr
 
 Changing the selected NAM profile keeps the current NAM Drive and Output settings, so you can compare models without losing your gain staging.
 
+### Model Quality
+
+Preferences > NAM provides three global preamp quality choices: **Efficient**, **Balanced**, and **Quality**. Balanced is the default.
+
+Scalable models choose the tier that best matches that request. Because each package can define different internal breakpoints, the exact tier is model-specific. Models that do not provide scalable tiers always run at their native quality. The setting applies to track and bus NAM preamps; Taype Drive has its own independent model handling.
+
+Stop playback, recording, and printing before changing quality. TayPE prepares a complete replacement NAM graph and only saves the new preference when every active model is ready. If loading fails, the previous quality remains active.
+
 ## Gain Staging
 
 The preamp shows input/output metering so you can add tone without accidentally fooling yourself with loudness. Level-match before judging the colour.
