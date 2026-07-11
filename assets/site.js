@@ -1,6 +1,6 @@
 const PUBLIC_SITE_URL = "https://taype.ruminantaudioworks.com";
 const DOCS_BASE_URL = "https://ruminant-audio-works.gitbook.io/taype/";
-const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v1.0.4/Taype-1.0.4.pkg";
+const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/download/v1.1.0/Taype-1.1.0.pkg";
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
 const PLATFORM_INTEREST_URL = "/other-platforms/";
 const RAW_ABOUT_URL = "/ruminant-audio-works/";

@@ -3,65 +3,68 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.0.4"
-date = "2026-07-06"
-commit = "c7cf007b"
+version = "1.1.0"
+date = "2026-07-11"
+commit = "dea1a085"
 
 summary = """\
-Improves waveform rendering and audio import peak handling so clips draw at the correct scale and imported audio shows reliable peak detail.
-Adds the MIDI monitor window, arranger follow-playhead toggle, and expanded Mackie MCU / X-Touch One control-surface behaviour.
-Improves insert workflows with a custom plugin picker, more reliable sparse insert slots, sidechain bus activation, and chained sidechain routing.
-Improves TONE3000 and NAM handling, including user-root NAM profile paths, metadata/auth fixes, typed send schemas, and preserving NAM Drive/Output when switching models.
-Fixes mixer selected-track focus, EQ RTA graph floor clipping, MIDI graph-rebuild safety, feedback-dialog focus, and TAPE_HOME content path handling.
-Fixes contained clip drops so replacing material inside an existing clip does not create an unwanted auto-crossfade.
+Expanded loop recording and comping with promoted lap history, clearer take ghosts, safer trimming/resizing, and automatic activation of the final complete take.
+Added clip slip editing, blank clips, groove templates, independently resizable cut-marker ranges, and more reliable split-fade and cut cleanup.
+Hardened Print Mix and stem capture, including cut-marker print regions and improved timing/capture accuracy.
+Added MotorMix HUI support and control-surface grouping, with corrected X-Touch One master mapping and numbering.
+Updated NAM A2 processing to v0.5.4 with shared-weight multichannel batching, architecture-aware turbo processing, and improved stability.
+Added global Efficient, Balanced and Quality settings for preamps and summing, plus optional Quality processing for offline prints.
+Improved plug-in workflows with search multi-select, insert-rack disable overrides, bulk insert deletion, Listen Bus insert fixes, and more reliable plug-in/NAM recall.
+Added dynamic EQ threshold tilt, tighter snap boundaries, metronome volume control, and improved live-input and NAM AMX mutation safety.
+Added an optional dual time/bars transport display.
+Added mouse-position zoom, magnetic Shift-drag clip placement without forced crossfades, and knob-wheel scrolling preferences covering mixer and arranger channel strips.
+Improved CoreAudio diagnostics, localisation coverage, and several interaction and routing edge cases.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-3a529f03 Preserve NAM preamp gain on profile switch
-a33851f1 Fix contained clip auto-crossfade resolution
-b5f4a01d Fix docs contract tests and test audio isolation
-f9f8ff8a Sync public docs cleanup
-6a243e3c Track taype-releases unstable merge
-e07d94f4 Fix brittle insert and fixture tests
-c655c4e2 Beta checkpoint v1.0.4b7
-4defe8ae Fix insert gaps and sidechain bus activation
-de151ecc Beta checkpoint v1.0.4b6
-bdc8b0c6 Fix chained insert sidechain lanes
-6435b658 Beta checkpoint v1.0.4b5
-3242e52c Fix localisation and harness contract failures
-3132fdb3 Add arranger follow-playhead toggle
-be79702f Guard MIDI pump during graph rebuilds
-d33bbbd2 Fix telemetry worker sandbox crash reports
-f5f059ae Fix X-Touch One MCU virtual strip control
-563aecd0 Set X-Touch One select to monitor
-23b52132 Fix X-Touch One MCU banking
-551d7321 Harden ops push branch hygiene
-98faa02b Update releases site locale pages
-0755c548 Beta checkpoint v1.0.4b4
-cde59b40 Stabilise feedback focus and beta locale coverage
-0348bd26 Wire X-Touch One selected-group controls
-62a3d75b Add custom insert plugin picker
-0dcbd5f7 Add Discord link to beta welcome email
-6a017d3e Update website docs pointer
-798e7f54 Add MIDI monitor diagnostic window
-864d8556 Add Mackie MCU focus profiles and template seeding
-9147d483 Beta checkpoint v1.0.4b3
-362f07ce Fix TONE3000 auth callback lifetime
-0b6719e9 Add platform interest assets and docs
-bd7fffb0 Add Fostex B16 asset
-9b8dbc19 Fix mixer width selected-track focus
-75d0dbfd Fix EQ RTA graph floor clipping
-ab72d625 Beta checkpoint v1.0.4b2
-acec5aa2 Fix TAPE_HOME content path handling
-fe4242e2 Fix TONE3000 metadata and feedback focus
-a684b337 Stamp 1.0.4 beta metadata
-df07fb66 Fix waveform display and import peaks
-640106fa Fix scaled waveform rendering
-2d08ad74 Fix clip waveform vertical scaling
-3bbfc0b2 Use user root NAM paths and typed send schemas
-e484113b Track taype-releases pricing cleanup
-34fa4953 Track taype-releases beta updates
-bdc8ef17 Track taype-releases v1.0.3
+81e12627 Apply knob wheel preference to arranger strip
+82505720 Add dual transport position display
+d5bd25ea Refresh stale architecture test contracts
+c51e1992 Add print quality and interaction preferences
+daa07505 Add global NAM model quality controls
+07836775 Add architecture-aware NAM turbo batching
+f3b56c4b Harden NAM A2 v0.5.4 integration
+b8faccff Correct MotorMix HUI protocol support
+426a9deb Beta checkpoint v1.0.5b4
+54b406c6 Activate the last complete loop take
+616a9f1b Make cut marker ranges independently resizable
+b0bced18 Repair evolved test contracts
+c26fd949 Add timeline blank clips and groove templates
+4e971aa0 Add cut marker regions and harden print capture
+92349fb2 Beta checkpoint v1.0.5b3
+aaa4ec2d Refine clip split fades and cut cleanup
+1ec9c85d Fix comp take trimming over muted clips
+a2cfcb7d Add MotorMix HUI control surface support
+e74412c2 Guard NAM AMX toggles behind source mutation gate
+a1eb594a Fix comping clip gesture conflicts
+3fb8e124 Add metronome volume and insert delete all
+186bc2fb Fix clip slip and comp resize bounds
+83027e28 Fix custom universal packer index allocation
+e32aced4 Add clip slip editing
+4fcf39a1 Add dynamic EQ threshold tilt and snap range boundaries
+651a686e Fix plugin picker multi-select probe
+54b9f7ab Add plugin picker search multi-select
+11cb0ce6 Refine comping gestures and loop record ghosts
+8c4230eb Promote loop record laps to comp history
+b9246f50 Fix contract drift and locale tokens
+82441738 Add control surface grouping
+d3cec85f Fix X-Touch One master control and numbering
+22a9c671 Guard live input channel copies
+d97672e1 Polish plugin workflows and NAM recall
+e822b363 Add insert rack disable override
+5b9dc2d3 Fix Listen Bus inserts and custom build numbering
+0b643b25 Fix Listen Bus insert popup height
+8e6ae7e4 Fix beta contract drift and docs sync
+3e4ecf29 Add Listen Bus and CoreAudio diagnostics
+b4fc2b4c Beta checkpoint v1.0.5b2
+cafd80ba Beta checkpoint v1.0.5b1
+64204051 Support patch beta checkpoint targets
+c1f609b0 Harden release notarization context
 """
