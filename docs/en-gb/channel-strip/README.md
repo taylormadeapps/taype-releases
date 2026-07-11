@@ -10,6 +10,8 @@ Every track has a built-in channel strip. Signal flows through the strip in this
 
 Drag knobs vertically, or hover and use the mouse wheel. Knobs with a neutral centre hold at zero so crossing the centre feels deliberate. Faders track continuously through unity for smooth rides.
 
+If wheel edits get in the way of scrolling the mixer, enable **Preferences > General > Disable scroll on mixer knobs**. It is off by default and affects mixer knobs only; fader wheel trim remains available.
+
 Double-click gain and balance knobs to reset them to zero. Double-click the fader to return it to unity. Double-click editable readouts such as fader dB or pan where shown to type an exact value.
 
 Section headers collapse or reopen on double-click across the title band. The chevron is a single-click toggle. Section power and section visibility are separate: a bypassed section can remain open and visibly dimmed.

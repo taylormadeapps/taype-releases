@@ -109,7 +109,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Maximum vertical zoom | Option+Shift+= |
 | Mouse wheel | Vertical scroll or focused lane scroll |
 | Cmd+wheel | Horizontal zoom |
-| Option+wheel | Vertical zoom anchored to selected track |
+| Option+wheel | Vertical zoom anchored to the selected track, or the pointer when enabled in General preferences |
 | Right-drag horizontally | Timeline pan |
 | Right-drag vertically | Timeline zoom |
 

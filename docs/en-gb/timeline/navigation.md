@@ -6,7 +6,7 @@ Use the wheel, trackpad, scrollbars, or focused arrow keys to move around the re
 
 ## Zooming
 
-Use `=` and `-` for horizontal zoom, **Option+-** to reset, **Cmd+wheel** for mouse zoom, and **Option+wheel** for vertical zoom. Horizontal zoom centres on the tape head. Vertical zoom stays anchored around the selected track so the track you are working on remains in view.
+Use `=` and `-` for horizontal zoom, **Option+-** to reset, **Cmd+wheel** for mouse zoom, and **Option+wheel** for vertical zoom. Horizontal zoom centres on the tape head by default, while vertical zoom centres on the selected track. Enable **Preferences > General > Zoom at mouse position** to anchor Cmd+wheel, Option+wheel, and pinch zoom beneath the pointer instead; keyboard and right-drag zoom keep their existing anchors.
 
 ## E-Zoom
 
