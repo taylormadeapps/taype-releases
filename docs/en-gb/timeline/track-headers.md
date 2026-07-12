@@ -17,6 +17,19 @@ Track headers hold the controls you need before reaching for the mixer.
 
 The follow-playhead control lives in the timeline header toolbar, not inside each track header. It keeps playback visible while leaving selected-track focus alone.
 
+## Multi-output instruments
+
+When a VSTi exposes enabled auxiliary stereo outputs, ordinary audio tracks
+show an **Instrument Outputs** section in the Input menu. Open the source-track
+submenu, then choose a pair such as `3/4` to feed that output into the
+destination before its trim, preamp, EQ, compressor, inserts, fader, and sends.
+Turn on **MON** to hear the route, or arm the destination to record it.
+
+The instrument's first stereo output always remains on its own track. Assigned
+auxiliary outputs stop being discarded; unassigned outputs remain silent. If a
+saved output is unavailable, TayPE keeps the assignment and reports it instead
+of substituting another output.
+
 ## Selection
 
 Click a header to select the track. Cmd-click toggles tracks into the visible selection. Shift-click extends a range. The first selected track remains the primary track for the docked strip and focused hardware control.
