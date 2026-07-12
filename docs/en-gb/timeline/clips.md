@@ -67,6 +67,14 @@ screen, so provider analysis remains visible or retriggerable in the plug-in.
 The editor uses a normal macOS window. Keys the plug-in does not use pass
 through to TayPE, so transport and session shortcuts remain available without
 moving focus back to the main window.
+Each ARA2 plug-in also remembers its last-used controls globally, across clips,
+reels, and TayPE launches. This is a provider default, not hidden per-clip edit
+history: committed ARA work remains derived audio. Choosing a provider from the
+ARA2 menu loads it ready for editing; moving between clips then keeps that
+provider ready and replaces only the clip content. Provider controls carry
+across to the next clip. Provider transport controls can play, pause, seek, and
+set a cycle in TayPE; their clip-local positions are mapped onto the clip's
+place in the main timeline.
 TayPE's main transport auditions edits live while the window is open. Each
 later ARA2 pass works from
 the clip's current derived audio, so you can commit work in one provider and
