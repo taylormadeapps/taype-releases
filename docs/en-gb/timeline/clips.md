@@ -30,7 +30,7 @@ Drag clip edges to trim. The original media stays intact; the clip simply plays 
 
 ## Slipping
 
-Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open for Melodyne editing.
+Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open in an ARA2 editor.
 
 ## Clip Properties
 
@@ -52,8 +52,23 @@ Clip gain adjusts the clip before the channel strip. Fades can be toggled at the
 
 Copy and paste clips between compatible tracks. TayPE preserves timing and clip data where the destination supports it.
 
-## Melodyne
+## ARA2
 
-Open Melodyne from a clip. It is clip-scoped ARA editing, not a normal insert slot.
+Choose an editor from the top-level **ARA2** menu, then open it from a clip.
+Melodyne is the default when you have not selected another available ARA2
+plug-in. ARA2 editing is clip-scoped, not a normal insert slot.
 
-Use Option-double-click on a single selected clip, the Melodyne glyph on a prepared clip, or Clip Properties where Melodyne is available. A clip being edited in Melodyne is protected from destructive clip edits until the editor closes. Committed Melodyne work stays attached to the clip and can be edited again or reverted.
+Use Option-double-click on a single selected clip, the ARA2 glyph on a prepared
+clip, or Clip Properties. Clip Properties names the selected provider in its
+**Transfer to** and **Edit in** buttons. A clip being edited is protected from
+destructive clip edits until the editor closes. The provider window opens as
+soon as the clip session is ready; TayPE does not hold it behind an analysis
+screen, so provider analysis remains visible or retriggerable in the plug-in.
+The editor uses a normal macOS window. Keys the plug-in does not use pass
+through to TayPE, so transport and session shortcuts remain available without
+moving focus back to the main window.
+TayPE's main transport auditions edits live while the window is open. Each
+later ARA2 pass works from
+the clip's current derived audio, so you can commit work in one provider and
+then process that result in another. **Restore OG Audio** removes the ARA2
+derived work while preserving the clip's existing stretch or pitch settings.

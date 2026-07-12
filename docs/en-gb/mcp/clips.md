@@ -32,25 +32,28 @@ Required parameters:
 |---|---|
 | `clip_id` | Clip ID |
 
-## Melodyne / ARA
+## ARA2
 
-Melodyne opens from clips, not as a normal insert. These tools are available when the ARA/Melodyne lane is available in the running build.
+ARA2 providers open from clips, not as normal inserts. Choose the global
+provider from TayPE's **ARA2** menu; Melodyne is the default only when no other
+choice has been stored. These tools are available when the ARA2 lane is present
+in the running build.
 
 ### `ara2_transfer`
 
-Transfer a clip's audio to Melodyne for pitch/time editing. Playback may continue; recording must be stopped.
+Transfer a clip's current audible audio to the selected provider. Playback may continue; recording must be stopped.
 
 ### `ara2_commit`
 
-Render Melodyne's processed output and make it the clip's committed playback source. Playback may continue; recording must be stopped.
+Render the provider's processed output and make it the clip's committed playback source. Playback may continue; recording must be stopped.
 
 ### `ara2_revert`
 
-Remove Melodyne from a clip and return to the raw source or rebuilt stretch-only audio. Playback may continue; recording must be stopped.
+Restore the clip's original audio layer, rebuilding stretch/pitch-only audio when required. Playback may continue; recording must be stopped.
 
 ### `ara2_status`
 
-Return the current Melodyne state for a clip: none, analysing, editing, or committed.
+Return the current ARA2 state for a clip: `none`, `editing`, or `melodyned`.
 
 ARA tools use:
 
