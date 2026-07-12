@@ -34,7 +34,11 @@ Hold Cmd+Option and drag the clip body to move the audio inside the clip without
 
 ## Clip Properties
 
-Open Clip Properties for exact clip details and destructive clip actions. **Reverse** renders a reversed copy through the model transaction system, so the reel owns the derived audio and undo/redo treats the change like any other clip edit.
+Double-click a MIDI-backed clip to open its MIDI editor. Double-click any other
+clip, or Cmd+double-click any clip, to open Clip Properties for exact clip
+details and destructive clip actions. **Reverse** renders a reversed copy
+through the model transaction system, so the reel owns the derived audio and
+undo/redo treats the change like any other clip edit.
 
 ### Media Paths
 
