@@ -12,6 +12,8 @@ While recording, TayPE shows a live recording clip so you can see the pass formi
 
 Audio tracks record audio input. Instrument tracks can record MIDI and render through the instrument path depending on the track setup. Comp buses can capture shared instrument output into child takes where that workflow is active.
 
+New comp child tracks use the comp bus name followed by an incremental number, such as `Lead Vocal - 1`, `Lead Vocal - 2`, and `Lead Vocal - 3`.
+
 ## Timing
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
