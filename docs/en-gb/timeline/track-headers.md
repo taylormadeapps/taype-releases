@@ -34,6 +34,19 @@ of substituting another output.
 
 Click a header to select the track. Cmd-click toggles tracks into the visible selection. Shift-click extends a range. The first selected track remains the primary track for the docked strip and focused hardware control.
 
+When exactly one ordinary or comping bus is selected, **Add Audio Track**
+creates the new track inside that bus. Ordinary buses receive it as a routed
+input. Comping buses receive a new child take track with the bus input and an
+incremental name such as `Lead Vocal - 1`. Multi-selection disables this
+automatic parenting.
+
+Turn on **Grouped Track Controls** from the Tracks menu, with **Cmd+G**, or
+from the **GRP** transport indicator to control a selection together. Clicking
+Mute, Solo, MON, or Record on a selected arranger header then applies the
+clicked track's new state to every compatible selected track. Turn grouped
+controls off to change only the clicked track. Input routing stays
+primary-track only.
+
 ## Tag Cloud
 
 The Tag popup lets you add labels such as `Vocal`, `Guitar`, `Print`, or your own categories. Tags help with filtering, selection, and keeping large reels sane.

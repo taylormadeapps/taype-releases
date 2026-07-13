@@ -56,3 +56,5 @@ Listen Bus settings are saved globally in TayPE, not in the reel, and are not in
 ## Sandboxing
 
 Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, restart its sandbox from the insert tools.
+
+Plug-in editor windows come to the front without changing the sandbox helper's application role. Switching to another app therefore does not trigger an editor-driven sandbox priority change that can disrupt plug-in DSP.
