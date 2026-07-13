@@ -2,6 +2,8 @@
 
 TayPE opens into a working reel with a timeline, a transport, a selected track, and a channel strip. The aim is simple: get audio or MIDI onto tracks, shape it, and keep committing useful takes.
 
+During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label, and leaves the front when you switch to another app.
+
 ## The Two Views
 
 TayPE has two main work views:

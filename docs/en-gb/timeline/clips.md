@@ -24,6 +24,12 @@ Cmd-drag across empty space on one track to create a silent clip for the dragged
 
 Split selected clips at the playhead with `\`. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
 
+## Channel Conversion
+
+Use **Edit > Conversion** to convert selected clips between mono and stereo. Use **Tracks > Conversion** to apply the same conversion to every clip on the selected tracks.
+
+Conversion replaces the clip's stored audio with a new reel-owned WAV. If the clip already has committed derived audio from stretch, pitch, reverse, or ARA2 work, TayPE converts that current audio rather than reverting to the original source. Converting a clip that is already in the requested channel format is a valid no-op.
+
 ## Trimming
 
 Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes cannot initiate an edge resize. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.

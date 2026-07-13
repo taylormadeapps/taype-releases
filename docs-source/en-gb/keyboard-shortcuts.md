@@ -33,7 +33,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Duplicate selected clips | D |
 | Select clips on selected tracks | Cmd+Shift+A |
 | Join clips | J |
-| Bounce selected clips to stem | B |
+| Offline bounce selected clips to stem | B |
 | Bounce selected clips to external WAV | Option+B |
 | Disable selected clips | Backspace |
 | Delete selected clips | Delete |
@@ -47,7 +47,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Bulk add tracks | Cmd+T |
 | Duplicate selected track without clips | Cmd+D |
 | Duplicate selected track with clips | Option+D |
-| Bounce selected tracks to stem | Cmd+B |
+| Offline bounce selected tracks to stem | Cmd+B |
 | Archive selected track | Cmd+Backspace |
 | Delete selected track | Cmd+Delete |
 | Move selected track up / down | Cmd+Option+Up / Cmd+Option+Down |
