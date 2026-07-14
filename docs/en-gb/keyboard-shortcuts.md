@@ -139,6 +139,10 @@ The Record shortcut follows your selected record mode. **Return** commits and re
 
 ## Virtual Keyboard Mode
 
+With the Virtual Keyboard and a plug-in window open, QWERTY note keys continue
+to work while the plug-in window has focus. Releasing the computer key releases
+the MIDI note; hiding or closing the plug-in window also clears held notes.
+
 When the virtual keyboard popup is open, it consumes keyboard input so note keys do not accidentally trigger timeline shortcuts. Close it to return shortcuts to the main UI.
 
 ## Floating Windows
