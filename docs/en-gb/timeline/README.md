@@ -24,6 +24,20 @@ A track can be current, focused, muted, soloed, record-armed, monitored, archive
 
 Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, and disabling clips change the reel state without rewriting the original media. Splitting clips adds the current default fade at the new cut edges. Use checkpoints when you want a named recovery point before a bigger move.
 
+## Printing wet stems with JD's Law
+
+In the Print Mix, Print Loop, or Print Marker Ranges export window, select
+**Stems**, choose the tracks or buses you want, then enable **JD's Law**. TayPE
+prints each selected stem through its downstream buses and the master, one at
+a time. This includes the downstream mix processing rather than only the
+direct post-fader stem.
+
+Muted targets remain muted. If **Master** is also selected, TayPE prints the
+ordinary full mix once and then prints the wet stems. Live mode plays every
+pass in real time; Offline mode performs the same sequence without sending it
+to the speakers. Any solo state that existed before printing is restored when
+the operation finishes or is cancelled.
+
 ## Related Timeline Workflows
 
 * [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
