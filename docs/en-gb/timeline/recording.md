@@ -24,6 +24,10 @@ Play / Pause is blocked while a recording pass is active; finish the take with *
 
 In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
 
+For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Count-in does not shift the first lap, and editing one take does not expose or change MIDI from another take.
+
+In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces.
+
 When a recorded take overlaps the head or tail of an existing clip, TayPE trims the older clip to the new take boundary with only a tiny anti-click fade instead of creating a long automatic crossfade. Recording inside an existing clip still splits the older clip around the new take.
 
 ## External Sync Recording
