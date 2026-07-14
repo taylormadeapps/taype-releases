@@ -43,3 +43,5 @@ The comp-bus MON lamp now follows the same colour rules as an ordinary track. It
 ## Popup Help
 
 With **Help > Popup Help** enabled, controls show hover explanations. Routing selectors always reveal the full selected route on hover.
+
+Loaded insert slots list their complete gesture set in Popup Help. Click toggles the plug-in window; Cmd-click toggles bypass; Option-click enables or disables it; Cmd-Option-click deletes it; drag moves it; and Cmd-drag copies it. If plug-in windows are hidden, clicking an insert restores them and brings that plug-in forward. Option-P hides or restores all open plug-in windows.
