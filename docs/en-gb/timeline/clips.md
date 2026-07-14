@@ -46,6 +46,12 @@ details and destructive clip actions. **Reverse** renders a reversed copy
 through the model transaction system, so the reel owns the derived audio and
 undo/redo treats the change like any other clip edit.
 
+Pitch-shifted clips show their combined semitone-and-cent shift beside the
+sharp glyph, rounded to the nearest whole semitone. With clips selected, use
+Option+Up/Down to shift them by one semitone or Option+Shift+Up/Down to shift
+them by one octave. Multi-selection shifts are relative, clamp at two octaves,
+preserve cents, and form one undo step.
+
 ### Media Paths
 
 Clip Properties shows reel-owned media paths relative to the reel where possible. **Reel Store Audio** shows the stored audio inside the reel, and **Import Source** shows the original imported file when TayPE still knows it. Duplicate actual/store paths are collapsed, and unavailable rows display `n/a`.
