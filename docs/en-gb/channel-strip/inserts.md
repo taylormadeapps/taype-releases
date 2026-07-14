@@ -13,11 +13,27 @@ In search results, Shift-click selects a visible range and Command-click toggles
 
 Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
 
+Click an enabled populated insert row to toggle its plug-in window open or
+closed. Command+Option-click deletes that insert. Command-click still toggles
+its bypass state, while Option-click disables or re-enables it.
+
+Press **Option+P** to hide every open plug-in window, then press it again to
+restore the same windows. This does not close or reload the plug-ins.
+Clicking an insert while the windows are hidden restores the window set and
+brings the clicked plug-in to the front.
+
 In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
 
 In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
 
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+
+Taype Drive accepts mono and stereo insert buses. Its channel selector offers
+**Mono**, **Stereo**, and **T-bone**. T-bone uses separate Drive settings for
+the left and right channels and is available when the host supplies stereo.
+Power, XTALK, and wet/dry remain global. The dry side of wet/dry is the original
+input before XTALK, and Taype Drive follows the NAM preamp quality selected in
+Preferences when it next loads a model.
 
 If a matching plug-in preset is named `Default`, TayPE loads it automatically when you add that plug-in. The plug-in window preset menu includes **Save as Default** to update that default from the current plug-in state.
 
