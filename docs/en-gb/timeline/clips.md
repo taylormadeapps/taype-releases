@@ -47,7 +47,8 @@ through the model transaction system, so the reel owns the derived audio and
 undo/redo treats the change like any other clip edit.
 
 On macOS, the MIDI editor's green window button enters and exits full-screen
-mode.
+mode. Selecting another MIDI clip while the editor remains open keeps that
+full-screen window posture.
 
 Pitch-shifted clips show their combined semitone-and-cent shift beside the
 sharp glyph, rounded to the nearest whole semitone. With clips selected, use
