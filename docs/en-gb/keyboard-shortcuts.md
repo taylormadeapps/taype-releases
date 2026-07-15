@@ -27,6 +27,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 |---|---|
 | Split selected clips at playhead | `\` |
 | Split selected clips at loop braces | `Cmd+\` |
+| Split selected clips at visible grid | `Shift+\` |
 | Split all clips at playhead | `Option+\` |
 | Split all clips at loop braces | `Cmd+Option+\` |
 | Toggle fade | F |

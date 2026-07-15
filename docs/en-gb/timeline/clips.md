@@ -22,7 +22,7 @@ Cmd-drag across empty space on one track to create a silent clip for the dragged
 
 ## Splitting
 
-Split selected clips at the playhead with `\`. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
+Split selected clips at the playhead with `\`. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
 
 ## Channel Conversion
 

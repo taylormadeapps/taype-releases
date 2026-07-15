@@ -28,6 +28,10 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
 
+In Taype Rooms, the Previous and Next controls step through IRs in natural
+filename order within the current browser folder, wrapping at either end. Use
+the IR selector when you want to move to a different folder or library.
+
 Taype Drive accepts mono and stereo insert buses. Its channel selector offers
 **Mono**, **Stereo**, and **T-bone**. T-bone uses separate Drive settings for
 the left and right channels and is available when the host supplies stereo.
@@ -42,6 +46,8 @@ leaving the highs fully dry. The unselected band always bypasses Drive, even
 with MIX fully up, so the split point defines which part is saturated. This is
 useful for keeping bass solid beneath heavy saturation or preserving clean
 transients and air above it. **OFF** returns MIX to normal broadband blending.
+MIX uses a linear dry/wet law, avoiding a level lift around the midpoint when
+the dry and saturated signals remain strongly correlated.
 Taype Drive follows the NAM preamp quality selected in Preferences when it next
 loads a model.
 
