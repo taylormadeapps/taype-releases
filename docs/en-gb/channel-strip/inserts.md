@@ -35,6 +35,10 @@ Power, XTALK, and wet/dry remain global. The dry side of wet/dry is the original
 input before XTALK, and Taype Drive follows the NAM preamp quality selected in
 Preferences when it next loads a model.
 
+The Taype Drive window is uniformly resizable. Its NAM profile browser opens in
+front of the Drive window and follows it when TayPE moves between the foreground
+and background.
+
 If a matching plug-in preset is named `Default`, TayPE loads it automatically when you add that plug-in. The plug-in window preset menu includes **Save as Default** to update that default from the current plug-in state.
 
 ## Bypass vs Disable
@@ -72,5 +76,9 @@ Listen Bus settings are saved globally in TayPE, not in the reel, and are not in
 ## Sandboxing
 
 Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, restart its sandbox from the insert tools.
+
+When the sandbox crashes on a handled fatal signal, the crash feedback report
+includes the sandbox process's best-effort stack trace. Nothing is submitted
+until you choose Send, Copy, or Save in the report window.
 
 Plug-in editor windows come to the front without changing the sandbox helper's application role. Switching to another app therefore does not trigger an editor-driven sandbox priority change that can disrupt plug-in DSP.
