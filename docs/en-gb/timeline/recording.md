@@ -26,6 +26,10 @@ Play / Pause is blocked while a recording pass is active; finish the take with *
 
 In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
 
+Choose **Loop Record (Dub)** when you want to build a layered part one lap at a time through the same microphone or instrument. Each completed lap plays immediately while you record the next. On stop, every new lap remains enabled as a separate take beneath the comp bus; clips that were already enabled or disabled keep their state.
+
+Dub reserves two live loop buffers for each armed target before recording starts. The total is capped at 512 MiB. If the current loop and armed tracks need more, TayPE refuses to start the pass and reports the required memory; shorten the loop or arm fewer tracks. Recording more laps does not consume more buffer memory, although the recording and take history continue to grow on disk.
+
 For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Count-in does not shift the first lap, and editing one take does not expose or change MIDI from another take.
 
 In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces.
@@ -54,6 +58,6 @@ For bus tracks, the label reads **Sender** for orientation only; bus routing is 
 
 ## Record Follows Select and Auto Monitor
 
-Record Follows Select arms the selected track as you move around the reel. Auto Monitor keeps eligible armed tracks monitored so live input and instrument auditioning stay ready without extra clicks.
+Record Follows Select arms the selected track as you move around the reel. It includes comp buses but excludes ordinary buses. Auto Monitor follows the same scope, keeping armed comp buses monitored as well as regular recording tracks. Arming a comp bus with an instrument always enables monitoring so the instrument is immediately playable, even when both workflow preferences are off.
 
 These are session workflow controls. They do not change the recorded media until you actually start a take.

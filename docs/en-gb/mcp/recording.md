@@ -8,6 +8,10 @@ Read or change the active record-stop behaviour.
 
 Read or change loop-record behaviour.
 
+Accepted values are `auto_punch`, `loop`, `dub`, and `sooper_looper`. `dub`
+plays each completed lap immediately during the next lap and commits all new
+laps enabled as separate comp takes.
+
 ### `record_start`
 
 Start recording armed tracks.
