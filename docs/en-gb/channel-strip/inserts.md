@@ -31,9 +31,19 @@ TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Ta
 Taype Drive accepts mono and stereo insert buses. Its channel selector offers
 **Mono**, **Stereo**, and **T-bone**. T-bone uses separate Drive settings for
 the left and right channels and is available when the host supplies stereo.
-Power, XTALK, and wet/dry remain global. The dry side of wet/dry is the original
-input before XTALK, and Taype Drive follows the NAM preamp quality selected in
-Preferences when it next loads a model.
+Use **L/R** for independent left and right processing, or **M/S** to process the
+centre and sides independently. XTALK is unavailable in M/S because the signal
+has already been separated into Mid and Side.
+
+Each T-bone lane has its own **MIX** control. Right-click MIX to open **MIX
+SPLIT**. **ABOVE** applies Drive and MIX only above the selected split while
+leaving the lows fully dry; **BELOW** applies them only below the split while
+leaving the highs fully dry. The unselected band always bypasses Drive, even
+with MIX fully up, so the split point defines which part is saturated. This is
+useful for keeping bass solid beneath heavy saturation or preserving clean
+transients and air above it. **OFF** returns MIX to normal broadband blending.
+Taype Drive follows the NAM preamp quality selected in Preferences when it next
+loads a model.
 
 The Taype Drive window is uniformly resizable. Its NAM profile browser opens in
 front of the Drive window and follows it when TayPE moves between the foreground
