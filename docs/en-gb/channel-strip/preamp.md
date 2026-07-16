@@ -22,6 +22,15 @@ NAM mode loads amp, pedal, or preamp captures from the profile browser. Local pr
 
 Changing the selected NAM profile keeps the current NAM Drive and Output settings, so you can compare models without losing your gain staging.
 
+## Wet/Dry Mix Split
+
+Right-click the Wet/Dry knob to open **MIX SPLIT**. Choose **ABOVE** to add
+preamp colour only above the crossover, or **BELOW** to add it only below the
+crossover. The other side stays dry, including when Wet/Dry is at 100%.
+
+Choose **OFF** for the normal full-band Wet/Dry control. A small coloured dot
+on the knob shows when a split is active.
+
 ### Model Quality
 
 Preferences > NAM provides three global preamp quality choices: **Efficient**, **Balanced**, and **Quality**. Balanced is the default.

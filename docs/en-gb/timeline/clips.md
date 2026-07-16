@@ -72,6 +72,19 @@ of zoom or remembered note length. Snap-off uses the exact pointer time.
 When moved notes overlap unselected notes on the same pitch and MIDI channel,
 the moved notes win: covered notes are removed, edge overlaps are trimmed, and
 a longer underlying note is split around the dropped note.
+During playback, the piano roll follows the arranger's Follow setting with the
+same paged behaviour, including when the transport begins before the open clip.
+Home and End seek to the open MIDI clip boundaries and horizontally page the
+piano roll to reveal the destination even when it was previously off-screen.
+While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
+horizontally around its visible playhead, falling back to the viewport centre.
+The configured split shortcut cuts selected notes crossing the shared
+playhead, or every crossing note when nothing is selected, without splitting
+the arranger clip behind the editor.
+With no note selection, plain Left and Right move the shared playhead by the
+arranger's visible ruler tick instead of scrolling the piano roll. When notes
+are selected, Left and Right continue to nudge those notes by one MIDI quantise
+interval.
 
 Pitch-shifted clips show their combined semitone-and-cent shift beside the
 sharp glyph, rounded to the nearest whole semitone. With clips selected, use

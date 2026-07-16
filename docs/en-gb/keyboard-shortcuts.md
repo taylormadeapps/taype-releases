@@ -14,8 +14,8 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | P | Play / pause (blocked while recording) |
 | Z | Stop / escape pass |
 | Return | Record |
-| Home / Fn+Left | First clip boundary in the arranger, far-left mixer channel, or focused MIDI clip start |
-| End / Fn+Right | Last clip boundary in the arranger, far-right mixer channel, or focused MIDI clip end |
+| Home / Fn+Left | First clip boundary in the arranger, far-left mixer channel, or focused MIDI clip start (revealed in the piano roll) |
+| End / Fn+Right | Last clip boundary in the arranger, far-right mixer channel, or focused MIDI clip end (revealed in the piano roll) |
 | Page Up / Fn+Up | Top arranger track, page mixer panels upward, RTZ in Reels, or highest used MIDI note |
 | Page Down / Fn+Down | Bottom arranger track, page mixer panels downward, last clip boundary in Reels, or lowest used MIDI note |
 | Cmd+P | Print mix |
@@ -23,6 +23,16 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | C | Toggle metronome |
 | ' | Tap tempo |
 | Cmd+/ | Set cut zero at playhead |
+
+While the MIDI editor is active, Home, End, Page Up, and Page Down stay with
+the piano roll in normal, maximised, and full-screen window postures. Moving
+focus away, minimising, or closing the editor returns them to the main window.
+Plain Left and Right move selected MIDI notes by one quantise interval; with no
+note selection they move the shared playhead by the arranger's visible ruler
+tick and do not scroll the piano roll.
+The configured split shortcut cuts selected notes crossing the playhead, or
+all crossing notes when nothing is selected. It does not split the arranger
+clip while the MIDI editor is active.
 
 ### Editing
 
@@ -84,7 +94,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Cycle automation display | Shift+A |
 | Toggle archive view | X |
 | Toggle spill view | G |
-| Toggle E-Zoom | E |
+| Toggle contextual E-Zoom | E |
 | Toggle snap | S |
 | Toggle snap mode | Option+S |
 | Snap grid finer / coarser | Shift+. / Shift+, |
@@ -108,7 +118,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Horizontal zoom in / out | = / - |
 | Reset horizontal zoom | Option+- |
 | Maximum horizontal zoom | Option+= |
-| Vertical zoom in / out | Shift+= / Shift+- |
+| Vertical zoom in / out | Shift+= / Shift+- (horizontal piano-roll zoom while the MIDI editor is active) |
 | Reset vertical zoom | Option+Shift+- |
 | Maximum vertical zoom | Option+Shift+= |
 | Mouse wheel | Vertical scroll or focused lane scroll |

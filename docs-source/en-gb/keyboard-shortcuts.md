@@ -14,12 +14,19 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | P | Play / pause (blocked while recording) |
 | Z | Stop / escape pass |
 | Return | Record |
-| Home | Return to zero |
+| Home / Fn+Left | First clip boundary in the arranger, far-left mixer channel, or focused MIDI clip start |
+| End / Fn+Right | Last clip boundary in the arranger, far-right mixer channel, or focused MIDI clip end |
+| Page Up / Fn+Up | Top arranger track, page mixer panels upward, RTZ in Reels, or highest used MIDI note |
+| Page Down / Fn+Down | Bottom arranger track, page mixer panels downward, last clip boundary in Reels, or lowest used MIDI note |
 | Cmd+P | Print mix |
 | Cmd+Option+P | Print loop |
 | C | Toggle metronome |
 | ' | Tap tempo |
 | Cmd+/ | Set cut zero at playhead |
+
+While the MIDI editor is visible and not minimised, Home, End, Page Up, and
+Page Down stay with the piano roll in normal, maximised, and full-screen window
+postures. Minimising or closing the editor returns them to the main window.
 
 ### Editing
 

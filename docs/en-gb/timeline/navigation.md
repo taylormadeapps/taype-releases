@@ -12,6 +12,8 @@ Use `=` and `-` for horizontal zoom, **Option+-** to reset, **Cmd+wheel** for mo
 
 E-Zoom is the quick way to enlarge the working track area without changing the whole app scale. It is useful for clip edits and comping.
 
+With the MIDI editor open, `E` fits that whole MIDI clip across the piano roll instead of zooming the arranger. Press `E` again to restore the MIDI editor's previous horizontal zoom and scroll position.
+
 ## Seeking
 
 Click the ruler to seek. Option-click in the timeline can seek even over clips. During playback, repeated left/right navigation steps from a stable ruler anchor so the playhead can move predictably.

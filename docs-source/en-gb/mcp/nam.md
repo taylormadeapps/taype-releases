@@ -22,7 +22,8 @@ List local profile packages and models.
 
 ### `set_mix_summing` / `get_mix_summing` / `clear_mix_summing`
 
-Manage NAM summing on the master bus.
+Manage NAM summing on the master bus. `mix_band_mode` (`off`, `high`, or `low`)
+and `mix_split_hz` control the Wet/Dry spectral split.
 
 ### `search_tone3000`
 

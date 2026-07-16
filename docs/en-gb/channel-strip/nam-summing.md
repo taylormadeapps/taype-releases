@@ -6,6 +6,16 @@ NAM Summing applies a Neural Amp Modeler profile to the master bus for console o
 
 Choose a summing profile, enable it on the master bus, and level-match the result. Treat it like a mix-bus colour stage: subtle settings usually travel better.
 
+## Wet/Dry Mix Split
+
+Right-click the Wet/Dry knob to open **MIX SPLIT**. **ABOVE** applies summing
+colour only above the crossover; **BELOW** applies it only below. The other
+band stays dry even at 100% Wet. **OFF** restores normal full-band blending,
+and a small coloured dot shows when the split is active.
+
+The split follows the **SUM** control: with SUM off it works on the stereo mix;
+with SUM on it works on each source as it enters true summing.
+
 ## Model Quality
 
 Preferences > NAM provides **Efficient**, **Balanced**, and **Quality** choices for summing models. Balanced is the default. Scalable packages resolve the choice against their own model tiers; non-scalable models remain at native quality.
