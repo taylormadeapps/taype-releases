@@ -57,6 +57,12 @@ New notes initially use velocity 90 and the current quantise length. Selecting
 one note makes its length and velocity the defaults for later note entry;
 resizing it or changing its velocity updates those defaults. With no notes
 selected, changing quantise sets the entry length while retaining velocity.
+Each newly created note auditions briefly through the editor instrument.
+With snap enabled, its start follows the selected MIDI quantise grid regardless
+of zoom or remembered note length. Snap-off uses the exact pointer time.
+When moved notes overlap unselected notes on the same pitch and MIDI channel,
+the moved notes win: covered notes are removed, edge overlaps are trimmed, and
+a longer underlying note is split around the dropped note.
 
 Pitch-shifted clips show their combined semitone-and-cent shift beside the
 sharp glyph, rounded to the nearest whole semitone. With clips selected, use
