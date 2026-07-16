@@ -79,12 +79,27 @@ This does not change the selected quantise grid. With snap enabled, that MIDI
 quantise grid controls note entry, movement, resizing, nudging, and editor seeks.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
+The footer presents the division, Strength, and Capture settings before the
+Quantise action. The wider division menu also offers straight triplets and captured hardware
+grooves. Divisions with available grooves open a single submenu containing
+Straight and the machine-labelled patterns; other divisions remain direct menu
+choices. A selected groove repeats from Cut zero across four bars. Its timing
+points appear as the quantise overlay while the main beat grid stays straight.
+Moving or trimming the clip does not automatically re-quantise it: press
+Quantise again when you want the notes moved to the newly positioned groove.
+TayPE refreshes its factory patterns in the Grooves folder inside TAPE_HOME at
+startup. You can add your own four-bar JSON groove files there; TayPE loads them
+the next time it starts and leaves them untouched.
 Each newly created note auditions briefly through the editor instrument.
 With snap enabled, its start follows the selected MIDI quantise grid regardless
 of zoom or remembered note length. Snap-off uses the exact pointer time.
 When moved notes overlap unselected notes on the same pitch and MIDI channel,
 the moved notes win: covered notes are removed, edge overlaps are trimmed, and
 a longer underlying note is split around the dropped note.
+The MIDI editor never leaves two notes overlapping on the same pitch and MIDI
+channel. Quantising or otherwise moving notes trims the earlier note to the
+later start; exact-start collisions keep the note that was later before the
+edit. Chords and notes on different MIDI channels are unaffected.
 During playback, the piano roll follows the arranger's Follow setting with the
 same paged behaviour, including when the transport begins before the open clip.
 Home and End seek to the open MIDI clip boundaries and horizontally page the

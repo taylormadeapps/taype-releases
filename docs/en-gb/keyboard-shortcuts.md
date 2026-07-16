@@ -40,6 +40,8 @@ timing, pitch, length, velocity, and MIDI channel.
 The configured split shortcut cuts selected notes crossing the playhead, or
 all crossing notes when nothing is selected. It does not split the arranger
 clip while the MIDI editor is active.
+Plain Q applies the current Quantise settings while the MIDI editor is active;
+it does not toggle the main window's video reference from that context.
 
 ### Editing
 
