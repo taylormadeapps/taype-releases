@@ -30,6 +30,13 @@ focus away, minimising, or closing the editor returns them to the main window.
 Plain Left and Right move selected MIDI notes by one quantise interval; with no
 note selection they move the shared playhead by the arranger's visible ruler
 tick and do not scroll the piano roll.
+Plain Up and Down move selected MIDI notes by one semitone. Cmd+Up and Cmd+Down
+move them by one octave.
+Escape clears selected MIDI notes first and keeps the editor open. Press Escape
+again with no selected notes to close the editor.
+Cmd+C and Cmd+X copy or cut the selected notes. Cmd+V places the earliest
+copied note at the shared playhead while preserving the phrase's relative
+timing, pitch, length, velocity, and MIDI channel.
 The configured split shortcut cuts selected notes crossing the playhead, or
 all crossing notes when nothing is selected. It does not split the arranger
 clip while the MIDI editor is active.

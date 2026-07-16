@@ -58,6 +58,19 @@ window is resized, including the area beyond a short clip.
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to add a note at the snapped pointer position. Dragging empty
 space still marquee-selects, and double-clicking an existing note deletes it.
+When notes are selected, a plain click in empty piano-roll space clears the
+selection without adding a note. Escape does the same on its first press and
+keeps the editor open; a second press with no selected notes closes the editor.
+Cmd-drag draws notes following the pointer pitch; add Shift to lock the whole
+stroke to its starting pitch. Drawn notes keep the remembered note length, with
+each new note starting on the first MIDI quantise line at or after the previous
+drawn or seed note ends—even when the pitch changes. A newly drawn note deletes
+any whole existing note it overlaps on the same pitch and MIDI channel; notes
+on different pitches and channels remain untouched. Option-drag copies and
+moves the selected notes, while Option-click without a drag still deletes the
+clicked note. Cmd+C,
+Cmd+X, and Cmd+V copy, cut, and paste note selections, with paste anchoring the
+earliest note at the shared playhead and preserving the phrase relationships.
 New notes initially use velocity 90 and the current quantise length. Selecting
 one note makes its length and velocity the defaults for later note entry;
 resizing it or changing its velocity updates those defaults. With no notes
@@ -85,6 +98,8 @@ With no note selection, plain Left and Right move the shared playhead by the
 arranger's visible ruler tick instead of scrolling the piano roll. When notes
 are selected, Left and Right continue to nudge those notes by one MIDI quantise
 interval.
+Up and Down move selected notes by one semitone; Cmd+Up and Cmd+Down move them
+by one octave.
 
 Pitch-shifted clips show their combined semitone-and-cent shift beside the
 sharp glyph, rounded to the nearest whole semitone. With clips selected, use
