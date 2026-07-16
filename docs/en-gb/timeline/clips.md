@@ -62,6 +62,8 @@ resizing it or changing its velocity updates those defaults. With no notes
 selected, changing quantise sets the entry length while retaining velocity.
 This does not change the selected quantise grid. With snap enabled, that MIDI
 quantise grid controls note entry, movement, resizing, nudging, and editor seeks.
+Relative snap preserves a moved or resized note edge's original offset from that
+grid; absolute snap places the edge directly on the grid.
 Each newly created note auditions briefly through the editor instrument.
 With snap enabled, its start follows the selected MIDI quantise grid regardless
 of zoom or remembered note length. Snap-off uses the exact pointer time.
