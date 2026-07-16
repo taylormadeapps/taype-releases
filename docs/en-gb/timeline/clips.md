@@ -50,6 +50,10 @@ On macOS, the MIDI editor's green window button enters and exits full-screen
 mode. Selecting another MIDI clip while the editor remains open keeps that
 full-screen window posture.
 
+In the MIDI editor, click an existing note to select it, or click empty
+piano-roll space to add a note at the snapped pointer position. Dragging empty
+space still marquee-selects, and double-clicking an existing note deletes it.
+
 Pitch-shifted clips show their combined semitone-and-cent shift beside the
 sharp glyph, rounded to the nearest whole semitone. With clips selected, use
 Option+Up/Down to shift them by one semitone or Option+Shift+Up/Down to shift
