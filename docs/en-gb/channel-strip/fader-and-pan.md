@@ -4,7 +4,10 @@ The fader is the final track level control before output routing. Pan and width 
 
 ## Fader
 
-Drag for level rides. Double-click to return to unity. The fader follows the visible throw honestly and does not pretend it can travel past its end stops.
+Drag the fader thumb for level rides. Clicking the rail away from the thumb does
+not move or grab the fader. Double-click the thumb to return to unity. The fader
+follows the visible throw honestly and does not pretend it can travel past its
+end stops.
 
 ## Pan and Width
 

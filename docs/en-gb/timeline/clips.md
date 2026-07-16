@@ -48,7 +48,10 @@ undo/redo treats the change like any other clip edit.
 
 On macOS, the MIDI editor's green window button enters and exits full-screen
 mode. Selecting another MIDI clip while the editor remains open keeps that
-full-screen window posture.
+full-screen window posture. Closing and reopening the editor restores its last
+normal window size and position independently of full-screen state.
+The piano-roll rows and time grid always fill the visible editor width when the
+window is resized, including the area beyond a short clip.
 
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to add a note at the snapped pointer position. Dragging empty
@@ -57,6 +60,8 @@ New notes initially use velocity 90 and the current quantise length. Selecting
 one note makes its length and velocity the defaults for later note entry;
 resizing it or changing its velocity updates those defaults. With no notes
 selected, changing quantise sets the entry length while retaining velocity.
+This does not change the selected quantise grid. With snap enabled, that MIDI
+quantise grid controls note entry, movement, resizing, nudging, and editor seeks.
 Each newly created note auditions briefly through the editor instrument.
 With snap enabled, its start follows the selected MIDI quantise grid regardless
 of zoom or remembered note length. Snap-off uses the exact pointer time.
