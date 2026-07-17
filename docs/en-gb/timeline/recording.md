@@ -18,6 +18,8 @@ New comp child tracks use the comp bus name followed by an incremental number, s
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
 
+When a count-in runs before timeline zero or the selected Cut zero, the tape head stays parked until it finishes. The handover happens exactly at the recording boundary, so beat one and the first sample of the backing track begin once.
+
 Instrument takes keep a 250 ms MIDI pickup window before the recording boundary. If you play a note fractionally early and it is still sounding when the take starts, the paired MIDI clip carries that note from its beginning. Notes that finish before the boundary are not included.
 
 The metronome can be toggled on or off from the transport. Its click volume is set in **Audio Preferences** as a global dB level from **-60 dB** to **0 dB**; turn the metronome off when you want it fully muted.

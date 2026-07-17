@@ -56,14 +56,15 @@ The piano-roll rows and time grid always fill the visible editor width when the
 window is resized, including the area beyond a short clip.
 
 In the MIDI editor, click an existing note to select it, or click empty
-piano-roll space to add an unselected note at the snapped pointer position.
-Dragging empty space still marquee-selects. Double-clicking empty space leaves
-that single new note in place and consumes the second click without moving the
-playhead, while double-clicking an existing note deletes it. Right-clicking
-empty space moves the playhead without changing note selection; right-dragging
-a note still edits velocity.
-When notes are selected, a plain click in empty piano-roll space clears the
-selection without adding a note. Escape does the same on its first press and
+piano-roll space to clear any existing note selection and add an unselected
+note at the selected quantise rail at or immediately before the pointer in the
+same gesture; it never jumps to the following rail. This applies to straight,
+triplet, and hardware groove grids. Dragging empty space still marquee-selects.
+Double-clicking empty space leaves that single new note in place and consumes
+the second click without moving the playhead, while double-clicking an existing
+note deletes it. Right-clicking empty space moves the playhead without changing
+note selection; right-dragging a note still edits velocity.
+When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
 shortcut. Cancel, the selection-free Escape close, and the native window close
@@ -76,10 +77,12 @@ the previous drawn or seed note ends—even when the pitch changes. A newly draw
 note deletes any whole existing note it overlaps on the same pitch and MIDI
 channel; notes on different pitches and channels remain untouched. Option-drag
 from a note copies and moves the selected notes, while Option-click without a
-drag still deletes the clicked note. Option-drag from empty space erases notes
-crossed by the pointer as it moves across time and pitch. Option+Shift-click or
-drag locks an eraser to the pitch row where the mouse went down, deleting every
-crossed note on that row without touching neighbouring rows. Cmd+C,
+drag leaves note content unchanged. Cmd+Option-click or drag runs the free
+eraser across time and pitch, whether it begins on a note or in empty space.
+Cmd+Option+Shift-click or drag locks the eraser to the pitch row where the
+mouse went down, deleting every crossed note on that row without touching
+neighbouring rows. Double-clicking a note remains the fastest single-note
+delete gesture. Cmd+C,
 Cmd+X, and Cmd+V copy, cut, and paste note selections, with paste anchoring the
 earliest note at the shared playhead and preserving the phrase relationships.
 The configured clip-duplicate shortcut (`D` in the default profile) duplicates
