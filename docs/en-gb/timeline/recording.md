@@ -18,7 +18,7 @@ New comp child tracks use the comp bus name followed by an incremental number, s
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
 
-When a count-in runs before timeline zero or the selected Cut zero, the tape head stays parked until it finishes. The handover happens exactly at the recording boundary, so beat one and the first sample of the backing track begin once.
+When a count-in runs before timeline zero or the selected Cut zero, the tape head stays parked until it finishes. Live monitoring stays active before transport starts and throughout count-in and pre-roll, but TayPE does not write a parked count-in block into the take, even if its hidden lead-in reaches the punch point. The next block begins exactly at punch so beat one is preserved. During ordinary moving pre-roll, if a block crosses punch, only the part from the exact recording boundary onwards is kept.
 
 Instrument takes keep a 250 ms MIDI pickup window before the recording boundary. If you play a note fractionally early and it is still sounding when the take starts, the paired MIDI clip carries that note from its beginning. Notes that finish before the boundary are not included.
 
@@ -26,13 +26,19 @@ The metronome can be toggled on or off from the transport. Its click volume is s
 
 Play / Pause is blocked while a recording pass is active; finish the take with **Record** or **Stop**.
 
+When you finish a pass, TayPE closes the take to new input, lets any audio block already in progress complete, then commits the media. This keeps the end of the captured audio and MIDI together without admitting anything from a later transport state.
+
 In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
+
+Only a real wrap from the right loop brace to the left starts a new recorded lap. Count-in, pre-roll, an audition pass, or a deliberate transport move cannot create a false lap.
+
+The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
 
 Choose **Loop Record (Dub)** when you want to build a layered part one lap at a time through the same microphone or instrument. Each completed lap plays immediately while you record the next. On stop, every new lap remains enabled as a separate take beneath the comp bus; clips that were already enabled or disabled keep their state.
 
-Dub reserves two live loop buffers for each armed target before recording starts. The total is capped at 512 MiB. If the current loop and armed tracks need more, TayPE refuses to start the pass and reports the required memory; shorten the loop or arm fewer tracks. Recording more laps does not consume more buffer memory, although the recording and take history continue to grow on disk.
+Dub reserves one live feedback-delay ring for each armed target before recording starts. Its exact period follows the loop length and the varispeed captured at the start of the pass, including fractional periods. The total is capped at 512 MiB. If the current loop and armed tracks need more, TayPE refuses to start the pass and reports the required memory; shorten the loop or arm fewer tracks. Recording more laps does not consume more buffer memory, although the recording and take history continue to grow on disk.
 
-For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Count-in does not shift the first lap, and editing one take does not expose or change MIDI from another take.
+For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Loop Record and Loop Record (Dub) keep that MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in. Editing one take does not expose or change MIDI from another take.
 
 In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces.
 
