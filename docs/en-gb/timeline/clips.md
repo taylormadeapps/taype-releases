@@ -67,8 +67,11 @@ note selection; right-dragging a note still edits velocity.
 When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
-shortcut. Cancel, the selection-free Escape close, and the native window close
-button all warn before abandoning uncommitted changes.
+shortcut. If playback is running, Commit stops it before rendering the edited
+MIDI through the instrument; quantising and other note edits remain available
+while playback runs. Recording and Print Mix must be stopped before Commit.
+Cancel, the selection-free Escape close, and the native window close button all
+warn before abandoning uncommitted changes.
 Cmd-drag draws notes following the pointer pitch at each quantised onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
 whole stroke to its starting pitch. Each drawn note fills one selected
