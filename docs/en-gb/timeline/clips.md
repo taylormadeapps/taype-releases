@@ -104,12 +104,18 @@ note entry, movement, resizing, nudging, and editor seeks.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
 The footer presents the division, Strength, and Capture settings before the
-Quantise action. The wider division menu also offers straight triplets and captured hardware
+Quantise action. Capture follows the midpoint between adjacent timing lines, so
+100% reaches every note even across irregular hardware-groove spacing. The
+wider division menu also offers straight triplets and captured hardware
 grooves. Divisions with available grooves open a single submenu containing
 Straight and the machine-labelled patterns; other divisions remain direct menu
 choices. A selected groove repeats from Cut zero across four bars. Its timing
 points are the only vertical timing grid drawn through the note lanes. The
-pinned ruler keeps its normal ticks and labels.
+pinned ruler follows the arranger's current Auto or fixed timeline division.
+When adjacent same-pitch notes overlap after quantising, both timing positions
+stay on their chosen rails and the earlier note shortens to the later onset. If
+several notes land on the same rail, TayPE keeps the longest, or the loudest
+when their lengths tie.
 Moving or trimming the clip does not automatically re-quantise it: press
 Quantise again when you want the notes moved to the newly positioned groove.
 TayPE refreshes its factory patterns in the Grooves folder inside TAPE_HOME at
