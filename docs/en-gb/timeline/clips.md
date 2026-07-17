@@ -57,10 +57,11 @@ window is resized, including the area beyond a short clip.
 
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to add an unselected note at the snapped pointer position.
-Dragging empty space still marquee-selects. Double-clicking empty space moves
-the playhead without leaving the first-click note behind, while double-clicking
-an existing note deletes it. Right-clicking empty space moves the playhead
-without changing note selection; right-dragging a note still edits velocity.
+Dragging empty space still marquee-selects. Double-clicking empty space leaves
+that single new note in place and consumes the second click without moving the
+playhead, while double-clicking an existing note deletes it. Right-clicking
+empty space moves the playhead without changing note selection; right-dragging
+a note still edits velocity.
 When notes are selected, a plain click in empty piano-roll space clears the
 selection without adding a note. Escape does the same on its first press and
 keeps the editor open; a second press with no selected notes closes the editor.
@@ -74,6 +75,11 @@ moves the selected notes, while Option-click without a drag still deletes the
 clicked note. Cmd+C,
 Cmd+X, and Cmd+V copy, cut, and paste note selections, with paste anchoring the
 earliest note at the shared playhead and preserving the phrase relationships.
+The configured clip-duplicate shortcut (`D` in the default profile) duplicates
+the selected notes at the first quantise boundary at or after the selection end
+where the complete group fits without a same-pitch/channel collision. Occupied
+destinations are skipped, phrase timing and note properties are preserved, and
+the copies become the new selection.
 New notes initially use velocity 90 and the current quantise length. Selecting
 one note makes its length and velocity the defaults for later note entry;
 resizing it or changing its velocity updates those defaults. With no notes

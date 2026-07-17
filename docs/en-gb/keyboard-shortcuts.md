@@ -54,7 +54,7 @@ it does not toggle the main window's video reference from that context.
 | Split all clips at loop braces | `Cmd+Option+\` |
 | Toggle fade | F |
 | Slip waveform inside fixed clip | Cmd+Option+drag clip body |
-| Duplicate selected clips | D |
+| Duplicate selected clips / MIDI notes | D |
 | Select clips on selected tracks | Cmd+Shift+A |
 | Join clips | J |
 | Offline bounce selected clips to stem | B |
