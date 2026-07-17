@@ -64,15 +64,22 @@ empty space moves the playhead without changing note selection; right-dragging
 a note still edits velocity.
 When notes are selected, a plain click in empty piano-roll space clears the
 selection without adding a note. Escape does the same on its first press and
-keeps the editor open; a second press with no selected notes closes the editor.
-Cmd-drag draws notes following the pointer pitch; add Shift to lock the whole
-stroke to its starting pitch. Drawn notes keep the remembered note length, with
-each new note starting on the first MIDI quantise line at or after the previous
-drawn or seed note ends—even when the pitch changes. A newly drawn note deletes
-any whole existing note it overlaps on the same pitch and MIDI channel; notes
-on different pitches and channels remain untouched. Option-drag copies and
-moves the selected notes, while Option-click without a drag still deletes the
-clicked note. Cmd+C,
+keeps the editor open; a second press with no selected notes requests close.
+Return commits the MIDI editor instead of triggering the arranger's record
+shortcut. Cancel, the selection-free Escape close, and the native window close
+button all warn before abandoning uncommitted changes.
+Cmd-drag draws notes following the pointer pitch at each quantised onset,
+including smooth diagonal strokes between mouse events; add Shift to lock the
+whole stroke to its starting pitch. Drawn notes keep the remembered note
+length, with each new note starting on the first MIDI quantise line at or after
+the previous drawn or seed note ends—even when the pitch changes. A newly drawn
+note deletes any whole existing note it overlaps on the same pitch and MIDI
+channel; notes on different pitches and channels remain untouched. Option-drag
+from a note copies and moves the selected notes, while Option-click without a
+drag still deletes the clicked note. Option-drag from empty space erases notes
+crossed by the pointer as it moves across time and pitch. Option+Shift-click or
+drag locks an eraser to the pitch row where the mouse went down, deleting every
+crossed note on that row without touching neighbouring rows. Cmd+C,
 Cmd+X, and Cmd+V copy, cut, and paste note selections, with paste anchoring the
 earliest note at the shared playhead and preserving the phrase relationships.
 The configured clip-duplicate shortcut (`D` in the default profile) duplicates
@@ -82,10 +89,12 @@ destinations are skipped, phrase timing and note properties are preserved, and
 the copies become the new selection.
 New notes initially use velocity 90 and the current quantise length. Selecting
 one note makes its length and velocity the defaults for later note entry;
-resizing it or changing its velocity updates those defaults. With no notes
-selected, changing quantise sets the entry length while retaining velocity.
-This does not change the selected quantise grid. With snap enabled, that MIDI
-quantise grid controls note entry, movement, resizing, nudging, and editor seeks.
+resizing it or changing its velocity updates those defaults. Changing quantise
+always sets the entry length while retaining velocity, even when notes are
+selected; the selected notes themselves are unchanged. Reselecting the active
+quantise menu item performs the same entry-length reset. This does not change
+the selected quantise grid. With snap enabled, that MIDI quantise grid controls
+note entry, movement, resizing, nudging, and editor seeks.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
 The footer presents the division, Strength, and Capture settings before the
