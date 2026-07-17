@@ -127,7 +127,7 @@ it does not toggle the main window's video reference from that context.
 | Horizontal zoom in / out | = / - |
 | Reset horizontal zoom | Option+- |
 | Maximum horizontal zoom | Option+= |
-| Vertical zoom in / out | Shift+= / Shift+- (horizontal piano-roll zoom while the MIDI editor is active) |
+| Vertical zoom in / out | Shift+= / Shift+- (vertical pitch-row zoom while the MIDI editor is active) |
 | Reset vertical zoom | Option+Shift+- |
 | Maximum vertical zoom | Option+Shift+= |
 | Mouse wheel | Vertical scroll or focused lane scroll |

@@ -56,8 +56,11 @@ The piano-roll rows and time grid always fill the visible editor width when the
 window is resized, including the area beyond a short clip.
 
 In the MIDI editor, click an existing note to select it, or click empty
-piano-roll space to add a note at the snapped pointer position. Dragging empty
-space still marquee-selects, and double-clicking an existing note deletes it.
+piano-roll space to add an unselected note at the snapped pointer position.
+Dragging empty space still marquee-selects. Double-clicking empty space moves
+the playhead without leaving the first-click note behind, while double-clicking
+an existing note deletes it. Right-clicking empty space moves the playhead
+without changing note selection; right-dragging a note still edits velocity.
 When notes are selected, a plain click in empty piano-roll space clears the
 selection without adding a note. Escape does the same on its first press and
 keeps the editor open; a second press with no selected notes closes the editor.
@@ -84,7 +87,8 @@ Quantise action. The wider division menu also offers straight triplets and captu
 grooves. Divisions with available grooves open a single submenu containing
 Straight and the machine-labelled patterns; other divisions remain direct menu
 choices. A selected groove repeats from Cut zero across four bars. Its timing
-points appear as the quantise overlay while the main beat grid stays straight.
+points are the only vertical timing grid drawn through the note lanes. The
+pinned ruler keeps its normal ticks and labels.
 Moving or trimming the clip does not automatically re-quantise it: press
 Quantise again when you want the notes moved to the newly positioned groove.
 TayPE refreshes its factory patterns in the Grooves folder inside TAPE_HOME at
@@ -105,7 +109,7 @@ same paged behaviour, including when the transport begins before the open clip.
 Home and End seek to the open MIDI clip boundaries and horizontally page the
 piano roll to reveal the destination even when it was previously off-screen.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
-horizontally around its visible playhead, falling back to the viewport centre.
+vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared
 playhead, or every crossing note when nothing is selected, without splitting
 the arranger clip behind the editor.
