@@ -6,8 +6,13 @@ Insert slots host VST3 effects, instruments, hardware inserts, MIDI Out, and Tay
 
 Use the insert picker to choose scanned VST3 plugins, bundled TayPE stock plugins, hardware insert, or MIDI Out. The picker has its own close button, search/filter behaviour, and clear slot actions.
 
-The insert picker is a searchable chooser with `Stock`, `Effects`, and `Instruments` exclusive first-branch tabs. Empty search browses the plug-in folder hierarchy inside the custom picker with a fixed Back/path strip. The selected tab is
-remembered while TayPE is running.
+The insert picker is a searchable chooser with `Stock`, `Effects`, and
+`Instruments` type buttons. Empty search browses the plug-in folder hierarchy
+inside the custom picker with a fixed Back/path strip. Typing in Search turns
+off the active type button and searches every plug-in type allowed in that
+slot. Click a type button to narrow the current results; editing the query
+returns to the all-types search. The last type button you explicitly selected
+is remembered while TayPE is running.
 
 In search results, Shift-click selects a visible range and Command-click toggles separate audio-effect or hardware-insert rows. The picker then shows a footer with selected/addable status text and **Add** so you can load the selected rows in result order from the opened slot onward. Existing inserts in those destination slots are replaced, and TayPE stops when the rack runs out of slots. Instruments and MIDI Out stay single-select because they can only live in slot 1.
 
@@ -67,7 +72,10 @@ In Archive View, active or bypassed insert rows show as offline red and plugin e
 
 ## Instruments and MIDI Out
 
-Instrument inserts and MIDI Out live in the first slot. MIDI Out can send to a Core MIDI destination, keep or force a MIDI channel, and compensate timing with an early-send amount.
+Instrument inserts and MIDI Out live in the first slot. They do not appear in
+search or browse results for track slots 2-8, ordinary buses, or the Listen
+Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
+channel, and compensate timing with an early-send amount.
 
 ## Hardware Inserts
 

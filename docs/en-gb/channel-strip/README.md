@@ -18,6 +18,10 @@ Section headers collapse or reopen on double-click across the title band. The ch
 
 Empty search browses your plug-in
 folders in the insert picker while the Back/path strip stays fixed.
+Typing in Search clears the Stock/Effects/Instruments type filter and searches
+all plug-in types allowed in that slot; click a type button to narrow the
+current results again. Instrument results never appear in track slots 2-8,
+ordinary buses, or the Listen Bus.
 In search results, Shift-click or Command-click enters multi-select mode for
 audio-effect and hardware-insert rows; the footer shows what will fit and
 **Add** loads as many selected rows as fit from the opened slot onward.
