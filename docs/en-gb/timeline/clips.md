@@ -71,14 +71,17 @@ shortcut. Cancel, the selection-free Escape close, and the native window close
 button all warn before abandoning uncommitted changes.
 Cmd-drag draws notes following the pointer pitch at each quantised onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
-whole stroke to its starting pitch. Drawn notes keep the remembered note
-length, with each new note starting on the first MIDI quantise line at or after
-the previous drawn or seed note ends—even when the pitch changes. A newly drawn
-note deletes any whole existing note it overlaps on the same pitch and MIDI
-channel; notes on different pitches and channels remain untouched. Option-drag
-from a note copies and moves the selected notes, while Option-click without a
-drag leaves note content unchanged. Cmd+Option-click or drag runs the free
-eraser across time and pitch, whether it begins on a note or in empty space.
+whole stroke to its starting pitch. Each drawn note fills one selected
+quantise-grid cell, from one grid line to the next, regardless of the
+remembered note length. A stroke started from an existing note begins on the
+first grid line at or after that seed note ends, then fills consecutive cells
+even when the pitch changes. Hardware-groove strokes follow the actual groove
+lines. A newly drawn note deletes any whole existing note it overlaps on the
+same pitch and MIDI channel; notes on different pitches and channels remain
+untouched. Option-drag from a note copies and moves the selected notes, while
+Option-click without a drag leaves note content unchanged. Cmd+Option-click or
+drag runs the free eraser across time and pitch, whether it begins on a note or
+in empty space.
 Cmd+Option+Shift-click or drag locks the eraser to the pitch row where the
 mouse went down, deleting every crossed note on that row without touching
 neighbouring rows. Double-clicking a note remains the fastest single-note
