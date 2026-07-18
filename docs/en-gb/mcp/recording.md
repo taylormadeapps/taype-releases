@@ -23,6 +23,11 @@ Provide `track_id` for a single track or `track_ids` for a multitrack start. If 
 Finalise the active recording pass. This is the low-level MCP take lifecycle,
 not the transport record-button macro.
 
+An initial call made while no recording or retained finalisation is active
+returns `Not recording`; it does not create a failed finalisation generation.
+A valid generation can still retrieve its terminal receipt after recording has
+settled.
+
 The first audio call takes no parameters. Its response includes:
 
 - `recording_kind`: `audio` or `automation`
