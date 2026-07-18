@@ -6,7 +6,7 @@ Choose an input, enable monitoring if needed, then arm the track. Armed tracks r
 
 ## Ghost Clip
 
-While recording, TayPE shows a live recording clip so you can see the pass forming. The final clip is committed when recording stops.
+While recording, TayPE shows a live recording clip so you can see the pass forming. The final clip replaces it only after the take has been safely committed.
 
 ## Audio vs Instrument Passes
 
@@ -28,6 +28,14 @@ Play / Pause is blocked while a recording pass is active; finish the take with *
 
 When you finish a pass, TayPE closes the take to new input, lets any audio block already in progress complete, then commits the media. This keeps the end of the captured audio and MIDI together without admitting anything from a later transport state.
 
+Return, Punch, Do-Over, Sooper Looper, and external-sync transport actions wait for terminal `completed` or confirmed `discarded` settlement. TayPE does not seek, delete a Do-Over pass, start its replacement, or move Sooper Looper to the next track while the take is still being finalised. If the take is explicitly discarded, Do-Over stops at the requested position without deleting a clip or starting a replacement pass. Repeated local Record or Stop presses do not change the first requested action. An external transport master remains authoritative, so its latest Play, Stop, or Locate command is applied after that same terminal settlement.
+
+If TayPE cannot safely finalise a take, it shows **Recording Recovery** and keeps the captured media retained. **Retry** continues the same take when a safe retry is available. **Keep Retained** closes the dialog without changing or deleting anything; a persistent warning remains, and pressing Record or Stop opens the choices again. **Discard Take…** is shown only when discard is safe and opens a second confirmation before permanently deleting the retained media.
+
+Until recovery completes or a confirmed discard settles, TayPE does not carry out the queued Return, Punch, Do-Over, Sooper Looper, or external-sync action. It also blocks a new recording and reel close. A confirmed discard is reported separately from a successfully committed take.
+
+Quitting during recording first tries to finish the same take while the recording system is still live. It does not replace the original Record or Stop action. If that cannot be done safely within the quit check, TayPE refuses the quit, reopens Recording Recovery when a decision is needed, and leaves the reel and original queued action intact instead of treating application shutdown as recovery.
+
 In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
 
 Only a real wrap from the right loop brace to the left starts a new recorded lap. Count-in, pre-roll, an audition pass, or a deliberate transport move cannot create a false lap.
@@ -40,7 +48,7 @@ Dub reserves one live feedback-delay ring for each armed target before recording
 
 For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Loop Record and Loop Record (Dub) keep that MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in. Editing one take does not expose or change MIDI from another take.
 
-In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces.
+In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces. Sooper Looper waits for the current take to commit before it advances, cancels, or begins the next pass.
 
 Live instrument monitoring keeps note, controller, expression, and release messages even if a plug-in is briefly late. A late message may sound at the next available moment, but TayPE keeps the musical order instead of silently dropping a note or leaving its release behind.
 
@@ -51,6 +59,8 @@ When a recorded take overlaps the head or tail of an existing clip, TayPE trims 
 When TayPE is slaved to MTC/MMC, MMC Locate followed by advancing timecode can start playback or recording from the mapped position. MMC Pause stops while TayPE is rolling and resumes from the last synced timecode position when the matching pause command arrives again. Slave stop parks the head at the synced stop position.
 
 External sync recording uses the tracks you already armed in TayPE. It does not change which tracks are armed, and it bypasses the local Return, Punch, and Do-Over record modes.
+
+If the external master sends another Play, Stop, or Locate while a recorded take is still being finalised, its latest command is remembered and applied after terminal completion or confirmed discard settlement. It does not move the recording boundary that was already captured.
 
 Set **SMPTE Zero** in Sync preferences when an external rig uses a different timecode origin. A short pre-roll before the selected timecode still maps correctly to the reel instead of wrapping to the wrong day.
 
