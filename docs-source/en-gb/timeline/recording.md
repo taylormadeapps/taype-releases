@@ -30,7 +30,7 @@ Only a real wrap from the right loop brace to the left starts a new recorded lap
 
 The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
 
-Loop Record (Dub) sizes its fixed live loop buffers from the loop length and the varispeed captured at the start of the pass. The 512 MiB session limit still applies; recording more laps increases take history on disk, not the live buffer allocation.
+Loop Record (Dub) sizes its fixed live loop buffers from the loop length and the varispeed captured at the start of the pass. The 512 MiB session limit still applies; recording more laps increases take history on disk, not the live buffer allocation. Later comp edits keep Dub takes layered: promoting, moving, copying, dropping, importing, or resizing another take does not automatically mute or split a Dub take. Mute a Dub take explicitly when you no longer want to hear it.
 
 Loop Record and Loop Record (Dub) keep recorded instrument MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in.
 

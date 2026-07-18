@@ -42,7 +42,7 @@ Only a real wrap from the right loop brace to the left starts a new recorded lap
 
 The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
 
-Choose **Loop Record (Dub)** when you want to build a layered part one lap at a time through the same microphone or instrument. Each completed lap plays immediately while you record the next. On stop, every new lap remains enabled as a separate take beneath the comp bus; clips that were already enabled or disabled keep their state.
+Choose **Loop Record (Dub)** when you want to build a layered part one lap at a time through the same microphone or instrument. Each completed lap plays immediately while you record the next. On stop, every new lap remains enabled as a separate take beneath the comp bus; clips that were already enabled or disabled keep their state. Later comp edits keep Dub takes layered: promoting, moving, copying, dropping, importing, or resizing another take does not automatically mute or split a Dub take. Mute a Dub take explicitly when you no longer want to hear it.
 
 Dub reserves one live feedback-delay ring for each armed target before recording starts. Its exact period follows the loop length and the varispeed captured at the start of the pass, including fractional periods. The total is capped at 512 MiB. If the current loop and armed tracks need more, TayPE refuses to start the pass and reports the required memory; shorten the loop or arm fewer tracks. Recording more laps does not consume more buffer memory, although the recording and take history continue to grow on disk.
 

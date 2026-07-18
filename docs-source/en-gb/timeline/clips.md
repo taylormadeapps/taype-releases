@@ -1,6 +1,9 @@
 # Working with Clips
 
-Clips are the audio or MIDI regions on the timeline.
+Clips are the audio or MIDI regions on the timeline. On comp take tracks,
+automatic comp edits leave Loop Record (Dub) takes layered, unsplit, and in
+their current mute state. Use the comp strip, Option-click, or the ordinary
+disable control when you want to mute a Dub take explicitly.
 
 ## Selecting
 
