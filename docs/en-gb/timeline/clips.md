@@ -66,6 +66,13 @@ Double-clicking empty space leaves that single new note in place and consumes
 the second click without moving the playhead, while double-clicking an existing
 note deletes it. Right-clicking empty space moves the playhead without changing
 note selection; right-dragging a note still edits velocity.
+Backspace follows the arranger's mute behaviour for selected notes: if the
+selection contains any audible note, it mutes the whole selection; if every
+selected note is already muted, it unmutes them all. Muted notes stay visible,
+selectable, and editable with a dimmed treatment, but do not audition, play, or
+render. The forward Delete key permanently removes selected notes. Mute state
+survives Commit and reopening the editor, and is preserved by copy, paste, and
+duplicate.
 When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
@@ -88,7 +95,8 @@ the selection, and Escape clears it. Double-click empty space to add a point or
 double-click a point to delete it. Cmd-drag draws controller values as a
 freehand pencil stroke, following each change in pointer direction. The
 underlying MIDI points appear when hovered or selected rather than covering the
-stroke with dots.
+stroke with dots. Holding Cmd over the controller plot changes the mouse
+pointer to a pencil and keeps it visible for the stroke.
 Cmd-drag draws notes following the pointer pitch at each quantised onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
 whole stroke to its starting pitch. Each drawn note fills one selected
@@ -98,7 +106,9 @@ first grid line at or after that seed note ends, then fills consecutive cells
 even when the pitch changes. Hardware-groove strokes follow the actual groove
 lines. A newly drawn note deletes any whole existing note it overlaps on the
 same pitch and MIDI channel; notes on different pitches and channels remain
-untouched. Option-drag from a note copies and moves the selected notes, while
+untouched. Holding Cmd over the note grid changes the mouse pointer to a pencil
+and keeps it visible for the stroke. Option-drag from a note copies and moves
+the selected notes, while
 Option-click without a drag leaves note content unchanged. Cmd+Option-click or
 drag runs the free eraser across time and pitch, whether it begins on a note or
 in empty space.
@@ -121,17 +131,30 @@ selected; the selected notes themselves are unchanged. Reselecting the active
 quantise menu item performs the same entry-length reset. This does not change
 the selected quantise grid. With snap enabled, that MIDI quantise grid controls
 note entry, movement, resizing, nudging, and editor seeks.
+The crotchet button immediately before the quantise menu switches new-note
+length from that remembered default to the quantise cell beneath the pointer.
+It starts off and remembers its state while TayPE remains open, even if you
+close and reopen the MIDI editor. With the crotchet on and Snap enabled, a new
+note fills the cell from the preceding quantise line to the following line,
+including uneven hardware-groove cells. With Snap off, the note starts exactly
+where you click and uses the selected straight note value. Changing the
+quantise menu still updates the remembered default length whether the crotchet
+is on or off.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
-The footer presents the division, Strength, and Capture settings before the
-Quantise action. Capture follows the midpoint between adjacent timing lines, so
-100% reaches every note even across irregular hardware-groove spacing. The
-wider division menu also offers straight triplets and captured hardware
-grooves. Divisions with available grooves open a single submenu containing
-Straight and the machine-labelled patterns; other divisions remain direct menu
-choices. A selected groove repeats from Cut zero across four bars. Its timing
-points are the only vertical timing grid drawn through the note lanes. The
-pinned ruler follows the arranger's current Auto or fixed timeline division.
+Dragging a note's right edge can shorten it to a fixed 1 ms minimum. This
+safety floor does not change with the quantise value, remembered entry length,
+or Snap setting.
+The footer presents the crotchet, division, Strength, and Capture settings
+before the Quantise action. Capture follows the midpoint between adjacent
+timing lines, so 100% reaches every note even across irregular hardware-groove
+spacing. The wider division menu also offers straight triplets and captured
+hardware grooves. Divisions with available grooves open a single submenu
+containing Straight and the machine-labelled patterns; other divisions remain
+direct menu choices. A selected groove repeats from Cut zero across four bars.
+Its timing points are the only vertical timing grid drawn through the note
+lanes. The pinned ruler follows the arranger's current Auto or fixed timeline
+division.
 When adjacent same-pitch notes overlap after quantising, both timing positions
 stay on their chosen rails and the earlier note shortens to the later onset. If
 several notes land on the same rail, TayPE keeps the longest, or the loudest
