@@ -40,6 +40,15 @@ input. Comping buses receive a new child take track with the bus input and an
 incremental name such as `Lead Vocal - 1`. Multi-selection disables this
 automatic parenting.
 
+Cmd-click the blue Bus control on a non-empty comping bus when you are ready
+to leave comp mode. A required confirmation warns that all Cuts will be
+flattened and the shared child take tracks removed. If you continue, TayPE
+renders the audible comp offline in every Cut, placing a separate flattened
+clip in each Cut that has comp material before turning the former bus into a
+normal audio track. Enabled loop braces do not repeat or shorten the flatten.
+The whole operation is one undo step; if any Cut cannot be rendered, the comp
+group and every Cut remain unchanged.
+
 Turn on **Grouped Track Controls** from the Tracks menu, with **Cmd+G**, or
 from the **GRP** transport indicator to control a selection together. Clicking
 Mute, Solo, MON, or Record on a selected arranger header then applies the
