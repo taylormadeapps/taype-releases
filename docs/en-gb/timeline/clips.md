@@ -40,6 +40,8 @@ Drag clip edges to trim. The original media stays intact; the clip simply plays 
 
 Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open in an ARA2 editor.
 
+When the slipped audio moves beyond either source edge, that part of the clip remains visibly blank and plays silence at every UI scale.
+
 ## Clip Properties
 
 Double-click a MIDI-backed clip to open its MIDI editor. Double-click any other
