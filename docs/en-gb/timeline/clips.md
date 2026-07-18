@@ -72,6 +72,12 @@ MIDI through the instrument; quantising and other note edits remain available
 while playback runs. Recording and Print Mix must be stopped before Commit.
 Cancel, the selection-free Escape close, and the native window close button all
 warn before abandoning uncommitted changes.
+Use the **CTRL** button at the lower left to show the MIDI control editor.
+Choose Pitch Bend, Mod Wheel, or any CC number from the selector. The
+**With data** checkbox beside it hides targets that have no events in the open
+clip; Pitch Bend remains in the filtered list when it contains data. If no
+controller data exists, the selector is disabled until **With data** is turned
+off. This filter only changes the editor view and is not saved with the reel.
 Cmd-drag draws notes following the pointer pitch at each quantised onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
 whole stroke to its starting pitch. Each drawn note fills one selected
