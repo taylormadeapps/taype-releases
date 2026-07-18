@@ -73,11 +73,20 @@ while playback runs. Recording and Print Mix must be stopped before Commit.
 Cancel, the selection-free Escape close, and the native window close button all
 warn before abandoning uncommitted changes.
 Use the **CTRL** button at the lower left to show the MIDI control editor.
-Choose Pitch Bend, Mod Wheel, or any CC number from the selector. The
-**With data** checkbox beside it hides targets that have no events in the open
-clip; Pitch Bend remains in the filtered list when it contains data. If no
-controller data exists, the selector is disabled until **With data** is turned
-off. This filter only changes the editor view and is not saved with the reel.
+The left-aligned selector puts Pitch Bend, Mod Wheel, CC11 Expression, and CC64
+Sustain first, followed by the remaining CC numbers. The **With data** checkbox
+beside it hides targets that have no events in the open clip while keeping that
+composer-first order. If no controller data exists, the selector is disabled
+until **With data** is turned off. This filter only changes the editor view and
+is not saved with the reel.
+Click a controller point to select it, drag empty lane space to marquee-select
+points by time, and drag any selected point to move the whole selected set.
+Cmd+A selects all points in the current controller, Delete or Backspace removes
+the selection, and Escape clears it. Double-click empty space to add a point or
+double-click a point to delete it. Cmd-drag draws controller values as a
+freehand pencil stroke, following each change in pointer direction. The
+underlying MIDI points appear when hovered or selected rather than covering the
+stroke with dots.
 Cmd-drag draws notes following the pointer pitch at each quantised onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
 whole stroke to its starting pitch. Each drawn note fills one selected
