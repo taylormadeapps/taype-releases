@@ -48,6 +48,8 @@ Dub reserves one live feedback-delay ring for each armed target before recording
 
 For instrument tracks, each Loop Record take keeps only the MIDI played during that lap. Loop Record and Loop Record (Dub) keep that MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in. Editing one take does not expose or change MIDI from another take.
 
+The initial start of Loop Record uses the normal 250 ms MIDI pickup described above. At later loop splits, a much narrower rule prevents a fractionally early note from leaving carried audio with no editable MIDI: if the note begins less than 50 ms before the wrap and ends after it, the next lap receives that note from its beginning. A note ending on or before the wrap, or beginning 50 ms or more before it, stays only in the earlier lap. The same rule applies to Loop Record and Loop Record (Dub).
+
 In Sooper Looper, the audition lap between instrument passes does not become part of the next recorded take. MIDI recorded on each pass remains aligned to that pass's loop braces. Sooper Looper waits for the current take to commit before it advances, cancels, or begins the next pass.
 
 Live instrument monitoring keeps note, controller, expression, and release messages even if a plug-in is briefly late. A late message may sound at the next available moment, but TayPE keeps the musical order instead of silently dropping a note or leaving its release behind.
@@ -76,6 +78,6 @@ For bus tracks, the label reads **Sender** for orientation only; bus routing is 
 
 ## Record Follows Select and Auto Monitor
 
-Record Follows Select arms the selected track as you move around the reel. It includes comp buses but excludes ordinary buses. Auto Monitor follows the same scope, keeping armed comp buses monitored as well as regular recording tracks. Arming a comp bus with an instrument always enables monitoring so the instrument is immediately playable, even when both workflow preferences are off.
+Record Follows Select arms the selected track as you move around the reel. It includes comp buses but excludes ordinary buses. Selecting a comp-child track or one of its clips arms the owning comp bus while leaving the child clip selected for editing. Auto Monitor follows the same scope, keeping armed comp buses monitored as well as regular recording tracks. Arming a comp bus with an instrument always enables monitoring so the instrument is immediately playable, even when both workflow preferences are off.
 
 These are session workflow controls. They do not change the recorded media until you actually start a take.
