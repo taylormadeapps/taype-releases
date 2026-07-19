@@ -37,8 +37,9 @@ Click a header to select the track. Cmd-click toggles tracks into the visible se
 When exactly one ordinary or comping bus is selected, **Add Audio Track**
 creates the new track inside that bus. Ordinary buses receive it as a routed
 input. Comping buses receive a new child take track with the bus input and an
-incremental name such as `Lead Vocal - 1`. Multi-selection disables this
-automatic parenting.
+incremental name such as `Lead Vocal - 1`. If a comp child is selected, the
+new track becomes its sibling inside the same comp group and is inserted
+immediately after it. Multi-selection disables this automatic parenting.
 
 Cmd-click the blue Bus control on a non-empty comping bus when you are ready
 to leave comp mode. A required confirmation warns that all Cuts will be

@@ -12,7 +12,7 @@ Cmd+Option-drag on a clip body slips the waveform inside the fixed clip. Drag ri
 
 On comp take tracks, Cmd-drag uses the horizontal range to split every take lane in the comp bus. The vertical lanes you drag across are promoted for that time range, and sibling take lanes are muted. Clips captured with Loop Record (Dub) are the exception: automatic comp edits leave them layered, unsplit, and in their current mute state. The lighter strip along the bottom of a comp take clip is the same range gesture without holding Cmd; clicking the strip mutes or promotes the clicked take range. Muting leaves sibling states untouched; promoting a muted take mutes siblings in that range. Option-click does the same from the clip body; Shift+Option-click keeps the plain disable toggle for that take, including a Dub take you want to mute explicitly.
 
-The comp bus lane shows faint, square-ended waveform bands for the enabled child takes you will hear. These are non-interactive overview cues, not clips on the bus; edit the corresponding clips on the child take tracks.
+The comp bus lane shows faint, square-ended waveform bands for the enabled child takes you will hear. These are non-interactive overview cues, not clips on the bus; edit the corresponding clips on the child take tracks. When the group has no child clips, the comp bus lane shows no overview cue.
 
 ## Moving
 
