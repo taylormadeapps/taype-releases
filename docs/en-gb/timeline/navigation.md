@@ -8,6 +8,14 @@ Use the wheel, trackpad, scrollbars, or focused arrow keys to move around the re
 
 Use `=` and `-` for horizontal zoom, **Option+-** to reset, **Cmd+wheel** for mouse zoom, and **Option+wheel** for vertical zoom. Horizontal zoom centres on the tape head by default, while vertical zoom centres on the selected track. Enable **Preferences > General > Zoom at mouse position** to anchor Cmd+wheel, Option+wheel, and pinch zoom beneath the pointer instead; keyboard and right-drag zoom keep their existing anchors.
 
+The MIDI editor honours the same preference for horizontal Cmd+wheel and pinch
+zoom across its piano roll, keyboard rail, timeline header, and control lane.
+The roll, header, and control lane preserve the time beneath the pointer after
+horizontal scrolling; the keyboard rail uses the visible roll's left edge
+because it has no timeline position of its own. Its Option+wheel pitch zoom
+already follows the pointer, while right-drag and keyboard zoom keep their
+existing anchors.
+
 ## E-Zoom
 
 E-Zoom is the quick way to enlarge the working track area without changing the whole app scale. It is useful for clip edits and comping.

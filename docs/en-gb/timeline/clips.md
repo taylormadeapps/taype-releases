@@ -50,6 +50,13 @@ details and destructive clip actions. **Reverse** renders a reversed copy
 through the model transaction system, so the reel owns the derived audio and
 undo/redo treats the change like any other clip edit.
 
+For clips on comp take tracks, Clip Properties shows **Don't Comp** directly
+below the pitch controls. Turn it on to keep that take layered and untouched
+when another take is promoted or an overlapping comp edit is made. The clip can
+still be muted explicitly. When every clip in a multi-selection belongs to a
+comp take track, the same control applies to the whole selection; selections
+that include an ordinary-track clip do not show it.
+
 On macOS, the MIDI editor's green window button enters and exits full-screen
 mode. Selecting another MIDI clip while the editor remains open keeps that
 full-screen window posture. Closing and reopening the editor restores its last

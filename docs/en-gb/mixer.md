@@ -17,7 +17,7 @@ When a track is selected, width changes keep that selected strip in view. TayPE 
 
 ## Track Selection
 
-Click a strip title to select it. **Cmd-click** toggles tracks into the visible selection. **Shift-click** extends a visible range. Grouped fader, pan, width, section power, and insert power edits apply to the visible selected strips while preserving relative offsets where that matters.
+Click a strip title or unused background in its PAN/FADER panel to select it. **Cmd-click** toggles tracks into the visible selection. **Shift-click** extends a visible range. The fader, knobs, meters, readouts, utility buttons, and panel resize or preset controls keep their own actions and do not change track selection. Grouped fader, pan, width, section power, and insert power edits apply to the visible selected strips while preserving relative offsets where that matters.
 
 The first selected track stays the primary track for the docked strip and focused operations.
 
