@@ -33,8 +33,9 @@ tick and do not scroll the piano roll.
 Plain Up and Down move selected MIDI notes by one semitone. Cmd+Up and Cmd+Down
 move them by one octave.
 Plain L applies Legato to selected notes, or every note when none are selected.
-Each target extends to the next note on the same MIDI channel and pitch,
-including an unselected next note; the last note in each voice stays unchanged.
+Within each MIDI channel, every note or simultaneous chord onset extends to the
+next chronological target onset regardless of pitch. The final selected onset
+stays unchanged even when later unselected notes exist.
 In the MIDI editor, L never triggers the arranger's Loop Selected action.
 Escape clears selected MIDI notes first and keeps the editor open. Press Escape
 again with no selected notes to close the editor.
