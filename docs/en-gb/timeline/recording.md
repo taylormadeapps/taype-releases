@@ -38,6 +38,8 @@ Quitting during recording first tries to finish the same take while the recordin
 
 In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
 
+Starting Loop Record or Loop Record (Dub) on an ordinary audio or instrument track creates comp history from the first take, even if you stop before reaching the right loop brace. If the track already contains material inside the loop, TayPE cuts it at the two braces and places the in-loop section on the first child take track. Material before and after the loop remains on the promoted parent, and the new recording appears on the next child take track. The new cuts use TayPE's normal short anti-click fades.
+
 Only a real wrap from the right loop brace to the left starts a new recorded lap. Count-in, pre-roll, an audition pass, or a deliberate transport move cannot create a false lap.
 
 The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
