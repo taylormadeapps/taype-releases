@@ -32,16 +32,26 @@ note selection they move the shared playhead by the arranger's visible ruler
 tick and do not scroll the piano roll.
 Plain Up and Down move selected MIDI notes by one semitone. Cmd+Up and Cmd+Down
 move them by one octave.
+Plain L applies Legato to selected notes, or every note when none are selected.
+Each target extends to the next note on the same MIDI channel and pitch,
+including an unselected next note; the last note in each voice stays unchanged.
+In the MIDI editor, L never triggers the arranger's Loop Selected action.
 Escape clears selected MIDI notes first and keeps the editor open. Press Escape
 again with no selected notes to close the editor.
 Cmd+C and Cmd+X copy or cut the selected notes. Cmd+V places the earliest
 copied note at the shared playhead while preserving the phrase's relative
 timing, pitch, length, velocity, and MIDI channel.
-The configured split shortcut cuts selected notes crossing the playhead, or
-all crossing notes when nothing is selected. It does not split the arranger
-clip while the MIDI editor is active.
+The configured split shortcut cuts selected notes crossing the playhead. With
+no note selection, it cuts only the note beneath the mouse: at the nearest
+selected MIDI quantise or hardware-groove line when Snap is enabled, or at the
+exact pointer position when Snap is off. If the mouse is not over a note,
+nothing is cut. It does not split the arranger clip while the MIDI editor is
+active.
 Plain Q applies the current Quantise settings while the MIDI editor is active;
-it does not toggle the main window's video reference from that context.
+Option+Q selects the next division and restores that division's last-used
+Straight or groove option. Shift+Q cycles through Straight and every groove
+inside the current division without leaving it. Both cycles wrap. These keys
+stay in the MIDI editor instead of controlling video there; Cmd+Q remains Quit.
 
 ### Editing
 
@@ -171,3 +181,13 @@ When the virtual keyboard popup is open, QWERTY note keys and other unmodified l
 ## Floating Windows
 
 Floating windows such as the EQ Visualiser, Performance Monitor, Hardware Insert recall, video reference, MIDI Monitor, Melodyne, MIDI editor, and plugin editors keep enough shortcut pass-through for transport and common session actions while protecting text fields and plugin focus.
+
+When a plug-in window is in front, any key the plug-in does not consume is
+offered to a visible, non-minimised MIDI editor first. MIDI-local Return,
+Quantise, note navigation and editing, clipboard, split, duplicate, and
+pitch-row zoom therefore stay with the MIDI editor; unhandled keys continue to
+the global shortcut path. Escape still closes the plug-in window first.
+
+When a frontmost plug-in window closes, a visible, non-minimised MIDI editor
+regains focus. If none is available, focus returns to TayPE's main window.
+Closing a background plug-in does not pull focus away from another application.

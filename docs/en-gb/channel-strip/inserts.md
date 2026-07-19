@@ -23,7 +23,8 @@ closed. Command+Option-click deletes that insert. Command-click still toggles
 its bypass state, while Option-click disables or re-enables it.
 
 Press **Option+P** to hide every open plug-in window, then press it again to
-restore the same windows. This does not close or reload the plug-ins.
+restore the same windows with the most recently opened editor on top. This
+does not close or reload the plug-ins.
 Clicking an insert while the windows are hidden restores the window set and
 brings the clicked plug-in to the front.
 
@@ -96,6 +97,8 @@ The master strip has an ear button for the global Listen Bus. It is a monitor-on
 By default the Listen Bus processes the main master monitor path. If you choose a spare stereo hardware output, TayPE taps the master output into the Listen Bus and sends the processed monitor chain to that output while keeping the normal master output time-aligned.
 
 Listen Bus settings are saved globally in TayPE, not in the reel, and are not included in normal exports or prints.
+
+The Bypass, Disable, and preset controls in an open Listen Bus plug-in window update that same global rack state, just like the controls in the Listen Bus panel.
 
 ## Sandboxing
 

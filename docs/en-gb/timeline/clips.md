@@ -157,8 +157,15 @@ before the Quantise action. Capture follows the midpoint between adjacent
 timing lines, so 100% reaches every note even across irregular hardware-groove
 spacing. The wider division menu also offers straight triplets and captured
 hardware grooves. Divisions with available grooves open a single submenu
-containing Straight and the machine-labelled patterns; other divisions remain
-direct menu choices. A selected groove repeats from Cut zero across four bars.
+containing Straight and the machine-labelled patterns. The larger 1/16 list
+groups its hardware patterns into one further submenu per machine; other
+groove divisions stay flat, and divisions without grooves remain direct menu
+choices. A selected groove repeats from Cut zero across four bars.
+While the MIDI editor is active, Q applies the current Quantise settings.
+Option+Q cycles through the top-level divisions and remembers the last
+Straight or groove option used in each one. Shift+Q cycles only through the
+options in the current division, including all hardware grooves, and wraps
+without moving to the next division. Cmd+Q remains Quit.
 Its timing points are the only vertical timing grid drawn through the note
 lanes. The pinned ruler follows the arranger's current Auto or fixed timeline
 division.
@@ -188,8 +195,11 @@ piano roll to reveal the destination even when it was previously off-screen.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared
-playhead, or every crossing note when nothing is selected, without splitting
-the arranger clip behind the editor.
+playhead. When nothing is selected, it instead cuts only the note beneath the
+mouse: at the nearest selected MIDI quantise or hardware-groove line with Snap
+enabled, or at the exact pointer position with Snap off. If the mouse is not
+over a note, nothing is cut. The shortcut never splits the arranger clip behind
+the editor.
 With no note selection, plain Left and Right move the shared playhead by the
 arranger's visible ruler tick instead of scrolling the piano roll. When notes
 are selected, Left and Right continue to nudge those notes by one MIDI quantise
