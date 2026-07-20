@@ -167,9 +167,18 @@ Open the shortcut/profile controls from Preferences. Built-in profiles refresh f
 
 TayPE validates shortcut files and falls back to defaults if a profile is broken. Older shortcut layouts are migrated when TayPE can recognise them.
 
-## Record Modes
+## Record Stop Modes and Record Modes
 
-The Record shortcut follows your selected record mode. **Return** commits and returns, **Punch** commits and parks at the end, and **Do-Over** restarts after discarding the just-recorded pass. **Z** always stops safely.
+Right-click **Stop** to choose Record Stop Mode. **Return** commits and returns,
+**Punch** commits and parks at the end, and **Do-Over** restarts after
+discarding the just-recorded pass when you press Record again. **Z** always
+stops safely.
+
+Right-click **Record** to choose Record Mode. **Auto Punch** records linearly
+and uses the loop braces as a punch window when Loop is enabled. **Comp**
+creates comp history with or without Loop. **Dub** creates layered Don't Comp
+takes with or without Loop and adds live lap feedback when Loop is enabled.
+**Sooper-Looper** keeps its existing loop-required armed-track workflow.
 
 ## Virtual Keyboard Mode
 

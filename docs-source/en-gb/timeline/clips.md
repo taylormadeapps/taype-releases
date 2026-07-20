@@ -1,9 +1,15 @@
 # Working with Clips
 
 Clips are the audio or MIDI regions on the timeline. On comp take tracks,
-automatic comp edits leave Loop Record (Dub) takes layered, unsplit, and in
+automatic comp edits leave Dub Record Mode takes layered, unsplit, and in
 their current mute state. Use the comp strip, Option-click, or the ordinary
 disable control when you want to mute a Dub take explicitly.
+
+An ordinary comp take has a filled bottom strip with a highlighted upper edge.
+A **Don't Comp** take shows a dark, diagonally hatched strip while its clip and
+waveform retain normal visual weight. The hit target is unchanged.
+Comp take tracks omit clip-name labels so the waveform and comp strip stay clear.
+Ordinary tracks and the parent comp bus keep their normal clip labels.
 
 ## Selecting
 

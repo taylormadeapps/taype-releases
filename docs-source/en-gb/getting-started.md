@@ -21,13 +21,24 @@ Use [Reels](reels/README.md) for checkpoints, history, pack/unpack, thin reels, 
 
 Choose an input on the track header or channel strip, arm the track, then press **Record**. Audio tracks record audio. Instrument tracks can host a VSTi on the first insert slot and record MIDI or rendered instrument output depending on the workflow.
 
-The **Record Mode** preference decides what pressing Record again does during a take:
+Right-click **Stop** to choose **Record Stop Mode**, which decides what pressing
+Record again or Stop does during a take:
 
 - **Return** commits the pass and returns to the pass start.
 - **Punch** commits the pass and parks at the take end.
 - **Do-Over** commits only long enough to remove the just-recorded pass, then restarts from the pass start.
 
 `Z` is always the escape hatch. It stops transport and gets you out of the current pass safely.
+
+Right-click **Record** to choose **Record Mode**:
+
+- **Auto Punch** records a normal linear take and uses the braces as one punch
+  window when Loop is enabled.
+- **Comp** creates comp history with wrapped laps when Loop is enabled or one
+  linear child take when it is not.
+- **Dub** does the same with layered **Don't Comp** takes and adds live lap
+  feedback when Loop is enabled.
+- **Sooper-Looper** keeps the loop-required armed-track workflow.
 
 ## Playback
 

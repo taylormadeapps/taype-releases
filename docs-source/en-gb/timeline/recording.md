@@ -24,15 +24,19 @@ Play / Pause is blocked while a recording pass is active; finish the take with *
 
 When you finish a pass, TayPE closes the take to new input, lets any audio block already in progress complete, then commits the media. This keeps the end of the captured audio and MIDI together without admitting anything from a later transport state.
 
-In Loop Record comp history, TayPE activates the last complete lap from the recording session. If you stop part-way through the next lap, that partial take is kept but disabled. When the session never completes a full lap, the partial take remains active.
+Right-click **Stop** to choose **Record Stop Mode**: Return, Punch, or Do-Over. Right-click **Record** to choose **Record Mode**: Auto Punch, Comp, Dub, or Sooper-Looper. Loop remains a separate switch.
+
+**Auto Punch** records linearly and uses the braces as one punch window when Loop is enabled.
+
+**Comp** creates comp history on an eligible ordinary audio or instrument track whether Loop is enabled or not. Without Loop, the linear pass becomes a child take when recording stops. With Loop enabled, TayPE activates the last complete lap, keeps a trailing partial disabled, and leaves a partial active when no full lap completed. Existing material inside the committed range moves to the first child take; the recorded take follows it.
 
 Only a real wrap from the right loop brace to the left starts a new recorded lap. Count-in, pre-roll, an audition pass, or a deliberate transport move cannot create a false lap.
 
 The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
 
-Loop Record (Dub) sizes its fixed live loop buffers from the loop length and the varispeed captured at the start of the pass. The 512 MiB session limit still applies; recording more laps increases take history on disk, not the live buffer allocation. Later comp edits keep Dub takes layered: promoting, moving, copying, dropping, importing, or resizing another take does not automatically mute or split a Dub take. Mute a Dub take explicitly when you no longer want to hear it.
+**Dub** follows Comp and marks each new take **Don't Comp**. Original material spliced from the parent into the Dub range is marked Don't Comp too; only untouched parent material outside the range remains ordinary. Without Loop this creates one linear layered child take. With Loop enabled, Dub sizes its fixed live buffers from the loop length and varispeed captured at the start of the pass. The 512 MiB session limit still applies; recording more laps increases take history on disk, not the live buffer allocation. Later comp edits keep Dub takes layered: promoting, moving, copying, dropping, importing, or resizing another take does not automatically mute or split a Dub take. Mute a Dub take explicitly when you no longer want to hear it.
 
-Loop Record and Loop Record (Dub) keep recorded instrument MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in.
+Loop-enabled Comp and Dub keep recorded instrument MIDI on the same lap as its audio, including when recording starts from another transport position or follows a count-in.
 
 When a recorded take overlaps the head or tail of an existing clip, TayPE trims the older clip to the new take boundary with only a tiny anti-click fade instead of creating a long automatic crossfade. Recording inside an existing clip still splits the older clip around the new take.
 
