@@ -43,6 +43,8 @@ Conversion replaces the clip's stored audio with a new reel-owned WAV. If the cl
 
 Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes cannot initiate an edge resize. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
 
+When you zoom far out and a clip becomes very narrow, its edge grab areas shrink so the middle remains available for moving the clip. At the most extreme zoom, grab just outside the clip edge when you need to trim or stretch it.
+
 ## Slipping
 
 Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open in an ARA2 editor.
