@@ -32,6 +32,10 @@ prints each selected stem through its downstream buses and the master, one at
 a time. This includes the downstream mix processing rather than only the
 direct post-fader stem.
 
+The export window hides any visible plug-in windows before it opens. When it
+closes, TayPE restores those plug-in windows in their previous order. Plug-ins
+that were already hidden with Option+P remain hidden.
+
 Muted targets remain muted. If **Master** is also selected, TayPE prints the
 ordinary full mix once and then prints the wet stems. Live mode plays every
 pass in real time; Offline mode performs the same sequence without sending it

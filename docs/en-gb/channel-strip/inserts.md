@@ -39,8 +39,11 @@ changes. If the plug-in sandbox has crashed or been fully restarted, its old
 windows are discarded and one click reopens the selected editor.
 
 TayPE dialogs, pickers, and other auxiliary windows temporarily sit above the
-plug-in stack while you use them. Closing or leaving that auxiliary restores
-the plug-ins to their previous order without pulling focus away.
+plug-in stack while you use them. Print Mix, Print Loop, and Print Marker Ranges
+hide every visible plug-in window before opening their export window. Closing
+the export window restores the same plug-ins in their previous order without
+reloading or pulling focus away; plug-ins already hidden with Option+P stay
+hidden.
 
 The plug-in toolbar's **One** control keeps a single plug-in window open at a
 time. Opening another editor replaces the current one while retaining its
