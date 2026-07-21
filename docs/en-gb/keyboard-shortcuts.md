@@ -20,6 +20,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 | Page Down / Fn+Down | Bottom arranger track, page mixer panels downward, last clip boundary in Reels, or lowest used MIDI note |
 | Cmd+P | Print mix |
 | Cmd+Option+P | Print loop |
+| Option+P | Hide or restore all open plug-in windows from anywhere in TayPE |
 | C | Toggle metronome |
 | ' | Tap tempo |
 | Cmd+/ | Set cut zero at playhead |
@@ -191,6 +192,11 @@ When the virtual keyboard popup is open, QWERTY note keys and other unmodified l
 ## Floating Windows
 
 Floating windows such as the EQ Visualiser, Performance Monitor, Hardware Insert recall, video reference, MIDI Monitor, Melodyne, MIDI editor, and plugin editors keep enough shortcut pass-through for transport and common session actions while protecting text fields and plugin focus.
+
+Option+P remains available while a TayPE dialog, picker, text field, or hosted
+plug-in editor has focus. TayPE-owned auxiliary windows temporarily sit above
+the plug-in stack while active; leaving them restores the previous plug-in
+order without stealing focus.
 
 When a plug-in window is in front, any key the plug-in does not consume is
 offered to a visible, non-minimised MIDI editor first. MIDI-local Return,

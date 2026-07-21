@@ -26,7 +26,9 @@ Option-click disables or re-enables it.
 
 Press **Option+P** to hide every open plug-in window, then press it again to
 restore the same windows in the same bottom-to-top order, including the editor
-that was previously on top. This does not close or reload the plug-ins.
+that was previously on top. It works while a TayPE dialog, plug-in picker,
+text field, or hosted plug-in editor has focus. This does not close or reload
+the plug-ins.
 Clicking an insert while the windows are hidden restores the window set and
 brings the clicked plug-in to the front.
 
@@ -35,6 +37,10 @@ in front of both the main window and every other open plug-in window. TayPE
 keeps the last window you opened or used at the top when application focus
 changes. If the plug-in sandbox has crashed or been fully restarted, its old
 windows are discarded and one click reopens the selected editor.
+
+TayPE dialogs, pickers, and other auxiliary windows temporarily sit above the
+plug-in stack while you use them. Closing or leaving that auxiliary restores
+the plug-ins to their previous order without pulling focus away.
 
 The plug-in toolbar's **One** control keeps a single plug-in window open at a
 time. Opening another editor replaces the current one while retaining its
