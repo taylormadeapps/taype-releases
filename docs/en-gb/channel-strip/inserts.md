@@ -18,15 +18,28 @@ In search results, Shift-click selects a visible range and Command-click toggles
 
 Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
 
-Click an enabled populated insert row to toggle its plug-in window open or
-closed. Command+Option-click deletes that insert. Command-click still toggles
-its bypass state, while Option-click disables or re-enables it.
+Click an enabled populated insert row to open its plug-in window. If the window
+is already open behind another plug-in, the click brings it to the front; only
+a window that is already the frontmost plug-in window is closed. Command+Option-click
+deletes that insert. Command-click still toggles its bypass state, while
+Option-click disables or re-enables it.
 
 Press **Option+P** to hide every open plug-in window, then press it again to
-restore the same windows with the most recently opened editor on top. This
-does not close or reload the plug-ins.
+restore the same windows in the same bottom-to-top order, including the editor
+that was previously on top. This does not close or reload the plug-ins.
 Clicking an insert while the windows are hidden restores the window set and
 brings the clicked plug-in to the front.
+
+When TayPE is active, opening or restoring a plug-in window brings that window
+in front of both the main window and every other open plug-in window. TayPE
+keeps the last window you opened or used at the top when application focus
+changes. If the plug-in sandbox has crashed or been fully restarted, its old
+windows are discarded and one click reopens the selected editor.
+
+The plug-in toolbar's **One** control keeps a single plug-in window open at a
+time. Opening another editor replaces the current one while retaining its
+position where possible. Click the previous insert once to bring its editor
+back.
 
 In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
 
@@ -62,6 +75,8 @@ front of the Drive window and follows it when TayPE moves between the foreground
 and background.
 
 If a matching plug-in preset is named `Default`, TayPE loads it automatically when you add that plug-in. The plug-in window preset menu includes **Save as Default** to update that default from the current plug-in state.
+
+When an insert has a TayPE plug-in preset associated with it, the insert row shows only that preset name, for example `Vocal Tame`, while popup help keeps the full plug-in and preset, such as `Pro-Q 3 · Vocal Tame`. A `*` after the preset name means the plug-in state differs from that preset on disk. The same marker appears in the open plug-in window's preset field and remains correct if you close and reopen that window; loading or saving the preset clears it. Changing presets updates the plug-in in its existing window without closing and reopening that window. Clicking anywhere outside the open preset menu closes the menu, including inside that plug-in's own controls or in another plug-in window. Older reels that do not store a TayPE preset name keep the original plug-in-only label.
 
 ## Bypass vs Disable
 
@@ -108,4 +123,4 @@ When the sandbox crashes on a handled fatal signal, the crash feedback report
 includes the sandbox process's best-effort stack trace. Nothing is submitted
 until you choose Send, Copy, or Save in the report window.
 
-Plug-in editor windows come to the front without changing the sandbox helper's application role. Switching to another app therefore does not trigger an editor-driven sandbox priority change that can disrupt plug-in DSP.
+Plug-in editor windows come to the front without changing the sandbox helper's application role. Switching to another app therefore does not trigger an editor-driven sandbox priority change that can disrupt plug-in DSP. TayPE only performs that focus handoff while TayPE itself is active, so automation does not pull you out of another application.

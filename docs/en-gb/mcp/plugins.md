@@ -62,6 +62,8 @@ Disable removes an insert from processing while keeping its assignment and state
 ### `get_insert_info`
 
 Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information.
+The `editor_open` field becomes false when the window closes, One-window mode
+replaces it, or the plug-in sandbox exits.
 
 ### `list_insert_presets` / `load_insert_preset`
 
