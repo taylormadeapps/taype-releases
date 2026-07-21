@@ -41,7 +41,7 @@ Clip Properties shows reel-owned media paths relative to the reel where possible
 
 ## Gain, Fades, and Crossfades
 
-Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
+Clip gain adjusts the clip before the channel strip. Fades can be toggled at the default fade length. Overlapping compatible clips can create crossfades where their edges meet. Hold **Shift** while moving or edge-resizing a clip, or **Option+Shift** while drag-copying, to magnetically butt it to neighbouring clip edges. Continue beyond the magnetic point without creating an automatic crossfade: ordinary tracks use hard-cut placement, while comp take tracks retain their splice-edge fades and sibling-take resolution. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
 
 ## Clipboard
 
