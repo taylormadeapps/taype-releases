@@ -26,7 +26,14 @@ With the MIDI editor open, `E` fits that whole MIDI clip across the piano roll i
 
 ## Seeking
 
-Click the ruler to seek. Option-click in the timeline can seek even over clips. During playback, repeated left/right navigation steps from a stable ruler anchor so the playhead can move predictably.
+Click the ruler to seek. Option-click in the timeline can seek even over clips.
+With absolute Snap enabled, the playhead always lands on the nearest grid line
+currently drawn. Clicking a drawn line selects that line even when a clip edge
+is very close; away from a line, a nearby clip edge or marker wins only when it
+is closer than the grid. Fixed grids that back off visually at low zoom use the
+drawn division for playhead placement rather than hidden subdivisions. Clip and
+note drags retain their magnetic snap feel. During playback, repeated left/right
+navigation steps from a stable ruler anchor so the playhead can move predictably.
 
 ## Stopping MIDI cleanly
 

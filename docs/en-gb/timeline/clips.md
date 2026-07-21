@@ -25,6 +25,8 @@ The comp bus lane shows faint, square-ended waveform bands for the enabled child
 
 Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes cannot initiate a move; they can still be selected and promoted from the bottom strip or with Option-click.
 
+With playback stopped, moving a clip, trimming an edge, or adjusting a fade keeps the current timeline page in place even when the playhead is elsewhere. Follow Playhead controls playback paging; it does not recenter stopped edits.
+
 ## Creating Blank Clips
 
 Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled.
