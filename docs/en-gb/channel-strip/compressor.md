@@ -6,6 +6,11 @@ The compressor controls dynamics after EQ and before inserts.
 
 Use Threshold and Ratio for the amount of compression, Attack and Release for movement, and Makeup for level matching. The compact mixer strip shows the essential controls; the wider strip shows more detail.
 
+Attack gives the fast 0.1–1 ms range a dedicated third of the knob travel, in
+0.1 ms steps. The remaining travel covers 1–100 ms in whole-millisecond steps.
+Small drag movements accumulate between steps, including when moving away from
+the minimum, and the strip and compressor popup use the same response.
+
 ## Visualiser and Meter
 
 The compressor section includes gain-reduction feedback so you can see when it is working. Use the meter as a guide, then trust the sound.

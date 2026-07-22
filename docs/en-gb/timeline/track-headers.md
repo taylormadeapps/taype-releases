@@ -34,6 +34,17 @@ of substituting another output.
 
 Click a header to select the track. Cmd-click toggles tracks into the visible selection. Shift-click extends a range. The first selected track remains the primary track for the docked strip and focused hardware control.
 
+## Reordering
+
+Drag unused space in a track header vertically to move the track. The insertion
+line shows where it will land.
+
+A comp group stays intact while you reorder it. Dragging the comp bus moves the
+bus and every child take track together, in their existing order. When the group
+is collapsed, its single visible row still represents that complete block.
+Individual child tracks can be rearranged inside their own comp group, but
+cannot be dragged outside it or through another group's boundary.
+
 When exactly one ordinary or comping bus is selected, **Add Audio Track**
 creates the new track inside that bus. Ordinary buses receive it as a routed
 input. Comping buses receive a new child take track with the bus input and an

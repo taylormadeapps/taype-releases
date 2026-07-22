@@ -25,9 +25,19 @@ The first selected track stays the primary track for the docked strip and focuse
 
 Mixer strips follow the reel's track order. Ordinary tracks sit together. Bus and master strips open a stronger separator so routing landmarks stand out.
 
+Drag a strip title horizontally to change its position. Comp groups follow the
+same rules as the timeline: dragging the comp bus moves its complete child-take
+block, and a child strip can move only within its own group. The insertion line
+is hidden where a drop would split a comp group.
+
 ## Scrolling
 
 Use the horizontal scroll gesture, arrow keys when the mixer is focused, or the visible rack controls to move through large sessions. The selected track should remain easy to find after width changes, scale changes, or switching between inline and detached mixer windows.
+
+Use a vertical trackpad or mouse-wheel gesture over the upper part of a strip
+to move through its processing sections. The fader dock stays fixed. Stepped
+mouse wheels receive extra travel per notch; high-resolution trackpad response
+is unchanged.
 
 ## Detached Mixer
 
