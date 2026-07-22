@@ -22,7 +22,7 @@ When a count-in runs before timeline zero or the selected Cut zero, the tape hea
 
 Instrument takes keep a 250 ms MIDI pickup window before the recording boundary. If you play a note fractionally early and it is still sounding when the take starts, the paired MIDI clip carries that note from its beginning. Notes that finish before the boundary are not included.
 
-The metronome can be toggled on or off from the transport. Its click volume is set in **Audio Preferences** as a global dB level from **-60 dB** to **0 dB**; turn the metronome off when you want it fully muted.
+The metronome can be toggled on or off from the transport. Its pulse follows the time-signature denominator: `2/2` clicks on minims, `4/4` on crotchets, `8/8` on quavers, and `/16` meters on semiquavers. Its click volume is set in **Audio Preferences** as a global dB level from **-60 dB** to **0 dB**; turn the metronome off when you want it fully muted.
 
 Play / Pause is blocked while a recording pass is active; finish the take with **Record** or **Stop**.
 

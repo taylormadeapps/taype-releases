@@ -101,6 +101,7 @@ Cancel focused before TayPE starts its normal safe quit process.
 | Toggle loop | Cmd+L |
 | Set loop from selection | L |
 | Add marker at playhead | / |
+| Add or convert a No Cut range at playhead (Main Cut only) | Shift+/ |
 | Previous marker or loop brace | , |
 | Next marker or loop brace | . |
 | Go to markers 1-10 | 1-9, 0 |
