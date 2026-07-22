@@ -3,68 +3,109 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.1.0"
-date = "2026-07-11"
-commit = "dea1a085"
+version = "1.2.0"
+date = "2026-07-19"
+commit = "44fedfa8"
 
 summary = """\
-Expanded loop recording and comping with promoted lap history, clearer take ghosts, safer trimming/resizing, and automatic activation of the final complete take.
-Added clip slip editing, blank clips, groove templates, independently resizable cut-marker ranges, and more reliable split-fade and cut cleanup.
-Hardened Print Mix and stem capture, including cut-marker print regions and improved timing/capture accuracy.
-Added MotorMix HUI support and control-surface grouping, with corrected X-Touch One master mapping and numbering.
-Updated NAM A2 processing to v0.5.4 with shared-weight multichannel batching, architecture-aware turbo processing, and improved stability.
-Added global Efficient, Balanced and Quality settings for preamps and summing, plus optional Quality processing for offline prints.
-Improved plug-in workflows with search multi-select, insert-rack disable overrides, bulk insert deletion, Listen Bus insert fixes, and more reliable plug-in/NAM recall.
-Added dynamic EQ threshold tilt, tighter snap boundaries, metronome volume control, and improved live-input and NAM AMX mutation safety.
-Added an optional dual time/bars transport display.
-Added mouse-position zoom, magnetic Shift-drag clip placement without forced crossfades, and knob-wheel scrolling preferences covering mixer and arranger channel strips.
-Improved CoreAudio diagnostics, localisation coverage, and several interaction and routing edge cases.
+Expanded MIDI editing with one-click note creation, duplication, Legato, controller editing and filtering, playback editing, improved snapping and collision handling, piano-roll navigation, and bundled hardware groove quantise.
+Made MIDI and VSTi recording more reliable across punch-in, looping, virtual keyboards, sandboxed instruments, Sooper-Looper, and editor-preview note release.
+Added layered Loop Record Dub and strengthened comping: existing material becomes the first comp layer, dub layers survive edits, child tracks insert, name, and mute correctly, offline flattening respects every cut, and empty buses no longer show ghost cues.
+Added multi-output instrument routing, clip channel conversion, and offline bounce workflows.
+Improved Melodyne and ARA2 loading, editor context, committing, provider lifetime, and plug-in lifecycle behaviour.
+Expanded Taype Drive with channel modes, M/S band-split mixing, resizable controls, and stronger plug-in-window reliability; improved plug-in searching and Listen Bus recall.
+Added JD’s Law wet-stem printing, grid splitting, clip pitch nudging, Rooms IR navigation, and waveform-correct slip editing.
+Improved recording finalisation and timing, clean shutdown, crash reporting, and general editor and transport reliability.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-81e12627 Apply knob wheel preference to arranger strip
-82505720 Add dual transport position display
-d5bd25ea Refresh stale architecture test contracts
-c51e1992 Add print quality and interaction preferences
-daa07505 Add global NAM model quality controls
-07836775 Add architecture-aware NAM turbo batching
-f3b56c4b Harden NAM A2 v0.5.4 integration
-b8faccff Correct MotorMix HUI protocol support
-426a9deb Beta checkpoint v1.0.5b4
-54b406c6 Activate the last complete loop take
-616a9f1b Make cut marker ranges independently resizable
-b0bced18 Repair evolved test contracts
-c26fd949 Add timeline blank clips and groove templates
-4e971aa0 Add cut marker regions and harden print capture
-92349fb2 Beta checkpoint v1.0.5b3
-aaa4ec2d Refine clip split fades and cut cleanup
-1ec9c85d Fix comp take trimming over muted clips
-a2cfcb7d Add MotorMix HUI control surface support
-e74412c2 Guard NAM AMX toggles behind source mutation gate
-a1eb594a Fix comping clip gesture conflicts
-3fb8e124 Add metronome volume and insert delete all
-186bc2fb Fix clip slip and comp resize bounds
-83027e28 Fix custom universal packer index allocation
-e32aced4 Add clip slip editing
-4fcf39a1 Add dynamic EQ threshold tilt and snap range boundaries
-651a686e Fix plugin picker multi-select probe
-54b9f7ab Add plugin picker search multi-select
-11cb0ce6 Refine comping gestures and loop record ghosts
-8c4230eb Promote loop record laps to comp history
-b9246f50 Fix contract drift and locale tokens
-82441738 Add control surface grouping
-d3cec85f Fix X-Touch One master control and numbering
-22a9c671 Guard live input channel copies
-d97672e1 Polish plugin workflows and NAM recall
-e822b363 Add insert rack disable override
-5b9dc2d3 Fix Listen Bus inserts and custom build numbering
-0b643b25 Fix Listen Bus insert popup height
-8e6ae7e4 Fix beta contract drift and docs sync
-3e4ecf29 Add Listen Bus and CoreAudio diagnostics
-b4fc2b4c Beta checkpoint v1.0.5b2
-cafd80ba Beta checkpoint v1.0.5b1
-64204051 Support patch beta checkpoint targets
-c1f609b0 Harden release notarization context
+0bef0c2e Respect comp child insertion and empty cue state
+749a1489 Promote first-pass loop recordings to comp history
+45aab3df Strengthen MIDI preview ownership contract
+a7559183 Correct MIDI Legato and test ownership contracts
+6776662e Harden test framework and editor interaction flows
+00a74186 Beta checkpoint v1.2.0b6
+a1683aea Validate MCP tool response envelopes
+f8f651ea Harden live test readiness failure handling
+d67c5c91 Authenticate terminal framework ownership evidence
+003aa407 Guard host A/B cleanup behind root authentication
+f57786fb Harden test ownership and refine editing interactions
+3276fde1 Reject ambiguous incomplete live-resource transfers
+71dfdf32 Authenticate framework state evidence and MIDI audition
+a6a25060 Complete capability and inventory scanning
+2b6a6ff7 Cover same-generation ledger transitions
+5ba15060 Tighten framework state contract validation
+eb2d68c8 Harden test ownership and fix MIDI workflow edges
+79a11abe Harden test framework and expand MIDI editing
+b80c6e3d Audit test trust and harden packaging provenance
+0c45004c Restore idle record-stop and harden MIDI probes
+c4aea8c6 Preserve slip-edit waveform alignment
+35fe5d2f Harden application termination ownership
+391ed171 Refine MIDI controller editing workflow
+c31819f7 Preserve Loop Record Dub layers during comp edits
+21dd9602 Flatten comp buses offline across all cuts
+140b4a2d Enable MIDI playback editing and controller filtering
+129bb95e Harden recording finalisation ownership
+63869c93 Fix MIDI editor commit during playback
+d20e0c9f Rework recording capture timing ownership
+63c77f7a Improve plugin picker search filtering
+ac31b608 Fix MIDI ruler and groove quantise behaviour
+dc075803 Refine custom package provenance and MIDI painting
+3e1c6854 Refine MIDI editing, count-in alignment, and custom package identity
+b679c6d0 Refine MIDI editor quantize and editing workflows
+a0c89ec5 Add MIDI note duplication and refine click editing
+bb66c9dd Refine MIDI editor quantize workflows
+2620d7e2 Add hardware groove quantize to MIDI editor
+bbe93bdd Expand MIDI editor note editing workflows
+11e32d67 Refine MIDI editing and mixer processing
+d44999e9 Distinguish comp bus cues from clips
+b9b3fe2b Fix MIDI editor relative snap movement
+b6ff3d7a Fix MIDI editor layout and mixer fader interaction
+e91695b9 Refine MIDI note placement and collisions
+f9ab3856 Remember MIDI note entry defaults
+04918ad3 Create MIDI notes with a single click
+0a7989d5 Split unselected clip beneath pointer
+83de0c62 Fix comp child option-click mute gestures
+424f4880 Refine piano roll interaction and navigation
+38bcab22 Beta checkpoint v1.2.0b5
+44960e68 Beta checkpoint v1.2.0b4
+1fe02f6e Harden test recovery and repair stale contracts
+fb50ef18 Fix global Listen Bus recall on launch
+04054046 Add grid splitting and Rooms IR navigation
+7ae8fd93 Add layered Loop Record Dub mode
+c8e93468 Add M/S band-split mixing to Taype Drive
+dbecadce Release MIDI editor preview notes on stop
+90c93572 Capture pre-punch MIDI notes at clip start
+e60ba1ea Harden MIDI transport, test isolation, and keyboard input
+e630cf59 Fix Drive windows and sandbox crash reporting
+b6495f9d Preserve MIDI editor fullscreen across clip switches
+8c08cb59 Harden sandbox MIDI delivery and MIDI editor fullscreen
+8a4cf582 Fix lossless live MIDI sandbox delivery
+83d95af8 Fix virtual keyboard key releases from plug-in windows
+601570fb Fix looped VSTi MIDI take timing
+b37ab3c1 Fix VSTi recording continuity and MIDI handovers
+d32d5007 Isolate Sooper-Looper live MIDI routing
+0dc3f003 Beta checkpoint v1.2.0b3
+1d8b0b15 Make Taype Drive editor resizable
+301398fe Add JD's Law wet stem printing
+0952d196 Complete popup help gesture localisation
+3d9d4fcd Add clip pitch nudge shortcuts and readout
+7921695a Add Taype Drive channel modes and plugin window controls
+9297b71e Fix Sooper-Looper pass truncation
+cd3b10a0 Beta checkpoint v1.2.0b2
+d712ff40 Fix ARA editor context and UI test state
+c5839550 Refine splash beta version display
+8e8b94cb Stabilize ARA commit lifecycle and test contracts
+6a1cb202 Add channel conversion and offline bounce workflows
+72c2145c Stabilize ARA and plugin editor workflows
+c9fcd4ab Checkpoint ARA2 lifecycle investigation
+8528a144 Stabilize global ARA2 provider lifecycle
+77c50ac6 Improve ARA2 Melodyne and plugin workflows
+2eee41d9 Beta checkpoint v1.2.0b1
+55de1800 Name comp child tracks from their bus
+27da9a15 Add multi-output instrument track routing
+ebb37782 Open MIDI editor on clip double-click
+a42b062c Track taype-releases v1.1.0
 """
