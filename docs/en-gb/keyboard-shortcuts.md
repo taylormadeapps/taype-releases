@@ -49,11 +49,14 @@ selected MIDI quantise or hardware-groove line when Snap is enabled, or at the
 exact pointer position when Snap is off. If the mouse is not over a note,
 nothing is cut. It does not split the arranger clip while the MIDI editor is
 active.
-Plain Q applies the current Quantise settings while the MIDI editor is active;
-Option+Q selects the next division and restores that division's last-used
-Straight or groove option. Shift+Q cycles through Straight and every groove
-inside the current division without leaving it. Both cycles wrap. These keys
-stay in the MIDI editor instead of controlling video there; Cmd+Q remains Quit.
+Plain Q applies the current Quantise settings while the MIDI editor is active.
+Ctrl+Q selects the next division and Ctrl+Shift+Q selects the previous one;
+both directions wrap and restore that division's last-used Straight or groove
+option. Option+Q selects the next Straight or groove option inside the current
+division and Option+Shift+Q selects the previous one; both directions wrap
+without leaving the division. These quantise keys stay in the MIDI editor
+instead of controlling video there. On macOS, Cmd+Q opens a confirmation with
+Cancel focused before TayPE starts its normal safe quit process.
 
 ### Editing
 

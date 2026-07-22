@@ -173,10 +173,13 @@ groups its hardware patterns into one further submenu per machine; other
 groove divisions stay flat, and divisions without grooves remain direct menu
 choices. A selected groove repeats from Cut zero across four bars.
 While the MIDI editor is active, Q applies the current Quantise settings.
-Option+Q cycles through the top-level divisions and remembers the last
-Straight or groove option used in each one. Shift+Q cycles only through the
-options in the current division, including all hardware grooves, and wraps
-without moving to the next division. Cmd+Q remains Quit.
+Ctrl+Q moves to the next top-level division and Ctrl+Shift+Q moves to the
+previous one, wrapping in either direction and remembering the last Straight
+or groove option used in each division. Option+Q moves to the next option in
+the current division and Option+Shift+Q moves to the previous one, including
+all hardware grooves and wrapping without changing division. On macOS, Cmd+Q
+opens a confirmation with Cancel focused before TayPE begins its normal safe
+quit process.
 Its timing points are the only vertical timing grid drawn through the note
 lanes. The pinned ruler follows the arranger's current Auto or fixed timeline
 division.
