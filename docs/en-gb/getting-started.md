@@ -78,6 +78,8 @@ Use **Help > Popup Help** or the help button in the transport bar to toggle hove
 
 TayPE ships with translated app language packs. Use the Help menu language selector or the welcome card language picker. Changing language takes effect after restart, and the restart notice appears in the newly selected language.
 
+The welcome card keeps the startup surface to current actions and live status; it does not show roadmap or coming-soon notices.
+
 The public GitBook manual is maintained for every shipped GitBook language. Use **Help > Read the Fine Manual** to open the matching docs language, or the Help menu search field on macOS to search the manual in your browser.
 
 ## MIDI Monitor
