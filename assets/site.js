@@ -4,6 +4,10 @@ const DOWNLOAD_URL = "https://github.com/taylormadeapps/taype-releases/releases/
 const BETA_PROGRAMME_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform";
 const PLATFORM_INTEREST_URL = "/other-platforms/";
 const RAW_ABOUT_URL = "/ruminant-audio-works/";
+const AFFILIATE_STORE = "ruminantaudioworks";
+const AFFILIATE_SCRIPT_URL = "https://lmsqueezy.com/affiliate.js";
+const AFFILIATE_COOKIE_NAME = "ls_aff_ref";
+const AFFILIATE_REF_PATTERN = /^[A-Za-z0-9_-]{1,64}$/;
 
 const localeAliasMap = {
     "ar": "ar",
@@ -92,6 +96,13 @@ const locales = {
             "finish-copy": "LaForgé is a finishing room and a window onto your mix. The last mile is where many records stall. As loudness comes up and the finish line approaches, stressed mixes begin to reveal themselves. LaForgé helps you reveal what is really there, stay connected to the music, and make the final decisions that turn a mix into a record.",
             "a11y-heading": "Built for Everyone",
             "pricing-heading": "Pricing",
+            "affiliate-consent-title": "Support the person who sent you",
+            "affiliate-consent-copy": "This is an affiliate link. With your permission, Lemon Squeezy will use a cookie and a device-derived identifier for 30 days so the person who referred you can receive 20% commission if you buy TayPE. It costs you nothing.",
+            "affiliate-consent-details": "How affiliate tracking works",
+            "affiliate-consent-allow": "Allow referral tracking",
+            "affiliate-consent-decline": "Continue without tracking",
+            "affiliate-consent-loading": "Enabling referral tracking…",
+            "affiliate-consent-error": "Referral tracking could not be enabled. You can continue without it.",
             "price-personal-try-first": "Be sure to download and try before you buy.",
             "price-commercial-try-first": "Be sure to download and try before you buy.",
             "demo-heading": "Here's the deal.",
@@ -155,6 +166,7 @@ const locales = {
             "footer-download": "Let's Roll",
             "footer-docs": "Docs",
             "footer-community": "Community",
+            "footer-affiliates": "Affiliates",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
             "footer-site-data": "Cookie Policy",
@@ -292,6 +304,13 @@ const locales = {
             "finish-copy": "LaForgé は、仕上げの部屋であり、ミックスを見通す窓です。最後の一歩で、多くのレコードは止まってしまいます。ラウドネスが上がり、ゴールが近づくにつれて、ストレスを受けたミックスは本当の姿を見せ始めます。LaForgé は、そこに本当にあるものを明らかにし、音楽とのつながりを保ち、ミックスをレコードに変える最後の判断を下す助けになります。",
             "a11y-heading": "すべての人のために",
             "pricing-heading": "価格",
+            "affiliate-consent-title": "紹介してくれた人を応援する",
+            "affiliate-consent-copy": "これはアフィリエイトリンクです。許可すると、Lemon Squeezy が Cookie と端末から生成した識別子を30日間使用し、TayPE を購入した場合に紹介者が20%のコミッションを受け取れるようにします。あなたの支払額は変わりません。",
+            "affiliate-consent-details": "アフィリエイト追跡の仕組み",
+            "affiliate-consent-allow": "紹介の追跡を許可",
+            "affiliate-consent-decline": "追跡せずに続ける",
+            "affiliate-consent-loading": "紹介の追跡を有効にしています…",
+            "affiliate-consent-error": "紹介の追跡を有効にできませんでした。追跡なしでそのまま続けられます。",
             "price-personal-try-first": "購入前にTayPEをダウンロードして試す。",
             "price-commercial-try-first": "購入前にTayPEをダウンロードして試す。",
             "demo-heading": "話はこうだ。",
@@ -345,6 +364,7 @@ const locales = {
             "footer-download": "さあ始めよう",
             "footer-docs": "ドキュメント",
             "footer-community": "コミュニティ",
+            "footer-affiliates": "アフィリエイト",
             "footer-terms": "T&Cs",
             "footer-privacy": "プライバシー",
             "footer-site-data": "Cookie ポリシー",
@@ -482,6 +502,13 @@ const locales = {
             "finish-copy": "LaForgé est une salle de finition et une fenêtre ouverte sur votre mix. Le dernier kilomètre est l’endroit où beaucoup de disques s’arrêtent. Quand le niveau monte et que la ligne d’arrivée approche, les mixes sous tension commencent à se révéler. LaForgé vous aide à révéler ce qui est vraiment là, à rester connecté à la musique et à prendre les décisions finales qui transforment un mix en disque.",
             "a11y-heading": "Conçu pour tout le monde",
             "pricing-heading": "Tarifs",
+            "affiliate-consent-title": "Soutenir la personne qui vous a envoyé ici",
+            "affiliate-consent-copy": "Ceci est un lien d’affiliation. Avec votre accord, Lemon Squeezy utilisera un cookie et un identifiant dérivé de votre appareil pendant 30 jours afin que la personne qui vous a recommandé TayPE puisse recevoir une commission de 20 % si vous l’achetez. Cela ne vous coûte rien.",
+            "affiliate-consent-details": "Fonctionnement du suivi d’affiliation",
+            "affiliate-consent-allow": "Autoriser le suivi d’affiliation",
+            "affiliate-consent-decline": "Continuer sans suivi",
+            "affiliate-consent-loading": "Activation du suivi d’affiliation…",
+            "affiliate-consent-error": "Le suivi d’affiliation n’a pas pu être activé. Vous pouvez continuer sans suivi.",
             "price-personal-try-first": "Téléchargez TayPE et essayez-le avant d’acheter.",
             "price-commercial-try-first": "Téléchargez TayPE et essayez-le avant d’acheter.",
             "demo-heading": "Voilà le deal.",
@@ -535,6 +562,7 @@ const locales = {
             "footer-download": "C'est parti",
             "footer-docs": "Docs",
             "footer-community": "Communauté",
+            "footer-affiliates": "Affiliation",
             "footer-terms": "T&Cs",
             "footer-privacy": "Confidentialité",
             "footer-site-data": "Politique cookies",
@@ -672,6 +700,13 @@ const locales = {
             "finish-copy": "LaForgé ist ein Finishing-Raum und ein Fenster auf deinen Mix. Auf der letzten Meile bleiben viele Platten stecken. Wenn die Lautheit steigt und die Ziellinie näher rückt, zeigen belastete Mixe, was wirklich in ihnen steckt. LaForgé hilft dir, sichtbar zu machen, was wirklich da ist, mit der Musik verbunden zu bleiben und die letzten Entscheidungen zu treffen, die aus einem Mix eine Platte machen.",
             "a11y-heading": "Für alle gebaut",
             "pricing-heading": "Preise",
+            "affiliate-consent-title": "Unterstütze die Person, die dich hierher geschickt hat",
+            "affiliate-consent-copy": "Dies ist ein Affiliate-Link. Mit deiner Zustimmung verwendet Lemon Squeezy 30 Tage lang ein Cookie und eine aus deinem Gerät abgeleitete Kennung, damit die Person, die dich auf TayPE aufmerksam gemacht hat, beim Kauf 20 % Provision erhält. Für dich entstehen keine zusätzlichen Kosten.",
+            "affiliate-consent-details": "So funktioniert Affiliate-Tracking",
+            "affiliate-consent-allow": "Empfehlungs-Tracking erlauben",
+            "affiliate-consent-decline": "Ohne Tracking fortfahren",
+            "affiliate-consent-loading": "Empfehlungs-Tracking wird aktiviert…",
+            "affiliate-consent-error": "Das Empfehlungs-Tracking konnte nicht aktiviert werden. Du kannst ohne Tracking fortfahren.",
             "price-personal-try-first": "TayPE herunterladen und vor dem Kauf testen.",
             "price-commercial-try-first": "TayPE herunterladen und vor dem Kauf testen.",
             "demo-heading": "So läuft’s.",
@@ -725,6 +760,7 @@ const locales = {
             "footer-download": "Los geht's",
             "footer-docs": "Docs",
             "footer-community": "Community",
+            "footer-affiliates": "Partnerprogramm",
             "footer-terms": "T&Cs",
             "footer-privacy": "Datenschutz",
             "footer-site-data": "Cookie-Richtlinie",
@@ -862,6 +898,13 @@ const locales = {
             "finish-copy": "LaForgé es una sala de acabado y una ventana a tu mezcla. La última milla es donde muchos discos se atascan. A medida que sube la sonoridad y se acerca la meta, las mezclas sometidas a presión empiezan a revelar lo que realmente hay. LaForgé te ayuda a descubrir lo que está ahí de verdad, seguir conectado con la música y tomar las decisiones finales que convierten una mezcla en un disco.",
             "a11y-heading": "Hecho para todo el mundo",
             "pricing-heading": "Precios",
+            "affiliate-consent-title": "Apoya a quien te envió aquí",
+            "affiliate-consent-copy": "Este es un enlace de afiliado. Con tu permiso, Lemon Squeezy utilizará una cookie y un identificador derivado de tu dispositivo durante 30 días para que la persona que te recomendó TayPE pueda recibir una comisión del 20 % si lo compras. No te cuesta nada.",
+            "affiliate-consent-details": "Cómo funciona el seguimiento de afiliados",
+            "affiliate-consent-allow": "Permitir seguimiento de afiliado",
+            "affiliate-consent-decline": "Continuar sin seguimiento",
+            "affiliate-consent-loading": "Activando el seguimiento de afiliado…",
+            "affiliate-consent-error": "No se pudo activar el seguimiento de afiliado. Puedes continuar sin él.",
             "price-personal-try-first": "Descarga TayPE y pruébalo antes de comprar.",
             "price-commercial-try-first": "Descarga TayPE y pruébalo antes de comprar.",
             "demo-heading": "El trato es así.",
@@ -915,6 +958,7 @@ const locales = {
             "footer-download": "A grabar",
             "footer-docs": "Docs",
             "footer-community": "Comunidad",
+            "footer-affiliates": "Afiliados",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacidad",
             "footer-site-data": "Política de cookies",
@@ -1052,6 +1096,13 @@ const locales = {
             "finish-copy": "LaForgé er lokavinnsluherbergi og gluggi inn í mixið þitt. Síðasti spölurinn er þar sem margar plötur stöðvast. Þegar hljóðstyrkurinn hækkar og marklínan nálgast fara mix undir álagi að sýna hvað er raunverulega þar. LaForgé hjálpar þér að afhjúpa það sem er raunverulega til staðar, halda tengingu við tónlistina og taka síðustu ákvarðanirnar sem breyta mixi í plötu.",
             "a11y-heading": "Byggt fyrir alla",
             "pricing-heading": "Verð",
+            "affiliate-consent-title": "Styðja þann sem vísaði þér hingað",
+            "affiliate-consent-copy": "Þetta er samstarfshlekkur. Með leyfi þínu notar Lemon Squeezy vefköku og auðkenni sem dregið er af tækinu þínu í 30 daga svo sá sem vísaði þér á TayPE geti fengið 20% þóknun ef þú kaupir. Þetta kostar þig ekkert.",
+            "affiliate-consent-details": "Hvernig tilvísunarrakning virkar",
+            "affiliate-consent-allow": "Leyfa tilvísunarrakningu",
+            "affiliate-consent-decline": "Halda áfram án rakningar",
+            "affiliate-consent-loading": "Kveiki á tilvísunarrakningu…",
+            "affiliate-consent-error": "Ekki tókst að kveikja á tilvísunarrakningu. Þú getur haldið áfram án hennar.",
             "price-personal-try-first": "Sæktu TayPE og prófaðu áður en þú kaupir.",
             "price-commercial-try-first": "Sæktu TayPE og prófaðu áður en þú kaupir.",
             "demo-heading": "Hér er samningurinn.",
@@ -1105,6 +1156,7 @@ const locales = {
             "footer-download": "Til verks",
             "footer-docs": "Skjöl",
             "footer-community": "Samfélag",
+            "footer-affiliates": "Samstarf",
             "footer-terms": "T&Cs",
             "footer-privacy": "Persónuvernd",
             "footer-site-data": "Vefkökustefna",
@@ -1242,6 +1294,13 @@ const locales = {
             "finish-copy": "LaForgé is een afwerkingsruimte en een venster op je mix. De laatste meters zijn waar veel platen vastlopen. Terwijl de loudness omhoog komt en de finish nadert, beginnen gespannen mixen zichzelf te verraden. LaForgé helpt je te onthullen wat er echt zit, verbonden te blijven met de muziek en de laatste beslissingen te nemen die een mix in een plaat veranderen.",
             "a11y-heading": "Gemaakt voor iedereen",
             "pricing-heading": "Prijzen",
+            "affiliate-consent-title": "Steun degene die je hierheen stuurde",
+            "affiliate-consent-copy": "Dit is een affiliatelink. Met jouw toestemming gebruikt Lemon Squeezy 30 dagen lang een cookie en een van je apparaat afgeleide identificatiecode, zodat degene die je naar TayPE verwees 20% commissie kan ontvangen als je TayPE koopt. Het kost jou niets.",
+            "affiliate-consent-details": "Hoe affiliatetracking werkt",
+            "affiliate-consent-allow": "Affiliatetracking toestaan",
+            "affiliate-consent-decline": "Doorgaan zonder tracking",
+            "affiliate-consent-loading": "Affiliatetracking wordt ingeschakeld…",
+            "affiliate-consent-error": "Affiliatetracking kon niet worden ingeschakeld. Je kunt zonder tracking doorgaan.",
             "price-personal-try-first": "Download TayPE en probeer het voordat je koopt.",
             "price-commercial-try-first": "Download TayPE en probeer het voordat je koopt.",
             "demo-heading": "Zo zit het.",
@@ -1295,6 +1354,7 @@ const locales = {
             "footer-download": "Laten we beginnen",
             "footer-docs": "Docs",
             "footer-community": "Gemeenschap",
+            "footer-affiliates": "Affiliates",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
             "footer-site-data": "Cookiebeleid",
@@ -1432,6 +1492,13 @@ const locales = {
             "finish-copy": "LaForgé è una stanza di finitura e una finestra sul tuo mix. L’ultimo tratto è dove molti dischi si fermano. Quando la loudness sale e il traguardo si avvicina, i mix sotto stress iniziano a rivelarsi. LaForgé ti aiuta a mostrare ciò che c’è davvero, restare connesso alla musica e prendere le decisioni finali che trasformano un mix in un disco.",
             "a11y-heading": "Costruito per tutti",
             "pricing-heading": "Prezzi",
+            "affiliate-consent-title": "Sostieni chi ti ha inviato qui",
+            "affiliate-consent-copy": "Questo è un link di affiliazione. Con il tuo permesso, Lemon Squeezy utilizzerà un cookie e un identificatore derivato dal dispositivo per 30 giorni, così chi ti ha consigliato TayPE potrà ricevere una commissione del 20% se lo acquisti. Per te non cambia il prezzo.",
+            "affiliate-consent-details": "Come funziona il tracciamento affiliati",
+            "affiliate-consent-allow": "Consenti il tracciamento affiliati",
+            "affiliate-consent-decline": "Continua senza tracciamento",
+            "affiliate-consent-loading": "Attivazione del tracciamento affiliati…",
+            "affiliate-consent-error": "Impossibile attivare il tracciamento affiliati. Puoi continuare senza.",
             "price-personal-try-first": "Scarica TayPE e provalo prima di acquistare.",
             "price-commercial-try-first": "Scarica TayPE e provalo prima di acquistare.",
             "demo-heading": "Ecco il patto.",
@@ -1485,6 +1552,7 @@ const locales = {
             "footer-download": "Si parte",
             "footer-docs": "Docs",
             "footer-community": "Comunità",
+            "footer-affiliates": "Affiliati",
             "footer-terms": "T&Cs",
             "footer-privacy": "Privacy",
             "footer-site-data": "Informativa cookie",
@@ -1622,6 +1690,13 @@ const locales = {
             "finish-copy": "LaForgé to pokój wykończeniowy i okno na twój miks. Ostatni odcinek to miejsce, w którym wiele płyt grzęźnie. Gdy głośność rośnie, a meta się zbliża, przeciążone miksy zaczynają ujawniać, co naprawdę w nich jest. LaForgé pomaga odsłonić to, co naprawdę tam jest, pozostać połączonym z muzyką i podjąć ostatnie decyzje, które zamieniają miks w płytę.",
             "a11y-heading": "Zbudowane dla wszystkich",
             "pricing-heading": "Ceny",
+            "affiliate-consent-title": "Wesprzyj osobę, która Cię tu skierowała",
+            "affiliate-consent-copy": "To jest link partnerski. Za Twoją zgodą Lemon Squeezy będzie przez 30 dni używać pliku cookie i identyfikatora utworzonego na podstawie urządzenia, aby osoba polecająca TayPE mogła otrzymać 20% prowizji, jeśli kupisz program. Nie ponosisz żadnych dodatkowych kosztów.",
+            "affiliate-consent-details": "Jak działa śledzenie partnerskie",
+            "affiliate-consent-allow": "Zezwól na śledzenie polecenia",
+            "affiliate-consent-decline": "Kontynuuj bez śledzenia",
+            "affiliate-consent-loading": "Włączanie śledzenia polecenia…",
+            "affiliate-consent-error": "Nie udało się włączyć śledzenia polecenia. Możesz kontynuować bez niego.",
             "price-personal-try-first": "Pobierz TayPE i wypróbuj go przed zakupem.",
             "price-commercial-try-first": "Pobierz TayPE i wypróbuj go przed zakupem.",
             "demo-heading": "Sprawa wygląda tak.",
@@ -1675,6 +1750,7 @@ const locales = {
             "footer-download": "Zaczynamy",
             "footer-docs": "Docs",
             "footer-community": "Społeczność",
+            "footer-affiliates": "Program partnerski",
             "footer-terms": "T&Cs",
             "footer-privacy": "Prywatność",
             "footer-site-data": "Polityka cookies",
@@ -1812,6 +1888,13 @@ const locales = {
             "finish-copy": "LaForgé - це кімната фінального доведення і вікно у ваш мікс. Саме на останньому відрізку багато записів зупиняються. Коли гучність зростає, а фініш наближається, напружені мікси починають показувати, що в них справді є. LaForgé допомагає відкрити те, що справді там є, залишатися пов’язаними з музикою і прийняти фінальні рішення, які перетворюють мікс на запис.",
             "a11y-heading": "Побудовано для всіх",
             "pricing-heading": "Ціни",
+            "affiliate-consent-title": "Підтримайте того, хто привів вас сюди",
+            "affiliate-consent-copy": "Це партнерське посилання. З вашого дозволу Lemon Squeezy протягом 30 днів використовуватиме файл cookie та ідентифікатор, створений на основі даних пристрою, щоб людина, яка порадила вам TayPE, могла отримати 20% комісії, якщо ви придбаєте програму. Для вас це нічого не коштує.",
+            "affiliate-consent-details": "Як працює партнерське відстеження",
+            "affiliate-consent-allow": "Дозволити відстеження рекомендації",
+            "affiliate-consent-decline": "Продовжити без відстеження",
+            "affiliate-consent-loading": "Увімкнення партнерського відстеження…",
+            "affiliate-consent-error": "Не вдалося увімкнути партнерське відстеження. Ви можете продовжити без нього.",
             "price-personal-try-first": "Завантажте TayPE і спробуйте перед купівлею.",
             "price-commercial-try-first": "Завантажте TayPE і спробуйте перед купівлею.",
             "demo-heading": "Угода така.",
@@ -1865,6 +1948,7 @@ const locales = {
             "footer-download": "Поїхали",
             "footer-docs": "Docs",
             "footer-community": "Спільнота",
+            "footer-affiliates": "Партнерська програма",
             "footer-terms": "T&Cs",
             "footer-privacy": "Конфіденційність",
             "footer-site-data": "Політика cookies",
@@ -2002,6 +2086,13 @@ const locales = {
             "finish-copy": "Το LaForgé είναι ένας χώρος τελειώματος και ένα παράθυρο στο mix σου. Το τελευταίο χιλιόμετρο είναι εκεί όπου πολλοί δίσκοι κολλάνε. Καθώς η ένταση ανεβαίνει και η γραμμή τερματισμού πλησιάζει, τα πιεσμένα mix αρχίζουν να αποκαλύπτουν τι υπάρχει πραγματικά. Το LaForgé σε βοηθά να φανερώσεις αυτό που είναι πραγματικά εκεί, να μείνεις συνδεδεμένος με τη μουσική και να πάρεις τις τελικές αποφάσεις που μετατρέπουν ένα mix σε δίσκο.",
             "a11y-heading": "Κατασκευασμένο για όλους",
             "pricing-heading": "Τιμολόγηση",
+            "affiliate-consent-title": "Υποστηρίξτε το άτομο που σας έστειλε εδώ",
+            "affiliate-consent-copy": "Αυτός είναι σύνδεσμος συνεργάτη. Με την άδειά σας, η Lemon Squeezy θα χρησιμοποιήσει ένα cookie και ένα αναγνωριστικό που προκύπτει από τη συσκευή σας για 30 ημέρες, ώστε το άτομο που σας πρότεινε το TayPE να λάβει προμήθεια 20% αν το αγοράσετε. Δεν σας κοστίζει τίποτα.",
+            "affiliate-consent-details": "Πώς λειτουργεί η παρακολούθηση συνεργατών",
+            "affiliate-consent-allow": "Να επιτρέπεται η παρακολούθηση",
+            "affiliate-consent-decline": "Συνέχεια χωρίς παρακολούθηση",
+            "affiliate-consent-loading": "Ενεργοποίηση παρακολούθησης συνεργάτη…",
+            "affiliate-consent-error": "Δεν ήταν δυνατή η ενεργοποίηση της παρακολούθησης συνεργάτη. Μπορείτε να συνεχίσετε χωρίς αυτήν.",
             "price-personal-try-first": "Κατέβασε το TayPE και δοκίμασέ το πριν αγοράσεις.",
             "price-commercial-try-first": "Κατέβασε το TayPE και δοκίμασέ το πριν αγοράσεις.",
             "demo-heading": "Αυτή είναι η συμφωνία.",
@@ -2055,6 +2146,7 @@ const locales = {
             "footer-download": "Ξεκινάμε",
             "footer-docs": "Docs",
             "footer-community": "Κοινότητα",
+            "footer-affiliates": "Συνεργάτες",
             "footer-terms": "T&Cs",
             "footer-privacy": "Απόρρητο",
             "footer-site-data": "Πολιτική cookies",
@@ -2207,6 +2299,13 @@ defineSiteLocale("ar", {
         "finish-copy": "LaForgé غرفة إنهاء ونافذة على المكس. الميل الأخير هو المكان الذي تتعطل فيه تسجيلات كثيرة. عندما يرتفع الصوت ويقترب خط النهاية، تبدأ المكسات المجهدة بكشف حقيقتها. يساعدك LaForgé على رؤية ما هو موجود فعلاً، والبقاء متصلاً بالموسيقى، واتخاذ القرارات الأخيرة التي تحول المكس إلى تسجيل.",
         "a11y-heading": "مبني للجميع",
         "pricing-heading": "الأسعار",
+        "affiliate-consent-title": "ادعم الشخص الذي أرسلك إلينا",
+        "affiliate-consent-copy": "هذا رابط تابع. بإذنك، ستستخدم Lemon Squeezy ملف تعريف ارتباط ومعرّفًا مشتقًا من جهازك لمدة 30 يومًا، حتى يحصل الشخص الذي عرّفك على TayPE على عمولة قدرها 20% إذا اشتريته. لن يكلفك ذلك شيئًا.",
+        "affiliate-consent-details": "كيف يعمل تتبع الإحالات",
+        "affiliate-consent-allow": "السماح بتتبع الإحالة",
+        "affiliate-consent-decline": "المتابعة من دون تتبع",
+        "affiliate-consent-loading": "جارٍ تفعيل تتبع الإحالة…",
+        "affiliate-consent-error": "تعذّر تفعيل تتبع الإحالة. يمكنك المتابعة من دونه.",
         "price-personal-try-first": "حمّل وجرّب قبل أن تشتري.",
         "price-commercial-try-first": "حمّل وجرّب قبل أن تشتري.",
         "demo-heading": "إليك الاتفاق.",
@@ -2269,6 +2368,7 @@ defineSiteLocale("ar", {
         "footer-download": "لنبدأ التسجيل",
         "footer-docs": "الدليل",
         "footer-community": "المجتمع",
+        "footer-affiliates": "الشركاء",
         "footer-terms": "الشروط",
         "footer-privacy": "الخصوصية",
         "footer-site-data": "سياسة ملفات تعريف الارتباط",
@@ -2356,6 +2456,13 @@ defineSiteLocale("zh-cn", {
         "finish-copy": "LaForgé 是一个收尾房间，也是通向你混音的一扇窗。很多唱片都卡在最后一英里。响度上来、终点逼近时，吃紧的混音会开始暴露真正的问题。LaForgé 帮你看清那里到底有什么，保持和音乐的连接，并做出把混音变成唱片的最后决定。",
         "a11y-heading": "为所有人而建",
         "pricing-heading": "价格",
+        "affiliate-consent-title": "支持推荐你来的人",
+        "affiliate-consent-copy": "这是一个联盟推广链接。经你同意，Lemon Squeezy 将使用 Cookie 和由设备信息生成的标识符保存 30 天；如果你购买 TayPE，推荐人可获得 20% 的佣金。你无需支付任何额外费用。",
+        "affiliate-consent-details": "联盟推广跟踪如何运作",
+        "affiliate-consent-allow": "允许推荐跟踪",
+        "affiliate-consent-decline": "不跟踪并继续",
+        "affiliate-consent-loading": "正在启用推荐跟踪…",
+        "affiliate-consent-error": "无法启用推荐跟踪。你仍可在不跟踪的情况下继续。",
         "price-personal-try-first": "购买前请先下载试用。",
         "price-commercial-try-first": "购买前请先下载试用。",
         "demo-heading": "规则很简单。",
@@ -2418,6 +2525,7 @@ defineSiteLocale("zh-cn", {
         "footer-download": "开始录吧",
         "footer-docs": "文档",
         "footer-community": "社区",
+        "footer-affiliates": "联盟推广",
         "footer-terms": "条款",
         "footer-privacy": "隐私",
         "footer-site-data": "Cookie 政策",
@@ -2505,6 +2613,13 @@ defineSiteLocale("ko-kr", {
         "finish-copy": "LaForgé는 마무리 공간이자 믹스를 들여다보는 창입니다. 많은 음반이 마지막 구간에서 멈춥니다. 라우드니스가 올라가고 결승선이 가까워질수록, 압박받는 믹스는 실제 모습을 드러내기 시작합니다. LaForgé는 무엇이 진짜로 있는지 드러내고, 음악과의 연결을 유지하며, 믹스를 음반으로 바꾸는 마지막 결정을 돕습니다.",
         "a11y-heading": "모두를 위해 설계",
         "pricing-heading": "가격",
+        "affiliate-consent-title": "나를 이곳으로 안내한 사람을 지원하기",
+        "affiliate-consent-copy": "이 링크는 제휴 링크입니다. 동의하면 Lemon Squeezy가 쿠키와 기기 정보에서 생성된 식별자를 30일 동안 사용합니다. TayPE를 구매할 경우 추천한 사람이 20% 수수료를 받을 수 있으며, 구매자에게 추가 비용은 없습니다.",
+        "affiliate-consent-details": "제휴 추적 작동 방식",
+        "affiliate-consent-allow": "추천 추적 허용",
+        "affiliate-consent-decline": "추적 없이 계속",
+        "affiliate-consent-loading": "추천 추적을 활성화하는 중…",
+        "affiliate-consent-error": "추천 추적을 활성화하지 못했습니다. 추적 없이 계속할 수 있습니다.",
         "price-personal-try-first": "구매 전에 꼭 다운로드해서 사용해 보세요.",
         "price-commercial-try-first": "구매 전에 꼭 다운로드해서 사용해 보세요.",
         "demo-heading": "조건은 이렇습니다.",
@@ -2567,6 +2682,7 @@ defineSiteLocale("ko-kr", {
         "footer-download": "녹음 시작",
         "footer-docs": "문서",
         "footer-community": "커뮤니티",
+        "footer-affiliates": "제휴 프로그램",
         "footer-terms": "약관",
         "footer-privacy": "개인정보",
         "footer-site-data": "쿠키 정책",
@@ -2621,6 +2737,10 @@ const metaDescription = document.getElementById("meta-description");
 const metaOgTitle = document.getElementById("meta-og-title");
 const metaOgDescription = document.getElementById("meta-og-description");
 const metaOgUrl = document.getElementById("meta-og-url");
+const affiliateConsent = document.getElementById("affiliate-consent");
+const affiliateConsentAllow = document.getElementById("affiliate-consent-allow");
+const affiliateConsentDecline = document.getElementById("affiliate-consent-decline");
+const affiliateConsentStatus = document.getElementById("affiliate-consent-status");
 const docEl = document.documentElement;
 const navEl = document.querySelector("nav");
 const anchorSettleDelays = [0, 120, 360, 900, 1600];
@@ -2631,6 +2751,9 @@ let currentGregisms = currentLocaleData.gregisms;
 let gregismIndex = 0;
 let activeAnchorHash = null;
 let activeAnchorUntil = 0;
+let affiliateScriptPromise = null;
+let affiliateTrackInProgress = false;
+let affiliateConsentStatusKey = null;
 
 function pickRandomGregismIndex(previousIndex = -1) {
     const count = currentGregisms.length;
@@ -2780,10 +2903,195 @@ function handleHashAnchorClick(event) {
     settleHashScroll(hash, prefersReducedMotion ? "auto" : "smooth");
 }
 
+function getAffiliateRef(url = new URL(window.location.href)) {
+    const value = url.searchParams.get("aff");
+    if (!value) return null;
+
+    const ref = value.trim();
+    return AFFILIATE_REF_PATTERN.test(ref) ? ref : null;
+}
+
+function getAffiliateNavigationSearch() {
+    const affiliateRef = getAffiliateRef();
+    return affiliateRef ? `?aff=${encodeURIComponent(affiliateRef)}` : "";
+}
+
 function navigateToLocale(locale, options = {}) {
-    const target = `${getSitePath(locale)}${window.location.hash || ""}`;
+    const target = `${getSitePath(locale)}${getAffiliateNavigationSearch()}${window.location.hash || ""}`;
     if (options.replace) window.location.replace(target);
     else window.location.assign(target);
+}
+
+function hasAffiliateCookie() {
+    return document.cookie
+        .split(";")
+        .map((part) => part.trim())
+        .some((part) => part.startsWith(`${AFFILIATE_COOKIE_NAME}=`));
+}
+
+function replaceAffiliateUrl(options = {}) {
+    const url = new URL(window.location.href);
+    if (options.removeRef) url.searchParams.delete("aff");
+    if (options.pricing) url.hash = "pricing";
+
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function setAffiliateConsentBusy(isBusy) {
+    affiliateTrackInProgress = isBusy;
+    if (affiliateConsentAllow) affiliateConsentAllow.disabled = isBusy;
+    if (affiliateConsentDecline) affiliateConsentDecline.disabled = isBusy;
+}
+
+function setAffiliateConsentStatus(statusKey = null) {
+    affiliateConsentStatusKey = statusKey;
+    if (affiliateConsentStatus) {
+        affiliateConsentStatus.textContent = statusKey
+            ? currentLocaleData.text[statusKey] || ""
+            : "";
+    }
+}
+
+function hideAffiliateConsent() {
+    if (affiliateConsent) affiliateConsent.hidden = true;
+    setAffiliateConsentStatus();
+    setAffiliateConsentBusy(false);
+    window.requestAnimationFrame(updateAnchorOffset);
+}
+
+function showAffiliateConsent(statusKey = null) {
+    if (!affiliateConsent) return;
+
+    affiliateConsent.hidden = false;
+    setAffiliateConsentStatus(statusKey);
+    setAffiliateConsentBusy(false);
+    window.requestAnimationFrame(() => {
+        updateAnchorOffset();
+        settleHashScroll("#pricing", "auto");
+    });
+}
+
+function loadAffiliateScript() {
+    if (typeof window.createLemonSqueezyAffiliate === "function") {
+        return Promise.resolve();
+    }
+    if (affiliateScriptPromise) return affiliateScriptPromise;
+
+    affiliateScriptPromise = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = AFFILIATE_SCRIPT_URL;
+        script.async = true;
+        script.dataset.taypeAffiliate = "true";
+        script.addEventListener("load", () => {
+            if (typeof window.createLemonSqueezyAffiliate === "function") resolve();
+            else reject(new Error("Lemon Squeezy affiliate script did not initialise"));
+        }, { once: true });
+        script.addEventListener("error", () => {
+            reject(new Error("Lemon Squeezy affiliate script could not be loaded"));
+        }, { once: true });
+        document.head.append(script);
+    }).catch((error) => {
+        affiliateScriptPromise = null;
+        throw error;
+    });
+
+    return affiliateScriptPromise;
+}
+
+function trackAffiliateReferral(affiliateRef = null) {
+    return new Promise((resolve, reject) => {
+        let trackingStarted = false;
+        let settled = false;
+        let startupTimeoutId = null;
+
+        const finish = (callback, value) => {
+            if (settled) return;
+            settled = true;
+            if (startupTimeoutId !== null) window.clearTimeout(startupTimeoutId);
+            callback(value);
+        };
+        startupTimeoutId = window.setTimeout(() => {
+            finish(reject, new Error("Lemon Squeezy affiliate tracking could not start"));
+        }, 10000);
+
+        window.lemonSqueezyAffiliateConfig = {
+            store: AFFILIATE_STORE,
+            trackOnLoad: false,
+            onReady: (affiliate) => {
+                if (settled || trackingStarted) return;
+                trackingStarted = true;
+                window.clearTimeout(startupTimeoutId);
+                startupTimeoutId = null;
+                Promise.resolve(affiliate.Track(affiliateRef))
+                    .then(() => {
+                        if (!settled) {
+                            finish(
+                                reject,
+                                new Error("Lemon Squeezy did not confirm affiliate tracking"),
+                            );
+                        }
+                    })
+                    .catch((error) => finish(reject, error));
+            },
+            onTrack: (result) => finish(resolve, result),
+        };
+
+        loadAffiliateScript()
+            .then(() => {
+                if (!settled) window.createLemonSqueezyAffiliate();
+            })
+            .catch((error) => finish(reject, error));
+    });
+}
+
+function enableAffiliateReferral(affiliateRef) {
+    if (affiliateTrackInProgress) return;
+
+    setAffiliateConsentBusy(true);
+    setAffiliateConsentStatus("affiliate-consent-loading");
+
+    trackAffiliateReferral(affiliateRef)
+        .then(() => {
+            replaceAffiliateUrl({ removeRef: true, pricing: true });
+            hideAffiliateConsent();
+        })
+        .catch(() => {
+            showAffiliateConsent("affiliate-consent-error");
+        });
+}
+
+function initAffiliateReferral() {
+    if (!affiliateConsent || !affiliateConsentAllow || !affiliateConsentDecline) return;
+
+    const url = new URL(window.location.href);
+    const affiliateRef = getAffiliateRef(url);
+    const hadAffiliateParameter = url.searchParams.has("aff");
+
+    affiliateConsentAllow.addEventListener("click", () => {
+        const currentRef = getAffiliateRef();
+        if (currentRef) enableAffiliateReferral(currentRef);
+    });
+    affiliateConsentDecline.addEventListener("click", () => {
+        replaceAffiliateUrl({ removeRef: true, pricing: true });
+        hideAffiliateConsent();
+    });
+
+    if (!affiliateRef) {
+        if (hadAffiliateParameter) replaceAffiliateUrl({ removeRef: true });
+        if (hasAffiliateCookie()) trackAffiliateReferral().catch(() => {});
+        return;
+    }
+
+    replaceAffiliateUrl({ pricing: true });
+
+    if (hasAffiliateCookie()) {
+        trackAffiliateReferral(affiliateRef)
+            .then(() => replaceAffiliateUrl({ removeRef: true, pricing: true }))
+            .catch(() => showAffiliateConsent("affiliate-consent-error"));
+        return;
+    }
+
+    showAffiliateConsent();
 }
 
 function updateDocsLinks(locale) {
@@ -2879,6 +3187,7 @@ function applyLocale(localeKey) {
         if (node) node.textContent = value;
     });
 
+    setAffiliateConsentStatus(affiliateConsentStatusKey);
     applyPricingEraLinks();
 
     Object.entries(currentLocaleData.html || {}).forEach(([id, value]) => {
@@ -2927,37 +3236,45 @@ function initSite() {
 
     if (pathLocale) {
         applyLocale(pathLocale);
-        return;
+        return false;
     }
 
     if (requestedLocale) {
         writeLocalePreference(requestedLocale);
         if (requestedLocale === "en-gb" && isRootPath(url.pathname)) {
             applyLocale("en-gb");
-            if (window.location.search) {
-                window.history.replaceState({}, "", `${getSitePath("en-gb")}${window.location.hash || ""}`);
+            url.searchParams.delete("lang");
+            const remainingSearch = url.searchParams.toString();
+            if (window.location.search !== (remainingSearch ? `?${remainingSearch}` : "")) {
+                window.history.replaceState(
+                    {},
+                    "",
+                    `${getSitePath("en-gb")}${remainingSearch ? `?${remainingSearch}` : ""}${window.location.hash || ""}`,
+                );
             }
-            return;
+            return false;
         }
 
         navigateToLocale(requestedLocale, { replace: true });
-        return;
+        return true;
     }
 
     if (isRootPath(url.pathname)) {
         const preferredLocale = storedLocale || browserLocale || "en-gb";
         if (preferredLocale !== "en-gb") {
             navigateToLocale(preferredLocale, { replace: true });
-            return;
+            return true;
         }
         applyLocale("en-gb");
-        return;
+        return false;
     }
 
     applyLocale(storedLocale || browserLocale || "en-gb");
+    return false;
 }
 
-initSite();
+const siteIsNavigating = initSite();
+if (!siteIsNavigating) initAffiliateReferral();
 
 updateAnchorOffset();
 

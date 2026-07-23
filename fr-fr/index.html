@@ -538,6 +538,78 @@ dialog#screenshot-zoom img {
 
 /* ---- Pricing ---- */
 
+.affiliate-consent {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    padding: 1.25rem;
+    background: var(--surface);
+    border-left: 3px solid var(--brass);
+    border-radius: 4px;
+    text-align: left;
+}
+
+.affiliate-consent[hidden] {
+    display: none;
+}
+
+.affiliate-consent h3 {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.affiliate-consent p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.affiliate-consent a {
+    color: var(--brass);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.affiliate-consent-status:empty {
+    display: none;
+}
+
+.affiliate-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.affiliate-consent-actions button {
+    min-height: 44px;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--brass);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--brass);
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.affiliate-consent-actions button:hover,
+.affiliate-consent-actions button:focus-visible {
+    background: var(--brass-glow);
+}
+
+.affiliate-consent-actions button:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
+.affiliate-consent-actions button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
 .pricing-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1294,6 +1366,17 @@ footer {
 <section id="pricing">
     <h2 id="pricing-heading">Pricing</h2>
 
+    <div id="affiliate-consent" class="affiliate-consent" role="region" aria-labelledby="affiliate-consent-title" hidden>
+        <h3 id="affiliate-consent-title">Support the person who sent you</h3>
+        <p id="affiliate-consent-copy">This is an affiliate link. With your permission, Lemon Squeezy will use a cookie and a device-derived identifier for 30 days so the person who referred you can receive 20% commission if you buy TayPE. It costs you nothing.</p>
+        <p><a id="affiliate-consent-details" href="/site-data/#affiliate-tracking">How affiliate tracking works</a></p>
+        <p id="affiliate-consent-status" class="affiliate-consent-status" role="status" aria-live="polite"></p>
+        <div class="affiliate-consent-actions">
+            <button id="affiliate-consent-allow" type="button">Allow referral tracking</button>
+            <button id="affiliate-consent-decline" type="button">Continue without tracking</button>
+        </div>
+    </div>
+
     <div class="trustware-notice">
         <h3 id="demo-heading">Here's the deal.</h3>
         <ul class="trustware-trust-list">
@@ -1425,6 +1508,7 @@ footer {
         <a id="footer-download" href="#download">Let's Roll</a>
         <a id="footer-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
         <a id="footer-community" href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
+        <a id="footer-affiliates" href="https://ruminantaudioworks.lemonsqueezy.com/affiliates" target="_blank" rel="noopener noreferrer">Affiliates</a>
         <a id="footer-terms" href="/terms/">T&amp;Cs</a>
         <a id="footer-privacy" href="/privacy/">Privacy</a>
         <a id="footer-site-data" href="/site-data/">Cookie Policy</a>
