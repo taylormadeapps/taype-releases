@@ -89,6 +89,11 @@ Automation breakpoint editing happens in Automation View while transport is stop
 - Option-click resets a point to the track's current static/default value.
 - Option-double-click clears the displayed automation lane for that track.
 
+Boolean and other stepped controls always edit on their real available values;
+they never stop between choices. A stepped point controls the flat segment
+after it. Dragging one sideways stops at the next unselected point rather than
+passing through it and reversing the order of the switches.
+
 Automation View keeps its own snap mode. Normal clip view can stay snapped while automation editing stays free, or the other way round.
 
 ## Playback Values
