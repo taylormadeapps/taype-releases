@@ -36,8 +36,8 @@ Use the horizontal scroll gesture, arrow keys when the mixer is focused, or the 
 
 Use a vertical trackpad or mouse-wheel gesture over the upper part of a strip
 to move through its processing sections. The fader dock stays fixed. Stepped
-mouse wheels receive extra travel per notch; high-resolution trackpad response
-is unchanged.
+mouse wheels receive substantially more travel per notch after macOS wheel
+normalisation; high-resolution trackpad response is unchanged.
 
 ## Detached Mixer
 
