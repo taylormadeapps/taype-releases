@@ -165,6 +165,7 @@ quit process directly.
 | Toggle Auto Monitor | Shift+; |
 | Select all in current context | Cmd+A |
 | Open Preferences | Cmd+, |
+| Close the current reel | Cmd+W |
 
 ## Customising Shortcuts
 
