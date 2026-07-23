@@ -139,6 +139,28 @@ nav .nav-links a:hover { color: var(--brass); }
     color: var(--text);
 }
 
+.cookie-control button {
+    min-height: 44px;
+    border: 1px solid var(--brass);
+    border-radius: 4px;
+    padding: 0.7rem 1rem;
+    background: transparent;
+    color: var(--brass);
+    font: inherit;
+    cursor: pointer;
+}
+
+.cookie-control button:hover,
+.cookie-control button:focus-visible {
+    background: var(--brass);
+    color: var(--bg);
+}
+
+.cookie-control-status {
+    min-height: 1.6em;
+    margin-top: 0.75rem;
+}
+
 footer {
     border-top: 1px solid var(--border);
     padding: 3rem 2rem 2rem;
@@ -225,18 +247,36 @@ footer {
 <main class="policy-content">
 
 <h1>Cookie Policy</h1>
-<p class="last-updated">Last updated: 5 June 2026</p>
+<p class="last-updated">Last updated: 23 July 2026</p>
 
 <p>
-    Nope. This website does not use cookies.
+    This website does not use analytics cookies, advertising cookies,
+    tracking pixels, or social widgets.
 </p>
 <p>
-    No analytics cookies. No advertising cookies. No tracking pixels.
-    No social widgets following you around the web. Why would we stalk you?
+    There is one narrow exception: if you arrive through an affiliate link,
+    we offer you a choice about referral tracking. Lemon Squeezy's affiliate
+    script is not loaded unless you choose <strong>Allow referral tracking</strong>
+    or this browser already has the affiliate cookie from an earlier choice.
+</p>
+
+<h2 id="affiliate-tracking">Affiliate tracking</h2>
+<p>
+    Affiliate links contain a short referral code. If you allow tracking,
+    the page loads Lemon Squeezy's affiliate script. The script sends Lemon
+    Squeezy the referral code, the page URL, the referring page, and a
+    device-derived browser identifier. Lemon Squeezy returns a click
+    identifier and stores it in a cookie named <strong>ls_aff_ref</strong>.
 </p>
 <p>
-    That is also why there is no cookie popup. There is nothing useful for
-    you to accept, reject, manage, dismiss, or swear at.
+    The cookie lasts for 90 days. Its only purpose on this site is to connect
+    a later TayPE purchase with the person who referred you. That person
+    receives 20% commission; your price does not change.
+</p>
+<p>
+    If you choose <strong>Continue without tracking</strong>, the referral
+    code is removed from the address, the Lemon Squeezy script is not loaded,
+    and no affiliate cookie is created.
 </p>
 
 <h2>Local browser storage</h2>
@@ -249,10 +289,22 @@ footer {
     You can clear it at any time from your browser's site data settings.
 </p>
 
+<h2>Change your affiliate choice</h2>
+<div class="cookie-control">
+    <p>
+        You can remove the affiliate cookie from this browser here. This
+        prevents this site from using the existing click identifier on future
+        visits. To request erasure of a referral record already held by Lemon
+        Squeezy on our behalf, email us at the address below.
+    </p>
+    <button id="remove-affiliate-cookie" type="button">Remove affiliate tracking cookie</button>
+    <p id="remove-affiliate-cookie-status" class="cookie-control-status" role="status" aria-live="polite"></p>
+</div>
+
 <h2>If this changes</h2>
 <p>
-    If we ever add cookies or similar tracking technology, we will update
-    this page first and ask properly where consent is required.
+    If we add any other cookies or similar tracking technology, we will
+    update this page first and ask properly where consent is required.
 </p>
 
 <h2>Contact</h2>
@@ -274,6 +326,7 @@ footer {
         <a href="/">Home</a>
         <a href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
         <a href="https://www.reddit.com/r/taype/" target="_blank">Community</a>
+        <a href="https://ruminantaudioworks.lemonsqueezy.com/affiliates" target="_blank" rel="noopener noreferrer">Affiliates</a>
         <a href="/terms/">T&amp;Cs</a>
         <a href="/privacy/">Privacy</a>
         <a href="/site-data/">Cookie Policy</a>
@@ -282,6 +335,31 @@ footer {
         &copy; 2026 <a href="/ruminant-audio-works/">Ruminant Audio Works</a> Ltd. Company No. 16978494. Registered in England and Wales.
     </p>
 </footer>
+
+<script>
+const removeAffiliateCookie = document.getElementById("remove-affiliate-cookie");
+const removeAffiliateCookieStatus = document.getElementById("remove-affiliate-cookie-status");
+
+removeAffiliateCookie.addEventListener("click", () => {
+    const cookieName = "ls_aff_ref";
+    const hostname = window.location.hostname;
+    const registrableDomain = hostname.split(".").slice(-2).join(".");
+    const domains = new Set([
+        hostname,
+        `.${hostname}`,
+        registrableDomain,
+        `.${registrableDomain}`,
+    ]);
+
+    document.cookie = `${cookieName}=; Max-Age=0; path=/`;
+    domains.forEach((domain) => {
+        document.cookie = `${cookieName}=; Max-Age=0; path=/; domain=${domain}`;
+    });
+
+    removeAffiliateCookieStatus.textContent =
+        "The affiliate tracking cookie has been removed from this browser.";
+});
+</script>
 
 </body>
 </html>
