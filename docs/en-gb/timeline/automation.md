@@ -1,18 +1,38 @@
 # Automation
 
-Automation records and edits mix moves over time. TayPE currently exposes volume, pan, and width automation.
+Automation records and edits mix and plug-in moves over time. TayPE automates
+eligible mixer controls and parameters reported by loaded audio plug-ins.
 
 ## Automation View
 
-Use `A` to toggle Automation View. Use `Shift+A` to cycle the displayed parameter: volume, pan, then width. The timeline shows one displayed parameter at a time for every visible track.
+Use `A` to toggle Automation View. The top selector provides quick Volume, Pan
+and Width views across every visible track. Each track header has its own
+selector when you need to show a different mixer or plug-in parameter on that
+track. Its **Automated** section lists parameters that already contain
+automation points.
+
+With Grouped Track Controls enabled, selecting a parameter on one
+multi-selected track also shows the equivalent parameter on the other selected
+tracks where it exists. Tracks without that mixer object, insert or matching
+plug-in parameter keep their current view. This changes the displayed lanes
+only; it does not copy or alter automation data.
 
 Automation View changes what the timeline shows and what Record means. It does not switch automation playback on or off. Existing automation plays during normal playback and during ordinary audio recording.
+
+Mixer and channel-strip controls follow their automated values during playback
+and when you move the stopped playhead, so the control display agrees with the
+sound and the curve.
 
 ## Capture
 
 With Automation View off, Record starts an audio take. With Automation View on, Record starts automation capture.
 
-During an automation capture pass, TayPE writes only the controls you actually touch. Volume, pan, and width moves can be captured. Untouched parameters keep their existing automation or static value.
+During an automation capture pass, TayPE writes only eligible controls you
+actually touch. This includes live-safe mixer controls and automatable
+parameters reported by loaded audio plug-ins. Monitor, routing, track
+structure, plug-in rack changes and controls that rebuild the audio graph are
+not automation targets. Untouched parameters keep their existing automation or
+static value.
 
 The transport record button shows an automation badge while Record means automation capture.
 
