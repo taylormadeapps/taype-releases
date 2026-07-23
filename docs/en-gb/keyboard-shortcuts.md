@@ -55,8 +55,8 @@ both directions wrap and restore that division's last-used Straight or groove
 option. Option+Q selects the next Straight or groove option inside the current
 division and Option+Shift+Q selects the previous one; both directions wrap
 without leaving the division. These quantise keys stay in the MIDI editor
-instead of controlling video there. On macOS, Cmd+Q opens a confirmation with
-Cancel focused before TayPE starts its normal safe quit process.
+instead of controlling video there. On macOS, Cmd+Q starts TayPE's normal safe
+quit process directly.
 
 ### Editing
 

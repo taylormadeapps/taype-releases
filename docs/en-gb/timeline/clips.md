@@ -178,8 +178,7 @@ previous one, wrapping in either direction and remembering the last Straight
 or groove option used in each division. Option+Q moves to the next option in
 the current division and Option+Shift+Q moves to the previous one, including
 all hardware grooves and wrapping without changing division. On macOS, Cmd+Q
-opens a confirmation with Cancel focused before TayPE begins its normal safe
-quit process.
+begins TayPE's normal safe quit process directly.
 Its timing points are the only vertical timing grid drawn through the note
 lanes. The pinned ruler follows the arranger's current Auto or fixed timeline
 division.
