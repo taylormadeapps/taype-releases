@@ -11,11 +11,22 @@ selector when you need to show a different mixer or plug-in parameter on that
 track. Its **Automated** section lists parameters that already contain
 automation points.
 
+Use the `+` beside a track's selector to keep another parameter visible in a
+sub-lane. Each sub-lane has its own parameter selector and a `-` button. The
+minus button hides the lane; it does not delete the automation. Adding the same
+parameter again brings its existing points back.
+
+The lane arrangement belongs to the reel. It stays in place when you move
+between Cuts and when you reopen the reel. The automation points themselves
+still belong to each Cut, so the same visible lane can contain different moves
+in different Cuts.
+
 With Grouped Track Controls enabled, selecting a parameter on one
 multi-selected track also shows the equivalent parameter on the other selected
 tracks where it exists. Tracks without that mixer object, insert or matching
 plug-in parameter keep their current view. This changes the displayed lanes
-only; it does not copy or alter automation data.
+only; it does not copy or alter automation data. Adding, changing or removing a
+sub-lane affects only that track.
 
 Automation View changes what the timeline shows and what Record means. It does not switch automation playback on or off. Existing automation plays during normal playback and during ordinary audio recording.
 
