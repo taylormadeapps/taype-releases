@@ -89,7 +89,23 @@ Automation breakpoint editing happens in Automation View while transport is stop
 - Click an existing point to select it without rewriting it.
 - Double-click an existing point to delete it.
 - Drag a point to move it.
+- Shift-drag a point to move the touched point or current selection in time
+  only. Values and lane assignments stay fixed.
+- Option-drag a point to copy the touched point or current selection in time
+  only. The copy pointer appears during the drag. Originals remain in place,
+  and copied points preserve their values, relative timing and lane
+  assignments even when the selection spans several lanes.
+- Constrained moves and copies follow the automation snap setting. A copied
+  point replaces an existing point at the same destination time, and the
+  complete copy is one undo step.
 - Marquee across lanes to select points by time range.
+- Press Command+A to select every point on every header-selected track lane.
+  If no tracks are selected, it selects every point on the track under the
+  pointer without selecting the track. Outside Automation View, Command+A keeps
+  its normal arranger Select All behaviour.
+- Press Escape once to clear selected automation points while keeping the
+  selected track lanes. With no automation points selected, Escape performs
+  the normal arranger deselect.
 - Delete or Backspace removes selected points.
 - Option-click resets a point to the track's current static/default value.
 - Option-double-click clears the displayed automation lane for that track.
