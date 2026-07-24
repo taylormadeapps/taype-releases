@@ -25,6 +25,10 @@ between Cuts and when you reopen the reel. The automation points themselves
 still belong to each Cut, so the same visible lane can contain different moves
 in different Cuts.
 
+Automation lanes keep their normal value scale while you scroll vertically. A
+lane that is partly outside the window is clipped at the edge, not compressed
+into the visible remainder.
+
 With Grouped Track Controls enabled, selecting a parameter on one
 multi-selected track also shows the equivalent parameter on the other selected
 tracks where it exists. Tracks without that mixer object, insert or matching
