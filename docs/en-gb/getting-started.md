@@ -46,6 +46,10 @@ Right-click **Record** to choose **Record Mode**:
 
 Use **Space** for Play/Stop and **P** for Play/Pause. Playback-safe edits can happen while the transport is rolling; edits that would risk the take are blocked until you stop. Recording is stricter: TayPE protects the active pass and asks you to finish it before changing the timeline structure.
 
+Play uses a very short anti-click ramp at the exact point where transport
+starts. Silence before a later note or drum hit does not move that ramp onto
+the attack, so starting playback shortly before a hit leaves the hit intact.
+
 The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces where that makes musical sense.
 
 ## Importing Audio

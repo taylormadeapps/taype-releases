@@ -89,6 +89,16 @@ Automation breakpoint editing happens in Automation View while transport is stop
 - Click an existing point to select it without rewriting it.
 - Double-click an existing point to delete it.
 - Drag a point to move it.
+- Hover over a point to see its value painted directly on the lane. The
+  readout is always available, stays inside the lane and does not depend on
+  Popup Help.
+- While moving one or more points, the value follows the point you grabbed
+  and updates continuously. TayPE controls show their familiar units;
+  plug-in parameters show their normalised percentage.
+- A move also shows a two-axis crosshair: a horizontal value guide across the
+  full visible lane and a vertical time guide from the ruler to the bottom of
+  the visible timeline. Both are visual guides only; they do not snap or
+  change the point.
 - Shift-drag a point to move the touched point or current selection in time
   only. Values and lane assignments stay fixed.
 - Option-drag a point to copy the touched point or current selection in time
