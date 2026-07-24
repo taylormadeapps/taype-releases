@@ -91,6 +91,13 @@ When an insert has a non-default TayPE plug-in preset associated with it, the in
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable unloads the insert from the processing graph while keeping the assignment and saved state in the reel.
 
+TayPE uses each insert's reported latency to align clips, instruments, buses,
+the master, loop repeats, automation, and plug-in playheads at the point where
+that processing actually runs. Large, legitimate latency is supported; it is
+not treated as misbehaviour. On Play or a discontinuous relocation, TayPE
+prepares the downstream effect history before transport rolls so delay,
+lookahead, and reverb buffers cannot leak from the previous pass.
+
 The Inserts section power button bypasses or re-enables the rack without changing each slot's own bypass state. Option-click the same button to toggle a red rack override that forces all insert plug-ins offline without changing each slot's stored enable or bypass state.
 
 In Archive View, active or bypassed insert rows show as offline red and plugin edits stay locked until you unarchive the track.

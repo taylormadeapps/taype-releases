@@ -27,6 +27,11 @@ Recording is allowed under varispeed. TayPE freezes the varispeed value for the 
 
 Live input and live-triggered instruments stay at real-time speed. Existing audio and MIDI clips follow the varispeed playback rate.
 
+Loop boundaries remain timeline boundaries at every varispeed setting. TayPE
+accounts for the stretcher's latency separately from instrument and insert
+latency, so the repeat head, hosted plug-in transport, and visible playhead stay
+on the same musical position.
+
 ## What Varispeed Is For
 
 Use varispeed to rehearse hard sections slower, check feel faster, or capture a pass against a slower playback without changing the reel's project tempo.
