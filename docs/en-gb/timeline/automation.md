@@ -85,20 +85,29 @@ The transport record button shows an automation badge while Record means automat
 
 Automation breakpoint editing happens in Automation View while transport is stopped.
 
-- Double-click a lane to add a point.
+- Click empty lane space to add and select a point.
+- Click an existing point to select it without rewriting it.
 - Double-click an existing point to delete it.
 - Drag a point to move it.
 - Marquee across lanes to select points by time range.
 - Delete or Backspace removes selected points.
 - Option-click resets a point to the track's current static/default value.
 - Option-double-click clears the displayed automation lane for that track.
+- Hold Command over a lane to show the pencil, then Command-drag to draw one
+  undoable automation stroke. The stroke replaces existing points across the
+  time span it covers.
 
 Boolean and other stepped controls always edit on their real available values;
 they never stop between choices. A stepped point controls the flat segment
 after it. Dragging one sideways stops at the next unselected point rather than
 passing through it and reversing the order of the switches.
 
-Automation View keeps its own snap mode. Normal clip view can stay snapped while automation editing stays free, or the other way round.
+Automation View keeps its own snap mode. Normal clip view can stay snapped
+while automation editing stays free, or the other way round. With automation
+snap on, the pencil writes one point on every crossed interval of the selected
+grid, even if you move quickly. With snap off, it follows your gesture freely
+and then removes unnecessary points while keeping the shape editable. If you
+draw back across the same time, the latest pass wins.
 
 ## Playback Values
 
