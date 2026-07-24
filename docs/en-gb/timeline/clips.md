@@ -25,6 +25,14 @@ The comp bus lane shows faint, square-ended waveform bands for the enabled child
 
 Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes cannot initiate a move; they can still be selected and promoted from the bottom strip or with Option-click.
 
+**Edit > Automation Follows Clips** defaults on. A same-track move carries all
+automation points inside the moved clips; Option-drag and `D` copy those points
+with the clips. The carried points overwrite existing automation across their
+destination range, and one Undo restores the complete clip-and-automation
+edit. Cross-track moves and clipboard paste do not carry automation. Comp-bus
+automation stays fixed to the timeline. Turn the menu item off for the original
+clip-only behaviour.
+
 With playback stopped, moving a clip, trimming an edge, or adjusting a fade keeps the current timeline page in place even when the playhead is elsewhere. Follow Playhead controls playback paging; it does not recenter stopped edits.
 
 ## Creating Blank Clips

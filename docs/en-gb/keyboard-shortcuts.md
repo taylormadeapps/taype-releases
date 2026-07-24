@@ -69,14 +69,14 @@ quit process directly.
 | Split all clips at loop braces | `Cmd+Option+\` |
 | Toggle fade | F |
 | Slip waveform inside fixed clip | Cmd+Option+drag clip body |
-| Duplicate selected clips / MIDI notes | D |
+| Duplicate selected clips / automation points / MIDI notes | D |
 | Select clips on selected tracks | Cmd+Shift+A |
 | Join clips | J |
 | Offline bounce selected clips to stem | B |
 | Bounce selected clips to external WAV | Option+B |
 | Disable selected clips | Backspace |
 | Delete selected clips | Delete |
-| Cut / copy / paste clips | Cmd+X / Cmd+C / Cmd+V |
+| Cut / copy / paste selected clips or automation points | Cmd+X / Cmd+C / Cmd+V |
 
 ### Tracks
 
