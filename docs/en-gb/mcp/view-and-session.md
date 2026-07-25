@@ -78,6 +78,10 @@ Replace automation points for one track parameter in the selected cut. Points mu
 
 Remove all automation points for one track parameter in the selected cut.
 
+### `set_automation_enabled`
+
+Switch one track parameter's automation lane on or off for the whole reel. A powered-off lane keeps its points, but playback bypasses them and the stored mix value applies. Takes an additional boolean `enabled` parameter, and `get_automation_points` reports the current state in its `enabled` field.
+
 Automation data tools use:
 
 | Param | Description |

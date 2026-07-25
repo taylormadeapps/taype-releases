@@ -16,6 +16,13 @@ sub-lane. Each sub-lane has its own parameter selector and a `-` button. The
 minus button hides the lane; it does not delete the automation. Adding the same
 parameter again brings its existing points back.
 
+Each lane also has a power button, drawn like the channel-strip section power
+buttons. Switch a lane off to bypass its automation without deleting anything:
+the control returns to its stored mix value, the curve stays visible but
+dimmed, and its points remain editable. Lane power belongs to the reel — it
+applies to every Cut and stays in place when you reopen the reel. Switch the
+lane back on to hear its automation again, exactly as it was.
+
 To rearrange tracks while sub-lanes are open, begin the drag in the main track
 header. Dropping over any of a track's sub-lanes places the dragged track after
 that track; the number of visible sub-lanes does not change the drop position.
@@ -67,6 +74,11 @@ parameters reported by loaded audio plug-ins. Monitor, routing, track
 structure, plug-in rack changes and controls that rebuild the audio graph are
 not automation targets. Untouched parameters keep their existing automation or
 static value.
+
+A powered-off lane is never captured. Moving its control during an automation
+pass behaves like an ordinary mix edit: the stored value changes and no points
+are written. In a grouped gesture, one powered-off lane makes the whole group
+behave that way.
 
 Hardware control-surface faders, pan controls and mute buttons follow the same
 capture rules as the on-screen mixer. Relative moves start from the value you
@@ -178,3 +190,6 @@ automation to remain where it is.
 ## Playback Values
 
 Before the first automation point, TayPE uses the track's static mixer value. Between points, it interpolates. After the last point, it holds the last automation value. There is no hidden jump back to the static value unless you write that move.
+
+A powered-off lane always uses the track's stored mix value, no matter what
+points it contains.
