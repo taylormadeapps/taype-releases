@@ -62,7 +62,7 @@ quit process directly.
 
 | Action | Shortcut |
 |---|---|
-| Split selected clips at playhead; with no selection, split under the pointer without selecting either result | `\` |
+| Split selected clips at playhead; with no selection, split under the pointer at the nearest active grid rail when snap is enabled (or the exact pointer when snap is off) without selecting either result | `\` |
 | Split selected clips at loop braces | `Cmd+\` |
 | Split selected clips at visible grid | `Shift+\` |
 | Split all clips at playhead | `Option+\` |
