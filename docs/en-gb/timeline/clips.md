@@ -88,6 +88,8 @@ the piano roll. Starting or seeking into the middle of a held note sounds it
 immediately for its remaining length. At a loop or clip boundary, TayPE ends
 only the notes and sustain that cross that boundary, then starts the next lap's
 notes cleanly; it does not reset the whole instrument and lose the first note.
+Closing the MIDI editor ends its currently sounding audition and playback
+notes before returning to the rendered clip preview.
 
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to clear any existing note selection and add an unselected
