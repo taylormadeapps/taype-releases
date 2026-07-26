@@ -23,6 +23,12 @@ Drag clips along the timeline or between compatible tracks. TayPE keeps clips al
 
 Create a blank MIDI clip where you want to write or capture notes, then open it in the MIDI editor.
 
+While the MIDI editor is open, playback follows the notes currently shown in
+the piano roll. Starting or seeking into the middle of a held note sounds it
+immediately for its remaining length. At a loop or clip boundary, TayPE ends
+only the notes and sustain that cross that boundary, then starts the next lap's
+notes cleanly; it does not reset the whole instrument and lose the first note.
+
 ## Splitting
 
 Split selected clips at the playhead with `\`. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.

@@ -83,6 +83,12 @@ normal window size and position independently of full-screen state.
 The piano-roll rows and time grid always fill the visible editor width when the
 window is resized, including the area beyond a short clip.
 
+While the MIDI editor is open, playback follows the notes currently shown in
+the piano roll. Starting or seeking into the middle of a held note sounds it
+immediately for its remaining length. At a loop or clip boundary, TayPE ends
+only the notes and sustain that cross that boundary, then starts the next lap's
+notes cleanly; it does not reset the whole instrument and lose the first note.
+
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to clear any existing note selection and add an unselected
 note at the selected quantise rail at or immediately before the pointer in the
