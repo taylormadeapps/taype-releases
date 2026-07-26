@@ -137,6 +137,8 @@ Third-party plugins run in a sandbox helper so a plugin fault is less likely to 
 
 When the sandbox crashes on a handled fatal signal, the crash feedback report
 includes the sandbox process's best-effort stack trace. Nothing is submitted
-until you choose Send, Copy, or Save in the report window.
+until you choose Send, Copy, or Save in the report window. You can close a
+report while Send is still working; TayPE safely discards the late status
+update when that report window no longer exists.
 
 Plug-in editor windows come to the front without changing the sandbox helper's application role. Switching to another app therefore does not trigger an editor-driven sandbox priority change that can disrupt plug-in DSP. TayPE only performs that focus handoff while TayPE itself is active, so automation does not pull you out of another application.
