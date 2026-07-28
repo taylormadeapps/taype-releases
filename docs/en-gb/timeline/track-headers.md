@@ -61,6 +61,11 @@ normal audio track. Enabled loop braces do not repeat or shorten the flatten.
 The whole operation is one undo step; if any Cut cannot be rendered, the comp
 group and every Cut remain unchanged.
 
+The flattened audio includes the child tracks' channel-strip settings because
+those tracks feed the comp bus. It is captured before the comp bus's own
+channel strip. The former bus keeps that strip live, so its trim, processing,
+inserts, width, pan, and fader are not baked into the clip or applied twice.
+
 Turn on **Grouped Track Controls** from the Tracks menu, with **Cmd+G**, or
 from the **GRP** transport indicator to control a selection together. Clicking
 Mute, Solo, MON, or Record on a selected arranger header then applies the
