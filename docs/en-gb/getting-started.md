@@ -90,6 +90,14 @@ The public GitBook manual is maintained for every shipped GitBook language. Use 
 
 Use the MIDI Monitor when you need to see what TayPE is receiving from controllers, keyboards, or virtual MIDI devices. It is useful for Mackie MCU setup, virtual instrument troubleshooting, and checking whether a device is sending the expected messages.
 
+## Session Log
+
+Use **Tools > Session Log** to inspect current-session diagnostics. Filter by
+severity or text, copy the rows currently shown, or reveal the underlying log
+file in Finder when support asks for it. Debug-level detail is off by default;
+enable **Log debug messages** in Audio Preferences only for a measured
+diagnostic session.
+
 ## Control Surfaces
 
 TayPE supports Mackie MCU-style control surfaces, focused X-Touch One workflows, and CM Labs MotorMix in Pro Tools/HUI mode. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, MotorMix setup, and monitor/select behaviour.
