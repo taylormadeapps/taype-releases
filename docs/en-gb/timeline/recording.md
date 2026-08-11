@@ -72,7 +72,7 @@ If the external master sends another Play, Stop, or Locate while a recorded take
 
 Set **SMPTE Zero** in Sync preferences when an external rig uses a different timecode origin. A short pre-roll before the selected timecode still maps correctly to the reel instead of wrapping to the wrong day.
 
-During external sync, incoming positions are allowed to run past the current reel extent. Slave playback can roll on blank tape until the external transport stops or relocates.
+Local and slave playback can roll past known content and continue on blank tape. During external sync, the master remains responsible for stopping or relocating the transport.
 
 TayPE chases MTC while rolling so material drift snaps back to the mapped timecode position.
 
