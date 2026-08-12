@@ -18,11 +18,14 @@ In search results, Shift-click selects a visible range and Command-click toggles
 
 Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
 
-Click an enabled populated insert row to open its plug-in window. If the window
-is already open behind another plug-in, the click brings it to the front; only
-a window that is already the frontmost plug-in window is closed. Command+Option-click
-deletes that insert. Command-click still toggles its bypass state, while
-Option-click disables or re-enables it.
+Click any populated insert row to open its plug-in window, including an insert
+that was already disabled when the reel opened. Assigned plug-ins on live
+tracks remain resident while disabled; archived-track plug-ins are unloaded.
+Opening the editor does not re-enable processing.
+If the window is already open behind another plug-in, the click brings it to
+the front; only a window that is already the frontmost plug-in window is closed.
+Command+Option-click deletes that insert. Command-click still toggles its bypass
+state, while Option-click disables or re-enables it.
 
 Press **Option+P** to hide every open plug-in window, then press it again to
 restore the same windows in the same bottom-to-top order, including the editor
