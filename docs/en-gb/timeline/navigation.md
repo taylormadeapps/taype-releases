@@ -37,7 +37,7 @@ navigation steps from a stable ruler anchor so the playhead can move predictably
 
 ## Stopping MIDI cleanly
 
-Stopping or pausing releases transport notes once playback has stopped and cancels notes that are still scheduled for External MIDI Out. Starting playback does not send All Notes Off, so the first beat of host-synchronised instruments is preserved. If a live monitored note sticks while the transport is already stopped, use **Tools > Kill MIDI**.
+Stopping or pausing releases notes owned by the MIDI editor preview and cancels notes still scheduled for External MIDI Out. It does not send All Notes Off to hosted instruments; neither does starting playback, so the first beat of host-synchronised instruments is preserved. If a live monitored note sticks while the transport is already stopped, use **Tools > Kill MIDI**.
 
 ## Markers
 
