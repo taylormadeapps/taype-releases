@@ -16,6 +16,10 @@ E-Zoom is the quick way to enlarge the working track area without changing the w
 
 Click the ruler to seek. Option-click in the timeline can seek even over clips. During playback, repeated left/right navigation steps from a stable ruler anchor so the playhead can move predictably.
 
+## Stopping MIDI cleanly
+
+Stopping or pausing releases notes owned by the MIDI editor preview and cancels notes still scheduled for External MIDI Out. It does not send All Notes Off to hosted instruments; neither does starting playback, so the first beat of host-synchronised instruments is preserved. If a live monitored note sticks while the transport is already stopped, use **Tools > Kill MIDI**.
+
 ## Markers
 
 Use `/` to add or remove a marker at the playhead. Use `,` and `.` to move to previous and next markers or loop braces. Number keys jump to marker slots.

@@ -57,7 +57,10 @@ Optional parameters:
 
 ### `disable_insert` / `enable_insert`
 
-Disable removes an insert from processing while keeping its assignment and state. Enable restores it to the graph.
+Disable removes an insert from processing and PDC while keeping its hosted
+instance, editor, assignment, and runtime state resident. Enable reuses that
+instance. Both operations are available during playback; recording and print
+capture remain protected.
 
 ### `get_insert_info`
 
