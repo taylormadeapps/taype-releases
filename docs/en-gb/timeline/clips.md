@@ -65,12 +65,27 @@ When the slipped audio moves beyond either source edge, that part of the clip re
 
 Double-click a MIDI-backed clip to open its MIDI editor. Double-click any other
 clip, or Cmd+double-click any clip, to open Clip Properties for exact clip
-details and destructive clip actions. **Reverse** renders a reversed copy
-through the model transaction system, so the reel owns the derived audio and
-undo/redo treats the change like any other clip edit.
+details and clip actions. The inspector reads top to bottom: Identity; a compact
+properties grid with Appearance above Behaviour on the left and Timing/Pitch on
+the right; contextual MIDI, Audio or Selection actions; Media Paths; then
+**Done**. Media Paths starts collapsed and grows the window only while open.
+**Done** applies a valid pending name, while Escape or closing the window
+discards an unapplied name.
 
-For clips on comp take tracks, Clip Properties shows **Don't Comp** directly
-below the pitch controls. Turn it on to keep that take layered and untouched
+**Reverse** renders a reversed copy through the model transaction system, so
+the reel owns the derived audio and undo/redo treats the change like any other
+clip edit. In multi-selection the processing actions are explicitly named
+**Reverse Selection**, **Split Selected Stems**, and **Join**.
+
+After a material MIDI edit, **Restore OG MIDI** returns the clip to its
+immutable recorded, imported, joined, or first-authored MIDI performance. TayPE
+renders that performance through the track's current instrument; it does not
+restore an old plug-in preset. Timeline position, audible window, duration,
+fades, stretch and clip pitch remain intact. The operation is undoable, and
+TayPE asks first if restoring would remove ARA2-derived edits.
+
+The Behaviour panel contains **Disabled**. For clips on comp take tracks it also
+shows **Don't Comp**. Turn it on to keep that take layered and untouched
 when another take is promoted or an overlapping comp edit is made. The clip can
 still be muted explicitly. When every clip in a multi-selection belongs to a
 comp take track, the same control applies to the whole selection; selections
@@ -244,7 +259,13 @@ preserve cents, and form one undo step.
 
 ### Media Paths
 
-Clip Properties shows reel-owned media paths relative to the reel where possible. **Reel Store Audio** shows the stored audio inside the reel, and **Import Source** shows the original imported file when TayPE still knows it. Duplicate actual/store paths are collapsed, and unavailable rows display `n/a`.
+Clip Properties shows reel-owned media paths relative to the reel where
+possible. **Clip Audio Actual** is the file currently heard; **Reel Store
+Audio** is the committed Layer 1 audio. **Clip MIDI Actual** is the current
+editable MIDI revision; **Reel Store MIDI** is the immutable original used by
+Restore OG MIDI. **Import Source** is external provenance when TayPE knows it
+and is not used for restoration. Equal actual/store paths remain visible;
+`n/a` means that value is genuinely unavailable.
 
 ## Gain, Fades, and Crossfades
 
