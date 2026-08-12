@@ -69,6 +69,7 @@ Optional parameters:
 ### `get_automation_points`
 
 Get automation points for one track parameter in the selected cut.
+This read remains available during recording and take finalisation.
 
 ### `set_automation_points`
 
@@ -81,6 +82,12 @@ Remove all automation points for one track parameter in the selected cut.
 ### `set_automation_enabled`
 
 Switch one track parameter's automation lane on or off for the whole reel. A powered-off lane keeps its points, but playback bypasses them and the stored mix value applies. Takes an additional boolean `enabled` parameter, and `get_automation_points` reports the current state in its `enabled` field.
+
+`set_automation_points`, `clear_automation`, and `set_automation_enabled` are
+all refused while audio or automation recording is active, while recording is
+stopping or finalising, and while a failed finalisation remains retained for
+recovery or discard. They remain available during ordinary playback and may be
+grouped inside an MCP transaction when recording is idle.
 
 Automation data tools use:
 
