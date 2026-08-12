@@ -10,19 +10,29 @@ Use `=` and `-` for horizontal zoom, **Option+-** to reset, **Cmd+wheel** for mo
 
 The MIDI editor honours the same preference for horizontal Cmd+wheel and pinch
 zoom across its piano roll, keyboard rail, timeline header, and control lane.
+While it is open, the horizontal zoom in, out, reset and maximum keys target
+the editor's active scale. With Zoom Link off they change only the independent
+MIDI scale and cannot fall through to the arranger.
 The roll, header, and control lane preserve the time beneath the pointer after
 horizontal scrolling; the keyboard rail uses the visible roll's left edge
 because it has no timeline position of its own. Its Option+wheel pitch zoom
 already follows the pointer, while right-drag and keyboard zoom keep their
-existing anchors. Cmd/Ctrl+Option+wheel changes shared time zoom and pitch-row
-height together across the piano roll, keyboard rail, pinned timeline header,
-and control lane.
+existing anchors. Zoom Link is on by default, so these gestures use the shared
+arranger scale. Turn Zoom Link off to use and remember an independent MIDI
+horizontal scale; neither editor nor arranger zoom then overwrites the other.
+Re-linking adopts the arranger scale without clearing the saved MIDI value.
+Cmd/Ctrl+Option+wheel changes the active time-zoom owner and pitch-row height
+together across the piano roll, keyboard rail, pinned timeline header, and
+control lane.
 
 ## E-Zoom
 
 E-Zoom is the quick way to enlarge the working track area without changing the whole app scale. It is useful for clip edits and comping.
 
-With the MIDI editor open, `E` fits that whole MIDI clip across the piano roll instead of zooming the arranger. Press `E` again to restore the MIDI editor's previous horizontal zoom and scroll position.
+With the MIDI editor open, `E` fits that whole MIDI clip across the piano roll.
+Press `E` again to restore the previous horizontal zoom and scroll position.
+With Zoom Link on this uses the shared arranger scale; detached E-Zoom remains
+local and never overwrites the remembered ordinary independent zoom.
 
 ## Seeking
 

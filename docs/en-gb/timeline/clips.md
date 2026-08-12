@@ -98,6 +98,15 @@ normal window size and position independently of full-screen state.
 The piano-roll rows and time grid always fill the visible editor width when the
 window is resized, including the area beyond a short clip.
 
+The top-left keyboard corner is one four-part control group. **Flip** reverses
+the visible pitch order. **Zoom Link** defaults on, sharing horizontal zoom with
+the arranger; turn it off to keep and remember an independent MIDI zoom.
+**Follow Link** defaults on, using the arranger's Follow setting; detached means
+the MIDI editor stays still while arranger Follow continues normally.
+**Quantise Grid** defaults on; turn it off when ordinary note editing should use
+the arranger's exact current grid instead. These are view preferences and do
+not make the MIDI draft dirty.
+
 While the MIDI editor is open, playback follows the notes currently shown in
 the piano roll. Starting or seeking into the middle of a held note sounds it
 immediately for its remaining length. At a loop or clip boundary, TayPE ends
@@ -108,9 +117,10 @@ notes before returning to the rendered clip preview.
 
 In the MIDI editor, click an existing note to select it, or click empty
 piano-roll space to clear any existing note selection and add an unselected
-note at the selected quantise rail at or immediately before the pointer in the
-same gesture; it never jumps to the following rail. This applies to straight,
-triplet, and hardware groove grids. Dragging empty space still marquee-selects.
+note at the active editing rail at or immediately before the pointer in the
+same gesture; it never jumps to the following rail. That rail comes from the
+selected straight, triplet, or hardware Quantise grid by default, or from the
+arranger grid when Quantise Grid is off. Dragging empty space still marquee-selects.
 Double-clicking empty space leaves that single new note in place and consumes
 the second click without moving the playhead, while double-clicking an existing
 note deletes it. Right-clicking empty space moves the playhead without changing
@@ -146,14 +156,16 @@ freehand pencil stroke, following each change in pointer direction. The
 underlying MIDI points appear when hovered or selected rather than covering the
 stroke with dots. Holding Cmd over the controller plot changes the mouse
 pointer to a pencil and keeps it visible for the stroke.
-Cmd-drag draws notes following the pointer pitch at each quantised onset,
+Cmd-drag draws notes following the pointer pitch at each active editing-grid onset,
 including smooth diagonal strokes between mouse events; add Shift to lock the
-whole stroke to its starting pitch. Each drawn note fills one selected
-quantise-grid cell, from one grid line to the next, regardless of the
-remembered note length. A stroke started from an existing note begins on the
-first grid line at or after that seed note ends, then fills consecutive cells
-even when the pitch changes. Hardware-groove strokes follow the actual groove
-lines. A newly drawn note deletes any whole existing note it overlaps on the
+whole stroke to its starting pitch. With Quantise Grid on, each drawn note
+fills one selected Quantise-grid cell, from one grid line to the next,
+regardless of the remembered note length. With arranger-grid editing selected,
+drawn starts use arranger rails and notes use the ordinary remembered entry
+length. A stroke started from an existing note begins on the first active
+editing-grid line at or after that seed note ends, then follows consecutive
+rails even when the pitch changes. Hardware-groove strokes follow the actual
+groove lines. A newly drawn note deletes any whole existing note it overlaps on the
 same pitch and MIDI channel; notes on different pitches and channels remain
 untouched. Holding Cmd over the note grid changes the mouse pointer to a pencil
 and keeps it visible for the stroke. Option-drag from a note copies and moves
@@ -168,7 +180,7 @@ delete gesture. Cmd+C,
 Cmd+X, and Cmd+V copy, cut, and paste note selections, with paste anchoring the
 earliest note at the shared playhead and preserving the phrase relationships.
 The configured clip-duplicate shortcut (`D` in the default profile) duplicates
-the selected notes at the first quantise boundary at or after the selection end
+the selected notes at the first active editing-grid boundary at or after the selection end
 where the complete group fits without a same-pitch/channel collision. Occupied
 destinations are skipped, phrase timing and note properties are preserved, and
 the copies become the new selection.
@@ -178,8 +190,10 @@ resizing it or changing its velocity updates those defaults. Changing quantise
 always sets the entry length while retaining velocity, even when notes are
 selected; the selected notes themselves are unchanged. Reselecting the active
 quantise menu item performs the same entry-length reset. This does not change
-the selected quantise grid. With snap enabled, that MIDI quantise grid controls
-note entry, movement, resizing, nudging, and editor seeks.
+the selected Quantise value. With Snap enabled, the grid selected by Quantise
+Grid controls note entry, movement, resizing, nudging, hovered-note splitting,
+duplicate placement, and editor seeks. Turning Quantise Grid off does not change
+the grid used by the explicit Quantise action.
 The crotchet button immediately before the quantise menu switches new-note
 length from that remembered default to the quantise cell beneath the pointer.
 It starts off and remembers its state while TayPE remains open, even if you
@@ -188,7 +202,9 @@ note fills the cell from the preceding quantise line to the following line,
 including uneven hardware-groove cells. With Snap off, the note starts exactly
 where you click and uses the selected straight note value. Changing the
 quantise menu still updates the remembered default length whether the crotchet
-is on or off.
+is on or off. While arranger-grid editing is selected the crotchet is disabled
+and has no effect, but its requested state is retained and returns when
+Quantise Grid is switched on again.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
 Dragging a note's right edge can shorten it to a fixed 1 ms minimum. This
@@ -210,9 +226,10 @@ or groove option used in each division. Option+Q moves to the next option in
 the current division and Option+Shift+Q moves to the previous one, including
 all hardware grooves and wrapping without changing division. On macOS, Cmd+Q
 begins TayPE's normal safe quit process directly.
-Its timing points are the only vertical timing grid drawn through the note
-lanes. The pinned ruler follows the arranger's current Auto or fixed timeline
-division.
+Its timing points are drawn through the note lanes while Quantise Grid is on.
+When Quantise Grid is off, the body uses the arranger's exact current Auto or
+fixed rails and Cut-zero phase. The pinned ruler always follows that arranger
+timeline division.
 When adjacent same-pitch notes overlap after quantising, both timing positions
 stay on their chosen rails and the earlier note shortens to the later onset. If
 several notes land on the same rail, TayPE keeps the longest, or the loudest
@@ -223,8 +240,8 @@ TayPE refreshes its factory patterns in the Grooves folder inside TAPE_HOME at
 startup. You can add your own four-bar JSON groove files there; TayPE loads them
 the next time it starts and leaves them untouched.
 Each newly created note auditions briefly through the editor instrument.
-With snap enabled, its start follows the selected MIDI quantise grid regardless
-of zoom or remembered note length. Snap-off uses the exact pointer time.
+With Snap enabled, its start follows the active editing grid regardless of zoom
+or remembered note length. Snap-off uses the exact pointer time.
 When moved notes overlap unselected notes on the same pitch and MIDI channel,
 the moved notes win: covered notes are removed, edge overlaps are trimmed, and
 a longer underlying note is split around the dropped note.
@@ -232,21 +249,23 @@ The MIDI editor never leaves two notes overlapping on the same pitch and MIDI
 channel. Quantising or otherwise moving notes trims the earlier note to the
 later start; exact-start collisions keep the note that was later before the
 edit. Chords and notes on different MIDI channels are unaffected.
-During playback, the piano roll follows the arranger's Follow setting with the
+During playback, linked MIDI Follow uses the arranger's Follow setting with the
 same paged behaviour, including when the transport begins before the open clip.
+Turn Follow Link off to stop automatic MIDI paging without changing arranger
+Follow.
 Home and End seek to the open MIDI clip boundaries and horizontally page the
 piano roll to reveal the destination even when it was previously off-screen.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared
 playhead. When nothing is selected, it instead cuts only the note beneath the
-mouse: at the nearest selected MIDI quantise or hardware-groove line with Snap
-enabled, or at the exact pointer position with Snap off. If the mouse is not
+mouse: at the nearest active editing-grid line with Snap enabled, or at the
+exact pointer position with Snap off. If the mouse is not
 over a note, nothing is cut. The shortcut never splits the arranger clip behind
 the editor.
 With no note selection, plain Left and Right move the shared playhead by the
 arranger's visible ruler tick instead of scrolling the piano roll. When notes
-are selected, Left and Right continue to nudge those notes by one MIDI quantise
+are selected, Left and Right nudge those notes by one active editing-grid
 interval.
 Up and Down move selected notes by one semitone; Cmd+Up and Cmd+Down move them
 by one octave.
