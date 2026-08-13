@@ -42,6 +42,7 @@ postures. Minimising or closing the editor returns them to the main window.
 | Join clips | J |
 | Offline bounce selected clips to stem | B |
 | Bounce selected clips to external WAV | Option+B |
+| Rerender MIDI clips through the current instrument | H |
 | Disable selected clips | Backspace |
 | Delete selected clips | Delete |
 | Cut / copy / paste clips | Cmd+X / Cmd+C / Cmd+V |
@@ -54,6 +55,7 @@ postures. Minimising or closing the editor returns them to the main window.
 | Bulk add tracks | Cmd+T |
 | Duplicate selected track without clips | Cmd+D |
 | Duplicate selected track with clips | Option+D |
+| Rerender every MIDI clip on the selected tracks | Cmd+Shift+H |
 | Offline bounce selected tracks to stem | Cmd+B |
 | Archive selected track | Cmd+Backspace |
 | Delete selected track | Cmd+Delete |
