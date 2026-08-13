@@ -116,6 +116,10 @@ channel, and compensate timing with an early-send amount.
 
 Hardware Insert sends audio out to external gear and returns it to the strip. Choose output and input routes, add trim, optional filtering, recall images, and latency offset. TayPE rejects routes that would overlap the master output.
 
+Leave the return route empty and the send still goes out, but nothing comes back: the strip goes quiet at full wet. That is deliberate — passing the dry signal through instead would hide the missing patch, and a take could sound as though it went through gear that was never wired back in. Pull the wet/dry knob back if you want to hear the dry side while you patch.
+
+If you *have* chosen a return route and the interface it points at is missing — unplugged, or the I/O mapping moved — TayPE does the opposite: the strip keeps playing the dry signal so the take stays usable, and records the problem in the session log (**Tools → Session Log**). Check there if a Hardware Insert stops sounding like it is in circuit.
+
 Hardware Insert presets live in `[TAPE_HOME]/Presets/Hardware Inserts`.
 
 ## Sidechains
