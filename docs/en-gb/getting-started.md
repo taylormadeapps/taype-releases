@@ -98,6 +98,14 @@ file in Finder when support asks for it. Debug-level detail is off by default;
 enable **Log debug messages** in Audio Preferences only for a measured
 diagnostic session.
 
+If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
+not started delivering the callbacks required to process sound, or an
+established callback path has stopped. Playback, recording and monitoring
+remain unavailable instead of running from an inaccurate software clock; any
+active MON state is cleared when recovery fails. Choose **Open Preferences** to
+check or reapply the device, or **Submit Feedback** to send the failure details
+for investigation.
+
 ## Control Surfaces
 
 TayPE supports Mackie MCU-style control surfaces, focused X-Touch One workflows, and CM Labs MotorMix in Pro Tools/HUI mode. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, MotorMix setup, and monitor/select behaviour.
