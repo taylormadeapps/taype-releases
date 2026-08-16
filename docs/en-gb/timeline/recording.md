@@ -12,6 +12,8 @@ While recording, TayPE shows a live recording clip so you can see the pass formi
 
 Audio tracks record audio input. Instrument tracks can record MIDI and render through the instrument path depending on the track setup. Comp buses can capture shared instrument output into child takes where that workflow is active.
 
+TayPE records the playing: notes, velocity, pitch bend, controllers and the sustain pedal. It does not record SysEx, so device-specific traffic such as a synth patch dump is not captured into a take and is not passed to your instrument plugins. The MIDI Monitor still shows SysEx arriving if you need to check a device is talking.
+
 New comp child tracks use the comp bus name followed by an incremental number, such as `Lead Vocal - 1`, `Lead Vocal - 2`, and `Lead Vocal - 3`.
 
 ## Timing

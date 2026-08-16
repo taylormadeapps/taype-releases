@@ -4,6 +4,11 @@
 
 Create a saved checkpoint of the current reel.
 
+TayPE refuses every form of `save_reel` while audio or automation recording is
+active, while recording is stopping or finalising, and while a failed
+finalisation remains retained for recovery or discard. Stop or resolve the take
+first. Ordinary playback alone does not block an explicit save.
+
 ### `open_reel`
 
 Open a reel from the reel browser or a known reel reference.

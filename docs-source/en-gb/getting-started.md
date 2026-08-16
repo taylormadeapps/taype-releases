@@ -2,6 +2,8 @@
 
 TayPE opens into a working reel with a timeline, a transport, a selected track, and a channel strip. The aim is simple: get audio or MIDI onto tracks, shape it, and keep committing useful takes.
 
+During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label in full (for example, `v1.2.0 · beta 1`), and leaves the front when you switch to another app.
+
 ## The Two Views
 
 TayPE has two main work views:
@@ -44,6 +46,10 @@ Right-click **Record** to choose **Record Mode**:
 
 Use **Space** for Play/Stop and **P** for Play/Pause. Playback-safe edits can happen while the transport is rolling; edits that would risk the take are blocked until you stop. Recording is stricter: TayPE protects the active pass and asks you to finish it before changing the timeline structure.
 
+Play uses a very short anti-click ramp at the exact point where transport
+starts. Silence before a later note or drum hit does not move that ramp onto
+the attack, so starting playback shortly before a hit leaves the hit intact.
+
 The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces where that makes musical sense.
 
 ## Importing Audio
@@ -54,9 +60,9 @@ If imported media needs resampling, TayPE handles it during import or playback s
 
 ## Editing
 
-Select clips, split at the playhead, trim edges, drag clips between compatible tracks, adjust clip gain, and add fades. Crossfades are created by overlapping clip edges where the clips can share the same lane.
+Select clips, split at the playhead, trim edges, drag clips between compatible tracks, adjust clip gain, and add fades. Splitting adds the current default clip fade at the new cut edges. Crossfades are created by overlapping clip edges where the clips can share the same lane.
 
-MIDI clips open in the MIDI editor. Melodyne opens from a clip, not as a normal insert.
+MIDI clips open in the MIDI editor. ARA2 plug-ins open from a clip, not as normal inserts; choose the global provider from the **ARA2** menu first.
 
 ## The Channel Strip
 
@@ -84,11 +90,27 @@ The public GitBook manual is maintained for every shipped GitBook language. Use 
 
 Use the MIDI Monitor when you need to see what TayPE is receiving from controllers, keyboards, or virtual MIDI devices. It is useful for Mackie MCU setup, virtual instrument troubleshooting, and checking whether a device is sending the expected messages.
 
+## Session Log
+
+Use **Tools > Session Log** to inspect current-session diagnostics. Filter by
+severity or text, copy the rows currently shown, or reveal the underlying log
+file in Finder when support asks for it. Debug-level detail is off by default;
+enable **Log debug messages** in Audio Preferences only for a measured
+diagnostic session.
+
+If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
+not started delivering the callbacks required to process sound, or an
+established callback path has stopped. Playback, recording and monitoring
+remain unavailable instead of running from an inaccurate software clock; any
+active MON state is cleared when recovery fails. Choose **Open Preferences** to
+check or reapply the device, or **Submit Feedback** to send the failure details
+for investigation.
+
 ## Control Surfaces
 
-TayPE supports Mackie MCU-style control surfaces, including focused support for X-Touch One workflows. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, and monitor/select behaviour.
+TayPE supports Mackie MCU-style control surfaces, focused X-Touch One workflows, and CM Labs MotorMix in Pro Tools/HUI mode. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, MotorMix setup, and monitor/select behaviour.
 
-The built-in **Korg nanoKONTROL Studio** profile keeps the familiar MCU transport layout while its SEL buttons toggle monitoring. The **Behringer X-Touch One** profile is built for a selected-track workflow: its single motor fader follows the focused virtual strip, and the channel buttons select the previous or next virtual strip. **Clear Solo** clears all solo states.
+The built-in **Korg nanoKONTROL Studio** profile keeps the familiar MCU transport layout while its SEL buttons toggle monitoring. The **Behringer X-Touch One** profile is built for a selected-track workflow: its single motor fader follows the focused virtual strip, the channel buttons select the previous or next virtual strip, and the hardware Master path focuses and controls TayPE's master fader. **CM Labs MotorMix (Pro Tools/HUI Mode)** covers the eight faders, strip buttons, transport, banking, LEDs, motor faders, and basic scribble-strip labels without a custom MCU profile. To bank multiple MCU surfaces together, give them the same Group value and order them by Slot in Control Surface Preferences. **Clear Solo** clears all solo states.
 
 To create a custom MCU profile, copy the **Default Transport Template** from TayPE's Control Surfaces folder, rename the copy to end in `.json`, then edit the JSON mapping.
 

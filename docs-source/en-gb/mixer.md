@@ -8,8 +8,8 @@ The mixer is the desk view: many channel strips side by side, with faders, meter
 
 The mixer has two width modes:
 
-- **Narrow desk mode** shows compact strips so more tracks fit on screen.
-- **Full strip mode** gives each track the wider channel-strip layout.
+* **Narrow desk mode** shows compact strips so more tracks fit on screen.
+* **Full strip mode** gives each track the wider channel-strip layout.
 
 Press **W** while the mixer is focused, or use the Mixer Width toolbar button. The timeline's docked strip has its own width mode, so changing mixer width does not clobber the arranger strip width.
 
@@ -17,7 +17,7 @@ When a track is selected, width changes keep that selected strip in view. TayPE 
 
 ## Track Selection
 
-Click a strip title to select it. **Cmd-click** toggles tracks into the visible selection. **Shift-click** extends a visible range. Grouped fader, pan, width, section power, and insert power edits apply to the visible selected strips while preserving relative offsets where that matters.
+Click a strip title or unused background in its PAN/FADER panel to select it. **Cmd-click** toggles tracks into the visible selection. **Shift-click** extends a visible range. The fader, knobs, meters, readouts, utility buttons, and panel resize or preset controls keep their own actions and do not change track selection. Grouped fader, pan, width, section power, and insert power edits apply to the visible selected strips while preserving relative offsets where that matters.
 
 The first selected track stays the primary track for the docked strip and focused operations.
 
@@ -25,9 +25,19 @@ The first selected track stays the primary track for the docked strip and focuse
 
 Mixer strips follow the reel's track order. Ordinary tracks sit together. Bus and master strips open a stronger separator so routing landmarks stand out.
 
+Drag a strip title horizontally to change its position. Comp groups follow the
+same rules as the timeline: dragging the comp bus moves its complete child-take
+block, and a child strip can move only within its own group. The insertion line
+is hidden where a drop would split a comp group.
+
 ## Scrolling
 
 Use the horizontal scroll gesture, arrow keys when the mixer is focused, or the visible rack controls to move through large sessions. The selected track should remain easy to find after width changes, scale changes, or switching between inline and detached mixer windows.
+
+Use a vertical trackpad or mouse-wheel gesture over the upper part of a strip
+to move through its processing sections. The fader dock stays fixed. Stepped
+mouse wheels receive substantially more travel per notch after macOS wheel
+normalisation; high-resolution trackpad response is unchanged.
 
 ## Detached Mixer
 

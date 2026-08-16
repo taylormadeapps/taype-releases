@@ -4,7 +4,12 @@ The fader is the final track level control before output routing. Pan and width 
 
 ## Fader
 
-Drag for level rides. Double-click to return to unity. The fader follows the visible throw honestly and does not pretend it can travel past its end stops.
+During an ordinary drag within the visible throw, the point you grab stays under
+the pointer, so the complete cap moves without its centre groove jumping to the
+mouse. At either end stop the cap clamps until the pointer moves back into
+range. Shift-drag is intentionally finer: the cap moves by one quarter of the
+pointer movement. Clicking the rail away from the thumb does not move or grab
+the fader. Double-click the thumb to return to unity.
 
 ## Pan and Width
 

@@ -10,12 +10,18 @@ Every track has a built-in channel strip. Signal flows through the strip in this
 
 Drag knobs vertically, or hover and use the mouse wheel. Knobs with a neutral centre hold at zero so crossing the centre feels deliberate. Faders track continuously through unity for smooth rides.
 
+If wheel edits get in the way of scrolling channel strips, enable **Preferences > General > Disable scroll on mixer knobs**. It is off by default and affects knobs in both the arranger channel strip and mixer; fader wheel trim remains available.
+
 Double-click gain and balance knobs to reset them to zero. Double-click the fader to return it to unity. Double-click editable readouts such as fader dB or pan where shown to type an exact value.
 
 Section headers collapse or reopen on double-click across the title band. The chevron is a single-click toggle. Section power and section visibility are separate: a bypassed section can remain open and visibly dimmed.
 
 Empty search browses your plug-in
 folders in the insert picker while the Back/path strip stays fixed.
+Typing in Search clears the Stock/Effects/Instruments type filter and searches
+all plug-in types allowed in that slot; click a type button to narrow the
+current results again. Instrument results never appear in track slots 2-8,
+ordinary buses, or the Listen Bus.
 In search results, Shift-click or Command-click enters multi-select mode for
 audio-effect and hardware-insert rows; the footer shows what will fit and
 **Add** loads as many selected rows as fit from the opened slot onward.
@@ -41,3 +47,5 @@ The comp-bus MON lamp now follows the same colour rules as an ordinary track. It
 ## Popup Help
 
 With **Help > Popup Help** enabled, controls show hover explanations. Routing selectors always reveal the full selected route on hover.
+
+Loaded insert slots list their complete gesture set in Popup Help. Click toggles the plug-in window; Cmd-click toggles bypass; Option-click enables or disables it; Cmd-Option-click deletes it; drag moves it; and Cmd-drag copies it. If plug-in windows are hidden, clicking an insert restores them and brings that plug-in forward. Option-P hides or restores all open plug-in windows.

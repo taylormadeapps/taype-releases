@@ -31,6 +31,16 @@ crossover. The other side stays dry, including when Wet/Dry is at 100%.
 Choose **OFF** for the normal full-band Wet/Dry control. A small coloured dot
 on the knob shows when a split is active.
 
+### Model Quality
+
+Preferences > NAM provides three global preamp quality choices: **Efficient**, **Balanced**, and **Quality**. Balanced is the default.
+
+Scalable models choose the tier that best matches that request. Because each package can define different internal breakpoints, the exact tier is model-specific. Models that do not provide scalable tiers always run at their native quality. The setting applies to track and bus NAM preamps; Taype Drive has its own independent model handling.
+
+Stop playback, recording, and printing before changing quality. TayPE prepares a complete replacement NAM graph and only saves the new preference when every active model is ready. If loading fails, the previous quality remains active.
+
+**Use Quality for Offline Print** is on by default. Offline master, loop, stem, and named-marker prints temporarily use **Quality** for both preamp and summing NAM, then restore your exact realtime choices. This does not affect live or hardware printing. If the Quality graph cannot be prepared or the realtime graph cannot be restored, the offline print fails instead of silently using another quality.
+
 ## Gain Staging
 
 The preamp shows input/output metering so you can add tone without accidentally fooling yourself with loudness. Level-match before judging the colour.

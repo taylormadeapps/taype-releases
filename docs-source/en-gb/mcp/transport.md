@@ -13,6 +13,8 @@ Stop transport. While recording, stop follows the active record mode and safety 
 ### `get_state`
 
 Return transport, reel, selection, tempo, marker, and current-track state.
+The `duration` field is the informational end of known content or explicit
+timeline anchors. It may be less than `position` and is never a stop boundary.
 
 ### `print_mix`
 
@@ -20,7 +22,8 @@ Render the current mix to an audio file.
 
 ### `seek`
 
-Move the playhead.
+Move the playhead to any non-negative timeline position, including beyond
+known content and the Tape Mode graphic length.
 
 ### `set_cut_zero` / `reset_cut_zero`
 

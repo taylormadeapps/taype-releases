@@ -4,7 +4,7 @@ Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI
 
 ### `list_plugins`
 
-Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. Melodyne is not listed as a normal insert because it opens from clips.
+Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. Plug-ins that advertise ARA2 are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow.
 
 ### `list_midi_outputs`
 
@@ -57,11 +57,16 @@ Optional parameters:
 
 ### `disable_insert` / `enable_insert`
 
-Disable removes an insert from processing while keeping its assignment and state. Enable restores it to the graph.
+Disable removes an insert from processing and PDC while keeping its hosted
+instance, editor, assignment, and runtime state resident. Enable reuses that
+instance. Both operations are available during playback; recording and print
+capture remain protected.
 
 ### `get_insert_info`
 
 Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information.
+The `editor_open` field becomes false when the window closes, One-window mode
+replaces it, or the plug-in sandbox exits.
 
 ### `list_insert_presets` / `load_insert_preset`
 
