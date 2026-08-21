@@ -23,6 +23,10 @@ Use [Reels](reels/README.md) for checkpoints, history, pack/unpack, thin reels, 
 
 Choose an input on the track header or channel strip, arm the track, then press **Record**. Audio tracks record audio. Instrument tracks can host a VSTi on the first insert slot and record MIDI or rendered instrument output depending on the workflow.
 
+Set up the interface, channel names and default routes in **Preferences →
+Audio**. See [Audio Preferences and I/O Mapping](audio-preferences.md) for
+multi-channel interfaces and missing-device recovery.
+
 Right-click **Stop** to choose **Record Stop Mode**, which decides what pressing
 Record again or Stop does during a take:
 

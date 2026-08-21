@@ -3,6 +3,7 @@
 * [Documentation Home](README.md)
 * [Welcome](en-gb/README.md)
 * [Getting Started](en-gb/getting-started.md)
+* [Audio Preferences and I/O Mapping](en-gb/audio-preferences.md)
 * [The Timeline](en-gb/timeline/README.md)
   * [Track Headers](en-gb/timeline/track-headers.md)
   * [Clips](en-gb/timeline/clips.md)
