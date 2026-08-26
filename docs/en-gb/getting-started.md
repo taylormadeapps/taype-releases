@@ -110,6 +110,13 @@ active MON state is cleared when recovery fails. Choose **Open Preferences** to
 check or reapply the device, or **Submit Feedback** to send the failure details
 for investigation.
 
+If a preferred device is unplugged, TayPE keeps running on whatever is still
+available and labels the missing choice as unplugged with that live fallback.
+Channel mapping and master routing stay locked until the preferred device
+returns, or until you choose a device that is actually available — including
+the live fallback itself — and apply it. You do not need to plug the missing
+device back in first.
+
 ## Control Surfaces
 
 TayPE supports Mackie MCU-style control surfaces, focused X-Touch One workflows, and CM Labs MotorMix in Pro Tools/HUI mode. See [Control Surfaces](control-surfaces.md) for banking, selected-track control, MotorMix setup, and monitor/select behaviour.
