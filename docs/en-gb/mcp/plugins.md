@@ -74,7 +74,9 @@ List and load presets for the insert.
 
 ### `open_insert_editor` / `close_insert_editor`
 
-Open or close the plugin editor window.
+Open or close the plugin editor window. `open_insert_editor` starts the open
+and returns immediately with `editor_open` and `editor_opening`; it does not
+wait for the native window. Poll `get_insert_info` until the window is open.
 
 ### `restart_sandbox`
 
