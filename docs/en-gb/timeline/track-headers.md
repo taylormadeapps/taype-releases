@@ -10,7 +10,11 @@ Track headers hold the controls you need before reaching for the mixer.
 * **Mute / Solo**: silence or isolate tracks.
 * **Tag**: apply and filter by track tags.
 * **Archive**: move a finished track out of the main working set.
-* **MON**: monitor input or instrument output.
+* **MON**: monitor input or instrument output. When live MIDI preview is
+  sounding through the instrument, this lamp turns orange: constantly while a
+  VSTi window is open, or only while the playhead is inside the clip if just
+  the MIDI editor is open. Opening those windows does not turn monitoring on;
+  with MON off, clip audio keeps playing.
 * **Record**: arm the track for recording.
 * **Input / Output**: choose routing.
 * **Bus**: turn a track into a bus or comp group where supported.

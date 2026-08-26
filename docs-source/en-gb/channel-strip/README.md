@@ -42,7 +42,7 @@ The Sends section sits with Inserts because both are routing decisions. The trac
 
 The coloured title bar selects, renames, and identifies the track. Mixer title clicks select strips; Cmd-click and Shift-click build visible track selections. Grouped edits apply to visible selected strips while preserving relative offsets where possible.
 
-The comp-bus MON lamp now follows the same colour rules as an ordinary track. Its MON lamp follows the same colour rules as an ordinary track.
+The comp-bus MON lamp now follows the same colour rules as an ordinary track. Its MON lamp follows the same colour rules as an ordinary track. While live MIDI preview is sounding, the MON lamp turns orange: constantly with a VSTi window open, or only while the playhead is inside the edited clip if just the MIDI editor is open.
 
 ## Popup Help
 
