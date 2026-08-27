@@ -55,7 +55,9 @@ preferred interface is unplugged or unavailable. While fallback is active:
 - explicit recording, monitoring, Hardware I/O and direct-output routes are not
   sent to coincident channel numbers on the fallback device; and
 - applying preferences cannot save fallback channel routes over the preferred
-  setup.
+  setup; and
+- the last committed audio buffer size stays in effect when the fallback
+  device still supports it.
 
 Reconnect the preferred interface to restore its mapping and routes. To replace
 it intentionally, select a different available device in Audio Preferences and
