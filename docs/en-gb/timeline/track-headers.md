@@ -56,6 +56,13 @@ incremental name such as `Lead Vocal - 1`. If a comp child is selected, the
 new track becomes its sibling inside the same comp group and is inserted
 immediately after it. Multi-selection disables this automatic parenting.
 
+**Duplicate Track** (Option+D) on a comp bus copies the whole group: the bus
+and every child take, including clips, as a new group immediately after the
+original. **Duplicate Track Without Content** (Cmd+D) copies only the comp
+bus itself and parks that empty copy after the original group. The original
+takes stay with the original bus. Duplicating a child take still copies that
+one take inside the same group.
+
 Cmd-click the blue Bus control on a non-empty comping bus when you are ready
 to leave comp mode. A required confirmation warns that all Cuts will be
 flattened and the shared child take tracks removed. If you continue, TayPE
