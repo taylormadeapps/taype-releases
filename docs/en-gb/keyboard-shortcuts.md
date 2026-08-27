@@ -206,9 +206,12 @@ the plug-in stack while active; leaving them restores the previous plug-in
 order without stealing focus. A Print Mix export window owns a stronger
 visibility lease: plug-in windows stay hidden until that export window closes.
 
-When a plug-in window is in front, any key the plug-in does not consume is
-offered to a visible, non-minimised MIDI editor first. MIDI-local Return,
-Quantise, note navigation and editing, clipboard, split, duplicate, and
+When a plug-in window is in front, the plug-in editor gets first refusal on
+ordinary keys, including native VST3 views. Toolbar buttons on that window do
+not keep keyboard focus after you click them. Any key the plug-in does not
+consume, including repeats and the matching key-up, is offered to a visible,
+non-minimised MIDI editor first. MIDI-local
+Return, Quantise, note navigation and editing, clipboard, split, duplicate, and
 pitch-row zoom therefore stay with the MIDI editor; unhandled keys continue to
 the global shortcut path. Escape still closes the plug-in window first.
 
