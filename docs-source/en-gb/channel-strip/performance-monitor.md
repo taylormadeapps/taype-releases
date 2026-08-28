@@ -6,6 +6,16 @@ The Performance Monitor shows where processing time is being spent.
 
 Use it to see track, bus, insert, and sandbox processing in context. It helps distinguish a heavy plugin from a routing or monitoring problem.
 
+When Listen Bus is active, it appears as the terminal `L0` post-master row with
+its plug-in count, processing use, drop counters, and chain latency. Master
+moves to `L1`, and its existing routing descendants shift by one level; Listen
+Bus is never shown as a child feeding Master. Its latency is also
+included in every track's effective output-path latency and in the session
+total. If Listen Bus uses a separate hardware output, the Master row shows the
+matching output delay that keeps the Master and Listen Bus outputs
+sample-aligned. These figures describe what reaches hardware; they do not add a
+second round of playback compensation to individual tracks.
+
 ## Colour Coding
 
 Rows use colour to separate healthy, busy, and risky processing areas. Treat it as a guide for troubleshooting, not a musical judgement.

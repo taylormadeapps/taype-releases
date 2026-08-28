@@ -63,7 +63,13 @@ Return the current multiplier and effective tempo.
 
 ### `get_performance`
 
-Return audio-engine performance metrics such as DSP load, render timing, overrun state, latency, active track/plugin counts, and optional per-track rows.
+Return audio-engine performance metrics such as DSP load, render timing,
+overrun state, latency, active track/plugin counts, and optional per-track
+rows. Effective latency includes active post-master Listen Bus latency on every
+audible route. Raw session-PDC values remain separate, and a synthetic Listen
+Bus row exposes its own plug-in and DSP attribution. While active, that row is
+the terminal output stage at `depth: 0`; Master and its descendants shift down
+one level instead of presenting Listen Bus as a child of Master.
 
 Optional parameters:
 
