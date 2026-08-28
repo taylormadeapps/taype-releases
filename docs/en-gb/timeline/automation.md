@@ -99,6 +99,8 @@ Automation breakpoint editing happens in Automation View while transport is stop
 
 - Click empty lane space to add and select a point.
 - Click an existing point to select it without rewriting it.
+- Point markers stay hidden until you hover or select them, same as MIDI
+  controller points. The automation curve stays visible.
 - Double-click an existing point to delete it.
 - Drag a point to move it.
 - Hover over a point to see its value painted directly on the lane. The
@@ -168,8 +170,15 @@ Automation View keeps its own snap mode. Normal clip view can stay snapped
 while automation editing stays free, or the other way round. With automation
 snap on, the pencil writes one point on every crossed interval of the selected
 grid, even if you move quickly. With snap off, it follows your gesture freely
-and then removes unnecessary points while keeping the shape editable. If you
+and then reduces the stroke to a best-fit shape that stays editable, without
+quantising times to the grid. If you
 draw back across the same time, the latest pass wins.
+
+Recording over existing automation keeps everything before you first touch a
+control, replaces the span you write, and holds the last written value until
+the next existing point after you stop. It does not jump back to the mixer's
+static value when capture stops. Recorded curves are thinned to a best-fit
+shape rather than snapped to the grid.
 
 ## Automation and Clips
 
@@ -189,7 +198,7 @@ automation to remain where it is.
 
 ## Playback Values
 
-Before the first automation point, TayPE uses the track's static mixer value. Between points, it interpolates. After the last point, it holds the last automation value. There is no hidden jump back to the static value unless you write that move.
+Before the first mixer or plug-in automation point, TayPE uses the track's static mixer value. Between the first and last point, it interpolates. Immediately after the last mixer or plug-in point, it returns to that static value — no extra breakpoint is written. MIDI controller and pitch-bend automation is different: it holds the last authored value.
 
 A powered-off lane always uses the track's stored mix value, no matter what
 points it contains.

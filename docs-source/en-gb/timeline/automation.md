@@ -189,7 +189,7 @@ automation to remain where it is.
 
 ## Playback Values
 
-Before the first automation point, TayPE uses the track's static mixer value. Between points, it interpolates. After the last point, it holds the last automation value. There is no hidden jump back to the static value unless you write that move.
+Before the first mixer or plug-in automation point, TayPE uses the track's static mixer value. Between the first and last point, it interpolates. Immediately after the last mixer or plug-in point, it returns to that static value — no extra breakpoint is written. MIDI controller and pitch-bend automation is different: it holds the last authored value.
 
 A powered-off lane always uses the track's stored mix value, no matter what
 points it contains.

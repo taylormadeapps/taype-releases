@@ -147,11 +147,12 @@ beside it hides targets that have no events in the open clip while keeping that
 composer-first order. If no controller data exists, the selector is disabled
 until **With data** is turned off. This filter only changes the editor view and
 is not saved with the reel.
-Click a controller point to select it, drag empty lane space to marquee-select
-points by time, and drag any selected point to move the whole selected set.
+Click a controller point to select it, click empty lane space to add a point,
+drag empty lane space to marquee-select points by time, and drag any selected
+point to move the whole selected set.
 Cmd+A selects all points in the current controller, Delete or Backspace removes
-the selection, and Escape clears it. Double-click empty space to add a point or
-double-click a point to delete it. Cmd-drag draws controller values as a
+the selection, and Escape clears it. Double-click a point to delete it.
+Cmd-drag draws controller values as a
 freehand pencil stroke, following each change in pointer direction. The
 underlying MIDI points appear when hovered or selected rather than covering the
 stroke with dots. Holding Cmd over the controller plot changes the mouse
