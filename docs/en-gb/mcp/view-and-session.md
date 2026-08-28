@@ -73,7 +73,10 @@ This read remains available during recording and take finalisation.
 
 ### `set_automation_points`
 
-Replace automation points for one track parameter in the selected cut. Points must be sorted by time.
+Replace automation points for one track parameter in the selected cut. Points
+must be sorted by time. A point may include optional `stop_after: true`; that
+point ends a mixer or plug-in automated section and returns the parameter to its
+stored static value until another point begins a new section.
 
 ### `clear_automation`
 

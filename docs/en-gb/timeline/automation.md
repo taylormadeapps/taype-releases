@@ -93,6 +93,12 @@ instead of keeping incomplete automation.
 
 The transport record button shows an automation badge while Record means automation capture.
 
+Each touched capture pass normally ends as its own Touch section. Its final
+recorded point releases that parameter back to the stored static value. If
+preserved automation begins within 100 ms, TayPE reconnects to it instead of
+creating a tiny static interruption. Separate later recordings leave the gap
+under static control, without an invented diagonal ramp.
+
 ## Editing Breakpoints
 
 Automation breakpoint editing happens in Automation View while transport is stopped.
@@ -101,7 +107,13 @@ Automation breakpoint editing happens in Automation View while transport is stop
 - Click an existing point to select it without rewriting it.
 - Point markers stay hidden until you hover or select them, same as MIDI
   controller points. The automation curve stays visible.
-- Double-click an existing point to delete it.
+- Stop points are red while point markers are visible; ordinary points retain
+  the lane colour.
+- Option-click empty lane space to add a stop point. Option-click an existing
+  point to toggle it between an ordinary point and a stop point without
+  changing its time or value.
+- Double-click an existing point to delete it. Deleting a stop point removes
+  that release boundary, so the surviving neighbouring points reconnect.
 - Drag a point to move it.
 - Hover over a point to see its value painted directly on the lane. The
   readout is always available, stays inside the lane and does not depend on
@@ -155,7 +167,6 @@ Automation breakpoint editing happens in Automation View while transport is stop
   selected track lanes. With no automation points selected, Escape performs
   the normal arranger deselect.
 - Delete or Backspace removes selected points.
-- Option-click resets a point to the track's current static/default value.
 - Option-double-click clears the displayed automation lane for that track.
 - Hold Command over a lane to show the pencil, then Command-drag to draw one
   undoable automation stroke. The stroke replaces existing points across the
@@ -175,10 +186,10 @@ quantising times to the grid. If you
 draw back across the same time, the latest pass wins.
 
 Recording over existing automation keeps everything before you first touch a
-control, replaces the span you write, and holds the last written value until
-the next existing point after you stop. It does not jump back to the mixer's
-static value when capture stops. Recorded curves are thinned to a best-fit
-shape rather than snapped to the grid.
+control and replaces only the span you write. The final written point normally
+becomes a Touch stop and releases to static; if the next existing point begins
+within 100 ms, TayPE reconnects to it instead. Recorded curves are thinned to a
+best-fit shape rather than snapped to the grid.
 
 ## Automation and Clips
 
@@ -198,7 +209,12 @@ automation to remain where it is.
 
 ## Playback Values
 
-Before the first mixer or plug-in automation point, TayPE uses the track's static mixer value. Between the first and last point, it interpolates. Immediately after the last mixer or plug-in point, it returns to that static value — no extra breakpoint is written. MIDI controller and pitch-bend automation is different: it holds the last authored value.
+Before the first mixer or plug-in automation point, TayPE uses the track's
+static mixer value. It interpolates inside each automated section. A red stop
+point releases to static immediately afterwards, and a later point begins the
+next section without a diagonal ramp across the gap. An ordinary unmarked final
+point remains latched at its authored value. MIDI controller and pitch-bend
+automation also hold their final authored value.
 
 A powered-off lane always uses the track's stored mix value, no matter what
 points it contains.
