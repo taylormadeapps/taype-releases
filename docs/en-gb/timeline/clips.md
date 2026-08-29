@@ -16,14 +16,15 @@ An ordinary comp take has a filled bottom strip with a highlighted upper edge.
 A **Don't Comp** take shows a dark, diagonally hatched strip. Its clip and
 waveform stay at normal weight because the take is layered and audible, not
 disabled. The hit target is unchanged.
-Comp take tracks omit clip-name labels so the waveform and comp strip stay
-clear. Ordinary tracks and the parent comp bus keep their normal clip labels.
+Comp take tracks keep the same clip-name labels as ordinary tracks, sitting
+above the bottom gesture strip. The parent comp bus also keeps its normal
+clip labels.
 
 The comp bus lane shows faint, square-ended waveform bands for the enabled child takes you will hear. These are non-interactive overview cues, not clips on the bus; edit the corresponding clips on the child take tracks. When the group has no child clips, the comp bus lane shows no overview cue.
 
 ## Moving
 
-Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes cannot initiate a move; they can still be selected and promoted from the bottom strip or with Option-click.
+Drag clips along the timeline or between compatible tracks. TayPE keeps clips aligned to the current snap and grid rules unless you deliberately bypass them. On comp take tracks, muted takes can still be moved and resized. They can also be selected and promoted from the bottom strip or with Option-click.
 
 **Edit > Automation Follows Clips** defaults on. A same-track move carries all
 automation points inside the moved clips; Option-drag and `D` copy those points
@@ -51,7 +52,7 @@ Conversion replaces the clip's stored audio with a new reel-owned WAV. If the cl
 
 ## Trimming
 
-Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes cannot initiate an edge resize. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
+Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes can still be resized. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
 
 When you zoom far out and a clip becomes very narrow, its edge grab areas shrink so the middle remains available for moving the clip. At the most extreme zoom, grab just outside the clip edge when you need to trim or stretch it.
 
