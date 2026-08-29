@@ -51,7 +51,7 @@ Stopping or pausing releases notes owned by the MIDI editor preview and cancels 
 
 ## Markers
 
-Use `/` to add or remove a marker at the playhead. Use `,` and `.` to move to previous and next markers or loop braces. Number keys jump to marker slots.
+Use `/` to add or remove a marker at the playhead. Use `,` and `.` to move to previous and next markers or loop braces, including when loop playback is off. Number keys jump to marker slots. With the MIDI editor focused, `,` and `.` also stop at that clip's start and end, and the editor ruler shows the same markers as the arranger. Click a marker tab there to move the playhead to it.
 
 Click a marker tab in the top of the ruler to move the playhead to it. Drag that
 tab, or the short line next to it in the same upper ruler lane, to move the

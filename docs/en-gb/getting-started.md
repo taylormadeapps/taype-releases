@@ -54,7 +54,7 @@ Play uses a very short anti-click ramp at the exact point where transport
 starts. Silence before a later note or drum hit does not move that ramp onto
 the attack, so starting playback shortly before a hit leaves the hit intact.
 
-The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces where that makes musical sense.
+The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces even when loop playback is off.
 
 ## Importing Audio
 
