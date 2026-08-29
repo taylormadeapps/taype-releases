@@ -13,7 +13,7 @@ The mixer has two width modes:
 
 Press **W** while the mixer is focused, or use the Mixer Width toolbar button. The timeline's docked strip has its own width mode, so changing mixer width does not clobber the arranger strip width.
 
-Width changes centre the track or bus strip under the mouse. When the mouse is not over a strip, the first selected strip in mixer order remains the scroll target. The master strip is pinned, so changing width while the mouse is over master preserves the rack's horizontal position.
+When the pointer is over a track or bus strip, a width change positions the centre of that strip at the pointer's horizontal position, as close as the visible rack and its scroll limits allow. Otherwise the first selected strip remains the scroll target. The master strip is pinned, so changing width while the pointer is over master leaves the rack's horizontal position alone.
 
 ## Track Selection
 

@@ -13,7 +13,7 @@ The mixer has two width modes:
 
 Press **W** while the mixer is focused, or use the Mixer Width toolbar button. The timeline's docked strip has its own width mode, so changing mixer width does not clobber the arranger strip width.
 
-When a track is selected, width changes keep that selected strip in view. TayPE should not jump to an arbitrary centre point just because the strip layout changed.
+When the pointer is over a track or bus strip, a width change positions the centre of that strip at the pointer's horizontal position, as close as the visible rack and its scroll limits allow. Otherwise the first selected strip remains the scroll target. The master strip is pinned, so changing width while the pointer is over master leaves the rack's horizontal position alone.
 
 ## Track Selection
 
