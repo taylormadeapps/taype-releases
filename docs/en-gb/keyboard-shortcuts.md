@@ -29,8 +29,10 @@ While the MIDI editor is active, Home, End, Page Up, and Page Down stay with
 the piano roll in normal, maximised, and full-screen window postures. Moving
 focus away, minimising, or closing the editor returns them to the main window.
 `,` and `.` still jump markers and loop braces, and they also stop at the open
-clip's start and end. The editor ruler shows the same markers as the arranger;
-click a marker tab to seek.
+clip's start and end. The editor ruler shows the same markers and loop braces
+as the arranger at those times, with vertical lines that stop at the ruler
+bottom; loop-brace tabs sit beside START/END when they share a time. Click a
+marker or loop-brace tab to seek.
 Plain Left and Right move selected MIDI notes by one quantise interval; with no
 note selection they move the shared playhead by the arranger's visible ruler
 tick and do not scroll the piano roll.

@@ -264,8 +264,11 @@ Follow.
 Home and End seek to the open MIDI clip boundaries and horizontally page the
 piano roll to reveal the destination even when it was previously off-screen.
 `,` and `.` still jump markers and loop braces, and they also stop at that
-clip's start and end. The editor ruler paints the same markers as the arranger;
-click a marker tab to move the playhead to it.
+clip's start and end. The editor ruler paints the same markers and loop braces
+as the arranger at those timeline times; their vertical lines stay inside the
+ruler. The editor timeline includes the loop range so those braces can be
+scrolled into view, and loop-brace tabs sit beside START/END when they share a
+time. Click a marker or loop-brace tab to move the playhead to it.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared
