@@ -53,9 +53,12 @@ Stopping or pausing releases notes owned by the MIDI editor preview and cancels 
 
 Use `/` to add or remove a marker at the playhead. Use `,` and `.` to move to previous and next markers or loop braces. Number keys jump to marker slots.
 
-Click a marker to move the playhead to it. Dragging a marker moves only the
-marker and leaves the playhead or rolling transport alone. Clicking or dragging
-empty ruler space keeps the normal immediate playhead seek behaviour.
+Click a marker tab in the top of the ruler to move the playhead to it. Drag that
+tab, or the short line next to it in the same upper ruler lane, to move the
+marker. The coloured line that drops through the tracks is only a visual guide.
+Dragging a marker moves only the marker and leaves the playhead or rolling
+transport alone. Clicking or dragging empty ruler space keeps the normal
+immediate playhead seek behaviour.
 
 On the Main Cut, press **Shift+/** to create a **No Cut** range at the playhead, or convert a point marker already there. The shortcut uses the same range rules as the marker menu: the range ends at the next marker, or eight bars later when there is no following marker, and cannot overlap another range. You can also right-click a marker and use **Range** to turn it into a Cut range. Choose **No Cut** for an empty range, **Disable** to return to a normal marker, or an item labelled **Cut: _name_** to play that non-Main Cut from its own zero across the marker range. Assigning a Cut renames the marker to the Cut name, adding a number when needed to keep marker names distinct. Drag the range's right edge to resize it. Point markers can sit inside without changing the range; assigning a range to an interior point truncates the earlier range there. **Populate from Cut** copies the assigned Cut into the range and leaves the marker as No Cut. **Delete Time** and **Insert Time** use the explicit end for ranged markers and the next marker for normal markers.
 
