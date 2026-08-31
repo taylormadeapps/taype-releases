@@ -98,9 +98,10 @@ Use the MIDI Monitor when you need to see what TayPE is receiving from controlle
 
 Use **Tools > Session Log** to inspect current-session diagnostics. Filter by
 severity or text, copy the rows currently shown, or reveal the underlying log
-file in Finder when support asks for it. Debug-level detail is off by default;
-enable **Log debug messages** in Audio Preferences only for a measured
-diagnostic session.
+file in Finder when support asks for it. INFO rows are normal status and
+successful lifecycle events; WARN and higher indicate degraded or failed
+operation. Debug-level detail is off by default; enable **Log debug messages**
+in Audio Preferences only for a measured diagnostic session.
 
 If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
 not started delivering the callbacks required to process sound, or an
