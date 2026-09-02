@@ -3,40 +3,359 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.2.1"
-date = "2026-07-22"
-commit = "d030c332"
+version = "1.3.0"
+date = "2026-09-02"
+commit = "2b526388"
 
 summary = """\
-Record Mode is now independent of Loop, with clearer Auto Punch, Comp, Dub and Sooper-Looper workflows plus dedicated Record Stop Mode controls.
-Plug-in editors now open, focus, hide and restore reliably across multiple windows, sandbox restarts and Print Mix; Option+P works app-wide without losing editor state.
-Insert rows retain named preset provenance and mark live edits with `*`, while the reserved Default preset continues showing the plug-in name.
-Timeline editing is more predictable: narrow clips remain draggable, Shift-resize magnetically butts clips without forced crossfades, playhead snap follows the visible grid, and stopped edits no longer jump the viewport.
-Cmd+Option+wheel now zooms both axes in the arranger and MIDI editor; MIDI quantise settings can be stepped in either direction, and Cmd+Q now requests confirmation.
-Metronome clicks now follow the time-signature denominator, so 8/8 receives quaver clicks.
-Ranged markers can be dragged by their body without moving loop braces; Shift+/ creates a No Cut range, and range menus clearly identify source Cuts.
+TayPE 1.3.0 draws a line under the previous generation. The app has been rewritten on a fresh code base, bringing stronger performance and stability and a new foundation for what comes next.
+Added full automation for the mixer, channel strip and every parameter exposed by hosted plug-ins, including VSTi instruments. Record touched controls or draw and edit automation directly on the timeline, keep multiple lanes open, disable lanes without deleting their points, edit grouped tracks together, and move or duplicate clips with their automation.
+Added VSTi Live MIDI Playback mode. Open a VSTi window to hear its MIDI clips playing through the live instrument for immediate editing and auditioning; close it and the track returns to its committed audio. MIDI rerenders now include plug-in automation and retain the previous committed audio if a replacement fails.
+Reworked playback, transport and delay compensation. Starts land at the requested position, instruments and effects ring out naturally on stop, loop transitions remain click-free, and clips, instruments, buses, the master, automation, loop repeats and plug-in playheads stay aligned through large-latency processors, hardware inserts and varispeed.
+Reworked recording and comping. Count-in, punch, Comp and Dub takes remain aligned through instrument latency and lookahead; incomplete loop takes follow the global discard preference; ordinary takes commit without rebuilding the playback graph; and comp-bus hierarchy, take editing and monitoring behave consistently.
+Print Mix and offline rendering now follow the actual timeline and transport state. Clocked instruments receive the correct timing, while advanced instruments, automation, hardware inserts and processing latency remain aligned through the print.
+Expanded MIDI and timeline editing with original-MIDI restore, batch rerendering, linked editor views, correct held-note seeking and loop-boundary releases, improved marker and loop-brace navigation, snapped pointer splits, cursor-targeted fades and an unbounded timeline.
+Improved mixer and plug-in workflows with track reordering from headers or mixer strips, better scrolling and focus behaviour, reliable asynchronous plug-in editors, safer sandbox recovery, live delay updates, dry-audio protection during overload and clearer session diagnostics.
+Refined the stock effects with compressor auto-gain, Taype Rooms IR navigation and **NOT SUBTLE**, plus Ache-Delay tape bypass and its own **NOT SUBTLE** full-drive mode. Downloaded TONE3000 packages can also be opened directly in the local library.
+Plus many more features, stability and performance improvements throughout TayPE.
 """
 
 # Verbatim git log from previous stable release tag to this checkpoint.
 # Raw commit history for traceability.
 git_log = """\
-0eac5c14 Harden test state transition recovery
-181d9f84 Harden live test state restoration
-b80fbb38 Fix metronome pulses, marker ranges, and UI reset diagnostics
-518d8383 Keep harness failures diagnostic and fix Default insert labels
-b6109ae9 Add guarded quit and directional MIDI quantise shortcuts
-bca39660 Fix Print Mix plug-in hiding and marker range labels
-f9e6045f Fix app-wide plug-in window focus and shortcuts
-6234ecb3 Fix arranger snap and stopped edit paging
-a665f6f1 Add Shift magnetic butt editing to clip resize
-474ae539 Add dual-axis wheel zoom to arranger and MIDI editor
-39d1d22a Preserve clip body grabs at low zoom
-e2e32ca7 Fix plugin editor lifecycle and preset state
-3aacfa7b Write custom packages to allocated artifact paths
-bc7fd72f Refactor transport record modes and comp history
-435d1676 Harden canonical test preference restoration
-bb667d0c Remove build currency checks from test runner
-8d4eb22f Harden canonical test harness execution
-323da9a5 Support minor-series beta version resolution
-d1ab02b7 Track taype-releases v1.2.0
+2162760c Refine stock effects and beta release safeguards
+66bb5c3a Stabilise UI probe and regression evidence
+da9cf53a Beta checkpoint v1.3.0b14
+872ccfa9 Match the control-plane retirement stub to the production constructor
+38af0b56 Fail-close sandboxed plug-in instance retirement
+afe52261 Share device block deadline across loop segments
+0c7ea1d4 Hold MIDI pump reads until insert reconnect and classify session-log severity
+38bf2ce4 Beta checkpoint v1.3.0b13
+ee0f5195 Seek already-rolling Sooper loop-pass starts to the loop brace
+18d5f5bc Keep Graph as the only live playback attach and fail closed on print drain
+4520909f Beta checkpoint v1.3.0b12
+2c9d4c37 Keep sidechain-capable inserts off the main-only processBlock view
+1c2b45ad Fail closed on offline insert warmup and keep sandbox crash traces
+e3eb2d0e Keep device-change sandbox recovery in-process
+f51cbc56 Repair Ninja package build pipeline
+236d3472 Beta checkpoint v1.3.0b11
+bb14b076 Anchor mixer width focus at the pointer
+cb112d3c Clear deleted track selection and strengthen mixer focus tests
+03e0bbe6 Focus mixer width changes and preserve strip selection
+e08b912e Paint MIDI ruler loop braces and keep their lines in the ruler
+fb4720f5 Include loop braces and MIDI clip bounds in marker navigation
+c55e68be Limit marker drag hits to the upper ruler tab strip
+05e53d51 Restore muted-take trim, locale catalogs, and view-state restart ownership
+69d48dbd Keep comping buses out of mixer routing and restore take-clip editing
+5127b837 Project Listen Bus latency onto every effective output path
+6ee8de55 Harden submodule and test evidence integrity
+6430f821 Make native test evidence first-class and tamper-resistant
+2f4d38cf Refine Touch automation release boundaries
+99382875 Close the Pre-Beta Blockers programme on the launch roadmap
+4f401ca7 Close Package E automation record-over, reduction, and MIDI CC
+2925f4cf Close Package I plug-in editor keyboard precedence
+48027736 Close Package J Comp-bus duplication hierarchy
+d5751a5a Fix sandbox insert teardown, SHM attach, and async editor-open
+70d411f9 Keep committed buffer size when live audio fallback opens
+b8db4a90 Restore Dub delay-line, Punch live-head, and heard-tape metronome
+e8f4ad17 Close Package F compressor popup waveform flicker
+3ad339ac Close Package D comp-take child silence
+3e5d43e1 Close Package C MIDI live preview and monitor lamp
+8b664c1f Close Package B dual Hardware Inserts and live-device fallback adopt
+49405762 Keep Hardware Insert windows on instance identity and plugin stack rules
+452d08b4 Prove Listen Bus stays open over insert picker and editor
+6d704c0a Keep plugin init async and leave Listen Bus open over editors
+caf4cad7 Make plugin editor open async and fail loads without retry
+a79109f4 Pin VST3 module unload to the sandbox message thread
+b6f08ab9 Remediate ubet-plus failures and record architecture closures
+dfe273bb Sort the feature roadmap and keep shipped-untested as WP5 gaps
+a8b14de4 Record WP1–WP5 test-suite trust remediation
+6c08aef7 Fix recording transport regressions and update pre-beta blockers
+558bf7c5 Record pre-beta plug-in and transport click findings
+4667c5dd Remediate test-suite trust and recovery
+b04ff322 Close debt-ratchet governance remediation
+90b077c3 Complete Ring F closure and enforcement
+97dad771 Close Ring F raw audio device boundary
+6863ae06 Add Ring F device values and harden ratchet checks
+1b284d8c Extract Ring F audio device runtime
+67740272 Define Ring F WP0 ownership and evidence plan
+2959517b Add compressor popup flicker to pre-beta blockers
+7ede1cf9 Make Ring F migration gates debt-ratchet safe
+1ed10abc Enforce Reel recording finalization ownership
+b94c4818 Complete Reel collaborator ownership refactor
+e656204f Refactor Reel ownership and public audio API boundaries
+9d7162e3 Share durable CLion project settings
+5506a450 Remediate audit findings and strengthen runtime evidence
+51bf5d8a Ratify post-beta ReelManager ownership programme, parked behind pre-beta blockers.
+e1b0371f Add beta-11: MIDI editor preview must not silence sibling clips.
+6036cba7 Correct pre-beta SOW: After-WP5 is ACCEPT, not ACCEPT-WITH-GAPS.
+68cbfb77 Put pre-beta blockers on Private Beta Launch, and move composition accessors out of the header.
+15e2cb4d Close After-WP5 residuals: compile-time API seal and MCP enable write-through.
+83f0e6ca Add pre-beta blockers statement of work.
+547559f3 Seal public Engine headers and move session PDC compute behind Graph.
+40055b74 Replace public playback and insert peeks with API-owned observation snapshots.
+a616998b Route listen-bus and plugin-window enable through Inserts, and open Listen Bus MCP enable/editor doors.
+e47a8917 Make Inserts the sole write-through for insert enable, and clarify Nomoon vs Venus.
+b0afaf42 Keep stereo strips stereo after plugins, and close Inserts/listen MCP doors.
+ae9c019c Record the Grok Bot swarm topology as constitutional chapters.
+d1a08182 Keep PluginHostRuntime off the realtime mixer, and write insert mixer state through AudioEngineInserts.
+4195d30b Treat playback-only I/O as a valid mapping pair, and keep Apply off the 30s sandbox reconfigure wait.
+94f12d86 Preserve Core Audio routing intent across device fallback
+a489c355 Publish model intent as AudioGraphDescription, and compile it on AudioEngine.
+dbfde89b Keep AudioEngine as compilation owner, and land description types with the cut.
+3e693bf6 Rewrite draft audio-runtime ownership specs onto landed 2026-08-20 owners.
+dceaea72 Record draft AudioEngine, MTA and ReelManager ownership specs for ratification.
+ab086c4b Retarget leftover AudioEngine façade pins, and isolate print-mix, ARA, quit, and update-check tests.
+b2ef793a Give AudioEngine Graph, Mixer, Inserts, Recording, Midi, Device and Print doors, and route callers through engine.X().
+ef64584d Give AudioEngineTransport the play/stop/seek door, and route callers through engine.transport().
+65446636 Give RecordingSession the recording cluster, and keep AudioEngine internals on a private composition.
+81e4c5c4 Always reprepare live VSTi monitor-stops, so MON-on cannot resurrect held notes.
+5ac10c59 Give MidiRuntime the live MIDI cluster, and require focused app-backed proof.
+e5268c72 Give PlaybackCallback its own Core files.
+bb92269b Add the 2026-08-20 audit reports.
+b32c6a02 Give TrackControlPlane the live TPS writes, and keep engine graph workflows.
+1da5b886 Give PluginHostRuntime the host body, and keep engine graph workflows.
+0c97e905 Move AudioEngine plugin-host residue onto PluginHostRuntime.
+e58d15cc Park the remaining message-thread block, and record its design so it is not re-derived
+4f3b35eb Quiesce the lane before the latency probe, and give device-change sandbox recovery a bound
+dc143149 Give the busy rule one owner, and name the fade-in after the thing that arms it
+7fad58ba Repair every static contract the reformat broke, and stop two guards lying
+f0ae06f2 Give the MIDI handoff its own owner, and correct three comments that misdescribed it
+62c136ca Repoint the contracts the processing extraction moved, and stop one helper guessing
+061ffba6 Give the realtime processing kernel its own owner — 15 static contracts still red
+a37c1911 Rename the plugin process timing counters off the instrument they do not measure
+07451810 Stop the VSTi timing counters claiming to be VSTi-only
+2d5786e0 Give the worker threads their own owner, and stop the lane runner outliving the kernel
+c1cf9d6c Salvage four findings out of the handover before deleting it
+ba01ed45 Record that the insert silence did not reproduce, and why that is not a fix
+f7452ac7 Make the insert-silence bug say its own name
+06406c75 Give the launch epoch one route into the topology owner
+c111b5bb Give the insert topology its own owner, and stop trading contracts for green
+ca64117a Give the sandbox slots their own owner, and clear the gates the reformat tripped
+206e0929 Reformat every first-party source, and land one insert-topology fix — TREE IS NOT GREEN
+36c3ec8a Make the restart clean up after itself, and stop four contracts pinning code that moved
+3b2ef39f Give the sandbox a router, and make every failure say its own name
+f7af0caf Close Work Package 11: honour the latency prime, and record what was decided
+9a7ebad0 Kill plug-ins on their own threads, and wait for them where it matters
+c5147d67 Park a reader where the lap comes back, and stop the gauge lying
+364eeb08 Fix the Panic reprepare regression and stop model edits aborting the app
+4d14c6cc Complete Work Package 11 Tranche D
+1476a191 Rehome the structural reprepare and rename it for what it does
+b1e40edb Close the clearPluginRuntimeState worker race and false acknowledgement
+20cfea1e Move plug-in instance ownership out of SandboxHost
+f1a990fb Remediate the review findings on the Panic reprepare
+6447e18a Panic through the structural reprepare, replacing the dispatched action
+61af6305 Close the two Work Package 11 blockers in the ratified specification
+6873fa65 Record the Work Package 11 pre-package inventory and its two blockers
+7c965bc2 Route Panic to the workers and record where it still fails
+ac1a5d22 Close Work Package 9 on evidence and reconcile its documentation
+5c99ef4b Hold the stop head for retiring tails while the cursor returns
+08d2af4e Issue the transport discontinuity on the path Play actually takes
+c4115eac Let the Listen Bus tail retire
+b1998341 Land audible stopped tails and worker-owned tail retirement
+ea7e5532 Harmonise tail silence at -80 dBFS and repair stale test evidence
+6cc7ba61 Record Work Package 9 inherited scope and starting facts
+f4fd2e41 Move plug-in discontinuity onto the worker dispatch boundary
+1b8f7541 Extract sandbox MIDI control-plane ownership
+79306145 Prove live MIDI delivery and retire the superseded stale contract
+35150903 Bound live MIDI delivery at N+2
+73806757 Extract sandbox control-plane ownership
+a2497f82 Mark CoreAudio clock authority complete
+baf285d3 Harden realtime engine lifecycle under duress
+3cfc7e03 Extract sandbox editor presentation ownership
+fafc33fb Complete realtime engine evidence foundation
+6a2b7838 Define SandboxHost decomposition plan
+8b1d00f4 Ratify realtime plugin lifecycle programme
+0ee8c062 Add 15 August full project audit
+e5b517b7 Complete Tranches 13E and 13F application ownership
+2652f358 Move Tranche 13D audio sessions to capability ownership
+3897184a Move Tranche 13C rendering workflows to Audio ownership
+0aee64ce Move Tranche 13B Reel workflows to capability ownership
+d8f234e0 Route Tranche 13A operations to capability owners
+0bbe84ee Establish architectural ownership governance
+1a78b73a Decompose application composition root into owned services
+d811e5ed Extract updater workflow and ratify application decomposition
+faaf4729 Relocate remaining stock Extension sources
+8236276c Relocate Model, Reel, and App ownership sources
+00631928 Relocate UI ownership sink sources
+f5928ae6 Relocate UI feature satellite sources
+6312c059 Relocate UI foundation and workflow sources
+33b123da Relocate Audio engine and runtime ownership sinks
+1d8d7d6e Relocate Audio DSP, plugin, and telemetry sources
+e838f701 Relocate Audio leaf subsystems into source topology
+3338f50c Ratify Audio and UI source topology
+ff837a39 Add source-first full project audit
+8e7b359a Remediate gaslight canary audit findings
+1310cd13 Harden constitutional verdict and canary skills
+6be7e2a5 Upgrade JUCE and strengthen audit governance
+8ff61354 Beta checkpoint v1.3.0b10
+48fede84 Standardise Python tooling and repair test contracts
+b853243b Stabilise compressor defaults and repair header gate
+79b7934d Fix VSTi preview ownership, reel-close reset and stale streams
+a859bba4 Add VSTi window preview, incomplete
+c4f05e45 Repair two stale quality gates on this branch
+8a4f4c3e Scope sandbox topology reconciliation by launch epoch
+7dd35023 Refuse engine-domain automation values at the storage choke points
+32affc89 Generalise MIDI preview suppression to a clip set
+b0012b3f Fix MCP pan/width automation losing its value conversion
+b09226c9 Complete Phase 1 MIDI rerender: automation fix, batch commands, MCP
+0904e659 Beta checkpoint v1.3.0b9
+4e7192e3 Replace Live MIDI Mode with VSTi window preview
+0a517a9b Make offline MIDI rerender automation-aware
+48ddd856 Separate Hardware Insert return faults and flush boot migrations
+8a760999 Settle MIDI rerender Phase 1 decisions and correct Clangaroo setup
+d9477102 Complete MIDI editor view linking
+c4018ad3 Remove automatic hosted MIDI panics
+e2363ced Fix live insert disable transitions and residency
+ffd56ade Implement original MIDI restore and clip properties
+08a5ebc1 Complete MIDI editor and clip source specification
+c5fef5bf Correct audit severity and closure status
+9bf00d3e Preserve fader grab offset during dragging
+3e23f052 Complete MIDI editor grid-link specification
+4ede072f Preserve dry audio on overload and specify MIDI workflows
+7e3900e8 Choke persistent file writes and add functional coverage
+7163f68a Choke preference writes and record audit findings
+08607c9b Document and guard zoom performance paths
+bd9721e4 Optimise timeline painting and repair audit tests
+c17c9b91 Enforce MCP recording lifecycle admission
+ffd4495e Reconcile current audit critical schedule
+f34cf1d9 Keep bundled assets in place and bound load fixtures
+3482c28c Make reel timeline unbounded and harden quality review
+6c2979ba Replace clip buffering with RT-safe streaming
+5232d996 Keep feedback confirmation visible after send
+d8babaf7 Fix preamp latency accounting and quality contracts
+37e1b4e7 Brand Taype installer distribution title
+fb62cb70 Repair universal stem build and reconcile audit findings
+7f5f1504 Normalize audit report metadata formatting
+930dc148 Repair non-core test lanes and record audit findings
+313bb78a Complete header implementation cleanup and repair test contracts
+aa7ef55b Extract shared header implementations and reconcile audit contracts
+154e1334 Harden audit remediation and regression coverage
+930758b0 Reconcile audit governance and test evidence
+c2c43c5a Add protected ROE gaslight canary
+1ea28394 Correct audit remediation and harden runtime boundaries
+424e4c97 Close audit tranche 1 file and MCP boundaries
+80c3e27e Wave 3 freeze: census 39 to 2, and 14 warning classes become errors
+1f3b660d Wave 3: shadowed locals, census 47 to 39 — and one shadow that was a real bug
+203f9148 Wave 3: 31 redundant switch defaults removed, warning census 78 to 47
+81ee08d6 C12 does not survive reading the code it describes
+9af9c086 Restoring a revision stopped reading the whole history to find a label
+c4ffd26f Pack shows progress instead of freezing, and W55: bodies in headers
+d734715d Reel history stops freezing the browser: the git walk moves off the message thread
+b03e4ad9 C7 finished: the commit path leaves the stop function behind a pass struct
+58bd22c4 C7 third cut: arming and the entry guards leave the stop path
+c1001d52 C7 second cut: the comp-record lambdas become members, captures become parameters
+998c57b6 C7 first cut: the post-commit queues move out of the 2330-line stop function whole
+4c39b7e9 Summing engaged six ways from three rules, and MCP recall restored gain unclamped
+7c2e7ede The one C1 discard [[nodiscard]] could not see: a device change that skipped quiesce
+a24d86e8 Correcting the last commit: C9's divergence is latent, not live
+899844c8 One busy rule instead of four, and 130 citations that pointed at the wrong rule
+0059990f pack_reel ate the file you pointed it at, and add_insert ran whatever you named
+dc15f2c1 Switching MIDI clips dropped you out of full screen, and nothing could tell
+24282351 129 of 145 skips were guarding against things that were never absent
+23529e9b The tooltip collapse never compiled, and my build check was lying
+9aeb88bb Finish the duplication work: what is left is decided, not undone
+6bc0fb4a If the person who wrote the app can't follow the report, the report is broken
+426b218f The recovery never worked because one of its guards caused the failure
+a708d9b0 One name, two pictures: the plate cluster was never a single function
+13f9af53 The shape tier was never read: a DSP triplicate was sitting in the baseline
+f95308d9 The recovery was already there, gated on errors nothing throws any more
+a73256ef Refuse the discarded write, and stop copies breeding: a duplication wave
+8fb373db Measure pitch instead of brightness: the MIDI rerender test was reading timbre
+1eaa6e32 Stop probe keystrokes leaking into the app, and test position entry honestly
+7554a52e Live latency changes now reach the channel strip, not just the DSP monitor
+2bbde47e Cue buffers on position set, wait only on what's busy: the prefetch goes real
+b0a8dc18 Cold starts go perfect: high-priority disk thread, cursor prefetch, bounded prime
+2132e797 Keep UAD off the test bench, stop stressing TONE3000, and BOM the catalogs
+345bd8b3 Live PDC, ten loss modes closed, and the alignment contract goes honest
+091d5d02 Name-level zero, and the structural wave: two behaviour bases, four rulings
+1e71d465 T1e/T1f: panel-family shared home, two census parser holes, dead code out
+0ad5c24f T1d: audio-infra clones, MIDI boundary bookkeeping, MCP handler pairs
+a77383e6 Tranche 1 of the remaining tail: preset serde, visualiser chrome, strays
+f94c98ff Duplication into nine shared homes, S28 posture invariant, operator rulings go cross-agent
+ebc482c2 C1 batches 2 and 3: AudioEngine.cpp fully fails closed
+3aa1eaed Record the contract-suite trap that shipped two red tests
+fec4e979 Populate the debug tier, signpost logging in the ROE, and widen the census
+7c3ff752 Finish the session log: debug tier, stderr capture, banner tee
+d41d3cda Session log viewer in Tools, and rename CoreAudioLifecycleLog to SessionLog
+5885b58c Close the silent-degradation class, and stop treating a log as telling the user
+87e3c9a2 C1 batch 1, and stop degrading silently when the graph will not swap
+bfe06903 Close C2, stop playback when the device goes, and gate untranslated strings
+f36f3294 Wave 2: make the compiler and the hook refuse silent failures
+1eafc110 Close the five silent data-loss paths the audit found
+fbecb543 Wave 1: make the MCP schema agree with the handlers, and gate it
+61d7ec53 Stop failing every lane on a floating-point rounding difference
+1bca9f00 Wave 1: -Werror=switch, and refuse assertions that cannot fail
+111e1021 Wave 1: refuse registry drift at the pre-commit hook
+4ad04f2e Wave 0: strict-warning carrier and four ratchet baselines
+2fb18f9c Assert focus intent, not macOS key-window state
+01d30df2 Stop reporting a busy Taype as a dead one
+334558e6 Rework the ROE framework from the 2026-08-01 audit lessons
+ec087c7c Add 2026-08-01 deepthroat audit report and sweep appendices
+bbbb85e8 Add compressor auto-gain controls to wide strips
+ea4b5521 Add cursor-targeted clip fades
+045e942a Beta checkpoint v1.3.0b8
+eb2c14b4 Fix sandbox slot retirement and UI regressions
+6b6b7a0b Harden sandbox topology recovery and fix comp flatten capture
+ae9f9527 Beta checkpoint v1.3.0b7
+51d51c51 Fix MIDI editor close note release
+094a52c4 Checkpoint v1.3.1
+e04fbbf0 Fix lifecycle harness and TONE3000 lane matching
+ba516a96 Beta checkpoint v1.3.0b6
+521f8c5b Recognise downloaded TONE3000 packages without remote inventory
+e3d497d1 Fix telemetry dialog async callback lifetime
+6f890da9 Beta checkpoint v1.3.0b5
+3fd99b6a Broker notarization through authenticated packaging context
+9db54a08 Beta checkpoint v1.3.0b4
+17041b79 Snap pointer splits and add splash Gregism
+bb52d5f4 Fix hardware insert PDC reconciliation
+2e9087ae Fix MIDI preview boundary note handling
+9cca7eec Complete incomplete loop take documentation
+b1f3c15f Finish failed-test repairs and incomplete loop take control
+698d68d9 Beta checkpoint v1.3.0b3
+bf47648f Unify the stop fade: one source-level mechanism for every stop
+cba7c328 Delete the loop-brace full-mix notch: the source seam fades carry the wrap
+f1064555 Notch the device output around DAG rebuilds: ramp, hold the window, ramp
+6443ac6e Flatten conversion keeps a normal bus MON and ends a comping bus MON
+4031f576 Renders of the mix capture timeline truth only, and clockwork VSTis record
+7318dbb8 Commit ordinary takes as clip deltas: record end no longer rebuilds the DAG
+663e2c47 Give the dub delay line a monitor tap so VSTi layers emit in strip time
+e4e32f47 Add per-lane automation power with static-value restore
+7651292e Let the rolling pre-anchor start keep its negative window at absolute 0
+50907fc6 Drain stopped tails to true silence before idling the engine
+ea14c00e Let stops ring: no instrument panic, and drained tails reset themselves
+19f1b395 Rationalise transport starts: sample-honest, one rolling path
+79af78fc Fix recording start integrity around the warm rolling transport
+a1e7d143 Keep monitoring warm at Play with a rolling pre-anchor start
+08771904 Fix recording count-in, punch beat, and take alignment for advanced instruments
+4d00cde7 Guard the advanced loop read seam and primed starts at source
+1ba8153e Make PDC source-aware with primed playback starts
+5313fdb6 Map volume automation lanes onto the fader gain ladder
+cd5f7526 test: normalize transport documentation contracts
+f10ef919 fix: repair harness taxonomy and locale catalogues
+5131620b Refine automation editing and transport boundary ramps
+b4a2c1e6 Add automation follow, clipboard, and grouped editing
+ee5427bc test: repair deterministic suite isolation
+2f2829bb Add automation point selection and copy gestures
+71b19e06 Add automation pencil and single-click points
+67ee8656 test: harden deterministic suite execution
+18ee1929 Fix automation lane viewport scaling
+2487e992 Beta checkpoint v1.3.0b2
+1235412f Remove obsolete automation teaser from welcome screen
+f9249913 Bind Cmd-W to close current reel
+090b78fd Fix stepped automation breakpoint editing
+9abe1ad3 Increase mixer wheel scroll sensitivity
+5fdbfece Remove redundant quit confirmation
+c8d7c470 Harden test framework isolation and lane control
+dccd87c4 Complete full mixer and plug-in automation
+9a02de87 Add per-reel mixer and plug-in automation lanes
+487b8a7e Track footer link cleanup
+03a4672a Track affiliate website refinements
+6b1f90c5 Document affiliate referral operations
+8f9552ce Fix automation target selection and channel strip sync
+873dfac1 Implement full mixer and plug-in automation
+de14b7be Fix track reordering and pointer interactions
+c98051bc Recover test harness after unresponsive app sessions
+8daef97b Beta checkpoint v1.3.0b1
+4168dbde Track taype-releases v1.2.1
 """
