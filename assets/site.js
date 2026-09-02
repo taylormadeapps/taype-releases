@@ -139,7 +139,7 @@ const locales = {
             "download-apply": "Download now",
             "download-linux-status": "Alpha coming soon",
             "download-linux-title": "Linux",
-            "download-linux-copy": "ETA: late July.",
+            "download-linux-copy": "ETA: Q4 2026 / Q1 2027.",
             "download-linux-apply": "Register interest",
             "download-windows-status": "Interest list open",
             "download-windows-title": "Windows",
