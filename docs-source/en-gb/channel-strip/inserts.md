@@ -62,6 +62,19 @@ TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Ta
 In Taype Rooms, the Previous and Next controls step through IRs in natural
 filename order within the current browser folder, wrapping at either end. Use
 the IR selector when you want to move to a different folder or library.
+**NOT SUBTLE** raises only the reverb's wet output by 18 dB after IR
+normalisation. It is off by default, including when older reels and presets are
+loaded, so existing sessions keep their previous balance until you enable it.
+
+In Ache-Delay, **NOT SUBTLE** maps Tape Drive across the full native ToTape input
+range and engages the same pinned Dubly contour as Taype Drive and the
+channel-strip ToTaype preamp. It is off by default, including when older reels
+and presets are loaded, so existing sessions keep the original, subtler Drive
+response until you enable it. Tape Drive's displayed range and existing
+automation remain unchanged. The Tape Mode selector also includes **OFF**,
+which bypasses only the ToTape input stage while leaving the delay and its
+feedback path active. Existing sessions keep ToTape enabled at their saved
+speed.
 
 Taype Drive accepts mono and stereo insert buses. Its channel selector offers
 **Mono**, **Stereo**, and **T-bone**. T-bone uses separate Drive settings for
