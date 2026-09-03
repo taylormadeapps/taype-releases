@@ -4,23 +4,52 @@ Varispeed changes the transport playback speed for rehearsal and capture while p
 
 ## Control
 
-The varispeed readout sits next to the tempo display on the transport bar.
+The On/Off button sits immediately left of the speed readout on the transport bar.
 
-- Default: `1.0x`
-- Range: `0.5x` to `2.0x`
-- Drag vertically to change speed.
-- Shift-drag for finer changes.
-- Double-click for numeric entry. TayPE accepts values such as `1.5`, `1.5x`, or `150%`.
-- Cmd-click to reset to `1.0x`.
+- **On:** plays at the displayed factor, from `0.5x` to `2.0x`.
+- **Off:** plays at `1.0x`. The retained factor is grey, struck through and disabled.
+  Switch on to restore it and enable editing.
+- Drag the enabled readout vertically; Shift-drag makes finer changes.
+- Double-click to type `1.5`, `1.5x`, or `150%`.
+- Cmd-click to reset the factor to `1.0x`, keeping varispeed on.
 - Right-click for **Commit speed**.
 
-When varispeed is active, the varispeed readout and tempo readout use the active varispeed colour.
+Varispeed starts off at `1.0x`. The button has a yellow background when on;
+the factor and tempo readouts also use the active colour, including at `1.0x`.
+The factor and On/Off state are remembered when you save and reopen the reel.
+They stay the same when switching Cuts.
+
+Press Return to apply a typed value. Escape or clicking elsewhere cancels it.
+Use a decimal point, for example `0.75`; `75` without `%` means a factor of 75.
+Invalid entries leave the current value unchanged and show a warning. Factors
+outside `0.5x`–`2.0x` are limited to the nearest endpoint, with a warning showing
+the applied value. If another session change cancels an unfinished edit, TayPE
+also explains that cancellation. Edit outcomes are available in **Tools → Session Log**.
 
 ## Tempo Display
 
-The tempo display shows the effective tempo you are hearing. At `0.5x`, a 120 BPM reel plays and clicks as 60 BPM. At `2.0x`, it plays and clicks as 240 BPM.
+The tempo display shows the effective tempo you hear. With varispeed on, a
+120 BPM Cut at `0.5x` plays and clicks at 60 BPM; at `2.0x`, it plays at 240 BPM.
 
-To edit the project tempo itself, reset varispeed to `1.0x` first. TayPE blocks tempo edits while varispeed is engaged so the tempo field does not pretend the project tempo has changed.
+While **on**, dragging, typing or tapping tempo adjusts the factor, even at
+`1.0x`. The Cut's stored tempo and clips stay unchanged. For example, base
+120 BPM at `0.5x` shows 60; entering 90 sets `0.75x`.
+
+While **off**, tempo edits change the Cut's stored BPM and retain the factor.
+Switching on again applies that factor to the new stored tempo. For example,
+switching off at `0.75x`, changing the stored tempo to 100, then switching on
+plays at 75 BPM.
+
+You can enter tempo with or without `BPM`, for example `120` or `120 BPM`.
+With varispeed on, the allowed tempo is half to twice the Cut's stored BPM.
+For a Cut at 180 BPM, that is 90–360 BPM; an entry beyond those limits shows
+the applied limit and an explanation. With varispeed off, the allowed stored
+tempo is 20–999 BPM.
+
+Changing Cut, switching On/Off or changing tempo/speed another way starts a fresh
+tap sequence. If recording starts during a tempo or speed drag, TayPE cancels the
+unfinished drag and records at the last committed settings. Recording freezes
+both the factor and On/Off button. Both can change during ordinary playback.
 
 ## Commit Speed
 
@@ -30,7 +59,9 @@ Return or Escape cancels; click **Commit speed** to proceed.
 
 TayPE multiplies this Cut's tempo by the playback speed, retimes its clips,
 fades, automation, markers and zero point together, then resets varispeed to
-`1.0x`. Pitch is preserved. The edit can be undone and redone as one action.
+`1.0x` and switches it off. Subsequent tempo edits change the Cut's stored BPM.
+Pitch is preserved. Undo restores the earlier Cut, factor and On/Off state;
+redo restores the committed result with varispeed off.
 TayPE renders the audio before applying the change, with a progress bar while
 the controls and MCP are locked. Original clip audio is untouched. Overlapping
 clips and crossfades keep their full lengths and proportions at the new tempo.
