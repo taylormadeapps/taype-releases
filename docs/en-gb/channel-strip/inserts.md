@@ -59,6 +59,13 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
 
+Reels remember TayPE stock plug-ins by their bundled name, so those inserts
+still load if the TayPE app has been renamed or moved. When TayPE opens an older
+reel that contains a full path into a previous app copy, it loads the matching
+stock plug-in from the current app and replaces the old path with the portable
+name the next time the reel is saved. Third-party plug-in locations are
+unchanged.
+
 In Taype Rooms, the Previous and Next controls step through IRs in natural
 filename order within the current browser folder, wrapping at either end. Use
 the IR selector when you want to move to a different folder or library.
