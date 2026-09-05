@@ -27,6 +27,14 @@ the front; only a window that is already the frontmost plug-in window is closed.
 Command+Option-click deletes that insert. Command-click still toggles its bypass
 state, while Option-click disables or re-enables it.
 
+Deleting an insert from the strip keeps playback running, although the change
+may cause a brief audio discontinuity. Its window closes and stays closed when
+you restore the other plug-in windows. You can then load another insert. When
+switching reels, TayPE waits for the previous reel’s plug-ins to finish closing.
+If that transition fails, restoration stops and TayPE displays a warning.
+The destination reel remains visible, but the failed transition is not reported
+as a completed open. Check **Tools → Session Log** for the failure details.
+
 Press **Option+P** to hide every open plug-in window, then press it again to
 restore the same windows in the same bottom-to-top order, including the editor
 that was previously on top. It works while a TayPE dialog, plug-in picker,
