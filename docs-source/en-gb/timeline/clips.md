@@ -81,6 +81,11 @@ the right; contextual MIDI, Audio or Selection actions; Media Paths; then
 **Done** applies a valid pending name, while Escape or closing the window
 discards an unapplied name.
 
+After applying pitch, the pitch controls remain unavailable until rendering
+finishes. The open dialog then shows the committed pitch for a single clip,
+or returns to zero for the next batch pitch adjustment. A clip name edited
+while rendering is pending stays in the editor for you to apply with **Done**.
+
 **Reverse** renders a reversed copy through the model transaction system, so
 the reel owns the derived audio and undo/redo treats the change like any other
 clip edit. In multi-selection the processing actions are explicitly named
