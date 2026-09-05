@@ -20,6 +20,8 @@ New comp child tracks use the comp bus name followed by an incremental number, s
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
 
+A two-bar count-in in 4/4 gives eight complete clicks before recording begins, including the opening downbeat when the count-in falls before reel zero. With varispeed enabled, the clicks follow the playback speed.
+
 When a count-in runs before timeline zero or the selected Cut zero, the tape head stays parked until it finishes. Live monitoring stays active before transport starts and throughout count-in and pre-roll, but TayPE does not write a parked count-in block into the take, even if its hidden lead-in reaches the punch point. The next block begins exactly at punch so beat one is preserved. During ordinary moving pre-roll, if a block crosses punch, only the part from the exact recording boundary onwards is kept.
 
 Instrument takes keep a 250 ms MIDI pickup window before the recording boundary. If you play a note fractionally early and it is still sounding when the take starts, the paired MIDI clip carries that note from its beginning. Notes that finish before the boundary are not included.
