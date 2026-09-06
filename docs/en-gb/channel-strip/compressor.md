@@ -20,17 +20,24 @@ the minimum, and the strip and compressor popup use the same response.
 ## Visualiser and Meter
 
 Open the compressor visualiser from the compressor section header. Its signal
-history shows an output line over the filled input envelope on a dB scale.
+history compares filled input and output envelopes on a shared dB scale.
 Use the four ticked switches beneath the graph to choose what is visible:
 
-- **IN:** blue fill with no outline, before compression.
-- **OUT:** solid white line with no fill, after Makeup and the wet/dry blend.
+- **IN:** input before compression, shown as a white fill when viewed alone.
+- **OUT:** blue shading where output is higher than input, salmon pink where output
+  is lower, measured after Makeup and the wet/dry blend.
 - **DETECTOR:** green level driving compression after Bass Relief. It follows
   the selected mode: FET peak, VCA RMS, or OPTO's slower, quantised RMS.
 - **GR:** red gain reduction actually applied by the compressor, read against
   the scale on the right.
 
-The output line remains visible over the input fill. A shaded horizontal band
+With IN and OUT both on, the white input colour fills the area below both levels.
+The coloured band between them shows the difference. The white/salmon boundary shows reduced
+output; the top of the blue band shows increased output. Equal levels have no
+difference band. IN alone shows the complete white input fill; OUT alone shows
+the complete blue output fill. Detector and GR remain visible over the fills.
+
+A shaded horizontal band
 shows the soft-knee range around the threshold, matching the curve graph's knee
 highlight. It follows the Threshold and Knee controls and disappears at zero knee.
 The graph scrolls with the display
@@ -42,7 +49,7 @@ Visibility choices apply across tracks and are remembered in TayPE's global
 settings, independently of the reel. All four traces start visible. The
 Taype Comp VST3 has the same display and its own global visibility settings,
 shared across its instances and independent of reels and plug-in presets.
-Comp's OUT line is measured after Makeup, before the host's wet/dry blend.
+Comp's OUT level is measured after Makeup, before the host's wet/dry blend.
 Its switches stay synchronised between open editors even before audio plays.
 If Comp cannot read its graph settings, it warns you and shows every trace with
 the switches disabled, preserving the settings file. Repair the file named in
