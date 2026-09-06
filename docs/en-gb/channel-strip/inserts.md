@@ -140,6 +140,35 @@ search or browse results for track slots 2-8, ordinary buses, or the Listen
 Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
 channel, and compensate timing with an early-send amount.
 
+Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
+MIDI device or **Virtual Keyboard** from the track's input selector, or choose
+**None**. If the track already has a MIDI input or None selected, TayPE keeps it.
+MON controls live MIDI forwarding; MIDI clips play through the output during
+playback. To record a MIDI performance, select your MIDI input, keep MON on,
+arm the MIDI Out track and press Record. The take contains editable MIDI notes.
+You can also double-click an empty part of the track to create a blank MIDI
+clip, or Cmd-drag an empty range to choose its length.
+
+To capture your synth's audio, record its return on a separate audio track.
+Leave the MIDI source track unarmed when playing an existing MIDI part for
+that capture, so the source MIDI remains available.
+
+Opening an existing reel keeps its saved input selection. Choose a MIDI input
+explicitly if an older reel still has an audio input selected.
+
+Click the MIDI Out slot for the device and channel menus. Choose **Advance (ms)**
+to open the **0–10 ms** manual slider. The readout shows milliseconds and the equivalent
+samples at the current audio device sample rate. New inserts default to **0 ms**.
+Positive values send MIDI clip playback early; **0** adds no manual advance.
+Tick **Auto** to use the current audio interface round-trip estimate and disable
+the slider. Untick it to adjust the advance manually. The full Auto value is
+shown even when it exceeds 10 ms. When you reopen the dialog, Auto is ticked if
+the saved advance matches the current interface estimate.
+Double-click the enabled slider to reset it to zero. Choose **Apply** to save
+the timing, or **Cancel** to discard it. Manual advance is clamped to **0–10 ms**,
+including older saved values above that range. Auto can use the full interface
+estimate. The saved timing changes only when you choose Apply.
+
 ## Hardware Inserts
 
 Hardware Insert sends audio out to external gear and returns it to the strip. Choose output and input routes, add trim, optional filtering, recall images, and latency offset. TayPE rejects routes that would overlap the master output. The window still opens if the live I/O mapping is missing, including while Audio Preferences is waiting on an unplugged device, and tells you to open Audio Preferences. Ping, enable, and route changes need a live mapping; they do not ask you to set send and return routes for that case.
