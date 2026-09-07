@@ -42,12 +42,18 @@ ratio-dependent headroom, limited by the 0 dBFS cap. The dots begin at Threshold
 line. The solid line still shows compression alone; the OUT history and
 meters show the processed audio.
 
-With Clip on, a red dot maps the highest compressor input sample peak over
-the preceding 0.5 seconds onto the dotted clipping curve. This uses the input
-waveform before compression and Bass Relief. Its horizontal position stays
-independent of Threshold and Ratio; its height follows the clipping curve.
-The yellow dot follows the compressor detector. The red dot is hidden when
-Clip is off. Both dots freeze with the captured history when audio stops.
+The curve graph has two peak markers on its diagonal 1:1 line. The green hollow
+**PRE** ring shows the highest compressor-input sample peak from the preceding
+0.5 seconds. The red filled **POST** diamond shows the peak immediately after
+gain reduction, before Clip, Makeup and WET. Their separation is the peak level
+removed by compression. The labelled ring and diamond keep the markers clear
+without relying on colour, and the diamond remains visible inside the ring when
+they coincide. Both markers stay visible with Clip on or off and freeze with the
+captured history when audio stops.
+
+The yellow dot remains on the compression curve and follows the compressor's
+detector. The title key groups the two level markers under **PEAK** as **PRE**
+and **POST**, and labels the yellow detector dot **DETECT**.
 
 Clip uses 4× oversampling while on, with its delay included in automatic PDC.
 Turning clip off removes that extra delay. Compressor bypass and fully dry mix
