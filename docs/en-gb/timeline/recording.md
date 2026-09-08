@@ -20,6 +20,8 @@ New comp child tracks use the comp bus name followed by an incremental number, s
 
 Count-in, pre-roll, punch, loop, and record mode settings decide how the transport enters and exits a take. TayPE protects active takes by blocking timeline edits that would rewrite the structure mid-pass.
 
+A two-bar count-in in 4/4 gives eight complete clicks before recording begins, including the opening downbeat when the count-in falls before reel zero. With varispeed enabled, the clicks follow the playback speed.
+
 When a count-in runs before timeline zero or the selected Cut zero, the tape head stays parked until it finishes. Live monitoring stays active before transport starts and throughout count-in and pre-roll, but TayPE does not write a parked count-in block into the take, even if its hidden lead-in reaches the punch point. The next block begins exactly at punch so beat one is preserved. During ordinary moving pre-roll, if a block crosses punch, only the part from the exact recording boundary onwards is kept.
 
 Instrument takes keep a 250 ms MIDI pickup window before the recording boundary. If you play a note fractionally early and it is still sounding when the take starts, the paired MIDI clip carries that note from its beginning. Notes that finish before the boundary are not included.
@@ -49,6 +51,8 @@ Comp promotes the ordinary target from the first committed take. If it already c
 Only a real wrap from the right loop brace to the left starts a new recorded lap. Count-in, pre-roll, an audition pass, or a deliberate transport move cannot create a false lap.
 
 The recording file always follows real elapsed capture time, while punch points, loop ownership, and recorded MIDI follow the reel timeline. TayPE freezes varispeed when the pass starts and uses that same relationship for every recorded source.
+
+Existing enabled material keeps playing while you record in Dub, whether Loop is on or off. MON controls your live input only; existing layers and completed Dub laps remain audible with MON off. Comp records alternative performances and silences the recording group’s existing takes during capture; Dub records additions and keeps those layers audible. Unrelated backing tracks keep playing in both modes.
 
 Choose **Dub** when you want layered takes. With Loop disabled, the linear pass becomes a child take marked **Don't Comp**. Original material spliced from the parent into the Dub range is marked Don't Comp too; only untouched parent material outside the range remains ordinary. With Loop enabled, each completed lap plays immediately while you record the next. On stop, completed laps remain enabled as separate Don't Comp takes beneath the comp bus. With **Discard Incomplete Takes** on, the final incomplete lap is left out after at least one full lap; turn it off to keep that partial enabled as another layer. A first partial before any full wrap is always kept. Clips that were already enabled or disabled keep their state. Later comp edits keep Dub takes layered: promoting, moving, copying, dropping, importing, or resizing another take does not automatically mute or split a Dub take. Mute a Dub take explicitly when you no longer want to hear it.
 

@@ -27,6 +27,14 @@ the front; only a window that is already the frontmost plug-in window is closed.
 Command+Option-click deletes that insert. Command-click still toggles its bypass
 state, while Option-click disables or re-enables it.
 
+Deleting an insert from the strip keeps playback running, although the change
+may cause a brief audio discontinuity. Its window closes and stays closed when
+you restore the other plug-in windows. You can then load another insert. When
+switching reels, TayPE waits for the previous reel’s plug-ins to finish closing.
+If that transition fails, restoration stops and TayPE displays a warning.
+The destination reel remains visible, but the failed transition is not reported
+as a completed open. Check **Tools → Session Log** for the failure details.
+
 Press **Option+P** to hide every open plug-in window, then press it again to
 restore the same windows in the same bottom-to-top order, including the editor
 that was previously on top. It works while a TayPE dialog, plug-in picker,
@@ -58,6 +66,13 @@ In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default
 In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
 
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+
+Reels remember TayPE stock plug-ins by their bundled name, so those inserts
+still load if the TayPE app has been renamed or moved. When TayPE opens an older
+reel that contains a full path into a previous app copy, it loads the matching
+stock plug-in from the current app and replaces the old path with the portable
+name the next time the reel is saved. Third-party plug-in locations are
+unchanged.
 
 In Taype Rooms, the Previous and Next controls step through IRs in natural
 filename order within the current browser folder, wrapping at either end. Use
@@ -125,6 +140,35 @@ search or browse results for track slots 2-8, ordinary buses, or the Listen
 Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
 channel, and compensate timing with an early-send amount.
 
+Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
+MIDI device or **Virtual Keyboard** from the track's input selector, or choose
+**None**. If the track already has a MIDI input or None selected, TayPE keeps it.
+MON controls live MIDI forwarding; MIDI clips play through the output during
+playback. To record a MIDI performance, select your MIDI input, keep MON on,
+arm the MIDI Out track and press Record. The take contains editable MIDI notes.
+You can also double-click an empty part of the track to create a blank MIDI
+clip, or Cmd-drag an empty range to choose its length.
+
+To capture your synth's audio, record its return on a separate audio track.
+Leave the MIDI source track unarmed when playing an existing MIDI part for
+that capture, so the source MIDI remains available.
+
+Opening an existing reel keeps its saved input selection. Choose a MIDI input
+explicitly if an older reel still has an audio input selected.
+
+Click the MIDI Out slot for the device and channel menus. Choose **Advance (ms)**
+to open the **0–10 ms** manual slider. The readout shows milliseconds and the equivalent
+samples at the current audio device sample rate. New inserts default to **0 ms**.
+Positive values send MIDI clip playback early; **0** adds no manual advance.
+Tick **Auto** to use the current audio interface round-trip estimate and disable
+the slider. Untick it to adjust the advance manually. The full Auto value is
+shown even when it exceeds 10 ms. When you reopen the dialog, Auto is ticked if
+the saved advance matches the current interface estimate.
+Double-click the enabled slider to reset it to zero. Choose **Apply** to save
+the timing, or **Cancel** to discard it. Manual advance is clamped to **0–10 ms**,
+including older saved values above that range. Auto can use the full interface
+estimate. The saved timing changes only when you choose Apply.
+
 ## Hardware Inserts
 
 Hardware Insert sends audio out to external gear and returns it to the strip. Choose output and input routes, add trim, optional filtering, recall images, and latency offset. TayPE rejects routes that would overlap the master output. The window still opens if the live I/O mapping is missing, including while Audio Preferences is waiting on an unplugged device, and tells you to open Audio Preferences. Ping, enable, and route changes need a live mapping; they do not ask you to set send and return routes for that case.
@@ -155,7 +199,22 @@ The Bypass, Disable, and preset controls in an open Listen Bus plug-in window up
 
 ## Sandboxing
 
-Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, restart its sandbox from the insert tools.
+Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, choose **Tools > Restart Plugin Sandbox**.
+
+If the sandbox crashes, its report has a large **Restart Plugin Sandbox** button
+below the problem description and above the report actions. Restart opens a modal
+with a progress bar and the current
+recovery step, including completed plugin counts when plugins need reloading.
+Progress advances as work completes; it can pause while a plugin loads. A successful
+sandbox restart can still leave individual plugins unavailable. In that case,
+**Plugin Restore Warnings** appears afterwards with a scrollable list of affected
+plugins and the reason for each warning. This includes plugins skipped because they
+repeatedly crashed during this session. If a plugin had unsaved live changes that
+died with the sandbox, the list also warns that its recent changes may not have been
+restored. Those plugins stay blocked; a skipped or partial plugin restore does not
+make the sandbox restart a failure. Choose **OK** to return to the original report,
+which remains available to send or save. Restarting does not send it.
+You can restart during playback; stop recording before restarting.
 
 When the sandbox crashes on a handled fatal signal, the crash feedback report
 includes the sandbox process's best-effort stack trace. Nothing is submitted

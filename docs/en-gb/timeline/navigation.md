@@ -45,6 +45,9 @@ drawn division for playhead placement rather than hidden subdivisions. Clip and
 note drags retain their magnetic snap feel. During playback, repeated left/right
 navigation steps from a stable ruler anchor so the playhead can move predictably.
 
+With Loop enabled, starting playback at or beyond the right loop brace starts
+from the left brace. Starting inside the loop keeps the current playhead position.
+
 ## Stopping MIDI cleanly
 
 Stopping or pausing releases notes owned by the MIDI editor preview and cancels notes still scheduled for External MIDI Out. It does not send All Notes Off to hosted instruments; neither does starting playback, so the first beat of host-synchronised instruments is preserved. If a live monitored note sticks while the transport is already stopped, use **Tools > Kill MIDI**.

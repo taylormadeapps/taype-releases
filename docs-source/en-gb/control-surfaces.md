@@ -32,6 +32,34 @@ Use the device's banking controls to move through tracks. TayPE keeps mixer and 
 
 The hardware Master path is separate from the virtual track bank. When Master is selected on the unit, TayPE focuses the master strip and the motor fader controls TayPE's master fader instead of the currently selected virtual strip.
 
+## IO Station Mothership
+
+Choose **IO Station Mothership** for a PreSonus ioStation 24c used as a master
+fader and bank navigator alongside your other controllers.
+
+1. Keep the ioStation in the **MCU mode** already used with TayPE.
+2. In TayPE's Control Surfaces preferences, choose **Mackie MCU** as the protocol
+   and **IO Station Mothership** as the dialect. Select the ioStation's MIDI
+   input and output ports.
+3. Give the ioStation and both X-Touch Expanders the same **Group** value.
+   Set the Expanders to **Slot 1** and **Slot 2**, and the ioStation to **Slot 3**.
+   Keep the Expanders on their existing eight-strip profiles.
+
+The ioStation fader is assigned to TayPE's master, with motor feedback from the
+master. Bank navigation moves both Expanders together in 16-strip banks; channel
+navigation moves the group by one strip. The ioStation does not occupy any of
+those track strips. Transport and navigation retain the **Default Transport**
+profile's mappings.
+
+Its strip stays assigned to master even when you select another track or move
+the Expander bank. Pan adjusts master pan; Mute toggles master mute; Solo clears
+all active solos; Select focuses master. The Solo light shows when any solo is
+active. Record Arm is inactive because master is not a recording track.
+
+The ioStation can occupy any group slot without taking a track away from the
+Expanders. It also works as a standalone master controller. The profile awaits
+physical hardware verification of fader control, motor feedback and grouped banking.
+
 ## Transport and Monitoring
 
 Transport buttons control TayPE playback and recording. Monitor/select behaviour is designed so the current track can be checked quickly without having to reach back to the mouse for every pass.

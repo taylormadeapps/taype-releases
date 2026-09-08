@@ -218,3 +218,10 @@ automation also hold their final authored value.
 
 A powered-off lane always uses the track's stored mix value, no matter what
 points it contains.
+
+Offline Print Mix, Print Loop, marker and stem exports, and offline Bounce use
+the same enabled mixer and plug-in automation as playback. TayPE evaluates the
+automation from rendered project time, including the processing history it
+prepares before capture begins for latency-compensated effects. If an enabled
+lane still names an available control but TayPE cannot read the static fallback
+needed to render it correctly, the export fails instead of omitting that lane.

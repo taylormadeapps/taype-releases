@@ -56,6 +56,14 @@ Drag clip edges to trim. The original media stays intact; the clip simply plays 
 
 When you zoom far out and a clip becomes very narrow, its edge grab areas shrink so the middle remains available for moving the clip. At the most extreme zoom, grab just outside the clip edge when you need to trim or stretch it.
 
+## Stretch and Pitch
+
+Stretch and pitch edits process the clip's current audio, including committed
+reverse and other rendered edits. Later changes apply the difference needed to
+reach the requested settings. Returning stretch to `1.0` and pitch to `0`
+retains the rendered result and its audible window. Undo restores the earlier
+sound and settings. Original audio files remain untouched.
+
 ## Slipping
 
 Hold Cmd+Option and drag the clip body to move the audio inside the clip without changing the clip's timeline position or length. Fade, gain, trim, and stretch handles keep priority when you grab their hit zones. Slip editing is blocked while recording or while the clip is actively open in an ARA2 editor.
@@ -72,6 +80,11 @@ the right; contextual MIDI, Audio or Selection actions; Media Paths; then
 **Done**. Media Paths starts collapsed and grows the window only while open.
 **Done** applies a valid pending name, while Escape or closing the window
 discards an unapplied name.
+
+After applying pitch, the pitch controls remain unavailable until rendering
+finishes. The open dialog then shows the committed pitch for a single clip,
+or returns to zero for the next batch pitch adjustment. A clip name edited
+while rendering is pending stays in the editor for you to apply with **Done**.
 
 **Reverse** renders a reversed copy through the model transaction system, so
 the reel owns the derived audio and undo/redo treats the change like any other
