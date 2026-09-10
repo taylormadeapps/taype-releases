@@ -16,6 +16,20 @@ matching output delay that keeps the Master and Listen Bus outputs
 sample-aligned. These figures describe what reaches hardware; they do not add a
 second round of playback compensation to individual tracks.
 
+## Bus Phase Alignment
+
+**Align bus phases to Master** is a diagnostic A/B control for large, deeply
+routed mixes. Off is the established source-aligned schedule: each bus runs in
+its earliest valid phase. On moves each bus to its latest dependency-safe phase
+before Master, which can group stem and effects buses by their distance from
+the final mix.
+
+The checkbox applies immediately to the loaded reel and is saved globally. It
+does not change routing, plug-in chains, signal processing or the order of
+dependent buses; it changes only which independent buses share an existing
+parallel phase. TayPE can apply it during playback through the normal live
+graph-swap path. Recording and printing must be stopped.
+
 ## Colour Coding
 
 Rows use colour to separate healthy, busy, and risky processing areas. Treat it as a guide for troubleshooting, not a musical judgement.
