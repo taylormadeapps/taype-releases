@@ -17,6 +17,28 @@ Attack gives the fast 0.1–1 ms range a dedicated third of the knob travel, in
 Small drag movements accumulate between steps, including when moving away from
 the minimum, and the strip and compressor popup use the same response.
 
+## Sidechain
+
+**SIDE-CHAIN** sits immediately left of compressor power in the popup and in
+Taype Comp. It opens a panel; it does not bypass the detector. The button is
+yellow while an external source is selected.
+
+The panel shows the detector after Low Cut, Tilt, High Cut and Gain, with the
+current Threshold drawn across it. **Bass Relief** in the strip, popup and
+Taype Comp body remains the Low Cut on/off control. The panel sets cutoff
+frequency (20 Hz–10 kHz, stored default 80 Hz). High Cut reaches 30 Hz for
+sub-only keying and is a hard bypass at 20 kHz. Tilt is ±3 dB/octave around
+600 Hz. Gain is ±24 dB on the detector only.
+
+On the stock compressor, choose **Internal** (this track after EQ) or another
+regular track. Buses and master are not sources. The selected track is keyed
+from its raw input, before trim, EQ, compressor, inserts and fader. Routing
+belongs to the reel, not to compressor presets.
+
+Taype Comp shows read-only **Internal** or **External** from its sidechain
+input bus. Host routing stays in TayPE's plugin chrome, or the host's own
+sidechain controls outside TayPE.
+
 ## Soft Clipping
 
 Use **clip** beneath the popup meters, between AG/PK and WET, to catch short
