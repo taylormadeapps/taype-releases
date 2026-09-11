@@ -16,13 +16,13 @@ matching output delay that keeps the Master and Listen Bus outputs
 sample-aligned. These figures describe what reaches hardware; they do not add a
 second round of playback compensation to individual tracks.
 
-## Bus Phase Alignment
+## ALAP Bus Ordering
 
-**Align bus phases to Master** is a diagnostic A/B control for large, deeply
-routed mixes. Off is the established source-aligned schedule: each bus runs in
-its earliest valid phase. On moves each bus to its latest dependency-safe phase
-before Master, which can group stem and effects buses by their distance from
-the final mix.
+**ALAP bus ordering** — as late as possible — is a diagnostic A/B control for
+large, deeply routed mixes. Off is the established ASAP (as soon as possible)
+schedule: each bus runs in its earliest valid phase. On moves each bus to its
+latest dependency-safe phase before Master, which can group stem and effects
+buses by their distance from the final mix.
 
 The checkbox applies immediately to the loaded reel and is saved globally. It
 does not change routing, plug-in chains, signal processing or the order of
