@@ -1,6 +1,6 @@
 # Personalities
 
-Personalities change how an AI assistant talks and frames suggestions while using TayPE. They do not change the audio engine, routing, saving, or session safety.
+Personalities change how an AI assistant talks and frames suggestions while using TayPE. On first TayPE interaction the assistant must call `get_personality`, tell the user the style, and ask whether to use it. Do not skip that. They are not prompt injection and not a hard model switch. The user decides. They do not change the audio engine, routing, saving, session safety, or the model itself.
 
 ## Built-In Personalities
 

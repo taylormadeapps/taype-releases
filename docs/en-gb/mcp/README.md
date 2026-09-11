@@ -14,6 +14,8 @@ The desktop connector installers live under **Tools > LLM Integrations**.
 
 Manual client configuration is possible for MCP clients that support stdio bridge commands. Use the connector workflow first unless you know you need manual setup.
 
+`initialize` reports the bridge binary: product version, beta number, protocol 2.0.0 (2026-09-11), catalogue fingerprint, executable path, and `taype_home` (the user's TayPE Home folder, with child folders for Reels, Prints, bounces, NAM, Grooves, IRs, and more). It is not Application Support and not the process working directory. `tools/list` is that bridge's compiled catalogue. It is not proof of the running app. The first app-backed tool call checks that the bridge and app match. A mismatch fails loudly with both identities and paths; restart TayPE and point the client at this build's `taype-mcp`. Personalities are optional mixing/production working styles; call `get_personality` after initialize if you want the active one.
+
 ## Concepts
 
 ### Stop To Edit

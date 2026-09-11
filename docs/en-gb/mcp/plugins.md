@@ -68,6 +68,36 @@ Read one insert slot's assignment, bypass, enabled state, latency, editor state,
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
 
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `include_state` | Include the live plug-in state chunk |
+| `include_parameters` | List automatable parameters with distinct value fields |
+| `evaluate_at` | Seconds used for `evaluated_value`. Default is the playhead |
+
+When `include_parameters` is true and the catalogue is ready, each parameter reports `default_value`, `base_value` (stored/static, what automation releases to), `evaluated_value` (lane value at `evaluate_at`), and `host_applied_value` (latest value TayPE published to the runtime). `current_value` is a deprecated alias of `base_value`.
+
+### `set_insert_parameter`
+
+Set one insert's stored/static plug-in parameter by stable id. This writes the base value. It does not create or rewrite an automation lane; use `set_automation_points` with `slot` for that.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+| `parameter` | Stable parameter id from `get_insert_info` with `include_parameters` |
+| `value` | Normalised value 0.0–1.0 |
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `slot` | Insert slot index, 0-7 |
+
+Safe during playback.
+
 ### `list_insert_presets` / `load_insert_preset`
 
 List and load presets for the insert.

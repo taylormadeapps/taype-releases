@@ -13,8 +13,10 @@ Stop transport. While recording, stop follows the active record mode and safety 
 ### `get_state`
 
 Return transport, reel, selection, tempo, marker, and current-track state.
-The `duration` field is the informational end of known content or explicit
-timeline anchors. It may be less than `position` and is never a stop boundary.
+`content_extent_seconds` is the informational end of known content or explicit
+timeline anchors. It is not a transport limit and may be less than `position`.
+`unbounded_timeline` is always true. `duration` is a compatibility alias of
+`content_extent_seconds`. Tape Length affects only the mixer reel graphic.
 
 ### `print_mix`
 
@@ -102,14 +104,4 @@ Optional parameters:
 | Param | Description |
 |---|---|
 | `include_sandbox` | Include the connected sandbox process where available |
-| `sample_ms` | Sample briefly and return rolled-up thread CPU/lifetime data |
-
-### `set_dev_taype_rooms_host_mode`
-
-Developer diagnostic switch for Taype Rooms hosting. This is for support and diagnostics, not ordinary session control.
-
-Required parameters:
-
-| Param | Description |
-|---|---|
-| `mode` | `environment`, `sandbox`, or `in_app` |
+| `sample_duration_ms` | Sample briefly and return rolled-up thread CPU/lifetime data. Hard maximum 1000. Values outside 0–1000 are refused |
