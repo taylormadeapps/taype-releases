@@ -46,10 +46,15 @@ fader and bank navigator alongside your other controllers.
    Keep the Expanders on their existing eight-strip profiles.
 
 The ioStation fader is assigned to TayPE's master, with motor feedback from the
-master. Bank navigation moves both Expanders together in 16-strip banks; channel
-navigation moves the group by one strip. The ioStation does not occupy any of
-those track strips. Transport and navigation retain the **Default Transport**
-profile's mappings.
+master. That strip stays on master in every Session Navigator mode. Physical
+Prev/Next on the ioStation page both Expanders together in 16-strip banks.
+On Logic or Live MCU, press **Master** or **Channel**, then Prev/Next. On
+Cubase/Nuendo MCU, press **Channel**, then Prev/Next — Cubase **Master** mode
+switches surround pan axes, which TayPE does not use. The ioStation does not
+occupy any of those track strips. Dedicated Rewind/Fast Forward still move the
+playhead. Give every grouped surface the same Group name; if the ioStation Group
+field is blank after closing Preferences, banking from that unit will do
+nothing.
 
 Its strip stays assigned to master even when you select another track or move
 the Expander bank. Pan adjusts master pan; Mute toggles master mute; Solo clears
