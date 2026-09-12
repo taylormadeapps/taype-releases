@@ -80,7 +80,7 @@ Use **View > UI Scale** or **Cmd+Option+- / Cmd+Option+=** to change the global 
 
 ## Popup Help
 
-Use **Help > Popup Help** or the help button in the transport bar to toggle hover help. When enabled, TayPE explains controls after a short hover. Routing selectors still reveal the full route on hover even when popup help is disabled.
+Use **Help > Popup Help** or the help button in the transport bar to toggle hover help. When enabled, TayPE explains controls after a short hover. Help text shows the shortcut currently assigned in your active keyboard profile, and transport help refreshes when that profile changes. Routing selectors still reveal the full route on hover even when popup help is disabled.
 
 ## App Language
 

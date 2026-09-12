@@ -27,6 +27,10 @@ the front; only a window that is already the frontmost plug-in window is closed.
 Command+Option-click deletes that insert. Command-click still toggles its bypass
 state, while Option-click disables or re-enables it.
 
+Cmd-dragging an insert to another slot, or duplicating a track that contains
+plug-ins, creates separate live plug-in instances with the copied state. Later
+changes to either instance do not alter the other.
+
 Deleting an insert from the strip keeps playback running, although the change
 may cause a brief audio discontinuity. Its window closes and stays closed when
 you restore the other plug-in windows. You can then load another insert. When
@@ -149,6 +153,12 @@ playback. To record a MIDI performance, select your MIDI input, keep MON on,
 arm the MIDI Out track and press Record. The take contains editable MIDI notes.
 You can also double-click an empty part of the track to create a blank MIDI
 clip, or Cmd-drag an empty range to choose its length.
+
+Importing or re-rendering MIDI on a MIDI Out track sends that performance to
+the configured hardware output in real time. A new import starts with silent
+clip audio. Later re-renders, including **Render Now** in the MIDI editor and
+**Restore OG MIDI**, keep the clip's existing audio unchanged while sending the
+MIDI again.
 
 To capture your synth's audio, record its return on a separate audio track.
 Leave the MIDI source track unarmed when playing an existing MIDI part for
