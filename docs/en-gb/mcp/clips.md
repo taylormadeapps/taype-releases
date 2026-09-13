@@ -15,7 +15,10 @@ Remove a clip from the reel.
 
 ### `rerender_midi_clip`
 
-Render a MIDI clip through its source instrument path where supported.
+Render a MIDI clip through its source instrument path. VSTi owners render
+offline. A MIDI Out owner captures its selected Audio Return in real time; with
+Audio Return set to None, it passes the current clip audio through offline and
+sends no MIDI to hardware.
 
 ### `get_midi_draft`
 
