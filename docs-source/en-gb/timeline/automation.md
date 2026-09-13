@@ -105,6 +105,8 @@ Automation breakpoint editing happens in Automation View while transport is stop
 
 - Click empty lane space to add and select a point.
 - Click an existing point to select it without rewriting it.
+- Point markers stay hidden until you hover or select them, same as MIDI
+  controller points. The automation curve stays visible.
 - Stop points are red while point markers are visible; ordinary points retain
   the lane colour.
 - Option-click empty lane space to add a stop point. Option-click an existing
@@ -179,8 +181,15 @@ Automation View keeps its own snap mode. Normal clip view can stay snapped
 while automation editing stays free, or the other way round. With automation
 snap on, the pencil writes one point on every crossed interval of the selected
 grid, even if you move quickly. With snap off, it follows your gesture freely
-and then removes unnecessary points while keeping the shape editable. If you
+and then reduces the stroke to a best-fit shape that stays editable, without
+quantising times to the grid. If you
 draw back across the same time, the latest pass wins.
+
+Recording over existing automation keeps everything before you first touch a
+control and replaces only the span you write. The final written point normally
+becomes a Touch stop and releases to static; if the next existing point begins
+within 100 ms, TayPE reconnects to it instead. Recorded curves are thinned to a
+best-fit shape rather than snapped to the grid.
 
 ## Automation and Clips
 
@@ -209,3 +218,10 @@ automation also hold their final authored value.
 
 A powered-off lane always uses the track's stored mix value, no matter what
 points it contains.
+
+Offline Print Mix, Print Loop, marker and stem exports, and offline Bounce use
+the same enabled mixer and plug-in automation as playback. TayPE evaluates the
+automation from rendered project time, including the processing history it
+prepares before capture begins for latency-compensated effects. If an enabled
+lane still names an available control but TayPE cannot read the static fallback
+needed to render it correctly, the export fails instead of omitting that lane.

@@ -27,6 +27,18 @@ the front; only a window that is already the frontmost plug-in window is closed.
 Command+Option-click deletes that insert. Command-click still toggles its bypass
 state, while Option-click disables or re-enables it.
 
+Cmd-dragging an insert to another slot, or duplicating a track that contains
+plug-ins, creates separate live plug-in instances with the copied state. Later
+changes to either instance do not alter the other.
+
+Deleting an insert from the strip keeps playback running, although the change
+may cause a brief audio discontinuity. Its window closes and stays closed when
+you restore the other plug-in windows. You can then load another insert. When
+switching reels, TayPE waits for the previous reel’s plug-ins to finish closing.
+If that transition fails, restoration stops and TayPE displays a warning.
+The destination reel remains visible, but the failed transition is not reported
+as a completed open. Check **Tools → Session Log** for the failure details.
+
 Press **Option+P** to hide every open plug-in window, then press it again to
 restore the same windows in the same bottom-to-top order, including the editor
 that was previously on top. It works while a TayPE dialog, plug-in picker,
@@ -58,6 +70,14 @@ In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default
 In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
 
 TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+
+Reels remember TayPE stock plug-ins by their bundled name, so those inserts
+still load if the TayPE app has been renamed or moved. When TayPE opens an older
+reel that contains a full path into a previous app copy or its retired
+`Taype/VSTs` folder, it loads the matching stock plug-in from the current app,
+even if the reel came from a different macOS account. TayPE replaces the old
+path with the portable name the next time the reel is saved. Third-party
+plug-in locations are unchanged.
 
 In Taype Rooms, the Previous and Next controls step through IRs in natural
 filename order within the current browser folder, wrapping at either end. Use
@@ -123,7 +143,83 @@ In Archive View, active or bypassed insert rows show as offline red and plugin e
 Instrument inserts and MIDI Out live in the first slot. They do not appear in
 search or browse results for track slots 2-8, ordinary buses, or the Listen
 Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
-channel, and compensate timing with an early-send amount.
+channel, compensate timing with an early-send amount, and receive an optional
+mono or stereo hardware **Audio Return**.
+
+Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
+MIDI device or **Virtual Keyboard** from the track's input selector, or choose
+**None**. If the track already has a MIDI input or None selected, TayPE keeps it.
+MON controls live MIDI forwarding and lets you hear the selected Audio Return.
+With Audio Return set to None, MIDI clips keep playing through the output during
+normal playback. Once a return is selected, the clip's recorded audio is normal
+playback truth and TayPE does not also send that clip MIDI back to the synth.
+To preview it through the hardware, keep MON on and open either the MIDI editor
+or the MIDI Out popup. The MIDI editor previews its clip; the popup previews the
+whole track, or every child clip when the MIDI Out belongs to a Comp bus. The
+MON lamp turns orange while hardware preview is active. Opening either window
+never turns MON on by itself.
+
+To record a MIDI performance, select your MIDI input, keep MON on, arm the MIDI
+Out track and press Record. ARM records the Audio Return even if MON is off;
+incoming MIDI is still recorded only when MON is on and permitted by Feedback
+Protection. The take is one clip containing the raw return audio and editable
+MIDI notes. With Audio
+Return set to None, the take keeps the established silent audio backing.
+You can also double-click an empty part of the track to create a blank MIDI
+clip, or Cmd-drag an empty range to choose its length.
+
+When Audio Return is selected, importing or re-rendering MIDI sends the
+performance to hardware in real time and records the return into the clip for
+exactly its duration. The return is captured before the strip, inserts and
+fader. Re-rendering a split or trimmed clip keeps its editable MIDI limited and
+aligned to that exact captured section, including clips on Comp take tracks.
+When Audio Return is None, a new import starts with silent clip audio;
+later re-renders, including **Render Now** and **Restore OG MIDI**, copy the
+clip's existing audio offline and do not send MIDI to hardware.
+
+Opening an existing reel keeps its saved track input selection. An older reel
+has Audio Return set to None until you choose one; its old audio input is not
+silently reused as the return.
+
+Click the MIDI Out slot to open its anchored settings popup. It keeps **MIDI
+Output**, **Channel**, **Audio Return**, **Feedback Protection**, and **Advance
+(ms)** together on the left and shows a stereo **Audio Return Level** meter on
+the right. The raw return meter stays live while the popup is open even when
+MON is off and the track is unarmed or muted. If a return is selected and MON
+is already on, keeping this popup open previews clip MIDI through the synth and
+temporarily replaces the corresponding recorded audio. Closing it restores the
+recorded audio and releases preview notes.
+
+Audio Return offers **None**, **Default Mono**, **Default Stereo**, and mapped
+physical mono/stereo inputs. An unplugged saved route
+remains shown as unavailable instead of changing to another input. With MON on,
+the missing return stays silent and TayPE raises a warning instead of silently
+substituting another input.
+
+Feedback Protection defaults to **Off** for existing reels. **Playing Synth**
+records MIDI from the synth paired with the selected output but does not send
+that live MIDI back to it. **Playing Controller** ignores MIDI returned by the
+paired synth while other selected inputs—including a separate keyboard through
+**All MIDI**—still pass and record normally. The popup names the protected MIDI
+input; **Not found** means TayPE could not safely pair the devices and will not
+guess. Protection applies only to live input. Clip playback and rerender MIDI
+are never filtered by Feedback Protection; return-equipped clips reach the synth
+during editor/popup preview and real-time rerender.
+
+The **0–10 ms** manual Advance slider readout shows milliseconds and equivalent
+samples at the current device rate. New inserts default to **0 ms**.
+Positive values send emitted clip MIDI early during playback, preview, and
+real-time rerender; **0** adds no manual advance.
+Tick **Auto** to use the current audio interface round-trip estimate and disable
+the slider. Untick it to adjust the advance manually. The full Auto value is
+shown even when it exceeds 10 ms. When you reopen the popup, Auto is ticked if
+the saved advance matches the current interface estimate.
+Device, Channel, Audio Return, Feedback Protection and Timing changes are refused with a warning
+while a MIDI clip render is pending.
+Double-click the enabled slider to reset it to zero. Changes are saved
+immediately as separate undoable edits. Manual advance is clamped to **0–10
+ms**, including older saved values above that range. Auto can use the full
+interface estimate.
 
 ## Hardware Inserts
 
@@ -155,7 +251,22 @@ The Bypass, Disable, and preset controls in an open Listen Bus plug-in window up
 
 ## Sandboxing
 
-Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, restart its sandbox from the insert tools.
+Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, choose **Tools > Restart Plugin Sandbox**.
+
+If the sandbox crashes, its report has a large **Restart Plugin Sandbox** button
+below the problem description and above the report actions. Restart opens a modal
+with a progress bar and the current
+recovery step, including completed plugin counts when plugins need reloading.
+Progress advances as work completes; it can pause while a plugin loads. A successful
+sandbox restart can still leave individual plugins unavailable. In that case,
+**Plugin Restore Warnings** appears afterwards with a scrollable list of affected
+plugins and the reason for each warning. This includes plugins skipped because they
+repeatedly crashed during this session. If a plugin had unsaved live changes that
+died with the sandbox, the list also warns that its recent changes may not have been
+restored. Those plugins stay blocked; a skipped or partial plugin restore does not
+make the sandbox restart a failure. Choose **OK** to return to the original report,
+which remains available to send or save. Restarting does not send it.
+You can restart during playback; stop recording before restarting.
 
 When the sandbox crashes on a handled fatal signal, the crash feedback report
 includes the sandbox process's best-effort stack trace. Nothing is submitted

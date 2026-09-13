@@ -30,7 +30,7 @@ Required parameters:
 |---|---|
 | `clip_id` | MIDI-origin clip ID |
 
-Returns draft revision, dirty flag, committed and original MIDI paths, clip window, and an `events` array (`note_on`, `note_off`, `muted_note`, `cc`, `pitch_bend`, `channel_pressure`, `poly_pressure`, `program_change`, or `raw`).
+Returns draft revision, dirty flag, committed and original MIDI paths, advisory `committed_base_changed` state, clip window, and an `events` array (`note_on`, `note_off`, `muted_note`, `cc`, `pitch_bend`, `channel_pressure`, `poly_pressure`, `program_change`, or `raw`).
 
 ### `replace_midi_draft`
 
@@ -44,7 +44,7 @@ Required parameters:
 | `expected_revision` | Must match `draft_revision` from `get_midi_draft` |
 | `events` | Complete replacement document |
 
-A stale revision or a changed committed MIDI path refuses with no partial change.
+A stale draft revision refuses with no partial change. A changed committed MIDI path is reported by `committed_base_changed`, but remains editable and committable.
 
 ### `quantise_midi_draft`
 
@@ -71,7 +71,7 @@ Destroy the ephemeral draft without changing clip MIDI or audio.
 
 ### `midi_editor`
 
-`get`, `open`, or `close` the MIDI editor window. Opening is never required for draft read, replace, or quantise. Closing a dirty draft is refused.
+`get`, `open`, or `close` the MIDI editor window. Opening is never required for draft read, replace, or quantise. Closing a dirty draft is refused until you choose Render Now, Keep Unrendered, or Discard Edits. After an asynchronous render replaces committed MIDI, a clean draft follows it automatically. A dirty stale draft still opens unchanged and shows an advisory warning; it remains editable, and your close choice decides whether to keep the new MIDI without rerendering or render it now.
 
 ### `restore_original_midi_clip`
 

@@ -2,6 +2,7 @@
 
 * [Welcome](README.md)
 * [Getting Started](getting-started.md)
+* [Audio Preferences and I/O Mapping](audio-preferences.md)
 * [The Timeline](timeline/README.md)
   * [Track Headers](timeline/track-headers.md)
   * [Clips](timeline/clips.md)

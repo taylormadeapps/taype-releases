@@ -23,6 +23,10 @@ Use [Reels](reels/README.md) for checkpoints, history, pack/unpack, thin reels, 
 
 Choose an input on the track header or channel strip, arm the track, then press **Record**. Audio tracks record audio. Instrument tracks can host a VSTi on the first insert slot and record MIDI or rendered instrument output depending on the workflow.
 
+Set up the interface, channel names and default routes in **Preferences →
+Audio**. See [Audio Preferences and I/O Mapping](audio-preferences.md) for
+multi-channel interfaces and missing-device recovery.
+
 Right-click **Stop** to choose **Record Stop Mode**, which decides what pressing
 Record again or Stop does during a take:
 
@@ -50,7 +54,7 @@ Play uses a very short anti-click ramp at the exact point where transport
 starts. Silence before a later note or drum hit does not move that ramp onto
 the attack, so starting playback shortly before a hit leaves the hit intact.
 
-The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces where that makes musical sense.
+The ruler can show bars/beats or time. Marker shortcuts jump directly to numbered marker slots, and the marker buttons also move to loop braces even when loop playback is off.
 
 ## Importing Audio
 
@@ -76,7 +80,7 @@ Use **View > UI Scale** or **Cmd+Option+- / Cmd+Option+=** to change the global 
 
 ## Popup Help
 
-Use **Help > Popup Help** or the help button in the transport bar to toggle hover help. When enabled, TayPE explains controls after a short hover. Routing selectors still reveal the full route on hover even when popup help is disabled.
+Use **Help > Popup Help** or the help button in the transport bar to toggle hover help. When enabled, TayPE explains controls after a short hover. Help text shows the shortcut currently assigned in your active keyboard profile, and transport help refreshes when that profile changes. Routing selectors still reveal the full route on hover even when popup help is disabled.
 
 ## App Language
 
@@ -94,9 +98,10 @@ Use the MIDI Monitor when you need to see what TayPE is receiving from controlle
 
 Use **Tools > Session Log** to inspect current-session diagnostics. Filter by
 severity or text, copy the rows currently shown, or reveal the underlying log
-file in Finder when support asks for it. Debug-level detail is off by default;
-enable **Log debug messages** in Audio Preferences only for a measured
-diagnostic session.
+file in Finder when support asks for it. INFO rows are normal status and
+successful lifecycle events; WARN and higher indicate degraded or failed
+operation. Debug-level detail is off by default; enable **Log debug messages**
+in Audio Preferences only for a measured diagnostic session.
 
 If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
 not started delivering the callbacks required to process sound, or an

@@ -149,12 +149,21 @@ mono or stereo hardware **Audio Return**.
 Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
 MIDI device or **Virtual Keyboard** from the track's input selector, or choose
 **None**. If the track already has a MIDI input or None selected, TayPE keeps it.
-MON controls live MIDI forwarding and lets you hear the selected Audio Return
-alongside the clip's existing audio. MIDI clips play through the output during
-playback. To record a MIDI performance, select your MIDI input, keep MON on,
-arm the MIDI Out track and press Record. ARM records the Audio Return even if
-MON is off; incoming MIDI is still recorded only when MON is on. The take is
-one clip containing the raw return audio and editable MIDI notes. With Audio
+MON controls live MIDI forwarding and lets you hear the selected Audio Return.
+With Audio Return set to None, MIDI clips keep playing through the output during
+normal playback. Once a return is selected, the clip's recorded audio is normal
+playback truth and TayPE does not also send that clip MIDI back to the synth.
+To preview it through the hardware, keep MON on and open either the MIDI editor
+or the MIDI Out popup. The MIDI editor previews its clip; the popup previews the
+whole track, or every child clip when the MIDI Out belongs to a Comp bus. The
+MON lamp turns orange while hardware preview is active. Opening either window
+never turns MON on by itself.
+
+To record a MIDI performance, select your MIDI input, keep MON on, arm the MIDI
+Out track and press Record. ARM records the Audio Return even if MON is off;
+incoming MIDI is still recorded only when MON is on and permitted by Feedback
+Protection. The take is one clip containing the raw return audio and editable
+MIDI notes. With Audio
 Return set to None, the take keeps the established silent audio backing.
 You can also double-click an empty part of the track to create a blank MIDI
 clip, or Cmd-drag an empty range to choose its length.
@@ -162,7 +171,9 @@ clip, or Cmd-drag an empty range to choose its length.
 When Audio Return is selected, importing or re-rendering MIDI sends the
 performance to hardware in real time and records the return into the clip for
 exactly its duration. The return is captured before the strip, inserts and
-fader. When Audio Return is None, a new import starts with silent clip audio;
+fader. Re-rendering a split or trimmed clip keeps its editable MIDI limited and
+aligned to that exact captured section, including clips on Comp take tracks.
+When Audio Return is None, a new import starts with silent clip audio;
 later re-renders, including **Render Now** and **Restore OG MIDI**, copy the
 clip's existing audio offline and do not send MIDI to hardware.
 
@@ -170,25 +181,45 @@ Opening an existing reel keeps its saved track input selection. An older reel
 has Audio Return set to None until you choose one; its old audio input is not
 silently reused as the return.
 
-Click the MIDI Out slot for the **Device**, **Channel**, **Audio Return**, and
-**Timing** menus. Audio Return offers **None**, **Default Mono**, **Default
-Stereo**, and mapped physical mono/stereo inputs. An unplugged saved route
+Click the MIDI Out slot to open its anchored settings popup. It keeps **MIDI
+Output**, **Channel**, **Audio Return**, **Feedback Protection**, and **Advance
+(ms)** together on the left and shows a stereo **Audio Return Level** meter on
+the right. The raw return meter stays live while the popup is open even when
+MON is off and the track is unarmed or muted. If a return is selected and MON
+is already on, keeping this popup open previews clip MIDI through the synth and
+temporarily replaces the corresponding recorded audio. Closing it restores the
+recorded audio and releases preview notes.
+
+Audio Return offers **None**, **Default Mono**, **Default Stereo**, and mapped
+physical mono/stereo inputs. An unplugged saved route
 remains shown as unavailable instead of changing to another input. With MON on,
 the missing return stays silent and TayPE raises a warning instead of silently
-substituting another input. Choose **Advance (ms)**
-to open the **0–10 ms** manual slider. The readout shows milliseconds and the equivalent
-samples at the current audio device sample rate. New inserts default to **0 ms**.
-Positive values send MIDI clip playback early; **0** adds no manual advance.
+substituting another input.
+
+Feedback Protection defaults to **Off** for existing reels. **Playing Synth**
+records MIDI from the synth paired with the selected output but does not send
+that live MIDI back to it. **Playing Controller** ignores MIDI returned by the
+paired synth while other selected inputs—including a separate keyboard through
+**All MIDI**—still pass and record normally. The popup names the protected MIDI
+input; **Not found** means TayPE could not safely pair the devices and will not
+guess. Protection applies only to live input. Clip playback and rerender MIDI
+are never filtered by Feedback Protection; return-equipped clips reach the synth
+during editor/popup preview and real-time rerender.
+
+The **0–10 ms** manual Advance slider readout shows milliseconds and equivalent
+samples at the current device rate. New inserts default to **0 ms**.
+Positive values send emitted clip MIDI early during playback, preview, and
+real-time rerender; **0** adds no manual advance.
 Tick **Auto** to use the current audio interface round-trip estimate and disable
 the slider. Untick it to adjust the advance manually. The full Auto value is
-shown even when it exceeds 10 ms. When you reopen the dialog, Auto is ticked if
+shown even when it exceeds 10 ms. When you reopen the popup, Auto is ticked if
 the saved advance matches the current interface estimate.
-Device, Channel, Audio Return and Timing changes are refused with a warning
+Device, Channel, Audio Return, Feedback Protection and Timing changes are refused with a warning
 while a MIDI clip render is pending.
-Double-click the enabled slider to reset it to zero. Choose **Apply** to save
-the timing, or **Cancel** to discard it. Manual advance is clamped to **0–10 ms**,
-including older saved values above that range. Auto can use the full interface
-estimate. The saved timing changes only when you choose Apply.
+Double-click the enabled slider to reset it to zero. Changes are saved
+immediately as separate undoable edits. Manual advance is clamped to **0–10
+ms**, including older saved values above that range. Auto can use the full
+interface estimate.
 
 ## Hardware Inserts
 

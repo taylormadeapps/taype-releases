@@ -158,7 +158,8 @@ Use the **CTRL** button at the lower left to show the MIDI control editor.
 The left-aligned selector puts Pitch Bend, Mod Wheel, CC11 Expression, and CC64
 Sustain first, followed by the remaining CC numbers. The **With data** checkbox
 beside it hides targets that have no events in the open clip while keeping that
-composer-first order. If no controller data exists, the selector is disabled
+composer-first order. Controllers that already have events stay yellow in both
+the full list and the filtered list. If no controller data exists, the selector is disabled
 until **With data** is turned off. This filter only changes the editor view and
 is not saved with the reel.
 Click a controller point to select it, click empty lane space to add a point,
@@ -167,7 +168,12 @@ point to move the whole selected set.
 Cmd+A selects all points in the current controller, Delete or Backspace removes
 the selection, and Escape clears it. Double-click a point to delete it.
 Cmd-drag draws controller values as a
-freehand pencil stroke, following each change in pointer direction. The
+freehand pencil stroke, following each change in pointer direction. With
+arranger Snap on, drawn times land on the editing grid; with Snap off they
+follow the pointer freely and keep a best-fit shape instead of a fixed-time
+staircase. Continuous controllers and pitch bend interpolate between sparse
+points on playback, rerender, and MIDI out; stepped controllers such as
+sustain stay stepped. The
 underlying MIDI points appear when hovered or selected rather than covering the
 stroke with dots. Holding Cmd over the controller plot changes the mouse
 pointer to a pencil and keeps it visible for the stroke.
@@ -270,6 +276,12 @@ Turn Follow Link off to stop automatic MIDI paging without changing arranger
 Follow.
 Home and End seek to the open MIDI clip boundaries and horizontally page the
 piano roll to reveal the destination even when it was previously off-screen.
+`,` and `.` still jump markers and loop braces, and they also stop at that
+clip's start and end. The editor ruler paints the same markers and loop braces
+as the arranger at those timeline times; their vertical lines stay inside the
+ruler. The editor timeline includes the loop range so those braces can be
+scrolled into view, and loop-brace tabs sit beside START/END when they share a
+time. Click a marker or loop-brace tab to move the playhead to it.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared

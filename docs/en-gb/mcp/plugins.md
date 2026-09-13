@@ -25,6 +25,7 @@ Important parameters:
 | `channel` | MIDI Out channel, or 0 to keep source channel |
 | `advance_ms` | MIDI Out early-send timing |
 | `audio_input_route_id` | MIDI Out Audio Return; mapped/default mono or stereo input, or empty for None |
+| `feedback_protection` | MIDI Out live-input protection: `off`, `playing_synth`, or `playing_controller` |
 | `output_route_id` / `input_route_id` | Hardware Insert send and return routes |
 | `latency_offset_samples` | Extra hardware compensation |
 | `hardware_input_trim_db` / `hardware_output_trim_db` | Hardware send and return trims |
@@ -65,7 +66,7 @@ capture remain protected.
 
 ### `get_insert_info`
 
-Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
+Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
 
@@ -136,7 +137,8 @@ Optional parameters:
 
 ### `set_insert_midi_output`
 
-Configure the device, channel, timing, and Audio Return for a MIDI Out insert.
+Configure the device, channel, timing, Audio Return, and live MIDI feedback
+protection for a MIDI Out insert.
 Requires stopped transport and no pending MIDI clip render. A refused edit
 leaves the saved route unchanged.
 
@@ -155,6 +157,7 @@ Optional parameters:
 | `channel` | MIDI channel, or `0` to keep source channels |
 | `advance_ms` | Early-send timing compensation |
 | `audio_input_route_id` | Audio Return route; empty clears to None, omission retains it |
+| `feedback_protection` | `off`, `playing_synth`, or `playing_controller`; omission retains it |
 
 ## Sidechains
 
