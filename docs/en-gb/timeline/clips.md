@@ -98,6 +98,13 @@ restore an old plug-in preset. Timeline position, audible window, duration,
 fades, stretch and clip pitch remain intact. The operation is undoable, and
 TayPE asks first if restoring would remove ARA2-derived edits.
 
+TayPE keeps MIDI timing at full session precision while you edit and quantise.
+When MIDI content is committed, the new working MIDI file uses high-resolution
+timing so every built-in straight and triplet grid through 1/64T survives close
+and reopen. Older MIDI files remain untouched while you load, preview, rerender
+or save the Reel; they are replaced at high resolution only after a material
+MIDI edit is committed.
+
 The Behaviour panel contains **Disabled**. For clips on comp take tracks it also
 shows **Don't Comp**. Turn it on to keep that take layered and untouched
 when another take is promoted or an overlapping comp edit is made. The clip can
