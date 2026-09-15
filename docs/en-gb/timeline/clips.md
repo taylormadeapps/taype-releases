@@ -235,7 +235,8 @@ and has no effect, but its requested state is retained and returns when
 Quantise Grid is switched on again.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
-Dragging a note's right edge can shorten it to a fixed 1 ms minimum. This
+Dragging a note's left or right edge can shorten it to a fixed 1 ms minimum.
+The left edge keeps the end where it is; the right edge keeps the start. This
 safety floor does not change with the quantise value, remembered entry length,
 or Snap setting.
 The footer presents the crotchet, division, Strength, and Capture settings
