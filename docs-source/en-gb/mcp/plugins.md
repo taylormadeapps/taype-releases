@@ -4,7 +4,7 @@ Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI
 
 ### `list_plugins`
 
-Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. Plug-ins that advertise ARA2 are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow.
+Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. ARA-only plug-ins (SpectraLayers, WaveLab, and others marked OnlyARA) are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow. Dual-mode ARA2 effects such as Melodyne stay in this list and load as ordinary non-ARA inserts.
 
 ### `list_midi_outputs`
 

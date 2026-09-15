@@ -325,8 +325,13 @@ Copy and paste clips between compatible tracks. TayPE preserves timing and clip 
 ## ARA2
 
 Choose an editor from the top-level **ARA2** menu, then open it from a clip.
+The menu uses the same vendor/category folders as Plugin Manager, so Waves
+and Steinberg companions sit in nested folders rather than one flat list.
 Melodyne is the default when you have not selected another available ARA2
-plug-in. ARA2 editing is clip-scoped, not a normal insert slot.
+plug-in. ARA2 editing is clip-scoped. ARA-only companions such as SpectraLayers
+and WaveLab never appear as insert slots. Dual-mode effects such as Melodyne
+still load as ordinary inserts in non-ARA mode, and you can give them a Plugin
+Manager category.
 
 Use Option-double-click on a single selected clip, the ARA2 glyph on a prepared
 clip, or Clip Properties. Clip Properties names the selected provider in its

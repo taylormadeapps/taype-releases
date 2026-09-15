@@ -66,7 +66,7 @@ If imported media needs resampling, TayPE handles it during import or playback s
 
 Select clips, split at the playhead, trim edges, drag clips between compatible tracks, adjust clip gain, and add fades. Splitting adds the current default clip fade at the new cut edges. Crossfades are created by overlapping clip edges where the clips can share the same lane.
 
-MIDI clips open in the MIDI editor. ARA2 plug-ins open from a clip, not as normal inserts; choose the global provider from the **ARA2** menu first.
+MIDI clips open in the MIDI editor. ARA-only plug-ins open from a clip, not as normal inserts; choose the global provider from the **ARA2** menu first. Dual-mode ARA2 effects such as Melodyne can still load as ordinary inserts in non-ARA mode.
 
 ## The Channel Strip
 

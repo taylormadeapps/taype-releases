@@ -106,9 +106,10 @@ Required parameters:
 
 ## ARA2
 
-ARA2 providers open from clips, not as normal inserts. Choose the global
+ARA2 providers open from clips. Choose the global
 provider from TayPE's **ARA2** menu; Melodyne is the default only when no other
-choice has been stored. These tools are available when the ARA2 lane is present
+choice has been stored. ARA-only plug-ins are not normal inserts; dual-mode
+ARA2 effects can still load as ordinary non-ARA inserts. These tools are available when the ARA2 lane is present
 in the running build.
 
 ### `ara2_transfer`
