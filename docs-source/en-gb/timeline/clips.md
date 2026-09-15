@@ -52,7 +52,7 @@ Conversion replaces the clip's stored audio with a new reel-owned WAV. If the cl
 
 ## Trimming
 
-Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes can still be resized. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
+Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On MIDI-backed clips, dragging the lower-right edge can also lengthen the clip past the current rendered audio without stretching the notes; the extra time plays as silence, the same fill used when you extend a clip in the MIDI editor. Ordinary audio clips still stop at the end of their source file. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes can still be resized. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
 
 When you zoom far out and a clip becomes very narrow, its edge grab areas shrink so the middle remains available for moving the clip. At the most extreme zoom, grab just outside the clip edge when you need to trim or stretch it.
 
