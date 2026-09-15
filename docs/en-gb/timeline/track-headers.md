@@ -86,7 +86,7 @@ primary-track only.
 
 ## Tag Cloud
 
-The Tag popup lets you add labels such as `Vocal`, `Guitar`, `Print`, or your own categories. Tags help with filtering, selection, and keeping large reels sane.
+The Tag popup lets you add labels such as `Vocal`, `Guitar`, `Print`, or your own categories. Tags help with filtering, selection, and keeping large reels sane. On a tall track header, each assigned tag is a pill; if the tag has a colour, the pill uses that colour.
 
 ## Archive View
 

@@ -36,7 +36,7 @@ Show or hide archived tracks.
 
 ### `set_spill`
 
-Show a narrowed working set.
+Show a narrowed working set: the selected bus plus tracks that output or send to it. While Spill is on, selecting another bus or master retargets that set. Selecting a track that is not a bus keeps the last spilled bus.
 
 ### `set_e_zoom`
 
@@ -48,7 +48,7 @@ Switch ruler display.
 
 ### `select_track`
 
-Select a track by ID.
+Select a track by ID. While Spill is on, a bus or master selection retargets the spilled slice.
 
 ### `select_clip`
 
