@@ -28,7 +28,8 @@ current Threshold drawn across it. **Bass Relief** in the strip, popup and
 Taype Comp body remains the Low Cut on/off control. The panel sets cutoff
 frequency (20 Hz–10 kHz, stored default 80 Hz). High Cut reaches 30 Hz for
 sub-only keying and is a hard bypass at 20 kHz. Tilt is ±3 dB/octave around
-600 Hz. Gain is ±24 dB on the detector only.
+600 Hz: turning it up lowers the threshold line at the high end, so highs
+trigger earlier. Gain is ±24 dB on the detector only.
 
 On the stock compressor, choose **Internal** (this track after EQ) or another
 regular track. Buses and master are not sources. The selected track is keyed
