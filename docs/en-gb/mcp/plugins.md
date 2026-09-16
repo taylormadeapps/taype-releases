@@ -112,7 +112,12 @@ wait for the native window. Poll `get_insert_info` until the window is open.
 
 ### `restart_sandbox`
 
-Restart the sandbox for a plugin that has become unhealthy.
+Restart the plugin sandbox. Always rebuilds the full assigned plugin set on a
+new helper, including disabled assigned plugins. A connected helper is not a
+shortcut that skips reload.
+
+Returns `result`: `complete`, `complete_with_exclusions`, `failed`, or
+`refused`. `success` is true only for `complete`.
 
 ### `set_insert_hardware_io`
 

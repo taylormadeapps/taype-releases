@@ -251,21 +251,15 @@ The Bypass, Disable, and preset controls in an open Listen Bus plug-in window up
 
 ## Sandboxing
 
-Third-party plugins run in a sandbox helper so a plugin fault is less likely to take the whole app down. If a plugin becomes stuck, choose **Tools > Restart Plugin Sandbox**.
+Third-party plugins run in a sandbox helper so a plugin crash is less likely to take the whole app down. Audio keeps going. If a plugin takes the helper down, choose **Tools > Restart Plugin Sandbox**, or the large **Restart Plugin Sandbox** button on the crash report.
 
-If the sandbox crashes, its report has a large **Restart Plugin Sandbox** button
-below the problem description and above the report actions. Restart opens a modal
-with a progress bar and the current
-recovery step, including completed plugin counts when plugins need reloading.
-Progress advances as work completes; it can pause while a plugin loads. A successful
-sandbox restart can still leave individual plugins unavailable. In that case,
-**Plugin Restore Warnings** appears afterwards with a scrollable list of affected
-plugins and the reason for each warning. This includes plugins skipped because they
-repeatedly crashed during this session. If a plugin had unsaved live changes that
-died with the sandbox, the list also warns that its recent changes may not have been
-restored. Those plugins stay blocked; a skipped or partial plugin restore does not
-make the sandbox restart a failure. Choose **OK** to return to the original report,
-which remains available to send or save. Restarting does not send it.
+Restart always starts a fresh helper and reloads every assigned plugin, including ones you had disabled. TayPE does not keep a live helper that skipped reload, and it does not start a half-empty helper around leftover slots. After a crash, add and enable wait until you restart; remove and disable still work.
+
+If you dismiss the crash report while the helper is still down, every enabled plugin row on the mixer — including bypassed — lights red. The plugin that crashed the helper keeps a hot red fill and yellow border. The other lit rows use a quieter red without that border and say the sandbox is down. Disabled plugins stay dim. Restart brings the recoverable ones back.
+
+A plugin TayPE positively identified as the crash culprit stays in its slot as Failed. The assignment, on/off, bypass, and last saved sound are unchanged. Failed is not Disable, and it is not written into the reel. The row paints as failed, and a plain click explains why instead of opening the vendor window. Other recoverable plugins come back.
+
+A restart can still leave named plugins unavailable. **Plugin Restore Warnings** lists them. That is a complete restart with exclusions, not a silent success. If a plugin had unsaved live changes that died with the sandbox, the list also warns that its recent changes may not have been restored. Choose **OK** to return to the original report, which remains available to send or save. Restarting does not send it.
 You can restart during playback; stop recording before restarting.
 
 When the sandbox crashes on a handled fatal signal, the crash feedback report
