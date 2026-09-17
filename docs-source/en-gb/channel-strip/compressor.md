@@ -102,7 +102,7 @@ Use the four ticked switches beneath the graph to choose what is visible:
 - **IN:** input before compression, shown as a white fill when viewed alone.
 - **OUT:** blue output with a thin blue line along its top edge, measured after
   Makeup and the wet/dry blend. With IN visible, only output above input is
-  translucent; overlapping output is solid blue. Input above output stays grey.
+  translucent; overlapping output is denser blue. Input above output stays grey.
 - **DETECTOR:** green level driving compression after Bass Relief. It follows
   the selected mode: FET peak, VCA RMS, or OPTO's slower, quantised RMS.
 - **GR:** red gain reduction actually applied by the compressor, read against
@@ -110,7 +110,7 @@ Use the four ticked switches beneath the graph to choose what is visible:
 
 With IN and OUT both on, grey input is drawn first and blue output is drawn
 over it. Transparency applies only to output above input; output overlapping
-input is solid blue, and input above output stays grey. There is no separate
+input is denser blue, and input above output stays grey. There is no separate
 difference shading. The thin blue output line stays visible over the fills.
 IN alone shows the complete neutral input fill; OUT alone shows
 the complete blue output fill. Detector and GR remain visible over the fills.
