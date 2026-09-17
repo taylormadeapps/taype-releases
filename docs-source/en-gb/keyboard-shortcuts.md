@@ -28,6 +28,11 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 While the MIDI editor is active, Home, End, Page Up, and Page Down stay with
 the piano roll in normal, maximised, and full-screen window postures. Moving
 focus away, minimising, or closing the editor returns them to the main window.
+`,` and `.` still jump markers and loop braces, and they also stop at the open
+clip's start and end. The editor ruler shows the same markers and loop braces
+as the arranger at those times, with vertical lines that stop at the ruler
+bottom; loop-brace tabs sit beside START/END when they share a time. Click a
+marker or loop-brace tab to seek.
 Plain Left and Right move selected MIDI notes by one quantise interval; with no
 note selection they move the shared playhead by the arranger's visible ruler
 tick and do not scroll the piano roll.
@@ -104,8 +109,8 @@ quit process directly.
 | Set loop from selection | L |
 | Add marker at playhead | / |
 | Add or convert a No Cut range at playhead (Main Cut only) | Shift+/ |
-| Previous marker or loop brace | , |
-| Next marker or loop brace | . |
+| Previous marker or loop brace; in the MIDI editor, also clip start | , |
+| Next marker or loop brace; in the MIDI editor, also clip end | . |
 | Go to markers 1-10 | 1-9, 0 |
 | Go to markers 11-20 | Cmd+1-9, Cmd+0 |
 | Go to markers 21-30 | Cmd+Shift+1-9, Cmd+Shift+0 |

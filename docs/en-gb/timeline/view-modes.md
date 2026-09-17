@@ -22,4 +22,4 @@ See [Automation](automation.md) for capture and breakpoint editing.
 
 ## Focus, Archive, Spill, and E-Zoom
 
-Focus narrows the working view around material at the playhead or loop. Archive View brings archived tracks back into view. Spill shows a selected bus with the tracks feeding it. E-Zoom jumps into the selected clip or working area and returns when toggled again.
+Focus narrows the working view around material at the playhead or loop. Archive View brings archived tracks back into view. Spill shows a selected bus with the tracks feeding it, including tracks that send to it as well as tracks whose output is that bus, and follows you when you select another bus; clicking a spilled source keeps that slice until you pick a new bus or turn Spill off. E-Zoom jumps into the selected clip or working area and returns when toggled again.

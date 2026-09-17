@@ -52,7 +52,7 @@ Conversion replaces the clip's stored audio with a new reel-owned WAV. If the cl
 
 ## Trimming
 
-Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes can still be resized. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
+Drag clip edges to trim. The original media stays intact; the clip simply plays a different range. On MIDI-backed clips, dragging the lower-right edge can also lengthen the clip past the current rendered audio without stretching the notes; the extra time plays as silence, the same fill used when you extend a clip in the MIDI editor. Ordinary audio clips still stop at the end of their source file. On comp take tracks, edge-resizing starts above the bottom comp strip, and muted takes can still be resized. Muted sibling takes do not block an active take's resize; right-trimming an enabled split take can extend that segment's source-out up to the real media end. Resizing an enabled clip into a sibling take cuts the sibling at the new boundary and mutes only the covered section.
 
 When you zoom far out and a clip becomes very narrow, its edge grab areas shrink so the middle remains available for moving the clip. At the most extreme zoom, grab just outside the clip edge when you need to trim or stretch it.
 
@@ -158,7 +158,8 @@ Use the **CTRL** button at the lower left to show the MIDI control editor.
 The left-aligned selector puts Pitch Bend, Mod Wheel, CC11 Expression, and CC64
 Sustain first, followed by the remaining CC numbers. The **With data** checkbox
 beside it hides targets that have no events in the open clip while keeping that
-composer-first order. If no controller data exists, the selector is disabled
+composer-first order. Controllers that already have events stay yellow in both
+the full list and the filtered list. If no controller data exists, the selector is disabled
 until **With data** is turned off. This filter only changes the editor view and
 is not saved with the reel.
 Click a controller point to select it, click empty lane space to add a point,
@@ -167,7 +168,12 @@ point to move the whole selected set.
 Cmd+A selects all points in the current controller, Delete or Backspace removes
 the selection, and Escape clears it. Double-click a point to delete it.
 Cmd-drag draws controller values as a
-freehand pencil stroke, following each change in pointer direction. The
+freehand pencil stroke, following each change in pointer direction. With
+arranger Snap on, drawn times land on the editing grid; with Snap off they
+follow the pointer freely and keep a best-fit shape instead of a fixed-time
+staircase. Continuous controllers and pitch bend interpolate between sparse
+points on playback, rerender, and MIDI out; stepped controllers such as
+sustain stay stepped. The
 underlying MIDI points appear when hovered or selected rather than covering the
 stroke with dots. Holding Cmd over the controller plot changes the mouse
 pointer to a pencil and keeps it visible for the stroke.
@@ -222,7 +228,8 @@ and has no effect, but its requested state is retained and returns when
 Quantise Grid is switched on again.
 Relative snap preserves a moved or resized note edge's original offset from that
 grid; absolute snap places the edge directly on the grid.
-Dragging a note's right edge can shorten it to a fixed 1 ms minimum. This
+Dragging a note's left or right edge can shorten it to a fixed 1 ms minimum.
+The left edge keeps the end where it is; the right edge keeps the start. This
 safety floor does not change with the quantise value, remembered entry length,
 or Snap setting.
 The footer presents the crotchet, division, Strength, and Capture settings
@@ -270,6 +277,12 @@ Turn Follow Link off to stop automatic MIDI paging without changing arranger
 Follow.
 Home and End seek to the open MIDI clip boundaries and horizontally page the
 piano roll to reveal the destination even when it was previously off-screen.
+`,` and `.` still jump markers and loop braces, and they also stop at that
+clip's start and end. The editor ruler paints the same markers and loop braces
+as the arranger at those timeline times; their vertical lines stay inside the
+ruler. The editor timeline includes the loop range so those braces can be
+scrolled into view, and loop-brace tabs sit beside START/END when they share a
+time. Click a marker or loop-brace tab to move the playhead to it.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
 The configured split shortcut cuts selected notes crossing the shared
@@ -303,7 +316,7 @@ and is not used for restoration. Equal actual/store paths remain visible;
 
 ## Gain, Fades, and Crossfades
 
-Clip gain adjusts the clip before the channel strip. With clips selected, **Fade** toggles their edges at the default fade length, which starts at 2 ms and can be changed in **Preferences > General**. With no clip selection, point at the first half of a clip and press the Fade shortcut to set its fade-in from the clip start to the exact pointer position; point at the second half to set its fade-out from the pointer to the clip end. The other edge stays unchanged, and existing crossfade-bound edges are protected. Overlapping compatible clips can create crossfades where their edges meet. Hold **Shift** while moving or edge-resizing a clip, or **Option+Shift** while drag-copying, to magnetically attract it to neighbouring clip edges for a clean butt. For resize, the left trim edge sticks to the previous clip end and the right trim edge to the next clip start. Continue past the magnetic point to place through the edge without creating an automatic crossfade. Ordinary tracks use hard-cut placement. Comp take tracks do not auto-crossfade; they retain their default-length splice-edge fades and sibling-take resolution instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into a sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment; sibling material that was already muted remains muted and does not block the edit. Dub takes are excluded from this automatic comp muting and remain structurally untouched until you mute or edit them explicitly. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
+Clip gain adjusts the clip before the channel strip. With clips selected, **Fade** toggles their edges at the default fade length, which starts at 2 ms and can be changed in **Preferences > General**. With no clip selection, point at the first half of a clip and press the Fade shortcut to set its fade-in from the clip start to the exact pointer position; point at the second half to set its fade-out from the pointer to the clip end. The other edge stays unchanged, and existing crossfade-bound edges are protected. Overlapping compatible clips can create crossfades where their edges meet. Hold **Shift** while moving or edge-resizing a clip, or **Option+Shift** while drag-copying, to magnetically attract it to neighbouring clip edges for a clean butt. For trim or stretch resize, the left edge sticks to the previous clip end and the right edge to the next clip start. Continue past the magnetic point to place through the edge without creating an automatic crossfade. Ordinary tracks use hard-cut placement. Comp take tracks do not auto-crossfade; they retain their default-length splice-edge fades and sibling-take resolution instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into a sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment; sibling material that was already muted remains muted and does not block the edit. Dub takes are excluded from this automatic comp muting and remain structurally untouched until you mute or edit them explicitly. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
 
 ## Clipboard
 
@@ -312,8 +325,13 @@ Copy and paste clips between compatible tracks. TayPE preserves timing and clip 
 ## ARA2
 
 Choose an editor from the top-level **ARA2** menu, then open it from a clip.
+The menu uses the same vendor/category folders as Plugin Manager, so Waves
+and Steinberg companions sit in nested folders rather than one flat list.
 Melodyne is the default when you have not selected another available ARA2
-plug-in. ARA2 editing is clip-scoped, not a normal insert slot.
+plug-in. ARA2 editing is clip-scoped. ARA-only companions such as SpectraLayers
+and WaveLab never appear as insert slots. Dual-mode effects such as Melodyne
+still load as ordinary inserts in non-ARA mode, and you can give them a Plugin
+Manager category.
 
 Use Option-double-click on a single selected clip, the ARA2 glyph on a prepared
 clip, or Clip Properties. Clip Properties names the selected provider in its

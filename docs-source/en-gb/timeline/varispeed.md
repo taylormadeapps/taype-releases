@@ -78,9 +78,9 @@ Main and other Cuts can be committed independently. Referenced Cuts keep their
 own committed speed. Committing a source Cut does not move its reference
 boundaries in Main: longer content is cropped and shorter content ends early.
 The live varispeed control affects the whole playback mix and stays at the same
-setting when you switch Cuts.
-Main's bar lines and metronome keep Main's tempo and time signature while a
-referenced Cut plays.
+setting when you switch Cuts. While a referenced Cut plays, the visible grid and
+metronome use that Cut's tempo and time signature. The referenced range begins
+on a child downbeat; Main begins a new downbeat exactly where the range ends.
 
 Each Cut has its own tempo and time signature. An older Cut without either
 setting uses Main's corresponding setting.

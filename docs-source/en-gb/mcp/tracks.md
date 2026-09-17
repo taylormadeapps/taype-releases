@@ -4,6 +4,8 @@
 
 Return track IDs, names, states, routing, and selected/focused information.
 
+Comp takes report `is_comp_take` and `parent_id` for the owning comp bus. Instrument-output destinations report `instrument_owner_track_id`. `fader_owner_track_id` is the strip that owns fader/pan for that row.
+
 ### `add_track`
 
 Create a new track.

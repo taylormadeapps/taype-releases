@@ -36,7 +36,7 @@ Show or hide archived tracks.
 
 ### `set_spill`
 
-Show a narrowed working set.
+Show a narrowed working set: the selected bus plus tracks that output or send to it. While Spill is on, selecting another bus or master retargets that set. Selecting a track that is not a bus keeps the last spilled bus.
 
 ### `set_e_zoom`
 
@@ -48,7 +48,7 @@ Switch ruler display.
 
 ### `select_track`
 
-Select a track by ID.
+Select a track by ID. While Spill is on, a bus or master selection retargets the spilled slice.
 
 ### `select_clip`
 
@@ -97,7 +97,8 @@ Automation data tools use:
 | Param | Description |
 |---|---|
 | `track_id` | Target track |
-| `parameter` | `volume`, `pan`, or `width` |
+| `parameter` | Without `slot`: `volume`, `pan`, or `width`. With `slot`: a plug-in parameter id from `get_insert_info` |
+| `slot` | Optional insert slot 0-7. When present, `parameter` is a plug-in parameter on that insert |
 
 ## Undo / Redo
 
@@ -119,4 +120,4 @@ Return a high-level app and session status.
 
 ### `callsign_get` / `callsign_set`
 
-Read or set the studio callsign used by assistant workflows.
+Read or set the studio callsign used by assistant workflows. Default is `tape`. At session start, call `callsign_get`. When the user prefixes a request with that word, treat the rest as a direct command.

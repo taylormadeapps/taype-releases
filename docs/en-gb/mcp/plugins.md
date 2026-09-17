@@ -4,7 +4,7 @@ Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI
 
 ### `list_plugins`
 
-Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. Plug-ins that advertise ARA2 are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow.
+Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. ARA-only plug-ins (SpectraLayers, WaveLab, and others marked OnlyARA) are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow. Dual-mode ARA2 effects such as Melodyne stay in this list and load as ordinary non-ARA inserts.
 
 ### `list_midi_outputs`
 
@@ -24,6 +24,8 @@ Important parameters:
 | `device_id` | MIDI Out destination |
 | `channel` | MIDI Out channel, or 0 to keep source channel |
 | `advance_ms` | MIDI Out early-send timing |
+| `audio_input_route_id` | MIDI Out Audio Return; mapped/default mono or stereo input, or empty for None |
+| `feedback_protection` | MIDI Out live-input protection: `off`, `playing_synth`, or `playing_controller` |
 | `output_route_id` / `input_route_id` | Hardware Insert send and return routes |
 | `latency_offset_samples` | Extra hardware compensation |
 | `hardware_input_trim_db` / `hardware_output_trim_db` | Hardware send and return trims |
@@ -64,9 +66,39 @@ capture remain protected.
 
 ### `get_insert_info`
 
-Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information.
+Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `include_state` | Include the live plug-in state chunk |
+| `include_parameters` | List automatable parameters with distinct value fields |
+| `evaluate_at` | Seconds used for `evaluated_value`. Default is the playhead |
+
+When `include_parameters` is true and the catalogue is ready, each parameter reports `default_value`, `base_value` (stored/static, what automation releases to), `evaluated_value` (lane value at `evaluate_at`), and `host_applied_value` (latest value TayPE published to the runtime). `current_value` is a deprecated alias of `base_value`.
+
+### `set_insert_parameter`
+
+Set one insert's stored/static plug-in parameter by stable id. This writes the base value. It does not create or rewrite an automation lane; use `set_automation_points` with `slot` for that.
+
+Required parameters:
+
+| Param | Description |
+|---|---|
+| `track_id` | Target track |
+| `parameter` | Stable parameter id from `get_insert_info` with `include_parameters` |
+| `value` | Normalised value 0.0–1.0 |
+
+Optional parameters:
+
+| Param | Description |
+|---|---|
+| `slot` | Insert slot index, 0-7 |
+
+Safe during playback.
 
 ### `list_insert_presets` / `load_insert_preset`
 
@@ -80,7 +112,12 @@ wait for the native window. Poll `get_insert_info` until the window is open.
 
 ### `restart_sandbox`
 
-Restart the sandbox for a plugin that has become unhealthy.
+Restart the plugin sandbox. Always rebuilds the full assigned plugin set on a
+new helper, including disabled assigned plugins. A connected helper is not a
+shortcut that skips reload.
+
+Returns `result`: `complete`, `complete_with_exclusions`, `failed`, or
+`refused`. `success` is true only for `complete`.
 
 ### `set_insert_hardware_io`
 
@@ -105,7 +142,10 @@ Optional parameters:
 
 ### `set_insert_midi_output`
 
-Configure the device and channel for a MIDI Out insert. Requires stopped transport.
+Configure the device, channel, timing, Audio Return, and live MIDI feedback
+protection for a MIDI Out insert.
+Requires stopped transport and no pending MIDI clip render. A refused edit
+leaves the saved route unchanged.
 
 Required parameters:
 
@@ -121,6 +161,8 @@ Optional parameters:
 | `device_id` | Core MIDI output destination |
 | `channel` | MIDI channel, or `0` to keep source channels |
 | `advance_ms` | Early-send timing compensation |
+| `audio_input_route_id` | Audio Return route; empty clears to None, omission retains it |
+| `feedback_protection` | `off`, `playing_synth`, or `playing_controller`; omission retains it |
 
 ## Sidechains
 

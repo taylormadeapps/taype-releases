@@ -17,6 +17,29 @@ Attack gives the fast 0.1–1 ms range a dedicated third of the knob travel, in
 Small drag movements accumulate between steps, including when moving away from
 the minimum, and the strip and compressor popup use the same response.
 
+## Sidechain
+
+**SIDE-CHAIN** sits immediately left of compressor power in the popup and in
+Taype Comp. It opens a panel; it does not bypass the detector. The button is
+yellow while an external source is selected.
+
+The panel shows the detector after Low Cut, Tilt, High Cut and Gain, with the
+current Threshold drawn across it. **Bass Relief** in the strip, popup and
+Taype Comp body remains the Low Cut on/off control. The panel sets cutoff
+frequency (20 Hz–10 kHz, stored default 80 Hz). High Cut reaches 30 Hz for
+sub-only keying and is a hard bypass at 20 kHz. Tilt is ±3 dB/octave around
+600 Hz: turning it up lowers the threshold line at the high end, so highs
+trigger earlier. Gain is ±24 dB on the detector only.
+
+On the stock compressor, choose **Internal** (this track after EQ) or another
+regular track. Buses and master are not sources. The selected track is keyed
+from its raw input, before trim, EQ, compressor, inserts and fader. Routing
+belongs to the reel, not to compressor presets.
+
+Taype Comp shows read-only **Internal** or **External** from its sidechain
+input bus. Host routing stays in TayPE's plugin chrome, or the host's own
+sidechain controls outside TayPE.
+
 ## Soft Clipping
 
 Use **clip** beneath the popup meters, between AG/PK and WET, to catch short
@@ -79,7 +102,7 @@ Use the four ticked switches beneath the graph to choose what is visible:
 - **IN:** input before compression, shown as a white fill when viewed alone.
 - **OUT:** blue output with a thin blue line along its top edge, measured after
   Makeup and the wet/dry blend. With IN visible, only output above input is
-  translucent; overlapping output is solid blue. Input above output stays grey.
+  translucent; overlapping output is denser blue. Input above output stays grey.
 - **DETECTOR:** green level driving compression after Bass Relief. It follows
   the selected mode: FET peak, VCA RMS, or OPTO's slower, quantised RMS.
 - **GR:** red gain reduction actually applied by the compressor, read against
@@ -87,7 +110,7 @@ Use the four ticked switches beneath the graph to choose what is visible:
 
 With IN and OUT both on, grey input is drawn first and blue output is drawn
 over it. Transparency applies only to output above input; output overlapping
-input is solid blue, and input above output stays grey. There is no separate
+input is denser blue, and input above output stays grey. There is no separate
 difference shading. The thin blue output line stays visible over the fills.
 IN alone shows the complete neutral input fill; OUT alone shows
 the complete blue output fill. Detector and GR remain visible over the fills.

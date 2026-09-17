@@ -40,6 +40,7 @@ The first audio call takes no parameters. Its response includes:
 - `transport_disposition`: `not_owned`, `pending`, `applied`, or `failed`
 - `error`: a stable finalisation error name
 - `clips`: committed clip details when complete
+- `trailing_partial_omitted`: `true` when Discard Incomplete Takes omitted a trailing partial lap after at least one complete lap. This is not a recording defect
 
 `transport_disposition` reports the post-settlement transport action separately
 from take settlement. `not_owned` means a completion callback or late observer
