@@ -58,7 +58,9 @@ from two different layouts.
 
 Automation View changes what the timeline shows and what Record means. It does
 not switch automation playback on or off. Existing automation plays during
-normal playback and during ordinary audio recording.
+normal playback and during ordinary audio recording. Track-header Record is
+hidden while Automation View is on, because capture does not need a track
+armed. Mixer Record is unchanged.
 
 Mixer and channel-strip controls follow their automated values during playback
 and when you move the stopped playhead, so the control display agrees with the
@@ -74,6 +76,12 @@ parameters reported by loaded audio plug-ins. Monitor, routing, track
 structure, plug-in rack changes and controls that rebuild the audio graph are
 not automation targets. Untouched parameters keep their existing automation or
 static value.
+
+Count-in is live, not written. You can move a control during the count-in;
+existing automation on that control stops following you, and the move is not
+recorded until punch-in. If you touched it during count-in, TayPE writes the
+first point at punch-in from the last value you left it at. If you stop before
+punch-in, nothing is committed.
 
 A powered-off lane is never captured. Moving its control during an automation
 pass behaves like an ordinary mix edit: the stored value changes and no points
