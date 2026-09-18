@@ -6,8 +6,9 @@ channels TayPE presents for recording, monitoring and external hardware.
 ## Audio Devices
 
 Choose the output device first. Interfaces with separate input and output
-devices also show an **Input device** selector. The sample rate and buffer size
-choices come from the selected hardware.
+devices also show an **Input device** selector. Sample rate choices come from
+the selected hardware. The buffer size menu lists the power-of-two sizes that
+hardware offers.
 
 Press **Apply Audio Changes** after changing the device or routing setup. TayPE
 keeps the current setup until you apply the staged choices.
