@@ -105,11 +105,17 @@ in Audio Preferences only for a measured diagnostic session.
 
 If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
 not started delivering the callbacks required to process sound, or an
-established callback path has stopped. Playback, recording and monitoring
-remain unavailable instead of running from an inaccurate software clock; any
-active MON state is cleared when recovery fails. Choose **Open Preferences** to
-check or reapply the device, or **Submit Feedback** to send the failure details
-for investigation.
+established callback path has stopped. Playback, recording and live input
+monitoring remain unavailable instead of running from an inaccurate software
+clock. Track and comp-bus MON are turned off; ordinary bus MON stays on so
+child audio still reaches the mix when the device comes back.
+
+Closing the laptop lid is a common cause. If the same device is still available
+when you open the lid, TayPE tries to resume it without changing your audio
+settings. If the dialog is still showing, open **Preferences** and press
+**Apply Audio Changes** even if you have not changed anything — that reopens
+the current device. **Submit Feedback** sends the failure details for
+investigation.
 
 If a preferred device is unplugged, TayPE keeps running on whatever is still
 available and labels the missing choice as unplugged with that live fallback.
