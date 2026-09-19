@@ -23,6 +23,7 @@ MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
 
 ## Community
 
+- **Made in Taype:** [taype.ruminantaudioworks.com/made-in-taype](https://taype.ruminantaudioworks.com/made-in-taype/)
 - **Community:** [r/taype](https://www.reddit.com/r/taype/)
 - **Bug reports:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=bug-report.md)
 - **Feature requests:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=feature-request.md)
