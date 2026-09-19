@@ -946,12 +946,19 @@ dialog#screenshot-zoom img {
     text-align: center;
 }
 
+.saying-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 2.5rem;
+    max-width: 920px;
+    margin: 2rem auto 0;
+    align-items: start;
+}
+
 .saying-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 420px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -1232,6 +1239,10 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 0.65rem;
+    }
+    .saying-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 }
 
@@ -1605,18 +1616,32 @@ footer {
 
 <section class="saying" id="they-say">
     <h2 id="saying-heading">They say</h2>
-    <article class="saying-card">
-        <a class="saying-photo-link" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">
-            <picture>
-                <source type="image/webp" srcset="/assets/img/made-in-taype/charles-goodan-320.webp 320w, /assets/img/made-in-taype/charles-goodan-640.webp 640w, /assets/img/made-in-taype/charles-goodan-720.webp 720w" sizes="148px">
-                <img id="saying-photo" src="/assets/img/made-in-taype/charles-goodan-320.jpg" srcset="/assets/img/made-in-taype/charles-goodan-320.jpg 320w, /assets/img/made-in-taype/charles-goodan-640.jpg 640w, /assets/img/made-in-taype/charles-goodan-720.jpg 720w" sizes="148px" alt="Charles Goodan" width="320" height="320" loading="lazy" decoding="async">
-            </picture>
-        </a>
-        <blockquote id="saying-quote">“When I don’t feel like using a DAW, I use Taype.”</blockquote>
-        <p class="saying-name"><a id="saying-name" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">Charles Goodan</a></p>
-        <p id="saying-credit" class="saying-credit">Grammy, Album of the Year — Supernatural by Santana, Producer</p>
-        <p id="saying-credits" class="saying-credits">Santana, Dust Brothers, The Rolling Stones, Beck, Fight Club, Hanson, Linkin Park, Morphine, Scissors for Lefty, Harper Simon, Garfunkel and Oates</p>
-    </article>
+    <div class="saying-grid">
+        <article class="saying-card">
+            <a class="saying-photo-link" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/made-in-taype/charles-goodan-320.webp 320w, /assets/img/made-in-taype/charles-goodan-640.webp 640w, /assets/img/made-in-taype/charles-goodan-720.webp 720w" sizes="148px">
+                    <img id="saying-photo" src="/assets/img/made-in-taype/charles-goodan-320.jpg" srcset="/assets/img/made-in-taype/charles-goodan-320.jpg 320w, /assets/img/made-in-taype/charles-goodan-640.jpg 640w, /assets/img/made-in-taype/charles-goodan-720.jpg 720w" sizes="148px" alt="Charles Goodan" width="320" height="320" loading="lazy" decoding="async">
+                </picture>
+            </a>
+            <blockquote id="saying-quote">“When I don’t feel like using a DAW, I use Taype.”</blockquote>
+            <p class="saying-name"><a id="saying-name" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">Charles Goodan</a></p>
+            <p id="saying-credit" class="saying-credit">Grammy, Album of the Year — Supernatural by Santana, Producer</p>
+            <p id="saying-credits" class="saying-credits">Santana, Dust Brothers, The Rolling Stones, Beck, Fight Club, Hanson, Linkin Park, Morphine, Scissors for Lefty, Harper Simon, Garfunkel and Oates</p>
+        </article>
+        <article class="saying-card">
+            <a class="saying-photo-link" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/made-in-taype/the-rugged-320.webp 320w, /assets/img/made-in-taype/the-rugged-640.webp 640w, /assets/img/made-in-taype/the-rugged-720.webp 720w" sizes="148px">
+                    <img src="/assets/img/made-in-taype/the-rugged-320.jpg" srcset="/assets/img/made-in-taype/the-rugged-320.jpg 320w, /assets/img/made-in-taype/the-rugged-640.jpg 640w, /assets/img/made-in-taype/the-rugged-720.jpg 720w" sizes="148px" alt="The Rugged" width="320" height="320" loading="lazy" decoding="async">
+                </picture>
+            </a>
+            <blockquote id="saying-rugged-quote">“TAYPE feels like somebody figured out how to bottle the sonics and visual language of the golden eras of recording, then wire it into a modern workflow. You get the warmth, character, and tactile vibe that made those records special, without giving up the speed, flexibility, and precision we expect from today’s technology. It’s nostalgia without the limitations — and that’s a pretty damn cool place to make music.”</blockquote>
+            <p class="saying-name"><a id="saying-rugged-name" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">The Rugged</a></p>
+            <p id="saying-rugged-credit" class="saying-credit">Producer · Artist · Bassist</p>
+            <p id="saying-rugged-credits" class="saying-credits">Official Biz, Brownmark (Prince &amp; The Revolution), Sananda Maitreya (formerly Terence Trent D’Arby)</p>
+        </article>
+    </div>
 </section>
 
 <hr class="section-divider">
