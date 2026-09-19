@@ -136,10 +136,10 @@ the switches disabled, preserving the settings file. Repair the file named in
 the warning, then close and reopen all Comp editors. A save failure also produces
 a warning: your current choices still apply, but may be lost when the editors close.
 
-## Log Release
+## Release Mode
 
-Log-style release movement keeps compression recovery more musical at heavy settings. It is especially useful on buses and material with changing density.
+The release-mode switch starts at **OFF**: recovery follows the Release knob only. **LAZY** holds deeper gain reduction longer, which suits buses and dense material. **KEEN** recovers faster from deep reduction, then eases into the tail.
 
 ## Default State
 
-The master bus compressor starts enabled in a new default reel. Regular track compressors start bypassed until you choose to use them.
+The master bus compressor starts enabled in a new default reel. Regular track compressors start bypassed until you choose to use them. The release-mode switch starts at OFF on new compressors.

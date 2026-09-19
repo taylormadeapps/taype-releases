@@ -19,7 +19,7 @@ In search results, Shift-click selects a visible range and Command-click toggles
 Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
 
 Click any populated insert row to open its plug-in window. Whether a disabled
-plug-in can open one depends on **Hold disabled plug-ins in memory** in the
+plug-in can open one depends on **Keep disabled plug-ins hot** in the
 Performance Monitor: with it on a disabled plug-in stays loaded and its window
 still opens, and with it off there is no loaded plug-in to show, so disabling
 closes the window and clicking the row does nothing until you enable it again.
@@ -132,7 +132,7 @@ When an insert has a non-default TayPE plug-in preset associated with it, the in
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable removes the insert from the processing graph while keeping the assignment and saved state in the reel.
 
-By default, disabling also releases the plug-in from memory, and enabling loads it again with its settings. On a machine with plenty of RAM you can trade that memory back for instant re-enabling by turning on **Hold disabled plug-ins in memory** in the Performance Monitor. Disabling works during playback either way; releasing a plug-in mid-playback cuts its reverb or delay tail short. A released plug-in has no window, so you cannot open its editor until it is enabled again.
+By default, disabling also releases the plug-in from memory, and enabling loads it again with its settings. On a machine with plenty of RAM you can trade that memory back for instant re-enabling by turning on **Keep disabled plug-ins hot** in the Performance Monitor. Disabling works during playback either way; releasing a plug-in mid-playback cuts its reverb or delay tail short. A released plug-in has no window, so you cannot open its editor until it is enabled again.
 Opening a reel follows the same setting. With it off, plug-ins that were disabled when you saved are not loaded at all, so a large session opens using less memory and enabling one loads it then.
 
 TayPE uses each insert's reported latency to align clips, instruments, buses,
