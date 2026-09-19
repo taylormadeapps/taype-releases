@@ -16,6 +16,16 @@ matching output delay that keeps the Master and Listen Bus outputs
 sample-aligned. These figures describe what reaches hardware; they do not add a
 second round of playback compensation to individual tracks.
 
+## Keep Disabled Plug-ins Hot
+
+**Keep disabled plug-ins hot** decides what happens to a plug-in you disable. It is off by default and applies to every reel on this machine.
+
+Off, disabling a plug-in releases it and returns its memory to the system. Enabling it again reloads the plug-in with the settings it had. This keeps a large session's memory use down, which matters most when the plug-ins you are running are sample libraries or convolution reverbs.
+
+On, a disabled plug-in stays loaded and re-enabling is instant, at the cost of holding its memory for as long as the reel is open. If the machine runs short of memory, macOS starts compressing and swapping, and audio can drop out even though processing load looks fine.
+
+Turning the setting off also releases any disabled plug-ins that are still loaded. Turning it on loads any disabled plug-ins that were released, so they stay hot without being in the mix. If several need loading or unloading, TayPE shows a progress window.
+
 ## ALAP Bus Ordering
 
 **ALAP bus ordering** — as late as possible — is a diagnostic A/B control for

@@ -861,6 +861,85 @@ dialog#screenshot-zoom img {
     border: 0;
 }
 
+/* ---- Made in Taype ---- */
+
+.made-in-taype {
+    text-align: center;
+}
+
+.made-in-taype-intro {
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.made-in-taype-card {
+    display: grid;
+    grid-template-columns: 168px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    text-align: left;
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.made-in-taype-card picture,
+.made-in-taype-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.made-in-taype-card img {
+    border: 1px solid var(--border);
+}
+
+.made-in-taype-card h3 {
+    color: var(--text);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+}
+
+.made-in-taype-artist {
+    color: var(--brass);
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+}
+
+.made-in-taype-album,
+.made-in-taype-credit {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+.made-in-taype-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.25rem;
+    margin-top: 1rem;
+}
+
+.made-in-taype .link-arrow,
+.made-in-taype-more {
+    color: var(--brass);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.made-in-taype-more {
+    display: inline-flex;
+    margin-top: 1.5rem;
+}
+
 /* ---- Community ---- */
 
 .community-grid {
@@ -1072,6 +1151,21 @@ footer {
     .tape-sessions-copy { max-width: none; }
     .tape-sessions-copy h3 { text-align: center; }
     .community-grid { grid-template-columns: 1fr; }
+    .made-in-taype-card {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .made-in-taype-card picture,
+    .made-in-taype-card img {
+        max-width: 220px;
+    }
+    .made-in-taype-actions {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+    }
 }
 
 /* ---- Gregism (rotating tagline) ---- */
@@ -1156,6 +1250,7 @@ footer {
             <a id="nav-pricing" href="#pricing">Pricing</a>
             <a id="nav-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
             <a id="nav-community" href="#community">Community</a>
+            <a id="nav-made-in-taype" href="/made-in-taype/">Made in Taype</a>
             <a id="nav-download-link" href="#download" class="nav-cta">Get TayPE</a>
         </div>
     </div>
@@ -1432,6 +1527,36 @@ footer {
     <p id="pricing-ownership-note" class="pricing-ownership-note">
         Your licensed Eras remain yours. They do not stop working when support coverage ends.
     </p>
+</section>
+
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- Made in Taype                                                -->
+<!-- ============================================================ -->
+
+<section class="made-in-taype" id="made-in-taype">
+    <h2 id="made-in-taype-heading">Made in Taype</h2>
+    <p id="made-in-taype-copy" class="made-in-taype-intro">Works made in TayPE.</p>
+    <article class="made-in-taype-card">
+        <a href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/made-in-taype/wudeva-320.webp 320w, /assets/img/made-in-taype/wudeva-640.webp 640w, /assets/img/made-in-taype/wudeva-720.webp 720w" sizes="168px">
+                <img id="made-in-taype-cover" src="/assets/img/made-in-taype/wudeva-320.jpg" srcset="/assets/img/made-in-taype/wudeva-320.jpg 320w, /assets/img/made-in-taype/wudeva-640.jpg 640w, /assets/img/made-in-taype/wudeva-720.jpg 720w" sizes="168px" alt="Cover of INstruMENTALITY Vol. 1 by The Rugged" width="320" height="320" loading="lazy" decoding="async">
+            </picture>
+        </a>
+        <div>
+            <h3>Wudeva</h3>
+            <p class="made-in-taype-artist">The Rugged</p>
+            <p class="made-in-taype-album">From INstruMENTALITY Vol. 1</p>
+            <p id="made-in-taype-credit" class="made-in-taype-credit">Mixed in TayPE with Vanessa</p>
+            <div class="made-in-taype-actions">
+                <a id="made-in-taype-album-link" class="link-arrow" href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">Get the album &rarr;</a>
+                <a id="made-in-taype-listen" class="link-arrow" href="https://music.youtube.com/watch?v=xz0eMapY_00" target="_blank" rel="noopener">Listen on YouTube Music &rarr;</a>
+            </div>
+        </div>
+    </article>
+    <a id="made-in-taype-more" class="made-in-taype-more" href="/made-in-taype/">See the catalogue &rarr;</a>
 </section>
 
 <hr class="section-divider">

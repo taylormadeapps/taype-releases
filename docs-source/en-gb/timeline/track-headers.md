@@ -15,7 +15,8 @@ Track headers hold the controls you need before reaching for the mixer.
   VSTi window is open, or only while the playhead is inside the clip if just
   the MIDI editor is open. Opening those windows does not turn monitoring on;
   with MON off, clip audio keeps playing.
-* **Record**: arm the track for recording.
+* **Record**: arm the track for audio recording. Hidden in Automation View,
+  because automation capture does not use record-arm. Mixer Record stays.
 * **Input / Output**: choose routing.
 * **Bus**: turn a track into a bus or comp group where supported.
 

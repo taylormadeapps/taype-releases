@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Made in Taype - Works made in TayPE</title>
+<meta name="description" content="Works made in TayPE. Wudeva by The Rugged, mixed in TayPE with Vanessa.">
+<meta property="og:title" content="Made in Taype">
+<meta property="og:description" content="Works made in TayPE.">
+<meta property="og:url" content="https://taype.ruminantaudioworks.com/made-in-taype/">
+<meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/made-in-taype/wudeva-720.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/assets/img/logo-square-256.png">
+<link rel="canonical" href="https://taype.ruminantaudioworks.com/made-in-taype/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0e0d0b;
+    --panel: #1b1813;
+    --surface: #26211a;
+    --text: #f5f1e8;
+    --text-muted: #e2d8c7;
+    --text-dim: #a79d8b;
+    --brass: #f0c96a;
+    --brass-hover: #e0a84e;
+    --border: #2a2520;
+    --heading-font: "Press Start 2P", monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--brass);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover { color: var(--brass-hover); }
+
+a:focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: rgba(14, 13, 11, 0.92);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-brand img {
+    width: 48px;
+    height: 48px;
+    margin: -8px 0;
+}
+
+.nav-brand span {
+    font-family: var(--heading-font);
+    font-size: 14px;
+    color: var(--brass);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    color: var(--brass);
+}
+
+.nav-cta {
+    background: var(--brass);
+    color: var(--bg) !important;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.8rem !important;
+}
+
+.nav-cta:hover {
+    background: var(--brass-hover);
+    color: var(--bg) !important;
+}
+
+main {
+    width: min(1000px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 7rem 0 4rem;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+    font-weight: 400;
+    color: var(--brass);
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.record {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 100%;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.record-header {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.record picture,
+.record img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.record img {
+    border: 1px solid var(--border);
+}
+
+.record h2 {
+    color: var(--text);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+}
+
+.record-artist {
+    color: var(--brass);
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.85rem;
+}
+
+.record-meta {
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+.record-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.25rem;
+    margin: 1.1rem 0 1.35rem;
+}
+
+.record-actions a {
+    font-weight: 700;
+}
+
+.record-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.record-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-brand a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+}
+
+.footer-brand img {
+    height: 88px;
+    width: auto;
+}
+
+.footer-brand span {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover { color: var(--brass); }
+
+.footer-copy {
+    color: var(--text-dim);
+    font-size: 0.75rem;
+}
+
+.footer-copy a {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-color: rgba(240, 201, 106, 0.45);
+    text-underline-offset: 3px;
+}
+
+.footer-copy a:hover,
+.footer-copy a:focus {
+    color: var(--brass);
+}
+
+@media (max-width: 720px) {
+    nav {
+        height: auto;
+        min-height: 56px;
+        padding: 0.65rem 1rem 0.75rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.55rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.55rem 0.7rem;
+    }
+
+    .nav-links a { font-size: 0.75rem; }
+
+    main {
+        width: min(1000px, calc(100% - 2.5rem));
+        padding: 8.5rem 0 3rem;
+    }
+
+    .record,
+    .record-header,
+    .record-video {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .record-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .record-header > div {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .record {
+        padding: 1.15rem;
+    }
+
+    .record-meta {
+        overflow-wrap: break-word;
+    }
+
+    .record picture,
+    .record img {
+        max-width: 220px;
+    }
+
+    .record-actions {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+    }
+}
+</style>
+</head>
+<body>
+<nav aria-label="Primary">
+    <a href="/" class="nav-brand">
+        <img src="/assets/img/logo-square-64.png" srcset="/assets/img/logo-square-64.png 64w, /assets/img/logo-square-128.png 128w" sizes="48px" alt="TayPE logo" width="48" height="48" decoding="async">
+        <span>TayPE</span>
+    </a>
+    <div class="nav-links">
+        <a href="/#philosophy">Features</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank" rel="noopener">Docs</a>
+        <a href="/#community">Community</a>
+        <a href="/made-in-taype/" aria-current="page">Made in Taype</a>
+        <a class="nav-cta" href="/#download">Get TayPE</a>
+    </div>
+</nav>
+
+<main>
+    <h1>Made in Taype</h1>
+    <p class="intro">Works made in TayPE.</p>
+
+    <article class="record">
+        <div class="record-header">
+            <a href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/made-in-taype/wudeva-320.webp 320w, /assets/img/made-in-taype/wudeva-640.webp 640w, /assets/img/made-in-taype/wudeva-720.webp 720w" sizes="(max-width: 720px) 260px, 280px">
+                    <img src="/assets/img/made-in-taype/wudeva-640.jpg" srcset="/assets/img/made-in-taype/wudeva-320.jpg 320w, /assets/img/made-in-taype/wudeva-640.jpg 640w, /assets/img/made-in-taype/wudeva-720.jpg 720w" sizes="(max-width: 720px) 260px, 280px" alt="Cover of INstruMENTALITY Vol. 1 by The Rugged" width="640" height="640" decoding="async">
+                </picture>
+            </a>
+            <div>
+                <h2>Wudeva</h2>
+                <p class="record-artist">The Rugged</p>
+                <p class="record-meta">From INstruMENTALITY Vol. 1</p>
+                <p class="record-meta">Mixed in TayPE with Vanessa</p>
+                <p class="record-meta">Released 18 September 2026</p>
+                <div class="record-actions">
+                    <a href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">Get the album &rarr;</a>
+                    <a href="https://music.youtube.com/watch?v=xz0eMapY_00" target="_blank" rel="noopener">Listen on YouTube Music &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="record-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/xz0eMapY_00" title="Wudeva by The Rugged" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="footer-brand">
+        <a href="/ruminant-audio-works/" aria-label="Ruminant Audio Works about page">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/raw-logo-160.webp 160w, /assets/img/raw-logo-240.webp 240w, /assets/img/raw-logo-320.webp 320w" sizes="72px">
+                <img src="/assets/img/raw-logo-160.png" srcset="/assets/img/raw-logo-160.png 160w, /assets/img/raw-logo-240.png 240w, /assets/img/raw-logo-320.png 320w" sizes="72px" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async">
+            </picture>
+            <span>Ruminant Audio Works</span>
+        </a>
+    </div>
+    <div class="footer-links">
+        <a href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank" rel="noopener">Docs</a>
+        <a href="https://ruminantaudioworks.lemonsqueezy.com/affiliates" target="_blank" rel="noopener noreferrer">Affiliates</a>
+        <a href="/terms/">T&amp;Cs</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/site-data/">Cookie Policy</a>
+    </div>
+    <p class="footer-copy">
+        &copy; 2026 <a href="/ruminant-audio-works/">Ruminant Audio Works</a>. TayPE is a product of <a href="/ruminant-audio-works/">Ruminant Audio Works</a> Ltd. Company No. 16978494. Registered in England and Wales.
+    </p>
+</footer>
+</body>
+</html>
