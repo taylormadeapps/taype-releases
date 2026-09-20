@@ -82,7 +82,7 @@ When `include_parameters` is true and the catalogue is ready, each parameter rep
 
 ### `set_insert_parameter`
 
-Set one insert's stored/static plug-in parameter by stable id. This writes the base value. It does not create or rewrite an automation lane; use `set_automation_points` with `slot` for that.
+Set one insert's stored/static plug-in parameter by stable id. This writes the base value. It does not create or rewrite an automation lane; use the structured plug-in target returned by `list_automation_targets` with `set_automation_points` for that.
 
 Required parameters:
 
