@@ -327,7 +327,15 @@ Clip gain adjusts the clip before the channel strip. With clips selected, **Fade
 
 ## Clipboard
 
-Copy and paste clips between compatible tracks. TayPE preserves timing and clip data where the destination supports it.
+Copy and paste clips as a group. A normal paste returns every clip to its
+source track and preserves the group's relative timing. Existing track
+selection from before the copy does not redirect it.
+
+To paste onto another compatible track stack, copy the clips and then click
+the destination track header before pasting. The selected destination receives
+the topmost copied track, and TayPE preserves the copied track gaps below it.
+If there are not enough destination tracks, TayPE warns you and leaves the reel
+unchanged.
 
 ## ARA2
 
