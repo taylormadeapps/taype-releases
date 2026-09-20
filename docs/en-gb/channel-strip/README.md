@@ -36,7 +36,12 @@ The RTA graph draws only what is visible. If the analyser falls below the visibl
 
 ## Sends
 
-The Sends section sits with Inserts because both are routing decisions. The track-level **POST / PRE** button moves sends between post-fader and pre-fader taps. Send prep can add low cut, high cut, and predelay before a send reaches its target bus. Comping buses are not send or output destinations; they only collect their own take tracks.
+The Sends section sits with Inserts because both are routing decisions. Send
+level runs from off to +6 dB in both the mixer and Automation View. The
+track-level **POST / PRE** button moves sends between post-fader and pre-fader
+taps. Send prep can add low cut, high cut, and predelay before a send reaches
+its target bus. Comping buses are not send or output destinations; they only
+collect their own take tracks.
 
 ## Strip Header
 
