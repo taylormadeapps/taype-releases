@@ -20,7 +20,8 @@ Create a new cut.
 
 ### `duplicate_cut`
 
-Duplicate an existing cut.
+Duplicate an existing cut. Referenced-Cut marker ranges keep their span but
+become No Cut ranges in the non-Main duplicate.
 
 ### `rename_cut`
 
@@ -48,7 +49,7 @@ Optional parameters:
 
 ### `set_marker`
 
-Update a marker's position, name, colour, or Main Cut Cut assignment. This is allowed during playback but not while recording.
+Update a marker's position, name, colour, Cut-local No Cut range, or Main Cut Cut assignment. This is allowed during playback but not while recording.
 
 Required parameters:
 
@@ -69,7 +70,7 @@ Optional parameters:
 
 ### `set_marker_cut_assignment`
 
-Set a Main Cut marker to `disable`, `no_cut`, or an assigned non-Main Cut. Assigning a Cut renames the marker to the Cut name, adding a number when needed to avoid duplicating an existing marker name. `range_end_seconds` can resize the explicit range; it clamps at the next ranged marker but may pass ordinary point markers.
+Set a marker to `disable` or `no_cut` on any Cut, or assign a non-Main Cut while Main is selected. Assigning a Cut renames the marker to the Cut name, adding a number when needed to avoid duplicating an existing marker name. `range_end_seconds` can resize the explicit range on any Cut; it clamps at the next ranged marker but may pass ordinary point markers.
 
 ### `populate_marker_from_cut`
 

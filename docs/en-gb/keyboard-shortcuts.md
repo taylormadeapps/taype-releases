@@ -108,7 +108,7 @@ quit process directly.
 | Toggle loop | Cmd+L |
 | Set loop from selection | L |
 | Add marker at playhead | / |
-| Add or convert a No Cut range at playhead (Main Cut only) | Shift+/ |
+| Add or convert a Cut-local No Cut range at playhead | Shift+/ |
 | Previous marker or loop brace; in the MIDI editor, also clip start | , |
 | Next marker or loop brace; in the MIDI editor, also clip end | . |
 | Go to markers 1-10 | 1-9, 0 |
