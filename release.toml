@@ -3,51 +3,104 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.3.2"
-date = "2026-09-08"
-commit = "00943e47"
+version = "1.4.0"
+date = "2026-09-21"
+commit = "02db461c"
 
 summary = """\
-Added per-Cut speed commits with atomic clip stretching, plus global varispeed controls and tempo-aware speed editing.
-Offline renders now honour automation.
-Improved plug-in stability with guided sandbox recovery and safer VST3 shutdown.
-Made stock plug-in reel identifiers portable across installations.
-Fixed Dub recording so existing material continues playing while a new layer is recorded.
-Preserved count-in clicks, restored loop-end playback, and enabled MIDI recording on External MIDI Out tracks.
-Added the IO Station Mothership master-strip controller profile.
-Expanded the compressor with signal history, visibility controls, oversampled soft clipping, VST wet/dry control, clearer comparison views, and input/pre/post peak markers.
-Fixed pitch-processing dialogs so they refresh when rendering completes.
+External MIDI Out records and renders the instrument’s live audio into the same clip.
+Channel compressor: sidechain routing, detector tilt, and history display.
+MIDI is stored and rendered at high resolution.
+Improved plug-in crash handling: the culprit is identified, visually marked, and isolated.
+Disabled plug-ins unload by default, to reduce memory pressure eating into DSP.
+Improved automation: count-in capture, clearer lane waveforms, and Automation View no longer pinning the arranger fader.
+Multiple tempos and time signatures on the main timeline via Cuts.
+175% and 200% UI scale.
+MIDI notes can be resized from the left edge; MIDI clips can be grown from the arranger trim.
 """
 
-# Verbatim git log since the released v1.3.0 baseline.
+# Verbatim git log since the published v1.3.2 stable release.
 git_log = """\
-500483b6 Track merged taype-releases unstable
-0179e17e Beta checkpoint v1.3.1b2
-2a152ff5 Stabilize Core compressor and send tests
-24cec146 Show compressor pre and post peak markers
-ac4be89e Add compressor input peak marker and ratio-only clip headroom
-3e94c4da Add oversampled compressor clipping and VST wet/dry
-41f55ef1 Stabilize test fixtures, UI automation and run isolation
-6c0e79c5 Clarify compressor input and output comparison fills
-d86f4c17 Improve compressor signal history and global visibility controls
-5aa67761 Support MIDI recording on External MIDI Out tracks
-372c1827 Restore underlying playback during Dub recording
-0b984177 Fix intermittent pre-release test failures
-706629bb Document referenced Cut musical grid design and work plan
-c52b3b53 Beta checkpoint v1.3.1b1
-b4effd51 Add IO Station Mothership master-strip controller profile
-1b3532da Preserve count-in clicks and unblock loop-end playback
-137ffb36 Load local A2 model into isolated Baker-lite benchmarks
-69c98e43 Fix recording test ownership and stop structurally invalid lanes
-3708a695 Correct Ache-Delay tape transition test gain setup
-53fffd24 Refresh pitch dialog on completion and repair core tests
-aa8b7010 Make plugin retirement completion-driven
-9a39fe01 Stop VST3 processing on assigned workers before retirement
-b907357e Fix processed VST3 instance retirement
-368af09a Honor automation in offline renders
-a84c2da2 Make stock plugin reel identifiers portable
-4cc4177a Add guided plugin sandbox recovery
-9ae02551 Add varispeed toggle and tempo-bound speed editing
-3cfd9600 Add per-Cut speed commit and atomic clip stretching
-ab0da77f Track taype-releases v1.3.0
+8d9a0dc8 Merge taype-releases beta branch into unstable
+32b3b792 Fix shutdown rendering and harden test isolation
+5f72e0ae Fix multi-clip paste track targeting
+3d586d24 Allow ranged markers on every Cut
+33a632f8 Backport WaveShell VST3 class resolution fix
+fe17b937 Fix plugin publication recovery and test evidence
+1885deb6 Harden reel persistence around MIDI renders
+6e885dac Define structured MCP automation targets
+2aa90a76 Clamp send automation to mixer ceiling
+dffbafe0 Allow normal audio clips to reveal remaining source
+7034df0f Fix live insert topology publication lifecycle
+6a0565ef Keep quarantined inserts unbound after sandbox restart
+74c8d034 Show reel-load progress for create, duplicate, thin and startup
+03b749ce Instantiate inserts when creating, duplicating, thinning, or unpacking a reel
+7275c83b Beta checkpoint v1.3.3b7
+dba9a18f Align tests with hold-off disable and 30 Hz compressor display
+b32729cd Paint compressor history at 30 Hz with column fills
+5e3897b1 Resume the live audio device after standby without killing bus summing
+16c2e218 Own disabled-insert residency and default compressor release to off
+00a206de Limit Audio Preferences buffer sizes to powers of two
+13c572e2 Release disabled plug-in instances behind a preference
+5582c222 Specify disabled insert residency and its release path
+8c52bba7 Beta checkpoint v1.3.3b6
+e841c978 Recover live sandbox on buffer Apply and retry Failed inserts after Disable
+8a20fb74 Beta checkpoint v1.3.3b5
+8376c31b Fix automation count-in capture and hide header Record in Automation View
+26a1ae80 Keep sandbox restart honest and resume MIDI Discard quit
+10f45032 Allow ARA-only plug-ins an editable menu path
+5dd0f1a9 Point JUCE submodule at the taype fork
+ea40733e Increase automation waveform visibility
+5587a936 Shift compressor history fill toward primary blue
+de2b6920 Bound app-quit sandbox teardown without killing live restart
+32d918a4 Invert compressor sidechain tilt on the threshold line
+7906f543 Keep live sandbox on buffer and device Apply
+27f82071 Beta checkpoint v1.3.3b4
+5eba66b3 Retarget stale tests to current crash-recovery contracts
+d686eada Implement plugin sandbox crash recovery and Failed-slot UX
+f18aee2a Refresh automation-lane static value on plugin default writes
+d0f22a0b Harden plugin support and sandbox recovery
+1e9b02ce Detect OnlyARA plugins, nest the ARA2 menu, and rescan WaveShell
+b2fae934 Allow MIDI clips to grow from the arranger lower-right trim edge
+9dd2a847 Fix Spill follow, aux-send feeds, and tag display
+77524fd4 Keep Automation View overlay from pinning the docked arranger fader
+3c36af67 Allow dragging MIDI note left edges to change duration
+1a5749f7 Own the grid map snapshot and confine MIDI quantise to the note's region
+aa7b6962 Beta checkpoint v1.3.3b3
+3e379b9e Remediate MIDI timing and test evidence
+1c8e22b1 Align offline MIDI renders to plugin latency
+3385b9bd Implement coherent timeline and MIDI timing
+c5c6fd0a Document timeline and MIDI timing contract
+0b2cecc0 Complete MIDI draft lifecycle and note ownership
+96c6942d Harden pre-release harness and app test probes
+79803004 Complete External MIDI returns and specify draft ownership
+6743416e Add External MIDI audio return capture
+9da5cd22 Specify External MIDI audio returns and refine beta notes
+8d2a97f0 Beta checkpoint v1.3.3b2
+19aa4e8e Fix plugin copies, shortcut help and MIDI Out renders
+1833d14e Fix MIDI draft staleness, dropped MCP errors and blocked transitions
+21ecad41 Keep ioStation Mothership Group and treat Prev/Next as group bank
+791fd16f Tighten MCP initialize: protocol 2.0.0, TAYPE_HOME, callsign, personality must-call
+2e2f7c9f Mark MCP agent-workflow spec Done and retire the roadmap live row
+45376fe5 Add MCP agent workflow: MIDI draft, clip audio, plugin values, test-bridge, identity handshake
+a02f1cbe Keep mixer comp-group frames on the full group while scrolling
+8129f2f4 Clip loop braces and mixer comp-group frames off reserved chrome
+2907b43c Rename Master-aligned bus phases to ALAP bus ordering
+1fddba80 Add Mixing Mode specification and docs-map entry
+bfc542f4 Fix ruler overlay when snap does not tile the bar
+567caf1f Add 175% and 200% UI Scale presets
+9a745a2e Add compressor SIDE-CHAIN routing, detector shaping, and callout
+b9d8d71e Fix stopped plugin tails and worker policy controls
+8216aca8 Add master-aligned bus phase scheduling
+ebf6ed47 Revise compressor sidechain panel specification
+31c16ab3 Fix template schema upgrade and keep plugins loaded without a parameter catalogue
+184155f6 Fix asynchronous plug-in load lifecycle
+6fdb385c Implement Listen Bus latency resilience
+67748398 Beta checkpoint v1.3.3b1
+d2028c18 Record Listen Bus and realtime scheduling audit
+0d1f79db Fix stock VST migration and core regressions
+f9c093e0 Match Shift-stretch to resize overlap semantics
+edb4d780 Implement referenced Cut musical grids
+84a346d8 Rewrite referenced Cut grid specification
+e89516de Track taype-releases v1.3.2
 """
