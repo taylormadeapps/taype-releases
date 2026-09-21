@@ -260,7 +260,9 @@ html[dir="rtl"] .lang-select {
 .hero-logo {
     width: min(300px, 64vw);
     height: auto;
-    margin-bottom: 1.25rem;
+    /* Compensate for transparent canvas padding so the visible mark sets the spacing. */
+    margin-top: -2.75rem;
+    margin-bottom: -2.5rem;
     filter: drop-shadow(0 0 60px rgba(240, 201, 106, 0.15));
 }
 
@@ -298,6 +300,10 @@ html[dir="rtl"] .lang-select {
 .hero-manifesto h2,
 .hero-philosophy h2 {
     margin-bottom: 1rem;
+}
+
+.hero-manifesto h2 {
+    white-space: pre-line;
 }
 
 .hero-manifesto p,
@@ -1363,7 +1369,8 @@ footer {
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
     </picture>
     <div class="hero-manifesto">
-        <h2 id="hero-manifesto-heading">Familiar on the surface. Radical underneath.</h2>
+        <h2 id="hero-manifesto-heading">Familiar on the surface.
+Radical underneath.</h2>
         <p id="hero-manifesto-copy-1">Taype takes the familiar language of the recording studio and rebuilds it for a post-technical world. The critical engineering decisions have been made ahead of time, so you can focus on making the record.</p>
         <p id="hero-manifesto-copy-2">It takes a freeze-first approach to software and hardware instruments, with the MIDI embedded in the audio clip, always close at hand. And it’s designed to connect openly with other next-generation tools, rather than replace the human element.</p>
     </div>
