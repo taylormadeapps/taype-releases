@@ -68,6 +68,10 @@ remain available after Stop. Startup misses are included in both the DSP monitor
 and `get_performance`; pressing Play again while already playing does not reset
 them. Plug-in processing peaks use the same reporting window.
 
+The separate process-spike forensic probe is test-only and disabled by default.
+Opening the DSP monitor or enabling ordinary detailed telemetry does not enable it;
+normal DSP timing and deadline-miss reporting remain available.
+
 ### `get_performance`
 
 Return audio-engine performance metrics such as DSP load, render timing,
