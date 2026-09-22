@@ -63,6 +63,11 @@ Return the current multiplier and effective tempo.
 
 ## Performance and Diagnostics
 
+Deadline-miss totals reset on each new Play, including resume from Pause, and
+remain available after Stop. Startup misses are included in both the DSP monitor
+and `get_performance`; pressing Play again while already playing does not reset
+them. Plug-in processing peaks use the same reporting window.
+
 ### `get_performance`
 
 Return audio-engine performance metrics such as DSP load, render timing,
