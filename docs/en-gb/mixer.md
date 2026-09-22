@@ -23,7 +23,7 @@ The first selected track stays the primary track for the docked strip and focuse
 
 ## Channel Order
 
-Mixer strips follow the reel's track order. Ordinary tracks sit together. Bus and master strips open a stronger separator so routing landmarks stand out.
+Mixer strips follow the reel's track order. Ordinary tracks sit together. Bus and master strips open a stronger separator so routing landmarks stand out. Ordinary routing buses use the same separator between adjacent buses as between a bus and a track. Comp buses use ordinary-track spacing, including beside their takes and other comp buses; a neighbouring routing bus still has its separator. The blue comp-group frame remains visible.
 
 Drag a strip title horizontally to change its position. Comp groups follow the
 same rules as the timeline: dragging the comp bus moves its complete child-take
