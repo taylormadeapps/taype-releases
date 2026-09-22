@@ -6,6 +6,9 @@ A reel is TayPE's session bundle: timeline, tracks, clips, routing, plugin state
 
 TayPE saves the working reel continuously. **Save** creates a checkpoint you can return to later.
 
+When you quit while playback is running or paused, TayPE stops transport before it creates the session-end checkpoint.
+If TayPE reports that a reel save needs attention, it remains open with the current session available. Open **Tools > Session Log** for the exact cause; do not assume the reel has been lost.
+
 ## Checkpoints
 
 Create checkpoints before risky edits, big sound-design moves, or cleanup passes. Use the history view to inspect and restore a checkpoint.
