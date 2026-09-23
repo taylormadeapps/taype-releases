@@ -50,9 +50,9 @@ Select **Offline** in the Print Mix, Print Loop or Print Marker Ranges export
 window to show **use 4x plugin oversampling**. This optional setting processes
 each uninterrupted audio-effect plugin section at 192 kHz, then returns its
 audio to TayPE’s 48 kHz engine. It also applies to offline stems and JD’s Law
-passes. Instruments, MIDI-accepting plugins, hardware handling and ToTaype’s
-built-in processing remain unchanged. The output file’s sample rate does not
-change.
+passes. MIDI-capable audio effects are included; instruments, hardware handling
+and ToTaype’s built-in processing remain unchanged. The output file’s sample
+rate does not change.
 
 TayPE remembers this choice globally, including when you cancel the dialog.
 The checkbox is hidden in Live mode. It has no effect on realtime prints,

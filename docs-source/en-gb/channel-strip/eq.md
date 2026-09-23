@@ -14,6 +14,8 @@ Each band has gain and frequency controls. The strip uses compact controls; the 
 
 The EQ Visualiser can show input and output spectrum traces plus the EQ response. Traces disappear when they fall below the visible graph range; they do not draw a false flat line along the bottom.
 
+Use the graph's **+** and **−** buttons to change its vertical scale. TayPE remembers this scale globally across tracks, reels and app restarts.
+
 The floating EQ Visualiser also carries the dynamic EQ controls. `THR` sets the
 base detector threshold at 600 Hz. `TILT` angles that threshold around the same
 pivot: positive tilt makes higher bands react sooner and lower bands react
