@@ -44,6 +44,21 @@ pass in real time; Offline mode performs the same sequence without sending it
 to the speakers. Any solo state that existed before printing is restored when
 the operation finishes or is cancelled.
 
+## Offline plugin oversampling
+
+Select **Offline** in the Print Mix, Print Loop or Print Marker Ranges export
+window to show **use 4x plugin oversampling**. This optional setting processes
+each uninterrupted audio-effect plugin section at 192 kHz, then returns its
+audio to TayPE’s 48 kHz engine. It also applies to offline stems and JD’s Law
+passes. Instruments, MIDI-accepting plugins, hardware handling and ToTaype’s
+built-in processing remain unchanged. The output file’s sample rate does not
+change.
+
+TayPE remembers this choice globally, including when you cancel the dialog.
+The checkbox is hidden in Live mode. It has no effect on realtime prints,
+playback or tracking. Oversampling can reduce aliasing from nonlinear plugins;
+its extra processing cost applies only while printing offline.
+
 ## Related Timeline Workflows
 
 * [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
