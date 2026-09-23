@@ -59,6 +59,17 @@ The checkbox is hidden in Live mode. It has no effect on realtime prints,
 playback or tracking. Oversampling can reduce aliasing from nonlinear plugins;
 its extra processing cost applies only while printing offline.
 
+## Plugin oversampling for bounce
+
+**Preferences → General → use 4x plugin oversampling for bounce** enables
+192 kHz processing around each uninterrupted audio-effect plugin section
+during **Bounce Clips to Stem** and **Bounce Tracks to Stem**. It uses the
+same 4x plugin oversampling as offline Print; the bounced file stays at 48 kHz.
+
+The choice is saved globally, separately from the Print dialog setting, and
+defaults to off. It does not affect synth rendering, comp flatten, Bounce
+External, playback or tracking.
+
 ## Related Timeline Workflows
 
 * [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
