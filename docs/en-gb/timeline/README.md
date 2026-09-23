@@ -75,3 +75,9 @@ External, playback or tracking.
 * [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
 * [Varispeed](varispeed.md): rehearse or record at a different playback speed while preserving pitch.
 * [Video Reference](video-reference.md): keep one picture reference in sync with the reel for scoring work.
+
+## Print tails
+
+**Print tails** in the export window defaults to on. TayPE remembers the choice globally, even if you cancel. It applies to Print Mix, Print Loop and Print Marker Ranges, in Live and Offline mode, including master files, stems and JD’s Law.
+
+Turn it off for an exact end with no added fade or tail: Mix stops at the last clip end, excluding muted and archived tracks; Loop stops at the right brace; Marker Ranges stop at each range end. Mix adds no extra second or extension to a later loop brace. Turning it on preserves the existing tail behaviour.
