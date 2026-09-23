@@ -6,6 +6,8 @@ A reel is TayPE's session bundle: timeline, tracks, clips, routing, plugin state
 
 TayPE saves the working reel continuously. **Save** creates a checkpoint you can return to later.
 
+If a media file has been moved or deleted outside TayPE, saving still preserves the reel and its media reference. Restore the file to its original location to make the clip available again.
+
 When you quit while playback is running or paused, TayPE stops transport before it creates the session-end checkpoint.
 If TayPE reports that a reel save needs attention, it remains open with the current session available. Open **Tools > Session Log** for the exact cause; do not assume the reel has been lost.
 
