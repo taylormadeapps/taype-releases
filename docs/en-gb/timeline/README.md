@@ -43,6 +43,9 @@ ordinary full mix once and then prints the wet stems. Live mode plays every
 pass in real time; Offline mode performs the same sequence without sending it
 to the speakers. Any solo state that existed before printing is restored when
 the operation finishes or is cancelled.
+If an Offline pass finishes but TayPE cannot restore realtime processing, it
+keeps the completed WAV files, stops the remaining passes and any requested
+conversion, and shows the saved file paths with the error.
 
 ## Offline plugin oversampling
 

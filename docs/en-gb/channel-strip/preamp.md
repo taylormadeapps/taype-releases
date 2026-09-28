@@ -40,6 +40,8 @@ Scalable models choose the tier that best matches that request. Because each pac
 Stop playback, recording, and printing before changing quality. TayPE prepares a complete replacement NAM graph and only saves the new preference when every active model is ready. If loading fails, the previous quality remains active.
 
 **Use Quality for Offline Print** is on by default. Offline master, loop, stem, and named-marker prints temporarily use **Quality** for both preamp and summing NAM, then restore your exact realtime choices. This does not affect live or hardware printing. If the Quality graph cannot be prepared or the realtime graph cannot be restored, the offline print fails instead of silently using another quality.
+If restoration fails after the WAV files are finished and closed, TayPE keeps
+those WAVs and shows their paths. It stops any remaining passes or conversions.
 
 ## Gain Staging
 
