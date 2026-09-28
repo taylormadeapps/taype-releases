@@ -33,12 +33,12 @@ MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
 
 | License | Price | Who |
 |---------|-------|-----|
-| Personal                  | £75 | Individual artists, hobbyists, small studios |
-| Commercial | TBC | Businesses and organisations |
+| Personal                  | £150 | Individual artists, hobbyists, small studios |
+| Commercial | £225 | Businesses and organisations |
 
 All licenses include 2 major versions (Eras) of included updates.
 
-**Accessibility discount:** We believe cost should never be a barrier to accessible tools. Get in touch via [Instagram](https://instagram.com/ruminantaudioworks) or [Reddit DM](https://www.reddit.com/message/compose/?to=ruminantaudioworks).
+**Concessions:** If you really want to use TayPE but can’t afford our prices, drop me a line at [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com). We may be able to sort something out.
 
 ## About
 

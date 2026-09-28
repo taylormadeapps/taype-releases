@@ -130,7 +130,7 @@ const locales = {
             "education-copy": "Free for students. DM us for a discount code.",
             "education-instagram": "Instagram \u2192",
             "education-reddit": "Reddit \u2192",
-            "accessibility-note": "Students free. Accessibility concessions. Just ask.",
+            "accessibility-note": "If you really want to use TayPE but can’t afford our prices, drop me a line. We may be able to sort something out.",
             "pricing-cadence-note": "Major versions (Eras) are typically released at a yearly cadence.\n\nThe latest Era receives new features. The previous Era stays in Long Term Support (LTS), with maintenance and bug-fix releases.\n\nYour licence includes the current Era and the next, usually giving you 2 years of feature updates and 3 years of maintenance coverage.\n\nOn renewal, existing users receive a significant discount when moving from any previous version.",
             "pricing-ownership-note": "Your licensed Eras remain yours. They do not stop working when support coverage ends.",
             "tape-sessions-heading": "Tape Sessions",

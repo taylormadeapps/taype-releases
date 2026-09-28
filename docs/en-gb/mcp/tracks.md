@@ -20,7 +20,10 @@ For a multi-output instrument route, set `input_id` to
 `plugin-out:<source-track-id>:<output-bus-index>`. Bus index `0` is the
 instrument owner's permanent main output and cannot be assigned. `get_tracks`
 returns the canonical `input_id` plus `plugin_output_input` metadata containing
-the source track ID, bus index, channel pair, and current availability.
+the source track ID, bus index, name, actual channel count, 1-based first
+channel, availability, and a reason when unavailable. `instrument_outputs`
+lists the same metadata for every declared auxiliary output, including outputs
+that cannot currently be routed.
 
 ### `remove_track`
 

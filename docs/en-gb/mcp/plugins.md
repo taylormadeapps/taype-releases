@@ -140,6 +140,8 @@ Optional parameters:
 | `slot` | Insert slot index, 0-7 |
 | `sidechain_source` | `self`, source track ID, or empty string |
 
+A source the plugin refuses is still saved. The call succeeds and reports `sidechain_available: false` with the reason in `sidechain_unavailable_reason`.
+
 ### `set_insert_midi_output`
 
 Configure the device, channel, timing, Audio Return, and live MIDI feedback
@@ -167,3 +169,5 @@ Optional parameters:
 ## Sidechains
 
 Sidechain-capable plugins can receive eligible source taps. Use insert info and `set_insert_sidechain` to inspect and set sidechain state. TayPE validates sidechain choices so a plugin cannot be fed by an invalid or unsafe source.
+
+`sidechain_available` is `false` when a chosen source does not reach the plugin, and `sidechain_unavailable_reason` says why: the plug-in refused its sidechain input, the sidechain could not be connected, the plug-in is not loaded, or it has no sidechain input. The choice stays saved, and the plugin window's **Sidechain** selector shows the same reason.

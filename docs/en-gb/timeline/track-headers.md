@@ -24,11 +24,21 @@ The follow-playhead control lives in the timeline header toolbar, not inside eac
 
 ## Multi-output instruments
 
-When a VSTi exposes enabled auxiliary stereo outputs, ordinary audio tracks
+When an instrument exposes auxiliary mono or stereo outputs, ordinary audio tracks
 show an **Instrument Outputs** section in the Input menu. Open the source-track
-submenu, then choose a pair such as `3/4` to feed that output into the
+submenu, then choose an output to feed it into the
 destination before its trim, preamp, EQ, compressor, inserts, fader, and sends.
 Turn on **MON** to hear the route, or arm the destination to record it.
+Mono outputs feed the same signal to the destination's left and right channels.
+
+Each output is listed by its channel numbers, the name the plug-in gives it and
+its width, for example **Output 3: Kick (Mono)** or **Output 13/14: Overhead
+(Stereo)**. The name is the plug-in's own label for that output, the one its
+routing page uses; it does not change when you route different sounds to the
+output inside the plug-in. The track's input label shows the source track and
+the output, such as **AD2 — Output 3: Kick (Mono)**. When the output cannot carry
+audio, the label reads **Unavailable** with the reason, for example when the
+source track no longer has its instrument.
 
 The instrument's first stereo output always remains on its own track. Assigned
 auxiliary outputs stop being discarded; unassigned outputs remain silent. If a
