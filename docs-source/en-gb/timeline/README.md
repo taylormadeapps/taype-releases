@@ -34,6 +34,10 @@ prints each selected stem through its downstream buses and the master, one at
 a time. This includes the downstream mix processing rather than only the
 direct post-fader stem.
 
+In **Choose Stems**, **Select All Shown** selects every target in the current
+filter. Once all shown targets are selected, the button becomes **Deselect All
+Shown**. Changing filters does not clear selections hidden by the new filter.
+
 The export window hides any visible plug-in windows before it opens. When it
 closes, TayPE restores those plug-in windows in their previous order. Plug-ins
 that were already hidden with Option+P remain hidden.

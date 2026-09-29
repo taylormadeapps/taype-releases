@@ -233,3 +233,7 @@ automation from rendered project time, including the processing history it
 prepares before capture begins for latency-compensated effects. If an enabled
 lane still names an available control but TayPE cannot read the static fallback
 needed to render it correctly, the export fails instead of omitting that lane.
+During offline export and VSTi re-render, 60 Hz control updates take effect at
+the next complete audio processing block. TayPE keeps the plug-in block size
+steady rather than shortening a block to land exactly on a control update;
+MIDI notes still keep their precise positions within the block.
