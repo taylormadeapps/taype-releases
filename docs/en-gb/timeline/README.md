@@ -32,7 +32,9 @@ In the Print Mix, Print Loop, or Print Marker Ranges export window, select
 **Stems**, choose the tracks or buses you want, then enable **JD's Law**. TayPE
 prints each selected stem through its downstream buses and the master, one at
 a time. This includes the downstream mix processing rather than only the
-direct post-fader stem.
+direct post-fader stem. A selected bus includes its contributing tracks and
+their sends to shared effects returns. Those returns process only sound from
+that bus's pass, not other tracks feeding the same return.
 
 In **Choose Stems**, **Select All Shown** selects every target in the current
 filter. Once all shown targets are selected, the button becomes **Deselect All
