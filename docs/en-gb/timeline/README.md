@@ -35,6 +35,8 @@ a time. This includes the downstream mix processing rather than only the
 direct post-fader stem. A selected bus includes its contributing tracks and
 their sends to shared effects returns. Those returns process only sound from
 that bus's pass, not other tracks feeding the same return.
+Tracks used only as sidechain keys still drive the selected stem's effects;
+their audio does not enter that stem directly.
 
 In **Choose Stems**, **Select All Shown** selects every target in the current
 filter. Once all shown targets are selected, the button becomes **Deselect All
@@ -49,9 +51,73 @@ ordinary full mix once and then prints the wet stems. Live mode plays every
 pass in real time; Offline mode performs the same sequence without sending it
 to the speakers. Any solo state that existed before printing is restored when
 the operation finishes or is cancelled.
-If an Offline pass finishes but TayPE cannot restore realtime processing, it
-keeps the completed WAV files, stops the remaining passes and any requested
-conversion, and shows the saved file paths with the error.
+
+While JD's Law is printing, the banner shows **Master** for the optional
+master pass, then the name of each track or bus as its wet stem is printed.
+The mixer shows each pass's temporary solo state. Participating tracks can
+show meter activity while the pass is rendering, including offline renders.
+
+Stem prints use a versioned print folder. The optional master audio file sits
+at that folder's top level; selected stem files are inside its `stems` folder.
+This applies to live and offline prints, including JD's Law and marker ranges.
+When master loudness is enabled, stem timing includes both its lookahead and
+oversampling delay so dry stems remain aligned with the full master.
+
+Each Offline pass saves a readable `.render-report.txt` beside its audio and
+opens the report in a nonmodal TayPE window. You can keep working, copy the
+report, or reveal its sidecar in Finder. The report distinguishes recovered
+plug-in waits from missed plug-in blocks, automation delivery failures and
+incomplete files. After selected-format conversion, the in-app report lists
+the result for each output file in the batch; each saved sidecar describes its
+own pass. JD's Law and marker-range batch reports list every pass in
+order, including passes that succeeded before or after another pass failed.
+A NAM worker dry fallback is also counted and marks the pass as completed with
+issues; the audio continues, but check the report before treating it as final.
+The report uses readable labels and keeps support identifiers in a separate
+technical-diagnostics section. If TayPE cannot create a stem print folder, it
+stops before printing, warns you, and records the path and filesystem error in
+the Session Log.
+A recovered wait does not stop the print. Recoverable misses are reported and
+rendering continues. If one master or stem file cannot be completed, other
+files and later offline passes continue where the render graph remains usable.
+An offline marker range with an invalid range or unavailable output path is
+reported and skipped; later ranges are still attempted. A JD's Law target
+whose isolation cannot be established is likewise skipped if its temporary
+processing state was restored safely. TayPE stops when it cannot establish a
+trustworthy render graph before audio starts, including a refused prepare-time
+PDC rebuild. If an insert reports a latency change during the captured pass,
+TayPE keeps the WAV and marks it **Completed with issues**: the graph cannot be
+realigned retroactively. The report also says if the post-render PDC rebuild
+could not run. Strict internal bounces still fail rather than commit that audio.
+If offline NAM Quality cannot be prepared but the original graph is fully
+restored, the print continues at its original NAM quality and reports that
+change. A failed graph restoration still stops later passes, but TayPE converts
+any already completed WAVs to the selected formats without deleting those WAVs.
+The print remains marked failed; conversion does not conceal the restoration
+problem.
+If automation scheduling stops, the print still runs to completion: controls
+hold their last delivered value, or their stored static value if no update was
+delivered. The report identifies the affected portion; check it before using
+the audio as an accurate automated mix.
+TayPE keeps every WAV written so far, including incomplete audio. Only complete
+WAVs are converted to selected formats; failure in one conversion does not
+skip the others. AAC and MP3 conversion wait for their encoders to exit rather
+than stopping at a fixed time limit. Check the report before using a file
+marked incomplete or completed with issues. If a compressed-only export
+succeeds, TayPE keeps the selected format and removes its intermediate WAV as
+usual. A report-write failure is shown in TayPE and the Session Log. The
+sidecar identifies the pre-conversion WAV and appends the final selected-format
+files and whether the WAV was retained or removed. A failed pass still gets a
+report when no audio file could be created, and that report reserves its print
+number so a later export cannot overwrite it. Cancelling an offline pass
+interrupts pending plug-in and writer waits; it does not wait out their full
+30-second safety guard.
+
+Live export failures also keep any WAV audio already written, including
+incomplete master or stem files. TayPE identifies those files in the failure
+message; check them before use. Internal bounces are not exports: they fail
+on a missed plug-in block or automation delivery and do not retain failed
+scratch audio.
 
 ## Offline plugin oversampling
 

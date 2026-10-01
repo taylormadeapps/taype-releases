@@ -36,6 +36,8 @@ Return, Punch, Do-Over, Sooper Looper, and external-sync transport actions wait 
 
 If TayPE cannot safely finalise a take, it shows **Recording Recovery** and keeps the captured media retained. **Retry** continues the same take when a safe retry is available. **Keep Retained** closes the dialog without changing or deleting anything; a persistent warning remains, and pressing Record or Stop opens the choices again. **Discard Take…** is shown only when discard is safe and opens a second confirmation before permanently deleting the retained media.
 
+If the audio device stops delivering callbacks or changes sample rate during a live take, TayPE stops transport and finalises the audio captured so far. The committed clip is named with **(Interrupted)** at the end. An incomplete loop lap is retained even if **Discard Incomplete Takes** is normally on. If finalisation cannot complete, the existing Recording Recovery flow retains the media. A bounce or flatten interrupted this way fails; it does not create a partial take.
+
 Until recovery completes or a confirmed discard settles, TayPE does not carry out the queued Return, Punch, Do-Over, Sooper Looper, or external-sync action. It also blocks a new recording and reel close. A confirmed discard is reported separately from a successfully committed take.
 
 Quitting during recording first tries to finish the same take while the recording system is still live. It does not replace the original Record or Stop action. If that cannot be done safely within the quit check, TayPE refuses the quit, reopens Recording Recovery when a decision is needed, and leaves the reel and original queued action intact instead of treating application shutdown as recovery.
