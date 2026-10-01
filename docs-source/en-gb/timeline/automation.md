@@ -232,14 +232,7 @@ the same enabled mixer and plug-in automation as playback. TayPE evaluates the
 automation from rendered project time, including the processing history it
 prepares before capture begins for latency-compensated effects. If an enabled
 lane still names an available control but TayPE cannot read the static fallback
-needed to render it correctly, TayPE skips that lane, continues the export,
-and identifies the omission in the render report. The same applies to an
-unresolved target. Internal bounces fail rather than commit derived audio
-with a skipped lane.
-If an offline print loses its automation schedule, the audio and later passes
-continue with the last delivered control values held. If the schedule fails
-before delivery, TayPE uses stored static values. The print report identifies
-the loss; an internal bounce does not commit a degraded result.
+needed to render it correctly, the export fails instead of omitting that lane.
 During offline export and VSTi re-render, 60 Hz control updates take effect at
 the next complete audio processing block. TayPE keeps the plug-in block size
 steady rather than shortening a block to land exactly on a control update;
