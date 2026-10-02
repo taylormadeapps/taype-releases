@@ -55,11 +55,13 @@ master pass, then the name of each track or bus as its wet stem is printed.
 The mixer shows each pass's temporary solo state. Participating tracks can
 show meter activity while the pass is rendering, including offline renders.
 
-Each Offline pass saves a readable `.render-report.txt` beside its audio and
+Each Offline pass saves a readable `.render-report.txt` and
 shows a summary in TayPE. The report distinguishes recovered plug-in waits
 from missed plug-in blocks, automation delivery failures and incomplete files.
 After selected-format conversion, the in-app report lists the result for each
 output file in the batch; each saved sidecar describes its own pass.
+A stem print's `stems` folder holds only the stems and The Mule, so you can
+drag them out of Finder in one go; their reports are in its `reports` folder.
 A recovered wait does not stop the print. Recoverable misses are reported and
 rendering continues. If one master or stem file cannot be completed, other
 files and later offline passes continue where the render graph remains usable.
@@ -95,6 +97,52 @@ Live export failures also keep any WAV audio already written, including
 incomplete master or stem files. TayPE identifies those files in the failure
 message; check them before use. Internal bounces are not exports and do not
 retain failed scratch audio.
+
+In Live mode each pass starts only once the previous pass has fully stopped.
+If a live pass or marker range cannot start, for example because playback is
+refused or the audio device stops delivering audio, TayPE names it and the
+reason in the report and carries on with the next one.
+
+## Printing reconciled stems with Seldon's Law
+
+**Seldon's Law** prints wet stems that add back up to your master. Each stem
+keeps the master's sound as it would have treated that stem within the whole
+mix, so you do not need to build the mix around stem delivery.
+
+In the Print Mix, Print Loop, or Print Marker Ranges export window, select
+**Stems** and **Offline**, then enable **Seldon's Law**. JD's Law and Seldon's
+Law cannot both be on: choosing one turns the other off, and choosing **Live**
+turns Seldon's Law off.
+
+You do not choose the stems. Seldon's Law takes every track or group that
+feeds the master, following the actual outputs and sends. Shared effects
+returns are heard in each stem that feeds them rather than printed as stems of
+their own. **Choose Stems** shows the stems Seldon's Law will print but cannot
+change them; your own stem selection is kept for when Seldon's Law is off. If a
+bus is both a group and a send return, or a return inside a group is fed from
+outside it, the export window names the channels and Export stays unavailable
+until the routing gives every sound one owner.
+
+TayPE prints the full master first, then each stem through its downstream
+buses and the master, all at full floating-point precision. With **Print
+tails** on, every stem runs to exactly the master's length. When every pass is
+done, TayPE restores your solo state and reconciles the stems while the banner
+shows **Seldon's Law — reconciling stems**; press Stop to cancel.
+
+The stems folder then contains:
+
+- each corrected stem, named like an ordinary stem;
+- `…-themule.wav`, holding any sound no stem owns (normally silence);
+- an `uncorrelated` folder holding each original wet render, with
+  `-uncorrelated` before `.wav`, kept as a 32-bit float WAV for comparison;
+- a `reports` folder holding each pass's render report.
+
+The corrected stems, The Mule and, when **Master** is selected, the master are
+delivered as 24-bit WAVs and converted to any formats you selected. The
+`-uncorrelated` files are never converted or removed. Together, the corrected
+stems and The Mule add back to the master; the Session Log records how closely.
+If a capture or the reconciliation fails, TayPE reports it, keeps the captured
+audio and does not present the stems as reconciled.
 
 ## Offline plugin oversampling
 
