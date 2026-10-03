@@ -107,8 +107,8 @@ If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
 not started delivering the callbacks required to process sound, or an
 established callback path has stopped. Playback, recording and live input
 monitoring remain unavailable instead of running from an inaccurate software
-clock. Track and comp-bus MON are turned off; ordinary bus MON stays on so
-child audio still reaches the mix when the device comes back.
+clock. Your MON settings are left as they are, so monitoring comes back by
+itself when the device does.
 
 Closing the laptop lid is a common cause. If the same device is still available
 when you open the lid, TayPE tries to resume it without changing your audio
