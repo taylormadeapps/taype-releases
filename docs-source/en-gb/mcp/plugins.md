@@ -69,6 +69,11 @@ capture remain protected.
 Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
+`stopped_until_reload` is true while the plug-in is stopped until it is
+reloaded or removed, and `stop_cause` says why: `buffer_size_change` (a buffer
+size or sample rate change could not be applied to it) or `sidechain_change` (a
+sidechain change could not be undone). Otherwise `stop_cause` is empty. MIDI
+Out and Hardware Inserts always report `false`.
 
 Optional parameters:
 
@@ -109,6 +114,8 @@ List and load presets for the insert.
 Open or close the plugin editor window. `open_insert_editor` starts the open
 and returns immediately with `editor_open` and `editor_opening`; it does not
 wait for the native window. Poll `get_insert_info` until the window is open.
+A plug-in stopped until reload has no editor to open, so `open_insert_editor`
+fails with `plugin_stopped_until_reload`.
 
 ### `restart_sandbox`
 

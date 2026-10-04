@@ -20,7 +20,10 @@ timeline anchors. It is not a transport limit and may be less than `position`.
 
 ### `print_mix`
 
-Render the current mix to an audio file.
+Render the current mix to an audio file. The call with `enabled: false` that
+stops the print returns `stopped_plugins_passed_through`: one `{track, plugin}`
+entry for each plug-in stopped until reload whose input the print passed
+through in its place, or an empty list.
 
 ### `seek`
 

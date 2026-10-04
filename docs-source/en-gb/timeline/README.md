@@ -74,6 +74,31 @@ The choice is saved globally, separately from the Print dialog setting, and
 defaults to off. It does not affect synth rendering, comp flatten, Bounce
 External, playback or tracking.
 
+## Stopped plug-ins in prints and bounces
+
+A plug-in that is stopped until it is reloaded shows red in its insert slot;
+[Insert Slots](../channel-strip/inserts.md) explains why and how to clear it.
+Print Mix, Print Loop and Print Marker Ranges still print through it, in Live
+and Offline mode, including stems and JD's Law: a stopped effect passes its
+input through in its place, and automation aimed at it is not applied. When the
+print completes, TayPE shows one warning naming the plug-in, or how many there
+were, and **Tools → Session Log** names each one. An Offline print also logs
+each automation lane that could not reach a stopped plug-in, once per pass,
+and carries on.
+
+**Bounce Clips to Stem**, **Bounce Tracks to Stem** and flattening a comp bus
+replace audio in the reel, so they fail rather than keep a render that skipped
+a stopped plug-in in their signal. TayPE names the plug-in, or how many there
+were, changes nothing in the reel, and asks you to reload or remove it, then
+try again. Only plug-ins the bounced audio passes through count: a stopped
+plug-in on the Master does not stop a stem bounce, and one on a comp bus itself
+does not stop flattening it, because both are taken before those plug-ins.
+
+**Bounce External** leaves the reel unchanged, so it plays on like a print: it
+writes the file with the stopped effect's input in its place, then shows one
+warning naming the plug-in, or how many there were, and **Tools → Session Log**
+names each one.
+
 ## Related Timeline Workflows
 
 * [Automation](automation.md): show, edit, and capture volume, pan, or width moves.
