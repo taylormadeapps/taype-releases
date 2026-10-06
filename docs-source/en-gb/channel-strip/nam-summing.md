@@ -22,7 +22,10 @@ Preferences > NAM provides **Efficient**, **Balanced**, and **Quality** choices 
 
 Quality changes require stopped playback, recording, and printing. TayPE only saves the new setting after the replacement summing model and the rest of the active NAM graph are ready. A failed change restores the previous quality.
 
-**Use Quality for Offline Print** is on by default. Offline master, loop, stem, and named-marker prints temporarily use **Quality** for both summing and preamp NAM, then restore your exact realtime choices. Live and hardware prints are unchanged, and a failed Quality or restoration graph swap fails the offline print rather than falling back.
+**Use Quality for Offline Print** is on by default. Offline master, loop, stem, and named-marker prints temporarily use **Quality** for both summing and preamp NAM, then restore your exact realtime choices. Live and hardware prints are unchanged. If a NAM model cannot be loaded at Quality, the offline print carries on at your realtime quality and its Print Report says so; a bounce stops instead. If your realtime choices cannot be restored afterwards, TayPE tells you why, and offline prints and bounces are refused until they are back.
+If restoration fails after an Offline print's WAV files are finished, TayPE
+keeps them, converts them to any copies you asked for and stops the remaining
+passes; the Print Report names what could not be put back.
 
 ## Profile Storage
 
