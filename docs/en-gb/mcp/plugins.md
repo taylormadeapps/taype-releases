@@ -132,7 +132,7 @@ Update Hardware Insert routing, trim, latency, filtering, colour, and recall ima
 
 ### `set_insert_sidechain`
 
-Set or clear the sidechain source for one insert slot. Use `self` for self-keying, a source track ID for external keying, or an empty string to clear. Requires stopped transport.
+Set or clear the sidechain source for one insert slot. Use `self` for self-keying, a source track ID for external keying, or an empty string to clear. Requires stopped transport. A newly chosen source that is archived is refused; a source archived after you chose it stays set and keys silence until it is unarchived.
 
 Required parameters:
 

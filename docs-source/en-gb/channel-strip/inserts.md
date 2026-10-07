@@ -245,6 +245,8 @@ Hardware Insert presets live in `[TAPE_HOME]/Presets/Hardware Inserts`.
 
 Plugins with sidechain inputs can receive an eligible source tap. Sidechain assignments are part of the insert state and follow the reel.
 
+Archived tracks are never offered as a sidechain source. If a source you chose is archived later, the **Sidechain** selector keeps it and reads, for example, **Kick (archived)**; the plugin hears silence on its sidechain until you unarchive the source. A track routed into an archived bus is still live and still keys.
+
 If a plugin refuses the sidechain you choose, TayPE keeps your choice and the plugin window's **Sidechain** selector says so, for example **Kick — Unavailable: The plug-in refused its sidechain input**. The selector is narrow, so hover over it to read the whole message; that works whether **Popup Help** is on or off. The plugin keeps playing without its sidechain, and the refusal is recorded in the session log (**Tools → Session Log**). TayPE does not ask the plugin again on its own: choose **None** and then the source again, or reload the plugin, to try again.
 
 On bus strips, the input row keeps a **Sender** label for orientation only; bus routing lives in sends and outputs rather than an input picker.

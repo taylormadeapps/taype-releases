@@ -17,7 +17,10 @@ Track headers hold the controls you need before reaching for the mixer.
   with MON off, clip audio keeps playing.
 * **Record**: arm the track for audio recording. Hidden in Automation View,
   because automation capture does not use record-arm. Mixer Record stays.
-* **Input / Output**: choose routing.
+* **Input / Output**: choose routing. **Off** is the last output choice: the
+  track and its sends aren't heard anywhere, but it can still key a sidechain
+  and stays live (it can be armed, soloed and printed from as usual). A track
+  that goes into a bus set to Off isn't heard either.
 * **Bus**: turn a track into a bus or comp group where supported.
 
 The follow-playhead control lives in the timeline header toolbar, not inside each track header. It keeps playback visible while leaving selected-track focus alone.
@@ -102,3 +105,17 @@ The Tag popup lets you add labels such as `Vocal`, `Guitar`, `Print`, or your ow
 ## Archive View
 
 Archived tracks are kept with the reel but hidden from the main working surface until Archive View is enabled. Use archive for printed stems, safety tracks, old takes, and anything you want preserved without cluttering the current pass.
+
+An archived track is out of the mix completely. It never plays, in playback or in any print, stem, bounce or comp flatten. It never keys a compressor or plug-in sidechain, its solo and mute never affect other tracks, it adds no latency and its plug-ins are unloaded. Archived tracks don't count towards the 256-track limit, and their clips don't make the reel, a print or a new marker range longer.
+
+Archiving keeps everything about the track: its fader, mute, solo, routing, sends, plug-ins and their settings, sidechain links and clips all come back exactly as they were when you unarchive it. Its plug-ins are unloaded while it is archived and load again in the background when you unarchive it; until they have loaded, Undo and Redo ask you to wait for them.
+
+While a track is archived, TayPE won't let it do anything. Recording or arming it, editing or re-rendering its MIDI, bouncing its clips, flattening an archived comping bus, splitting its stems, opening its clips in Melodyne, changing its bus or comp mode, or adding a track under an archived bus all show a "Please unarchive to ..." message. You can still tidy it up: remove or disable plug-ins, and move or edit its clips in Archive View.
+
+Archiving a bus doesn't archive the tracks routed into it. Those tracks stay in the main view, but they go silent: nothing reaches the archived bus, nothing falls back to the master, and their sends are silent too. They can still key a sidechain. A track that isn't heard like this, or whose output is Off, isn't offered as a stem and can't be bounced; TayPE tells you which track when you try. Archived tracks and buses are never offered as a sidechain source, output or send. If a track was already sending or keying from one, the selector still shows it, marked as archived (for example "Kick (archived)"), and it stays silent until you unarchive.
+
+When you flatten a comping bus, archived takes are left out of the flattened audio and kept.
+
+Double-clicking a MIDI clip on an archived track opens the MIDI editor to look at it only. Its editing tools and **Commit** are switched off, and the editor says "Please unarchive to edit MIDI." until you unarchive the track. Edits you hadn't committed before archiving are kept, and you can still discard them.
+
+Unarchiving can be refused if the reel already has 256 live tracks. Archived tracks never stop another track from using a hardware output or a hardware insert's inputs and outputs. If another track has taken the inputs or outputs of a hardware insert while its track was archived, unarchiving switches that hardware insert off and tells you so; if another track has taken the hardware output the archived track used, unarchiving sets its output to **Off** and tells you so, and you pick a new output. Either way the other track keeps them. Missing audio files and NAM models on archived tracks are still reported when you open the reel.

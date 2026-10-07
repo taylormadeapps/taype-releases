@@ -36,6 +36,13 @@ stem print's `stems` folder holds the stems and their converted copies, and a
 Finder in one go. Each stem's file name still starts with the print folder's
 name, so it says which print it came from.
 
+A track that isn't heard, because its output is **Off** or it goes into an
+archived bus or a bus set to Off, isn't offered in **Choose Stems**. If you
+chose it for an earlier print, TayPE keeps it in your choice but leaves it out
+of the print: the Print Report names it, so the print reads **Completed with
+issues**, and **Tools → Session Log** says why. If none of the stems you chose
+is heard, the print doesn't start and TayPE tells you why.
+
 ## The Print Report
 
 Every print saves a report when it ends, whatever ended it: it finished, it
@@ -199,6 +206,16 @@ does not stop flattening it, because both are taken before those plug-ins.
 writes the file with the stopped effect's input in its place, then shows one
 warning naming the plug-in, or how many there were, and **Tools → Session Log**
 names each one.
+
+## Bouncing tracks that aren't heard
+
+A track isn't heard when its output is **Off**, or it goes into an archived bus
+or a bus set to Off. **Bounce Clips to Stem** and **Bounce External** won't
+bounce clips on such a track: TayPE names the track (or says how many, with
+each named in **Tools → Session Log**) and changes nothing. **Bounce Tracks to
+Stem** refuses the same way when none of the tracks you chose is heard, and
+when nothing in them is heard because they are muted or empty it says "Nothing
+in the chosen tracks is heard, so there is nothing to bounce."
 
 ## Plug-ins and NAM that fall behind in prints
 

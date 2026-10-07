@@ -36,6 +36,12 @@ regular track. Buses and master are not sources. The selected track is keyed
 from its raw input, before trim, EQ, compressor, inserts and fader. Routing
 belongs to the reel, not to compressor presets.
 
+Archived tracks are never offered as a source. If the selected source is
+archived later, it stays selected and reads, for example, **Kick (archived)**,
+but it keys nothing: the compressor sees silence and does no gain reduction
+until you unarchive the source. A track routed into an archived bus is still
+live and still keys.
+
 Taype Comp shows read-only **Internal** or **External** from its sidechain
 input bus. Host routing stays in TayPE's plugin chrome, or the host's own
 sidechain controls outside TayPE.

@@ -16,7 +16,7 @@ laps enabled as separate comp takes.
 
 Start recording armed tracks.
 
-Provide `track_id` for a single track or `track_ids` for a multitrack start. If Automation View is enabled, `record_start` starts automation capture instead and track IDs are optional.
+Provide `track_id` for a single track or `track_ids` for a multitrack start. An archived track, or a take whose comping bus is archived, is refused with "Please unarchive to record." If Automation View is enabled, `record_start` starts automation capture instead and track IDs are optional.
 
 ### `record_stop`
 
