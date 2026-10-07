@@ -68,6 +68,8 @@ time. Opening another editor replaces the current one while retaining its
 position where possible. Click the previous insert once to bring its editor
 back.
 
+A plug-in the Plugin Manager lists as **Needs Attention** (its scan was skipped) is still in the picker. Inserting it loads it, and TayPE then records its real name and details, so the slot shows that name and the Plugin Manager lists it as **Validated**. If TayPE cannot keep a plug-in loaded after you insert or enable it, one message says so and the Session Log has the reason; the slot keeps the plug-in and shows it as unavailable.
+
 In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
 
 In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
