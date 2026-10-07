@@ -30,6 +30,10 @@ same rules as the timeline: dragging the comp bus moves its complete child-take
 block, and a child strip can move only within its own group. The insertion line
 is hidden where a drop would split a comp group.
 
+## Buses, Mute and MON
+
+Muting a bus, or turning its MON off, silences the tracks routed into it, and their sends with them: a track's sends are heard only while its own output is heard, all the way down to the master. A snare routed into a muted drum bus doesn't reach the reverb it sends to either. A bus with MON off still plays its own clips through its own output and sends, and a comping bus passes its takes whatever its MON. Playback and every print follow the same rule.
+
 ## Scrolling
 
 Use the horizontal scroll gesture, arrow keys when the mixer is focused, or the visible rack controls to move through large sessions. The selected track should remain easy to find after width changes, scale changes, or switching between inline and detached mixer windows.

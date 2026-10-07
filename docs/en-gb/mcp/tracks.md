@@ -20,6 +20,8 @@ Update a track. This is the main track-editing tool and can set name, colour, mu
 
 `output_id: "off"` gives the track no main output: it and its sends are heard nowhere, it still keys sidechains, it isn't a stem and the bounces refuse it, and `get_tracks` reports `output_id: "off"`. The master track and comp takes can't be set to Off. A track that goes into a bus set to Off is heard nowhere too.
 
+`mute: true` or `monitor: false` on a bus also silences the sends of every track whose output reaches that bus, directly or through other buses; those tracks still play into the bus. With `monitor: false` the bus still plays its own clips through its own output and sends. A comping bus passes its takes whatever its `monitor`.
+
 For a multi-output instrument route, set `input_id` to
 `plugin-out:<source-track-id>:<output-bus-index>`. Bus index `0` is the
 instrument owner's permanent main output and cannot be assigned. `get_tracks`

@@ -7,14 +7,19 @@ Track headers hold the controls you need before reaching for the mixer.
 ## Controls
 
 * **Name**: double-click to rename.
-* **Mute / Solo**: silence or isolate tracks.
+* **Mute / Solo**: silence or isolate tracks. Muting a bus also silences
+  the sends of every track that goes into it, directly or through other
+  buses.
 * **Tag**: apply and filter by track tags.
 * **Archive**: move a finished track out of the main working set.
 * **MON**: monitor input or instrument output. When live MIDI preview is
   sounding through the instrument, this lamp turns orange: constantly while a
   VSTi window is open, or only while the playhead is inside the clip if just
   the MIDI editor is open. Opening those windows does not turn monitoring on;
-  with MON off, clip audio keeps playing.
+  with MON off, clip audio keeps playing. On a bus, MON off drops what
+  other tracks route or send into it and silences their sends, while the
+  bus's own clips keep playing. A comping bus passes its takes whatever
+  its MON.
 * **Record**: arm the track for audio recording. Hidden in Automation View,
   because automation capture does not use record-arm. Mixer Record stays.
 * **Input / Output**: choose routing. **Off** is the last output choice: the

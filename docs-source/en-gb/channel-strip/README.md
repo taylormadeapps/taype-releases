@@ -42,6 +42,8 @@ Archived buses are not offered as send or output destinations either. A send or 
 
 The output selector's last choice is **Off**. A track whose output is Off isn't heard anywhere and its sends are silent, but it still keys any sidechain that listens to it, and an instrument still feeds the tracks that take its other outputs. A track that goes into a bus whose output is Off isn't heard either. Such tracks aren't offered as stems, and the bounces refuse them.
 
+A track's sends are heard only while its own output is heard. If the bus it goes into is muted or has MON off, or any bus further down that chain is, its sends are silent too, pre-fader sends included, and its send meters read nothing. A comping bus passes its takes whatever its MON, so their sends keep sounding until you mute it. A bus with MON off still plays its own clips through its own output and sends.
+
 ## Strip Header
 
 The coloured title bar selects, renames, and identifies the track. Mixer title clicks select strips; Cmd-click and Shift-click build visible track selections. Grouped edits apply to visible selected strips while preserving relative offsets where possible.

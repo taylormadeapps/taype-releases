@@ -34,7 +34,14 @@ reel's print folder, and Print Marker Ranges makes one for each range. When
 stem print's `stems` folder holds the stems and their converted copies, and a
 `reports` folder with the print's report, so you can drag the stems out of
 Finder in one go. Each stem's file name still starts with the print folder's
-name, so it says which print it came from.
+name, so it says which print it came from, followed by a number, so Finder
+lists the stems in the order they were printed: for example
+`My Reel-Stems-v01-01-Bass.wav`, then `My Reel-Stems-v01-02-Keys.wav`. The
+numbers start at 01 in each print folder. Stems printed together are numbered
+in track order; a JD's Law or Seldon's Law print, which prints one stem at a
+time, numbers them in the order it prints them. A Seldon's Law print also puts
+The Mule in the `stems` folder, numbered after the last stem, and keeps each
+stem as it was before matching in the `stems` folder's `raw` folder.
 
 A track that isn't heard, because its output is **Off** or it goes into an
 archived bus or a bus set to Off, isn't offered in **Choose Stems**. If you
@@ -49,7 +56,7 @@ Every print saves a report when it ends, whatever ended it: it finished, it
 failed, you cancelled it, or TayPE quit during it. Only a print that could not
 start at all saves none; it shows a message saying why. The report has one
 line for each file you asked for, named as it is in the print folder (for
-example `stems/My Reel-Stems-v01-Bass.wav`), saying whether the file is
+example `stems/My Reel-Stems-v01-01-Bass.wav`), saying whether the file is
 complete, and one plain line for each problem on the way. A stem print's report
 goes in its `stems` folder's `reports` folder; any other print's report goes
 beside its file, with the same name ending `.print-report.txt`. A print started
@@ -67,12 +74,16 @@ The report starts with the print's status:
   NAM preamp that fell behind, NAM Quality that could not be used for an
   Offline print, an automation lane an Offline print could not play, the disk
   not keeping up with a Live print, or TayPE not being able to return to
-  realtime processing after an Offline print.
+  realtime processing after an Offline print. A Seldon's Law print also reads
+  this when its stems and The Mule do not add back up to the master within
+  its target, or when it could not delete its working files.
 * **Failed**: a file or a converted copy you asked for is missing or
-  incomplete, or part of a batch was never printed.
+  incomplete, or part of a batch was never printed. A Seldon's Law print also
+  fails when it could not match a set of stems to the master; the report
+  says why.
 * **Cancelled**: you cancelled the print, you pressed Stop during an Offline
-  print or during a Live Print Marker Ranges or JD's Law print, or TayPE quit
-  during it.
+  print (while Seldon's Law matches its stems too) or during a Live Print
+  Marker Ranges or JD's Law print, or TayPE quit during it.
 
 Every complete WAV is converted to the FLAC, AAC or MP3 copies you asked for,
 even when the print failed or was cancelled, and each copy is listed under its
@@ -105,7 +116,10 @@ prints each selected stem through its downstream buses and the master, one at
 a time. This includes the downstream mix processing rather than only the
 direct post-fader stem. A selected bus includes its contributing tracks and
 their sends to shared effects returns. Those returns process only sound from
-that bus's pass, not other tracks feeding the same return.
+that bus's pass, not other tracks feeding the same return. A track that keys a
+plug-in's sidechain still keys it when the track is not in the stem, is muted,
+or goes into a muted bus or a bus with MON off; its own sound stays out of the
+stem.
 
 In **Choose Stems**, **Select All Shown** selects every target in the current
 filter. Once all shown targets are selected, the button becomes **Deselect All
@@ -133,6 +147,68 @@ stopped and ends the print as **Cancelled**.
 If an Offline pass finishes but TayPE cannot return to realtime processing
 afterwards, it keeps the completed files, converts them, and stops the
 remaining passes; the Print Report names what could not be put back.
+
+## Printing stems that add up to the master with Seldon's Law
+
+JD's Law prints each stem through the master on its own, so each stem gets
+only the master processing it caused by itself. In the full mix, the master's
+compressor and limiter react to everything at once. Seldon's Law measures what
+the whole mix did to each stem in the master and puts that into the stem, so
+the stems keep the master's sound and, played together with The Mule, add back
+up to the master.
+
+In the Print Mix, Print Loop or Print Marker Ranges export window, choose
+**Offline** and **Stems**, then enable **Seldon's Law**. It starts off each
+time the window opens and turns off if you switch to **Live**. You can use
+JD's Law or Seldon's Law, not both: enabling one turns the other off.
+
+Seldon's Law chooses the stems from your routing. Every track or bus that
+goes to the master with clips playing through it is one stem; tracks routed
+into a bus are part of that bus's stem. A bus that only takes sends, such as a
+reverb or delay return, is not a stem of its own: each stem includes its share
+of it. A muted bus, and the tracks going into it, play no part, and a bus with
+MON off counts only by its own clips. **Choose Stems** shows the stems
+Seldon's Law will print, but you cannot change them while it is on. Turn it
+off to choose your own; your own choice is still there.
+
+Some routing cannot be split into stems this way. The export window then says
+why, names the tracks and buses, and **Export** stays unavailable:
+
+* a bus going to the master that takes sends and also has tracks routed into
+  it or clips of its own;
+* a bus inside a group bus that takes sends from tracks outside that group;
+* a muted master, or nothing reaching the master;
+* a track that reaches the master but belongs to no stem.
+
+TayPE prints the master first, then each stem, then matches the stems to the
+master. While it matches, the banner says "Seldon's Law: matching the stems to
+the master" with its progress. Until it has finished, TayPE doesn't play or
+record. Pressing Stop cancels the print: the stems it has already matched, and the master if you selected
+**Master**, are still saved, and the print reads **Cancelled**. If a pass
+cannot be printed, TayPE names it in the Print Report and prints the others;
+the stems that pass belongs with cannot be matched, so the print reads
+**Failed**.
+
+In the `stems` folder you get:
+
+* the matched stems, and **The Mule**, numbered after the last stem (for
+  example `…-03-themule.wav` after two stems): whatever no stem can own,
+  normally silent. Keep it with the stems, because the stems add back up
+  to the master only with it. These are saved as 24-bit WAVs and converted to
+  the formats you chose.
+* a `raw` folder with each stem as it was before matching, its raw stem,
+  named after the stem with `-raw` added (for example `…-01-Bass-raw.wav`).
+  These are 32-bit float WAVs. They are always kept as WAVs and never
+  converted, and the Print Report lists them under "Raw stems before Seldon's
+  Law (kept as WAV)".
+
+The master is always printed, because the matching needs it, but it is kept
+only when **Master** is selected. TayPE keeps its working files in a hidden
+`.seldon-work` folder in the print folder and deletes it when the print ends.
+If it cannot, the Print Report names the folder, which you can delete
+yourself, and the print reads **Completed with issues**. The Print Report also
+says when the stems and The Mule do not add back up to the master within the
+-100 dBFS target.
 
 ## Offline plugin oversampling
 
@@ -170,6 +246,15 @@ Print Report and goes on with the next pass. A Live print with stems opens every
 plays, so if one stem's file cannot be opened, nothing is printed.
 **Tools → Session Log** gives the reason. It names the stem's file and its
 track, or the folder that could not be created and why.
+
+## While an Offline print runs
+
+From an Offline print's first pass until it ends, including while Seldon's Law
+matches the stems, TayPE doesn't play or record. If you press Play or Record,
+on the transport, with the keyboard or over MCP, the transport says so and the
+print carries on. Press Stop to cancel the print. While a pass is printing,
+the transport shows it playing, so Space, which plays and stops, stops it and
+cancels the print as Stop does. Only a Live print plays.
 
 ## When an Offline print cannot write a file
 
@@ -261,4 +346,4 @@ and bounce as usual.
 
 **Print tails** in the export window defaults to on. TayPE remembers the choice globally, even if you cancel. It applies to Print Mix, Print Loop and Print Marker Ranges, in Live and Offline mode, including master files, stems and JD’s Law.
 
-Turn it off for an exact end with no added fade or tail: Mix stops at the last clip end, excluding muted and archived tracks; Loop stops at the right brace; Marker Ranges stop at each range end. Mix adds no extra second or extension to a later loop brace. Turning it on preserves the existing tail behaviour.
+Turn it off for an exact end with no added fade or tail: Mix stops at the last clip end, excluding archived tracks and tracks muted for the whole print (a muted track whose mute automation unmutes it counts); Loop stops at the right brace; Marker Ranges stop at each range end. Mix adds no extra second or extension to a later loop brace. Turning it on preserves the existing tail behaviour.
