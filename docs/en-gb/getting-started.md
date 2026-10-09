@@ -144,4 +144,4 @@ The NAM profile browser can work with local profiles and TONE3000 search/downloa
 
 ## Licensing
 
-TayPE uses a trustware licence model. The app remains usable while reminding you to support the work if you are able. See [Licensing](licensing.md).
+TayPE uses a trustware licence model. If TayPE becomes part of how you make music, buy a perpetual licence. See [Licensing](licensing.md).
