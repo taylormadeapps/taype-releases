@@ -230,10 +230,20 @@ points it contains.
 Offline Print Mix, Print Loop, marker and stem exports, and offline Bounce use
 the same enabled mixer and plug-in automation as playback. TayPE evaluates the
 automation from rendered project time, including the processing history it
-prepares before capture begins for latency-compensated effects. If an enabled
-lane still names an available control but TayPE cannot read the static fallback
-needed to render it correctly, the export fails instead of omitting that lane.
-During offline export and VSTi re-render, 60 Hz control updates take effect at
-the next complete audio processing block. TayPE keeps the plug-in block size
-steady rather than shortening a block to land exactly on a control update;
-MIDI notes still keep their precise positions within the block.
+prepares before capture begins for latency-compensated effects. During offline
+export and VSTi re-render, 60 Hz control updates take effect at the next
+complete audio processing block. TayPE keeps the plug-in block size steady
+rather than shortening a block to land exactly on a control update; MIDI notes
+still keep their precise positions within the block.
+
+If an Offline print cannot play an enabled lane as written, it carries on
+rather than stopping. A lane whose value before its first point cannot be
+read, or two lanes on one track that automate the same control, are left out
+of the print. A value TayPE cannot send, for example to a plugin whose sandbox
+helper has stopped, is tried again at the next control update. The
+[Print Report](README.md) names each such lane as the timeline names it,
+either left out or not applied between two times, and **Tools → Session Log**
+says why. A lane whose control is not active in the print, such as one on a
+disabled insert, for a preamp mode the track is not using, or any lane on an
+archived track, is simply not played, and the report does not mention it. Bounce and comp flattening still
+fail on a lane they cannot play, and change nothing in the reel.

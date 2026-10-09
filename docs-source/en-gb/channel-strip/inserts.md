@@ -68,6 +68,8 @@ time. Opening another editor replaces the current one while retaining its
 position where possible. Click the previous insert once to bring its editor
 back.
 
+A plug-in the Plugin Manager lists as **Needs Attention** (its scan was skipped) is still in the picker. Inserting it loads it, and TayPE then records its real name and details, so the slot shows that name and the Plugin Manager lists it as **Validated**. If TayPE cannot keep a plug-in loaded after you insert or enable it, one message says so and the Session Log has the reason; the slot keeps the plug-in and shows it as unavailable.
+
 In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
 
 In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker root even when the menu order is Vendor, Category, or Flat. You can combine it with comma-separated paths, for example `*, Dynamics/Compressors`.
@@ -245,6 +247,8 @@ Hardware Insert presets live in `[TAPE_HOME]/Presets/Hardware Inserts`.
 
 Plugins with sidechain inputs can receive an eligible source tap. Sidechain assignments are part of the insert state and follow the reel.
 
+Archived tracks are never offered as a sidechain source. If a source you chose is archived later, the **Sidechain** selector keeps it and reads, for example, **Kick (archived)**; the plugin hears silence on its sidechain until you unarchive the source. A track routed into an archived bus is still live and still keys.
+
 If a plugin refuses the sidechain you choose, TayPE keeps your choice and the plugin window's **Sidechain** selector says so, for example **Kick — Unavailable: The plug-in refused its sidechain input**. The selector is narrow, so hover over it to read the whole message; that works whether **Popup Help** is on or off. The plugin keeps playing without its sidechain, and the refusal is recorded in the session log (**Tools → Session Log**). TayPE does not ask the plugin again on its own: choose **None** and then the source again, or reload the plugin, to try again.
 
 On bus strips, the input row keeps a **Sender** label for orientation only; bus routing lives in sends and outputs rather than an input picker.
@@ -268,6 +272,10 @@ Restart always starts a fresh helper and reloads every assigned plugin, includin
 If you dismiss the crash report while the helper is still down, every enabled plugin row on the mixer — including bypassed — lights red. The plugin that crashed the helper keeps a hot red fill and yellow border. The other lit rows use a quieter red without that border and say the sandbox is down. Disabled plugins stay dim. Restart brings the recoverable ones back.
 
 A plugin TayPE positively identified as the crash culprit stays in its slot as Failed. The assignment, on/off, bypass, and last saved sound are unchanged. Failed is not Disable, and it is not written into the reel. The row paints as failed, and a plain click explains why instead of opening the vendor window. Other recoverable plugins come back.
+
+A plugin can also be stopped until reload, when a buffer size or sample rate change cannot be applied to it or a sidechain change to it cannot be undone. TayPE shows a warning, and the session log (**Tools → Session Log**) names it. While it is enabled, its row on the track strip, the mixer and the Listen Bus shows the same hot red fill and yellow border as a crash culprit, and a plain click explains which change stopped it instead of opening the vendor window. Like Failed, the stop is not written into the reel. TayPE sends the plugin no audio or MIDI, so a stopped instrument is silent and MIDI clip renders through it are refused. A stopped effect passes its input through, latency-aligned, and the other plugins on the track keep playing. If TayPE cannot rebuild the chain around it at once, for example while you are recording or printing, the other plugins in its chain pass their input through too until it can; a rebuild during playback may cause a brief audio discontinuity. The plugin stays stopped until you reload it, for example with **Tools > Restart Plugin Sandbox**, or remove it.
+
+A plugin that never finishes shutting down cannot hold TayPE up for long. If a plugin is still shutting down after 60 seconds, for example when you open another reel, TayPE stops the sandbox helper the way quitting does, and one warning names the plugin. When you are opening a reel, TayPE starts a new helper and finishes opening it. Otherwise the plugin rows show that the sandbox is down until you choose **Tools > Restart Plugin Sandbox**. The session log (**Tools → Session Log**) names the plugin and what TayPE was doing.
 
 A restart can still leave named plugins unavailable. **Plugin Restore Warnings** lists them. That is a complete restart with exclusions, not a silent success. If a plugin had unsaved live changes that died with the sandbox, the list also warns that its recent changes may not have been restored. Choose **OK** to return to the original report, which remains available to send or save. Restarting does not send it.
 You can restart during playback; stop recording before restarting.

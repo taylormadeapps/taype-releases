@@ -6,6 +6,8 @@ The Performance Monitor shows where processing time is being spent.
 
 Use it to see track, bus, insert, and sandbox processing in context. It helps distinguish a heavy plugin from a routing or monitoring problem.
 
+A track whose output is **Off**, or goes into an archived bus, feeds nothing, so it is not shown under Master: it and the tracks routed into it are listed after Master's tree.
+
 When Listen Bus is active, it appears as the terminal `L0` post-master row with
 its plug-in count, processing use, drop counters, and chain latency. Master
 moves to `L1`, and its existing routing descendants shift by one level; Listen

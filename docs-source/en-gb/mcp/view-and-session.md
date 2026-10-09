@@ -125,7 +125,7 @@ host-normalised 0..1 domain. In particular, `send.level` accepts and returns
 
 ### `undo` / `redo` / `get_undo_state`
 
-Move through undo history and inspect whether undo/redo is available.
+Move through undo history and inspect whether undo/redo is available. Like other edits, `undo` and `redo` are refused while `get_reel_info` reports `graph_busy: true`, for example while an unarchived track's plug-ins load.
 
 ## Theme
 

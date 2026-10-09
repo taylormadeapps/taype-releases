@@ -6,6 +6,8 @@ Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI
 
 Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. ARA-only plug-ins (SpectraLayers, WaveLab, and others marked OnlyARA) are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow. Dual-mode ARA2 effects such as Melodyne stay in this list and load as ordinary non-ARA inserts.
 
+An entry with `timedOutOnScan` is **Needs Attention**: its scan was skipped, so it has `uid` 0 and its bundle's file name. It can still be inserted, and its first load records its real name, vendor, category and `uid`.
+
 ### `list_midi_outputs`
 
 List available Core MIDI output destinations for the MIDI Out insert.
@@ -69,6 +71,11 @@ capture remain protected.
 Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
+`stopped_until_reload` is true while the plug-in is stopped until it is
+reloaded or removed, and `stop_cause` says why: `buffer_size_change` (a buffer
+size or sample rate change could not be applied to it) or `sidechain_change` (a
+sidechain change could not be undone). Otherwise `stop_cause` is empty. MIDI
+Out and Hardware Inserts always report `false`.
 
 Optional parameters:
 
@@ -109,6 +116,8 @@ List and load presets for the insert.
 Open or close the plugin editor window. `open_insert_editor` starts the open
 and returns immediately with `editor_open` and `editor_opening`; it does not
 wait for the native window. Poll `get_insert_info` until the window is open.
+A plug-in stopped until reload has no editor to open, so `open_insert_editor`
+fails with `plugin_stopped_until_reload`.
 
 ### `restart_sandbox`
 
@@ -125,7 +134,7 @@ Update Hardware Insert routing, trim, latency, filtering, colour, and recall ima
 
 ### `set_insert_sidechain`
 
-Set or clear the sidechain source for one insert slot. Use `self` for self-keying, a source track ID for external keying, or an empty string to clear. Requires stopped transport.
+Set or clear the sidechain source for one insert slot. Use `self` for self-keying, a source track ID for external keying, or an empty string to clear. Requires stopped transport. A newly chosen source that is archived is refused; a source archived after you chose it stays set and keys silence until it is unarchived.
 
 Required parameters:
 

@@ -1,18 +1,14 @@
 # Licensing
 
-TayPE uses a trustware licence model: the app remains usable, and the licence flow asks people who can support the work to do so.
+TayPE uses a trustware licence model. Try TayPE properly. If it becomes part of how you make music, buy a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.
 
-## Education
+## Concessions
 
-If you are learning, teaching, or working in a low-budget education setting, TayPE is designed not to block you from making music.
-
-## Accessibility
-
-If accessibility, illness, or financial pressure makes payment difficult, keep using the app. TayPE is built around trust rather than punishment.
+If you really want to use TayPE but can’t afford our prices, drop me a line at [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com). We may be able to sort something out.
 
 ## Trustware Demo
 
-The unlicensed app does not add noise bursts or expire your sessions. It reminds you to license honestly, then lets you keep working.
+Fully functional demo for 90 days. After that, exporting audio (master and stems: Print Mix, Print Loop, Print Marker Ranges and Bounce External) requires a licence. Saving sessions, recording and editing are never blocked, so you never lose access.
 
 ## Agreement
 

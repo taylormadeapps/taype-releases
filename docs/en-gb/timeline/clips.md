@@ -81,6 +81,13 @@ the right; contextual MIDI, Audio or Selection actions; Media Paths; then
 **Done** applies a valid pending name, while Escape or closing the window
 discards an unapplied name.
 
+On an archived track, or a take of an archived comping bus, the MIDI editor
+opens to look at the clip only: its editing tools and **Commit** are switched
+off, and it says "Please unarchive to edit MIDI." Re-rendering the clip and
+**Restore OG MIDI** are refused the same way until you unarchive the track.
+Edits you hadn't committed before archiving are kept, and you can still discard
+them.
+
 After applying pitch, the pitch controls remain unavailable until rendering
 finishes. The open dialog then shows the committed pitch for a single clip,
 or returns to zero for the next batch pitch adjustment. A clip name edited

@@ -8,7 +8,7 @@ Start playback.
 
 ### `stop`
 
-Stop transport. While recording, stop follows the active record mode and safety rules.
+Stop transport. While recording, stop follows the active record mode and safety rules. While an Offline print is running, stop cancels it as the Stop button does: the print keeps what it wrote and its report reads Cancelled.
 
 ### `get_state`
 
@@ -20,7 +20,21 @@ timeline anchors. It is not a transport limit and may be less than `position`.
 
 ### `print_mix`
 
-Render the current mix to an audio file.
+Render the current mix to an audio file. The call with `enabled: false` that
+stops the print answers once the print's files are closed and playback has
+stopped. It reports a print that failed as an error, including one stopped
+before any audio reached its file, which is deleted. Otherwise it returns
+`stopped_plugins_passed_through`: one `{track, plugin}` entry for each plug-in
+stopped until reload whose input the print passed through in its place, or an
+empty list. By then the print's report is saved beside its file, as for a print
+from the menu, even when the print failed, and Finder shows what it wrote, but
+no window opens in TayPE. If the report could not be saved, the answer's
+`warning` says so. If you quit TayPE during an MCP print, the print ends as
+cancelled, and its report says so.
+
+A start that cannot begin is answered as an error, in English, saying why: the
+print folder could not be created, Playback could not start, or the print pass
+could not start. Nothing is printed, and the Session Log gives the reason.
 
 ### `seek`
 
@@ -80,7 +94,9 @@ rows. Effective latency includes active post-master Listen Bus latency on every
 audible route. Raw session-PDC values remain separate, and a synthetic Listen
 Bus row exposes its own plug-in and DSP attribution. While active, that row is
 the terminal output stage at `depth: 0`; Master and its descendants shift down
-one level instead of presenting Listen Bus as a child of Master.
+one level instead of presenting Listen Bus as a child of Master. A track whose
+`output_id` is `"off"`, or names an archived bus, feeds nothing: its row and the
+rows of tracks routed into it follow Master's tree, never under Master.
 
 Optional parameters:
 

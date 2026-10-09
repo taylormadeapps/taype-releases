@@ -13,6 +13,12 @@ hardware offers.
 Press **Apply Audio Changes** after changing the device or routing setup. TayPE
 keeps the current setup until you apply the staged choices.
 
+Staged choices stay while other devices are connected or disconnected; only
+the device lists update. If the setup TayPE is using changes, or the device it
+is using, your preferred interface or a device you have chosen is connected or
+disconnected, the page shows the setup TayPE is using again and your staged
+choices are cleared.
+
 ## Channel Mapping
 
 A channel mapping gives the interface channels useful names and controls which

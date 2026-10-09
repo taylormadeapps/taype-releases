@@ -15,6 +15,8 @@ Remove a clip from the reel.
 
 ### `rerender_midi_clip`
 
+A clip on an archived track is refused with "Please unarchive to edit MIDI.", and so are `commit_midi_draft` and `restore_original_midi_clip` on one: an archived track runs no instrument and plays no synth.
+
 Render a MIDI clip through its source instrument path. VSTi owners render
 offline. A MIDI Out owner captures its selected Audio Return in real time; with
 Audio Return set to None, it passes the current clip audio through offline and
@@ -31,6 +33,8 @@ Required parameters:
 | `clip_id` | MIDI-origin clip ID |
 
 Returns draft revision, dirty flag, committed and original MIDI paths, advisory `committed_base_changed` state, clip window, and an `events` array (`note_on`, `note_off`, `muted_note`, `cc`, `pitch_bend`, `channel_pressure`, `poly_pressure`, `program_change`, or `raw`).
+
+`view_only: true` means the clip is on an archived track, or on a take of an archived comping bus. You can read and discard its draft, and the MIDI editor opens to look at it, but `replace_midi_draft`, `quantise_midi_draft`, `undo_midi_draft`, `redo_midi_draft` and `commit_midi_draft` are refused with "Please unarchive to edit MIDI." until the track is unarchived.
 
 ### `replace_midi_draft`
 

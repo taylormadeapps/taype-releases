@@ -4,6 +4,8 @@ TayPE opens into a working reel with a timeline, a transport, a selected track, 
 
 During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label in full (for example, `v1.2.0 · beta 1`), and leaves the front when you switch to another app.
 
+When TayPE finds new or changed plug-ins, the splash screen scans them first, with a progress bar and the name of the plug-in it is scanning. A scan has no time limit: some plug-ins, such as those that check an iLok licence, take a while the first time. Once one plug-in has been scanning for 30 seconds, a **Skip Plug-in** button appears beside its name. Skipping it lets the scan carry on; **Tools > Plugin Manager** lists that plug-in as **Needs Attention**, and you can still insert it. Its first load finishes the job: its slot and the Plugin Manager then show its real name.
+
 ## The Two Views
 
 TayPE has two main work views:
@@ -107,8 +109,8 @@ If TayPE opens an **Audio Engine Offline** dialog, the selected audio device has
 not started delivering the callbacks required to process sound, or an
 established callback path has stopped. Playback, recording and live input
 monitoring remain unavailable instead of running from an inaccurate software
-clock. Track and comp-bus MON are turned off; ordinary bus MON stays on so
-child audio still reaches the mix when the device comes back.
+clock. Your MON settings are left as they are, so monitoring comes back by
+itself when the device does.
 
 Closing the laptop lid is a common cause. If the same device is still available
 when you open the lid, TayPE tries to resume it without changing your audio
@@ -142,4 +144,4 @@ The NAM profile browser can work with local profiles and TONE3000 search/downloa
 
 ## Licensing
 
-TayPE uses a trustware licence model. The app remains usable while reminding you to support the work if you are able. See [Licensing](licensing.md).
+TayPE uses a trustware licence model. If TayPE becomes part of how you make music, buy a perpetual licence. See [Licensing](licensing.md).
