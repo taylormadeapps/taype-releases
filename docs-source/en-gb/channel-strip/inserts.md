@@ -68,7 +68,7 @@ time. Opening another editor replaces the current one while retaining its
 position where possible. Click the previous insert once to bring its editor
 back.
 
-A plug-in the Plugin Manager lists as **Needs Attention** (its scan was skipped) is still in the picker. Inserting it loads it, and TayPE then records its real name and details, so the slot shows that name and the Plugin Manager lists it as **Validated**. If TayPE cannot keep a plug-in loaded after you insert or enable it, one message says so and the Session Log has the reason; the slot keeps the plug-in and shows it as unavailable.
+A plug-in the Plugin Manager lists as **Needs Attention** (its scan was skipped) is still in the picker. Inserting it loads it in the plug-in sandbox, which reads its real name and details first, so TayPE never runs the plug-in itself; the slot then shows that name and the Plugin Manager lists it as **Validated**. If the plug-in stops while it is being read (for example, waiting on a licence), only the plug-in sandbox waits: the slot shows it loading, and you can click the slot to cancel. If TayPE cannot keep a plug-in loaded after you insert or enable it, one message says so and the Session Log has the reason; the slot keeps the plug-in and shows it as unavailable.
 
 In **Tools -> Plugin Manager**, **Show plugins before folders** is on by default. When it is on, each picker folder level lists direct plug-ins before child folders.
 

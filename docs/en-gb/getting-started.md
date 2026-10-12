@@ -4,7 +4,7 @@ TayPE opens into a working reel with a timeline, a transport, a selected track, 
 
 During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label in full (for example, `v1.2.0 · beta 1`), and leaves the front when you switch to another app.
 
-When TayPE finds new or changed plug-ins, the splash screen scans them first, with a progress bar and the name of the plug-in it is scanning. A scan has no time limit: some plug-ins, such as those that check an iLok licence, take a while the first time. Once one plug-in has been scanning for 30 seconds, a **Skip Plug-in** button appears beside its name. Skipping it lets the scan carry on; **Tools > Plugin Manager** lists that plug-in as **Needs Attention**, and you can still insert it. Its first load finishes the job: its slot and the Plugin Manager then show its real name.
+When TayPE finds new or changed plug-ins, the splash screen scans them first, with a progress bar and the name of the plug-in it is scanning. A scan has no time limit: some plug-ins, such as those that check an iLok licence, take a while the first time. Once one plug-in has been scanning for 30 seconds, a **Skip Plug-in** button appears beside its name. Skipping it lets the scan carry on; **Tools > Plugin Manager** lists that plug-in as **Needs Attention**, and you can still insert it. Its first load finishes the job: its slot and the Plugin Manager then show its real name, and the Plugin Manager lists it as **Validated**.
 
 ## The Two Views
 
