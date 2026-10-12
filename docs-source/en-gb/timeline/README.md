@@ -16,7 +16,7 @@ The selected track drives the docked channel strip, hardware-control focus, and 
 
 ## Ruler Header Controls
 
-The ruler header includes controls for follow-playhead behaviour, mixer width, track creation, archive view, and other view tools. Follow keeps the playhead visible during playback without yanking your edit focus while you are making a deliberate selection or drag.
+The ruler header includes controls for follow-playhead behaviour, mixer width, track creation, archive view, and other view tools. Follow keeps the playhead visible during playback without yanking your edit focus while you are making a deliberate selection or drag. With the transport stopped, the timeline never scrolls back to the playhead on its own, whether Follow is on or off. Commands that take you somewhere, such as Return to Zero, Home, End, typing a position or jumping to a marker, still bring that place into view.
 
 ## Track States
 
