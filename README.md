@@ -33,8 +33,8 @@ MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
 
 | License | Price | Who |
 |---------|-------|-----|
-| Personal                  | £150 | Individual artists, hobbyists, small studios |
-| Commercial | £225 | Businesses and organisations |
+| Personal                  | £125 | Individual artists, hobbyists, small studios |
+| Commercial | £200 | Businesses and organisations |
 
 All licenses include 2 major versions (Eras) of included updates.
 
