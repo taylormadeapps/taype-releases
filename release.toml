@@ -3,68 +3,21 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.5.0"
-date = "2026-10-10"
-commit = "68e1db8e"
+version = "1.5.1"
+date = "2026-10-13"
+commit = "bbb2cf09"
 
 summary = """\
-Added Seldon’s Law offline stem printing, with corrected stems, preserved original wet stems and a reconstruction report.
-Reworked Print Mix and offline automation, with clearer reports, safer cancellation and protection for files already written.
-Improved JD’s Law wet-stem isolation and alignment between stems and the master.
-Archived tracks no longer consume processing resources or affect playback, routing or prints. Track outputs can also be set to Off.
-Improved plug-in channels, sidechains, device reconfiguration and recovery from stalled or failed plug-ins.
-Slow plug-in scans can be left running or skipped; skipped plug-ins can still be loaded.
-Fixed keyboard shortcuts and focus in plug-in and ARA editors, and improved plug-in window handling.
-Improved grouped routing, device changes, sleep/wake handling and reel-save efficiency.
-Fixed a Help-menu memory leak and an ARA shutdown crash.
+Split and Tab now work at the playhead on whatever is selected. Tab stops at clip edges and passes over held notes, and Escape clears the clip selection before the track selection.
+Recording can start just after 0:00 with a count-in, and the timeline no longer follows the playhead while stopped.
+Fixed an update check that reported a failure when no beta was available.
 """
 
-# Verbatim git log since the v1.4.1 stable release.
+# Verbatim git log since the v1.5.0 stable release.
 git_log = """\
-6a6d757a Align taype-releases with its published unstable tip
-a9f95a2f Beta checkpoint v1.5.0b1
-49622dff Start a newer beta train when its branch declares one, so beta_1_5_x checkpoints as v1.5.0b1
-032d1262 Open Melodyne from the timeline in the provider keyboard test, and prove the plug-in keyboard work both ways
-8bccf525 Give a focused plug-in every Command key first, and keep TayPE's keyboard out of plug-in views (unfinished)
-1fed620a Show where the 90-day demo stands, hold the expired licensing window for 10 seconds, and keep an ended demo ended
-b4110443 Gate printing behind a 90-day evaluation for unlicensed copies
-6f1b0483 Stop the quit sequence reading the main window after it is gone
-75573ac2 Beta checkpoint v1.4.2b3
-424eecd3 End a lane that finds the Mac's screen locked, and stop the save flash failing a numeric-entry test
-c1cf2885 Fix the Help menu search-row leak and the core lane's known failures
-4f198794 Record the two iLok decisions and mark them in the handover
-70987366 Fix four iLok check findings, and put the print redo handover in the repo
-f025a378 Keep a plug-in the scan could not read loaded, and let scans wait for it
-a23df7b8 Print stems that add up to the master with Seldon's Law
-48517a42 Refuse Bounce Tracks to Stem when any chosen track is heard nowhere
-1b47d4ae Take archived tracks out of everything, and let a track's output be Off
-5640306c Show plug-in windows and never unload a plug-in inside its own loop
-c854fdfc Make prints report what happened, keep what they wrote, and end one way
-9814b796 Report the master loudness oversampler's latency to PDC
-95baab04 Move the marker-range and JD's Law batches out of the live print session
-7290fb5f Free print writers only once no render call can hold them
-1188b143 Give up on a plug-in that never finishes shutting down, as quit does
-9bd1017f Stop sending blocks to plug-ins stopped until reload
-e4996e08 Record the stopped plug-in rulings
-134317bc Keep unapplied audio choices through device notifications that change nothing
-4402fef5 Make the trust register checks fast
-a8293c73 Act on device notifications with discernment and take sleep from macOS
-56224a5f Carry the print appraisal and operator rulings onto a fresh branch
-da5848f4 Lock Seldon's Law correction algorithm for implementation
-75c7a7ab Fix JD wet bus isolation and preserve Seldon DSP experiments
-b5630725 Document Seldon's Law offline print specification
-46096fb7 Beta checkpoint v1.4.2b2
-ddca40a0 Fix app-backed test setup and timing oracles
-a45f8634 Avoid restaging unchanged reel audio
-64a1a3ea Fix grouped routing policy test
-a4e791da Route grouped track I/O selections
-f41b02e1 Beta checkpoint v1.4.2b1
-a458209f Clarify licence terms and fix print contracts
-040fbba1 Process offline automation in full blocks and improve print handling
-67200823 First-activate plug-ins for 8192, then prepare them for the device block
-d7bf834c Prepare plug-ins for a fixed 8192 maximum and harden plug-in reconfiguration
-9b621cf8 Keep a cumulative beta release-notes history per beta target
-d795035c Right-size plug-in audio lanes and negotiate plug-in bus topology
-a8de66e0 Specify plugin bus topology and right-sized audio lanes
-2b8c5f49 Track taype-releases v1.4.1
+1046ed49 Beta checkpoint v1.5.1b1
+0d138973 Treat an empty beta folder as no active beta instead of a failed update check
+8a40dcb5 Split and Tab work at the playhead on what is selected, Tab stops at clip edges and passes held notes, Escape clears clips before tracks, and betas move to 1.5.1
+e9e5b390 Record the operator's Seldon's Law qualification
+b59d6fad Record from just after 0:00 with a count-in; stop the stopped arranger chasing the playhead
 """
