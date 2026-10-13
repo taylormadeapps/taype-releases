@@ -73,4 +73,4 @@ Realtime prints never pause the audio engine for disk access. If storage cannot 
 
 Use `S` to toggle timeline snap. Use **Option+S** to switch between absolute and relative snap. **Shift+.** makes the fixed grid finer, **Shift+,** makes it coarser, and **Shift+R** toggles Auto grid.
 
-Use **Tab** to move to the next transient on the selected clip or selected track. Use **Option+Tab** to move to the previous transient.
+Use **Tab** to move to the next transient in the selected clips. With no clip selected, Tab searches the selected tracks, and with no track selected it searches every track that is not archived. As in Pro Tools, clip starts and ends are stops too, so Tab after a clip's last transient goes to the clip end. Use **Option+Tab** to move to the previous transient or clip edge. Held notes such as pads, organs and sustained synths do not count as transients while they sound; a new hit or note start does.

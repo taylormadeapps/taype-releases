@@ -6,7 +6,7 @@ Clips are the audio or MIDI regions on the timeline.
 
 Click a clip to select it. Use multi-select gestures for grouped edits. Clip selection and track selection are related but not identical: a selected clip can live on a selected track, while track commands still target the current track set.
 
-Cmd-click toggles clips into or out of the clip selection on mouse-up. Cmd-drag starts a timeline range split instead: drag across one or more tracks, release, and TayPE cuts clips that cross the range boundaries while selecting the pieces inside the dragged range. When Cmd-drag starts in empty space, stays within one track, and the whole range is empty, it creates a silent clip for that exact snapped range. VSTi tracks create a MIDI-backed silent clip; other tracks create a plain silent-audio clip. Occupied ranges and drags across multiple tracks keep the range-split behaviour. When snap is enabled, the range edges magnetise to nearby clip edges and markers before falling back to the current grid; the live preview sticks to those snapped edges once they form a span, and falls back to raw drag feedback only while both edges are on the same snap point.
+Cmd-click toggles clips into or out of the clip selection on mouse-up. Escape clears the clip selection and keeps your track selection; press Escape again to deselect the tracks. Cmd-drag starts a timeline range split instead: drag across one or more tracks, release, and TayPE cuts clips that cross the range boundaries while selecting the pieces inside the dragged range. When Cmd-drag starts in empty space, stays within one track, and the whole range is empty, it creates a silent clip for that exact snapped range. VSTi tracks create a MIDI-backed silent clip; other tracks create a plain silent-audio clip. Occupied ranges and drags across multiple tracks keep the range-split behaviour. When snap is enabled, the range edges magnetise to nearby clip edges and markers before falling back to the current grid; the live preview sticks to those snapped edges once they form a span, and falls back to raw drag feedback only while both edges are on the same snap point.
 
 Cmd+Option-drag on a clip body slips the waveform inside the fixed clip. Drag right to move the waveform right; drag left to move it left. If you slip beyond the source edges, TayPE pads the clip with silence instead of moving or resizing the clip.
 
@@ -42,7 +42,7 @@ Cmd-drag across empty space on one track to create a silent clip for the dragged
 
 ## Splitting
 
-Split selected clips at the playhead with `\`. If no clips are selected, `\` instead splits the clip directly under the mouse pointer at the pointer position and leaves both resulting clips unselected. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
+Split selected clips at the playhead with `\`. If no clips are selected, `\` splits every clip on the selected tracks at the playhead; with no track selected either, it splits every track that is not archived. Those pieces stay unselected. The split-all commands also leave archived tracks alone. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
 
 ## Channel Conversion
 
@@ -226,8 +226,8 @@ always sets the entry length while retaining velocity, even when notes are
 selected; the selected notes themselves are unchanged. Reselecting the active
 quantise menu item performs the same entry-length reset. This does not change
 the selected Quantise value. With Snap enabled, the grid selected by Quantise
-Grid controls note entry, movement, resizing, nudging, hovered-note splitting,
-duplicate placement, and editor seeks. Turning Quantise Grid off does not change
+Grid controls note entry, movement, resizing, nudging, duplicate placement, and
+editor seeks. Turning Quantise Grid off does not change
 the grid used by the explicit Quantise action.
 The crotchet button immediately before the quantise menu switches new-note
 length from that remembered default to the quantise cell beneath the pointer.
@@ -299,12 +299,9 @@ scrolled into view, and loop-brace tabs sit beside START/END when they share a
 time. Click a marker or loop-brace tab to move the playhead to it.
 While the MIDI editor is active, Shift+Plus and Shift+Minus zoom the piano roll
 vertically around the centre of its visible pitch range.
-The configured split shortcut cuts selected notes crossing the shared
-playhead. When nothing is selected, it instead cuts only the note beneath the
-mouse: at the nearest active editing-grid line with Snap enabled, or at the
-exact pointer position with Snap off. If the mouse is not
-over a note, nothing is cut. The shortcut never splits the arranger clip behind
-the editor.
+The configured split shortcut always cuts at the shared playhead: the selected
+notes that cross it, or every note under the playhead when nothing is selected.
+The shortcut never splits the arranger clip behind the editor.
 With no note selection, plain Left and Right move the shared playhead by the
 arranger's visible ruler tick instead of scrolling the piano roll. When notes
 are selected, Left and Right nudge those notes by one active editing-grid

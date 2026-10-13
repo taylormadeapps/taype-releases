@@ -56,7 +56,7 @@ Select a clip by ID. The owning track becomes selected too.
 
 ### `tab_to_transient`
 
-Move the transport to the next or previous transient. TayPE uses the selected clip where possible, otherwise it scans clips on the selected track.
+Move the transport to the next or previous transient, or clip start or end, whichever comes first. TayPE searches the selected clips; with no clip selected, the clips on the selected tracks; with no track selected, the clips on every track that is not archived.
 
 Optional parameters:
 
