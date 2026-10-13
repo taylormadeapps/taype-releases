@@ -48,12 +48,10 @@ again with no selected notes to close the editor.
 Cmd+C and Cmd+X copy or cut the selected notes. Cmd+V places the earliest
 copied note at the shared playhead while preserving the phrase's relative
 timing, pitch, length, velocity, and MIDI channel.
-The configured split shortcut cuts selected notes crossing the playhead. With
-no note selection, it cuts only the note beneath the mouse: at the nearest
-selected MIDI quantise or hardware-groove line when Snap is enabled, or at the
-exact pointer position when Snap is off. If the mouse is not over a note,
-nothing is cut. It does not split the arranger clip while the MIDI editor is
-active.
+The configured split shortcut always cuts at the playhead: the selected notes
+that cross it, or every note under the playhead when no note is selected. Both
+halves of an unselected note stay unselected. It does not split the arranger
+clip while the MIDI editor is active.
 Plain Q applies the current Quantise settings while the MIDI editor is active.
 Ctrl+Q selects the next division and Ctrl+Shift+Q selects the previous one;
 both directions wrap and restore that division's last-used Straight or groove
@@ -67,11 +65,11 @@ quit process directly.
 
 | Action | Shortcut |
 |---|---|
-| Split selected clips at playhead; with no selection, split under the pointer at the nearest active grid rail when snap is enabled (or the exact pointer when snap is off) without selecting either result | `\` |
+| Split at playhead: the selected clips; with no clip selection, every clip on the selected tracks, or on every track that is not archived when no track is selected, leaving the pieces unselected | `\` |
 | Split selected clips at loop braces | `Cmd+\` |
 | Split selected clips at visible grid | `Shift+\` |
-| Split all clips at playhead | `Option+\` |
-| Split all clips at loop braces | `Cmd+Option+\` |
+| Split all clips at playhead (archived tracks are left alone) | `Option+\` |
+| Split all clips at loop braces (archived tracks are left alone) | `Cmd+Option+\` |
 | Toggle fade | F |
 | Slip waveform inside fixed clip | Cmd+Option+drag clip body |
 | Duplicate selected clips / automation points / MIDI notes | D |
@@ -114,8 +112,8 @@ quit process directly.
 | Go to markers 1-10 | 1-9, 0 |
 | Go to markers 11-20 | Cmd+1-9, Cmd+0 |
 | Go to markers 21-30 | Cmd+Shift+1-9, Cmd+Shift+0 |
-| Next transient | Tab |
-| Previous transient | Option+Tab |
+| Next transient or clip start/end in the selected clips, else the selected tracks, else every track that is not archived | Tab |
+| Previous transient or clip start/end | Option+Tab |
 
 ### View
 

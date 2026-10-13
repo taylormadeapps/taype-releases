@@ -172,8 +172,8 @@ Automation breakpoint editing happens in Automation View while transport is stop
   pointer without selecting the track. Outside Automation View, Command+A keeps
   its normal arranger Select All behaviour.
 - Press Escape once to clear selected automation points while keeping the
-  selected track lanes. With no automation points selected, Escape performs
-  the normal arranger deselect.
+  selected track lanes. With no automation points selected, Escape clears the
+  clip selection, and the next Escape clears the track selection.
 - Delete or Backspace removes selected points.
 - Option-double-click clears the displayed automation lane for that track.
 - Hold Command over a lane to show the pencil, then Command-drag to draw one
