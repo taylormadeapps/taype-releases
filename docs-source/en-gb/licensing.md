@@ -2,6 +2,17 @@
 
 TayPE uses a trustware licence model. Try TayPE properly. If it becomes part of how you make music, buy a perpetual licence. That keeps TayPE breaking new ground, and bugs squashed.
 
+## Licence tiers
+
+- **Personal — £75:** non-commercial use, including non-monetised publishing.
+- **Commercial — £150:** commercial publishing, monetised releases (including your own music), paid client work, work-for-hire, paid production services, and use on behalf of studios, businesses, labels and organisations.
+
+Both tiers include the full application with identical functionality and updates for the current major version (Era) and the next. The difference is the permitted use. If your use becomes commercial, obtain a Commercial licence before continuing that use.
+
+To upgrade from Personal to Commercial, email [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com).
+
+Use TayPE alongside your existing DAW, or make the whole record here. See the [licence agreement](https://taype.ruminantaudioworks.com/terms/) for the full terms.
+
 ## Concessions
 
 If you really want to use TayPE but can’t afford our prices, drop me a line at [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com). We may be able to sort something out.
