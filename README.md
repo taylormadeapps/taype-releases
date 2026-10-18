@@ -1,6 +1,6 @@
 # TayPE
 
-**Craft first. Accessible by design. Robots welcome too.**
+**Old Skool, New Tricks**
 
 TayPE is a multitrack digital audio workstation for macOS built for musicians who want to finish records, not fight software. Modelled console tone built into the engine. WCAG 2.2 AA accessible. MCP native.
 
