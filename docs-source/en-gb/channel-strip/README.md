@@ -38,6 +38,8 @@ The RTA graph draws only what is visible. If the analyser falls below the visibl
 
 The Sends section sits with Inserts because both are routing decisions. The track-level **POST / PRE** button moves sends between post-fader and pre-fader taps. Send prep can add low cut, high cut, and predelay before a send reaches its target bus. Comping buses are not send or output destinations; they only collect their own take tracks.
 
+With **Grouped Track Controls** on, a send knob changes the send in the same position on every selected track. If one of them has no send there, nothing changes and TayPE tells you so; the Session Log names the tracks.
+
 Archived buses are not offered as send or output destinations either. A send or output you set before the bus was archived stays shown, marked as archived (for example **Reverb (archived)**), and is silent until you unarchive the bus. A track whose output goes into an archived bus sends nothing at all, not even through its other sends.
 
 The output selector's last choice is **Off**. A track whose output is Off isn't heard anywhere and its sends are silent, but it still keys any sidechain that listens to it, and an instrument still feeds the tracks that take its other outputs. A track that goes into a bus whose output is Off isn't heard either. Such tracks aren't offered as stems, and the bounces refuse them.

@@ -3,21 +3,17 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.5.1"
-date = "2026-10-13"
-commit = "bbb2cf09"
+version = "1.5.2"
+date = "2026-10-18"
+commit = "f77108e3"
 
 summary = """\
-Split and Tab now work at the playhead on whatever is selected. Tab stops at clip edges and passes over held notes, and Escape clears the clip selection before the track selection.
-Recording can start just after 0:00 with a count-in, and the timeline no longer follows the playhead while stopped.
-Fixed an update check that reported a failure when no beta was available.
+Fixed an MCP compatibility issue that prevented AI clients from connecting to TayPE.
 """
 
-# Verbatim git log since the v1.5.0 stable release.
+# Verbatim git log since the v1.5.1 stable release.
 git_log = """\
-1046ed49 Beta checkpoint v1.5.1b1
-0d138973 Treat an empty beta folder as no active beta instead of a failed update check
-8a40dcb5 Split and Tab work at the playhead on what is selected, Tab stops at clip edges and passes held notes, Escape clears clips before tracks, and betas move to 1.5.1
-e9e5b390 Record the operator's Seldon's Law qualification
-b59d6fad Record from just after 0:00 with a count-in; stop the stopped arranger chasing the playhead
+ff8da653 Negotiate the MCP protocol version instead of sending an invented one
+d38b1c26 Align unstable release-site pointer with published updates
+0ef3635c Track taype-releases v1.5.1
 """

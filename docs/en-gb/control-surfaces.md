@@ -10,13 +10,15 @@ Control-surface profiles describe how a device maps its buttons, faders, encoder
 
 Choose **CM Labs MotorMix (Pro Tools/HUI Mode)** in Control Surface Preferences when the unit is left in its Pro Tools/HUI personality. MotorMix support is built in; it does not use the Mackie MCU JSON profile folder.
 
-When the MotorMix connects, TayPE briefly greets the unit with **THE FIRST RULE OF TAYPE: / YOU DO NOT TALK ABOUT PRO TOOLS.** The display then changes to the normal track labels.
+TayPE works with the MotorMix in its Pro Tools mode. If the display reads **Pro Tools mode - OFF -**, press **PLAY** and **ESCAPE** together on the unit. TayPE also warns you if it sees the MotorMix in its other mode.
 
-MotorMix support covers the eight faders, fader touch tracking, select, mute, solo, record-arm, rotary pan, encoder jog, transport, return-to-zero, loop, channel navigation, bank navigation, motor-fader feedback, LEDs, and scribble-strip labels. The UNDO button follows TayPE's available history: it undoes while undo is available and redoes when only redo is available.
+MotorMix support covers the eight faders, select, mute, solo, record-arm, rotary pan and send levels, transport, return-to-zero, loop, channel navigation, bank navigation, motor-fader feedback, LEDs, and scribble-strip labels. The UNDO button follows TayPE's available history: it undoes while undo is available and redoes when only redo is available.
 
 MotorMix buttons for plugin pages, automation modes, and other Pro Tools-specific workflows remain inactive where TayPE has no equivalent operation.
 
-MotorMix fader touch is tracked internally for future automation work, but it does not yet change automation state in TayPE.
+Touching a MotorMix fader does nothing on its own. TayPE responds when you move it.
+
+Turn the selector to choose what the eight rotaries control: **P** for pan, or **SA** to **SE** for Send A to Send E. Send A to E are each track's first to fifth sends, in the order the mixer shows them. Each detent moves the send level a little, and a move stops at 0 dB when it crosses it. Sends six to eight can't be reached from the MotorMix, and removing a send moves the later sends up a letter. The lower row of the display shows each strip's pan position or chosen send level, and stays blank for a strip with no send there. Pushing the selector keeps the rotaries on pan; right-channel pan (**Pr**), FLIP, send mute and pre/post switching are not supported.
 
 ## Grouping Surfaces
 
