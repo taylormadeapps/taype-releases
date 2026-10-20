@@ -156,6 +156,9 @@ Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
 channel, compensate timing with an early-send amount, and receive an optional
 mono or stereo hardware **Audio Return**.
 
+Importing a MIDI file onto an instrument track renders it through the
+instrument, so TayPE asks you to wait if another clip render is still running.
+
 Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
 MIDI device or **Virtual Keyboard** from the track's input selector, or choose
 **None**. If the track already has a MIDI input or None selected, TayPE keeps it.

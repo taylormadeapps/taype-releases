@@ -38,7 +38,7 @@ With playback stopped, moving a clip, trimming an edge, or adjusting a fade keep
 
 ## Creating Blank Clips
 
-Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled.
+Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled. If a new MIDI clip's edge overlaps a neighbouring clip by less than 1 ms, it is moved onto that clip's edge, so the neighbour and its fades stay as they were.
 
 ## Splitting
 
