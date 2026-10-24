@@ -134,6 +134,8 @@ When an insert has a non-default TayPE plug-in preset associated with it, the in
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable removes the insert from the processing graph while keeping the assignment and saved state in the reel.
 
+The Bypass button at the top of a plug-in window switches that plug-in's own Bypass on its track, like the insert slot's power button. While the Inserts section is bypassed it stays lit; clicking it then turns the plug-in's own Bypass off if it was on, and otherwise changes nothing. While Automation View is on and you are recording, it records the insert's Bypass lane instead of changing its stored setting. A disabled plug-in cannot be bypassed; enable it first.
+
 By default, disabling also releases the plug-in from memory, and enabling loads it again with its settings. On a machine with plenty of RAM you can trade that memory back for instant re-enabling by turning on **Keep disabled plug-ins hot** in the Performance Monitor. Disabling works during playback either way; releasing a plug-in mid-playback cuts its reverb or delay tail short. A released plug-in has no window, so you cannot open its editor until it is enabled again.
 Opening a reel follows the same setting. With it off, plug-ins that were disabled when you saved are not loaded at all, so a large session opens using less memory and enabling one loads it then.
 
