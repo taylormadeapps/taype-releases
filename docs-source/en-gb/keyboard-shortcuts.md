@@ -10,7 +10,7 @@ Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled 
 
 | Shortcut | Action |
 |---|---|
-| Space | Play / stop |
+| Space | Play / stop, or play / pause in Pause Play/Stop Mode |
 | P | Play / pause (blocked while recording) |
 | Z | Stop / escape pass |
 | Return | Record |
@@ -177,6 +177,17 @@ quit process directly.
 Open the shortcut/profile controls from Preferences. Built-in profiles refresh from the app bundle after updates. Custom profiles remain yours.
 
 TayPE validates shortcut files and falls back to defaults if a profile is broken. Older shortcut layouts are migrated when TayPE can recognise them.
+
+## Play/Stop Mode
+
+Right-click **Play**, or choose **Transport → Play/Stop Mode**, to decide what
+**Space** does while TayPE is playing. **Return**, the default, stops and returns
+as before. **Pause** pauses where you pressed it, and the next press carries on
+from there. The setting applies to every reel and is kept when you restart.
+
+Only Space, and **Transport → Play / Stop** which carries it, change. The Play
+and Stop buttons, control surfaces, **P** and **Z** work as before. While you are recording, printing or running
+Sooper-Looper, Space still stops, following your Record Stop Mode.
 
 ## Record Stop Modes and Record Modes
 

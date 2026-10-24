@@ -50,7 +50,7 @@ Right-click **Record** to choose **Record Mode**:
 
 ## Playback
 
-Use **Space** for Play/Stop and **P** for Play/Pause. Playback-safe edits can happen while the transport is rolling; edits that would risk the take are blocked until you stop. Recording is stricter: TayPE protects the active pass and asks you to finish it before changing the timeline structure.
+Use **Space** for Play/Stop and **P** for Play/Pause. Right-click **Play** to make Space pause instead of stop (Play/Stop Mode). Playback-safe edits can happen while the transport is rolling; edits that would risk the take are blocked until you stop. Recording is stricter: TayPE protects the active pass and asks you to finish it before changing the timeline structure.
 
 Play uses a very short anti-click ramp at the exact point where transport
 starts. Silence before a later note or drum hit does not move that ramp onto

@@ -76,7 +76,7 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 ARA-only plug-ins such as **SpectraLayers** and **WaveLab** take a Menu Path too. They never appear in insert slots, so their path organises them in the top-level **ARA2** menu instead of the insert picker. Leave the column blank to keep TayPE's generated vendor and category folders.
 
-TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. They ship inside TayPE and also work in other VST3 hosts. To use one there, right-click TayPE in Finder, choose **Show Package Contents**, open **Contents**, then **Resources**, then **NativeExtensions**, and copy the plug-in into your other host's VST3 plug-in folder (Taype Rooms is the one named **Tape Rooms**). Outside TayPE, Taype Rooms finds its factory rooms in your installed TayPE; without one, only rooms in your own IR folder are available.
 
 Reels remember TayPE stock plug-ins by their bundled name, so those inserts
 still load if the TayPE app has been renamed or moved. When TayPE opens an older
