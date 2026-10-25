@@ -7,7 +7,7 @@ TayPE uses a trustware licence model. Try TayPE properly. If it becomes part of 
 - **Personal — £75:** non-commercial use, including non-monetised publishing.
 - **Commercial — £150:** commercial publishing, monetised releases (including your own music), paid client work, work-for-hire, paid production services, and use on behalf of studios, businesses, labels and organisations.
 
-Both tiers include the full application with identical functionality and updates for the current major version (Era) and the next. The difference is the permitted use. If your use becomes commercial, obtain a Commercial licence before continuing that use.
+Both tiers include the full application with identical functionality and updates for the current major version (Era) and the next. The difference is the permitted use. If your use becomes commercial, obtain a Commercial licence before continuing that use. Both tiers also include unrestricted use of TayPE's stock plug-ins in other DAWs.
 
 To upgrade from Personal to Commercial, email [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com).
 
@@ -19,7 +19,7 @@ If you really want to use TayPE but can’t afford our prices, drop me a line at
 
 ## Trustware Demo
 
-Fully functional demo for 90 days. After that, exporting audio (master and stems: Print Mix, Print Loop, Print Marker Ranges and Bounce External) requires a licence. Saving sessions, recording and editing are never blocked, so you never lose access.
+Fully functional demo for 90 days. After that, exporting audio (master and stems: Print Mix, Print Loop, Print Marker Ranges and Bounce External) requires a licence. Inside TayPE, saving sessions, recording and editing are never blocked, so you never lose access. TayPE's stock plug-ins in other DAWs share the same 90 days; after that they keep playing your sessions, and their controls unlock when you enter a licence in TayPE.
 
 ## Agreement
 
