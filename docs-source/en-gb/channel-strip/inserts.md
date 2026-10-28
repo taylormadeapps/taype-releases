@@ -130,9 +130,35 @@ If a matching plug-in preset is named `Default`, TayPE loads it automatically wh
 
 When an insert has a non-default TayPE plug-in preset associated with it, the insert row shows only that preset name, for example `Vocal Tame`, while popup help keeps the full plug-in and preset, such as `Pro-Q 3 · Vocal Tame`. The reserved `Default` preset keeps the plug-in name in the insert row. A `*` after a displayed preset name means the plug-in state differs from that preset on disk. The same marker appears in the open plug-in window's preset field and remains correct if you close and reopen that window; loading or saving the preset clears it. Changing presets updates the plug-in in its existing window without closing and reopening that window. Clicking anywhere outside the open preset menu closes the menu, including inside that plug-in's own controls or in another plug-in window. Older reels that do not store a TayPE preset name keep the original plug-in-only label.
 
+## Vintage Vocoder
+
+Vintage Vocoder's tone generator has eight oscillator columns. Drag across the
+**VOLUME** row to draw a level curve through them.
+
+Hold **Shift** while dragging **VOLUME**, **PITCH**, **TUNING**, or **WAVE** to
+adjust that oscillator and every oscillator to its right relatively. Starting
+at oscillator 1 adjusts all eight; starting at oscillator 3 adjusts 3–8 and
+leaves 1–2 alone; starting at oscillator 8 adjusts only itself. Volume keeps the
+dB differences, pitch keeps the musical intervals, tuning adds equal percentage
+points, and waveforms move by equal steps. The group stops together when one of
+its oscillators reaches a limit. Oscillators to the left do not restrict it.
+Silent levels and zero-Hz pitches stay at zero during relative adjustment.
+
+Hold **Option** for smooth fine adjustment at one tenth of normal sensitivity.
+Combine **Shift+Option** for fine adjustment of the rightward group. Modified
+volume drags start from the current levels without jumping to the pointer.
+
+In **MIDI** mode, ordinary volume, tuning, and waveform edits set all eight
+columns together. Shift-drag preserves their differences within the rightward
+group. MIDI **PITCH** remains a shared semitone transpose. Double-click a volume
+fader for **0 dB**, or a tuning knob for **zero detune**; in MIDI mode these
+resets apply to all eight columns.
+
 ## Bypass vs Disable
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable removes the insert from the processing graph while keeping the assignment and saved state in the reel.
+
+The Bypass button at the top of a plug-in window switches that plug-in's own Bypass on its track, like the insert slot's power button. While the Inserts section is bypassed it stays lit; clicking it then turns the plug-in's own Bypass off if it was on, and otherwise changes nothing. While Automation View is on and you are recording, it records the insert's Bypass lane instead of changing its stored setting. A disabled plug-in cannot be bypassed; enable it first.
 
 By default, disabling also releases the plug-in from memory, and enabling loads it again with its settings. On a machine with plenty of RAM you can trade that memory back for instant re-enabling by turning on **Keep disabled plug-ins hot** in the Performance Monitor. Disabling works during playback either way; releasing a plug-in mid-playback cuts its reverb or delay tail short. A released plug-in has no window, so you cannot open its editor until it is enabled again.
 Opening a reel follows the same setting. With it off, plug-ins that were disabled when you saved are not loaded at all, so a large session opens using less memory and enabling one loads it then.
