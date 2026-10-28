@@ -42,9 +42,13 @@ but it keys nothing: the compressor sees silence and does no gain reduction
 until you unarchive the source. A track routed into an archived bus is still
 live and still keys.
 
-Taype Comp shows read-only **Internal** or **External** from its sidechain
-input bus. Host routing stays in TayPE's plugin chrome, or the host's own
-sidechain controls outside TayPE.
+In Taype Comp, the panel chooses **Internal** (the signal it is
+compressing) or **External** (its sidechain input), in TayPE and in other
+DAWs. Route the external signal with TayPE's plugin chrome, or with the
+host's own sidechain controls outside TayPE. A new Taype Comp starts on
+Internal; one saved before this choice existed opens on External, as it
+worked then. The button is yellow while External is selected and the host
+feeds the sidechain input.
 
 ## Soft Clipping
 
