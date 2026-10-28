@@ -25,6 +25,7 @@ Invalid entries leave the current value unchanged and show a warning. Factors
 outside `0.5x`–`2.0x` are limited to the nearest endpoint, with a warning showing
 the applied value. If another session change cancels an unfinished edit, TayPE
 also explains that cancellation. Edit outcomes are available in **Tools → Session Log**.
+Routine save confirmations leave an active warning visible until it expires.
 
 ## Tempo Display
 
