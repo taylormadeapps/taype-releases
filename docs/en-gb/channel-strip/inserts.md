@@ -260,6 +260,33 @@ immediately as separate undoable edits. Manual advance is clamped to **0–10
 ms**, including older saved values above that range. Auto can use the full
 interface estimate.
 
+### MIDI Out to an effect plug-in
+
+MIDI Out can also play an audio-effect plug-in that takes MIDI on another track
+or bus, such as **Vintage Vocoder** in **MIDI** mode or a vocoder that follows
+notes. In **MIDI Output**, after the hardware outputs, each one is listed as
+**Track › Plug-in**. Instruments and plug-ins without a MIDI input are not
+listed, and nor is anything on the MIDI Out's own track. Choose one and the
+popup shows only **MIDI Output** and **Channel**: Audio Return, Feedback
+Protection and Advance are for hardware and are cleared. **Not set** or a
+hardware output takes the plug-in off again.
+
+The plug-in gets the MIDI Out track's clips, on their samples, lined up with
+the audio reaching it after any plug-ins before it, and live MIDI while that
+track's **MON** is on. It also gets the clips when the MIDI Out track is muted,
+soloed out or left out of stems; a muted clip, or a take the comp is not
+using, sends nothing. Offline and Live prints, stems and bounces send the
+clips too, never live MIDI. **Stop** and **Pause** release the notes it holds,
+and **Kill MIDI** silences it.
+
+Delete the plug-in's track or remove the plug-in and MIDI Out goes back to
+**Not set**; Undo brings both back. Drag the plug-in to another track and MIDI
+Out follows it. A plug-in on an archived track stays chosen, shown
+**(archived)**, and gets nothing. One that cannot load or no longer takes MIDI
+stays chosen, shown **(unavailable)**, gets nothing, and TayPE warns once. If
+its MIDI cannot be sent during a print, the print plays on and its report
+names the plug-in; a bounce is refused and the reel is left as it was.
+
 ## Hardware Inserts
 
 Hardware Insert sends audio out to external gear and returns it to the strip. Choose output and input routes, add trim, optional filtering, recall images, and latency offset. TayPE rejects routes that would overlap the master output. The window still opens if the live I/O mapping is missing, including while Audio Preferences is waiting on an unplugged device, and tells you to open Audio Preferences. Ping, enable, and route changes need a live mapping; they do not ask you to set send and return routes for that case.

@@ -10,7 +10,9 @@ An entry with `timedOutOnScan` is **Needs Attention**: its scan was skipped. A p
 
 ### `list_midi_outputs`
 
-List available Core MIDI output destinations for the MIDI Out insert.
+List available Core MIDI output destinations for the MIDI Out insert, and in
+`plugins` every audio-effect plug-in with a MIDI input that a MIDI Out can play
+(`track_id`, `track_name`, `slot`, `plugin_name`).
 
 ### `add_insert`
 
@@ -68,7 +70,7 @@ capture remain protected.
 
 ### `get_insert_info`
 
-Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`).
+Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`). A MIDI Out also reports its plug-in destination fields, as `set_insert_midi_output` returns them, and `plugin_destination_held_notes`: the notes it has sent that plug-in and not yet released. Any plug-in reports `has_midi_input`, `true` when it takes MIDI of its own.
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
 `stopped_until_reload` is true while the plug-in is stopped until it is
@@ -174,6 +176,15 @@ Optional parameters:
 | `advance_ms` | Early-send timing compensation |
 | `audio_input_route_id` | Audio Return route; empty clears to None, omission retains it |
 | `feedback_protection` | `off`, `playing_synth`, or `playing_controller`; omission retains it |
+| `plugin_track_id` | Instead of a device: the track of an audio-effect plug-in with a MIDI input, on another track |
+| `plugin_slot` | That plug-in's insert slot, with `plugin_track_id` |
+
+A device and a plug-in are never both set. Choosing a plug-in clears the
+device, Audio Return, feedback protection and timing, which are refused
+alongside it. The result reports `plugin_destination_track_id`,
+`plugin_destination_slot`, `plugin_destination_name` and
+`plugin_destination_state` (`none`, `available`, `disabled`, `archived` or
+`unavailable`).
 
 ## Sidechains
 
