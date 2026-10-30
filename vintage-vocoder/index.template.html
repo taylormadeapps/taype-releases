@@ -135,6 +135,18 @@
                 <p class="platform-note">{{download.platform}}</p>
                 <p class="security-note">{{download.security}}</p>
             </div>
+            <div class="windows-download" aria-labelledby="windows-download-heading">
+                <h3 id="windows-download-heading">{{download.windows.title}}</h3>
+                <p class="platform-note">{{download.windows.platform}}</p>
+                <a id="windows-download" class="btn btn-secondary" href="{{release.windows.download_url}}">{{download.windows.button}} <span aria-hidden="true">↓</span></a>
+                <p class="archive-note">{{release.windows.size}} · .exe</p>
+                <p class="security-note">{{download.windows.security}}</p>
+                <div class="download-details">
+                    <a href="{{release.windows.signature_url}}">{{download.windows.signature}}</a>
+                    <a href="{{release.notes_url}}#windows-vst3-download">{{download.windows.verification}} <span aria-hidden="true">↗</span></a>
+                    <details><summary>{{download.windows.checksum}}</summary><code>{{release.windows.sha256}}</code></details>
+                </div>
+            </div>
             <div class="linux-download" aria-labelledby="linux-download-heading">
                 <h3 id="linux-download-heading">{{download.linux.title}}</h3>
                 <p class="platform-note">{{download.linux.platform}}</p>
