@@ -1,0 +1,76 @@
+# Vintage Vocoder End User Licence Agreement
+
+**Revision: 2026-10-30**
+
+## The short version
+
+Vintage Vocoder is free for personal and commercial use. You do not need to
+buy, install or license TayPE to use it. There is no trial period or paid
+licence tier for Vintage Vocoder.
+
+You may use it to make records, mixes, demos, edits and other audio works,
+including monetised releases, paid client work and work for studios, businesses,
+labels and organisations.
+
+Vintage Vocoder is provided as-is. Keep backups and check your sessions and
+exports.
+
+## Full EULA
+
+This agreement covers Vintage Vocoder FX distributed by Ruminant Audio Works.
+By installing, opening or using Vintage Vocoder, you accept this agreement.
+
+## What you can do
+
+You may install and use Vintage Vocoder at no charge for personal and commercial
+audio work. No TayPE purchase or licence is required. There is no trial expiry,
+subscription or payment requirement for this use of Vintage Vocoder.
+
+You may publish, monetise and otherwise use the audio works you make with
+Vintage Vocoder. Ruminant Audio Works does not claim ownership of those works
+because you used the plug-in.
+
+This free licence covers Vintage Vocoder. It does not grant a licence to TayPE
+or change the terms of other Ruminant Audio Works products.
+
+## Ownership
+
+Vintage Vocoder is licensed, not sold. Ownership of the software and its
+intellectual property remains with the respective rights holders.
+
+## What you cannot claim
+
+Vintage Vocoder is provided "as is". No warranty whatsoever is provided. There
+is no promise that it is error-free, uninterrupted, secure or suitable for any
+particular studio, session, system or workflow.
+
+There is no guarantee of fitness for any purpose. If Vintage Vocoder loses
+work, corrupts data, misbehaves, crashes or fails to meet your expectations,
+that risk stays with you, to the fullest extent allowed by law.
+
+## Risk
+
+You are responsible for backups, exports, session checks, compatibility checks
+and the decisions you make while using the software. Loading successfully in
+one host or session is not a guarantee of compatibility with another.
+
+## Liability
+
+To the fullest extent allowed by law, Ruminant Audio Works is not liable for
+any loss, damage, cost, claim or consequence arising from your use of Vintage
+Vocoder or your inability to use it.
+
+Nothing in this agreement excludes or restricts liability or statutory rights
+that cannot lawfully be excluded or restricted.
+
+## Third-party software
+
+Third-party software and components remain subject to their applicable
+licences. This agreement does not replace those licences or restrict rights
+they independently grant.
+
+## Updates
+
+Vintage Vocoder may change over time. New builds may alter features, fix bugs,
+introduce new bugs or change compatibility. This agreement applies to those
+builds unless a later version of the agreement replaces it.
