@@ -9,6 +9,8 @@ TayPE purchase or licence and has no trial expiry.
 
 Visit the [Vintage Vocoder product page](https://taype.ruminantaudioworks.com/vintage-vocoder/)
 for the download, compatibility details and installation guide.
+You can also reach it from the Vintage Vocoder button beside Explore TayPE on
+the [Ruminant Audio Works company page](https://taype.ruminantaudioworks.com/ruminant-audio-works/).
 
 ## Get a sound
 
