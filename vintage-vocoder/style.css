@@ -62,7 +62,8 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .free-note { margin-top: 0.65rem; color: var(--text-dim); font-size: 0.85rem; }
 .platform-note { color: var(--text-muted); font-size: 0.88rem; }
 .hero > .platform-note { margin-top: 2.75rem; text-align: center; }
-.interface { margin-top: 1.25rem; }
+/* Keep the recovered low-resolution artwork below the full desktop text width. */
+.interface { width: min(100%, 37.5rem); margin: 1.25rem auto 0; }
 .interface > a { display: block; }
 .interface img { width: 100%; box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4); }
 figcaption { margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); }
