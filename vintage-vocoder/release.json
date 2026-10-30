@@ -3,5 +3,17 @@
   "tag": "vintage-vocoder-v1.6.0",
   "filename": "Vintage-Vocoder-1.6.0-universal-20261030T061108Z.pkg",
   "size": "17.5 MB",
-  "sha256": "25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b"
+  "sha256": "25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b",
+  "linux": {
+    "arm64": {
+      "filename": "Vintage-Vocoder-1.6.0-linux-arm64.tar.gz",
+      "size": "5.4 MB",
+      "sha256": "acb848a30c2a54c6cd668b09abe61da96bef8565bb76f9e959c88f348494c5db"
+    },
+    "x86_64": {
+      "filename": "Vintage-Vocoder-1.6.0-linux-x86_64.tar.gz",
+      "size": "5.4 MB",
+      "sha256": "d62fdf0da7ae585d25b714d04415bb1fb1373cacac951a5c8b056e5320e0238b"
+    }
+  }
 }

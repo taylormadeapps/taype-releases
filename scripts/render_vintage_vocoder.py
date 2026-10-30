@@ -2,6 +2,7 @@
 """Render the static Vintage Vocoder page from its source-locale catalogue."""
 
 import argparse
+import hashlib
 import html
 import json
 import re
@@ -28,9 +29,26 @@ def render() -> str:
     if not re.fullmatch(r"[a-f0-9]{64}", release["sha256"]):
         raise ValueError("Invalid installer SHA-256")
     values = dict(catalogue)
-    values.update({f"release.{key}": value for key, value in release.items()})
+    values["style.version"] = hashlib.sha256((PAGE / "style.css").read_bytes()).hexdigest()[:12]
+    values.update({f"release.{key}": value for key, value in release.items() if isinstance(value, str)})
     values["release.download_url"] = f"{RELEASES}/download/{release['tag']}/{release['filename']}"
     values["release.notes_url"] = f"{RELEASES}/tag/{release['tag']}"
+    linux = release["linux"]
+    if not isinstance(linux, dict) or set(linux) != {"arm64", "x86_64"}:
+        raise ValueError("Linux release metadata must include ARM64 and x86-64")
+    for arch, asset in linux.items():
+        expected = f"Vintage-Vocoder-{release['version']}-linux-{arch}.tar.gz"
+        if asset["filename"] != expected:
+            raise ValueError(f"Linux {arch} filename must identify this version and architecture")
+        if not re.fullmatch(r"[a-f0-9]{64}", asset["sha256"]):
+            raise ValueError(f"Invalid Linux {arch} SHA-256")
+        if not isinstance(asset["size"], str) or not asset["size"].strip():
+            raise ValueError(f"Missing Linux {arch} download size")
+        values[f"release.linux.{arch}.size"] = asset["size"]
+        values[f"release.linux.{arch}.download_url"] = f"{RELEASES}/download/{release['tag']}/{expected}"
+    values["release.linux.checksums_url"] = (
+        f"{RELEASES}/download/{release['tag']}/Vintage-Vocoder-{release['version']}-linux-SHA256SUMS.txt"
+    )
     template = (PAGE / "index.template.html").read_text(encoding="utf-8")
     missing = set(TOKEN.findall(template)) - values.keys()
     unused = catalogue.keys() - set(TOKEN.findall(template))

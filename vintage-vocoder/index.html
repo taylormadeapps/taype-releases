@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vintage Vocoder — Free AU &amp; VST3 for macOS | Ruminant Audio Works</title>
-<meta name="description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AU and VST3 download for Apple Silicon and Intel Macs.">
-<meta property="og:title" content="Vintage Vocoder — Free AU &amp; VST3 for macOS | Ruminant Audio Works">
-<meta property="og:description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AU and VST3 download for Apple Silicon and Intel Macs.">
+<title>Vintage Vocoder — Free AU &amp; VST3 for macOS and Linux | Ruminant Audio Works</title>
+<meta name="description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AU/VST3 for Mac and VST3 for Linux ARM64 and x86-64.">
+<meta property="og:title" content="Vintage Vocoder — Free AU &amp; VST3 for macOS and Linux | Ruminant Audio Works">
+<meta property="og:description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AU/VST3 for Mac and VST3 for Linux ARM64 and x86-64.">
 <meta property="og:url" content="https://taype.ruminantaudioworks.com/vintage-vocoder/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/vintage-vocoder/images/interface.png">
 <meta property="og:image:alt" content="Vintage Vocoder interface with eight oscillator columns on the left and filter, analysis filterbank and mode controls on the right">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=30d3aa7a34f7">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -46,12 +46,12 @@
                 <p class="hero-tagline">It really is vintage now.</p>
             </div>
             <div class="hero-detail">
-                <p class="hero-copy">The original Sonicism vocoder from 2002, brought back for modern Macs. Robot voices, singing synths and spectral mischief — with MIDI finally in charge of the oscillators.</p>
-                <a class="btn btn-primary" href="#download">Download for macOS <span aria-hidden="true">↓</span></a>
+                <p class="hero-copy">The original Sonicism vocoder from 2002, brought back for modern Macs and Linux. Robot voices, singing synths and spectral mischief — with MIDI finally in charge of the oscillators.</p>
+                <a class="btn btn-primary" href="#download">Free download <span aria-hidden="true">↓</span></a>
                 <p class="free-note">Free download. No signup.</p>
             </div>
         </div>
-        <p class="platform-note">macOS 12+ · Apple Silicon + Intel · AU + VST3</p>
+        <p class="platform-note">macOS 12+ · Apple Silicon + Intel · Linux ARM64 + x86-64</p>
         <figure class="interface">
             <a href="images/interface.png" target="_blank" rel="noopener" aria-label="View full-size interface">
                 <img src="images/interface.png" alt="Vintage Vocoder interface with eight oscillator columns on the left and filter, analysis filterbank and mode controls on the right" width="1782" height="1190" fetchpriority="high" decoding="async">
@@ -107,7 +107,7 @@
             <p class="body-copy">A vocoder uses a modulator to shape a carrier. Start with a voice as the modulator and the internal oscillators as the carrier.</p>
         </div>
         <ol class="setup-steps">
-            <li><h3>Install the plug-in</h3><p>Quit your DAW and run the macOS installer. It installs Vintage Vocoder FX as both an AU Music Effect and a VST3. Reopen your DAW and rescan plug-ins if needed.</p></li>
+            <li><h3>Install the plug-in</h3><p>Quit your DAW. On macOS, run the installer for AU Music Effect and VST3. On Linux, extract the archive matching your system and copy the complete Vintage Vocoder FX.vst3 bundle into ~/.vst3/. Reopen your DAW and rescan plug-ins if needed.</p></li>
             <li><h3>Add it to an audio track</h3><p>Insert Vintage Vocoder FX on a vocal or another audio track. Choose NORM mode and play the track to hear the audio shape the fixed internal carrier. Keep the MIX control towards wet to hear the effect clearly.</p></li>
             <li><h3>Put MIDI in charge</h3><p>Switch to MIDI mode and route a MIDI track or keyboard to the effect. Play notes while the modulator audio runs. MIDI routing to audio effects depends on your DAW; both audio and MIDI are needed in this mode.</p></li>
         </ol>
@@ -127,17 +127,39 @@
         <div class="page-section download-content">
             <p class="micro-heading">Yours to play with</p>
             <h2>Make something strange.</h2>
-            <p class="download-copy">A free vocoder for your Mac, ready to use in your DAW. One installer includes both plug-in formats.</p>
-            <a id="package-download" class="btn btn-primary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-universal-20261030T061108Z.pkg">Download Vintage Vocoder <span aria-hidden="true">↓</span></a>
-            <p class="release-note">Version 1.6.0 · 17.5 MB · AU Music Effect + VST3</p>
-            <p class="platform-note">macOS Monterey (12) or later · Apple Silicon + Intel</p>
-            <p class="security-note">Developer ID signed and notarized by Apple.</p>
+            <p class="download-copy">A free vocoder for Mac and Linux, ready to use in your DAW. Choose your system below.</p>
+            <div class="macos-download" aria-labelledby="macos-download-heading">
+                <h3 id="macos-download-heading">macOS · AU + VST3</h3>
+                <a id="package-download" class="btn btn-primary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-universal-20261030T061108Z.pkg">Download for macOS <span aria-hidden="true">↓</span></a>
+                <p class="release-note">Version 1.6.0 · 17.5 MB · AU Music Effect + VST3</p>
+                <p class="platform-note">macOS Monterey (12) or later · Apple Silicon + Intel</p>
+                <p class="security-note">Developer ID signed and notarized by Apple.</p>
+            </div>
+            <div class="linux-download" aria-labelledby="linux-download-heading">
+                <h3 id="linux-download-heading">Linux · VST3</h3>
+                <p class="platform-note">Ubuntu 22.04 / glibc 2.35 or later · 64-bit VST3 host</p>
+                <div class="linux-downloads">
+                    <div>
+                        <a id="linux-arm64-download" class="btn btn-secondary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-linux-arm64.tar.gz">Linux ARM64 <span aria-hidden="true">↓</span></a>
+                        <p class="archive-note">5.4 MB · .tar.gz</p>
+                    </div>
+                    <div>
+                        <a id="linux-x86_64-download" class="btn btn-secondary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-linux-x86_64.tar.gz">Linux x86-64 <span aria-hidden="true">↓</span></a>
+                        <p class="archive-note">5.4 MB · .tar.gz</p>
+                    </div>
+                </div>
+                <p class="security-note">Extract the archive and copy the complete Vintage Vocoder FX.vst3 bundle into ~/.vst3/. Choose the architecture matching both your Linux system and your DAW.</p>
+                <div class="download-details">
+                    <a href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-linux-SHA256SUMS.txt">Linux SHA-256 checksums</a>
+                    <a href="https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0#linux-vst3-downloads">OpenPGP signatures &amp; verification <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
             <p class="security-note">Free for personal and commercial use. No TayPE licence required.</p>
-            <p class="requirements">Requires a compatible AU or VST3 host. AAX, Windows and Linux downloads are not included.</p>
+            <p class="requirements">Requires a compatible AU or VST3 host. Linux downloads are VST3 only. AAX and Windows downloads are not included.</p>
             <div class="download-details">
                 <a href="https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0">Release notes on GitHub <span aria-hidden="true">↗</span></a>
                 <a href="licence.txt">Read the licence terms</a>
-                <details><summary>SHA-256 checksum</summary><code>25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b</code></details>
+                <details><summary>macOS SHA-256 checksum</summary><code>25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b</code></details>
             </div>
         </div>
     </section>
