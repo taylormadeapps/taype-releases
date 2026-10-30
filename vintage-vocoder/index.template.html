@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v={{style.version}}">
 </head>
 <body>
 <a class="skip-link" href="#main">{{skip}}</a>
@@ -128,10 +128,32 @@
             <p class="micro-heading">{{download.eyebrow}}</p>
             <h2>{{download.title}}</h2>
             <p class="download-copy">{{download.copy}}</p>
-            <a id="package-download" class="btn btn-primary" href="{{release.download_url}}">{{download.button}} <span aria-hidden="true">↓</span></a>
-            <p class="release-note">{{download.version.label}} {{release.version}} · {{release.size}} · {{download.formats}}</p>
-            <p class="platform-note">{{download.platform}}</p>
-            <p class="security-note">{{download.security}}</p>
+            <div class="macos-download" aria-labelledby="macos-download-heading">
+                <h3 id="macos-download-heading">{{download.macos.title}}</h3>
+                <a id="package-download" class="btn btn-primary" href="{{release.download_url}}">{{download.button}} <span aria-hidden="true">↓</span></a>
+                <p class="release-note">{{download.version.label}} {{release.version}} · {{release.size}} · {{download.formats}}</p>
+                <p class="platform-note">{{download.platform}}</p>
+                <p class="security-note">{{download.security}}</p>
+            </div>
+            <div class="linux-download" aria-labelledby="linux-download-heading">
+                <h3 id="linux-download-heading">{{download.linux.title}}</h3>
+                <p class="platform-note">{{download.linux.platform}}</p>
+                <div class="linux-downloads">
+                    <div>
+                        <a id="linux-arm64-download" class="btn btn-secondary" href="{{release.linux.arm64.download_url}}">{{download.linux.arm64}} <span aria-hidden="true">↓</span></a>
+                        <p class="archive-note">{{release.linux.arm64.size}} · .tar.gz</p>
+                    </div>
+                    <div>
+                        <a id="linux-x86_64-download" class="btn btn-secondary" href="{{release.linux.x86_64.download_url}}">{{download.linux.x86_64}} <span aria-hidden="true">↓</span></a>
+                        <p class="archive-note">{{release.linux.x86_64.size}} · .tar.gz</p>
+                    </div>
+                </div>
+                <p class="security-note">{{download.linux.install}}</p>
+                <div class="download-details">
+                    <a href="{{release.linux.checksums_url}}">{{download.linux.checksums}}</a>
+                    <a href="{{release.notes_url}}#linux-vst3-downloads">{{download.linux.signatures}} <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
             <p class="security-note">{{download.license}}</p>
             <p class="requirements">{{download.requirements}}</p>
             <div class="download-details">
