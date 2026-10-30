@@ -106,7 +106,8 @@ blockquote { margin-top: 2rem; color: var(--paper-ink); font-family: Georgia, "T
 .download-content { text-align: center; }
 .download-copy { max-width: 34rem; margin: 1.3rem auto 1.8rem; color: var(--text-muted); font-size: 1.05rem; }
 .macos-download h3 { margin-bottom: 1rem; }
-.linux-download { max-width: 38rem; margin: 2.5rem auto 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.linux-download, .windows-download { max-width: 38rem; margin: 2.5rem auto 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.windows-download > .platform-note { margin: 0.5rem 0 1.25rem; }
 .linux-download > .platform-note { margin-top: 0.5rem; }
 .linux-downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.25rem; }
 .linux-downloads .btn { width: 100%; gap: 0.75rem; }

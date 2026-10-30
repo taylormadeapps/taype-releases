@@ -1,9 +1,10 @@
 # Vintage Vocoder
 
-Sonicism Vintage Vocoder is a restored audio effect for macOS and Linux. Its
+Sonicism Vintage Vocoder is a restored audio effect for macOS, Windows and Linux. Its
 free standalone macOS installer includes AU Music Effect and VST3 formats for
 Apple Silicon and Intel Macs running macOS 12 or later. Linux ARM64 and x86-64
 VST3 archives target Ubuntu 22.04/glibc 2.35 or later and a matching 64-bit host.
+The Windows x86-64 installer provides VST3 for a 64-bit Windows host.
 
 Vintage Vocoder is free for personal and commercial use. It does not require a
 TayPE purchase or licence and has no trial expiry.
@@ -15,7 +16,9 @@ the [Ruminant Audio Works company page](https://taype.ruminantaudioworks.com/rum
 
 ## Get a sound
 
-1. Quit your DAW. On macOS, run the installer. On Linux, extract the archive
+1. Quit your DAW. On macOS or Windows, run the installer. The Windows installer
+   requires administrator approval and installs to the system-wide VST3 folder.
+   On Linux, extract the archive
    matching your system and copy the complete **Vintage Vocoder FX.vst3** bundle
    into `~/.vst3/`. Reopen your DAW and rescan plug-ins if needed; the Linux host
    must include that folder in its VST3 scan paths.
@@ -60,3 +63,11 @@ Both Linux builds passed the standalone DSP/MIDI and processor checks, including
 180 factory renders each and loading/rendering/recalling the real VST3 bundles.
 The x86-64 checks ran under Docker emulation; third-party Linux DAW integration
 and physical audio-device operation were not verified by those checks.
+
+## Windows download verification
+
+The [GitHub release](https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0#windows-vst3-download)
+provides the Windows installer, its SHA-256 checksum, detached OpenPGP signature
+and Sonicism public key. The installer is not Authenticode-signed, so Windows
+may display an unknown-publisher warning. The installer requires administrator
+approval and its uninstaller leaves user presets intact.

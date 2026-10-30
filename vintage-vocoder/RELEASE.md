@@ -1,6 +1,6 @@
 # Vintage Vocoder 1.6.0
 
-Sonicism Vintage Vocoder, restored for modern Macs and Linux. A free standalone download
+Sonicism Vintage Vocoder, restored for modern Macs, Windows and Linux. A free standalone download
 from Ruminant Audio Works. Free for personal and commercial use, with no
 TayPE purchase or licence required. The installer includes the standalone
 Vintage Vocoder licence terms.
@@ -13,7 +13,7 @@ Vintage Vocoder licence terms.
 
 The universal macOS installer includes AU Music Effect and VST3 formats for
 Apple Silicon and Intel. Requires macOS 12 or later and a compatible plug-in
-host. AAX and Windows downloads are not included.
+host. AAX is not included.
 
 Quit your DAW before installing. Reopen it afterwards and rescan plug-ins if
 needed. Insert **Vintage Vocoder FX** on an audio track and start in **NORM**
@@ -31,6 +31,33 @@ Developer ID signed, Apple notarized and stapled. SHA-256:
 ```text
 25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b
 ```
+
+## Windows VST3 download
+
+[Windows x86-64 installer](https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe)
+requires 64-bit Windows and a compatible 64-bit VST3 host. Quit your DAW, run
+the installer with administrator approval, then reopen and rescan plug-ins. It
+installs the complete bundle in `C:\Program Files\Common Files\VST3\` and
+provides an uninstaller that leaves user presets intact.
+
+The installer is not Authenticode-signed; Windows may show an unknown-publisher
+warning. It has a detached Sonicism OpenPGP signature and SHA-256 checksum.
+After importing the public key and independently checking its fingerprint below,
+verify the installer with:
+
+```sh
+gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe.asc Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe
+```
+
+Windows installer SHA-256:
+
+```text
+d588289150ca2745a241756d9b6ea33624e34c1c7553c7756b275c15cdc799b4  Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe
+```
+
+The Windows and Linux builds were smoke-tested by the developer. The Windows
+automated DSP/MIDI and factory-preset audio checks passed under Wine; the full
+Wine GUI checks did not complete in the emulated build environment.
 
 ## Linux VST3 downloads
 
