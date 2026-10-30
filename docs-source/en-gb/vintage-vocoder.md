@@ -52,6 +52,11 @@ The **PRESETS** button offers 30 factory sounds. **SAVE AS** saves your own
 named presets. Turn on the **?** button beside the Sonicism badge and hover over
 a control for an explanation and mouse actions.
 
+Click the title or Sonicism badge to open **About**. It includes the original
+story and credits, the Ruminant Audio Works
+logo and company name, and a **www.ruminantaudioworks.com** link to the company
+homepage for TayPE and Vintage Vocoder.
+
 ## Linux download verification
 
 The [GitHub release](https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0#linux-vst3-downloads)

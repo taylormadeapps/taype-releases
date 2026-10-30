@@ -5,6 +5,9 @@ from Ruminant Audio Works. Free for personal and commercial use, with no
 TayPE purchase or licence required. The installer includes the standalone
 Vintage Vocoder licence terms.
 
+The About panel includes the Ruminant Audio Works logo, company name and a
+clickable www.ruminantaudioworks.com link. The original faceplate is retained.
+
 - Eight internal oscillators with sine, saw, square and triangle waveforms.
 - MIDI carrier control with velocity, sustain and pitch bend.
 - Up to 64 analysis bands, a resonant filter and dry/wet mix.
@@ -24,17 +27,17 @@ Installation and mode guide:
 
 ## Installer
 
-`Vintage-Vocoder-1.6.0-universal-20261030T061108Z.pkg` (17,482,849 bytes).
+`Vintage-Vocoder-1.6.0-universal-20261030T204051Z.pkg` (17,647,094 bytes).
 
 Developer ID signed, Apple notarized and stapled. SHA-256:
 
 ```text
-25febd70a5d96cf80e9e5f0644b2cac10f8828a7c5259a1023bdbc37f4f9806b
+a12c8d3d6906b6b32baedff7101fd4bdc8dd52171a9ee4ed770eb8b7f744c5fd
 ```
 
 ## Windows VST3 download
 
-[Windows x86-64 installer](https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe)
+[Windows x86-64 installer](https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe)
 requires 64-bit Windows and a compatible 64-bit VST3 host. Quit your DAW, run
 the installer with administrator approval, then reopen and rescan plug-ins. It
 installs the complete bundle in `C:\Program Files\Common Files\VST3\` and
@@ -46,18 +49,20 @@ After importing the public key and independently checking its fingerprint below,
 verify the installer with:
 
 ```sh
-gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe.asc Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe
+gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe.asc Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe
 ```
 
 Windows installer SHA-256:
 
 ```text
-d588289150ca2745a241756d9b6ea33624e34c1c7553c7756b275c15cdc799b4  Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T115439Z.exe
+b4edfd836b1690040524884cbf2068e856c6f5a231f8c418c6dfbe92b2b6e525  Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe
 ```
 
-The Windows and Linux builds were smoke-tested by the developer. The Windows
-automated DSP/MIDI and factory-preset audio checks passed under Wine; the full
-Wine GUI checks did not complete in the emulated build environment.
+The previous Windows and Linux builds were smoke-tested by the developer.
+For this About-only refresh, the Windows build passed DSP/MIDI, default preset
+save/recall and exact installer-payload checks. Windows retains its beta label:
+processor/editor and native Windows GUI/DAW checks remain unverified because
+the Wine GUI checks did not complete in the emulated build environment.
 
 ## Linux VST3 downloads
 
@@ -99,6 +104,6 @@ gpg --verify Vintage-Vocoder-1.6.0-linux-arm64.tar.gz.asc Vintage-Vocoder-1.6.0-
 Linux archive SHA-256 values:
 
 ```text
-acb848a30c2a54c6cd668b09abe61da96bef8565bb76f9e959c88f348494c5db  Vintage-Vocoder-1.6.0-linux-arm64.tar.gz
-d62fdf0da7ae585d25b714d04415bb1fb1373cacac951a5c8b056e5320e0238b  Vintage-Vocoder-1.6.0-linux-x86_64.tar.gz
+c8f23e90d61d2fa55136e0fd031d6d8afc24d40bf3ec973ec9bee1d6b4bdc33d  Vintage-Vocoder-1.6.0-linux-arm64.tar.gz
+bd6027a33e9e1bd05ce19326e4de25d8c18ec05fb10196d7b9b5e537fb05f264  Vintage-Vocoder-1.6.0-linux-x86_64.tar.gz
 ```
