@@ -6,6 +6,8 @@ A reel is TayPE's session bundle: timeline, tracks, clips, routing, plugin state
 
 TayPE saves the working reel continuously. **Save** creates a checkpoint you can return to later.
 
+If TayPE shows **Saved, but the drive did not confirm it: a power cut could lose it**, the file it just saved into the reel (for example an edited MIDI clip) is in place and in use, but the drive did not confirm it was stored for good, so a power cut before the drive catches up could lose it. Open **Tools > Session Log** to see which file and why.
+
 ## Checkpoints
 
 Create checkpoints before risky edits, big sound-design moves, or cleanup passes. Use the history view to inspect and restore a checkpoint.

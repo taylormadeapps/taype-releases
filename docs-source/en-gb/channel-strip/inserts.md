@@ -76,7 +76,7 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 ARA-only plug-ins such as **SpectraLayers** and **WaveLab** take a Menu Path too. They never appear in insert slots, so their path organises them in the top-level **ARA2** menu instead of the insert picker. Leave the column blank to keep TayPE's generated vendor and category folders.
 
-TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. These are bundled for TayPE workflows and remain safe if opened outside their intended host path.
+TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. They ship inside TayPE and also work in other VST3 hosts. To use one there, right-click TayPE in Finder, choose **Show Package Contents**, open **Contents**, then **Resources**, then **NativeExtensions**, and copy the plug-in into your other host's VST3 plug-in folder (Taype Rooms is the one named **Tape Rooms**). Outside TayPE, Taype Rooms finds its factory rooms in your installed TayPE; without one, only rooms in your own IR folder are available.
 
 Reels remember TayPE stock plug-ins by their bundled name, so those inserts
 still load if the TayPE app has been renamed or moved. When TayPE opens an older
@@ -130,9 +130,35 @@ If a matching plug-in preset is named `Default`, TayPE loads it automatically wh
 
 When an insert has a non-default TayPE plug-in preset associated with it, the insert row shows only that preset name, for example `Vocal Tame`, while popup help keeps the full plug-in and preset, such as `Pro-Q 3 · Vocal Tame`. The reserved `Default` preset keeps the plug-in name in the insert row. A `*` after a displayed preset name means the plug-in state differs from that preset on disk. The same marker appears in the open plug-in window's preset field and remains correct if you close and reopen that window; loading or saving the preset clears it. Changing presets updates the plug-in in its existing window without closing and reopening that window. Clicking anywhere outside the open preset menu closes the menu, including inside that plug-in's own controls or in another plug-in window. Older reels that do not store a TayPE preset name keep the original plug-in-only label.
 
+## Vintage Vocoder
+
+Vintage Vocoder's tone generator has eight oscillator columns. Drag across the
+**VOLUME** row to draw a level curve through them.
+
+Hold **Shift** while dragging **VOLUME**, **PITCH**, **TUNING**, or **WAVE** to
+adjust that oscillator and every oscillator to its right relatively. Starting
+at oscillator 1 adjusts all eight; starting at oscillator 3 adjusts 3–8 and
+leaves 1–2 alone; starting at oscillator 8 adjusts only itself. Volume keeps the
+dB differences, pitch keeps the musical intervals, tuning adds equal percentage
+points, and waveforms move by equal steps. The group stops together when one of
+its oscillators reaches a limit. Oscillators to the left do not restrict it.
+Silent levels and zero-Hz pitches stay at zero during relative adjustment.
+
+Hold **Option** for smooth fine adjustment at one tenth of normal sensitivity.
+Combine **Shift+Option** for fine adjustment of the rightward group. Modified
+volume drags start from the current levels without jumping to the pointer.
+
+In **MIDI** mode, ordinary volume, tuning, and waveform edits set all eight
+columns together. Shift-drag preserves their differences within the rightward
+group. MIDI **PITCH** remains a shared semitone transpose. Double-click a volume
+fader for **0 dB**, or a tuning knob for **zero detune**; in MIDI mode these
+resets apply to all eight columns.
+
 ## Bypass vs Disable
 
 Bypass keeps the insert in the chain and returns latency-aligned dry audio. Disable removes the insert from the processing graph while keeping the assignment and saved state in the reel.
+
+The Bypass button at the top of a plug-in window switches that plug-in's own Bypass on its track, like the insert slot's power button. While the Inserts section is bypassed it stays lit; clicking it then turns the plug-in's own Bypass off if it was on, and otherwise changes nothing. While Automation View is on and you are recording, it records the insert's Bypass lane instead of changing its stored setting. A disabled plug-in cannot be bypassed; enable it first.
 
 By default, disabling also releases the plug-in from memory, and enabling loads it again with its settings. On a machine with plenty of RAM you can trade that memory back for instant re-enabling by turning on **Keep disabled plug-ins hot** in the Performance Monitor. Disabling works during playback either way; releasing a plug-in mid-playback cuts its reverb or delay tail short. A released plug-in has no window, so you cannot open its editor until it is enabled again.
 Opening a reel follows the same setting. With it off, plug-ins that were disabled when you saved are not loaded at all, so a large session opens using less memory and enabling one loads it then.
@@ -155,6 +181,9 @@ search or browse results for track slots 2-8, ordinary buses, or the Listen
 Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
 channel, compensate timing with an early-send amount, and receive an optional
 mono or stereo hardware **Audio Return**.
+
+Importing a MIDI file onto an instrument track renders it through the
+instrument, so TayPE asks you to wait if another clip render is still running.
 
 Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
 MIDI device or **Virtual Keyboard** from the track's input selector, or choose
@@ -230,6 +259,33 @@ Double-click the enabled slider to reset it to zero. Changes are saved
 immediately as separate undoable edits. Manual advance is clamped to **0–10
 ms**, including older saved values above that range. Auto can use the full
 interface estimate.
+
+### MIDI Out to an effect plug-in
+
+MIDI Out can also play an audio-effect plug-in that takes MIDI on another track
+or bus, such as **Vintage Vocoder** in **MIDI** mode or a vocoder that follows
+notes. In **MIDI Output**, after the hardware outputs, each one is listed as
+**Track › Plug-in**. Instruments and plug-ins without a MIDI input are not
+listed, and nor is anything on the MIDI Out's own track. Choose one and the
+popup shows only **MIDI Output** and **Channel**: Audio Return, Feedback
+Protection and Advance are for hardware and are cleared. **Not set** or a
+hardware output takes the plug-in off again.
+
+The plug-in gets the MIDI Out track's clips, on their samples, lined up with
+the audio reaching it after any plug-ins before it, and live MIDI while that
+track's **MON** is on. It also gets the clips when the MIDI Out track is muted,
+soloed out or left out of stems; a muted clip, or a take the comp is not
+using, sends nothing. Offline and Live prints, stems and bounces send the
+clips too, never live MIDI. **Stop** and **Pause** release the notes it holds,
+and **Kill MIDI** silences it.
+
+Delete the plug-in's track or remove the plug-in and MIDI Out goes back to
+**Not set**; Undo brings both back. Drag the plug-in to another track and MIDI
+Out follows it. A plug-in on an archived track stays chosen, shown
+**(archived)**, and gets nothing. One that cannot load or no longer takes MIDI
+stays chosen, shown **(unavailable)**, gets nothing, and TayPE warns once. If
+its MIDI cannot be sent during a print, the print plays on and its report
+names the plug-in; a bounce is refused and the reel is left as it was.
 
 ## Hardware Inserts
 

@@ -16,7 +16,11 @@ The EQ Visualiser can show input and output spectrum traces plus the EQ response
 
 Use the graph's **+** and **−** buttons to change its vertical scale. TayPE remembers this scale globally across tracks, reels and app restarts.
 
-The floating EQ Visualiser also carries the dynamic EQ controls. `THR` sets the
+The floating EQ Visualiser also carries the dynamic EQ controls. The power
+button in the **DYNAMICS** title bar turns all three dynamic bands off or on
+together, like the FILTER and EQ power buttons; switching off keeps their
+settings, and hides the dynamic curves and the green threshold lines until you
+switch back on. Taype EQ has the same button. `THR` sets the
 base detector threshold at 600 Hz. `TILT` angles that threshold around the same
 pivot: positive tilt makes higher bands react sooner and lower bands react
 later. The green line on the graph shows the tilted threshold shape, while the

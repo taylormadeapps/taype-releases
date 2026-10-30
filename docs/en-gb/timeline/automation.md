@@ -88,6 +88,14 @@ pass behaves like an ordinary mix edit: the stored value changes and no points
 are written. In a grouped gesture, one powered-off lane makes the whole group
 behave that way.
 
+An insert's Bypass is recorded wherever you click it: the insert slot's power
+button, Command-click or menu, the Bypass button at the top of the plug-in
+window, or the Bypass button in a Hardware Insert window. The points go on that
+insert's **Bypass** lane, listed under the insert rack in the track's lane
+selector, and with Automation View on the click shows that lane on the track.
+Some plug-ins also list a parameter of their own named Bypass under the
+plug-in; that is a separate lane, and these buttons do not write to it.
+
 Hardware control-surface faders, pan controls and mute buttons follow the same
 capture rules as the on-screen mixer. Relative moves start from the value you
 are hearing, and grouped controls are applied only when every selected track

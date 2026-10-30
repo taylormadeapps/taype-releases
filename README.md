@@ -15,6 +15,14 @@ TayPE is fully functional for a 90-day demo. After that, audio export requires a
 Linux and Windows interest lists:
 [taype.ruminantaudioworks.com/other-platforms/](https://taype.ruminantaudioworks.com/other-platforms/).
 
+## Vintage Vocoder
+
+[Vintage Vocoder](https://taype.ruminantaudioworks.com/vintage-vocoder/) is the
+restored Sonicism vocoder, available as a free standalone AU and VST3 for
+Apple Silicon and Intel Macs running macOS 12 or later. Its product page
+includes installation instructions and a six-mode quick-start guide.
+Vintage Vocoder is free for personal and commercial use without a TayPE licence.
+
 ## Documentation
 
 Full user guide and reference at [ruminant-audio-works.gitbook.io/taype](https://ruminant-audio-works.gitbook.io/taype/)

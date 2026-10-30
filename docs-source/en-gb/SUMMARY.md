@@ -32,6 +32,7 @@
 * [Keyboard Shortcuts](keyboard-shortcuts.md)
 * [Voice Control](voice-control.md)
 * [Licensing](licensing.md)
+* [Vintage Vocoder](vintage-vocoder.md)
 * [MCP Integration](mcp/README.md)
   * [Transport](mcp/transport.md)
   * [Cuts](mcp/cuts.md)

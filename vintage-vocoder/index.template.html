@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- Generated index.html is rendered from this template and locales/en-GB.json. -->
+<html lang="{{locale}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{meta.title}}</title>
+<meta name="description" content="{{meta.description}}">
+<meta property="og:title" content="{{meta.title}}">
+<meta property="og:description" content="{{meta.description}}">
+<meta property="og:url" content="https://taype.ruminantaudioworks.com/vintage-vocoder/">
+<meta property="og:image" content="https://taype.ruminantaudioworks.com/vintage-vocoder/images/interface.png">
+<meta property="og:image:alt" content="{{interface.alt}}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://taype.ruminantaudioworks.com/vintage-vocoder/">
+<link rel="icon" type="image/png" href="/assets/img/logo-square-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">{{skip}}</a>
+<nav class="site-nav" aria-label="{{nav.label}}">
+    <a class="brand-link" href="/ruminant-audio-works/">
+        <img src="/assets/img/raw-logo-160.webp" alt="Ruminant Audio Works" width="160" height="196">
+        <span>Ruminant Audio Works</span>
+    </a>
+    <div class="nav-links">
+        <div class="section-links">
+            <a href="#story">{{nav.story}}</a>
+            <a href="#features">{{nav.features}}</a>
+            <a href="#setup">{{nav.setup}}</a>
+        </div>
+        <a class="nav-cta" href="#download">{{nav.download}}</a>
+    </div>
+</nav>
+
+<main id="main" tabindex="-1">
+    <header class="hero page-section">
+        <p class="eyebrow">{{hero.eyebrow}}</p>
+        <div class="hero-grid">
+            <div>
+                <h1><span>{{hero.title.first}}</span><span>{{hero.title.second}}</span></h1>
+                <p class="hero-tagline">{{hero.tagline}}</p>
+            </div>
+            <div class="hero-detail">
+                <p class="hero-copy">{{hero.copy}}</p>
+                <a class="btn btn-primary" href="#download">{{hero.download}} <span aria-hidden="true">↓</span></a>
+                <p class="free-note">{{hero.free}}</p>
+            </div>
+        </div>
+        <p class="platform-note">{{hero.platform}}</p>
+        <figure class="interface">
+            <a href="images/interface.png" target="_blank" rel="noopener" aria-label="{{interface.zoom}}">
+                <img src="images/interface.png" alt="{{interface.alt}}" width="1782" height="1190" fetchpriority="high" decoding="async">
+            </a>
+            <figcaption><span>{{interface.caption}}</span><a href="images/interface.png" target="_blank" rel="noopener">{{interface.zoom}} <span aria-hidden="true">↗</span></a></figcaption>
+        </figure>
+        <dl class="facts" aria-label="{{facts.label}}">
+            <div><dt>{{facts.oscillators}}</dt><dd>8</dd></div>
+            <div><dt>{{facts.bands}}</dt><dd>{{facts.bands.value}}</dd></div>
+            <div><dt>{{facts.modes}}</dt><dd>6</dd></div>
+            <div><dt>{{facts.presets}}</dt><dd>30</dd></div>
+        </dl>
+    </header>
+
+    <section id="features" class="feature-band">
+        <div class="page-section">
+            <div class="section-intro">
+                <div><p class="micro-heading">{{features.eyebrow}}</p><h2>{{features.title}}</h2></div>
+                <p class="body-copy">{{features.intro}}</p>
+            </div>
+            <div class="feature-grid">
+                <article><span class="feature-index" aria-hidden="true">01</span><h3>{{features.oscillators.title}}</h3><p>{{features.oscillators.copy}}</p></article>
+                <article><span class="feature-index" aria-hidden="true">02</span><h3>{{features.midi.title}}</h3><p>{{features.midi.copy}}</p></article>
+                <article><span class="feature-index" aria-hidden="true">03</span><h3>{{features.spectral.title}}</h3><p>{{features.spectral.copy}}</p></article>
+                <article><span class="feature-index" aria-hidden="true">04</span><h3>{{features.presets.title}}</h3><p>{{features.presets.copy}}</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="paper-band">
+        <div class="page-section story-grid">
+            <div class="archive">
+                <p class="micro-heading">{{story.eyebrow}}</p>
+                <h2>{{story.title}}</h2>
+                <figure>
+                    <img src="images/original-2002.jpg" alt="{{story.original.alt}}" width="600" height="404" loading="lazy" decoding="async">
+                    <figcaption>{{story.original.caption}}</figcaption>
+                </figure>
+                <p class="credits">{{story.credit}}</p>
+            </div>
+            <div class="body-copy story-copy">
+                <p>{{story.p1}}</p>
+                <p>{{story.p2}}</p>
+                <p>{{story.p3}}</p>
+                <blockquote>{{story.quote}}</blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="page-section">
+        <div class="section-intro">
+            <div><p class="micro-heading">{{setup.eyebrow}}</p><h2>{{setup.title}}</h2></div>
+            <p class="body-copy">{{setup.intro}}</p>
+        </div>
+        <ol class="setup-steps">
+            <li><h3>{{setup.install.title}}</h3><p>{{setup.install.copy}}</p></li>
+            <li><h3>{{setup.insert.title}}</h3><p>{{setup.insert.copy}}</p></li>
+            <li><h3>{{setup.play.title}}</h3><p>{{setup.play.copy}}</p></li>
+        </ol>
+        <div class="modes-heading"><h3>{{modes.title}}</h3><p>{{modes.intro}}</p></div>
+        <dl class="mode-list">
+            <div><dt>TEST</dt><dd>{{modes.test}}</dd></div>
+            <div><dt>NORM</dt><dd>{{modes.norm}}</dd></div>
+            <div><dt>MIDI</dt><dd>{{modes.midi}}</dd></div>
+            <div><dt>EXT</dt><dd>{{modes.ext}}</dd></div>
+            <div><dt>MOD L</dt><dd>{{modes.modl}}</dd></div>
+            <div><dt>MOD R</dt><dd>{{modes.modr}}</dd></div>
+        </dl>
+        <p class="help-note">{{setup.help}}</p>
+    </section>
+
+    <section id="download" class="download-band">
+        <div class="page-section download-content">
+            <p class="micro-heading">{{download.eyebrow}}</p>
+            <h2>{{download.title}}</h2>
+            <p class="download-copy">{{download.copy}}</p>
+            <a id="package-download" class="btn btn-primary" href="{{release.download_url}}">{{download.button}} <span aria-hidden="true">↓</span></a>
+            <p class="release-note">{{download.version.label}} {{release.version}} · {{release.size}} · {{download.formats}}</p>
+            <p class="platform-note">{{download.platform}}</p>
+            <p class="security-note">{{download.security}}</p>
+            <p class="security-note">{{download.license}}</p>
+            <p class="requirements">{{download.requirements}}</p>
+            <div class="download-details">
+                <a href="{{release.notes_url}}">{{download.releases}} <span aria-hidden="true">↗</span></a>
+                <a href="licence.txt">{{download.terms}}</a>
+                <details><summary>{{download.checksum}}</summary><code>{{release.sha256}}</code></details>
+            </div>
+        </div>
+    </section>
+
+    <aside class="page-section taype-link">
+        <div><p class="micro-heading">{{taype.eyebrow}}</p><h2>{{taype.title}}</h2><p>{{taype.copy}}</p></div>
+        <a class="btn btn-secondary" href="/">{{taype.link}} <span aria-hidden="true">→</span></a>
+    </aside>
+</main>
+
+<footer>
+    <a class="footer-mark" href="/ruminant-audio-works/" aria-label="{{footer.about}}"><img src="/assets/img/raw-logo-160.webp" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async"></a>
+    <p class="footer-wordmark"><a href="/ruminant-audio-works/">Ruminant Audio Works</a> · {{footer.location}}</p>
+    <p class="footer-copy">{{footer.company}}</p>
+    <div class="footer-links"><a href="/privacy/">{{footer.privacy}}</a><a href="/site-data/">{{footer.cookies}}</a></div>
+</footer>
+</body>
+</html>

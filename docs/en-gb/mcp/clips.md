@@ -2,7 +2,35 @@
 
 ### `add_clip`
 
-Create or import a clip onto a track.
+Place an audio file on a track. For MIDI, use `create_midi_clip` or `import_midi_file`.
+
+For all three tools: if the engine refuses the new clip, it is not added and the error says why. Inside a `tx_begin` batch, the batch keeps whatever the failed call left, so call `tx_abort` to roll the batch back.
+
+### `create_midi_clip`
+
+Create an empty MIDI clip on an instrument or External MIDI Out track, or on a comp bus that hosts one, the same as double-clicking empty space on that track. A plain bus is refused, as it is in the timeline.
+
+| Param | Description |
+|---|---|
+| `track_id` | Instrument or External MIDI Out track, or a comp bus hosting one |
+| `time` | Optional. Start in seconds (default 0) |
+| `duration` | Optional. Length in seconds. Default: one bar at the current Cut's tempo and time signature |
+
+The clip is refused if it would overlap a clip already on that track. Clips that only touch at an edge are fine, and an edge that overlaps a neighbouring clip by less than 1 ms is moved onto that clip's edge, so the neighbour is left unchanged. On a comp take, the new clip wins its range in the comp like any new take. Fill it with `get_midi_draft`, `replace_midi_draft` and `commit_midi_draft`. Stop the transport first; one Undo removes it.
+
+### `import_midi_file`
+
+Import a standard MIDI file onto an instrument or External MIDI Out track, the same as dropping a `.mid` on the timeline. Like a drop, clips already under it on that track are removed, split or crossfaded.
+
+| Param | Description |
+|---|---|
+| `track_id` | Instrument or External MIDI Out track |
+| `path` | Absolute path to the MIDI file. Symbolic links are refused |
+| `time` | Optional. Start in seconds (default 0) |
+
+The clip takes the file's name and length, and the file becomes the clip's original MIDI. On an instrument track the import is refused while a clip render is still running, as a drop or the Import MIDI menu is; wait for it to finish. On a track with an Audio Return the import is refused while another Audio Return capture is running. Stop the transport first.
+
+On an instrument track the MIDI is rendered through the instrument before the call returns, which can take a while for a long file, and one Undo removes the clip. On an External MIDI Out track with an Audio Return, the audio is captured afterwards as its own Undo step, and Undo is unavailable until the capture finishes.
 
 ### `set_clip`
 
