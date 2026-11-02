@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the static Vintage Vocoder page from its source-locale catalogue."""
+"""Render the Vintage Vocoder page and its optional-video policy disclosures."""
 
 import argparse
 import hashlib
@@ -14,9 +14,14 @@ from render_community import render as render_community
 PAGE = Path(__file__).resolve().parents[1] / "vintage-vocoder"
 TOKEN = re.compile(r"\{\{([a-zA-Z0-9_.]+)\}\}")
 RELEASES = "https://github.com/taylormadeapps/taype-releases/releases"
+POLICY_COPY = re.compile(r"(<!-- vv:(video\.policy\.[a-z]+) -->).*?(<!-- /vv -->)", re.DOTALL)
+POLICY_KEYS = {
+    "privacy": {"video.policy.heading", "video.policy.body", "video.policy.ordinary"},
+    "site-data": {"video.policy.heading", "video.policy.body", "video.policy.cookies", "video.policy.affiliate"},
+}
 
 
-def render() -> str:
+def render() -> dict[Path, str]:
     catalogue = json.loads((PAGE / "locales/en-GB.json").read_text(encoding="utf-8"))
     release = json.loads((PAGE / "release.json").read_text(encoding="utf-8"))
     if not all(isinstance(value, str) and value for value in catalogue.values()):
@@ -68,29 +73,61 @@ def render() -> str:
     if template.count("{{community.section}}") != 1:
         raise ValueError("Vintage Vocoder template must contain exactly one community section")
     template = template.replace("{{community.section}}", render_community())
-    missing = set(TOKEN.findall(template)) - values.keys()
-    unused = catalogue.keys() - set(TOKEN.findall(template))
+    used_keys = set(TOKEN.findall(template)) | set.union(*POLICY_KEYS.values())
+    missing = used_keys - values.keys()
+    unused = catalogue.keys() - used_keys
     if missing or unused:
         raise ValueError(f"Catalogue mismatch: missing={sorted(missing)}, unused={sorted(unused)}")
-    rendered = TOKEN.sub(lambda match: html.escape(values[match[1]], quote=True), template)
+    for artist in ("faafoe", "picky"):
+        if catalogue["listen.credit"].count(f"{{{artist}}}") != 1:
+            raise ValueError(f"listen.credit must contain exactly one {{{artist}}} placeholder")
+    credit_html = html.escape(catalogue["listen.credit"], quote=True).replace(
+        "{faafoe}",
+        '<a href="https://faafoe.bandcamp.com/track/shanti" target="_blank" rel="noopener">FAAFOE</a>',
+    ).replace(
+        "{picky}",
+        '<a href="https://www.instagram.com/pickyproducer/" target="_blank" rel="noopener">Picky the Producer</a>',
+    )
+    rendered = TOKEN.sub(
+        lambda match: credit_html if match[1] == "listen.credit" else html.escape(values[match[1]], quote=True),
+        template,
+    )
     if "{{" in rendered or "}}" in rendered:
         raise ValueError("Unresolved template token")
-    return rendered
+    outputs = {PAGE / "index.html": rendered}
+    for section, expected_keys in POLICY_KEYS.items():
+        page = PAGE.parent / section / "index.html"
+        source = page.read_text(encoding="utf-8")
+        matches = list(POLICY_COPY.finditer(source))
+        if (
+            {match[2] for match in matches} != expected_keys
+            or len(matches) != len(expected_keys)
+            or source.count("<!-- vv:") != len(expected_keys)
+            or source.count("<!-- /vv -->") != len(expected_keys)
+        ):
+            raise ValueError(f"{section} must contain exactly the expected video policy markers")
+        outputs[page] = POLICY_COPY.sub(
+            lambda match: match[1] + html.escape(values[match[2]], quote=True) + match[3], source
+        )
+        if "{{" in outputs[page] or "}}" in outputs[page]:
+            raise ValueError(f"Unresolved {section} template token")
+    return outputs
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Refuse stale generated HTML without writing")
     args = parser.parse_args()
-    rendered = render()
-    output = PAGE / "index.html"
+    outputs = render()
     if args.check:
-        if not output.exists() or output.read_text(encoding="utf-8") != rendered:
-            raise SystemExit("Vintage Vocoder index.html is stale; run scripts/render_vintage_vocoder.py")
-        print("Vintage Vocoder generated HTML matches its catalogue and release metadata")
+        for output, rendered in outputs.items():
+            if not output.exists() or output.read_text(encoding="utf-8") != rendered:
+                raise SystemExit(f"{output} is stale; run scripts/render_vintage_vocoder.py")
+        print("Vintage Vocoder HTML and video disclosures match their catalogue and release metadata")
     else:
-        output.write_text(rendered, encoding="utf-8")
-        print(f"Rendered {output}")
+        for output, rendered in outputs.items():
+            output.write_text(rendered, encoding="utf-8")
+            print(f"Rendered {output}")
 
 
 if __name__ == "__main__":
