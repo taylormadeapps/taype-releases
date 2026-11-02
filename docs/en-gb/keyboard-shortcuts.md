@@ -1,8 +1,36 @@
 # Keyboard Shortcuts
 
-TayPE ships editable shortcut profiles. Built-in profiles are read-only; custom profiles can override them from Preferences.
+TayPE ships shortcut profiles. Built-in profiles are read-only; duplicate one in Preferences to create an editable custom profile.
 
 Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled separately from the editable TayPE shortcut profile.
+
+Your custom JSON assignments are retained exactly when loaded. Missing actions
+are unbound; an empty JSON value also clears a binding. Custom profiles never
+inherit shortcuts from Default. New actions stay unbound until you assign them. After external
+edits, use **Reload** in Preferences > Keybindings. If reloading fails, TayPE
+keeps the working bindings and shows a warning. If the selected profile cannot
+load when TayPE starts, it uses Default and warns you. The original file stays
+available for repair, with details in Session Log.
+
+A valid profile with conflicting shortcuts still loads. A warning tells you
+how many conflicts were found; Session Log identifies the competing actions.
+The selected profile's explicit assignments and fixed shortcuts are included.
+For example, assigning both Split and Bounce Clips to B produces a conflict.
+Omitting Bounce leaves it unbound and reserves no key. The file is never rewritten to resolve a conflict.
+
+Keys deliberately owned by different editing contexts remain valid: Q quantises
+in the MIDI editor and toggles video in the arranger; L applies MIDI Legato and
+sets the arranger loop. Split, Duplicate and zoom follow their editor context.
+
+When a sandboxed plug-in editor becomes active, its hosted view receives the
+keyboard so the plug-in handles its own shortcuts first. Unhandled keys go to
+an open MIDI editor, then the arranger. An ARA editor forwards unused keys to
+the arranger; TayPE requires the MIDI editor closed before opening ARA.
+
+Industry Standard Bruh uses **Cmd+Option+B** for Print Mix and
+**Cmd+Option+Shift+B** for Bounce Tracks to Stem. Default uses **Cmd+P** and
+**Cmd+B**, respectively. Track bounce asks for confirmation before archiving
+the selected source tracks; Print Mix opens the Export window.
 
 ## Default Shortcuts
 
@@ -63,6 +91,10 @@ quit process directly.
 
 ### Editing
 
+Duplicate in the Edit menu follows the same window focus as its shortcut:
+selected notes in the MIDI editor, or selected clips and automation points in
+the arranger.
+
 | Action | Shortcut |
 |---|---|
 | Split at playhead: the selected clips; with no clip selection, every clip on the selected tracks, or on every track that is not archived when no track is selected, leaving the pieces unselected | `\` |
@@ -96,6 +128,10 @@ quit process directly.
 | Delete selected track | Cmd+Delete |
 | Move selected track up / down | Cmd+Option+Up / Cmd+Option+Down |
 | Toggle grouped track controls | Cmd+G |
+
+Industry Standard Bruh uses **Cmd+Shift+N** to open Bulk Add Tracks and
+**Cmd+Ctrl+Shift+N** to add one audio track immediately. Default uses **Cmd+T**
+and **T**, respectively.
 
 ### Loop, Markers, and Navigation
 
@@ -143,13 +179,18 @@ quit process directly.
 
 ### Zoom and Scroll
 
+Zoom commands in the View menu and their shortcuts act on the focused editing
+window. In the MIDI editor, linked horizontal zoom also changes the arranger;
+detach Zoom Link to keep the scales independent. Vertical MIDI zoom stays
+local: Reset fits the used note range, and Maximum uses the largest note rows.
+
 | Action | Shortcut |
 |---|---|
 | Horizontal zoom in / out | = / - |
 | Reset horizontal zoom | Option+- |
 | Maximum horizontal zoom | Option+= |
 | Vertical zoom in / out | Shift+= / Shift+- (vertical pitch-row zoom while the MIDI editor is active) |
-| Reset vertical zoom | Option+Shift+- |
+| Reset vertical zoom | Option+Shift+- (refit used notes in the MIDI editor) |
 | Maximum vertical zoom | Option+Shift+= |
 | Mouse wheel | Vertical scroll or focused lane scroll |
 | Cmd+wheel | Horizontal zoom |
@@ -174,9 +215,12 @@ quit process directly.
 
 ## Customising Shortcuts
 
+**Help → Keybindings** lists every configurable action for the active profile,
+including unbound actions, alongside the fixed editing shortcuts.
+
 Open the shortcut/profile controls from Preferences. Built-in profiles refresh from the app bundle after updates. Custom profiles remain yours.
 
-TayPE validates shortcut files and falls back to defaults if a profile is broken. Older shortcut layouts are migrated when TayPE can recognise them.
+TayPE validates shortcut files. A failed reload keeps the working bindings; a failed startup load uses Default with an explanatory warning. The earlier single-file keybindings.json is imported once into a profile whose resulting assignments are all explicit. Ordinary profile reads do not migrate or rewrite your file.
 
 ## Play/Stop Mode
 
