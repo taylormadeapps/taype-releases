@@ -8,6 +8,8 @@ import json
 import re
 from pathlib import Path
 
+from render_community import render as render_community
+
 
 PAGE = Path(__file__).resolve().parents[1] / "vintage-vocoder"
 TOKEN = re.compile(r"\{\{([a-zA-Z0-9_.]+)\}\}")
@@ -63,6 +65,9 @@ def render() -> str:
         f"{RELEASES}/download/{release['tag']}/Vintage-Vocoder-{release['version']}-linux-SHA256SUMS.txt"
     )
     template = (PAGE / "index.template.html").read_text(encoding="utf-8")
+    if template.count("{{community.section}}") != 1:
+        raise ValueError("Vintage Vocoder template must contain exactly one community section")
+    template = template.replace("{{community.section}}", render_community())
     missing = set(TOKEN.findall(template)) - values.keys()
     unused = catalogue.keys() - set(TOKEN.findall(template))
     if missing or unused:

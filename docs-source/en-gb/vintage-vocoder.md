@@ -14,6 +14,12 @@ for the download, compatibility details and installation guide.
 You can also reach it from the Vintage Vocoder button beside Explore TayPE on
 the [Ruminant Audio Works company page](https://taype.ruminantaudioworks.com/ruminant-audio-works/).
 
+The **Community & Support** section on the product and company pages links to
+the newsletter, Instagram, YouTube and Reddit. Use **Get in Touch** for bugs,
+questions or suggestions. Choose **Vintage Vocoder** in the required **Product**
+dropdown; website links start at **N/A**. Email is optional, but leave it if you
+would like a reply.
+
 ## Get a sound
 
 1. Quit your DAW. On macOS or Windows, run the installer. The Windows installer
