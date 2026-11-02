@@ -62,8 +62,8 @@
         <section class="listen" aria-labelledby="listen-heading">
             <h2 id="listen-heading" class="micro-heading">{{listen.title}}</h2>
             <audio controls preload="metadata" aria-labelledby="listen-heading" aria-describedby="listen-credit">
-                <source src="audio/studio-loop.mp3" type="audio/mpeg">
-                <a href="audio/studio-loop.mp3">{{listen.fallback}}</a>
+                <source src="audio/studio-loop.mp3?v={{audio.version}}" type="audio/mpeg">
+                <a href="audio/studio-loop.mp3?v={{audio.version}}">{{listen.fallback}}</a>
             </audio>
             <p id="listen-credit" class="credits">{{listen.credit}}</p>
         </section>
