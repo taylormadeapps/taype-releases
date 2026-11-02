@@ -14,7 +14,8 @@ for the download, compatibility details and installation guide.
 You can also reach it from the Vintage Vocoder button beside Explore TayPE on
 the [Ruminant Audio Works company page](https://taype.ruminantaudioworks.com/ruminant-audio-works/).
 
-Use **Take a listen** below the interface screenshot to play the audio demo.
+Use **Take a listen** below the interface screenshot to play the 45-second audio
+demo, which fades out over its final second.
 Credit: © [FAAFOE](https://faafoe.bandcamp.com/track/shanti) and [Picky the Producer](https://www.instagram.com/pickyproducer/), Brighton UK 2026.
 
 The introduction video sits near the bottom of the product page, above
