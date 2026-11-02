@@ -37,6 +37,7 @@ def render() -> dict[Path, str]:
         raise ValueError("Invalid installer SHA-256")
     values = dict(catalogue)
     values["style.version"] = hashlib.sha256((PAGE / "style.css").read_bytes()).hexdigest()[:12]
+    values["audio.version"] = hashlib.sha256((PAGE / "audio/studio-loop.mp3").read_bytes()).hexdigest()[:12]
     values.update({f"release.{key}": value for key, value in release.items() if isinstance(value, str)})
     values["release.download_url"] = f"{RELEASES}/download/{release['tag']}/{release['filename']}"
     values["release.notes_url"] = f"{RELEASES}/tag/{release['tag']}"
