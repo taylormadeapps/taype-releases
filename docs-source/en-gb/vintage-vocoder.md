@@ -28,6 +28,26 @@ questions or suggestions. Choose **Vintage Vocoder** in the required **Product**
 dropdown; website links start at **N/A**. Email is optional, but leave it if you
 would like a reply.
 
+## Format choices in upcoming standalone installers
+
+The next standalone packages add VST2 alongside the existing formats. The
+currently published downloads described above retain their existing formats
+until those packages are released.
+
+On macOS, the installer offers **VST2**, **VST3** and **Audio Unit (AU)**.
+On Windows, it offers **VST2** and **VST3**. All available formats start selected;
+untick any you do not need. Unticking a format during an upgrade leaves an
+existing installation of that format in place. Windows requires at least one
+format to remain selected.
+
+The Windows VST2 format uses the Common Files VST2 folder; add that folder to
+your DAW's VST2 scan locations if it is not already included. Linux packages
+include separate VST2 and VST3 folders so you can install either or both formats
+in your DAW's matching scan locations. Choose the package for your architecture.
+
+The TayPE installer continues to include VST3 and AU. AAX is not included in
+these standalone packages. Desktop Linux downloads are not MPC plug-ins.
+
 ## Get a sound
 
 1. Quit your DAW. On macOS or Windows, run the installer. The Windows installer
