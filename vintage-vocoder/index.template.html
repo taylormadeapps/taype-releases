@@ -59,6 +59,14 @@
             </a>
             <figcaption><span>{{interface.caption}}</span><a href="images/interface.png" target="_blank" rel="noopener">{{interface.zoom}} <span aria-hidden="true">↗</span></a></figcaption>
         </figure>
+        <section class="listen" aria-labelledby="listen-heading">
+            <h2 id="listen-heading" class="micro-heading">{{listen.title}}</h2>
+            <audio controls preload="metadata" aria-labelledby="listen-heading" aria-describedby="listen-credit">
+                <source src="audio/studio-loop.mp3" type="audio/mpeg">
+                <a href="audio/studio-loop.mp3">{{listen.fallback}}</a>
+            </audio>
+            <p id="listen-credit" class="credits">{{listen.credit}}</p>
+        </section>
         <dl class="facts" aria-label="{{facts.label}}">
             <div><dt>{{facts.oscillators}}</dt><dd>8</dd></div>
             <div><dt>{{facts.bands}}</dt><dd>{{facts.bands.value}}</dd></div>
@@ -181,6 +189,20 @@
         <div><p class="micro-heading">{{taype.eyebrow}}</p><h2>{{taype.title}}</h2><p>{{taype.copy}}</p></div>
         <a class="btn btn-secondary" href="/">{{taype.link}} <span aria-hidden="true">→</span></a>
     </aside>
+    <section id="introduction" class="page-section introduction" aria-labelledby="introduction-heading">
+        <h2 id="introduction-heading">{{video.heading}}</h2>
+        <div id="introduction-player" class="video-player">
+            <div class="video-preview">
+                <img src="images/interface.png" alt="" width="1782" height="1190" loading="lazy" decoding="async">
+                <button id="load-introduction" class="btn btn-primary" type="button" aria-describedby="video-notice" hidden><span aria-hidden="true">▶</span> {{video.load}}</button>
+            </div>
+        </div>
+        <p id="video-notice" class="video-note">{{video.notice}}</p>
+        <p class="video-link"><a href="https://www.youtube.com/watch?v=7wRCYrC7VHE" target="_blank" rel="noopener">{{video.external}} <span aria-hidden="true">↗</span></a></p>
+        <template id="introduction-embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/7wRCYrC7VHE?playsinline=1" title="{{video.title}}" width="960" height="540" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </template>
+    </section>
 {{community.section}}</main>
 
 <footer>
@@ -189,5 +211,14 @@
     <p class="footer-copy">{{footer.company}}</p>
     <div class="footer-links"><a href="/privacy/">{{footer.privacy}}</a><a href="/site-data/">{{footer.cookies}}</a></div>
 </footer>
+<script>
+const loadIntroduction = document.getElementById("load-introduction");
+loadIntroduction.hidden = false;
+loadIntroduction.addEventListener("click", () => {
+    const player = document.getElementById("introduction-player");
+    player.replaceChildren(document.getElementById("introduction-embed").content.cloneNode(true));
+    player.querySelector("iframe").focus();
+}, { once: true });
+</script>
 </body>
 </html>
