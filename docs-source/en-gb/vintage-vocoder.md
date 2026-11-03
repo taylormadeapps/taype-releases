@@ -1,7 +1,7 @@
 # Vintage Vocoder
 
 Sonicism Vintage Vocoder is a restored audio effect for macOS, Windows and Linux. Its
-free standalone macOS installer includes AU Music Effect and VST3 formats for
+free standalone macOS installer includes AAX Native, AU Music Effect, VST2 and VST3 for
 Apple Silicon and Intel Macs running macOS 12 or later. Linux ARM64 and x86-64
 VST3 archives target Ubuntu 22.04/glibc 2.35 or later and a matching 64-bit host.
 The Windows x86-64 installer provides VST3 for a 64-bit Windows host.
@@ -28,25 +28,23 @@ questions or suggestions. Choose **Vintage Vocoder** in the required **Product**
 dropdown; website links start at **N/A**. Email is optional, but leave it if you
 would like a reply.
 
-## Format choices in upcoming standalone installers
+## Format choices
 
-The next standalone packages add VST2 alongside the existing formats. The
-currently published downloads described above retain their existing formats
-until those packages are released.
+The macOS installer offers **VST2**, **VST3**, **Audio Unit (AU)** and
+**AAX (Pro Tools)**. All four start selected; untick any you do not need.
+Unticking a format during an upgrade leaves an existing installation of that
+format in place. AAX installs in
+`/Library/Application Support/Avid/Audio/Plug-Ins/`.
 
-On macOS, the installer offers **VST2**, **VST3** and **Audio Unit (AU)**.
-On Windows, it offers **VST2** and **VST3**. All available formats start selected;
-untick any you do not need. Unticking a format during an upgrade leaves an
-existing installation of that format in place. Windows requires at least one
-format to remain selected.
+AAX Native is PACE-signed and passed audio and MIDI smoke tests in official
+Pro Tools Intro 2026.4.1 on Apple Silicon. Intel Pro Tools operation has not been
+separately tested. Your Pro Tools version may require a newer macOS than the
+plug-in's macOS 12 minimum. Vintage Vocoder needs no separate iLok licence.
 
-The Windows VST2 format uses the Common Files VST2 folder; add that folder to
-your DAW's VST2 scan locations if it is not already included. Linux packages
-include separate VST2 and VST3 folders so you can install either or both formats
-in your DAW's matching scan locations. Choose the package for your architecture.
-
-The TayPE installer continues to include VST3 and AU. AAX is not included in
-these standalone packages. Desktop Linux downloads are not MPC plug-ins.
+The published Windows and Linux downloads remain VST3. Their forthcoming
+standalone packages add VST2; those candidates are not the current public
+downloads. The TayPE installer continues to include VST3 and AU. Desktop Linux
+downloads are not MPC plug-ins.
 
 ## Get a sound
 
@@ -66,6 +64,20 @@ these standalone packages. Desktop Linux downloads are not MPC plug-ins.
 The incoming audio is the **modulator**: it supplies the changing sound shape.
 The **carrier** is the sound being shaped. In NORM it comes from the fixed
 internal oscillators; in MIDI you play those oscillators with notes.
+
+## MIDI in Pro Tools
+
+1. Insert **Vintage Vocoder FX** on the audio track carrying your vocal and set
+   **MODE** to **MIDI**.
+2. Create a separate **MIDI track**. Set its input to your keyboard (or **All**)
+   and its MIDI output to that **Vintage Vocoder FX instance**, **channel 1**.
+3. Enable **Options > MIDI Thru** and record-arm the MIDI track for live notes.
+4. Play the vocal while playing notes or chords. For a live microphone, enable
+   monitoring on the vocal track too. Recorded or drawn MIDI notes can also
+   drive the effect during playback.
+
+The vocal supplies the articulation; MIDI supplies the pitch. Both must reach
+the plug-in together. MIDI mode does not use the sidechain.
 
 ## Choose a mode
 

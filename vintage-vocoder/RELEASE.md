@@ -14,25 +14,34 @@ clickable www.ruminantaudioworks.com link. The original faceplate is retained.
 - Six operating modes, including an external sidechain carrier.
 - Thirty factory presets and named user presets.
 
-The universal macOS installer includes AU Music Effect and VST3 formats for
-Apple Silicon and Intel. Requires macOS 12 or later and a compatible plug-in
-host. AAX is not included.
+The universal macOS installer offers independently selectable AAX Native
+(Pro Tools), AU Music Effect, VST2 and VST3 formats for Apple Silicon and Intel.
+Requires macOS 12 or later and a compatible host; your Pro Tools version may
+require a newer macOS. The AAX is PACE-signed and passed the developer's audio
+and MIDI smoke test in official Pro Tools Intro 2026.4.1 on Apple Silicon.
+Intel Pro Tools operation has not been separately tested.
+
+AAX installs in `/Library/Application Support/Avid/Audio/Plug-Ins/`. No
+additional Vintage Vocoder licence or iLok activation is required.
 
 Quit your DAW before installing. Reopen it afterwards and rescan plug-ins if
 needed. Insert **Vintage Vocoder FX** on an audio track and start in **NORM**
 mode. For MIDI mode, route MIDI to the effect while the audio track plays.
+In Pro Tools, create a MIDI track, set its output to the Vintage Vocoder FX
+instance on channel 1, enable Options > MIDI Thru and record-arm the MIDI track
+for live keyboard input. MIDI mode needs both modulator audio and notes.
 
 Installation and mode guide:
 [Vintage Vocoder](https://taype.ruminantaudioworks.com/vintage-vocoder/#setup).
 
 ## Installer
 
-`Vintage-Vocoder-1.6.0-universal-20261030T204051Z.pkg` (17,647,094 bytes).
+`Vintage-Vocoder-1.6.0-universal-20261103T130901Z.pkg` (34,997,688 bytes).
 
 Developer ID signed, Apple notarized and stapled. SHA-256:
 
 ```text
-a12c8d3d6906b6b32baedff7101fd4bdc8dd52171a9ee4ed770eb8b7f744c5fd
+ec7895497da761f1196ef2b4aeac66aad50ef24941bc14bbda7a8600709e83e4
 ```
 
 ## Windows VST3 download
