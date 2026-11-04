@@ -10,7 +10,18 @@ inherit shortcuts from Default. New actions stay unbound until you assign them. 
 edits, use **Reload** in Preferences > Keybindings. If reloading fails, TayPE
 keeps the working bindings and shows a warning. If the selected profile cannot
 load when TayPE starts, it uses Default and warns you. The original file stays
-available for repair, with details in Session Log.
+available for repair, with details in Session Log. TayPE keeps that profile as
+your choice and tries it again the next time it starts, so once you repair the
+file it loads as usual. If keybindings fail to load
+or prepare while TayPE starts, the warning stays on the transport bar until you
+next change your keybindings or another warning appears. If the only problem
+was copying the shipped profiles into your keybindings folder, a successful
+**Open Folder** in Preferences > Keybindings also clears it. Conflicts or
+unknown actions in your profile at startup show a short warning once the TayPE
+window is on screen.
+If loading your keybindings runs into
+more than one problem at once, one warning says how many and Session Log lists
+each of them.
 
 A valid profile with conflicting shortcuts still loads. A warning tells you
 how many conflicts were found; Session Log identifies the competing actions.
@@ -18,9 +29,16 @@ The selected profile's explicit assignments and fixed shortcuts are included.
 For example, assigning both Split and Bounce Clips to B produces a conflict.
 Omitting Bounce leaves it unbound and reserves no key. The file is never rewritten to resolve a conflict.
 
+A profile entry naming an action TayPE does not have, such as a misspelt
+`play_puase`, does nothing, but the profile still loads. A warning names the
+profile and says how many unknown actions it has; Session Log lists each name.
+TayPE never removes these entries from your file, so correct or delete them in
+the JSON file and use **Reload**.
+
 Keys deliberately owned by different editing contexts remain valid: Q quantises
 in the MIDI editor and toggles video in the arranger; L applies MIDI Legato and
-sets the arranger loop. Split, Duplicate and zoom follow their editor context.
+sets the arranger loop. Split, Duplicate and zoom follow their editor context,
+including in a MIDI editor left open while the main window is minimised.
 
 When a sandboxed plug-in editor becomes active, its hosted view receives the
 keyboard so the plug-in handles its own shortcuts first. Unhandled keys go to
@@ -93,7 +111,29 @@ quit process directly.
 
 Duplicate in the Edit menu follows the same window focus as its shortcut:
 selected notes in the MIDI editor, or selected clips and automation points in
-the arranger.
+the arranger. It is available only while that window has something selected.
+The tick beside E-Zoom in the View menu shows whether the focused window is
+E-Zoomed.
+
+Cut, Copy, Paste, Split at Head, Delete Clip and Toggle Clip Disable in the
+Edit menu also work wherever their shortcuts work. When the MIDI editor is the
+front window they act on its notes; otherwise they act in the arranger. Cut,
+Copy, Paste and Split at Head act on the notes even when you last clicked the
+controller lane. Select All, like Cmd+A, selects the notes in the open MIDI
+editor, or the controller lane's points when you last clicked the lane. In the
+MIDI editor, Delete deletes the selected notes and Backspace mutes or unmutes
+them. When you last clicked the controller lane, both keys delete its selected
+points instead. With nothing selected in the MIDI editor, both keys do
+nothing, so they never touch your arranger clips, and both menu items are
+greyed out. When the arranger is the front window, both keys and both menu
+items act there: Delete deletes the selected automation points in Automation
+View, or the selected clips otherwise, and Backspace disables or enables the
+selected clips. While the MIDI editor shows a clip on an archived track, or
+while TayPE is recording, the editor ignores editing keys, so Cut, Paste,
+Duplicate, Split at Head, Delete Clip and Toggle Clip Disable are greyed out
+there. Copy and Select All still work. While a MIDI editor is open, Undo and
+Redo in the Edit menu undo and redo your edits in that editor, just as Cmd+Z
+and Cmd+Shift+Z do.
 
 | Action | Shortcut |
 |---|---|
@@ -216,9 +256,54 @@ local: Reset fits the used note range, and Maximum uses the largest note rows.
 ## Customising Shortcuts
 
 **Help → Keybindings** lists every configurable action for the active profile,
-including unbound actions, alongside the fixed editing shortcuts.
+including unbound actions, alongside every fixed shortcut: the same fixed
+shortcuts the visual editor lists. Shortcuts show their modifiers in macOS
+order, Control, Option, Shift, Command (⌃⌥⇧⌘), whatever order your JSON file
+uses, so `cmd+shift+z` reads ⇧⌘Z; popup help uses the same order, such as
+Shift+⌘+M. For a built-in profile, Help's footer says built-in profiles are
+read-only; for a custom profile it shows the JSON file to edit.
 
-Open the shortcut/profile controls from Preferences. Built-in profiles refresh from the app bundle after updates. Custom profiles remain yours.
+Open the shortcut/profile controls from Preferences. Built-in profiles always come from the app itself, so they match each update. The copies in your keybindings folder are for reference only: editing them changes nothing. Custom profiles remain yours.
+
+Choose **Edit Bindings...** to open the visual editor. The same button in Help's
+keybinding reference opens the active profile. Search by action or shortcut,
+select an action, then choose **Record Shortcut**. Hold any modifiers and press
+a key: the first key you press becomes the new shortcut, even Escape, Tab or
+Return. Press Return or Space, or click **Use Shortcut**, to put it in the
+draft, or press Escape to discard it. **Clear Shortcut** removes the
+assignment. Fixed keys are listed for reference and cannot be edited.
+**Where it works** says **Main window**, **Main window + MIDI editor** (the
+key also works in a focused MIDI editor) or **Everywhere** (the key is on the
+menu bar, so it works from every TayPE window, even with the main window
+minimised: the edit keys, and every shortcut with a menu item). A key that
+types a Latin-1 character on your keyboard layout, such as ö, é, £ or §, is
+recorded and shown as that character. A key that types a character beyond
+Latin-1, such as a Cyrillic, Greek, Czech or Polish letter, is recorded as the
+key in the same place on a US keyboard: й on a Russian layout is recorded as Q.
+
+Numeric keypad keys are separate keys. A keypad key does only what a shortcut
+for that keypad key says, in every TayPE window, and a main-keyboard key never
+runs a keypad shortcut. Default has no keypad shortcuts, so its keypad no longer jumps to
+markers, records or zooms; the main keyboard's digits, `-`, `=`, `.`, `,`, `/`
+and Return keep their shortcuts. In Industry Standard Bruh, keypad 7 toggles
+the metronome and the main 7 goes to marker 7. **Record Shortcut** records a
+keypad key as that keypad key, shown as Num 7, Num Enter and so on, and a
+keypad key never conflicts with the main-keyboard key for the same character.
+Command with keypad Enter is keypad Enter too: it does only what a Command
+with keypad Enter shortcut says, never what Command+Return does. It goes
+straight to the main window, even while you type in a text field or a dialog
+is open, and holding it acts once.
+
+Built-in profiles are read-only; **Duplicate to Edit** creates a custom copy.
+**Apply** saves your custom profile and closes the editor. **Cancel** discards
+pending changes. If you have changes you have not applied, Escape, closing the
+window or quitting TayPE asks whether to **Apply**, **Discard** or **Keep
+Editing**. In the search
+box, Escape first clears the search. Keys stay unchanged until Apply. Conflicts
+are shown beside the selected action; you can keep them or change the competing
+assignments. If the JSON changes outside this window, Apply refuses to overwrite
+it. A failed save keeps the draft open. **Edit JSON** remains available in
+Preferences.
 
 TayPE validates shortcut files. A failed reload keeps the working bindings; a failed startup load uses Default with an explanatory warning. The earlier single-file keybindings.json is imported once into a profile whose resulting assignments are all explicit. Ordinary profile reads do not migrate or rewrite your file.
 

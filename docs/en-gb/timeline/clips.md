@@ -157,9 +157,10 @@ Backspace follows the arranger's mute behaviour for selected notes: if the
 selection contains any audible note, it mutes the whole selection; if every
 selected note is already muted, it unmutes them all. Muted notes stay visible,
 selectable, and editable with a dimmed treatment, but do not audition, play, or
-render. The forward Delete key permanently removes selected notes. Mute state
-survives Commit and reopening the editor, and is preserved by copy, paste, and
-duplicate.
+render. The forward Delete key permanently removes selected notes. With no
+notes selected, Delete and Backspace do nothing in the piano roll and never
+reach your arranger clips. Mute state survives Commit and reopening the editor, and
+is preserved by copy, paste, and duplicate.
 When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
