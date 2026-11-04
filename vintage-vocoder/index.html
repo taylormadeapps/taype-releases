@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vintage Vocoder — Free AAX, AU, VST2 &amp; VST3 | Ruminant Audio Works</title>
-<meta name="description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AAX/AU/VST2/VST3 for Mac and VST3 for Windows and Linux.">
+<meta name="description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AAX/AU/VST2/VST3 for Mac, AAX/VST2/VST3 for Windows and VST3 for Linux.">
 <meta property="og:title" content="Vintage Vocoder — Free AAX, AU, VST2 &amp; VST3 | Ruminant Audio Works">
-<meta property="og:description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AAX/AU/VST2/VST3 for Mac and VST3 for Windows and Linux.">
+<meta property="og:description" content="Sonicism Vintage Vocoder, restored from 2002. Eight oscillators, up to 64 analysis bands and MIDI control. Free AAX/AU/VST2/VST3 for Mac, AAX/VST2/VST3 for Windows and VST3 for Linux.">
 <meta property="og:url" content="https://taype.ruminantaudioworks.com/vintage-vocoder/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/vintage-vocoder/images/interface.png">
 <meta property="og:image:alt" content="Vintage Vocoder interface with eight oscillator columns on the left and filter, analysis filterbank and mode controls on the right">
@@ -116,7 +116,7 @@
             <p class="body-copy">A vocoder uses a modulator to shape a carrier. Start with a voice as the modulator and the internal oscillators as the carrier.</p>
         </div>
         <ol class="setup-steps">
-            <li><h3>Install the plug-in</h3><p>Quit your DAW. On macOS, run the installer and select AAX (Pro Tools), Audio Unit (AU), VST2 or VST3. On Windows, run the installer. On Linux, extract the matching archive and copy the complete Vintage Vocoder FX.vst3 bundle into ~/.vst3/. Reopen your DAW and rescan plug-ins if needed.</p></li>
+            <li><h3>Install the plug-in</h3><p>Quit your DAW. On macOS, run the installer and select AAX (Pro Tools), Audio Unit (AU), VST2 or VST3. On Windows, select AAX (Pro Tools), VST2 or VST3 in the installer. On Linux, extract the matching archive and copy the complete Vintage Vocoder FX.vst3 bundle into ~/.vst3/. Reopen your DAW and rescan plug-ins if needed.</p></li>
             <li><h3>Add it to an audio track</h3><p>Insert Vintage Vocoder FX on a vocal or another audio track. Choose NORM mode and play the track to hear the audio shape the fixed internal carrier. Keep the MIX control towards wet to hear the effect clearly.</p></li>
             <li><h3>Put MIDI in charge</h3><p>Switch to MIDI mode and route a MIDI track or keyboard to the effect. In Pro Tools, send a MIDI track to the Vintage Vocoder FX instance on channel 1; enable MIDI Thru and record-arm the MIDI track for live playing. Keep the vocal or other modulator audio running while you play notes.</p></li>
         </ol>
@@ -145,16 +145,11 @@
                 <p class="security-note">Developer ID signed and notarized by Apple.</p>
             </div>
             <div class="windows-download" aria-labelledby="windows-download-heading">
-                <h3 id="windows-download-heading">Windows · VST3</h3>
-                <p class="platform-note">Windows x86-64 · 64-bit VST3 host</p>
-                <a id="windows-download" class="btn btn-primary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe">Windows x86-64 installer <span aria-hidden="true">↓</span></a>
-                <p class="archive-note">3.5 MB · .exe</p>
+                <h3 id="windows-download-heading">Windows · AAX + VST2 + VST3</h3>
+                <p class="platform-note">Windows x86-64 · Pro Tools or a compatible 64-bit VST2/VST3 host</p>
+                <a id="windows-download" class="btn btn-primary" href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe">Windows x86-64 installer <span aria-hidden="true">↓</span></a>
+                <p class="archive-note">10.1 MB · .exe</p>
                 <p class="security-note">Requires administrator approval. The installer is not Authenticode-signed; Windows may show an unknown-publisher warning.</p>
-                <div class="download-details">
-                    <a href="https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe.asc">Windows OpenPGP signature</a>
-                    <a href="https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0#windows-vst3-download">Signature verification <span aria-hidden="true">↗</span></a>
-                    <details><summary>Windows SHA-256 checksum</summary><code>b4edfd836b1690040524884cbf2068e856c6f5a231f8c418c6dfbe92b2b6e525</code></details>
-                </div>
             </div>
             <div class="linux-download" aria-labelledby="linux-download-heading">
                 <h3 id="linux-download-heading">Linux · VST3</h3>
@@ -176,7 +171,7 @@
                 </div>
             </div>
             <p class="security-note">Free for personal and commercial use. No TayPE licence required.</p>
-            <p class="requirements">Requires a compatible host. AAX Native is included for Pro Tools on macOS; audio and MIDI smoke-tested in Pro Tools Intro 2026.4.1. Windows and Linux downloads are VST3 only.</p>
+            <p class="requirements">Requires a compatible host. AAX Native is included for Pro Tools on macOS and Windows, with developer smoke tests on both platforms. Linux downloads are VST3.</p>
             <div class="download-details">
                 <a href="https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0">Release notes on GitHub <span aria-hidden="true">↗</span></a>
                 <a href="licence.txt">Read the licence terms</a>

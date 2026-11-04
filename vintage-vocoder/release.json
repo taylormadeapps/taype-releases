@@ -5,9 +5,9 @@
   "size": "35.0 MB",
   "sha256": "ec7895497da761f1196ef2b4aeac66aad50ef24941bc14bbda7a8600709e83e4",
   "windows": {
-    "filename": "Vintage-Vocoder-1.6.0-windows-x86_64-beta-20261030T210749Z.exe",
-    "size": "3.5 MB",
-    "sha256": "b4edfd836b1690040524884cbf2068e856c6f5a231f8c418c6dfbe92b2b6e525"
+    "filename": "Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe",
+    "size": "10.1 MB",
+    "sha256": "ce877c21db3836be3887e9ed3a8623e0de84d14bb2d4d3fd872df2497876b090"
   },
   "linux": {
     "arm64": {

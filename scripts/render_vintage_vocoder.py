@@ -42,7 +42,7 @@ def render() -> dict[Path, str]:
     values["release.download_url"] = f"{RELEASES}/download/{release['tag']}/{release['filename']}"
     values["release.notes_url"] = f"{RELEASES}/tag/{release['tag']}"
     windows = release["windows"]
-    expected_windows = rf"Vintage-Vocoder-{re.escape(release['version'])}-windows-x86_64-beta-\d{{8}}T\d{{6}}Z\.exe"
+    expected_windows = rf"Vintage-Vocoder-{re.escape(release['version'])}-windows-x86_64-\d{{8}}T\d{{6}}Z\.exe"
     if not re.fullmatch(expected_windows, windows["filename"]):
         raise ValueError("Windows installer filename must identify this version and packaging run")
     if not re.fullmatch(r"[a-f0-9]{64}", windows["sha256"]):
@@ -51,9 +51,7 @@ def render() -> dict[Path, str]:
         raise ValueError("Missing Windows installer download size")
     windows_url = f"{RELEASES}/download/{release['tag']}/{windows['filename']}"
     values["release.windows.size"] = windows["size"]
-    values["release.windows.sha256"] = windows["sha256"]
     values["release.windows.download_url"] = windows_url
-    values["release.windows.signature_url"] = f"{windows_url}.asc"
     linux = release["linux"]
     if not isinstance(linux, dict) or set(linux) != {"arm64", "x86_64"}:
         raise ValueError("Linux release metadata must include ARM64 and x86-64")
