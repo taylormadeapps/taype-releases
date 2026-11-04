@@ -260,13 +260,29 @@ local: Reset fits the used note range, and Maximum uses the largest note rows.
 
 ## Customising Shortcuts
 
-**Help → Keybindings** lists every configurable action for the active profile,
+**Help → Keyboard Shortcuts** lists every configurable action for the active profile,
 including unbound actions, alongside every fixed shortcut: the same fixed
 shortcuts the visual editor lists. Shortcuts show their modifiers in macOS
 order, Control, Option, Shift, Command (⌃⌥⇧⌘), whatever order your JSON file
 uses, so `cmd+shift+z` reads ⇧⌘Z; popup help uses the same order, such as
 Shift+⌘+M. For a built-in profile, Help's footer says built-in profiles are
 read-only; for a custom profile it shows the JSON file to edit.
+
+### Printable cheat sheet
+
+Choose **Save PDF...** in **Help → Keyboard Shortcuts**, beside **Edit Bindings...**,
+to save a cheat sheet of the active profile. TayPE asks where to save it and
+writes the PDF straight away, with no print dialog. The sheet uses your Mac's
+paper size (A4 in the UK, US Letter in the US), portrait, with the profile name
+and today's date at the top of each page and page numbers at the foot. It lists
+Help's sections in two columns: every action that has a shortcut in the profile
+and every fixed shortcut, named and written as Help shows them. Actions without
+a shortcut, and sections with nothing to list, are left out. The text in the
+PDF is real text, so you can search it and copy from it. If the PDF cannot be
+saved, for example in a folder you cannot write to, TayPE says so and why, the
+Session Log has the details, and nothing is left half-written. If the PDF is
+saved but your drive does not confirm it, TayPE keeps it and warns you that a
+power cut could still lose it.
 
 Open the shortcut/profile controls from Preferences. Built-in profiles always come from the app itself, so they match each update. The copies in your keybindings folder are for reference only: editing them changes nothing. Custom profiles remain yours.
 
