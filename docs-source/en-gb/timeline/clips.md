@@ -150,7 +150,9 @@ Backspace follows the arranger's mute behaviour for selected notes: if the
 selection contains any audible note, it mutes the whole selection; if every
 selected note is already muted, it unmutes them all. Muted notes stay visible,
 selectable, and editable with a dimmed treatment, but do not audition, play, or
-render. The forward Delete key permanently removes selected notes. With no
+render. The forward Delete key permanently removes selected notes. Both keys
+follow your keybinding profile: if it moves Delete Clip or Toggle Clip Disable
+to other keys, those keys delete and mute notes here instead. With no
 notes selected, Delete and Backspace do nothing in the piano roll and never
 reach your arranger clips. Mute state survives Commit and reopening the editor, and
 is preserved by copy, paste, and duplicate.
@@ -173,7 +175,8 @@ is not saved with the reel.
 Click a controller point to select it, click empty lane space to add a point,
 drag empty lane space to marquee-select points by time, and drag any selected
 point to move the whole selected set.
-Cmd+A selects all points in the current controller, Delete or Backspace removes
+Cmd+A selects all points in the current controller, Delete or Backspace (or
+your profile's keys for Delete Clip and Toggle Clip Disable) removes
 the selection, and Escape clears it. Double-click a point to delete it.
 Cmd-drag draws controller values as a
 freehand pencil stroke, following each change in pointer direction. With

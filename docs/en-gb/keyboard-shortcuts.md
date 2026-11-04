@@ -5,7 +5,11 @@ TayPE ships shortcut profiles. Built-in profiles are read-only; duplicate one in
 Standard macOS shortcuts such as undo, copy, paste, and Preferences are handled separately from the editable TayPE shortcut profile.
 
 Your custom JSON assignments are retained exactly when loaded. Missing actions
-are unbound; an empty JSON value also clears a binding. Custom profiles never
+are unbound; an empty JSON value also clears a binding. Delete Clip and Toggle
+Clip Disable are the one exception: a profile that does not mention them keeps
+Delete and Backspace for them, so profiles made before these two could be
+changed still delete and disable clips. An empty value clears them as usual.
+Custom profiles never
 inherit shortcuts from Default. New actions stay unbound until you assign them. After external
 edits, use **Reload** in Preferences > Keybindings. If reloading fails, TayPE
 keeps the working bindings and shows a warning. If the selected profile cannot
@@ -122,7 +126,8 @@ Copy, Paste and Split at Head act on the notes even when you last clicked the
 controller lane. Select All, like Cmd+A, selects the notes in the open MIDI
 editor, or the controller lane's points when you last clicked the lane. In the
 MIDI editor, Delete deletes the selected notes and Backspace mutes or unmutes
-them. When you last clicked the controller lane, both keys delete its selected
+them, or whichever keys your profile gives Delete Clip and Toggle Clip Disable.
+When you last clicked the controller lane, both keys delete its selected
 points instead. With nothing selected in the MIDI editor, both keys do
 nothing, so they never touch your arranger clips, and both menu items are
 greyed out. When the arranger is the front window, both keys and both menu
@@ -271,7 +276,11 @@ select an action, then choose **Record Shortcut**. Hold any modifiers and press
 a key: the first key you press becomes the new shortcut, even Escape, Tab or
 Return. Press Return or Space, or click **Use Shortcut**, to put it in the
 draft, or press Escape to discard it. **Clear Shortcut** removes the
-assignment. Fixed keys are listed for reference and cannot be edited.
+assignment. Fixed keys are listed for reference and cannot be edited. Delete
+and Backspace are not fixed: in a custom profile you can move Delete Clip and
+Toggle Clip Disable to other keys, or swap them, and the Edit menu, the MIDI
+editor and popup help follow. A text field still uses Delete and Backspace to
+edit its text.
 **Where it works** says **Main window**, **Main window + MIDI editor** (the
 key also works in a focused MIDI editor) or **Everywhere** (the key is on the
 menu bar, so it works from every TayPE window, even with the main window
@@ -280,6 +289,15 @@ types a Latin-1 character on your keyboard layout, such as ö, é, £ or §, is
 recorded and shown as that character. A key that types a character beyond
 Latin-1, such as a Cyrillic, Greek, Czech or Polish letter, is recorded as the
 key in the same place on a US keyboard: й on a Russian layout is recorded as Q.
+
+The editor lists shortcuts by where they work, **Everywhere** first, then
+**Main window + MIDI editor**, then **Main window**, and by name within each
+group, so Go to Marker 2 comes before Go to Marker 10. Fixed keys sit among the
+other actions, marked **Fixed** beside their shortcut. The line under each name
+gives its section, such as Editing or Zoom & Navigation. The menu beside the
+search field shows all actions, only unbound actions, conflicts or fixed keys,
+or only the shortcuts that work in one place: **Everywhere**, **Main window +
+MIDI editor** or **Main window**.
 
 Numeric keypad keys are separate keys. A keypad key does only what a shortcut
 for that keypad key says, in every TayPE window, and a main-keyboard key never
