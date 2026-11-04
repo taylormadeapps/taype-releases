@@ -76,7 +76,13 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 ARA-only plug-ins such as **SpectraLayers** and **WaveLab** take a Menu Path too. They never appear in insert slots, so their path organises them in the top-level **ARA2** menu instead of the insert picker. Leave the column blank to keep TayPE's generated vendor and category folders.
 
-TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. They ship inside TayPE and also work in other VST3 hosts. To use one there, right-click TayPE in Finder, choose **Show Package Contents**, open **Contents**, then **Resources**, then **NativeExtensions**, and copy the plug-in into your other host's VST3 plug-in folder (Taype Rooms is the one named **Tape Rooms**). Outside TayPE, Taype Rooms finds its factory rooms in your installed TayPE; without one, only rooms in your own IR folder are available.
+TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, **Taype Comp** and **Vintage Vocoder FX**. The macOS PKG's **Plug-ins for other DAWs** option installs VST3, Audio Unit and AAX Native copies. It is selected by default; untick it to install only TayPE. A later installer with the option selected replaces all three formats with that installer's versions. The drag-and-drop DMG updates only TayPE.
+
+Each format goes into its standard macOS plug-in location. TayPE uses its own bundled copies. Remove stale copies you previously installed by hand if another DAW finds those instead.
+
+Keep TayPE installed and its home folder configured: the companion effects share its presets, NAM profiles, IRs, licence and 90-day demo. After the demo, their editors lock in other DAWs while audio, automation and session recall continue. A valid TayPE licence unlocks them. Vintage Vocoder is free and never locks.
+
+All seven were checked in Pro Tools Intro 2026.4.1 on Apple Silicon with stereo audio at 48 kHz, including loading, processing and saved-session recall. Mono, sidechain, automation playback and expired-licence cases have not been checked in Pro Tools. Logic Pro is the tested AU host; GarageBand and MainStage are untested.
 
 Reels remember TayPE stock plug-ins by their bundled name, so those inserts
 still load if the TayPE app has been renamed or moved. When TayPE opens an older
