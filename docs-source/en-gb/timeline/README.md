@@ -26,6 +26,37 @@ A track can be current, focused, muted, soloed, record-armed, monitored, archive
 
 Most edits are non-destructive. Moving, splitting, trimming, fading, archiving, and disabling clips change the reel state without rewriting the original media. Splitting clips adds the current default fade at the new cut edges. Use checkpoints when you want a named recovery point before a bigger move.
 
+Dragging a clip onto the Master row or into the empty space below it creates
+a track immediately above Master and places the clip there. Option-drag
+copies the clip to the new track. Undo removes the new track and reverses
+the move or copy in one step. At the reel's track limit, TayPE warns and
+leaves the clips in place.
+
+## Exporting Main as AAF
+
+Choose **File → Export → Export AAF** and save the file. TayPE exports the audio edits
+from Main, even when another Cut is open. It embeds mono and stereo source
+audio in one AAF as 24-bit PCM at 48 kHz, including the available trim handles.
+MIDI-backed audio clips export using their existing WAV renders.
+Pro Tools and TayPE can restore disabled clips as muted edits. Logic Pro may
+leave gaps in their place. If a disabled clip overlaps another clip on the
+same export track, TayPE omits it and reports it in **Tools → Session Log**.
+An overlapping muted clip whose source file is missing is also omitted and
+reported.
+The log also lists omitted Cut regions and rendered overlaps.
+The clips around a rendered overlap remain editable. A crossfade between a
+mono and stereo clip keeps its original fade shape across the two export tracks.
+
+## Importing an AAF into a new reel
+
+Choose **File → Import → Import AAF**, select the AAF and pick a name and location for
+the new reel. TayPE imports the audio arrangement into Main and stores the
+embedded mono and stereo sources as 24-bit WAVs at 48 kHz inside the reel.
+TayPE restores clips marked as disabled in the Avid AAF format. You can
+re-enable them on the timeline and play their original audio.
+Check **Tools → Session Log** for skipped external media, unsupported tracks
+and any controls rendered into audio.
+
 ## Where stem prints are saved
 
 When **Stems** is selected, each print gets its own numbered folder in the

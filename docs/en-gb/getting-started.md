@@ -19,6 +19,8 @@ Use the View controls or shortcuts to move between them. The transport and focus
 
 A reel is TayPE's session format. Use **File > New Reel**, **Open Reel**, or the reel browser to start work. TayPE autosaves; **Save** creates an intentional checkpoint rather than being the only thing standing between you and disaster.
 
+Use **File > Manage Reel** to rename or duplicate the current reel, save it as a template, reveal it in Finder, or pack it. **Save Checkpoint** is directly in the **File** menu.
+
 Use [Reels](reels/README.md) for checkpoints, history, pack/unpack, thin reels, and upgrades.
 
 ## Recording
@@ -60,7 +62,7 @@ The ruler can show bars/beats or time. Marker shortcuts jump directly to numbere
 
 ## Importing Audio
 
-Drag audio onto the timeline or use **File > Import Audio**. Multiple files can be placed together, one per track, and TayPE keeps references inside the reel so the session can reopen cleanly later.
+Drag audio onto the timeline or use **File > Import > Import Audio**. Multiple files can be placed together, one per track, and TayPE keeps references inside the reel so the session can reopen cleanly later.
 
 If imported media needs resampling, TayPE handles it during import or playback so the reel runs at the active sample rate.
 
