@@ -273,9 +273,10 @@ read-only; for a custom profile it shows the JSON file to edit.
 Choose **Save PDF...** in **Help → Keyboard Shortcuts**, beside **Edit Bindings...**,
 to save a cheat sheet of the active profile. TayPE asks where to save it and
 writes the PDF straight away, with no print dialog. The sheet uses your Mac's
-paper size (A4 in the UK, US Letter in the US), portrait, with the profile name
-and today's date at the top of each page and page numbers at the foot. It lists
-Help's sections in two columns: every action that has a shortcut in the profile
+paper size (A4 in the UK, US Letter in the US), portrait. At the top of each
+page the title, TayPE Cheat Sheet, sits between the Ruminant Audio Works and
+TayPE logos with "Profile:" and the profile's name under it; page numbers are at
+the foot. It lists Help's sections in two columns: every action that has a shortcut in the profile
 and every fixed shortcut, named and written as Help shows them. Actions without
 a shortcut, and sections with nothing to list, are left out. The text in the
 PDF is real text, so you can search it and copy from it. If the PDF cannot be
