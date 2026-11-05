@@ -12,7 +12,7 @@ Stem Splitter uses bundled model support where available. If the model package i
 
 ## Rendering
 
-Stem splitting is an offline render. TayPE shows progress, creates new tracks for the result, and keeps the operation undoable where the surrounding reel state allows it.
+Stem splitting is an offline render. TayPE applies the source clip's gain and fades before splitting, then creates new tracks for the result. TayPE shows progress and keeps the operation undoable where the surrounding reel state allows it.
 
 ## Practical Use
 
