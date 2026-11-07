@@ -13,6 +13,17 @@ first. Ordinary playback alone does not block an explicit save.
 
 Open a reel from the reel browser or a known reel reference.
 
+### `import_aaf` / `export_aaf`
+
+On macOS, `import_aaf` takes an absolute AAF `path` and an absolute reel
+`destination`. It creates and opens a new reel with the imported audio
+on Main. Stop the transport before importing.
+
+`export_aaf` takes an absolute `destination` and writes the open reel's
+Main timeline to an AAF with embedded audio, whichever Cut is selected.
+Both tools require a new destination and return the resulting path and any
+interchange warnings.
+
 ### `list_reels`
 
 List known and recent reels.

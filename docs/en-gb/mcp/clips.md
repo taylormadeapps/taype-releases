@@ -1,5 +1,13 @@
 # Clips
 
+### `import_stems_folder`
+
+Pass an absolute folder `path` to import its audio files as new tracks above
+Master. TayPE names each track after the file and starts all clips at the
+playhead, or at `time` in seconds if you supply it. The result gives the
+new track and clip IDs and reports any files it could not read. Stop the
+transport first. One Undo removes the batch.
+
 ### `add_clip`
 
 Place an audio file on a track. For MIDI, use `create_midi_clip` or `import_midi_file`.
