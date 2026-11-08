@@ -174,8 +174,10 @@ plug-in presets load with it off.
 
 ## Visualiser and Meter
 
-Open the compressor visualiser from the compressor section header. Its signal
-history compares filled input and output envelopes on a shared dB scale.
+Open the compressor visualiser from the compressor section header. Drag the
+window edge to scale the whole panel proportionally. The window zoom combines
+with **View > UI Scale**. The signal history compares filled input and output
+envelopes on a shared dB scale.
 Use the five ticked switches beneath the graph to choose what is visible:
 
 - **IN:** input before compression, shown as a white fill when viewed alone.

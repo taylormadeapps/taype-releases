@@ -80,6 +80,10 @@ TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Ta
 
 Each format goes into its standard macOS plug-in location. TayPE uses its own bundled copies. Remove stale copies you previously installed by hand if another DAW finds those instead.
 
+In a host that lets you resize the stock plug-in window, drag its edge to
+scale the controls and displays together. Each editor has its own zoom,
+independent of TayPE's **View > UI Scale**.
+
 Keep TayPE installed and its home folder configured: the companion effects share its presets, NAM profiles, IRs, licence and 90-day demo. After the demo, their editors lock in other DAWs while audio, automation and session recall continue. A valid TayPE licence unlocks them. Vintage Vocoder is free and never locks.
 
 In another DAW, choose **Init** at the top of the preset menu in Taype Rooms, Ache-Delay, T-Clipper, Taype Drive, Taype EQ or Taype Comp to restore that effect's stock settings. This also restores Drive's profile selections and mode settings, and Rooms' initial impulse response. Init works independently of your saved **Default** preset. The preset field shows **Init**, with a `*` after you change the sound. Vintage Vocoder has its own Init item.
