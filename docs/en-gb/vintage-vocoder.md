@@ -24,10 +24,10 @@ The introduction video sits near the bottom of the product page, above
 then press Play. **Watch on YouTube** opens the video directly.
 
 The **Community & Support** section on the product and company pages links to
-the newsletter, Instagram, YouTube and Reddit. Use **Get in Touch** for bugs,
-questions or suggestions. Choose **Vintage Vocoder** in the required **Product**
-dropdown; website links start at **N/A**. Email is optional, but leave it if you
-would like a reply.
+the newsletter, Instagram, YouTube, Reddit and Discord. Use **Get in Touch** for
+bugs, questions or suggestions. Choose **Vintage Vocoder** in the required
+**Product** dropdown. Website links start at **N/A**. Email is optional, but
+leave it if you would like a reply.
 
 ## Format choices
 
