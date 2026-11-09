@@ -19,7 +19,9 @@ If you really want to use TayPE but can’t afford our prices, drop me a line at
 
 ## Trustware Demo
 
-Fully functional demo for 90 days. After that, exporting audio (master and stems: Print Mix, Print Loop, Print Marker Ranges and Bounce External) requires a licence. Inside TayPE, saving sessions, recording and editing are never blocked, so you never lose access. TayPE's stock plug-ins in other DAWs share the same 90 days; after that they keep playing your sessions, and their controls unlock when you enter a licence in TayPE.
+TayPE is fully functional from its first launch. The licensing window shows how many days are left in the 90-day evaluation and can be closed immediately during that period. After 90 days, the reminder shown when you launch TayPE or open another reel has a ten-second dismissal countdown. Audio export remains available.
+
+Stock plug-ins in other DAWs share TayPE's 90-day evaluation. After it ends, their editors display a dismissible **Buy TayPE** banner when opened. The controls remain usable.
 
 ## Agreement
 
