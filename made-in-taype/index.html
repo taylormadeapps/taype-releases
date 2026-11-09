@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Made in Taype - Works made in TayPE</title>
-<meta name="description" content="Works made in TayPE. Wudeva by The Rugged, mixed in TayPE with Vanessa.">
+<meta name="description" content="Works made in TayPE, including Wudeva by The Rugged and Shanti by FAAFOE.">
 <meta property="og:title" content="Made in Taype">
 <meta property="og:description" content="Works made in TayPE.">
 <meta property="og:url" content="https://taype.ruminantaudioworks.com/made-in-taype/">
@@ -160,6 +160,11 @@ h1 {
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1.5rem;
+    scroll-margin-top: 5rem;
+}
+
+.record + .record {
+    margin-top: 1.5rem;
 }
 
 .record-header {
@@ -339,6 +344,7 @@ footer {
 
     .record {
         padding: 1.15rem;
+        scroll-margin-top: 8.5rem;
     }
 
     .record-meta {
@@ -402,6 +408,22 @@ footer {
         </div>
         <div class="record-video">
             <iframe src="https://www.youtube-nocookie.com/embed/xz0eMapY_00" title="Wudeva by The Rugged" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </article>
+
+    <article class="record" id="shanti" aria-labelledby="shanti-title">
+        <div class="record-header">
+            <picture>
+                <source type="image/webp" srcset="/assets/img/made-in-taype/shanti-320.webp 320w, /assets/img/made-in-taype/shanti-640.webp 640w" sizes="(max-width: 720px) 220px, 280px">
+                <img src="/assets/img/made-in-taype/shanti-640.jpg" alt="Cover artwork for Shanti by FAAFOE" width="640" height="640" loading="lazy" decoding="async">
+            </picture>
+            <div>
+                <h2 id="shanti-title">Shanti</h2>
+                <p class="record-artist">FAAFOE</p>
+                <div class="record-actions">
+                    <a href="https://faafoe.bandcamp.com/track/shanti" target="_blank" rel="noopener">Bandcamp &rarr;</a>
+                </div>
+            </div>
         </div>
     </article>
 </main>

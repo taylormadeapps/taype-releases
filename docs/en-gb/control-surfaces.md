@@ -18,7 +18,9 @@ MotorMix buttons for plugin pages, automation modes, and other Pro Tools-specifi
 
 Touching a MotorMix fader does nothing on its own. TayPE responds when you move it.
 
-Turn the selector to choose what the eight rotaries control: **P** for pan, or **SA** to **SE** for Send A to Send E. Send A to E are each track's first to fifth sends, in the order the mixer shows them. Each detent moves the send level a little, and a move stops at 0 dB when it crosses it. Sends six to eight can't be reached from the MotorMix, and removing a send moves the later sends up a letter. The lower row of the display shows each strip's pan position or chosen send level, and stays blank for a strip with no send there. Pushing the selector keeps the rotaries on pan; right-channel pan (**Pr**), FLIP, send mute and pre/post switching are not supported.
+Turn the selector to jog the timeline. Press **SHIFT + ASSIGN** to enter Pan/Send mode. The ASSIGN light flashes while the page is active. Turn the selector to choose what the eight strip knobs control, from **P** for pan through **SA** to **SE** for Send A to Send E. Send A to E are each track's first to fifth sends, in the order the mixer shows them. Each detent moves the send level a little, and a move stops at 0 dB when it crosses it. Press **SHIFT + ASSIGN** again or press **ESCAPE** to return the selector to timeline jog and the strip knobs to pan.
+
+TayPE clears the LCD when it refreshes the connected unit, then sends the track labels and pan or send levels. Reconnecting the MotorMix MIDI input returns the selector to timeline jog. A strip with no send at the selected position has a blank send display. Removing a send moves the later sends up a letter. Right-channel pan (**Pr**), FLIP, send mute and pre/post switching are outside the Pan/Send page.
 
 ## Grouping Surfaces
 

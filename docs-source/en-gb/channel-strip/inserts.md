@@ -84,7 +84,7 @@ In a host that lets you resize the stock plug-in window, drag its edge to
 scale the controls and displays together. Each editor has its own zoom,
 independent of TayPE's **View > UI Scale**.
 
-Keep TayPE installed and its home folder configured: the companion effects share its presets, NAM profiles, IRs, licence and 90-day demo. After the demo, their editors lock in other DAWs while audio, automation and session recall continue. A valid TayPE licence unlocks them. Vintage Vocoder is free and never locks.
+Keep TayPE installed and its home folder configured so the companion effects can share its presets, NAM profiles, IRs, licence and 90-day evaluation. After the evaluation ends, opening an editor in another DAW shows a dismissible **Buy TayPE** reminder. Controls, audio, automation and session recall remain available. A valid TayPE licence hides the reminder. If the pricing page fails to open, the banner shows an error and **Buy TayPE** stays available to retry. Vintage Vocoder is free.
 
 All seven were checked in Pro Tools Intro 2026.4.1 on Apple Silicon with stereo audio at 48 kHz, including loading, processing and saved-session recall. Mono, sidechain, automation playback and expired-licence cases have not been checked in Pro Tools. Logic Pro is the tested AU host; GarageBand and MainStage are untested.
 

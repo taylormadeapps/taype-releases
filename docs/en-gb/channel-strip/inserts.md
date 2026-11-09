@@ -84,7 +84,7 @@ In a host that lets you resize the stock plug-in window, drag its edge to
 scale the controls and displays together. Each editor has its own zoom,
 independent of TayPE's **View > UI Scale**.
 
-Keep TayPE installed and its home folder configured: the companion effects share its presets, NAM profiles, IRs, licence and 90-day demo. After the demo, their editors lock in other DAWs while audio, automation and session recall continue. A valid TayPE licence unlocks them. Vintage Vocoder is free and never locks.
+Keep TayPE installed and its home folder configured so the companion effects can share its presets, NAM profiles, IRs, licence and 90-day evaluation. After the evaluation ends, opening an editor in another DAW shows a dismissible **Buy TayPE** reminder. Controls, audio, automation and session recall remain available. A valid TayPE licence hides the reminder. If the pricing page fails to open, the banner shows an error and **Buy TayPE** stays available to retry. Vintage Vocoder is free.
 
 In another DAW, choose **Init** at the top of the preset menu in Taype Rooms, Ache-Delay, T-Clipper, Taype Drive, Taype EQ or Taype Comp to restore that effect's stock settings. This also restores Drive's profile selections and mode settings, and Rooms' initial impulse response. Init works independently of your saved **Default** preset. The preset field shows **Init**, with a `*` after you change the sound. Vintage Vocoder has its own Init item.
 
