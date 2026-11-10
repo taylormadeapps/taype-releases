@@ -123,6 +123,7 @@ blockquote { margin-top: 2rem; color: var(--paper-ink); font-family: Georgia, "T
 .requirements { margin-top: 0.5rem; }
 .download-details { display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 1rem 2rem; margin-top: 1.5rem; font-size: 0.85rem; }
 .download-details > a, summary { min-height: 32px; }
+.mpc-download { max-width: 38rem; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 summary { cursor: pointer; color: var(--brass); text-align: start; }
 details { max-width: 100%; }
 details[open] { flex-basis: 100%; }
