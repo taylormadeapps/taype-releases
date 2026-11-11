@@ -14,7 +14,7 @@ slot. Click a type button to narrow the current results; editing the query
 returns to the all-types search. The last type button you explicitly selected
 is remembered while TayPE is running.
 
-In search results, Shift-click selects a visible range and Command-click toggles separate audio-effect or hardware-insert rows. The picker then shows a footer with selected/addable status text and **Add** so you can load the selected rows in result order from the opened slot onward. Existing inserts in those destination slots are replaced, and TayPE stops when the rack runs out of slots. Instruments and MIDI Out stay single-select because they can only live in slot 1.
+In search results, Shift-click selects a visible range and Command-click toggles separate audio-effect or hardware-insert rows. The picker then shows a footer with selected/addable status text and **Add** so you can load the selected rows in result order from the opened slot onward. Existing inserts in those destination slots are replaced, and TayPE stops when the rack runs out of slots. Instruments and MIDI Out stay single-select: only audio effects and hardware inserts can be added together, and they go after the last instrument.
 
 Right-click any insert slot to open the slot menu. Loaded slots include per-slot actions, and every slot also shows **Delete All** for clearing every plug-in in the insert block. On an empty insert block, **Delete All** is shown but disabled.
 
@@ -186,14 +186,89 @@ In Archive View, active or bypassed insert rows show as offline red and plugin e
 
 ## Instruments and MIDI Out
 
-Instrument inserts and MIDI Out live in the first slot. They do not appear in
-search or browse results for track slots 2-8, ordinary buses, or the Listen
-Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
+Instruments go at the front of the insert rack. An instrument can go in any
+slot with only instruments or empty slots before it, and effects and hardware
+inserts go after the last instrument. MIDI Out goes only in the first slot, on a
+track with no instrument. The insert picker offers only what fits the slot you
+open; a type button with nothing to offer there is greyed out, and the picker
+says why. While a plug-in is still loading into a slot, TayPE asks you to wait
+for it before you change that slot: choosing another plug-in for it, removing,
+enabling or disabling it, dragging it or onto it, or applying a preset that
+would change it. Instruments do not appear in search or browse results for ordinary
+buses or the Listen Bus. MIDI Out can send to a Core MIDI destination, keep or force a MIDI
 channel, compensate timing with an early-send amount, and receive an optional
 mono or stereo hardware **Audio Return**.
 
+The instruments at the front of the rack form the track's instrument block.
+MIDI passes through them in rack order. A plug-in with a MIDI output of its
+own, such as a pattern generator or arpeggiator, replaces the MIDI for the
+plug-ins after it; one without passes on the MIDI it received. When a
+generator sends no notes, the instruments that take their MIDI from it stay
+quiet: TayPE never fills the gap with the notes you play. A generator keeps
+running in time with playback even when no notes come in. The instruments'
+sounds are layered before the rest of the channel strip, and one
+instrument's sound never feeds another. Each plug-in keeps its own settings
+in the reel.
+
+A bypassed instrument fades out over a few samples and passes the MIDI it
+receives on unchanged, so the rest of the block plays as if it were not
+there; turning Bypass off fades it straight back in. A disabled instrument
+is left out the same way. A bypassed instrument still counts toward the
+track's latency, so bypassing it never moves the timing; a disabled one
+does not count.
+
+When instruments in the block have auxiliary outputs, the first one that has
+them offers them to other tracks, as described under **Multi-output
+instruments** in Track Headers; the others add only their main output to
+the track.
+
 Importing a MIDI file onto an instrument track renders it through the
-instrument, so TayPE asks you to wait if another clip render is still running.
+track's instruments, so TayPE asks you to wait if another clip render is still running.
+
+Every enabled instrument row has a small trim knob where an effect row has its
+wet/dry knob, including a track with just one instrument. A bypassed instrument
+shows it dimmed; a disabled instrument, or any instrument on an archived track,
+shows none. It sets that instrument's
+level in the mix of the track's instruments, before the rest of the channel
+strip: 0 dB at 12 o'clock, down to -144 dB and up to +12 dB. Drag or use the
+mouse wheel to change it, and double-click to return it to 0 dB. You can undo a
+change, and while you record automation with the instrument's **Trim** lane on,
+moving the knob writes points into that lane. A MIDI clip plays the audio it
+was rendered with, so it takes a new trim when you next rerender it. While a
+MIDI clip is rendering through the instrument, TayPE asks you to wait before
+you change its trim.
+
+Right-click an instrument row and choose **MIDI from** to pick where that
+instrument takes its MIDI: **Previous plug-in** (the default) gets the MIDI as
+the plug-in before it in the rack passes it on, and **Track input** gets the
+MIDI as it came into the track, before any plug-in changed it. Use **Track
+input** when, for example, a MIDI effect should play only the synth after it
+and another synth should play your notes as you played them. The menu ticks
+the current choice; the row itself does not show it. You can change it while
+playing, and undo it. A MIDI clip plays the audio it was rendered with, so it
+takes a new **MIDI from** when you next rerender it.
+
+With grouped track controls on, a trim, wet/dry or **MIDI from** change applies
+to every selected track or to none: if one of them has no enabled instrument
+(for trim), no instrument (for **MIDI from**) or no enabled effect or Hardware
+Insert (for wet/dry) in that slot, nothing changes, TayPE tells you so, and
+**Tools → Session Log** names the track.
+
+Reels saved by TayPE 1.6.0b2 or earlier ask once to upgrade when you open
+them, and once upgraded they no longer open in those versions. The upgrade
+turns each instrument's wet/dry into the same level on its trim (50% becomes
+about -6 dB, and 0% becomes -144 dB), turns its Wet/Dry automation lane into
+a Trim lane, and sets its wet/dry back to 100%, so it sounds as it did.
+Applying a preset saved before the upgrade converts an instrument's wet/dry
+the same way. The upgrade also tidies racks that an older TayPE could leave
+out of order after a drag: instruments move to the front in their order,
+where older TayPE already played them, so the sound is unchanged, and any
+extra instrument it never played is disabled. A rack with MIDI Out beside an
+instrument, or two MIDI Outs, is left as saved and both keep playing, but
+the MIDI Out's Audio Return is not heard on that track until you remove the
+instrument. TayPE refuses other insert changes on such a track until the
+rack is in order again; removing an insert always works. **Tools → Session
+Log** lists every change the upgrade makes.
 
 Adding MIDI Out selects **All MIDI** and turns **MON** on. Choose an enabled
 MIDI device or **Virtual Keyboard** from the track's input selector, or choose
@@ -339,7 +414,7 @@ If you dismiss the crash report while the helper is still down, every enabled pl
 
 A plugin TayPE positively identified as the crash culprit stays in its slot as Failed. The assignment, on/off, bypass, and last saved sound are unchanged. Failed is not Disable, and it is not written into the reel. The row paints as failed, and a plain click explains why instead of opening the vendor window. Other recoverable plugins come back.
 
-A plugin can also be stopped until reload, when a buffer size or sample rate change cannot be applied to it or a sidechain change to it cannot be undone. TayPE shows a warning, and the session log (**Tools → Session Log**) names it. While it is enabled, its row on the track strip, the mixer and the Listen Bus shows the same hot red fill and yellow border as a crash culprit, and a plain click explains which change stopped it instead of opening the vendor window. Like Failed, the stop is not written into the reel. TayPE sends the plugin no audio or MIDI, so a stopped instrument is silent and MIDI clip renders through it are refused. A stopped effect passes its input through, latency-aligned, and the other plugins on the track keep playing. If TayPE cannot rebuild the chain around it at once, for example while you are recording or printing, the other plugins in its chain pass their input through too until it can; a rebuild during playback may cause a brief audio discontinuity. The plugin stays stopped until you reload it, for example with **Tools > Restart Plugin Sandbox**, or remove it.
+A plugin can also be stopped until reload, when a buffer size or sample rate change cannot be applied to it or a sidechain change to it cannot be undone, or when an instrument cannot return to live playing after a MIDI clip render. TayPE shows a warning, and the session log (**Tools → Session Log**) names it. While it is enabled, its row on the track strip, the mixer and the Listen Bus shows the same hot red fill and yellow border as a crash culprit, and a plain click explains which change stopped it instead of opening the vendor window. Like Failed, the stop is not written into the reel. TayPE sends the plugin no audio or MIDI, so a stopped instrument is silent and MIDI clip renders through it are refused. On a track with several instruments, a stopped one goes silent and the others keep playing in time; instruments that take their MIDI from a stopped generator go quiet too and never fall back to the notes you play. Two cases silence every instrument on the track until you reload the stopped one. When a buffer size increase stops the track's first instrument, **Tools → Session Log** reports it once and any instrument outputs routed from the track read **Unavailable**. When an instrument cannot return to live playing after a MIDI clip render, the banner names it; TayPE still ends the render, so every other track keeps playing. A stopped effect passes its input through, latency-aligned, and the other plugins on the track keep playing. If TayPE cannot rebuild the chain around it at once, for example while you are recording or printing, the other plugins in its chain pass their input through too until it can; a rebuild during playback may cause a brief audio discontinuity. The plugin stays stopped until you reload it, for example with **Tools > Restart Plugin Sandbox**, or remove it.
 
 A plugin that never finishes shutting down cannot hold TayPE up for long. If a plugin is still shutting down after 60 seconds, for example when you open another reel, TayPE stops the sandbox helper the way quitting does, and one warning names the plugin. When you are opening a reel, TayPE starts a new helper and finishes opening it. Otherwise the plugin rows show that the sandbox is down until you choose **Tools > Restart Plugin Sandbox**. The session log (**Tools → Session Log**) names the plugin and what TayPE was doing.
 

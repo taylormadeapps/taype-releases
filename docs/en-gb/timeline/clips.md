@@ -40,6 +40,12 @@ With playback stopped, moving a clip, trimming an edge, or adjusting a fade keep
 
 Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled. If a new MIDI clip's edge overlaps a neighbouring clip by less than 1 ms, it is moved onto that clip's edge, so the neighbour and its fades stay as they were.
 
+On a track whose instruments include a generator, such as a pattern player
+or arpeggiator, a new blank MIDI clip is silent like any other until you
+rerender it (**H**). The rerender runs every instrument on the track over the
+clip's length, so the generator's pattern fills the clip even with no notes
+in it.
+
 ## Splitting
 
 Split selected clips at the playhead with `\`. If no clips are selected, `\` splits every clip on the selected tracks at the playhead; with no track selected either, it splits every track that is not archived. Those pieces stay unselected. The split-all commands also leave archived tracks alone. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
@@ -100,7 +106,7 @@ clip edit. In multi-selection the processing actions are explicitly named
 
 After a material MIDI edit, **Restore OG MIDI** returns the clip to its
 immutable recorded, imported, joined, or first-authored MIDI performance. TayPE
-renders that performance through the track's current instrument; it does not
+renders that performance through the track's current instruments; it does not
 restore an old plug-in preset. Timeline position, audible window, duration,
 fades, stretch and clip pitch remain intact. The operation is undoable, and
 TayPE asks first if restoring would remove ARA2-derived edits.

@@ -36,30 +36,60 @@ Important parameters:
 | `hardware_low_cut_hz` / `hardware_high_cut_hz` | Hardware Insert filters |
 | `hardware_filter_position` | Whether hardware filters sit before send or after return |
 
+Instruments go at the front of the rack: an instrument can go in any slot with
+only instruments or empty slots before it, effects and Hardware Inserts go
+after the last instrument, and MIDI Out goes only in slot 0 of a track with
+no instrument. A load that would break this is refused, for example
+`"Instruments go before any effect in the insert rack."`, and so is a load
+into a slot whose plug-in is still loading.
+
 ### `remove_insert`
 
 Unload an insert slot.
 
 ### `bypass_insert`
 
-Bypass an insert while keeping latency-aligned dry audio.
+Bypass an insert while keeping latency-aligned dry audio. A bypassed
+instrument adds no audio and passes the MIDI it receives on unchanged.
 
 ### `set_insert_wet_dry_mix`
 
-Set the wet/dry blend for an insert. `0.0` is dry, `1.0` is wet. This can be changed while playing and TayPE ramps the change.
+Set the wet/dry blend of an effect or Hardware Insert, or the trim and MIDI
+from of an instrument. Send at least one of `wet_dry_mix`,
+`instrument_trim_db` and `midi_from`. All three can be changed while
+playing: TayPE ramps wet/dry and trim changes, and a MIDI from change ends
+the notes the instrument was playing from its old source.
+
+`wet_dry_mix` `0.0` is dry and `1.0` is wet. `instrument_trim_db` is the
+instrument's level in the mix of the track's instruments, from -144 to
++12 dB; a value outside that is clamped, and the reply gives the stored
+value. `midi_from` is `previous_plugin` (the default: the MIDI as the plug-in
+before it passes it on) or `track_input` (the MIDI as it came into the
+track).
+
+Each field is refused on a slot that does not have it: instruments have no
+wet/dry, since their level is the trim; MIDI Out has none of the three; and
+only instruments have a trim and MIDI from. TayPE checks every field before
+changing anything, so a call with one refused field changes nothing. A trim
+is also refused while a MIDI clip render is using the instrument. A disabled
+instrument stores the values and uses them when it is enabled again.
 
 Required parameters:
 
 | Param | Description |
 |---|---|
 | `track_id` | Target track |
-| `wet_dry_mix` | Blend from `0.0` to `1.0` |
 
 Optional parameters:
 
 | Param | Description |
 |---|---|
 | `slot` | Insert slot index, 0-7 |
+| `wet_dry_mix` | Blend from `0.0` to `1.0`. Effects and Hardware Inserts |
+| `instrument_trim_db` | Trim in dB, -144 to +12. Instruments |
+| `midi_from` | `previous_plugin` or `track_input`. Instruments |
+
+Example: `{ "track_id": "...", "slot": 1, "instrument_trim_db": -6.0, "midi_from": "track_input" }`
 
 ### `disable_insert` / `enable_insert`
 
@@ -70,14 +100,21 @@ capture remain protected.
 
 ### `get_insert_info`
 
-Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`). A MIDI Out also reports its plug-in destination fields, as `set_insert_midi_output` returns them, and `plugin_destination_held_notes`: the notes it has sent that plug-in and not yet released. Any plug-in reports `has_midi_input`, `true` when it takes MIDI of its own.
+Read one insert slot's assignment, bypass, enabled state, latency, editor state, hardware settings, MIDI Out settings, and sidechain information. MIDI Out reports the Audio Return ID/name, whether it is assigned and currently available, `feedback_protection` (`off`, `playing_synth`, or `playing_controller`), plus `midi_render_mode` (`realtime_audio_return_capture` or `offline_audio_passthrough`). A MIDI Out also reports its plug-in destination fields, as `set_insert_midi_output` returns them, and `plugin_destination_held_notes`: the notes it has sent that plug-in and not yet released. Any plug-in reports `has_midi_input`, `true` when it takes MIDI of its own, and `has_midi_output`, `true` when it sends MIDI of its own, such as a pattern generator. `is_instrument` is `true` for an instrument slot. An instrument also reports its `instrument_trim_db` and `midi_from`.
 The `editor_open` field becomes false when the window closes, One-window mode
 replaces it, or the plug-in sandbox exits.
 `stopped_until_reload` is true while the plug-in is stopped until it is
 reloaded or removed, and `stop_cause` says why: `buffer_size_change` (a buffer
 size or sample rate change could not be applied to it) or `sidechain_change` (a
-sidechain change could not be undone). Otherwise `stop_cause` is empty. MIDI
+sidechain change could not be undone) or `midi_render_restore_failed` (an
+instrument could not return to live playing after a MIDI clip render; until it
+is reloaded, every instrument on its track is silent). Otherwise `stop_cause`
+is empty. MIDI
 Out and Hardware Inserts always report `false`.
+`insert_loading` is true while a plug-in is still loading into the slot,
+including one replacing a MIDI Out or Hardware Insert, which the other
+fields still describe until it lands. Edits that would change that slot
+are refused until the load finishes.
 
 Optional parameters:
 
@@ -108,6 +145,12 @@ Optional parameters:
 | `slot` | Insert slot index, 0-7 |
 
 Safe during playback.
+
+The value reaches the plug-in the next time it processes. From then on TayPE
+treats the plug-in as changed, as it does after an edit in the plug-in's own
+window: `get_insert_info` reports `state_dirty: true`, the next timed save
+stores it, and Restart Plugin Sandbox keeps it. A value the plug-in has not
+processed yet is not saved and does not survive a restart.
 
 ### `list_insert_presets` / `load_insert_preset`
 

@@ -53,6 +53,17 @@ auxiliary outputs stop being discarded; unassigned outputs remain silent. If a
 saved output is unavailable, TayPE keeps the assignment and reports it instead
 of substituting another output.
 
+On a track with several instruments, the first instrument in the rack that
+has auxiliary outputs offers them; the others add only their main output to
+their own track. Bypassing that instrument keeps its outputs where they are:
+the tracks they feed fade out with it and come back when you turn Bypass
+off. Disabling it hands the outputs to the next instrument that has them.
+When a buffer size increase stops the source track's first instrument, every
+instrument on that track is silent and its routed outputs read
+**Unavailable** with the reason "Reload the track's first instrument: it
+stopped when the buffer size changed". It clears when you reload that
+instrument or set the buffer size back.
+
 ## Selection
 
 Click a header to select the track. Cmd-click toggles tracks into the visible selection. Shift-click extends a range. The first selected track remains the primary track for the docked strip and focused hardware control.
