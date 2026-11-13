@@ -61,8 +61,8 @@ const locales = {
         fontMode: "pixel",
         quoteOpen: "\u201c",
         quoteClose: "\u201d",
-        title: "TayPE - Old Skool, New Tricks",
-        metaDescription: "TayPE is a multitrack DAW built for musicians who want to finish records, not fight software. WCAG 2.2 AA-target. MCP native - Claude or Codex (incl. voice) is the primary non-visual interface. macOS.",
+        title: "TayPE – Recording and Mixing DAW for Mac",
+        metaDescription: "Make the record. TayPE is a multitrack DAW for Mac with the soul of a tape machine. Fewer modes, fewer menus, more music.",
         ogTitle: "TayPE - Make the Record",
         ogDescription: "Craft First, Accessible by Design",
         text: {
