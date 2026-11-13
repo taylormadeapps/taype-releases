@@ -22,6 +22,10 @@ With startup checks on, **Check for Updates** remains available in About TayPE.
 To restore the Welcome button and the prompt, turn off **Check for updates on
 startup** in **Preferences > General**.
 
+When TayPE checks for an update, it sends its build and licence tier to the
+update service. The service records those values with the check time and
+connecting IP address. See the [TayPE privacy notice](https://taype.ruminantaudioworks.com/privacy/).
+
 ## The Two Views
 
 TayPE has two main work views:

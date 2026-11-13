@@ -335,6 +335,19 @@ footer {
     </tbody>
 </table>
 
+<h2>Software update checks</h2>
+<p>
+    When you check for updates or enable startup checks, TayPE sends its build
+    and licence tier to our Cloudflare update service. For accepted checks,
+    we store the connecting IP address, build, licence tier and check time to
+    count checks and understand which versions are in use. The update check
+    sends neither your licence key nor your email address.
+</p>
+<p>
+    Update check records have no automatic expiry. You can turn off startup
+    checks in <strong>Preferences &gt; General</strong>.
+</p>
+
 <h2>What crash reports contain</h2>
 <p>
     Crash reports include your TayPE version, macOS version, CPU
@@ -406,6 +419,11 @@ footer {
             <td>Cloudflare</td>
             <td>IP address (transient, in server logs)</td>
             <td>Worker hosting for crash report relay and licence signing</td>
+        </tr>
+        <tr>
+            <td>Cloudflare</td>
+            <td>Connecting IP address, app build, licence tier and update check time</td>
+            <td>Software update checks and reporting</td>
         </tr>
         <tr>
             <td>GitHub</td>
