@@ -338,14 +338,18 @@ footer {
 <h2>Software update checks</h2>
 <p>
     When you check for updates or enable startup checks, TayPE sends its build
-    and licence tier to our Cloudflare update service. For accepted checks,
-    we store the connecting IP address, build, licence tier and check time to
-    count checks and understand which versions are in use. The update check
-    sends neither your licence key nor your email address.
+    and licence tier to our Cloudflare update service. We use the connecting IP
+    address to make a temporary token so we can limit abuse and count repeat
+    checks within a UTC day. Daily totals by build and licence tier help us
+    understand which versions are in use. The update check sends neither your
+    licence key nor your email address.
 </p>
 <p>
-    Update check records have no automatic expiry. You can turn off startup
-    checks in <strong>Preferences &gt; General</strong>.
+    We remove tokens from the active database at the end of each UTC day.
+    Cloudflare recovery copies can retain deleted records for up to 30 days.
+    We keep daily check counts without addresses, tokens or exact check times.
+    Startup checks are off by default and you can turn them off in
+    <strong>Preferences &gt; General</strong>.
 </p>
 
 <h2>What crash reports contain</h2>
@@ -370,7 +374,7 @@ footer {
     <li>We do not load affiliate tracking on an ordinary visit; it requires your explicit choice, unless the affiliate cookie from an earlier choice is still present</li>
     <li><!-- vv:video.policy.ordinary -->Analytics, affiliate tracking and the optional Vintage Vocoder YouTube player each load according to the choices described in this policy.<!-- /vv --></li>
     <li>We do not sell, rent, or share your personal data with third parties for their marketing</li>
-    <li>TayPE does not phone home, check licences online, or send any data without your explicit action</li>
+    <li>TayPE keeps licence verification offline. It checks for updates when you ask it to or when you have enabled startup checks.</li>
 </ul>
 
 <h2>Website analytics</h2>
@@ -422,7 +426,7 @@ footer {
         </tr>
         <tr>
             <td>Cloudflare</td>
-            <td>Connecting IP address, app build, licence tier and update check time</td>
+            <td>Connecting IP address, temporary IP token, app build and licence tier</td>
             <td>Software update checks and reporting</td>
         </tr>
         <tr>
