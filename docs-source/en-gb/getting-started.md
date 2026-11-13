@@ -1,5 +1,9 @@
 # Getting Started
 
+The [TayPE download section](https://taype.ruminantaudioworks.com/#download)
+shows the current macOS version beneath **Download now**. Open **Release notes**
+to see what changed in that version.
+
 TayPE opens into a working reel with a timeline, a transport, a selected track, and a channel strip. The aim is simple: get audio or MIDI onto tracks, shape it, and keep committing useful takes.
 
 During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label in full (for example, `v1.2.0 · beta 1`), and leaves the front when you switch to another app.

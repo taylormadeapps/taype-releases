@@ -86,7 +86,7 @@ const locales = {
             "tone-intro-2": "No plugins needed. The console emulation runs directly in the audio engine - shared weight tensors, per-channel state, zero added latency. Same philosophy as hardware-accelerated DSP, built into the mixer, not bolted on.",
             "tone-kicker": "Craft first. Tone at the core.",
             "philosophy-heading": "Make the Record",
-            "philosophy-copy-1": "Taylor's Performance Environment exists to help you make the record, not drown in endless options. A multitrack DAW with the soul of a tape machine.\nBuilt around the flow and feel of a great mixing console.\nFewer modes, fewer menus, more music.",
+            "philosophy-copy-1": "Taylor's Performance Environment exists to help you make the record, not drown in endless options. A fully featured multitrack DAW with the soul of a tape machine.\nBuilt around the flow and feel of a great mixing console.\nFewer modes, fewer menus, more music.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "The Mixing Console",
             "screenshots-arranger-heading": "The Arranger",
@@ -145,6 +145,7 @@ const locales = {
             "download-macos-status": "Available now",
             "download-macos-title": "macOS",
             "download-apply": "Download now",
+            "download-release-notes": "Release notes",
             "download-linux-status": "Interest list open",
             "download-linux-title": "Linux",
             "download-linux-copy": "Register interest for Linux.",
@@ -306,7 +307,7 @@ const locales = {
             "tone-intro-2": "プラグイン不要。コンソールエミュレーションはオーディオエンジン内で直接動作 - 共有重みテンソル、チャンネルごとの状態、追加レイテンシーゼロ。ハードウェアアクセラレーションDSPと同じ思想を、ミキサーに後付けではなく組み込んでいる。",
             "tone-kicker": "クラフト優先。音色は中核に。",
             "philosophy-heading": "レコードを作れ",
-            "philosophy-copy-1": "Taylor's Performance Environment は、無限の選択肢に溺れるためではなく、レコードを作るためにあります。テープマシンの魂を持ったマルチトラック DAW。\n優れたミキシングコンソールの流れと感触を中心に設計されています。\n少ないモード、少ないメニュー、もっと音楽を。",
+            "philosophy-copy-1": "Taylor's Performance Environment は、無限の選択肢に溺れるためではなく、レコードを作るためにあります。テープマシンの魂を持った、フル機能のマルチトラック DAW。\n優れたミキシングコンソールの流れと感触を中心に設計されています。\n少ないモード、少ないメニュー、もっと音楽を。",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "ミキシングコンソール",
             "screenshots-arranger-heading": "The Arranger",
@@ -363,6 +364,7 @@ const locales = {
             "download-heading": "さあ始めよう",
             "download-copy": "初日から TayPE のすべての機能を試せます。90 日後もすべての機能を利用でき、ときどきライセンス購入のリマインダーが表示されます。",
             "download-apply": "今すぐダウンロード",
+            "download-release-notes": "リリースノート",
             "community-heading": "コミュニティとサポート",
             "saying-heading": "ユーザーの声",
             "community-card-1-title": "ナレッジベース",
@@ -509,7 +511,7 @@ const locales = {
             "tone-intro-2": "Aucun plugin nécessaire. L’émulation de console tourne directement dans le moteur audio - tenseurs de poids partagés, état par canal, zéro latence ajoutée. Même philosophie que le DSP accéléré matériellement, intégré à la console, pas posé dessus.",
             "tone-kicker": "Le geste d'abord. Le son au centre.",
             "philosophy-heading": "Fais le disque",
-            "philosophy-copy-1": "Taylor's Performance Environment existe pour vous aider à faire le disque, pas à vous noyer dans des options sans fin. Une DAW multipiste avec l'âme d'un magnétophone.\nConçue autour du flux et de la sensation d'une grande console de mixage.\nMoins de modes, moins de menus, plus de musique.",
+            "philosophy-copy-1": "Taylor's Performance Environment existe pour vous aider à faire le disque, pas à vous noyer dans des options sans fin. Une DAW multipiste complète avec l'âme d'un magnétophone.\nConçue autour du flux et de la sensation d'une grande console de mixage.\nMoins de modes, moins de menus, plus de musique.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La console de mixage",
             "screenshots-arranger-heading": "The Arranger",
@@ -566,6 +568,7 @@ const locales = {
             "download-heading": "C'est parti",
             "download-copy": "Essayez toutes les fonctionnalités de TayPE dès le premier jour. Après 90 jours, TayPE reste entièrement fonctionnel et vous rappelle de temps en temps d’acheter une licence.",
             "download-apply": "Télécharger maintenant",
+            "download-release-notes": "Notes de version",
             "community-heading": "Communauté et support",
             "saying-heading": "Témoignages",
             "community-card-1-title": "Base de connaissances",
@@ -712,7 +715,7 @@ const locales = {
             "tone-intro-2": "Keine Plugins nötig. Die Konsolen-Emulation läuft direkt in der Audio-Engine - gemeinsame Gewichts-Tensoren, Zustand pro Kanal, keine zusätzliche Latenz. Gleiche Philosophie wie hardware-beschleunigte DSP, in den Mixer eingebaut, nicht aufgesetzt.",
             "tone-kicker": "Handwerk zuerst. Klang im Kern.",
             "philosophy-heading": "Mach die Platte",
-            "philosophy-copy-1": "Taylor's Performance Environment ist dafür da, dir beim Machen der Platte zu helfen, nicht beim Ertrinken in endlosen Optionen. Eine Multitrack-DAW mit der Seele einer Bandmaschine.\nGebaut um den Ablauf und das Gefühl eines großartigen Mischpults.\nWeniger Modi, weniger Menüs, mehr Musik.",
+            "philosophy-copy-1": "Taylor's Performance Environment ist dafür da, dir beim Machen der Platte zu helfen, nicht beim Ertrinken in endlosen Optionen. Eine voll ausgestattete Multitrack-DAW mit der Seele einer Bandmaschine.\nGebaut um den Ablauf und das Gefühl eines großartigen Mischpults.\nWeniger Modi, weniger Menüs, mehr Musik.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Die Mischkonsole",
             "screenshots-arranger-heading": "The Arranger",
@@ -769,6 +772,7 @@ const locales = {
             "download-heading": "Los geht's",
             "download-copy": "Teste TayPE vom ersten Tag an mit allen Funktionen. Nach 90 Tagen bleibt TayPE voll funktionsfähig und erinnert dich gelegentlich daran, eine Lizenz zu kaufen.",
             "download-apply": "Jetzt herunterladen",
+            "download-release-notes": "Versionshinweise",
             "community-heading": "Community & Support",
             "saying-heading": "Stimmen zu TayPE",
             "community-card-1-title": "Wissensbasis",
@@ -915,7 +919,7 @@ const locales = {
             "tone-intro-2": "Sin plugins. La emulación de consola corre directamente en el motor de audio - tensores de pesos compartidos, estado por canal, latencia adicional cero. Misma filosofía que el DSP acelerado por hardware, integrado en el mezclador, no añadido por encima.",
             "tone-kicker": "Primero el oficio. El tono en el centro.",
             "philosophy-heading": "Haz el disco",
-            "philosophy-copy-1": "Taylor's Performance Environment existe para ayudarte a hacer el disco, no a ahogarte en opciones infinitas. Una DAW multipista con alma de grabadora de cinta.\nConstruida alrededor del flujo y la sensación de una gran consola de mezclas.\nMenos modos, menos menús, más música.",
+            "philosophy-copy-1": "Taylor's Performance Environment existe para ayudarte a hacer el disco, no a ahogarte en opciones infinitas. Una DAW multipista con todas las funciones y alma de grabadora de cinta.\nConstruida alrededor del flujo y la sensación de una gran consola de mezclas.\nMenos modos, menos menús, más música.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La consola de mezclas",
             "screenshots-arranger-heading": "The Arranger",
@@ -972,6 +976,7 @@ const locales = {
             "download-heading": "A grabar",
             "download-copy": "Prueba todas las funciones de TayPE desde el primer día. Pasados 90 días, TayPE sigue funcionando con todas sus funciones y te recuerda de vez en cuando que compres una licencia.",
             "download-apply": "Descargar ahora",
+            "download-release-notes": "Notas de la versión",
             "community-heading": "Comunidad y soporte",
             "saying-heading": "Testimonios",
             "community-card-1-title": "Base de conocimiento",
@@ -1118,7 +1123,7 @@ const locales = {
             "tone-intro-2": "Engin viðbót þörf. Konsólhermunin keyrir beint inni í hljóðvélinni - sameiginlegir vægitenoraf, ástand á rás, núllminni töf. Sama hugmynd og vélbúnaðarhraðað DSP, byggt inn í blandarann, ekki sett ofan á.",
             "tone-kicker": "Handverkið fyrst. Hljóðið í kjarnanum.",
             "philosophy-heading": "Gerðu plötuna",
-            "philosophy-copy-1": "Taylor's Performance Environment er til að hjálpa þér að gera plötuna, ekki sökkva í endalausa valkosti. Fjölrása DAW með sál segulbandstækis.\nByggð í kringum flæði og tilfinningu frábærs hljóðblöndunarborðs.\nFærri hamir, færri valmyndir, meiri tónlist.",
+            "philosophy-copy-1": "Taylor's Performance Environment er til að hjálpa þér að gera plötuna, ekki sökkva í endalausa valkosti. Fjölrása DAW með fullri virkni og sál segulbandstækis.\nByggð í kringum flæði og tilfinningu frábærs hljóðblöndunarborðs.\nFærri hamir, færri valmyndir, meiri tónlist.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Mixunarborðið",
             "screenshots-arranger-heading": "The Arranger",
@@ -1175,6 +1180,7 @@ const locales = {
             "download-heading": "Til verks",
             "download-copy": "Prófaðu alla eiginleika TayPE frá fyrsta degi. Eftir 90 daga heldur TayPE fullri virkni og minnir þig öðru hverju á að kaupa leyfi.",
             "download-apply": "Sækja núna",
+            "download-release-notes": "Útgáfuupplýsingar",
             "community-heading": "Samfélag og stuðningur",
             "saying-heading": "Umsagnir",
             "community-card-1-title": "Þekkingargrunnur",
@@ -1321,7 +1327,7 @@ const locales = {
             "tone-intro-2": "Geen plugins nodig. De console-emulatie draait rechtstreeks in de audio-engine - gedeelde gewicht-tensors, status per kanaal, geen extra latency. Zelfde filosofie als hardwareversnelde DSP, ingebouwd in de mixer, niet erop geplakt.",
             "tone-kicker": "Ambacht eerst. Toon in het hart.",
             "philosophy-heading": "Maak het record",
-            "philosophy-copy-1": "Taylor's Performance Environment helpt je de plaat te maken, niet te verdrinken in eindeloze opties. Een multitrack DAW met het hart van een bandapparaat.\nGebouwd rond de flow en het gevoel van een geweldige mengtafel.\nMinder modi, minder menu's, meer muziek.",
+            "philosophy-copy-1": "Taylor's Performance Environment helpt je de plaat te maken, niet te verdrinken in eindeloze opties. Een volwaardige multitrack-DAW met het hart van een bandapparaat.\nGebouwd rond de flow en het gevoel van een geweldige mengtafel.\nMinder modi, minder menu's, meer muziek.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "De mengconsole",
             "screenshots-arranger-heading": "The Arranger",
@@ -1378,6 +1384,7 @@ const locales = {
             "download-heading": "Laten we beginnen",
             "download-copy": "Probeer alle functies van TayPE vanaf dag één. Na 90 dagen blijft TayPE volledig functioneel en krijg je af en toe een herinnering om een licentie te kopen.",
             "download-apply": "Nu downloaden",
+            "download-release-notes": "Releaseopmerkingen",
             "community-heading": "Gemeenschap en ondersteuning",
             "saying-heading": "Ervaringen",
             "community-card-1-title": "Kennisbank",
@@ -1524,7 +1531,7 @@ const locales = {
             "tone-intro-2": "Niente plugin. L’emulazione della console gira direttamente nel motore audio - tensori dei pesi condivisi, stato per canale, zero latenza aggiunta. Stessa filosofia del DSP accelerato in hardware, integrato nel mixer, non posato sopra.",
             "tone-kicker": "Mestiere prima. Tono al centro.",
             "philosophy-heading": "Fai il disco",
-            "philosophy-copy-1": "Taylor's Performance Environment esiste per aiutarti a fare il disco, non per annegare in opzioni infinite. Una DAW multitraccia con l'anima di un registratore.\nCostruita attorno al flusso e alla sensazione di una grande console di mixaggio.\nMeno modalità, meno menu, più musica.",
+            "philosophy-copy-1": "Taylor's Performance Environment esiste per aiutarti a fare il disco, non per annegare in opzioni infinite. Una DAW multitraccia completa con l'anima di un registratore.\nCostruita attorno al flusso e alla sensazione di una grande console di mixaggio.\nMeno modalità, meno menu, più musica.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "La console di missaggio",
             "screenshots-arranger-heading": "The Arranger",
@@ -1581,6 +1588,7 @@ const locales = {
             "download-heading": "Si parte",
             "download-copy": "Prova tutte le funzioni di TayPE fin dal primo giorno. Dopo 90 giorni, TayPE rimane completamente funzionale e ogni tanto ti ricorda di acquistare una licenza.",
             "download-apply": "Scarica ora",
+            "download-release-notes": "Note di rilascio",
             "community-heading": "Comunità e supporto",
             "saying-heading": "Testimonianze",
             "community-card-1-title": "Base di conoscenza",
@@ -1727,7 +1735,7 @@ const locales = {
             "tone-intro-2": "Bez wtyczek. Emulacja konsoli działa bezpośrednio w silniku audio - współdzielone tensory wag, stan na kanał, zero dodanego opóźnienia. Ta sama filozofia, co DSP przyspieszane sprzętowo, wbudowana w mikser, a nie doklejona.",
             "tone-kicker": "Rzemiosło przed wszystkim. Dźwięk w centrum.",
             "philosophy-heading": "Stwórz rekord",
-            "philosophy-copy-1": "Taylor's Performance Environment istnieje, aby pomóc ci zrobić płytę, a nie tonąć w nieskończonych opcjach. Wielościeżkowy DAW z duszą magnetofonu.\nZbudowany wokół płynności i odczuć świetnej konsoli mikserskiej.\nMniej trybów, mniej menu, więcej muzyki.",
+            "philosophy-copy-1": "Taylor's Performance Environment istnieje, aby pomóc ci zrobić płytę, a nie tonąć w nieskończonych opcjach. Pełnoprawny wielościeżkowy DAW z duszą magnetofonu.\nZbudowany wokół płynności i odczuć świetnej konsoli mikserskiej.\nMniej trybów, mniej menu, więcej muzyki.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Konsoleta mikserska",
             "screenshots-arranger-heading": "The Arranger",
@@ -1784,6 +1792,7 @@ const locales = {
             "download-heading": "Zaczynamy",
             "download-copy": "Wypróbuj wszystkie funkcje TayPE od pierwszego dnia. Po 90 dniach TayPE nadal działa w pełni i od czasu do czasu przypomina o zakupie licencji.",
             "download-apply": "Pobierz teraz",
+            "download-release-notes": "Informacje o wydaniu",
             "community-heading": "Społeczność i wsparcie",
             "saying-heading": "Opinie",
             "community-card-1-title": "Baza wiedzy",
@@ -1930,7 +1939,7 @@ const locales = {
             "tone-intro-2": "Без плагінів. Емуляція консолі працює просто всередині аудіодвигуна - спільні тензори ваг, стан на канал, нуль доданої затримки. Та сама філософія, що й апаратно-прискорений DSP, вбудована в мікшер, не приклеєна зверху.",
             "tone-kicker": "Ремесло спочатку. Тон у центрі.",
             "philosophy-heading": "Зробити запис",
-            "philosophy-copy-1": "Taylor's Performance Environment існує, щоб допомогти вам зробити запис, а не потонути в безкінечних опціях. Багатодоріжковий DAW з душею магнітофона.\nПобудований навколо потоку й відчуття чудової мікшерної консолі.\nМенше режимів, менше меню, більше музики.",
+            "philosophy-copy-1": "Taylor's Performance Environment існує, щоб допомогти вам зробити запис, а не потонути в безкінечних опціях. Повнофункціональна багатодоріжкова DAW з душею магнітофона.\nПобудований навколо потоку й відчуття чудової мікшерної консолі.\nМенше режимів, менше меню, більше музики.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Мікшерна консоль",
             "screenshots-arranger-heading": "The Arranger",
@@ -1987,6 +1996,7 @@ const locales = {
             "download-heading": "Поїхали",
             "download-copy": "Спробуйте всі функції TayPE з першого дня. Через 90 днів TayPE і далі працює з усіма функціями й час від часу нагадує придбати ліцензію.",
             "download-apply": "Завантажити зараз",
+            "download-release-notes": "Примітки до випуску",
             "community-heading": "Спільнота та підтримка",
             "saying-heading": "Відгуки",
             "community-card-1-title": "База знань",
@@ -2133,7 +2143,7 @@ const locales = {
             "tone-intro-2": "Δεν χρειάζονται plugins. Η εξομοίωση της κονσόλας τρέχει απευθείας μέσα στη μηχανή ήχου - κοινοί τανυστές βαρών, κατάσταση ανά κανάλι, μηδενική επιπλέον καθυστέρηση. Ίδια φιλοσοφία με το hardware-accelerated DSP, χτισμένη μέσα στον μίκτη, όχι κολλημένη πάνω.",
             "tone-kicker": "Τέχνη πρώτα. Τόνος στο κέντρο.",
             "philosophy-heading": "Κάντε το δίσκο",
-            "philosophy-copy-1": "Το Taylor's Performance Environment υπάρχει για να σας βοηθήσει να φτιάξετε τον δίσκο, όχι να πνιγείτε σε ατελείωτες επιλογές. Ένα πολυτροχικό DAW με την ψυχή μιας ταινιογραφικής μηχανής.\nΧτισμένο γύρω από τη ροή και την αίσθηση μιας σπουδαίας κονσόλας μίξης.\nΛιγότερες λειτουργίες, λιγότερα μενού, περισσότερη μουσική.",
+            "philosophy-copy-1": "Το Taylor's Performance Environment υπάρχει για να σας βοηθήσει να φτιάξετε τον δίσκο, όχι να πνιγείτε σε ατελείωτες επιλογές. Ένα πλήρως εξοπλισμένο πολυτροχικό DAW με την ψυχή μιας ταινιογραφικής μηχανής.\nΧτισμένο γύρω από τη ροή και την αίσθηση μιας σπουδαίας κονσόλας μίξης.\nΛιγότερες λειτουργίες, λιγότερα μενού, περισσότερη μουσική.",
             "screenshots-tape-heading": "The Tape",
             "screenshots-heading": "Η κονσόλα μίξης",
             "screenshots-arranger-heading": "The Arranger",
@@ -2190,6 +2200,7 @@ const locales = {
             "download-heading": "Ξεκινάμε",
             "download-copy": "Δοκίμασε όλες τις λειτουργίες του TayPE από την πρώτη μέρα. Μετά από 90 ημέρες, το TayPE παραμένει πλήρως λειτουργικό και σου υπενθυμίζει πού και πού να αγοράσεις άδεια.",
             "download-apply": "Λήψη τώρα",
+            "download-release-notes": "Σημειώσεις έκδοσης",
             "community-heading": "Κοινότητα & Υποστήριξη",
             "saying-heading": "Μαρτυρίες",
             "community-card-1-title": "Βάση γνώσης",
@@ -2351,7 +2362,7 @@ defineSiteLocale("ar", {
         "tone-intro-2": "لا تحتاج إلى إضافات. تعمل محاكاة الكونسول مباشرة داخل محرك الصوت - أوزان مشتركة، حالة لكل قناة، وبدون زمن تأخير إضافي. الفلسفة نفسها مثل DSP المسرَّع عتاديًا، مدمجة في الميكسر لا ملصقة فوقه.",
         "tone-kicker": "الحرفة أولاً. النبرة في القلب.",
         "philosophy-heading": "اصنع التسجيل",
-        "philosophy-copy-1": "Taylor's Performance Environment موجود ليساعدك على صنع التسجيل، لا الغرق في خيارات لا تنتهي. DAW متعدد المسارات بروح آلة الشريط.\nمبني حول تدفق وإحساس كونسول مزج عظيم.\nأوضاع أقل، قوائم أقل، موسيقى أكثر.",
+        "philosophy-copy-1": "Taylor's Performance Environment موجود ليساعدك على صنع التسجيل، لا الغرق في خيارات لا تنتهي. DAW متعدد المسارات متكامل الميزات بروح آلة الشريط.\nمبني حول تدفق وإحساس كونسول مزج عظيم.\nأوضاع أقل، قوائم أقل، موسيقى أكثر.",
         "screenshots-tape-heading": "الشريط",
         "screenshots-heading": "كونسول المزج",
         "screenshots-arranger-heading": "الموزّع",
@@ -2409,6 +2420,7 @@ defineSiteLocale("ar", {
         "download-macos-status": "متاح الآن",
         "download-macos-title": "macOS",
         "download-apply": "حمّل الآن",
+        "download-release-notes": "ملاحظات الإصدار",
         "download-linux-status": "قائمة الاهتمام مفتوحة",
         "download-linux-title": "Linux",
         "download-linux-copy": "سجّل اهتمامك بإصدار Linux.",
@@ -2513,7 +2525,7 @@ defineSiteLocale("zh-cn", {
         "tone-intro-2": "不需要插件。控制台模拟直接运行在音频引擎里 - 共享权重张量、逐通道状态、零附加延迟。和硬件加速 DSP 同一套理念：它被做进了混音器，而不是事后贴上去。",
         "tone-kicker": "先做作品。音色在核心。",
         "philosophy-heading": "把唱片做完",
-        "philosophy-copy-1": "Taylor's Performance Environment 存在的目的，是帮你把唱片做完，而不是淹没在无穷选项里。一个有磁带机灵魂的多轨 DAW。\n围绕优秀调音台的流程和手感构建。\n更少模式，更少菜单，更多音乐。",
+        "philosophy-copy-1": "Taylor's Performance Environment 存在的目的，是帮你把唱片做完，而不是淹没在无穷选项里。一个功能齐全、拥有磁带机灵魂的多轨 DAW。\n围绕优秀调音台的流程和手感构建。\n更少模式，更少菜单，更多音乐。",
         "screenshots-tape-heading": "磁带机",
         "screenshots-heading": "混音控制台",
         "screenshots-arranger-heading": "编排器",
@@ -2571,6 +2583,7 @@ defineSiteLocale("zh-cn", {
         "download-macos-status": "现已可用",
         "download-macos-title": "macOS",
         "download-apply": "立即下载",
+        "download-release-notes": "发行说明",
         "download-linux-status": "兴趣名单已开放",
         "download-linux-title": "Linux",
         "download-linux-copy": "登记对 Linux 版的兴趣。",
@@ -2675,7 +2688,7 @@ defineSiteLocale("ko-kr", {
         "tone-intro-2": "플러그인이 필요 없습니다. 콘솔 에뮬레이션은 오디오 엔진 안에서 직접 동작합니다 - 공유 weight tensor, 채널별 상태, 추가 레이턴시 0. 하드웨어 가속 DSP와 같은 철학을 믹서에 붙인 것이 아니라 믹서 안에 넣었습니다.",
         "tone-kicker": "작업이 먼저. 톤은 중심에.",
         "philosophy-heading": "음반을 완성하세요",
-        "philosophy-copy-1": "Taylor's Performance Environment는 끝없는 선택지에 빠지는 대신 음반을 만들도록 돕기 위해 존재합니다. 테이프 머신의 영혼을 가진 멀티트랙 DAW.\n훌륭한 믹싱 콘솔의 흐름과 감각을 중심으로 만들었습니다.\n모드는 줄이고, 메뉴는 줄이고, 음악은 더 많이.",
+        "philosophy-copy-1": "Taylor's Performance Environment는 끝없는 선택지에 빠지는 대신 음반을 만들도록 돕기 위해 존재합니다. 테이프 머신의 영혼을 지닌, 모든 기능을 갖춘 멀티트랙 DAW.\n훌륭한 믹싱 콘솔의 흐름과 감각을 중심으로 만들었습니다.\n모드는 줄이고, 메뉴는 줄이고, 음악은 더 많이.",
         "screenshots-tape-heading": "테이프",
         "screenshots-heading": "믹싱 콘솔",
         "screenshots-arranger-heading": "어레인저",
@@ -2733,6 +2746,7 @@ defineSiteLocale("ko-kr", {
         "download-macos-status": "지금 이용 가능",
         "download-macos-title": "macOS",
         "download-apply": "지금 다운로드",
+        "download-release-notes": "릴리스 노트",
         "download-linux-status": "관심 목록 접수 중",
         "download-linux-title": "Linux",
         "download-linux-copy": "Linux 버전에 관심을 등록하세요.",
@@ -3241,6 +3255,24 @@ function linkCompanyReferences() {
     });
 }
 
+function updateDownloadLinks() {
+    const installer = document.getElementById("download-apply");
+    if (installer) installer.href = DOWNLOAD_URL;
+
+    const release = new URL(DOWNLOAD_URL);
+    const match = release.pathname.match(/^(.*\/releases)\/download\/(v(\d+\.\d+\.\d+))\/Taype-\3\.pkg$/);
+    if (!match) return;
+
+    const version = document.getElementById("download-version");
+    if (version) {
+        version.textContent = match[2];
+        version.hidden = false;
+    }
+
+    const notes = document.getElementById("download-release-notes");
+    if (notes) notes.href = `${release.origin}${match[1]}/tag/${match[2]}`;
+}
+
 function applyLocale(localeKey) {
     currentLocale = locales[localeKey] ? localeKey : "en-gb";
     currentLocaleData = locales[currentLocale];
@@ -3288,8 +3320,7 @@ function applyLocale(localeKey) {
     const navHome = document.getElementById("nav-home");
     if (navHome) navHome.setAttribute("href", getSitePath(currentLocale));
 
-    const downloadApply = document.getElementById("download-apply");
-    if (downloadApply) downloadApply.setAttribute("href", DOWNLOAD_URL);
+    updateDownloadLinks();
 
     document.querySelectorAll("[data-platform-interest-link]").forEach((link) => {
         link.setAttribute("href", PLATFORM_INTEREST_URL);

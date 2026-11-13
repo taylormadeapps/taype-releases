@@ -1015,6 +1015,22 @@ dialog#screenshot-zoom img {
     margin: 1rem auto 1.25rem;
 }
 
+.download-release {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.75rem;
+    margin: 0 auto 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.download-release a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
 .download-category {
     color: var(--text);
     font-size: clamp(0.8rem, 1.5vw, 1rem);
@@ -1254,7 +1270,7 @@ footer {
         <h2 id="philosophy-heading">Make the Record</h2>
         <p id="philosophy-copy-1">
             Taylor's Performance Environment exists to help you make the record,
-            not drown in endless options. A multitrack DAW with the soul of a tape machine.<br>
+            not drown in endless options. A fully featured multitrack DAW with the soul of a tape machine.<br>
             Built around the flow and feel of a great mixing console.<br>
             Fewer modes, fewer menus, more music.
         </p>
@@ -1415,6 +1431,10 @@ footer {
             Download now
         </a>
     </div>
+    <p class="download-release">
+        <bdi id="download-version" hidden></bdi>
+        <a id="download-release-notes" href="https://github.com/taylormadeapps/taype-releases/releases/latest">Release notes</a>
+    </p>
     <p id="hero-descriptor" class="download-category">Multitrack DAW for macOS</p>
     <p id="hero-platform" class="download-platform">macOS Monterey+ &middot; Apple Silicon Native + Intel &middot; VST3 host</p>
 

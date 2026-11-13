@@ -8,6 +8,10 @@ TayPE is a multitrack digital audio workstation for macOS built for musicians wh
 
 Grab the latest release from the [Releases page](https://github.com/taylormadeapps/taype-releases/releases).
 
+The website takes its displayed version and the matching **Release notes** link
+from the installer URL in `assets/site.js`. The existing release procedure
+updates that URL and the static installer links together.
+
 **Requirements:** macOS 12+ (Monterey or later). Apple Silicon native with Intel support. VST3 plugin hosting.
 
 TayPE is fully functional for a 90-day demo. After that, audio export requires a licence; saving sessions, recording and editing are never blocked. Use TayPE alongside your existing DAW, or make the whole record here.
