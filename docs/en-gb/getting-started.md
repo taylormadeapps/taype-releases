@@ -6,6 +6,22 @@ During launch, the splash screen stays in front of TayPE while startup finishes,
 
 When TayPE finds new or changed plug-ins, the splash screen scans them first, with a progress bar and the name of the plug-in it is scanning. A scan has no time limit: some plug-ins, such as those that check an iLok licence, take a while the first time. Once one plug-in has been scanning for 30 seconds, a **Skip Plug-in** button appears beside its name. Skipping it lets the scan carry on; **Tools > Plugin Manager** lists that plug-in as **Needs Attention**, and you can still insert it. Its first load finishes the job: its slot and the Plugin Manager then show its real name, and the Plugin Manager lists it as **Validated**.
 
+On the Welcome card, choose **Let's Roll** or click the close icon at the top
+left to continue with the current reel.
+
+## Checking for updates
+
+Choose **Check for Updates** on Welcome or in **About TayPE**. If startup
+checks are off, the prompt opens with **Check for updates on startup** selected.
+Clear it to check just this once. **Don’t ask about startup again** then appears
+unchecked. Select it if you want future manual checks to skip this prompt. Click
+**Check for Updates** to run the check and save your choice. The close icon and
+Escape dismiss the prompt without saving your choice.
+
+With startup checks on, **Check for Updates** remains available in About TayPE.
+To restore the Welcome button and the prompt, turn off **Check for updates on
+startup** in **Preferences > General**.
+
 ## The Two Views
 
 TayPE has two main work views:

@@ -19,7 +19,7 @@ If you really want to use TayPE but can’t afford our prices, drop me a line at
 
 ## Trustware Demo
 
-TayPE is fully functional from its first launch. The licensing window shows how many days are left in the 90-day evaluation and can be closed immediately during that period. After 90 days, the reminder shown when you launch TayPE or open another reel has a ten-second dismissal countdown. Audio export remains available.
+TayPE stays fully functional after 90 days. You can still open, edit and save your sessions, and export your mixes. During the 90-day evaluation, the licensing window shows how many days are left and can be closed immediately. After 90 days, the reminder shown when you launch TayPE or open another reel has a ten-second dismissal countdown.
 
 Stock plug-ins in other DAWs share TayPE's 90-day evaluation. After it ends, their editors display a dismissible **Buy TayPE** banner when opened. The controls remain usable.
 
