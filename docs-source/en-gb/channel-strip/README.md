@@ -20,8 +20,9 @@ Empty search browses your plug-in
 folders in the insert picker while the Back/path strip stays fixed.
 Typing in Search clears the Stock/Effects/Instruments type filter and searches
 all plug-in types allowed in that slot; click a type button to narrow the
-current results again. Instrument results never appear in track slots 2-8,
-ordinary buses, or the Listen Bus.
+current results again. Instrument results never appear in a slot after an effect,
+on ordinary buses, or on the Listen Bus, and effect results never appear in a
+slot before the last instrument.
 In search results, Shift-click or Command-click enters multi-select mode for
 audio-effect and hardware-insert rows; the footer shows what will fit and
 **Add** loads as many selected rows as fit from the opened slot onward.

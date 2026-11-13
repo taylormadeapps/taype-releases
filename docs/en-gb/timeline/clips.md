@@ -40,6 +40,12 @@ With playback stopped, moving a clip, trimming an edge, or adjusting a fade keep
 
 Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled. If a new MIDI clip's edge overlaps a neighbouring clip by less than 1 ms, it is moved onto that clip's edge, so the neighbour and its fades stay as they were.
 
+On a track whose instruments include a generator, such as a pattern player
+or arpeggiator, a new blank MIDI clip is silent like any other until you
+rerender it (**H**). The rerender runs every instrument on the track over the
+clip's length, so the generator's pattern fills the clip even with no notes
+in it.
+
 ## Splitting
 
 Split selected clips at the playhead with `\`. If no clips are selected, `\` splits every clip on the selected tracks at the playhead; with no track selected either, it splits every track that is not archived. Those pieces stay unselected. The split-all commands also leave archived tracks alone. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
@@ -100,7 +106,7 @@ clip edit. In multi-selection the processing actions are explicitly named
 
 After a material MIDI edit, **Restore OG MIDI** returns the clip to its
 immutable recorded, imported, joined, or first-authored MIDI performance. TayPE
-renders that performance through the track's current instrument; it does not
+renders that performance through the track's current instruments; it does not
 restore an old plug-in preset. Timeline position, audible window, duration,
 fades, stretch and clip pitch remain intact. The operation is undoable, and
 TayPE asks first if restoring would remove ARA2-derived edits.
@@ -157,9 +163,12 @@ Backspace follows the arranger's mute behaviour for selected notes: if the
 selection contains any audible note, it mutes the whole selection; if every
 selected note is already muted, it unmutes them all. Muted notes stay visible,
 selectable, and editable with a dimmed treatment, but do not audition, play, or
-render. The forward Delete key permanently removes selected notes. Mute state
-survives Commit and reopening the editor, and is preserved by copy, paste, and
-duplicate.
+render. The forward Delete key permanently removes selected notes. Both keys
+follow your keybinding profile: if it moves Delete Clip or Toggle Clip Disable
+to other keys, those keys delete and mute notes here instead. With no
+notes selected, Delete and Backspace do nothing in the piano roll and never
+reach your arranger clips. Mute state survives Commit and reopening the editor, and
+is preserved by copy, paste, and duplicate.
 When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
@@ -179,7 +188,8 @@ is not saved with the reel.
 Click a controller point to select it, click empty lane space to add a point,
 drag empty lane space to marquee-select points by time, and drag any selected
 point to move the whole selected set.
-Cmd+A selects all points in the current controller, Delete or Backspace removes
+Cmd+A selects all points in the current controller, Delete or Backspace (or
+your profile's keys for Delete Clip and Toggle Clip Disable) removes
 the selection, and Escape clears it. Double-click a point to delete it.
 Cmd-drag draws controller values as a
 freehand pencil stroke, following each change in pointer direction. With
@@ -327,7 +337,7 @@ and is not used for restoration. Equal actual/store paths remain visible;
 
 ## Gain, Fades, and Crossfades
 
-Clip gain adjusts the clip before the channel strip. With clips selected, **Fade** toggles their edges at the default fade length, which starts at 2 ms and can be changed in **Preferences > General**. With no clip selection, point at the first half of a clip and press the Fade shortcut to set its fade-in from the clip start to the exact pointer position; point at the second half to set its fade-out from the pointer to the clip end. The other edge stays unchanged, and existing crossfade-bound edges are protected. Overlapping compatible clips can create crossfades where their edges meet. Hold **Shift** while moving or edge-resizing a clip, or **Option+Shift** while drag-copying, to magnetically attract it to neighbouring clip edges for a clean butt. For trim or stretch resize, the left edge sticks to the previous clip end and the right edge to the next clip start. Continue past the magnetic point to place through the edge without creating an automatic crossfade. Ordinary tracks use hard-cut placement. Comp take tracks do not auto-crossfade; they retain their default-length splice-edge fades and sibling-take resolution instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into a sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment; sibling material that was already muted remains muted and does not block the edit. Dub takes are excluded from this automatic comp muting and remain structurally untouched until you mute or edit them explicitly. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
+Clip gain adjusts the clip from −144 dB to +12 dB before the channel strip. The bottom fifth of the gain line’s travel covers −36 dB down to −144 dB. The gain handle sits over the clip title when they overlap. With clips selected, **Fade** toggles their edges at the default fade length, which starts at 2 ms and can be changed in **Preferences > General**. With no clip selection, point at the first half of a clip and press the Fade shortcut to set its fade-in from the clip start to the exact pointer position; point at the second half to set its fade-out from the pointer to the clip end. The other edge stays unchanged, and existing crossfade-bound edges are protected. Overlapping compatible clips can create crossfades where their edges meet. Hold **Shift** while moving or edge-resizing a clip, or **Option+Shift** while drag-copying, to magnetically attract it to neighbouring clip edges for a clean butt. For trim or stretch resize, the left edge sticks to the previous clip end and the right edge to the next clip start. Continue past the magnetic point to place through the edge without creating an automatic crossfade. Ordinary tracks use hard-cut placement. Comp take tracks do not auto-crossfade; they retain their default-length splice-edge fades and sibling-take resolution instead. Moving, copying, dropping, importing, or edge-resizing an enabled comp take into a sibling take cuts the sibling at the edited clip boundary and mutes only the newly covered segment; sibling material that was already muted remains muted and does not block the edit. Dub takes are excluded from this automatic comp muting and remain structurally untouched until you mute or edit them explicitly. Dropping a clip wholly inside another clip cuts/splits the existing clip without creating a crossfade, even when one boundary lines up; a dropped clip that fully covers another replaces it.
 
 ## Clipboard
 

@@ -31,6 +31,14 @@ channel, availability, and a reason when unavailable. `instrument_outputs`
 lists the same metadata for every declared auxiliary output, including outputs
 that cannot currently be routed.
 
+On a track with several instruments, the outputs are those of the first
+instrument in the rack that has auxiliary outputs. While a buffer size
+increase has stopped the source track's first instrument, every output that
+could otherwise carry audio reports `available: false` with the reason "The
+track's first instrument stopped when the buffer size changed, which silences
+every instrument on the track; reload the first instrument". It clears once
+that instrument is reloaded or the buffer size is set back.
+
 ### `remove_track`
 
 Remove a track when the edit is allowed. Use archive when you want to keep the material but hide it from the current working set.

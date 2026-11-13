@@ -40,6 +40,12 @@ With playback stopped, moving a clip, trimming an edge, or adjusting a fade keep
 
 Cmd-drag across empty space on one track to create a silent clip for the dragged duration. On a VSTi track the clip includes an empty MIDI sidecar, ready for the MIDI editor. On other tracks it is a plain silent-audio clip. Double-clicking empty space on a VSTi track still creates a one-bar MIDI clip, or fills the empty gap around the click when the loop is enabled. If a new MIDI clip's edge overlaps a neighbouring clip by less than 1 ms, it is moved onto that clip's edge, so the neighbour and its fades stay as they were.
 
+On a track whose instruments include a generator, such as a pattern player
+or arpeggiator, a new blank MIDI clip is silent like any other until you
+rerender it (**H**). The rerender runs every instrument on the track over the
+clip's length, so the generator's pattern fills the clip even with no notes
+in it.
+
 ## Splitting
 
 Split selected clips at the playhead with `\`. If no clips are selected, `\` splits every clip on the selected tracks at the playhead; with no track selected either, it splits every track that is not archived. Those pieces stay unselected. The split-all commands also leave archived tracks alone. Use `Shift+\` to split the selection at every major and minor grid tick shown at the current zoom; that grid density applies across the complete selected clips, including off-screen portions. The split commands also live in the Edit menu, including split-at-loop-braces and split-all variants.
@@ -100,7 +106,7 @@ clip edit. In multi-selection the processing actions are explicitly named
 
 After a material MIDI edit, **Restore OG MIDI** returns the clip to its
 immutable recorded, imported, joined, or first-authored MIDI performance. TayPE
-renders that performance through the track's current instrument; it does not
+renders that performance through the track's current instruments; it does not
 restore an old plug-in preset. Timeline position, audible window, duration,
 fades, stretch and clip pitch remain intact. The operation is undoable, and
 TayPE asks first if restoring would remove ARA2-derived edits.
@@ -150,9 +156,12 @@ Backspace follows the arranger's mute behaviour for selected notes: if the
 selection contains any audible note, it mutes the whole selection; if every
 selected note is already muted, it unmutes them all. Muted notes stay visible,
 selectable, and editable with a dimmed treatment, but do not audition, play, or
-render. The forward Delete key permanently removes selected notes. Mute state
-survives Commit and reopening the editor, and is preserved by copy, paste, and
-duplicate.
+render. The forward Delete key permanently removes selected notes. Both keys
+follow your keybinding profile: if it moves Delete Clip or Toggle Clip Disable
+to other keys, those keys delete and mute notes here instead. With no
+notes selected, Delete and Backspace do nothing in the piano roll and never
+reach your arranger clips. Mute state survives Commit and reopening the editor, and
+is preserved by copy, paste, and duplicate.
 When notes are selected, Escape clears the selection on its first press and
 keeps the editor open; a second press with no selected notes requests close.
 Return commits the MIDI editor instead of triggering the arranger's record
@@ -172,7 +181,8 @@ is not saved with the reel.
 Click a controller point to select it, click empty lane space to add a point,
 drag empty lane space to marquee-select points by time, and drag any selected
 point to move the whole selected set.
-Cmd+A selects all points in the current controller, Delete or Backspace removes
+Cmd+A selects all points in the current controller, Delete or Backspace (or
+your profile's keys for Delete Clip and Toggle Clip Disable) removes
 the selection, and Escape clears it. Double-click a point to delete it.
 Cmd-drag draws controller values as a
 freehand pencil stroke, following each change in pointer direction. With

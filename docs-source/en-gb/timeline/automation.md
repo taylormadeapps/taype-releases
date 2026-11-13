@@ -50,6 +50,13 @@ it uses the same slot. If TayPE cannot obtain a trustworthy parameter list, the
 picker reports that discovery is unavailable instead of pretending the plug-in
 has no parameters.
 
+An instrument has a **Trim** lane where an effect has **Wet/Dry**: its level
+from -144 dB to +12 dB, with 0 dB at the lane's centre. Instruments have no
+Wet/Dry lane. A MIDI clip plays the audio it was rendered with, so it takes
+the Trim lane, like the instrument's other automation, when you next
+rerender it. Upgrading a reel saved by TayPE 1.6.0b2 or earlier turns an
+instrument's Wet/Dry lane into a Trim lane that plays the same levels.
+
 If a plug-in changes its own parameter layout, TayPE temporarily marks those
 parameters unavailable and rediscovers them after playback stops. It never
 applies an old parameter number to the plug-in's new layout. If that happens
@@ -174,7 +181,7 @@ Automation breakpoint editing happens in Automation View while transport is stop
 - Press Escape once to clear selected automation points while keeping the
   selected track lanes. With no automation points selected, Escape clears the
   clip selection, and the next Escape clears the track selection.
-- Delete or Backspace removes selected points.
+- The Delete Clip key (Delete in the built-in profiles) removes selected points.
 - Option-double-click clears the displayed automation lane for that track.
 - Hold Command over a lane to show the pencil, then Command-drag to draw one
   undoable automation stroke. The stroke replaces existing points across the

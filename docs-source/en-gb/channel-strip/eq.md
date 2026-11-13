@@ -10,6 +10,9 @@ TayPE's channel EQ is a three-band musical EQ with high-pass and low-pass filter
 
 Each band has gain and frequency controls. The strip uses compact controls; the floating EQ Visualiser gives more space and shows the live response curve.
 
+Drag the edge of the visualiser to scale the whole panel proportionally.
+The window zoom combines with **View > UI Scale**.
+
 ## RTA and Response
 
 The EQ Visualiser can show input and output spectrum traces plus the EQ response. Traces disappear when they fall below the visible graph range; they do not draw a false flat line along the bottom.

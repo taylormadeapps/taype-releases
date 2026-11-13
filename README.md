@@ -36,7 +36,7 @@ MCP Registry and local server setup instructions: [mcp/README.md](mcp/README.md)
 - **Bug reports:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=bug-report.md)
 - **Feature requests:** [GitHub Issues](https://github.com/taylormadeapps/taype-releases/issues/new?template=feature-request.md)
 - **Follow along:** [Instagram](https://instagram.com/ruminantaudioworks) / [YouTube](https://www.youtube.com/@ruminantaudioworks) / [Reddit](https://www.reddit.com/r/taype/)
-- **Get in touch:** [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSeNeffSYAHaNKixSyw9ndouZAl80o2B_-yqo_LiuNYr-2e6Ow/viewform?usp=pp_url&entry.175803976=N/A) — choose TayPE or Vintage Vocoder, or leave Product at N/A for a general message. Email is optional.
+- **Get in touch:** [Contact form](https://docs.google.com/forms/d/e/1FAIpQLSeNeffSYAHaNKixSyw9ndouZAl80o2B_-yqo_LiuNYr-2e6Ow/viewform?usp=pp_url&entry.175803976=N/A) — choose TayPE, Vintage Vocoder or MPC Loader, or leave Product at N/A for a general message. Email is optional.
 
 ## Pricing
 

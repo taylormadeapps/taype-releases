@@ -1,0 +1,77 @@
+.analytics-consent {
+    background: var(--surface, #201c16);
+    color: var(--text, #f5f1e8);
+    font: 1rem/1.5 var(--body-font, system-ui, sans-serif);
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+    text-align: start;
+}
+
+.analytics-consent > * {
+    max-inline-size: 68rem;
+    margin-inline: auto;
+}
+
+.analytics-consent > h2 {
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: normal;
+    margin-block: 0 0.25rem;
+    padding: 0;
+    border: 0;
+    text-align: start;
+}
+
+.analytics-consent > p {
+    margin-block: 0 0.75rem;
+}
+
+.analytics-consent a {
+    color: var(--brass, #f0c96a);
+    text-decoration: underline;
+}
+
+.analytics-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.analytics-consent-actions button {
+    border: 1px solid #b5a994;
+    border-radius: 0.25rem;
+    background: #171410;
+    color: #f5f1e8;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    min-block-size: 44px;
+    max-inline-size: 100%;
+    padding: 0.5rem 1rem;
+}
+
+.analytics-consent-actions button:hover {
+    background: #373026;
+}
+
+.analytics-consent-actions button:focus-visible,
+.analytics-consent a:focus-visible,
+.analytics-settings-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+.analytics-consent-status:not(:empty) {
+    margin-block: 0.75rem 0;
+}
+
+.analytics-consent-status:empty {
+    margin: 0;
+}
+
+.analytics-settings-link {
+    display: block;
+    inline-size: fit-content;
+    margin: 0.75rem auto;
+    text-decoration: underline;
+}
