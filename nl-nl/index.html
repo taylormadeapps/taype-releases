@@ -826,35 +826,12 @@ dialog#screenshot-zoom img {
 /* ---- Tape Sessions ---- */
 
 .tape-sessions {
-    max-width: 1100px;
-    margin: 3rem auto 0;
+    text-align: center;
 }
 
-.tape-sessions-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.35fr);
-    gap: 2rem;
-    align-items: center;
-}
-
-.tape-sessions-copy {
-    max-width: 420px;
-}
-
-.tape-sessions-copy h3 {
-    font-family: var(--heading-font);
-    font-size: clamp(0.85rem, 2vw, 1.05rem);
-    font-weight: var(--heading-weight);
-    color: var(--brass);
-    letter-spacing: var(--heading-letter-spacing);
-    text-align: left;
-    margin-bottom: 1rem;
-}
-
-.tape-sessions-copy p {
-    color: var(--text-muted);
-    font-size: 1rem;
-    line-height: 1.75;
+.tape-sessions-video {
+    max-width: 720px;
+    margin-inline: auto;
 }
 
 .tape-sessions-link {
@@ -883,86 +860,7 @@ dialog#screenshot-zoom img {
     border: 0;
 }
 
-/* ---- Made in Taype ---- */
-
-.made-in-taype {
-    text-align: center;
-}
-
-.made-in-taype-intro {
-    color: var(--text-muted);
-    max-width: 640px;
-    margin: 0 auto 2rem;
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.made-in-taype-card {
-    display: grid;
-    grid-template-columns: 168px minmax(0, 1fr);
-    gap: 1.5rem;
-    align-items: center;
-    text-align: left;
-    max-width: 720px;
-    margin: 0 auto;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.25rem;
-}
-
-.made-in-taype-card picture,
-.made-in-taype-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.made-in-taype-card img {
-    border: 1px solid var(--border);
-}
-
-.made-in-taype-card h3 {
-    color: var(--text);
-    font-size: 1.2rem;
-    line-height: 1.3;
-    margin-bottom: 0.2rem;
-}
-
-.made-in-taype-artist {
-    color: var(--brass);
-    font-weight: 700;
-    margin-bottom: 0.55rem;
-}
-
-.made-in-taype-album,
-.made-in-taype-credit {
-    color: var(--text-muted);
-    font-size: 0.92rem;
-    line-height: 1.55;
-}
-
-.made-in-taype-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem 1.25rem;
-    margin-top: 1rem;
-}
-
-.made-in-taype .link-arrow,
-.made-in-taype-more {
-    color: var(--brass);
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.made-in-taype-more {
-    display: inline-flex;
-    margin-top: 1.5rem;
-}
-
-/* ---- They say ---- */
+/* ---- Testimonials ---- */
 
 .saying {
     text-align: center;
@@ -1243,25 +1141,7 @@ footer {
     .hero { padding: 7.5rem 1.25rem 3rem; }
     .hero-logo { width: min(240px, 62vw); height: auto; }
     .pricing-cards { grid-template-columns: 1fr; }
-    .tape-sessions-layout { grid-template-columns: 1fr; }
-    .tape-sessions-copy { max-width: none; }
-    .tape-sessions-copy h3 { text-align: center; }
     .community-grid { grid-template-columns: 1fr; }
-    .made-in-taype-card {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: center;
-    }
-    .made-in-taype-card picture,
-    .made-in-taype-card img {
-        max-width: 220px;
-    }
-    .made-in-taype-actions {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.65rem;
-    }
     .saying-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1350,7 +1230,7 @@ footer {
             <a id="nav-pricing" href="#pricing">Pricing</a>
             <a id="nav-docs" data-docs-link href="https://ruminant-audio-works.gitbook.io/taype/en-gb/" target="_blank">Docs</a>
             <a id="nav-community" href="#community">Community</a>
-            <a id="nav-saying" href="#they-say">They say</a>
+            <a id="nav-saying" href="#they-say">Testimonials</a>
             <a id="nav-made-in-taype" href="/made-in-taype/">Made in Taype</a>
             <a id="nav-download-link" href="#download" class="nav-cta">Get TayPE</a>
         </div>
@@ -1384,16 +1264,6 @@ footer {
 
 <hr class="section-divider">
 
-<section class="philosophy-section">
-    <div class="hero-manifesto">
-        <h2 id="hero-manifesto-heading">Old Skool, New Tricks</h2>
-        <p id="hero-manifesto-copy-1">The DAW TayPE takes the familiar language of the analogue recording studio and rebuilds it for a digital world. The critical engineering decisions have been made ahead of time, so things sound alive straight out of the box. You can focus on making the record, not spelunking through panels and menus. Use TayPE alongside your existing DAW, or make the whole record here.</p>
-        <p id="hero-manifesto-copy-2">TayPE takes an audio-first approach to software and hardware instruments, with the MIDI embedded in the audio clip, always close at hand should a quick do-over be required. And it’s designed to connect openly with other intelligent tools, rather than attempting to replace the human element.</p>
-    </div>
-</section>
-
-<hr class="section-divider">
-
 <!-- ============================================================ -->
 <!-- Screenshots                                                  -->
 <!-- ============================================================ -->
@@ -1412,18 +1282,12 @@ footer {
 
 <hr class="section-divider">
 
-<section class="screenshot-callout" id="features">
-    <h2 id="a11y-heading">Built for Everyone</h2>
-    <p id="a11y-copy">
-        <strong>Craft requires access.</strong>
-        <strong>Accessibility is not a feature. It's a foundation.</strong>
-        Because the interface must meet musicians where they are.
-        TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
-        Every state is conveyed with shape and icon, never colour alone.
-        Keyboard shortcuts for every action. For non-visual workflows, MCP through
-        Claude or Codex is the primary interface - voice control included.
-        Native screen-reader support coming in Q4 2026 / Q1 2027.
-    </p>
+<section class="philosophy-section">
+    <div class="hero-manifesto">
+        <h2 id="hero-manifesto-heading">Old Skool, New Tricks</h2>
+        <p id="hero-manifesto-copy-1">The DAW TayPE takes the familiar language of the analogue recording studio and rebuilds it for a digital world. The critical engineering decisions have been made ahead of time, so things sound alive straight out of the box. You can focus on making the record, not spelunking through panels and menus. Use TayPE alongside your existing DAW, or make the whole record here.</p>
+        <p id="hero-manifesto-copy-2">TayPE takes an audio-first approach to software and hardware instruments, with the MIDI embedded in the audio clip, always close at hand should a quick do-over be required. And it’s designed to connect openly with other intelligent tools, rather than attempting to replace the human element.</p>
+    </div>
 </section>
 
 <hr class="section-divider">
@@ -1521,6 +1385,22 @@ footer {
 
 <hr class="section-divider">
 
+<section class="screenshot-callout" id="features">
+    <h2 id="a11y-heading">Built for Everyone</h2>
+    <p id="a11y-copy">
+        <strong>Craft requires access.</strong>
+        <strong>Accessibility is not a feature. It's a foundation.</strong>
+        Because the interface must meet musicians where they are.
+        TayPE targets WCAG 2.2 AA throughout. High-contrast mode with 15:1+ text ratios.
+        Every state is conveyed with shape and icon, never colour alone.
+        Keyboard shortcuts for every action. For non-visual workflows, MCP through
+        Claude or Codex is the primary interface - voice control included.
+        Native screen reader support planned for version 2.
+    </p>
+</section>
+
+<hr class="section-divider">
+
 <!-- ============================================================ -->
 <!-- Download                                                     -->
 <!-- ============================================================ -->
@@ -1528,7 +1408,7 @@ footer {
 <section id="download" style="text-align: center;">
     <h2 id="download-heading">Let's Roll</h2>
     <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-        Try TayPE with every feature from day one. After 90 days, TayPE stays fully functional and reminds you to buy a licence.
+        Try TayPE with every feature from day one. After 90 days, TayPE stays fully functional and occasionally reminds you to buy a licence.
     </p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 0.75rem;">
         <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v1.5.2/Taype-1.5.2.pkg" class="btn-primary" target="_blank" rel="noopener">
@@ -1647,67 +1527,15 @@ footer {
 <hr class="section-divider">
 
 <!-- ============================================================ -->
-<!-- They say                                                     -->
+<!-- Tape Sessions                                                -->
 <!-- ============================================================ -->
 
-<section class="saying" id="they-say">
-    <h2 id="saying-heading">They say</h2>
-    <div class="saying-grid">
-        <article class="saying-card">
-            <a class="saying-photo-link" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">
-                <picture>
-                    <source type="image/webp" srcset="/assets/img/made-in-taype/charles-goodan-320.webp 320w, /assets/img/made-in-taype/charles-goodan-640.webp 640w, /assets/img/made-in-taype/charles-goodan-720.webp 720w" sizes="148px">
-                    <img id="saying-photo" src="/assets/img/made-in-taype/charles-goodan-320.jpg" srcset="/assets/img/made-in-taype/charles-goodan-320.jpg 320w, /assets/img/made-in-taype/charles-goodan-640.jpg 640w, /assets/img/made-in-taype/charles-goodan-720.jpg 720w" sizes="148px" alt="Charles Goodan" width="320" height="320" loading="lazy" decoding="async">
-                </picture>
-            </a>
-            <blockquote id="saying-quote">“When I don’t feel like using a DAW, I use Taype.”</blockquote>
-            <p class="saying-name"><a id="saying-name" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">Charles Goodan</a></p>
-            <p id="saying-credit" class="saying-credit">Grammy, Album of the Year — Supernatural by Santana, Producer</p>
-            <p id="saying-credits" class="saying-credits">Santana, Dust Brothers, The Rolling Stones, Beck, Fight Club, Hanson, Linkin Park, Morphine, Scissors for Lefty, Harper Simon, Garfunkel and Oates</p>
-        </article>
-        <article class="saying-card">
-            <a class="saying-photo-link" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">
-                <picture>
-                    <source type="image/webp" srcset="/assets/img/made-in-taype/the-rugged-320.webp 320w, /assets/img/made-in-taype/the-rugged-640.webp 640w, /assets/img/made-in-taype/the-rugged-720.webp 720w" sizes="148px">
-                    <img src="/assets/img/made-in-taype/the-rugged-320.jpg" srcset="/assets/img/made-in-taype/the-rugged-320.jpg 320w, /assets/img/made-in-taype/the-rugged-640.jpg 640w, /assets/img/made-in-taype/the-rugged-720.jpg 720w" sizes="148px" alt="The Rugged" width="320" height="320" loading="lazy" decoding="async">
-                </picture>
-            </a>
-            <blockquote id="saying-rugged-quote">“TAYPE feels like somebody figured out how to bottle the sonics and visual language of the golden eras of recording, then wire it into a modern workflow. You get the warmth, character, and tactile vibe that made those records special, without giving up the speed, flexibility, and precision we expect from today’s technology. It’s nostalgia without the limitations — and that’s a pretty damn cool place to make music.”</blockquote>
-            <p class="saying-name"><a id="saying-rugged-name" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">The Rugged</a></p>
-            <p id="saying-rugged-credit" class="saying-credit">Producer · Artist · Bassist</p>
-            <p id="saying-rugged-credits" class="saying-credits">Official Biz, Brownmark (Prince &amp; The Revolution), Sananda Maitreya (formerly Terence Trent D’Arby)</p>
-        </article>
+<section id="tape-sessions" class="tape-sessions">
+    <h2 id="tape-sessions-heading">Tape Sessions</h2>
+    <div class="tape-sessions-video">
+        <iframe id="tape-sessions-embed" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" title="TayPE Tape Sessions YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ============================================================ -->
-<!-- Made in Taype                                                -->
-<!-- ============================================================ -->
-
-<section class="made-in-taype" id="made-in-taype">
-    <h2 id="made-in-taype-heading">Made in Taype</h2>
-    <p id="made-in-taype-copy" class="made-in-taype-intro">Works made in TayPE.</p>
-    <article class="made-in-taype-card">
-        <a href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">
-            <picture>
-                <source type="image/webp" srcset="/assets/img/made-in-taype/wudeva-320.webp 320w, /assets/img/made-in-taype/wudeva-640.webp 640w, /assets/img/made-in-taype/wudeva-720.webp 720w" sizes="168px">
-                <img id="made-in-taype-cover" src="/assets/img/made-in-taype/wudeva-320.jpg" srcset="/assets/img/made-in-taype/wudeva-320.jpg 320w, /assets/img/made-in-taype/wudeva-640.jpg 640w, /assets/img/made-in-taype/wudeva-720.jpg 720w" sizes="168px" alt="Cover of INstruMENTALITY Vol. 1 by The Rugged" width="320" height="320" loading="lazy" decoding="async">
-            </picture>
-        </a>
-        <div>
-            <h3>Wudeva</h3>
-            <p class="made-in-taype-artist">The Rugged</p>
-            <p class="made-in-taype-album">From INstruMENTALITY Vol. 1</p>
-            <p id="made-in-taype-credit" class="made-in-taype-credit">Mixed in TayPE with Vanessa</p>
-            <div class="made-in-taype-actions">
-                <a id="made-in-taype-album-link" class="link-arrow" href="https://distrokid.com/hyperfollow/therugged/instrumentality-vol-1/" target="_blank" rel="noopener">Get the album &rarr;</a>
-                <a id="made-in-taype-listen" class="link-arrow" href="https://music.youtube.com/watch?v=xz0eMapY_00" target="_blank" rel="noopener">Listen on YouTube Music &rarr;</a>
-            </div>
-        </div>
-    </article>
-    <a id="made-in-taype-more" class="made-in-taype-more" href="/made-in-taype/">See the catalogue &rarr;</a>
+    <a id="tape-sessions-youtube" class="tape-sessions-link" href="https://www.youtube.com/playlist?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
 </section>
 
 <hr class="section-divider">
@@ -1749,18 +1577,41 @@ footer {
             <a id="community-card-2-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdcIUQBf7p4VecwyEkBmjmVXXXwR09o0xaJLR3r03aqI7KZVg/viewform" class="link-arrow" target="_blank" rel="noopener">Join the beta programme &rarr;</a>
         </div>
     </div>
+</section>
 
-    <div id="tape-sessions" class="tape-sessions">
-        <div class="tape-sessions-layout">
-            <div class="tape-sessions-copy">
-                <h3 id="tape-sessions-heading">Tape Sessions</h3>
-                <p id="tape-sessions-copy">Watch TT work through TayPE in real sessions: one take, no polish pass, just the workflow as it is.</p>
-                <a id="tape-sessions-youtube" class="tape-sessions-link" href="https://www.youtube.com/playlist?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" target="_blank" rel="noopener">Open the playlist on YouTube &rarr;</a>
-            </div>
-            <div class="tape-sessions-video">
-                <iframe id="tape-sessions-embed" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLSENy4ukLmJafWKpKxoTzFAtqF6x4UzVA" title="TayPE Tape Sessions YouTube playlist" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
+<hr class="section-divider">
+
+<!-- ============================================================ -->
+<!-- Testimonials                                                 -->
+<!-- ============================================================ -->
+
+<section class="saying" id="they-say">
+    <h2 id="saying-heading">Testimonials</h2>
+    <div class="saying-grid">
+        <article class="saying-card">
+            <a class="saying-photo-link" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/made-in-taype/charles-goodan-320.webp 320w, /assets/img/made-in-taype/charles-goodan-640.webp 640w, /assets/img/made-in-taype/charles-goodan-720.webp 720w" sizes="148px">
+                    <img id="saying-photo" src="/assets/img/made-in-taype/charles-goodan-320.jpg" srcset="/assets/img/made-in-taype/charles-goodan-320.jpg 320w, /assets/img/made-in-taype/charles-goodan-640.jpg 640w, /assets/img/made-in-taype/charles-goodan-720.jpg 720w" sizes="148px" alt="Charles Goodan" width="320" height="320" loading="lazy" decoding="async">
+                </picture>
+            </a>
+            <blockquote id="saying-quote">“When I don’t feel like using a DAW, I use Taype.”</blockquote>
+            <p class="saying-name"><a id="saying-name" href="https://soundbetter.com/profiles/514874-charles-goodan" target="_blank" rel="noopener">Charles Goodan</a></p>
+            <p id="saying-credit" class="saying-credit">Grammy, Album of the Year — Supernatural by Santana, Producer</p>
+            <p id="saying-credits" class="saying-credits">Santana, Dust Brothers, The Rolling Stones, Beck, Fight Club, Hanson, Linkin Park, Morphine, Scissors for Lefty, Harper Simon, Garfunkel and Oates</p>
+        </article>
+        <article class="saying-card">
+            <a class="saying-photo-link" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">
+                <picture>
+                    <source type="image/webp" srcset="/assets/img/made-in-taype/the-rugged-320.webp 320w, /assets/img/made-in-taype/the-rugged-640.webp 640w, /assets/img/made-in-taype/the-rugged-720.webp 720w" sizes="148px">
+                    <img src="/assets/img/made-in-taype/the-rugged-320.jpg" srcset="/assets/img/made-in-taype/the-rugged-320.jpg 320w, /assets/img/made-in-taype/the-rugged-640.jpg 640w, /assets/img/made-in-taype/the-rugged-720.jpg 720w" sizes="148px" alt="The Rugged" width="320" height="320" loading="lazy" decoding="async">
+                </picture>
+            </a>
+            <blockquote id="saying-rugged-quote">“TAYPE feels like somebody figured out how to bottle the sonics and visual language of the golden eras of recording, then wire it into a modern workflow. You get the warmth, character, and tactile vibe that made those records special, without giving up the speed, flexibility, and precision we expect from today’s technology. It’s nostalgia without the limitations — and that’s a pretty damn cool place to make music.”</blockquote>
+            <p class="saying-name"><a id="saying-rugged-name" href="https://www.itsofficialrugged.com/#music" target="_blank" rel="noopener">The Rugged</a></p>
+            <p id="saying-rugged-credit" class="saying-credit">Producer · Artist · Bassist</p>
+            <p id="saying-rugged-credits" class="saying-credits">Official Biz, Brownmark (Prince &amp; The Revolution), Sananda Maitreya (formerly Terence Trent D’Arby)</p>
+        </article>
     </div>
 </section>
 
