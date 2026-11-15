@@ -540,6 +540,64 @@ h2 {
     transform: scale(1.02);
 }
 
+
+.screenshot-carousel [data-shot-open] {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+.screenshot-carousel [data-shot-open]:focus-visible,
+.screenshot-carousel button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+.screenshot-carousel [data-shot-open] img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1600 / 901;
+    object-fit: contain;
+    background: #171411;
+}
+.screenshot-carousel figcaption {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem 1.25rem;
+    padding-block: .75rem 0;
+    font-size: .95rem;
+    text-align: start;
+}
+.screenshot-carousel .shot-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+.screenshot-carousel .shot-controls[hidden] {
+    display: none;
+}
+.screenshot-carousel .shot-controls button {
+    appearance: none;
+    background: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    min-inline-size: 44px;
+    min-block-size: 44px;
+    font: inherit;
+    cursor: pointer;
+}
+.screenshot-carousel .shot-controls button:hover {
+    background: rgb(255 255 255 / 9%);
+}
+@media (max-width: 540px) {
+    .screenshot-carousel figcaption {
+        flex-wrap: wrap;
+    }
+}
+
 /* Screenshot lightbox (native <dialog>) */
 dialog#screenshot-zoom {
     border: none;
@@ -1324,12 +1382,19 @@ footer {
 
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
-        <figure class="screenshot-block">
+        <figure class="screenshot-block screenshot-carousel" data-shot-carousel="mixer" aria-labelledby="screenshots-heading">
             <h2 id="screenshots-heading">The Mixing Console</h2>
-            <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-1-640.webp 640w, /assets/img/screenshot-mixer-1-960.webp 960w, /assets/img/screenshot-mixer-1-1280.webp 1280w, /assets/img/screenshot-mixer-1-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-1" src="/assets/img/screenshot-mixer-1-960.jpg" srcset="/assets/img/screenshot-mixer-1-640.jpg 640w, /assets/img/screenshot-mixer-1-960.jpg 960w, /assets/img/screenshot-mixer-1-1280.jpg 1280w, /assets/img/screenshot-mixer-1-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-1-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-1-1920.jpg" alt="TayPE mixer - multi-track channel strips with modelled preamps, EQ, compressor, inserts, and faders" width="960" height="591" loading="lazy" decoding="async">
-            </picture>
+            <a data-shot-open href="/assets/img/session-shots/mixer-narrow-1600.webp">
+                <img data-shot-image src="/assets/img/session-shots/mixer-narrow-1000.webp" srcset="/assets/img/session-shots/mixer-narrow-640.webp 640w, /assets/img/session-shots/mixer-narrow-1000.webp 1000w, /assets/img/session-shots/mixer-narrow-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" alt="Narrow strips fit the tracks, buses and FX returns together." width="1600" height="901" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+                <span data-shot-caption aria-live="polite">Narrow strips fit the tracks, buses and FX returns together.</span>
+                <span class="shot-controls" data-shot-controls hidden>
+                    <button type="button" data-shot-step="-1" aria-label="Previous screenshot"><span aria-hidden="true">←</span></button>
+                    <bdi dir="ltr" data-shot-position aria-hidden="true"></bdi>
+                    <button type="button" data-shot-step="1" aria-label="Next screenshot"><span aria-hidden="true">→</span></button>
+                </span>
+            </figcaption>
         </figure>
     </div>
 </section>
@@ -1349,10 +1414,10 @@ footer {
         a modelled summing engine adds console-style saturation, cohesion, and drive.
     </p>
     <p id="tone-intro-2" class="tone-intro">
-        No plugins needed. The console emulation runs
-        directly in the audio engine - shared weight tensors, per-channel state,
-        zero added latency. Same philosophy as hardware-accelerated DSP, built into
-        the mixer, not bolted on.
+        Console emulation runs directly in TayPE’s audio engine at ultra-low latency. Plug-ins are optional, and your favourites are welcome.
+    </p>
+    <p id="tone-sandbox" class="tone-intro">
+        TayPE runs VST3 inserts in a separate sandbox process. If a plug-in crashes, your session stays open.
     </p>
     <p id="tone-kicker" class="tone-kicker">Craft first. Tone at the core.</p>
 </section>
@@ -1361,12 +1426,19 @@ footer {
 
 <section class="screenshots">
     <div class="screenshot-row screenshot-row--single">
-        <figure class="screenshot-block">
+        <figure class="screenshot-block screenshot-carousel" data-shot-carousel="arranger" aria-labelledby="screenshots-arranger-heading">
             <h2 id="screenshots-arranger-heading">The Arranger</h2>
-            <picture>
-                <source type="image/webp" srcset="/assets/img/screenshot-mixer-2-640.webp 640w, /assets/img/screenshot-mixer-2-960.webp 960w, /assets/img/screenshot-mixer-2-1280.webp 1280w, /assets/img/screenshot-mixer-2-1920.webp 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px">
-                <img id="screenshot-2" src="/assets/img/screenshot-mixer-2-960.jpg" srcset="/assets/img/screenshot-mixer-2-640.jpg 640w, /assets/img/screenshot-mixer-2-960.jpg 960w, /assets/img/screenshot-mixer-2-1280.jpg 1280w, /assets/img/screenshot-mixer-2-1920.jpg 1920w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" data-zoom-webp="/assets/img/screenshot-mixer-2-1920.webp" data-zoom-fallback="/assets/img/screenshot-mixer-2-1920.jpg" alt="TayPE arranger - clips arranged across tracks with track headers and transport controls" width="960" height="591" loading="lazy" decoding="async">
-            </picture>
+            <a data-shot-open href="/assets/img/session-shots/arranger-wide-1600.webp">
+                <img data-shot-image src="/assets/img/session-shots/arranger-wide-1000.webp" srcset="/assets/img/session-shots/arranger-wide-640.webp 640w, /assets/img/session-shots/arranger-wide-1000.webp 1000w, /assets/img/session-shots/arranger-wide-1280.webp 1280w" sizes="(max-width: 720px) calc(100vw - 4rem), 1000px" alt="Song markers, a wide channel strip and two takes in the vocal comp." width="1600" height="901" loading="lazy" decoding="async">
+            </a>
+            <figcaption>
+                <span data-shot-caption aria-live="polite">Song markers, a wide channel strip and two takes in the vocal comp.</span>
+                <span class="shot-controls" data-shot-controls hidden>
+                    <button type="button" data-shot-step="-1" aria-label="Previous screenshot"><span aria-hidden="true">←</span></button>
+                    <bdi dir="ltr" data-shot-position aria-hidden="true"></bdi>
+                    <button type="button" data-shot-step="1" aria-label="Next screenshot"><span aria-hidden="true">→</span></button>
+                </span>
+            </figcaption>
         </figure>
     </div>
 </section>
@@ -1688,6 +1760,7 @@ footer {
 </dialog>
 
 <script src="/assets/site.js"></script>
+<script src="/assets/session-screenshots.js" defer></script>
 
 </body>
 </html>

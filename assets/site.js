@@ -83,7 +83,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon Native + Intel \u00b7 VST3 host",
             "tone-heading": "Tone Architecture",
             "tone-intro-1": "TayPE isn't a flat digital mixer. Every channel can run through a modelled preamp stage - real hardware character captured by Neural Amp Modeler and applied at the source. On the mix bus, a modelled summing engine adds console-style saturation, cohesion, and drive.",
-            "tone-intro-2": "No plugins needed. The console emulation runs directly in the audio engine - shared weight tensors, per-channel state, zero added latency. Same philosophy as hardware-accelerated DSP, built into the mixer, not bolted on.",
+            "tone-intro-2": "Console emulation runs directly in TayPE’s audio engine at ultra-low latency. Plug-ins are optional, and your favourites are welcome.",
+            "tone-sandbox": "TayPE runs VST3 inserts in a separate sandbox process. If a plug-in crashes, your session stays open.",
             "tone-kicker": "Craft first. Tone at the core.",
             "philosophy-heading": "Make the Record",
             "philosophy-copy-1": "Taylor's Performance Environment exists to help you make the record, not drown in endless options. A fully featured multitrack DAW with the soul of a tape machine.\nBuilt around the flow and feel of a great mixing console.\nFewer modes, fewer menus, more music.",
@@ -304,7 +305,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon ネイティブ + Intel \u00b7 VST3 ホスト",
             "tone-heading": "トーンアーキテクチャ",
             "tone-intro-1": "TayPEはのっぺりしたデジタルミキサーではない。各チャンネルはモデル化されたプリアンプ段を通せる - Neural Amp Modelerで捉えた本物のハードウェアの個性をソースに適用。ミックスバスでは、モデル化されたサミングエンジンがコンソール風のサチュレーション、まとまり、ドライブを加える。",
-            "tone-intro-2": "プラグイン不要。コンソールエミュレーションはオーディオエンジン内で直接動作 - 共有重みテンソル、チャンネルごとの状態、追加レイテンシーゼロ。ハードウェアアクセラレーションDSPと同じ思想を、ミキサーに後付けではなく組み込んでいる。",
+            "tone-intro-2": "コンソールエミュレーションはTayPEのオーディオエンジンで直接動作し、超低レイテンシーを実現します。プラグインは任意で、お気に入りも自由に使えます。",
+            "tone-sandbox": "TayPEはVST3インサートを別のサンドボックスプロセスで実行します。プラグインがクラッシュしても、セッションは開いたままです。",
             "tone-kicker": "クラフト優先。音色は中核に。",
             "philosophy-heading": "レコードを作れ",
             "philosophy-copy-1": "Taylor's Performance Environment は、無限の選択肢に溺れるためではなく、レコードを作るためにあります。テープマシンの魂を持った、フル機能のマルチトラック DAW。\n優れたミキシングコンソールの流れと感触を中心に設計されています。\n少ないモード、少ないメニュー、もっと音楽を。",
@@ -508,7 +510,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Natif Apple Silicon + Intel \u00b7 Hôte VST3",
             "tone-heading": "Architecture du son",
             "tone-intro-1": "TayPE n’est pas une console numérique plate. Chaque canal peut passer par un étage de préampli modélisé - du caractère matériel réel capturé par Neural Amp Modeler et appliqué à la source. Sur le bus de mix, un moteur de sommation modélisé ajoute saturation, cohésion et drive à la console.",
-            "tone-intro-2": "Aucun plugin nécessaire. L’émulation de console tourne directement dans le moteur audio - tenseurs de poids partagés, état par canal, zéro latence ajoutée. Même philosophie que le DSP accéléré matériellement, intégré à la console, pas posé dessus.",
+            "tone-intro-2": "L’émulation de console tourne directement dans le moteur audio de TayPE avec une latence ultra-faible. Les plug-ins sont facultatifs, et tes préférés sont les bienvenus.",
+            "tone-sandbox": "TayPE exécute les inserts VST3 dans un processus isolé. Si un plug-in plante, ta session reste ouverte.",
             "tone-kicker": "Le geste d'abord. Le son au centre.",
             "philosophy-heading": "Fais le disque",
             "philosophy-copy-1": "Taylor's Performance Environment existe pour vous aider à faire le disque, pas à vous noyer dans des options sans fin. Une DAW multipiste complète avec l'âme d'un magnétophone.\nConçue autour du flux et de la sensation d'une grande console de mixage.\nMoins de modes, moins de menus, plus de musique.",
@@ -712,7 +715,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Nativ für Apple Silicon + Intel \u00b7 VST3-Host",
             "tone-heading": "Klangarchitektur",
             "tone-intro-1": "TayPE ist kein flacher Digitalmixer. Jeder Kanal kann durch eine modellierte Preamp-Stufe laufen - echter Hardware-Charakter, mit dem Neural Amp Modeler erfasst und direkt an der Quelle angewendet. Auf dem Mix-Bus liefert eine modellierte Summing-Engine konsolentypische Sättigung, Zusammenhalt und Druck.",
-            "tone-intro-2": "Keine Plugins nötig. Die Konsolen-Emulation läuft direkt in der Audio-Engine - gemeinsame Gewichts-Tensoren, Zustand pro Kanal, keine zusätzliche Latenz. Gleiche Philosophie wie hardware-beschleunigte DSP, in den Mixer eingebaut, nicht aufgesetzt.",
+            "tone-intro-2": "Die Konsolenemulation läuft direkt in TayPEs Audio-Engine mit extrem niedriger Latenz. Plug-ins sind optional, und deine Favoriten sind willkommen.",
+            "tone-sandbox": "TayPE führt VST3-Inserts in einem separaten Sandbox-Prozess aus. Wenn ein Plug-in abstürzt, bleibt deine Session geöffnet.",
             "tone-kicker": "Handwerk zuerst. Klang im Kern.",
             "philosophy-heading": "Mach die Platte",
             "philosophy-copy-1": "Taylor's Performance Environment ist dafür da, dir beim Machen der Platte zu helfen, nicht beim Ertrinken in endlosen Optionen. Eine voll ausgestattete Multitrack-DAW mit der Seele einer Bandmaschine.\nGebaut um den Ablauf und das Gefühl eines großartigen Mischpults.\nWeniger Modi, weniger Menüs, mehr Musik.",
@@ -916,7 +920,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Nativo en Apple Silicon + Intel \u00b7 Host VST3",
             "tone-heading": "Arquitectura de tono",
             "tone-intro-1": "TayPE no es un mezclador digital plano. Cada canal puede pasar por una etapa de preamplificador modelada - carácter de hardware real capturado por Neural Amp Modeler y aplicado en la fuente. En el bus de mezcla, un motor de sumas modelado añade saturación, cohesión y empuje al estilo de consola.",
-            "tone-intro-2": "Sin plugins. La emulación de consola corre directamente en el motor de audio - tensores de pesos compartidos, estado por canal, latencia adicional cero. Misma filosofía que el DSP acelerado por hardware, integrado en el mezclador, no añadido por encima.",
+            "tone-intro-2": "La emulación de consola funciona directamente en el motor de audio de TayPE con latencia ultrabaja. Los plug-ins son opcionales y puedes añadir tus favoritos.",
+            "tone-sandbox": "TayPE ejecuta los insertos VST3 en un proceso aislado. Si un plug-in falla, tu sesión sigue abierta.",
             "tone-kicker": "Primero el oficio. El tono en el centro.",
             "philosophy-heading": "Haz el disco",
             "philosophy-copy-1": "Taylor's Performance Environment existe para ayudarte a hacer el disco, no a ahogarte en opciones infinitas. Una DAW multipista con todas las funciones y alma de grabadora de cinta.\nConstruida alrededor del flujo y la sensación de una gran consola de mezclas.\nMenos modos, menos menús, más música.",
@@ -1120,7 +1125,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Innbyggt fyrir Apple Silicon + Intel \u00b7 VST3 hýsing",
             "tone-heading": "Hljóðarkitektúr",
             "tone-intro-1": "TayPE er ekki flatur stafrænn hljóðblandari. Hver rás getur farið í gegnum líkanaðan formagnara-stig - raunverulegur vélbúnaðarkarakter, fanginn af Neural Amp Modeler og lagður á við upptökurás. Á blöndunarbusinum bætir líkönuð summuvél við konsólkaraktermettun, samheldni og drifkraft.",
-            "tone-intro-2": "Engin viðbót þörf. Konsólhermunin keyrir beint inni í hljóðvélinni - sameiginlegir vægitenoraf, ástand á rás, núllminni töf. Sama hugmynd og vélbúnaðarhraðað DSP, byggt inn í blandarann, ekki sett ofan á.",
+            "tone-intro-2": "Konsólhermunin keyrir beint í hljóðvél TayPE með afar lítilli töf. Viðbætur eru valfrjálsar og þú getur notað þær sem þér líkar best.",
+            "tone-sandbox": "TayPE keyrir VST3-innskot í aðskildu, einangruðu ferli. Ef viðbót hrynur helst vinnulotan opin.",
             "tone-kicker": "Handverkið fyrst. Hljóðið í kjarnanum.",
             "philosophy-heading": "Gerðu plötuna",
             "philosophy-copy-1": "Taylor's Performance Environment er til að hjálpa þér að gera plötuna, ekki sökkva í endalausa valkosti. Fjölrása DAW með fullri virkni og sál segulbandstækis.\nByggð í kringum flæði og tilfinningu frábærs hljóðblöndunarborðs.\nFærri hamir, færri valmyndir, meiri tónlist.",
@@ -1324,7 +1330,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Native voor Apple Silicon + Intel \u00b7 VST3-host",
             "tone-heading": "Toonarchitectuur",
             "tone-intro-1": "TayPE is geen platte digitale mixer. Elk kanaal kan door een gemodelleerde preamp-trap lopen - echt hardware-karakter, gevangen door Neural Amp Modeler en toegepast bij de bron. Op de mix-bus voegt een gemodelleerde sumengine consoletypische saturatie, samenhang en drive toe.",
-            "tone-intro-2": "Geen plugins nodig. De console-emulatie draait rechtstreeks in de audio-engine - gedeelde gewicht-tensors, status per kanaal, geen extra latency. Zelfde filosofie als hardwareversnelde DSP, ingebouwd in de mixer, niet erop geplakt.",
+            "tone-intro-2": "De console-emulatie draait rechtstreeks in de audio-engine van TayPE met ultralage latency. Plug-ins zijn optioneel en je favorieten zijn welkom.",
+            "tone-sandbox": "TayPE draait VST3-inserts in een afzonderlijk sandboxproces. Als een plug-in crasht, blijft je sessie open.",
             "tone-kicker": "Ambacht eerst. Toon in het hart.",
             "philosophy-heading": "Maak het record",
             "philosophy-copy-1": "Taylor's Performance Environment helpt je de plaat te maken, niet te verdrinken in eindeloze opties. Een volwaardige multitrack-DAW met het hart van een bandapparaat.\nGebouwd rond de flow en het gevoel van een geweldige mengtafel.\nMinder modi, minder menu's, meer muziek.",
@@ -1528,7 +1535,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon nativo + Intel \u00b7 Host VST3",
             "tone-heading": "Architettura del tono",
             "tone-intro-1": "TayPE non è un mixer digitale piatto. Ogni canale può passare attraverso uno stadio preamp modellato - carattere hardware reale catturato da Neural Amp Modeler e applicato alla sorgente. Sul mix bus, un motore di somma modellato aggiunge saturazione, coesione e spinta da console.",
-            "tone-intro-2": "Niente plugin. L’emulazione della console gira direttamente nel motore audio - tensori dei pesi condivisi, stato per canale, zero latenza aggiunta. Stessa filosofia del DSP accelerato in hardware, integrato nel mixer, non posato sopra.",
+            "tone-intro-2": "L’emulazione della console gira direttamente nel motore audio di TayPE a latenza bassissima. I plug-in sono facoltativi e puoi usare i tuoi preferiti.",
+            "tone-sandbox": "TayPE esegue gli insert VST3 in un processo isolato. Se un plug-in si blocca, la sessione resta aperta.",
             "tone-kicker": "Mestiere prima. Tono al centro.",
             "philosophy-heading": "Fai il disco",
             "philosophy-copy-1": "Taylor's Performance Environment esiste per aiutarti a fare il disco, non per annegare in opzioni infinite. Una DAW multitraccia completa con l'anima di un registratore.\nCostruita attorno al flusso e alla sensazione di una grande console di mixaggio.\nMeno modalità, meno menu, più musica.",
@@ -1732,7 +1740,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon Native + Intel \u00b7 Host VST3",
             "tone-heading": "Architektura dźwięku",
             "tone-intro-1": "TayPE to nie płaski cyfrowy mikser. Każdy kanał może przejść przez modelowany stopień przedwzmacniacza - prawdziwy charakter sprzętu uchwycony przez Neural Amp Modeler i nałożony u źródła. Na szynie miksu modelowany silnik sumowania dodaje konsolowe nasycenie, spójność i napęd.",
-            "tone-intro-2": "Bez wtyczek. Emulacja konsoli działa bezpośrednio w silniku audio - współdzielone tensory wag, stan na kanał, zero dodanego opóźnienia. Ta sama filozofia, co DSP przyspieszane sprzętowo, wbudowana w mikser, a nie doklejona.",
+            "tone-intro-2": "Emulacja konsolety działa bezpośrednio w silniku audio TayPE z ultraniskim opóźnieniem. Wtyczki są opcjonalne i możesz używać swoich ulubionych.",
+            "tone-sandbox": "TayPE uruchamia wtyczki VST3 w osobnym, izolowanym procesie. Jeśli wtyczka ulegnie awarii, sesja pozostaje otwarta.",
             "tone-kicker": "Rzemiosło przed wszystkim. Dźwięk w centrum.",
             "philosophy-heading": "Stwórz rekord",
             "philosophy-copy-1": "Taylor's Performance Environment istnieje, aby pomóc ci zrobić płytę, a nie tonąć w nieskończonych opcjach. Pełnoprawny wielościeżkowy DAW z duszą magnetofonu.\nZbudowany wokół płynności i odczuć świetnej konsoli mikserskiej.\nMniej trybów, mniej menu, więcej muzyki.",
@@ -1936,7 +1945,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon Native + Intel \u00b7 VST3 хост",
             "tone-heading": "Архітектура тону",
             "tone-intro-1": "TayPE - це не плаский цифровий мікшер. Кожен канал може пройти через змодельований передпідсилювач - справжній характер обладнання, схоплений Neural Amp Modeler і застосований на джерелі. На мікс-шині змодельований двигун сумування додає консольну сатурацію, цілісність і драйв.",
-            "tone-intro-2": "Без плагінів. Емуляція консолі працює просто всередині аудіодвигуна - спільні тензори ваг, стан на канал, нуль доданої затримки. Та сама філософія, що й апаратно-прискорений DSP, вбудована в мікшер, не приклеєна зверху.",
+            "tone-intro-2": "Емуляція консолі працює безпосередньо в аудіорушії TayPE з наднизькою затримкою. Плагіни необов’язкові, тож можете додавати свої улюблені.",
+            "tone-sandbox": "TayPE запускає вставки VST3 в окремому ізольованому процесі. Якщо плагін аварійно завершує роботу, сесія залишається відкритою.",
             "tone-kicker": "Ремесло спочатку. Тон у центрі.",
             "philosophy-heading": "Зробити запис",
             "philosophy-copy-1": "Taylor's Performance Environment існує, щоб допомогти вам зробити запис, а не потонути в безкінечних опціях. Повнофункціональна багатодоріжкова DAW з душею магнітофона.\nПобудований навколо потоку й відчуття чудової мікшерної консолі.\nМенше режимів, менше меню, більше музики.",
@@ -2140,7 +2150,8 @@ const locales = {
             "hero-platform": "macOS Monterey+ \u00b7 Apple Silicon Native + Intel \u00b7 VST3 host",
             "tone-heading": "Αρχιτεκτονική τόνου",
             "tone-intro-1": "Το TayPE δεν είναι ένας επίπεδος ψηφιακός μίκτης. Κάθε κανάλι μπορεί να περάσει από μοντελοποιημένο στάδιο preamp - πραγματικός χαρακτήρας hardware που καταγράφηκε με τον Neural Amp Modeler και εφαρμόζεται στην πηγή. Στο mix bus, μια μοντελοποιημένη μηχανή summing προσθέτει κορεσμό, συνοχή και ώθηση τύπου κονσόλας.",
-            "tone-intro-2": "Δεν χρειάζονται plugins. Η εξομοίωση της κονσόλας τρέχει απευθείας μέσα στη μηχανή ήχου - κοινοί τανυστές βαρών, κατάσταση ανά κανάλι, μηδενική επιπλέον καθυστέρηση. Ίδια φιλοσοφία με το hardware-accelerated DSP, χτισμένη μέσα στον μίκτη, όχι κολλημένη πάνω.",
+            "tone-intro-2": "Η εξομοίωση κονσόλας τρέχει απευθείας στη μηχανή ήχου του TayPE με εξαιρετικά χαμηλή καθυστέρηση. Τα plug-in είναι προαιρετικά και μπορείς να χρησιμοποιήσεις τα αγαπημένα σου.",
+            "tone-sandbox": "Το TayPE εκτελεί τα ένθετα VST3 σε ξεχωριστή, απομονωμένη διεργασία. Αν καταρρεύσει ένα plug-in, η συνεδρία σου μένει ανοιχτή.",
             "tone-kicker": "Τέχνη πρώτα. Τόνος στο κέντρο.",
             "philosophy-heading": "Κάντε το δίσκο",
             "philosophy-copy-1": "Το Taylor's Performance Environment υπάρχει για να σας βοηθήσει να φτιάξετε τον δίσκο, όχι να πνιγείτε σε ατελείωτες επιλογές. Ένα πλήρως εξοπλισμένο πολυτροχικό DAW με την ψυχή μιας ταινιογραφικής μηχανής.\nΧτισμένο γύρω από τη ροή και την αίσθηση μιας σπουδαίας κονσόλας μίξης.\nΛιγότερες λειτουργίες, λιγότερα μενού, περισσότερη μουσική.",
@@ -2359,7 +2370,8 @@ defineSiteLocale("ar", {
         "hero-platform": "macOS Monterey+ · Apple Silicon أصلي + Intel · مضيف VST3",
         "tone-heading": "معمارية الصوت",
         "tone-intro-1": "TayPE ليس ميكسرًا رقميًا مسطحًا. يمكن لكل قناة أن تمر عبر مرحلة preamp مُنمذجة - شخصية عتاد حقيقي التقطها Neural Amp Modeler وتُطبَّق من المصدر. وعلى ناقل المكس، يضيف محرك جمع مُنمذج تشبعًا وتماسكًا ودفعًا بروح الكونسول.",
-        "tone-intro-2": "لا تحتاج إلى إضافات. تعمل محاكاة الكونسول مباشرة داخل محرك الصوت - أوزان مشتركة، حالة لكل قناة، وبدون زمن تأخير إضافي. الفلسفة نفسها مثل DSP المسرَّع عتاديًا، مدمجة في الميكسر لا ملصقة فوقه.",
+        "tone-intro-2": "تعمل محاكاة الكونسول مباشرةً في محرك الصوت في TayPE بزمن تأخير فائق الانخفاض. الإضافات اختيارية، ويمكنك استخدام إضافاتك المفضلة.",
+        "tone-sandbox": "يشغّل TayPE إضافات VST3 في عملية معزولة منفصلة. إذا تعطّلت إحدى الإضافات، تبقى جلستك مفتوحة.",
         "tone-kicker": "الحرفة أولاً. النبرة في القلب.",
         "philosophy-heading": "اصنع التسجيل",
         "philosophy-copy-1": "Taylor's Performance Environment موجود ليساعدك على صنع التسجيل، لا الغرق في خيارات لا تنتهي. DAW متعدد المسارات متكامل الميزات بروح آلة الشريط.\nمبني حول تدفق وإحساس كونسول مزج عظيم.\nأوضاع أقل، قوائم أقل، موسيقى أكثر.",
@@ -2522,7 +2534,8 @@ defineSiteLocale("zh-cn", {
         "hero-platform": "macOS Monterey+ · Apple Silicon 原生 + Intel · VST3 宿主",
         "tone-heading": "音色架构",
         "tone-intro-1": "TayPE 不是一台扁平的数字调音台。每个通道都可以经过建模的 preamp 级 - 用 Neural Amp Modeler 捕捉真实硬件的性格，并在声源处应用。在混音总线上，建模的 summing 引擎带来类似控制台的饱和、凝聚力和驱动力。",
-        "tone-intro-2": "不需要插件。控制台模拟直接运行在音频引擎里 - 共享权重张量、逐通道状态、零附加延迟。和硬件加速 DSP 同一套理念：它被做进了混音器，而不是事后贴上去。",
+        "tone-intro-2": "调音台模拟直接在 TayPE 的音频引擎中运行，延迟极低。插件按需使用，欢迎加入你喜欢的插件。",
+        "tone-sandbox": "TayPE 在独立的沙盒进程中运行 VST3 插件。即使插件崩溃，会话也会保持打开。",
         "tone-kicker": "先做作品。音色在核心。",
         "philosophy-heading": "把唱片做完",
         "philosophy-copy-1": "Taylor's Performance Environment 存在的目的，是帮你把唱片做完，而不是淹没在无穷选项里。一个功能齐全、拥有磁带机灵魂的多轨 DAW。\n围绕优秀调音台的流程和手感构建。\n更少模式，更少菜单，更多音乐。",
@@ -2685,7 +2698,8 @@ defineSiteLocale("ko-kr", {
         "hero-platform": "macOS Monterey+ · Apple Silicon 네이티브 + Intel · VST3 호스트",
         "tone-heading": "톤 아키텍처",
         "tone-intro-1": "TayPE는 납작한 디지털 믹서가 아닙니다. 각 채널은 모델링된 preamp 단을 통과할 수 있습니다 - Neural Amp Modeler로 캡처한 실제 하드웨어의 성격을 소스에 적용합니다. 믹스 버스에서는 모델링된 summing 엔진이 콘솔 같은 새츄레이션, 응집력, 드라이브를 더합니다.",
-        "tone-intro-2": "플러그인이 필요 없습니다. 콘솔 에뮬레이션은 오디오 엔진 안에서 직접 동작합니다 - 공유 weight tensor, 채널별 상태, 추가 레이턴시 0. 하드웨어 가속 DSP와 같은 철학을 믹서에 붙인 것이 아니라 믹서 안에 넣었습니다.",
+        "tone-intro-2": "콘솔 에뮬레이션은 TayPE 오디오 엔진에서 직접 작동하며 지연 시간이 매우 짧습니다. 플러그인은 선택 사항이며 즐겨 쓰는 플러그인도 사용할 수 있습니다.",
+        "tone-sandbox": "TayPE는 VST3 인서트를 별도의 샌드박스 프로세스에서 실행합니다. 플러그인이 충돌해도 세션은 열린 상태로 유지됩니다.",
         "tone-kicker": "작업이 먼저. 톤은 중심에.",
         "philosophy-heading": "음반을 완성하세요",
         "philosophy-copy-1": "Taylor's Performance Environment는 끝없는 선택지에 빠지는 대신 음반을 만들도록 돕기 위해 존재합니다. 테이프 머신의 영혼을 지닌, 모든 기능을 갖춘 멀티트랙 DAW.\n훌륭한 믹싱 콘솔의 흐름과 감각을 중심으로 만들었습니다.\n모드는 줄이고, 메뉴는 줄이고, 음악은 더 많이.",
@@ -3444,7 +3458,7 @@ if (gregismEl) {
     const dlgSource = dialog.querySelector('source');
     const dlgImg = dialog.querySelector('img');
     if (!dlgImg) return;
-    document.querySelectorAll('.screenshot-row img').forEach(function (img) {
+    document.querySelectorAll('.screenshot-row img:not([data-shot-image])').forEach(function (img) {
         img.addEventListener('click', function () {
             if (dlgSource && img.dataset.zoomWebp) {
                 dlgSource.srcset = img.dataset.zoomWebp;
@@ -3455,4 +3469,9 @@ if (gregismEl) {
         });
     });
     dialog.addEventListener('click', function () { dialog.close(); });
+    dialog.addEventListener('close', function () {
+        if (dialog.open) return;
+        dlgSource?.removeAttribute('srcset');
+        dlgImg.removeAttribute('src');
+    });
 })();
