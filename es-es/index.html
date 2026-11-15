@@ -6,7 +6,7 @@
 <title>TayPE – Recording and Mixing DAW for Mac</title>
 <meta id="meta-description" name="description" content="Make the record. TayPE is a multitrack DAW for Mac with the soul of a tape machine. Fewer modes, fewer menus, more music.">
 <meta id="meta-og-title" property="og:title" content="TayPE - Make the Record">
-<meta id="meta-og-description" property="og:description" content="Craft First, Accessible by Design">
+<meta id="meta-og-description" property="og:description" content="Get back to the flow, with a different kind of DAW">
 <meta id="meta-og-url" property="og:url" content="https://taype.ruminantaudioworks.com/">
 <meta property="og:image" content="https://taype.ruminantaudioworks.com/assets/img/og-image.jpg">
 <meta property="og:type" content="website">
@@ -285,6 +285,7 @@ html[dir="rtl"] .lang-select {
 .hero h1 {
     font-family: 'Press Start 2P', monospace;
     font-size: clamp(1.4rem, 4vw, 2.8rem);
+    line-height: 1.2;
     color: var(--brass);
     letter-spacing: 4px;
     margin-bottom: 1rem;
@@ -305,6 +306,7 @@ html[dir="rtl"] .lang-select {
     max-width: 600px;
     margin-bottom: 1.5rem;
     line-height: 1.8;
+    white-space: pre-line;
 }
 
 .hero-manifesto,
@@ -1059,6 +1061,10 @@ dialog#screenshot-zoom img {
     margin-bottom: 1rem;
 }
 
+#a11y-heading {
+    text-wrap: balance;
+}
+
 .screenshot-callout p {
     margin: 0 auto;
     color: var(--text-muted);
@@ -1331,9 +1337,8 @@ footer {
 
 <section class="hero" id="top">
     <h1>TayPE</h1>
-    <p class="hero-tagline">
-        <span id="hero-tagline-text">Craft First, Accessible by Design</span>
-    </p>
+    <p class="hero-tagline" id="hero-tagline-text">Get back to the flow,
+with a different kind of DAW</p>
     <picture>
         <source type="image/webp" srcset="/assets/img/logo-320.webp 320w, /assets/img/logo-480.webp 480w, /assets/img/logo-640.webp 640w, /assets/img/logo-960.webp 960w" sizes="(max-width: 720px) 70vw, 400px">
         <img id="hero-logo" src="/assets/img/logo-480.png" srcset="/assets/img/logo-320.png 320w, /assets/img/logo-480.png 480w, /assets/img/logo-640.png 640w, /assets/img/logo-960.png 960w" sizes="(max-width: 720px) 70vw, 400px" alt="TayPE - tape reel logo" class="hero-logo" width="480" height="320" decoding="async">
@@ -1488,7 +1493,7 @@ footer {
 <hr class="section-divider">
 
 <section class="screenshot-callout" id="features">
-    <h2 id="a11y-heading">Built for Everyone</h2>
+    <h2 id="a11y-heading">Craft First, Accessible by Design</h2>
     <p id="a11y-copy">
         <strong>Craft requires access.</strong>
         <strong>Accessibility is not a feature. It's a foundation.</strong>
