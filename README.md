@@ -6,6 +6,10 @@ TayPE is a multitrack digital audio workstation for macOS built for musicians wh
 
 ## Download
 
+The [TayPE homepage](https://taype.ruminantaudioworks.com/) is the English
+introduction. The [product page](https://taype.ruminantaudioworks.com/product/)
+has the full walkthrough, language selector, pricing and download links.
+
 Grab the latest release from the [Releases page](https://github.com/taylormadeapps/taype-releases/releases).
 
 The website takes its displayed version and the matching **Release notes** link

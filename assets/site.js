@@ -61,10 +61,10 @@ const locales = {
         fontMode: "pixel",
         quoteOpen: "\u201c",
         quoteClose: "\u201d",
-        title: "TayPE – Recording and Mixing DAW for Mac",
-        metaDescription: "Make the record. TayPE is a multitrack DAW for Mac with the soul of a tape machine. Fewer modes, fewer menus, more music.",
-        ogTitle: "TayPE - Make the Record",
-        ogDescription: "Get back to the flow, with a different kind of DAW",
+        title: "TayPE – Features, Pricing and Download for Mac",
+        metaDescription: "Explore TayPE’s tape-style recording, analogue-inspired mixer and non-linear editing. See pricing, licensing and the macOS download.",
+        ogTitle: "TayPE – Features, Pricing and Download",
+        ogDescription: "Explore TayPE’s tape-style recording, analogue-inspired mixer and non-linear editing. See pricing, licensing and the macOS download.",
         text: {
             "lang-switch-label": "Language",
             "nav-features": "Features",
@@ -2910,8 +2910,8 @@ function writeLocalePreference(locale) {
     }
 }
 
-function isRootPath(pathname) {
-    return pathname === "/" || pathname === "/index.html" || pathname === "";
+function isEnglishProductPath(pathname) {
+    return pathname === "/product/" || pathname === "/product" || pathname === "/product/index.html";
 }
 
 function getPathLocale(pathname) {
@@ -2921,7 +2921,7 @@ function getPathLocale(pathname) {
 }
 
 function getSitePath(locale) {
-    return locale === "en-gb" ? "/" : `/${locale}/`;
+    return locale === "en-gb" ? "/product/" : `/${locale}/`;
 }
 
 function getSiteUrl(locale) {
@@ -3332,7 +3332,7 @@ function applyLocale(localeKey) {
     }
 
     const navHome = document.getElementById("nav-home");
-    if (navHome) navHome.setAttribute("href", getSitePath(currentLocale));
+    if (navHome) navHome.setAttribute("href", currentLocale === "en-gb" ? "/" : getSitePath(currentLocale));
 
     updateDownloadLinks();
 
@@ -3363,7 +3363,7 @@ function initSite() {
 
     if (requestedLocale) {
         writeLocalePreference(requestedLocale);
-        if (requestedLocale === "en-gb" && isRootPath(url.pathname)) {
+        if (requestedLocale === "en-gb" && isEnglishProductPath(url.pathname)) {
             applyLocale("en-gb");
             url.searchParams.delete("lang");
             const remainingSearch = url.searchParams.toString();
@@ -3381,7 +3381,7 @@ function initSite() {
         return true;
     }
 
-    if (isRootPath(url.pathname)) {
+    if (isEnglishProductPath(url.pathname)) {
         const preferredLocale = storedLocale || browserLocale || "en-gb";
         if (preferredLocale !== "en-gb") {
             navigateToLocale(preferredLocale, { replace: true });

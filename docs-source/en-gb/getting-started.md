@@ -1,6 +1,6 @@
 # Getting Started
 
-The [TayPE download section](https://taype.ruminantaudioworks.com/#download)
+The [TayPE download section](https://taype.ruminantaudioworks.com/product/#download)
 shows the current macOS version beneath **Download now**. Open **Release notes**
 to see what changed in that version.
 

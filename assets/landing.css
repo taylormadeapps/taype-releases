@@ -1,0 +1,308 @@
+:root {
+    color-scheme: dark;
+    --surface: #26211a;
+    --text: #f5f1e8;
+    --brass: #f0c96a;
+    background: #130e0b;
+    color: var(--text);
+    font: 400 1rem / 1.55 "Avenir Next", system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+body > nav,
+body > footer {
+    box-sizing: border-box;
+    padding: 1rem clamp(1rem, 5vw, 3rem);
+}
+
+body > nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .35rem 1.5rem;
+    background: #17120e;
+}
+
+body > nav a,
+body > footer a {
+    color: var(--brass);
+}
+
+body > nav a {
+    text-decoration: none;
+}
+
+.nav-brand,
+.nav-links,
+.footer-links,
+.footer-brand a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .25rem 1rem;
+}
+
+.nav-brand {
+    gap: .5rem;
+    font-weight: 750;
+}
+
+.nav-brand img,
+.footer-brand img {
+    display: block;
+}
+
+.nav-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links .nav-cta {
+    border-radius: .35rem;
+    background: var(--brass);
+    color: #17120e;
+    padding: 0 .85rem;
+    font-weight: 700;
+}
+
+body > footer {
+    background: #17120e;
+    text-align: center;
+}
+
+.footer-brand a,
+.footer-links {
+    justify-content: center;
+}
+
+.footer-brand img {
+    width: 2.25rem;
+    height: auto;
+}
+
+.footer-brand,
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-copy {
+    max-width: 62ch;
+    margin: 0 auto;
+    font-size: .95rem;
+}
+
+@media (max-width: 640px) {
+    body > nav {
+        padding-block: .5rem;
+    }
+
+    .nav-links {
+        gap: 0 .85rem;
+        font-size: .9rem;
+    }
+}
+
+#taype-landing {
+  --room: #130e0b;
+  --cream: #fbecd7;
+  --copy: #dbc6b0;
+  --brass: #f0c96a;
+  --gutter: clamp(1.25rem, 5.2%, 3.75rem);
+  --section-gap: clamp(2.15rem, 5.4vw, 3.6rem);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  color: var(--cream);
+  background: var(--room);
+  color-scheme: dark;
+  font: 400 1rem / 1.55 "Avenir Next", system-ui, sans-serif;
+}
+#taype-landing *,
+#taype-landing *::before,
+#taype-landing *::after {
+  box-sizing: inherit;
+}
+#taype-landing .session-hero {
+  --hero-shadow: #1e130d;
+  background: var(--hero-shadow);
+}
+#taype-landing .session-tagline {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.1rem, 3.4vw, 2.5rem) var(--gutter) .5rem;
+  text-align: center;
+}
+#taype-landing .session-photo {
+  position: relative;
+  overflow: hidden;
+  /* Crop the baked headline above row 226 and keep the artwork down to its bottom edge. */
+  aspect-ratio: 1254 / 1028;
+  margin-top: -.875rem;
+}
+#taype-landing img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#taype-landing .session-photo img {
+  transform: translateY(-18%);
+}
+#taype-landing .session-photo::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--hero-shadow), transparent 10%, transparent 94%, var(--room));
+  content: "";
+  pointer-events: none;
+}
+/* The page reads down one column. Only the product figures share rows. */
+#taype-landing .session-content,
+#taype-landing .session-gallery {
+  display: grid;
+  gap: var(--section-gap);
+}
+#taype-landing .session-content {
+  padding: .25rem var(--gutter) var(--section-gap);
+}
+#taype-landing h1,
+#taype-landing h2,
+#taype-landing h3,
+#taype-landing p,
+#taype-landing figure {
+  margin: 0;
+}
+#taype-landing h1,
+#taype-landing h2,
+#taype-landing h3 {
+  color: var(--cream);
+  font-weight: 750;
+  letter-spacing: -.045em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+#taype-landing h1 {
+  font-size: clamp(1.8rem, 8.6vw, 5.25rem);
+  font-weight: 800;
+}
+#taype-landing h2,
+#taype-landing h3 {
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+}
+#taype-landing p {
+  max-width: 58ch;
+  margin-top: .5rem;
+  color: var(--copy);
+  text-wrap: pretty;
+}
+#taype-landing .session-tagline p {
+  max-width: none;
+  margin-top: clamp(.3rem, 1vw, .6rem);
+  color: var(--cream);
+  font-size: clamp(1rem, 3.2vw, 2rem);
+  font-weight: 650;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+#taype-landing .session-intro p {
+  margin-top: .9rem;
+  font-size: clamp(1.02rem, 2.2vw, 1.27rem);
+}
+#taype-landing .session-reels {
+  display: grid;
+  grid-template-columns: minmax(0, .68fr) minmax(0, 1.62fr);
+  gap: clamp(1rem, 3.5vw, 2.15rem);
+  align-items: center;
+}
+#taype-landing .session-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.6rem, 3vw, 2.1rem);
+}
+#taype-landing .session-pair figcaption {
+  margin-top: 1.15rem;
+}
+#taype-landing figure img {
+  border-radius: .4rem;
+}
+#taype-landing .session-testimonials .session-pair {
+  margin-top: 1.4rem;
+}
+#taype-landing .session-testimonials img {
+  width: 5rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#taype-landing .session-testimonials blockquote {
+  margin: .9rem 0 0;
+  color: var(--cream);
+  text-wrap: pretty;
+}
+#taype-landing .session-testimonials figcaption {
+  font-size: .92rem;
+  line-height: 1.45;
+}
+#taype-landing .session-testimonials figcaption p {
+  margin-top: .3rem;
+}
+#taype-landing .session-testimonials a {
+  color: var(--brass);
+  font-weight: 650;
+}
+#taype-landing .session-closing {
+  display: grid;
+  gap: 1.5rem;
+}
+#taype-landing .session-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1.75rem;
+  margin: .8rem 0 1rem;
+  padding-inline-start: 1.15rem;
+  color: var(--cream);
+  font-weight: 650;
+}
+#taype-landing .session-terms li::marker {
+  color: var(--brass);
+}
+#taype-landing .session-action {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: .6rem 1.2rem;
+  border: 1px solid var(--brass);
+  border-radius: .35rem;
+  color: var(--brass);
+  font-weight: 650;
+  text-decoration: none;
+}
+#taype-landing .session-action:hover {
+  color: var(--room);
+  background: var(--brass);
+}
+@media (max-width: 580px) {
+  #taype-landing .session-reels,
+  #taype-landing .session-pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #taype-landing .session-pair {
+    gap: var(--section-gap);
+  }
+  #taype-landing .session-gallery .session-pair figure {
+    display: grid;
+  }
+  #taype-landing .session-gallery .session-pair figcaption {
+    grid-row: 1;
+    margin: 0 0 1rem;
+  }
+}
