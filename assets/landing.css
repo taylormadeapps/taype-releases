@@ -54,6 +54,7 @@ body > footer a {
   --cream: #fbecd7;
   --copy: #dbc6b0;
   --brass: #f0c96a;
+  --brass-hover: #e0a84e;
   --gutter: clamp(1.25rem, 5.2%, 3.75rem);
   --section-gap: clamp(2.15rem, 5.4vw, 3.6rem);
   box-sizing: border-box;
@@ -200,6 +201,7 @@ body > footer a {
 #taype-landing .session-closing {
   display: grid;
   gap: 1.5rem;
+  container-type: inline-size;
 }
 #taype-landing .session-terms {
   display: flex;
@@ -213,10 +215,16 @@ body > footer a {
 #taype-landing .session-terms li::marker {
   color: var(--brass);
 }
+#taype-landing .session-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
 #taype-landing .session-action {
-  justify-self: start;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 2.75rem;
   padding: .6rem 1.2rem;
   border: 1px solid var(--brass);
@@ -228,6 +236,27 @@ body > footer a {
 #taype-landing .session-action:hover {
   color: var(--room);
   background: var(--brass);
+}
+#taype-landing .session-action-primary {
+  min-height: 3.5rem;
+  padding-inline: 1.7rem;
+  color: var(--room);
+  background: var(--brass);
+  font-size: 1.125rem;
+  font-weight: 750;
+}
+#taype-landing .session-action-primary:hover {
+  background: var(--brass-hover);
+  border-color: var(--brass-hover);
+}
+@container (max-width: 430px) {
+  #taype-landing .session-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #taype-landing .session-action-primary {
+    width: 100%;
+  }
 }
 @media (min-width: 581px) and (any-hover: hover) {
   #taype-landing .session-hero {
