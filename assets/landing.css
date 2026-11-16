@@ -72,12 +72,13 @@ body > footer a {
 }
 #taype-landing .session-hero {
   --hero-shadow: #1e130d;
+  --hero-copy-size: 100vw;
   background: var(--hero-shadow);
 }
 #taype-landing .session-tagline {
   position: relative;
   z-index: 1;
-  padding: clamp(1.1rem, 3.4vw, 2.5rem) var(--gutter) .5rem;
+  padding: clamp(1.1rem, calc(var(--hero-copy-size) * .034), 2.5rem) var(--gutter) .5rem;
   text-align: center;
 }
 #taype-landing .session-photo {
@@ -128,7 +129,7 @@ body > footer a {
   text-wrap: balance;
 }
 #taype-landing h1 {
-  font-size: clamp(1.8rem, 8.6vw, 5.25rem);
+  font-size: clamp(1.8rem, calc(var(--hero-copy-size) * .086), 5.25rem);
   font-weight: 800;
 }
 #taype-landing h2,
@@ -143,9 +144,9 @@ body > footer a {
 }
 #taype-landing .session-tagline p {
   max-width: none;
-  margin-top: clamp(.3rem, 1vw, .6rem);
+  margin-top: clamp(.3rem, calc(var(--hero-copy-size) * .01), .6rem);
   color: var(--cream);
-  font-size: clamp(1rem, 3.2vw, 2rem);
+  font-size: clamp(1rem, calc(var(--hero-copy-size) * .032), 2rem);
   font-weight: 650;
   line-height: 1.2;
   text-wrap: balance;
@@ -227,6 +228,20 @@ body > footer a {
 #taype-landing .session-action:hover {
   color: var(--room);
   background: var(--brass);
+}
+@media (min-width: 581px) and (any-hover: hover) {
+  #taype-landing .session-hero {
+    /* The cropped artwork and proportional headline fit within a square. */
+    --hero-available-height: 100vh;
+    --hero-fit-size: max(20rem, var(--hero-available-height));
+    --hero-copy-size: min(100vw, var(--hero-fit-size));
+    max-inline-size: var(--hero-fit-size);
+    margin-inline: auto;
+  }
+  body > .analytics-consent + #taype-landing .session-hero {
+    /* Allow for the inline cookie prompt and two lines of its description. */
+    --hero-available-height: calc(100vh - 11rem);
+  }
 }
 @media (max-width: 580px) {
   #taype-landing .session-reels,
