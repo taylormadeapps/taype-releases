@@ -3332,7 +3332,7 @@ function applyLocale(localeKey) {
     }
 
     const navHome = document.getElementById("nav-home");
-    if (navHome) navHome.setAttribute("href", currentLocale === "en-gb" ? "/" : getSitePath(currentLocale));
+    if (navHome) navHome.setAttribute("href", getSitePath(currentLocale));
 
     updateDownloadLinks();
 
