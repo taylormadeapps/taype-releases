@@ -54,11 +54,25 @@
     background: #373026;
 }
 
+.analytics-consent .analytics-consent-allow {
+    border-color: transparent;
+    background: var(--brass, #f0c96a);
+    color: var(--bg, #0e0d0b);
+}
+
+.analytics-consent .analytics-consent-allow:hover {
+    background: var(--brass-hover, #e0a84e);
+}
+
 .analytics-consent-actions button:focus-visible,
 .analytics-consent a:focus-visible,
 .analytics-settings-link:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
+}
+
+.analytics-consent .analytics-consent-allow:focus-visible {
+    outline-color: var(--brass, #f0c96a);
 }
 
 .analytics-consent-status:not(:empty) {

@@ -139,6 +139,7 @@
 
         actions.className = "analytics-consent-actions";
         allow.type = "button";
+        allow.className = "analytics-consent-allow";
         decline.type = "button";
         allow.textContent = copy.allow;
         decline.textContent = copy.decline;
