@@ -76,19 +76,26 @@ In the Plugin Manager's **Menu Path** column, `*` puts a plug-in at the picker r
 
 ARA-only plug-ins such as **SpectraLayers** and **WaveLab** take a Menu Path too. They never appear in insert slots, so their path organises them in the top-level **ARA2** menu instead of the insert picker. Leave the column blank to keep TayPE's generated vendor and category folders.
 
-TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, **Taype Comp** and **Vintage Vocoder FX**. The macOS PKG's **Plug-ins for other DAWs** option installs VST3, Audio Unit and AAX Native copies. It is selected by default; untick it to install only TayPE. A later installer with the option selected replaces all three formats with that installer's versions. The drag-and-drop DMG updates only TayPE.
+TayPE stock entries include **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, **Taype Comp**, **Vintage Vocoder FX** and **Harmonculus**. The macOS PKG's **Plug-ins for other DAWs** option installs VST3, Audio Unit and AAX Native copies. It is selected by default; untick it to install only TayPE. A later installer with the option selected replaces all three formats with that installer's versions. The drag-and-drop DMG updates only TayPE.
 
-Each format goes into its standard macOS plug-in location. TayPE uses its own bundled copies. Remove stale copies you previously installed by hand if another DAW finds those instead.
+Each format goes into its standard macOS plug-in location. TayPE uses its bundled Harmonculus in instrument slots and hides duplicate scanned VST3 copies. Remove stale copies you previously installed by hand if another DAW finds those instead.
 
 In a host that lets you resize the stock plug-in window, drag its edge to
 scale the controls and displays together. Each editor has its own zoom,
 independent of TayPE's **View > UI Scale**.
 
-Keep TayPE installed and its home folder configured so the companion effects can share its presets, NAM profiles, IRs, licence and 90-day evaluation. After the evaluation ends, opening an editor in another DAW shows a dismissible **Buy TayPE** reminder. Controls, audio, automation and session recall remain available. A valid TayPE licence hides the reminder. If the pricing page fails to open, the banner shows an error and **Buy TayPE** stays available to retry. Vintage Vocoder is free.
+Keep TayPE installed and its home folder configured so the companion plug-ins can share its presets, NAM profiles, IRs, licence and 90-day evaluation. After the evaluation ends, opening an editor in another DAW shows a dismissible **Buy TayPE** reminder. Controls, audio, automation and session recall remain available. A valid TayPE licence hides the reminder. If the pricing page fails to open, the banner shows an error and **Buy TayPE** stays available to retry. Vintage Vocoder is free.
 
 In another DAW, choose **Init** at the top of the preset menu in Taype Rooms, Ache-Delay, T-Clipper, Taype Drive, Taype EQ or Taype Comp to restore that effect's stock settings. This also restores Drive's profile selections and mode settings, and Rooms' initial impulse response. Init works independently of your saved **Default** preset. The preset field shows **Init**, with a `*` after you change the sound. Vintage Vocoder has its own Init item.
 
-All seven were checked in Pro Tools Intro 2026.4.1 on Apple Silicon with stereo audio at 48 kHz, including loading, processing and saved-session recall. Mono, sidechain, automation playback and expired-licence cases have not been checked in Pro Tools. Logic Pro is the tested AU host; GarageBand and MainStage are untested.
+The seven stock effects were checked in Pro Tools Intro 2026.4.1 on Apple Silicon with stereo audio at 48 kHz, including loading, processing and saved-session recall. Mono, sidechain, automation playback and expired-licence cases have not been checked in Pro Tools. Logic Pro is the tested AU host; GarageBand and MainStage are untested.
+
+To play Harmonculus, add it to an instrument slot, import a sample and
+play MIDI. Use the partial surface to edit how each partial evolves, or select
+a slice to edit its levels in the 2D graph. The slice range sets what plays.
+In other DAWs, Harmonculus has the TayPE preset bar along the bottom. It shares
+`Presets/Instruments/Harmonculus` in TayPE Home. Presets store the analysed
+partials and edits, so they play even if you move the source audio.
 
 Reels remember TayPE stock plug-ins by their bundled name, so those inserts
 still load if the TayPE app has been renamed or moved. When TayPE opens an older

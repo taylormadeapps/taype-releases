@@ -133,7 +133,13 @@ not started delivering the callbacks required to process sound, or an
 established callback path has stopped. Playback, recording and live input
 monitoring remain unavailable instead of running from an inaccurate software
 clock. Your MON settings are left as they are, so monitoring comes back by
-itself when the device does.
+itself when the device does. TayPE shows one dialog per outage. When the audio
+comes back, the dialog closes by itself and a message above the transport says
+so. **Dismiss**, or Escape, closes it sooner.
+
+When your Mac goes to sleep, for example when you close the lid, TayPE waits for
+it to wake before it decides whether the audio device has a problem. If the
+device needs reopening after the wake, TayPE does that itself.
 
 Closing the laptop lid is a common cause. If the same device is still available
 when you open the lid, TayPE tries to resume it without changing your audio

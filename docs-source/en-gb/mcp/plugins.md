@@ -4,7 +4,7 @@ Plugin tools manage VST3 inserts, TayPE stock processors, hardware inserts, MIDI
 
 ### `list_plugins`
 
-Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, and **Taype Comp**. ARA-only plug-ins (SpectraLayers, WaveLab, and others marked OnlyARA) are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow. Dual-mode ARA2 effects such as Melodyne stay in this list and load as ordinary non-ARA inserts.
+Return the scanned plugin catalogue plus bundled TayPE stock entries such as **Taype Rooms**, **Ache-Delay**, **T-Clipper**, **Taype Drive**, **Taype EQ**, **Taype Comp**, and the **Harmonculus** instrument. ARA-only plug-ins (SpectraLayers, WaveLab, and others marked OnlyARA) are not listed as normal inserts because they open from clips through TayPE's selected ARA2 provider workflow. Dual-mode ARA2 effects such as Melodyne stay in this list and load as ordinary non-ARA inserts.
 
 An entry with `timedOutOnScan` is **Needs Attention**: its scan was skipped. A plug-in TayPE never read has `uid` 0 and its bundle's file name; one it read before keeps that `uid` and name. It can still be inserted, and its first load, in the plug-in sandbox, records its real name, vendor, category and `uid` and drops `timedOutOnScan`.
 
