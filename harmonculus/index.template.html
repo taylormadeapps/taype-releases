@@ -17,6 +17,8 @@
     <link rel="icon" href="images/shell.webp" type="image/webp">
     <link rel="stylesheet" href="/assets/analytics-consent.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/product-sections.css">
+    <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
 </head>
 <body>
@@ -98,16 +100,11 @@
                 </div>
             </div>
         </section>
+
+{{meet_taype.section}}
+{{community.section}}
     </main>
 
-    <footer class="site-footer">
-        <div class="wrap footer-inner">
-            <p>{{product.footer.copyright}}</p>
-            <nav aria-label="{{product.footer.label}}">
-                <a href="eula/">{{product.footer.eula}}</a>
-                <a href="/privacy/">{{common.privacy}}</a>
-            </nav>
-        </div>
-    </footer>
+{{product_footer.section}}
 </body>
 </html>

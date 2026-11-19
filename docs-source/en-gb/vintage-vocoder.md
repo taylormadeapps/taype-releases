@@ -23,11 +23,12 @@ The introduction video sits near the bottom of the product page, above
 **Community & Support**. Choose **Load introduction** to load YouTube’s player,
 then press Play. **Watch on YouTube** opens the video directly.
 
-The **Community & Support** section on the product and company pages links to
-the newsletter, Instagram, YouTube, Reddit and Discord. Use **Get in Touch** for
-bugs, questions or suggestions. Choose **Vintage Vocoder** in the required
-**Product** dropdown. Website links start at **N/A**. Email is optional, but
-leave it if you would like a reply.
+The Vintage Vocoder, Harmonculus and Ruminant Audio Works pages share a
+**Community & Support** section with links to the newsletter, Instagram,
+YouTube, Reddit and Discord. Use **Get in Touch** for bugs, questions or
+suggestions. For Vintage Vocoder queries, choose **Vintage Vocoder** in the
+required **Product** dropdown. Website links start at **N/A**. Email is
+optional. Leave it if you would like a reply.
 
 ## Format choices
 

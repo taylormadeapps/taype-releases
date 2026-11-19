@@ -7,6 +7,8 @@ import json
 import re
 from pathlib import Path
 
+from render_product_sections import render_product_sections
+
 
 PRODUCT = Path(__file__).resolve().parents[1] / "harmonculus"
 TOKEN = re.compile(r"\{\{([a-zA-Z0-9_.]+)\}\}")
@@ -19,6 +21,10 @@ def render() -> dict[Path, str]:
         raise ValueError("Every Harmonculus source-locale entry must be a nonempty string")
 
     templates = {page: page.with_name("index.template.html").read_text(encoding="utf-8") for page in PAGES}
+    product_page = PRODUCT / "index.html"
+    templates[product_page] = render_product_sections(
+        templates[product_page], extra_footer_links='<a href="eula/">{{product.footer.eula}}</a>'
+    )
     used_keys = {key for template in templates.values() for key in TOKEN.findall(template)}
     missing = used_keys - catalogue.keys()
     unused = catalogue.keys() - used_keys

@@ -4,11 +4,18 @@
     --surface: #1b1814;
     --text: #f5f0e5;
     --muted: #c9c0b1;
-    --gold: #f1cb72;
+    --brass-rgb: 241, 203, 114;
+    --gold: rgb(var(--brass-rgb));
     --ink: #251a08;
     --line: #3d362c;
     --wrap: 86rem;
     --gutter: clamp(1.25rem, 4vw, 4rem);
+    --brass: var(--gold);
+    --border: var(--line);
+    --panel: var(--surface);
+    --text-muted: var(--muted);
+    --text-dim: var(--muted);
+    --heading-font: system-ui, -apple-system, sans-serif;
     font-family: system-ui, -apple-system, sans-serif;
 }
 
@@ -28,7 +35,7 @@ a:hover { color: var(--gold); }
 img { display: block; max-width: 100%; height: auto; }
 figure, h1, h2, h3, p { margin: 0; }
 
-.wrap {
+.wrap, .page-section {
     width: min(100% - 2 * var(--gutter), var(--wrap));
     margin-inline: auto;
 }
@@ -46,7 +53,7 @@ figure, h1, h2, h3, p { margin: 0; }
 
 .site-header { border-bottom: 1px solid var(--line); }
 
-.header-inner, .footer-inner {
+.header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +63,7 @@ figure, h1, h2, h3, p { margin: 0; }
 
 .header-inner { min-height: 4.35rem; padding-block: 0.45rem; }
 
-.brand, .site-header nav, .footer-inner nav {
+.brand, .site-header nav {
     display: flex;
     align-items: center;
     gap: 0.4rem clamp(0.8rem, 2vw, 1.7rem);
@@ -114,20 +121,18 @@ h1 {
     font-size: clamp(1rem, 1.3vw, 1.2rem);
 }
 
-.primary-link {
+.primary-link, .taype-link .btn {
     display: inline-flex;
     align-items: center;
     gap: 1.15rem;
     min-height: 2.85rem;
-    margin-top: 1.55rem;
     padding: 0.55rem 0.95rem;
     border-radius: 0.35rem;
-    background: var(--gold);
-    color: var(--ink);
     font-weight: 700;
     text-decoration: none;
 }
 
+.primary-link { margin-top: 1.55rem; background: var(--gold); color: var(--ink); }
 .primary-link:hover { background: #ffe3a3; color: var(--ink); }
 
 .screen {
@@ -159,7 +164,7 @@ h2 {
 h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 
 .instrument-intro p, .release-intro p { margin-top: 0.9rem; }
-.instrument p, .release p, .site-footer p { color: var(--muted); }
+.instrument p, .release p { color: var(--muted); }
 .instrument p { font-size: clamp(1rem, 1.25vw, 1.12rem); }
 
 .feature-grid, .release-grid {
@@ -205,9 +210,17 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
     font-weight: 600;
 }
 
-.site-footer { border-top: 1px solid var(--line); font-size: 0.875rem; }
-.footer-inner { padding-block: 1rem; }
-.footer-inner a { display: inline-flex; align-items: center; min-height: 2.75rem; text-underline-offset: 0.25em; }
+.taype-link .micro-heading {
+    margin-bottom: 0.75rem;
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.raw-community { padding-block: 1rem clamp(3.5rem, 6vw, 5rem); }
+.raw-community a, .raw-product-footer .footer-wordmark a { color: var(--gold); text-underline-offset: 0.2em; }
 
 @media (max-width: 56rem) {
     .hero-grid { grid-template-columns: 1fr; }
