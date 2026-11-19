@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-from render_community import render as render_community
+from render_product_sections import render_product_sections
 
 
 PAGE = Path(__file__).resolve().parents[1] / "vintage-vocoder"
@@ -70,10 +70,7 @@ def render() -> dict[Path, str]:
     values["release.linux.checksums_url"] = (
         f"{RELEASES}/download/{release['tag']}/Vintage-Vocoder-{release['version']}-linux-SHA256SUMS.txt"
     )
-    template = (PAGE / "index.template.html").read_text(encoding="utf-8")
-    if template.count("{{community.section}}") != 1:
-        raise ValueError("Vintage Vocoder template must contain exactly one community section")
-    template = template.replace("{{community.section}}", render_community())
+    template = render_product_sections((PAGE / "index.template.html").read_text(encoding="utf-8"))
     used_keys = set(TOKEN.findall(template)) | set.union(*POLICY_KEYS.values())
     missing = used_keys - values.keys()
     unused = catalogue.keys() - used_keys

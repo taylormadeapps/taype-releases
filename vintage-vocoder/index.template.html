@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v={{style.version}}">
+<link rel="stylesheet" href="/assets/product-sections.css">
 <link rel="stylesheet" href="/assets/community.css">
 <link rel="stylesheet" href="/assets/analytics-consent.css">
 <script defer src="/assets/analytics-consent.js"></script>
@@ -187,10 +188,7 @@
         </div>
     </section>
 
-    <aside class="page-section taype-link">
-        <div><p class="micro-heading">{{taype.eyebrow}}</p><h2>{{taype.title}}</h2><p>{{taype.copy}}</p></div>
-        <a class="btn btn-secondary" href="/">{{taype.link}} <span aria-hidden="true">→</span></a>
-    </aside>
+{{meet_taype.section}}
     <section id="introduction" class="page-section introduction" aria-labelledby="introduction-heading">
         <h2 id="introduction-heading">{{video.heading}}</h2>
         <div id="introduction-player" class="video-player">
@@ -205,14 +203,10 @@
             <iframe src="https://www.youtube-nocookie.com/embed/7wRCYrC7VHE?playsinline=1" title="{{video.title}}" width="960" height="540" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
         </template>
     </section>
-{{community.section}}</main>
+{{community.section}}
+</main>
 
-<footer>
-    <a class="footer-mark" href="/ruminant-audio-works/" aria-label="{{footer.about}}"><img src="/assets/img/raw-logo-160.webp" alt="Ruminant Audio Works" width="160" height="196" loading="lazy" decoding="async"></a>
-    <p class="footer-wordmark"><a href="/ruminant-audio-works/">Ruminant Audio Works</a> · {{footer.location}}</p>
-    <p class="footer-copy">{{footer.company}}</p>
-    <div class="footer-links"><a href="/privacy/">{{footer.privacy}}</a><a href="/site-data/">{{footer.cookies}}</a></div>
-</footer>
+{{product_footer.section}}
 <script>
 const loadIntroduction = document.getElementById("load-introduction");
 loadIntroduction.hidden = false;
