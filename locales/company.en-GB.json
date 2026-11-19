@@ -1,0 +1,17 @@
+{
+  "nav.account": "My account",
+  "products.heading": "Our products",
+  "products.harmonculus.title": "Harmonculus",
+  "products.harmonculus.tagline": "Sculpt the sound. Play the music.",
+  "products.harmonculus.summary": "An additive synthesiser that turns samples into playable instruments. Shape the individual harmonics and how they move over time.",
+  "products.harmonculus.image_alt": "Harmonculus showing the Crossing Harmonic Bands preset and its multicoloured 3D partial surface",
+  "products.taype.title": "TayPE",
+  "products.taype.summary": "A tape-inspired recording workstation for making records with the immediacy of an analogue studio.",
+  "products.taype.image_alt": "TayPE’s tape machine with two white reels above a multitrack mixer",
+  "products.vocoder.title": "Vintage Vocoder",
+  "products.vocoder.summary": "A stereo vocoder with eight tuned carrier oscillators, a multimode filter and a vintage hardware interface.",
+  "products.vocoder.image_alt": "Vintage Vocoder’s wood-panelled editor with its carrier oscillator, filter and analysis controls",
+  "products.mpc.title": "MPC Plugin Loader",
+  "products.mpc.summary": "Install and play third-party plugins on a standalone Akai MPC with the RAW Plugin Loader and USB Creator.",
+  "products.mpc.image_alt": "RAW MPC USB Creator showing the bundled plugins and USB destination steps"
+}
