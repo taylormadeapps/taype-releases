@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
     <script defer src="vault.js"></script>
+    <script defer src="screenshot-viewer.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">{{product.skip}}</a>
@@ -64,14 +65,14 @@
             </div>
             <div class="feature-grid">
                 <article class="feature">
-                    <a class="screen-link" href="images/performance-editor.webp" aria-label="{{product.control.large}}">
+                    <a class="screen-link" href="images/performance-editor.webp" data-screenshot aria-label="{{product.control.large}}">
                         <img class="screen" src="images/performance-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.control.image}}">
                     </a>
                     <h3>{{product.control.title}}</h3>
                     <p>{{product.control.description}}</p>
                 </article>
                 <article class="feature">
-                    <a class="screen-link" href="images/effects-editor.webp" aria-label="{{product.effects.large}}">
+                    <a class="screen-link" href="images/effects-editor.webp" data-screenshot aria-label="{{product.effects.large}}">
                         <img class="screen" src="images/effects-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.effects.image}}">
                     </a>
                     <h3>{{product.effects.title}}</h3>
@@ -89,7 +90,7 @@
                     </div>
                     <figure id="preset-browser" class="vault-browser">
                         <figcaption>{{product.vault.browser.caption}}</figcaption>
-                        <a class="screen-link" href="images/preset-browser.webp" aria-labelledby="preset-browser-link">
+                        <a class="screen-link" href="images/preset-browser.webp" data-screenshot aria-labelledby="preset-browser-link">
                             <img class="screen" src="images/preset-browser.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.vault.browser.image}}">
                             <span id="preset-browser-link">{{product.vault.browser.large}}</span>
                         </a>
@@ -111,24 +112,17 @@
                         </audio>
                     </li>
                     <li>
-                        <h3 id="demo-round-filter-bass">{{product.vault.track.round_filter_bass}}</h3>
-                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
-                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
-                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">{{product.vault.fallback}}</a>
-                        </audio>
-                    </li>
-                    <li>
-                        <h3 id="demo-tape-triangle-pad">{{product.vault.track.tape_triangle_pad}}</h3>
-                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
-                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
-                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">{{product.vault.fallback}}</a>
-                        </audio>
-                    </li>
-                    <li>
                         <h3 id="demo-dub-strings">{{product.vault.track.dub_strings}}</h3>
                         <audio controls preload="none" aria-labelledby="demo-dub-strings">
                             <source src="audio/dub-strings.mp3" type="audio/mpeg">
                             <a href="audio/dub-strings.mp3" aria-describedby="demo-dub-strings">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-round-filter-bass">{{product.vault.track.round_filter_bass}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
+                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
+                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">{{product.vault.fallback}}</a>
                         </audio>
                     </li>
                     <li>
@@ -143,6 +137,13 @@
                         <audio controls preload="none" aria-labelledby="demo-beating-mallet">
                             <source src="audio/beating-mallet.mp3" type="audio/mpeg">
                             <a href="audio/beating-mallet.mp3" aria-describedby="demo-beating-mallet">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-tape-triangle-pad">{{product.vault.track.tape_triangle_pad}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
+                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
+                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">{{product.vault.fallback}}</a>
                         </audio>
                     </li>
                     <li>
@@ -193,5 +194,11 @@
     </main>
 
 {{product_footer.section}}
+    <dialog id="screenshot-viewer" class="screenshot-viewer" aria-label="{{product.screenshot.viewer}}">
+        <form method="dialog">
+            <button type="submit" autofocus>{{product.screenshot.close}}</button>
+        </form>
+        <img src="images/spectral-editor.webp" width="1440" height="1095" alt="{{product.hero.image}}">
+    </dialog>
 </body>
 </html>

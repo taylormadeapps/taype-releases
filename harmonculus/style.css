@@ -175,6 +175,51 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 
 .screen-link { display: block; border-radius: 0.65rem; }
 .screen-link:hover .screen { border-color: var(--gold); }
+.screen-link[data-screenshot] { cursor: zoom-in; }
+
+html.screenshot-viewer-open { overflow: hidden; }
+
+.screenshot-viewer {
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    padding: 0.25rem;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+}
+
+.screenshot-viewer[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.screenshot-viewer::backdrop { background: #090807e8; }
+
+.screenshot-viewer img {
+    width: auto;
+    max-height: calc(100vh - 5rem);
+    max-height: calc(100dvh - 5rem);
+    object-fit: contain;
+    cursor: zoom-out;
+}
+
+.screenshot-viewer button {
+    min-height: 2.75rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--gold);
+    border-radius: 0.35rem;
+    background: var(--surface);
+    color: var(--gold);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.screenshot-viewer button:hover { background: var(--gold); color: var(--ink); }
+.screenshot-viewer button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 .feature h3 { margin-top: 1.2rem; }
 .feature p { max-width: 57ch; margin-top: 0.55rem; }
 

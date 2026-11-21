@@ -61,6 +61,8 @@
   "product.release.title": "Early Access",
   "product.sample.description": "Import a recording and Harmonculus analyses it into partials. Draw the level of each partial over time, then loop the motion or lock it to the tempo of your session. Turn a drum hit into a sequence or stretch a chord into a drone.",
   "product.sample.title": "Make an instrument from a sample.",
+  "product.screenshot.close": "Close",
+  "product.screenshot.viewer": "Full-size Harmonculus screenshot",
   "product.skip": "Skip to content",
   "product.taype.preview.alt": "Explore TayPE. The reel-to-reel tape transport above the multitrack mixer.",
   "product.vault.browser.caption": "Click the preset name in Harmonculus to browse by bank or category and filter by rating.",

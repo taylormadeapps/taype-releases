@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
     <script defer src="vault.js"></script>
+    <script defer src="screenshot-viewer.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,14 +65,14 @@
             </div>
             <div class="feature-grid">
                 <article class="feature">
-                    <a class="screen-link" href="images/performance-editor.webp" aria-label="Open full-size Control screenshot">
+                    <a class="screen-link" href="images/performance-editor.webp" data-screenshot aria-label="Open full-size Control screenshot">
                         <img class="screen" src="images/performance-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="Control tab showing voice controls, modulation matrix, arpeggiator, envelopes, ladder filter and FET compressor.">
                     </a>
                     <h3>Play the partials</h3>
                     <p>Shape how the sound responds with filter key tracking, velocity, polyphonic glide and unison. With MPE, pressure moves the level and slide moves the filter. Turn up Vintage for the slow pitch wander of tape.</p>
                 </article>
                 <article class="feature">
-                    <a class="screen-link" href="images/effects-editor.webp" aria-label="Open full-size Effects screenshot">
+                    <a class="screen-link" href="images/effects-editor.webp" data-screenshot aria-label="Open full-size Effects screenshot">
                         <img class="screen" src="images/effects-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="Effects tab with Chorus, Delay and Reverb active on Damped Attack Bloom.">
                     </a>
                     <h3>Give it a space</h3>
@@ -89,7 +90,7 @@
                     </div>
                     <figure id="preset-browser" class="vault-browser">
                         <figcaption>Click the preset name in Harmonculus to browse by bank or category and filter by rating.</figcaption>
-                        <a class="screen-link" href="images/preset-browser.webp" aria-labelledby="preset-browser-link">
+                        <a class="screen-link" href="images/preset-browser.webp" data-screenshot aria-labelledby="preset-browser-link">
                             <img class="screen" src="images/preset-browser.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="The preset browser open to the Analogue Dreams bank, with Driven Double Saw Bass selected and preset ratings visible.">
                             <span id="preset-browser-link">View the preset browser full size</span>
                         </a>
@@ -111,24 +112,17 @@
                         </audio>
                     </li>
                     <li>
-                        <h3 id="demo-round-filter-bass">Round Filter Bass</h3>
-                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
-                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
-                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">Open MP3</a>
-                        </audio>
-                    </li>
-                    <li>
-                        <h3 id="demo-tape-triangle-pad">Tape Triangle Pad</h3>
-                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
-                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
-                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">Open MP3</a>
-                        </audio>
-                    </li>
-                    <li>
                         <h3 id="demo-dub-strings">Dub Strings</h3>
                         <audio controls preload="none" aria-labelledby="demo-dub-strings">
                             <source src="audio/dub-strings.mp3" type="audio/mpeg">
                             <a href="audio/dub-strings.mp3" aria-describedby="demo-dub-strings">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-round-filter-bass">Round Filter Bass</h3>
+                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
+                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
+                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">Open MP3</a>
                         </audio>
                     </li>
                     <li>
@@ -143,6 +137,13 @@
                         <audio controls preload="none" aria-labelledby="demo-beating-mallet">
                             <source src="audio/beating-mallet.mp3" type="audio/mpeg">
                             <a href="audio/beating-mallet.mp3" aria-describedby="demo-beating-mallet">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-tape-triangle-pad">Tape Triangle Pad</h3>
+                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
+                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
+                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">Open MP3</a>
                         </audio>
                     </li>
                     <li>
@@ -229,5 +230,11 @@
     <p class="footer-copy">Ruminant Audio Works Ltd. Company No. 16978494. Registered in England and Wales.</p>
     <div class="footer-links"><a href="eula/">EULA</a><a href="/privacy/">Privacy</a><a href="/site-data/">Cookies &amp; site data</a></div>
 </footer>
+    <dialog id="screenshot-viewer" class="screenshot-viewer" aria-label="Full-size Harmonculus screenshot">
+        <form method="dialog">
+            <button type="submit" autofocus>Close</button>
+        </form>
+        <img src="images/spectral-editor.webp" width="1440" height="1095" alt="Harmonculus shows colourful partial envelopes in a 3D graph and a linked 2D editor.">
+    </dialog>
 </body>
 </html>
