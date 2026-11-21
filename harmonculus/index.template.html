@@ -94,10 +94,16 @@
                         <h3>{{product.download.title}}</h3>
                         <p>{{product.download.description}}</p>
                         <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/mac/latest">{{product.download.button}}</a>
+                        <div class="linux-download-links">
+                            <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/b62cd56f-7896-4857-a550-4d7ac062f79c">{{product.download.linuxX64}}</a>
+                            <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/64f058ae-29cf-4544-a826-9e9d2a6e752f">{{product.download.linuxArm64}}</a>
+                        </div>
+                        <a class="linux-verification-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/6c29521c-9608-4c5e-a7b8-ec154227a721">{{product.download.linuxVerification}}</a>
                         <ul class="download-platforms">
                             <li><strong>{{product.download.windows}}</strong> · {{product.download.coming}}</li>
-                            <li><strong>{{product.download.linux}}</strong> · {{product.download.coming}}</li>
                         </ul>
+                        <p>{{product.download.linuxInstall}}</p>
+                        <p>{{product.download.linuxUpgrade}}</p>
                     </div>
                 </div>
             </div>

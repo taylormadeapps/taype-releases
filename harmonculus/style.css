@@ -215,6 +215,23 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 
 .download-link:hover { border-color: var(--gold); }
 
+.linux-download-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.linux-verification-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+    text-underline-offset: 0.2em;
+}
+
 .download-platforms {
     display: grid;
     gap: 0.35rem;
