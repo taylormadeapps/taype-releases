@@ -46,8 +46,8 @@ ec7895497da761f1196ef2b4aeac66aad50ef24941bc14bbda7a8600709e83e4
 
 ## Windows download
 
-[Windows x86-64 installer](https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe)
-(10,119,211 bytes) includes independently selectable **AAX Native (Pro Tools)**,
+[Signed Windows x86-64 installer](https://github.com/taylormadeapps/taype-releases/releases/download/vintage-vocoder-v1.6.0/Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z.exe)
+(10,180,040 bytes) includes independently selectable **AAX Native (Pro Tools)**,
 **VST2** and **VST3**, initially all selected. Requires 64-bit Windows and a
 compatible host. Quit your DAW, run the installer with administrator approval,
 then reopen and rescan plug-ins.
@@ -60,28 +60,25 @@ Unselected formats already installed are retained. The uninstaller leaves user
 presets intact. No additional Vintage Vocoder licence or iLok activation is
 required.
 
-The developer smoke-tested this installer in official Windows Pro Tools on a
-Windows laptop and approved it as the 1.6.0 release. The released installer is
-byte-for-byte identical to that tested candidate; the beta label has been
-removed from its download filename. The AAX payload is PACE-signed with a
-self-signed Windows Authenticode identity. No trusted-root certificate is
-installed or required by this package. The ARM VM experiment is not a claim of
-Pro Tools support on Windows ARM.
+The installer, uninstaller, VST2 and VST3 carry timestamped Authenticode
+signatures from **ENCIRCLE SOLUTIONS LIMITED**. This package uses the existing
+1.6.0 plug-in builds. The AAX bundle is byte-for-byte identical to the
+PACE-signed bundle previously smoke-tested in official Windows Pro Tools on an
+x86-64 laptop. It retains its original self-signed Authenticode identity.
 
-The installer itself is not Authenticode-signed; Windows may show an
-unknown-publisher warning. It has a detached Sonicism OpenPGP signature and a
-signed SHA-256 checksum manifest. After importing the public key and
-independently checking its fingerprint below, verify both with:
+The installer has a detached Sonicism OpenPGP signature and a signed SHA-256
+checksum manifest. After importing the public key and independently checking
+its fingerprint below, verify both with:
 
 ```sh
-gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe.asc Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe
-gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z-SHA256SUMS.txt.asc Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z-SHA256SUMS.txt
+gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z.exe.asc Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z.exe
+gpg --verify Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z-SHA256SUMS.txt.asc Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z-SHA256SUMS.txt
 ```
 
 Windows installer SHA-256:
 
 ```text
-ce877c21db3836be3887e9ed3a8623e0de84d14bb2d4d3fd872df2497876b090  Vintage-Vocoder-1.6.0-windows-x86_64-20261104T094637Z.exe
+2258a07030a0d6f6fc0b8f2fbf5cd081f07728a11dd1561aeb45cb127097a2f4  Vintage-Vocoder-1.6.0-windows-x86_64-20261121T094525Z.exe
 ```
 
 ## Linux VST3 downloads

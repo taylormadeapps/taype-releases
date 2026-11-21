@@ -134,6 +134,6 @@ and physical audio-device operation were not verified by those checks.
 
 The [GitHub release](https://github.com/taylormadeapps/taype-releases/releases/tag/vintage-vocoder-v1.6.0#windows-download)
 provides the Windows installer, its SHA-256 checksum, detached OpenPGP signature
-and Sonicism public key. The installer is not Authenticode-signed, so Windows
-may display an unknown-publisher warning. The installer requires administrator
-approval and its uninstaller leaves user presets intact.
+and Sonicism public key. Windows identifies the Authenticode publisher as
+**ENCIRCLE SOLUTIONS LIMITED**. The installer requires administrator approval.
+Its uninstaller leaves user presets intact.
