@@ -200,26 +200,34 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 
 .release-option .primary-link { margin-top: 0; }
 
+.platform-downloads {
+    display: grid;
+    gap: 0.75rem;
+    align-self: stretch;
+}
+
 .download-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    min-height: 2.75rem;
-    padding: 0.5rem 0.85rem;
-    border: 1px solid #61584a;
+    justify-content: center;
+    min-height: 3.75rem;
+    padding: 0.75rem 1rem;
     border-radius: 0.35rem;
-    background: #2b2620;
-    color: #d3c7b5;
-    font-weight: 600;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
     text-decoration: none;
 }
 
-.download-link:hover { border-color: var(--gold); }
+.download-link:hover { background: #ffe3a3; color: var(--ink); }
 
 .linux-download-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 0.75rem;
 }
 
 .linux-verification-link {
@@ -231,8 +239,6 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
     font-size: 0.875rem;
     text-underline-offset: 0.2em;
 }
-
-.windows-download-link { margin-top: 1rem; }
 
 .taype-link .micro-heading {
     margin-bottom: 0.75rem;
