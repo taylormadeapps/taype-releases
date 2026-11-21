@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Harmonculus — Sculpt the sound. Play the music.</title>
-    <meta name="description" content="Harmonculus is an additive resynthesis instrument available now for macOS, Windows and Linux. Import a sound, sculpt its partials over time and play the instrument you’ve made.">
+    <meta name="description" content="Additive synthesis with 365 handcrafted presets. Drop in a sample, mould its harmonics in 3D and play the result. Available for macOS, Windows and Linux.">
     <meta name="theme-color" content="#11100e">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Harmonculus — Sculpt the sound. Play the music.">
-    <meta property="og:description" content="Turn a sample into a playable instrument with additive resynthesis. Early Access is open for macOS, Windows and Linux.">
+    <meta property="og:description" content="Play 365 handcrafted presets or turn a sample into an instrument of your own. Early Access is open for macOS, Windows and Linux.">
     <meta property="og:url" content="https://taype.ruminantaudioworks.com/harmonculus/">
     <meta property="og:image" content="https://taype.ruminantaudioworks.com/harmonculus/images/spectral-editor.webp">
     <meta property="og:image:alt" content="Harmonculus spectral editor showing the Crossing Harmonic Bands preset">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/product-sections.css">
     <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
+    <script defer src="vault.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -31,6 +32,7 @@
             </a>
             <nav aria-label="Main menu">
                 <a href="/ruminant-audio-works/#products">Products</a>
+                <a href="#from-the-vault">From the vault</a>
                 <a href="#buy">Buy</a>
                 <a href="#download">Download</a>
                 <a class="account-link" href="https://account.ruminantaudioworks.com/">My account</a>
@@ -44,9 +46,9 @@
                 <div class="hero-copy">
                     <img class="shell" src="images/shell.webp" alt="" width="512" height="512">
                     <h1 id="product-name">Harmonculus</h1>
-                    <p class="hero-line">Sculpt the sound.<br>Play the music.</p>
-                    <p class="hero-description">Harmonculus is an additive resynthesis instrument. Import a sound, shape its partials over time and play the instrument you’ve made.</p>
-                    <a class="primary-link" href="#instrument">Explore the instrument <span aria-hidden="true">↓</span></a>
+                    <p class="hero-line">A fresh take on<br>additive synthesis.</p>
+                    <p class="hero-description">Start with a preset, or drop in a sample and turn it into an instrument. Mould the harmonics with your mouse in 3D, like sonic putty.</p>
+                    <a class="primary-link" href="#from-the-vault">Hear the presets <span aria-hidden="true">↓</span></a>
                 </div>
                 <figure class="hero-figure">
                     <img class="screen" src="images/spectral-editor.webp" width="1440" height="1095" fetchpriority="high" alt="Harmonculus shows colourful partial envelopes in a 3D graph and a linked 2D editor.">
@@ -57,13 +59,13 @@
 
         <section class="instrument wrap" id="instrument" aria-labelledby="instrument-heading">
             <div class="instrument-intro">
-                <h2 id="instrument-heading">The sample is the starting point.</h2>
+                <h2 id="instrument-heading">Make an instrument from a sample.</h2>
                 <p>Import a recording and Harmonculus analyses it into partials. Draw the level of each partial over time, then loop the motion or lock it to the tempo of your session. Turn a drum hit into a sequence or stretch a chord into a drone.</p>
             </div>
             <div class="feature-grid">
                 <article class="feature">
                     <a class="screen-link" href="images/performance-editor.webp" aria-label="Open full-size Control screenshot">
-                        <img class="screen" src="images/performance-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="Control tab showing voice and filter settings, envelopes and FET compression.">
+                        <img class="screen" src="images/performance-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="Control tab showing voice controls, modulation matrix, arpeggiator, envelopes, ladder filter and FET compressor.">
                     </a>
                     <h3>Play the partials</h3>
                     <p>Shape how the sound responds with filter key tracking, velocity, polyphonic glide and unison. With MPE, pressure moves the level and slide moves the filter. Turn up Vintage for the slow pitch wander of tape.</p>
@@ -75,6 +77,82 @@
                     <h3>Give it a space</h3>
                     <p>Reorder stereo chorus, tempo-synced delay and convolution reverb. Filter the echo into a narrow dub repeat, or give the reverb some predelay to keep the attack up front.</p>
                 </article>
+            </div>
+        </section>
+
+        <section class="vault" id="from-the-vault" aria-labelledby="vault-heading">
+            <div class="wrap">
+                <div class="vault-header">
+                    <div>
+                        <h2 id="vault-heading">From the vault</h2>
+                        <p class="vault-intro">The vault is the Harmonculus factory library of 365 handcrafted presets, inspired by a love of Boards of Canada and other great artists that have inspired us. All eight demos were made with factory presets, using no additional instruments or processing.</p>
+                    </div>
+                    <figure id="preset-browser" class="vault-browser">
+                        <figcaption>Click the preset name in Harmonculus to browse by bank or category and filter by rating.</figcaption>
+                        <a class="screen-link" href="images/preset-browser.webp" aria-labelledby="preset-browser-link">
+                            <img class="screen" src="images/preset-browser.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="The preset browser open to the Analogue Dreams bank, with Driven Double Saw Bass selected and preset ratings visible.">
+                            <span id="preset-browser-link">View the preset browser full size</span>
+                        </a>
+                    </figure>
+                </div>
+                <ul class="vault-grid" role="list">
+                    <li>
+                        <h3 id="demo-driven-double-saw-bass">Driven Double Saw Bass</h3>
+                        <audio controls preload="none" aria-labelledby="demo-driven-double-saw-bass">
+                            <source src="audio/driven-double-saw-bass.mp3" type="audio/mpeg">
+                            <a href="audio/driven-double-saw-bass.mp3" aria-describedby="demo-driven-double-saw-bass">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-hollow-whistle-sweep">Hollow Whistle Sweep</h3>
+                        <audio controls preload="none" aria-labelledby="demo-hollow-whistle-sweep">
+                            <source src="audio/hollow-whistle-sweep.mp3" type="audio/mpeg">
+                            <a href="audio/hollow-whistle-sweep.mp3" aria-describedby="demo-hollow-whistle-sweep">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-round-filter-bass">Round Filter Bass</h3>
+                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
+                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
+                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-tape-triangle-pad">Tape Triangle Pad</h3>
+                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
+                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
+                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-dub-strings">Dub Strings</h3>
+                        <audio controls preload="none" aria-labelledby="demo-dub-strings">
+                            <source src="audio/dub-strings.mp3" type="audio/mpeg">
+                            <a href="audio/dub-strings.mp3" aria-describedby="demo-dub-strings">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-cathedral-strings">Cathedral Strings</h3>
+                        <audio controls preload="none" aria-labelledby="demo-cathedral-strings">
+                            <source src="audio/cathedral-strings.mp3" type="audio/mpeg">
+                            <a href="audio/cathedral-strings.mp3" aria-describedby="demo-cathedral-strings">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-beating-mallet">Beating Mallet</h3>
+                        <audio controls preload="none" aria-labelledby="demo-beating-mallet">
+                            <source src="audio/beating-mallet.mp3" type="audio/mpeg">
+                            <a href="audio/beating-mallet.mp3" aria-describedby="demo-beating-mallet">Open MP3</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-copper-weather">Copper Weather</h3>
+                        <audio controls preload="none" aria-labelledby="demo-copper-weather">
+                            <source src="audio/copper-weather.mp3" type="audio/mpeg">
+                            <a href="audio/copper-weather.mp3" aria-describedby="demo-copper-weather">Open MP3</a>
+                        </audio>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -113,6 +191,12 @@
     <aside class="page-section taype-link" aria-labelledby="meet-taype-heading">
         <div><p class="micro-heading">From the same workshop</p><h2 id="meet-taype-heading">Meet TayPE.</h2><p>A multitrack recording environment with the soul of a tape machine, built by Ruminant Audio Works for musicians who want to make records.</p></div>
         <a class="btn btn-secondary" href="/product/">Explore TayPE <span aria-hidden="true">→</span></a>
+        <a class="screen-link taype-preview" href="/product/">
+            <img class="screen" src="/assets/img/screenshot-tape-machine-960.webp"
+                 srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w"
+                 sizes="(max-width: 56rem) 92vw, 50vw" width="960" height="591" loading="lazy" decoding="async"
+                 alt="Explore TayPE. The reel-to-reel tape transport above the multitrack mixer.">
+        </a>
     </aside>
     <section id="community" class="page-section raw-community" aria-labelledby="community-heading">
         <h2 id="community-heading">Community &amp; Support</h2>

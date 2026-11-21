@@ -13,6 +13,13 @@ from render_product_sections import render_product_sections
 PRODUCT = Path(__file__).resolve().parents[1] / "harmonculus"
 TOKEN = re.compile(r"\{\{([a-zA-Z0-9_.]+)\}\}")
 PAGES = (PRODUCT / "index.html", PRODUCT / "eula/index.html")
+TAYPE_PREVIEW = """
+        <a class="screen-link taype-preview" href="/product/">
+            <img class="screen" src="/assets/img/screenshot-tape-machine-960.webp"
+                 srcset="/assets/img/screenshot-tape-machine-640.webp 640w, /assets/img/screenshot-tape-machine-960.webp 960w, /assets/img/screenshot-tape-machine-1280.webp 1280w"
+                 sizes="(max-width: 56rem) 92vw, 50vw" width="960" height="591" loading="lazy" decoding="async"
+                 alt="{{product.taype.preview.alt}}">
+        </a>"""
 
 
 def render() -> dict[Path, str]:
@@ -23,7 +30,9 @@ def render() -> dict[Path, str]:
     templates = {page: page.with_name("index.template.html").read_text(encoding="utf-8") for page in PAGES}
     product_page = PRODUCT / "index.html"
     templates[product_page] = render_product_sections(
-        templates[product_page], extra_footer_links='<a href="eula/">{{product.footer.eula}}</a>'
+        templates[product_page],
+        extra_footer_links='<a href="eula/">{{product.footer.eula}}</a>',
+        taype_preview=TAYPE_PREVIEW,
     )
     used_keys = {key for template in templates.values() for key in TOKEN.findall(template)}
     missing = used_keys - catalogue.keys()

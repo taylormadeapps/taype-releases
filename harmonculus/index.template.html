@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/product-sections.css">
     <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
+    <script defer src="vault.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main">{{product.skip}}</a>
@@ -31,6 +32,7 @@
             </a>
             <nav aria-label="{{product.nav.label}}">
                 <a href="/ruminant-audio-works/#products">{{product.nav.products}}</a>
+                <a href="#from-the-vault">{{product.vault.title}}</a>
                 <a href="#buy">{{product.buy.title}}</a>
                 <a href="#download">{{product.download.title}}</a>
                 <a class="account-link" href="https://account.ruminantaudioworks.com/">{{product.nav.account}}</a>
@@ -46,7 +48,7 @@
                     <h1 id="product-name">{{product.name}}</h1>
                     <p class="hero-line">{{product.hero.line1}}<br>{{product.hero.line2}}</p>
                     <p class="hero-description">{{product.hero.description}}</p>
-                    <a class="primary-link" href="#instrument">{{product.hero.explore}} <span aria-hidden="true">↓</span></a>
+                    <a class="primary-link" href="#from-the-vault">{{product.hero.listen}} <span aria-hidden="true">↓</span></a>
                 </div>
                 <figure class="hero-figure">
                     <img class="screen" src="images/spectral-editor.webp" width="1440" height="1095" fetchpriority="high" alt="{{product.hero.image}}">
@@ -75,6 +77,82 @@
                     <h3>{{product.effects.title}}</h3>
                     <p>{{product.effects.description}}</p>
                 </article>
+            </div>
+        </section>
+
+        <section class="vault" id="from-the-vault" aria-labelledby="vault-heading">
+            <div class="wrap">
+                <div class="vault-header">
+                    <div>
+                        <h2 id="vault-heading">{{product.vault.title}}</h2>
+                        <p class="vault-intro">{{product.vault.intro}}</p>
+                    </div>
+                    <figure id="preset-browser" class="vault-browser">
+                        <figcaption>{{product.vault.browser.caption}}</figcaption>
+                        <a class="screen-link" href="images/preset-browser.webp" aria-labelledby="preset-browser-link">
+                            <img class="screen" src="images/preset-browser.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.vault.browser.image}}">
+                            <span id="preset-browser-link">{{product.vault.browser.large}}</span>
+                        </a>
+                    </figure>
+                </div>
+                <ul class="vault-grid" role="list">
+                    <li>
+                        <h3 id="demo-driven-double-saw-bass">{{product.vault.track.driven_double_saw_bass}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-driven-double-saw-bass">
+                            <source src="audio/driven-double-saw-bass.mp3" type="audio/mpeg">
+                            <a href="audio/driven-double-saw-bass.mp3" aria-describedby="demo-driven-double-saw-bass">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-hollow-whistle-sweep">{{product.vault.track.hollow_whistle_sweep}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-hollow-whistle-sweep">
+                            <source src="audio/hollow-whistle-sweep.mp3" type="audio/mpeg">
+                            <a href="audio/hollow-whistle-sweep.mp3" aria-describedby="demo-hollow-whistle-sweep">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-round-filter-bass">{{product.vault.track.round_filter_bass}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-round-filter-bass">
+                            <source src="audio/round-filter-bass.mp3" type="audio/mpeg">
+                            <a href="audio/round-filter-bass.mp3" aria-describedby="demo-round-filter-bass">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-tape-triangle-pad">{{product.vault.track.tape_triangle_pad}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-tape-triangle-pad">
+                            <source src="audio/tape-triangle-pad.mp3" type="audio/mpeg">
+                            <a href="audio/tape-triangle-pad.mp3" aria-describedby="demo-tape-triangle-pad">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-dub-strings">{{product.vault.track.dub_strings}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-dub-strings">
+                            <source src="audio/dub-strings.mp3" type="audio/mpeg">
+                            <a href="audio/dub-strings.mp3" aria-describedby="demo-dub-strings">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-cathedral-strings">{{product.vault.track.cathedral_strings}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-cathedral-strings">
+                            <source src="audio/cathedral-strings.mp3" type="audio/mpeg">
+                            <a href="audio/cathedral-strings.mp3" aria-describedby="demo-cathedral-strings">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-beating-mallet">{{product.vault.track.beating_mallet}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-beating-mallet">
+                            <source src="audio/beating-mallet.mp3" type="audio/mpeg">
+                            <a href="audio/beating-mallet.mp3" aria-describedby="demo-beating-mallet">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                    <li>
+                        <h3 id="demo-copper-weather">{{product.vault.track.copper_weather}}</h3>
+                        <audio controls preload="none" aria-labelledby="demo-copper-weather">
+                            <source src="audio/copper-weather.mp3" type="audio/mpeg">
+                            <a href="audio/copper-weather.mp3" aria-describedby="demo-copper-weather">{{product.vault.fallback}}</a>
+                        </audio>
+                    </li>
+                </ul>
             </div>
         </section>
 

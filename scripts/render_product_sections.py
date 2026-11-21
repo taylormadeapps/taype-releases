@@ -6,7 +6,7 @@ import json
 from render_community import ROOT, TOKEN, render as render_community
 
 
-def render_product_sections(template: str, *, extra_footer_links: str = "") -> str:
+def render_product_sections(template: str, *, extra_footer_links: str = "", taype_preview: str = "") -> str:
     catalogue = json.loads((ROOT / "locales/product-sections.en-GB.json").read_text(encoding="utf-8"))
     if not all(isinstance(value, str) and value.strip() for value in catalogue.values()):
         raise ValueError("Every shared product source-locale entry must be a nonempty string")
@@ -17,6 +17,7 @@ def render_product_sections(template: str, *, extra_footer_links: str = "") -> s
     }
     values = {key: html.escape(value, quote=True) for key, value in catalogue.items()}
     values["footer.extra_links"] = extra_footer_links
+    values["taype.preview"] = taype_preview
     used_keys = {key for fragment in fragments.values() for key in TOKEN.findall(fragment)}
     missing = used_keys - values.keys()
     unused = values.keys() - used_keys
