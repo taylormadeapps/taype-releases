@@ -198,16 +198,30 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 .release-option:target { border-top-color: var(--gold); }
 .release-option p { margin: 0.45rem 0 0.85rem; }
 
-.release-option button {
+.release-option .primary-link { margin-top: 0; }
+
+.download-link {
+    display: inline-flex;
+    align-items: center;
     min-height: 2.75rem;
-    margin-top: auto;
     padding: 0.5rem 0.85rem;
     border: 1px solid #61584a;
     border-radius: 0.35rem;
     background: #2b2620;
     color: #d3c7b5;
-    font: inherit;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.download-link:hover { border-color: var(--gold); }
+
+.download-platforms {
+    display: grid;
+    gap: 0.35rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    color: var(--muted);
+    list-style: none;
 }
 
 .taype-link .micro-heading {

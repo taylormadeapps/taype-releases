@@ -88,14 +88,16 @@
                     <div id="buy" class="release-option">
                         <h3>{{product.buy.title}}</h3>
                         <p>{{product.buy.description}}</p>
-                        <!-- Future checkout: https://ruminantaudioworks.moonbase.sh/buy/harmonculus -->
-                        <button type="button" disabled>{{product.buy.button}}</button>
+                        <a class="primary-link" href="https://ruminantaudioworks.moonbase.sh/buy/harmonculus">{{product.buy.button}}</a>
                     </div>
                     <div id="download" class="release-option">
                         <h3>{{product.download.title}}</h3>
                         <p>{{product.download.description}}</p>
-                        <!-- Future release: https://ruminantaudioworks.moonbase.sh/download/harmonculus -->
-                        <button type="button" disabled>{{product.download.button}}</button>
+                        <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/mac/latest">{{product.download.button}}</a>
+                        <ul class="download-platforms">
+                            <li><strong>{{product.download.windows}}</strong> · {{product.download.coming}}</li>
+                            <li><strong>{{product.download.linux}}</strong> · {{product.download.coming}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
