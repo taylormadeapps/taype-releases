@@ -232,14 +232,7 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
     text-underline-offset: 0.2em;
 }
 
-.download-platforms {
-    display: grid;
-    gap: 0.35rem;
-    margin: 1rem 0 0;
-    padding: 0;
-    color: var(--muted);
-    list-style: none;
-}
+.windows-download-link { margin-top: 1rem; }
 
 .taype-link .micro-heading {
     margin-bottom: 0.75rem;
