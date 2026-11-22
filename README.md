@@ -34,11 +34,10 @@ Vintage Vocoder is free for personal and commercial use without a TayPE licence.
 ## Harmonculus
 
 [Harmonculus](https://taype.ruminantaudioworks.com/harmonculus/) is an additive
-resynthesis instrument planned for Windows, Linux and macOS. Plug-in formats
-will vary by platform, with VST3, VST2, Audio Unit (AU) and AAX planned. The
-product page carries the alpha status, the draft licence and a link to the
-Moonbase customer account area. Buy and Download point to the release
-information on the page while the alpha is in preparation.
+resynthesis instrument in Early Access for macOS, Windows and Linux.
+[Harmonculus for MPC](https://mpc.ruminantaudioworks.com/harmonculus/) is coming
+to Akai MPC One+ via RAW Catalogue, with a ZIP for manual installation.
+One Harmonculus licence covers all supported platforms.
 
 Edit the templates and source locale under `harmonculus/`, then run
 `python3 scripts/render_harmonculus.py`. Run it with `--check` to verify the

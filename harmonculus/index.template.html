@@ -49,6 +49,7 @@
                     <h1 id="product-name">{{product.name}}</h1>
                     <p class="hero-line">{{product.hero.line1}}<br>{{product.hero.line2}}</p>
                     <p class="hero-description">{{product.hero.description}}</p>
+                    <p class="hero-description"><strong>{{product.hero.trial}}</strong></p>
                     <a class="primary-link" href="#from-the-vault">{{product.hero.listen}} <span aria-hidden="true">↓</span></a>
                 </div>
                 <figure class="hero-figure">
@@ -167,6 +168,7 @@
                     <div id="buy" class="release-option">
                         <h3>{{product.buy.title}}</h3>
                         <p>{{product.buy.description}}</p>
+                        <p>{{product.buy.platforms}}</p>
                         <a class="primary-link" href="https://ruminantaudioworks.moonbase.sh/buy/harmonculus">{{product.buy.button}}</a>
                     </div>
                     <div id="download" class="release-option">
@@ -183,6 +185,7 @@
                                 <a class="linux-verification-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/6c29521c-9608-4c5e-a7b8-ec154227a721">{{product.download.linuxVerification}}</a>
                                 <p>{{product.download.linuxInstall}}</p>
                             </div>
+                            <a class="download-link" href="https://mpc.ruminantaudioworks.com/harmonculus/">{{product.download.mpc}}</a>
                         </div>
                     </div>
                 </div>
