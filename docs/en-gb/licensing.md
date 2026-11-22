@@ -15,7 +15,7 @@ Use TayPE alongside your existing DAW, or make the whole record here. See the [l
 
 ## Concessions
 
-If you really want to use TayPE but can’t afford our prices, drop me a line at [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com). We may be able to sort something out.
+If you really want to use TayPE but can’t afford our prices, or you’d like to discuss another way to pay, drop me a line at [concessions@ruminantaudioworks.com](mailto:concessions@ruminantaudioworks.com). We may be able to sort something out.
 
 ## Trustware Demo
 

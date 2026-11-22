@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "index.html"
+SOURCE = ROOT / "product" / "index.html"
 LOCALES = [
     "ar",
     "de-de",

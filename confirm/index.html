@@ -191,7 +191,7 @@ a:hover { color: var(--brass-hover); }
         showResult('Invalid Link',
             '<p>This link appears to be broken. If you\'re trying to ' +
             'subscribe, please use the signup form on our website.</p>' +
-            '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+            '<a class="back-link" href="/product/">Go to TayPE</a>');
         return;
     }
 
@@ -255,13 +255,13 @@ a:hover { color: var(--brass-hover); }
                     'You\'ll receive updates about TayPE.</p>' +
                     '<p>If you don\'t receive a welcome in the next few minutes, ' +
                     'please try <a href="' + directUrl + '">this direct link</a>.</p>' +
-                    '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+                    '<a class="back-link" href="/product/">Back to TayPE</a>');
             } else if (action === 'unsubscribe') {
                 showResult('Unsubscribed',
                     '<p>You\'ve been removed from the TayPE mailing list. ' +
                     'You won\'t receive any more emails from us.</p>' +
                     '<p>Changed your mind? You can sign up again on our website.</p>' +
-                    '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+                    '<a class="back-link" href="/product/">Back to TayPE</a>');
             }
         }, 4000);
     }
@@ -270,7 +270,7 @@ a:hover { color: var(--brass-hover); }
         if (!data || !data.status) {
             showResult('Something went wrong',
                 '<p>We couldn\'t process your request. Please try again later.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+                '<a class="back-link" href="/product/">Go to TayPE</a>');
             return;
         }
 
@@ -283,42 +283,42 @@ a:hover { color: var(--brass-hover); }
                 'about TayPE at <span class="email-highlight">' +
                 escapeHtml(data.email || '') + '</span>.</p>' +
                 '<p>Every email includes an unsubscribe link.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+                '<a class="back-link" href="/product/">Back to TayPE</a>');
 
         } else if (data.status === 'already_confirmed') {
             showResult('Already Subscribed',
                 '<p>You\'re already on the list! You\'ll receive updates ' +
                 'about TayPE at <span class="email-highlight">' +
                 escapeHtml(data.email || '') + '</span>.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+                '<a class="back-link" href="/product/">Back to TayPE</a>');
 
         } else if (data.status === 'expired') {
             showResult('Link Expired',
                 '<p>This confirmation link has expired. Please sign up again.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Sign up again</a>');
+                '<a class="back-link" href="/newsletter-subscribe/">Sign up again</a>');
 
         } else if (data.status === 'unsubscribed') {
             showResult('Unsubscribed',
                 '<p>You\'ve been removed from the TayPE mailing list. ' +
                 'You won\'t receive any more emails from us.</p>' +
                 '<p>Changed your mind? You can sign up again on our website.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Back to TayPE</a>');
+                '<a class="back-link" href="/product/">Back to TayPE</a>');
 
         } else if (data.status === 'not_found') {
             showResult('Not Found',
                 '<p>We couldn\'t find this subscription. You may have already ' +
                 'unsubscribed, or the link may be invalid.</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+                '<a class="back-link" href="/product/">Go to TayPE</a>');
 
         } else if (data.status === 'invalid') {
             showResult('Invalid Link',
                 '<p>' + escapeHtml(message || 'This link appears to be broken.') + '</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+                '<a class="back-link" href="/product/">Go to TayPE</a>');
 
         } else {
             showResult(title,
                 '<p>' + escapeHtml(message) + '</p>' +
-                '<a class="back-link" href="https://taype.ruminantaudioworks.com">Go to TayPE</a>');
+                '<a class="back-link" href="/product/">Go to TayPE</a>');
         }
     }
 })();

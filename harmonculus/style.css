@@ -175,8 +175,114 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 
 .screen-link { display: block; border-radius: 0.65rem; }
 .screen-link:hover .screen { border-color: var(--gold); }
+.screen-link[data-screenshot] { cursor: zoom-in; }
+
+html.screenshot-viewer-open { overflow: hidden; }
+
+.screenshot-viewer {
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    padding: 0.25rem;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+}
+
+.screenshot-viewer[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.screenshot-viewer::backdrop { background: #090807e8; }
+
+.screenshot-viewer img {
+    width: auto;
+    max-height: calc(100vh - 5rem);
+    max-height: calc(100dvh - 5rem);
+    object-fit: contain;
+    cursor: zoom-out;
+}
+
+.screenshot-viewer button {
+    min-height: 2.75rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--gold);
+    border-radius: 0.35rem;
+    background: var(--surface);
+    color: var(--gold);
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.screenshot-viewer button:hover { background: var(--gold); color: var(--ink); }
+.screenshot-viewer button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 .feature h3 { margin-top: 1.2rem; }
 .feature p { max-width: 57ch; margin-top: 0.55rem; }
+
+.vault {
+    padding-block: clamp(2.75rem, 6vw, 5.25rem);
+    border-top: 1px solid var(--line);
+}
+
+.vault-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    align-items: start;
+    gap: clamp(1.25rem, 4vw, 3rem);
+    max-width: 64rem;
+}
+
+.vault-intro {
+    max-width: 58ch;
+    margin-top: 0.9rem;
+    color: var(--muted);
+}
+
+.vault-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2.5vw, 2.25rem);
+    margin: clamp(1.4rem, 3vw, 2.25rem) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vault-grid li {
+    min-width: 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--line);
+}
+
+.vault-grid h3 {
+    font-size: 1.0625rem;
+    font-weight: 650;
+    letter-spacing: normal;
+}
+
+.vault-grid audio {
+    display: block;
+    width: 100%;
+    margin-top: 0.65rem;
+}
+
+.vault-browser {
+    max-width: 24rem;
+}
+
+.vault-browser figcaption {
+    margin: 0 0 0.5rem;
+    text-align: start;
+}
+
+.vault-browser .screen-link span {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.875rem;
+}
 
 .release {
     padding-block: clamp(2.75rem, 6vw, 5.25rem);
@@ -198,17 +304,60 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 .release-option:target { border-top-color: var(--gold); }
 .release-option p { margin: 0.45rem 0 0.85rem; }
 
-.release-option button {
-    min-height: 2.75rem;
-    margin-top: auto;
-    padding: 0.5rem 0.85rem;
-    border: 1px solid #61584a;
-    border-radius: 0.35rem;
-    background: #2b2620;
-    color: #d3c7b5;
-    font: inherit;
-    font-weight: 600;
+.release-option .primary-link { margin-top: 0; }
+
+.platform-downloads {
+    display: grid;
+    gap: 0.75rem;
+    align-self: stretch;
 }
+
+.download-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.35rem;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.download-link:hover { background: #ffe3a3; color: var(--ink); }
+
+.linux-download-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: 0.75rem;
+}
+
+.linux-verification-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+    text-underline-offset: 0.2em;
+}
+
+main .taype-link {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+        "copy preview"
+        "action preview";
+    gap: 1rem clamp(1.75rem, 4vw, 4rem);
+}
+
+.taype-link > div { grid-area: copy; align-self: end; }
+.taype-link .btn-secondary { grid-area: action; align-self: start; justify-self: start; }
+.taype-preview { grid-area: preview; }
 
 .taype-link .micro-heading {
     margin-bottom: 0.75rem;
@@ -223,6 +372,15 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
 .raw-community a, .raw-product-footer .footer-wordmark a { color: var(--gold); text-underline-offset: 0.2em; }
 
 @media (max-width: 56rem) {
+    main .taype-link {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "copy" "action" "preview";
+    }
+
+    .vault-header { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; }
+    .vault-browser { max-width: 18rem; }
+    .vault-browser .screen { max-width: 65vw; }
+
     .hero-grid { grid-template-columns: 1fr; }
     .hero-copy { max-width: 38rem; }
     h1 { font-size: clamp(2.35rem, 10vw, 5rem); }
@@ -230,7 +388,12 @@ h3 { font-size: clamp(1.35rem, 2vw, 1.85rem); letter-spacing: -0.025em; }
     .hero-description { max-width: 40ch; }
 }
 
+@media (max-width: 65rem) {
+    .vault-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 39rem) {
+    .vault-grid { grid-template-columns: 1fr; }
     .feature-grid, .release-grid { grid-template-columns: 1fr; }
     .feature-grid { row-gap: 2rem; }
     .site-header nav { width: 100%; }

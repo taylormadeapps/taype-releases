@@ -3,17 +3,112 @@
 # Consumed by LLMs, CI systems, and tooling.
 
 [release]
-version = "1.5.2"
-date = "2026-10-18"
-commit = "f77108e3"
+version = "1.6.0"
+date = "2026-11-14"
+commit = "444ea741"
 
 summary = """\
-Fixed an MCP compatibility issue that prevented AI clients from connecting to TayPE.
+**Revamped keybindings system with a visual editor.** Search for actions and record shortcuts directly in TayPE. The Pro Tools-style *Industry Standard Bruh* profile has been updated, and you can save a printable PDF cheat sheet for your active profile.
+**Use TayPE’s stock plug-ins in other DAWs.** The installer offers all seven stock effects as optional AU, VST3 and AAX plug-ins for hosts including Logic and Pro Tools.
+**Run multiple VST instruments and MIDI FX on a single track.** Build layers in one insert rack, with separate trim, trim automation and MIDI sources for each instrument.
+**Route MIDI to VST effects.** Send MIDI from a track to an effect, so you can play the bundled Sonicism Vintage Vocoder from a MIDI clip.
+**Two-way AAF interchange.** Try finishing a session in TayPE without the worry of switching DAWs, rebuilding your edits or getting locked in. Bring your audio tracks and edits in from Pro Tools, Logic Pro, Cubase Pro or Nuendo. If you want to go back, export your TayPE timeline as an AAF with the audio embedded and pick up where you left off.
+**Taype Comp adds a gate/expander and a selectable sidechain source.** Taype EQ and the channel EQ popup also get a dedicated Dynamics power button.
+**Drag stem folders straight onto the timeline.** Export stems from an MPC project and drop the folder into TayPE. It creates a named track for each file and lines the clips up at the drop point.
+**Drag a clip onto or below the Master track to create a new track.** TayPE moves the clip onto the new track in the same gesture.
+**Sonicism Vintage Vocoder is now bundled with TayPE.** Use it on vocals, drums or other audio in your reel.
+**Clip gain goes down to −144 dB.** The gain handle stays visible over the clip title, and stem splitting respects the gain you set.
+**Zoom stock plug-in editors independently** of TayPE’s main interface.
+**Recover takes cut short by a crash.** TayPE can recover interrupted recordings, and saves are more resilient to interrupted writes.
 """
 
-# Verbatim git log since the v1.5.1 stable release.
+# Verbatim git log since v1.5.2.
 git_log = """\
-ff8da653 Negotiate the MCP protocol version instead of sending an invented one
-d38b1c26 Align unstable release-site pointer with published updates
-0ef3635c Track taype-releases v1.5.1
+c6f96873 Align taype-releases for the 1.6.0 promotion
+c76e0692 Beta checkpoint v1.6.0b5
+00a47dfb Beta checkpoint v1.6.0b4
+b0f2116e Add TayPE Clown Juice social artwork
+405ecda3 Limit IP retention for update checks
+23fa928f Improved the update checker
+747eeab2 Log update feed HTTP failures
+93cfc480 Refine TayPE startup and add the update-check worker
+1a151aa7 Beta checkpoint v1.6.0b3
+f37a39e9 Repair core and lifecycle test evidence
+0df4fab3 Add the instrument block: several instruments per track
+39c01d02 Specify TayPE-led Ableton Link recording from MPC
+dc15f04f Restore MotorMix jog and switch to licence reminders
+fd27fb52 Scale stock editors and mixer visualisers proportionally
+69bb0d75 Add MCP tools for stem folders and AAF exchange
+2288f3ed Beta checkpoint v1.6.0b2
+e55fc61e Import stems on the timeline and dead-strip stock plug-ins
+03a1fe19 Repair core test contracts and timed UI probes
+40b99f3a Add AAF round trips and streamline Reel and timeline workflows
+740d6909 Keep clip gain visible and honour it in stem splitting
+87062ed1 Extend clip gain to -144 dB
+d3d8eae3 Add Vintage Vocoder AAX packaging, launch assets and the AAF spec
+696a8181 Review and fix the 14 translated catalogs line by line
+3bcf1c45 Head the keyboard cheat sheet with the RAW and TayPE logos
+5c7f7628 Add Init to companion effect preset menus
+7ba57d5a Hold the EQ popup's RTA between audio blocks
+71b9bb88 Keep section lines on wrapped names and save the keyboard cheat sheet as PDF
+6ab537f2 Bundle stock AAX plug-ins in the macOS installer
+5e95257d Make Delete and Backspace profile shortcuts and sort the editor by place
+19b683fc Implement the keybinding editor rulings and review fixes
+80991612 Centralise keybinding catalogue and profile ownership
+f10690b8 Add VST2 builds and selectable Vintage Vocoder installers
+f88ce238 Organise Vintage Vocoder artwork and YouTube assets
+e54d8337 Repair test contracts and retain UI failure evidence
+f6c73e19 Add Ruminant Audio Works branding to Vintage Vocoder About
+584808d9 Add cross-platform Vintage Vocoder packaging and release workflows
+fb0bafa0 Beta checkpoint v1.6.0b1
+e9a1519e Bundle Vintage Vocoder, add stock preset bars and preserve MIDI Out notes
+5d74ae20 Report lost External MIDI Out plug-in destinations and fix hardware clip MIDI
+46ca160b Play effect plug-ins from External MIDI Out in offline renders
+271f8bf2 Add relative and fine oscillator drags to Vintage Vocoder
+87b08331 List effect plug-ins in the External MIDI Out picker
+79d76167 Play effect plug-ins from External MIDI Out in realtime
+9c553026 Let External MIDI Out store an effect plug-in as its destination
+98b67f81 Give the clip-MIDI preview scheduler its own class
+c2724f99 Record which loaded plug-ins have a MIDI input of their own
+c1899de5 Cut the External MIDI Out to effect plug-ins spec back to the agreed decisions, and add its step plan
+2f76c2a8 Preserve transport warnings and use lightweight window observations
+8b75a0d1 Install the stock plug-ins for other DAWs from the PKG, ticked by default, with the version in the installer's title
+03139e67 Open Taype Comp's SIDE-CHAIN pop-up in front of the RAW badge, and close pop-ups when an editor locks
+51535252 Specify External MIDI Out to effect plug-ins and MCP plug-in state readback
+f17f99e5 Build the six stock plug-ins as Audio Units, and let Taype Comp choose its sidechain source
+571371fd Report a busy shared-image detach as a failed scenario instead of stopping the core lane
+3c203466 Offer each stock plug-in once, as TayPE's own copy, when copies are installed for other DAWs
+99901cd8 Lock the stock plug-ins' editors in other DAWs when the demo has ended, and give each a RAW badge About
+58f3eee4 Recover takes a crash cut off, and test that the user-folder move keeps every library
+d653690e Write files aside and rename them into place across the app
+7b41bab0 Add a standalone Vintage Vocoder installer
+9b391608 Convert four recovered Vintage Vocoder files to UTF-8
+d8238994 Test that a plug-in editor gesture during Record writes only its lane
+bf816dcf Write every config and state file whole, checked and durable
+158bc481 Restore Sonicism Vintage Vocoder as a MIDI-capable effect
+0bec5789 Give both licence tiers unrestricted use of the stock plug-ins in other DAWs
+6e6ad86c Move whole-file writes to AtomicTextFile and add the licence mechanics
+b06e3a40 Add a DYNAMICS power button to the EQ popup and Taype EQ
+bbcb720c Add the compressor gate and Clip Headroom, opening the 1.6.x stream
+b18ca984 Add Play/Stop Mode and let the stock VST3s run in other hosts
+d4817c79 Record an insert's Bypass from every Bypass button during automation Record
+afd7f216 Test where the arranger head is published when the tape moves without seek()
+552310da Fix the arranger playhead fence and hold Pause where it is pressed
+cd1f4fbc Specify the arranger playhead fence fix and record its decisions
+70b5af67 Specify MIDI sources for effect inserts and the VSTi instrument block
+bbc93106 Beta checkpoint v1.5.3b2
+4ef4100b Add MCP MIDI clip creation and .mid import, and check clip-creation failures
+87b1ad1c Beta checkpoint v1.5.3b1
+06640e77 Track taype-releases v1.5.2
+2f50a43f Refine v1.5.2b1 beta release notes
+6291dc41 Beta checkpoint v1.5.2b1
+87b88a32 Check the failed-load cleanup child's error instead of echoing it
+ec1021cf Add MotorMix send control in Pro Tools mode
+005f7806 Move send-level edits onto one model function
+02507192 Drive a virtual MotorMix in app-backed tests
+04c6ea52 Remove the MotorMix welcome
+e111753e Leave MotorMix fader touch out
+928ede9c Stop disabled plug-ins showing as not loaded
+27b0c4e0 Restore Personal and Commercial licence terms and reconcile test inventory
+af163181 Make LaForgé's true peak honest and stop its release pumping
 """

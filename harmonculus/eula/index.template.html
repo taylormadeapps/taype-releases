@@ -118,17 +118,6 @@ p {
     color: var(--muted);
 }
 
-.draft {
-    margin: 1.5rem 0 2.25rem;
-    padding: 0.9rem 1rem;
-    border-left: 3px solid var(--accent);
-    background: var(--panel);
-}
-
-.draft strong {
-    color: var(--text);
-}
-
 .site-footer nav {
     display: flex;
     flex-wrap: wrap;
@@ -152,8 +141,6 @@ p {
 
 <main class="frame" id="licence" tabindex="-1">
     <h1>{{eula.title}}</h1>
-    <p class="draft"><strong>{{eula.draft.title}}</strong>
-        {{eula.draft.description}}</p>
 
     <h2>{{eula.use.title}}</h2>
     <p>{{eula.use.install}}</p>

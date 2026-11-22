@@ -6,7 +6,15 @@ TayPE is a multitrack digital audio workstation for macOS built for musicians wh
 
 ## Download
 
+The [TayPE homepage](https://taype.ruminantaudioworks.com/) is the English
+introduction. The [product page](https://taype.ruminantaudioworks.com/product/)
+has the full walkthrough, language selector, pricing and download links.
+
 Grab the latest release from the [Releases page](https://github.com/taylormadeapps/taype-releases/releases).
+
+The website takes its displayed version and the matching **Release notes** link
+from the installer URL in `assets/site.js`. The existing release procedure
+updates that URL and the static installer links together.
 
 **Requirements:** macOS 12+ (Monterey or later). Apple Silicon native with Intel support. VST3 plugin hosting.
 
@@ -28,10 +36,9 @@ Vintage Vocoder is free for personal and commercial use without a TayPE licence.
 [Harmonculus](https://taype.ruminantaudioworks.com/harmonculus/) is an additive
 resynthesis instrument planned for Windows, Linux and macOS. Plug-in formats
 will vary by platform, with VST3, VST2, Audio Unit (AU) and AAX planned. The
-product page carries the beta status, the draft licence and a link to the
-Moonbase customer account area. It lists the £24 one-off early-access price,
-the £49 standard price and the free 14-day Moonbase trial. Buy and Download
-point to the release information on the page while the beta is in preparation.
+product page carries the alpha status, the draft licence and a link to the
+Moonbase customer account area. Buy and Download point to the release
+information on the page while the alpha is in preparation.
 
 Edit the templates and source locale under `harmonculus/`, then run
 `python3 scripts/render_harmonculus.py`. Run it with `--check` to verify the
