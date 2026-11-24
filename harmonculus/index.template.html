@@ -170,7 +170,7 @@
                     <div id="buy" class="release-option">
                         <h3>{{product.buy.title}}</h3>
                         <p>{{product.buy.description}}</p>
-                        <p>{{product.buy.platforms}}</p>
+                        <p>{{product.buy.platforms}} <a href="#activation">{{product.activation.jumpLink}}</a></p>
                         <a class="primary-link" href="https://ruminantaudioworks.moonbase.sh/buy/harmonculus">{{product.buy.button}}</a>
                     </div>
                     <div id="download" class="release-option">
@@ -191,6 +191,11 @@
                         </div>
                     </div>
                 </div>
+                <section id="activation" class="release-intro release-activation" aria-labelledby="activation-heading">
+                    <h3 id="activation-heading">{{product.activation.title}}</h3>
+                    <p>{{product.activation.online}}</p>
+                    <p>{{product.activation.offline}} <a href="https://ruminantaudioworks.moonbase.sh/activate">{{product.activation.offlineLink}}</a></p>
+                </section>
             </div>
         </section>
 

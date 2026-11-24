@@ -292,6 +292,12 @@ html.screenshot-viewer-open { overflow: hidden; }
 
 .release-grid { margin-top: 1.75rem; }
 
+.release-activation {
+    max-width: 72ch;
+    margin-block-start: 1.75rem;
+    scroll-margin-block-start: 1.5rem;
+}
+
 .release-option {
     display: flex;
     flex-direction: column;
