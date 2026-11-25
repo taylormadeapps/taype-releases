@@ -39,7 +39,7 @@
   "product.control.large": "Open full-size Control screenshot",
   "product.control.title": "Play the partials",
   "product.download.button": "Download for macOS",
-  "product.download.description": "Download Harmonculus 0.3.0 and try it free for 14 days.",
+  "product.download.description": "Download Harmonculus 0.4.0 and try it free for 14 days.",
   "product.download.linuxArm64": "Download for Linux (ARM64)",
   "product.download.linuxInstall": "On Linux, extract the archive and run bash install.sh from the extracted folder as the user who runs your DAW.",
   "product.download.linuxVerification": "Checksums and signatures",
