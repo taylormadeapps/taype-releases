@@ -34,6 +34,7 @@
             <nav aria-label="{{product.nav.label}}">
                 <a href="/ruminant-audio-works/#products">{{product.nav.products}}</a>
                 <a href="#from-the-vault">{{product.vault.title}}</a>
+                <a href="#kit-mode">{{product.kit.title}}</a>
                 <a href="#buy">{{product.buy.title}}</a>
                 <a href="#download">{{product.download.title}}</a>
                 <a class="account-link" href="https://account.ruminantaudioworks.com/">{{product.nav.account}}</a>
@@ -88,7 +89,6 @@
                     <div>
                         <h2 id="vault-heading">{{product.vault.title}}</h2>
                         <p class="vault-intro">{{product.vault.intro}}</p>
-                        <p class="vault-intro">{{product.vault.percussion}}</p>
                         <p class="vault-intro">{{product.vault.demos}}</p>
                     </div>
                     <figure id="preset-browser" class="vault-browser">
@@ -158,6 +158,89 @@
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section class="instrument kit-mode wrap" id="kit-mode" aria-labelledby="kit-mode-heading">
+            <div class="kit-header">
+                <div class="instrument-intro">
+                    <h2 id="kit-mode-heading">{{product.kit.title}}</h2>
+                    <p>{{product.kit.description}}</p>
+                    <p>{{product.kit.percussion.intro}} <strong>{{product.kit.percussion.sounds}}</strong>, {{product.kit.percussion.examples}}</p>
+                    <p class="vault-intro">{{product.kit.demos}}</p>
+                </div>
+                <figure class="kit-figure">
+                    <a class="screen-link" href="images/kit-editor.webp" data-screenshot aria-labelledby="kit-editor-link">
+                        <img class="screen" src="images/kit-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.kit.image}}">
+                        <span id="kit-editor-link">{{product.kit.large}}</span>
+                    </a>
+                </figure>
+            </div>
+            <ul class="vault-grid" role="list">
+                <li>
+                    <h3 id="kit-demo-london-studio-funk-pocket">{{product.kit.track.london_studio_funk_pocket}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.london_studio_funk_pocket}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-london-studio-funk-pocket">
+                        <source src="audio/kits/london-studio-funk-pocket.mp3" type="audio/mpeg">
+                        <a href="audio/kits/london-studio-funk-pocket.mp3" aria-describedby="kit-demo-london-studio-funk-pocket">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-dry-machine-house">{{product.kit.track.dry_machine_house}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.dry_machine_house}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-dry-machine-house">
+                        <source src="audio/kits/dry-machine-house.mp3" type="audio/mpeg">
+                        <a href="audio/kits/dry-machine-house.mp3" aria-describedby="kit-demo-dry-machine-house">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-log-drum-amapiano">{{product.kit.track.log_drum_amapiano}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.log_drum_amapiano}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-log-drum-amapiano">
+                        <source src="audio/kits/log-drum-amapiano.mp3" type="audio/mpeg">
+                        <a href="audio/kits/log-drum-amapiano.mp3" aria-describedby="kit-demo-log-drum-amapiano">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-sub-kick-trap">{{product.kit.track.sub_kick_trap}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.sub_kick_trap}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-sub-kick-trap">
+                        <source src="audio/kits/sub-kick-trap.mp3" type="audio/mpeg">
+                        <a href="audio/kits/sub-kick-trap.mp3" aria-describedby="kit-demo-sub-kick-trap">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-hand-drum-samba">{{product.kit.track.hand_drum_samba}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.hand_drum_samba}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-hand-drum-samba">
+                        <source src="audio/kits/hand-drum-samba.mp3" type="audio/mpeg">
+                        <a href="audio/kits/hand-drum-samba.mp3" aria-describedby="kit-demo-hand-drum-samba">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-rhythm-box-bossa">{{product.kit.track.rhythm_box_bossa}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.rhythm_box_bossa}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-rhythm-box-bossa">
+                        <source src="audio/kits/rhythm-box-bossa.mp3" type="audio/mpeg">
+                        <a href="audio/kits/rhythm-box-bossa.mp3" aria-describedby="kit-demo-rhythm-box-bossa">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-dusty-swing">{{product.kit.track.dusty_swing}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.dusty_swing}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-dusty-swing">
+                        <source src="audio/kits/dusty-swing.mp3" type="audio/mpeg">
+                        <a href="audio/kits/dusty-swing.mp3" aria-describedby="kit-demo-dusty-swing">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-industrial-metal">{{product.kit.track.industrial_metal}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.industrial_metal}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-industrial-metal">
+                        <source src="audio/kits/industrial-metal.mp3" type="audio/mpeg">
+                        <a href="audio/kits/industrial-metal.mp3" aria-describedby="kit-demo-industrial-metal">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+            </ul>
         </section>
 
         <section class="release" aria-labelledby="release-heading">

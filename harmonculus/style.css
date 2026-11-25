@@ -154,6 +154,8 @@ figcaption {
 
 .instrument { padding-block: clamp(3rem, 7vw, 6.75rem); }
 .instrument-intro { max-width: 47rem; margin-bottom: clamp(1.6rem, 4vw, 3rem); }
+.kit-mode { padding-block-start: 0; scroll-margin-block-start: 1.5rem; }
+.kit-mode .instrument-intro { margin-block-end: 0; }
 
 h2 {
     font-size: clamp(1.95rem, 3.7vw, 3.65rem);
@@ -228,7 +230,7 @@ html.screenshot-viewer-open { overflow: hidden; }
     border-top: 1px solid var(--line);
 }
 
-.vault-header {
+.vault-header, .kit-header {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
     align-items: start;
@@ -269,7 +271,13 @@ html.screenshot-viewer-open { overflow: hidden; }
     margin-top: 0.65rem;
 }
 
-.vault-browser {
+.kit-demo-kit {
+    margin-top: 0.2rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.vault-browser, .kit-figure {
     max-width: 24rem;
 }
 
@@ -278,7 +286,7 @@ html.screenshot-viewer-open { overflow: hidden; }
     text-align: start;
 }
 
-.vault-browser .screen-link span {
+.vault-browser .screen-link span, .kit-figure .screen-link span {
     display: block;
     margin-top: 0.4rem;
     font-size: 0.875rem;
@@ -383,9 +391,9 @@ main .taype-link {
         grid-template-areas: "copy" "action" "preview";
     }
 
-    .vault-header { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; }
-    .vault-browser { max-width: 18rem; }
-    .vault-browser .screen { max-width: 65vw; }
+    .vault-header, .kit-header { grid-template-columns: minmax(0, 1fr); row-gap: 1rem; }
+    .vault-browser, .kit-figure { max-width: 18rem; }
+    .vault-browser .screen, .kit-figure .screen { max-width: 65vw; }
 
     .hero-grid { grid-template-columns: 1fr; }
     .hero-copy { max-width: 38rem; }
