@@ -80,7 +80,7 @@ const locales = {
             "hero-manifesto-copy-1": "The DAW TayPE takes the familiar language of the analogue recording studio and rebuilds it for a digital world. The critical engineering decisions have been made ahead of time, so things sound alive straight out of the box. You can focus on making the record, not spelunking through panels and menus. Use TayPE alongside your existing DAW, or make the whole record here.",
             "hero-manifesto-copy-2": "TayPE takes an audio-first approach to software and hardware instruments, with the MIDI embedded in the audio clip, always close at hand should a quick do-over be required. And it’s designed to connect openly with other intelligent tools, rather than attempting to replace the human element.",
             "hero-cta": "Let's Roll",
-            "download-no-card": "No card required.",
+            "download-no-card": "No card or email signup required.",
             "email-hero-link": "On your phone? Email yourself the download link.",
             "email-download-summary": "On your phone? Email yourself the download link.",
             "email-hero-privacy": "RAW will not store your email address or add you to a mailing list.",
