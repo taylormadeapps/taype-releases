@@ -10,6 +10,8 @@ If TayPE shows **Saved, but the drive did not confirm it: a power cut could lose
 
 If a media file has been moved or deleted outside TayPE, saving still preserves the reel and its media reference. Restore the file to its original location to make the clip available again.
 
+The reel keeps complete plug-in settings, including full drum kits. If a saved plug-in state cannot be loaded, check **Restore Issues** for the affected track and insert. The saved state stays in the reel.
+
 When you quit while playback is running or paused, TayPE stops transport before it creates the session-end checkpoint.
 If TayPE reports that a reel save needs attention, it remains open with the current session available. Open **Tools > Session Log** for the exact cause; do not assume the reel has been lost.
 
