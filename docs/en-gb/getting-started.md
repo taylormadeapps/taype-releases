@@ -7,7 +7,7 @@ to see what changed in that version.
 On a phone, choose **On your phone? Email yourself the download link.** on
 TayPE’s landing or product page. Enter your address and choose **Send links**.
 The email takes you to the macOS download and explains the trustware evaluation.
-No card is required to try TayPE.
+No card or email signup is required to try TayPE.
 RAW will not store your address or subscribe you to a mailing list. You can request two emails per address per product, followed by a 24-hour cooldown for that product. The email option appears only in the mobile layout.
 
 TayPE opens into a working reel with a timeline, a transport, a selected track, and a channel strip. The aim is simple: get audio or MIDI onto tracks, shape it, and keep committing useful takes.
