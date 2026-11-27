@@ -48,7 +48,7 @@
   "product.download.title": "Download",
   "product.download.windows": "Download for Windows (x64)",
   "product.email.link": "On your phone? Email yourself the download links.",
-  "product.email.privacy": "RAW will not store your email address or add you to a mailing list. Resend processes delivery.",
+  "product.email.privacy": "RAW will not store your email address or add you to a mailing list.",
   "product.email.retry": "Try again",
   "product.email.loading": "Loading email form…",
   "product.email.error": "The email form couldn’t load. Try again, or use the download links below.",
