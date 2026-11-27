@@ -3016,13 +3016,22 @@ function getAffiliateRef(url = new URL(window.location.href)) {
     return AFFILIATE_REF_PATTERN.test(ref) ? ref : null;
 }
 
-function getAffiliateNavigationSearch() {
+function getLocaleNavigationSearch() {
+    const search = new URLSearchParams();
     const affiliateRef = getAffiliateRef();
-    return affiliateRef ? `?aff=${encodeURIComponent(affiliateRef)}` : "";
+    if (affiliateRef) search.set("aff", affiliateRef);
+    const incoming = new URL(window.location.href).searchParams;
+    if (incoming.get("utm_source") === "download_email") {
+        // Keep email attribution through the product's locale redirect. Its
+        // analytics owner validates values before sending anything to GA.
+        for (const field of ["utm_source", "utm_medium", "utm_campaign", "utm_content"])
+            for (const value of incoming.getAll(field)) search.append(field, value);
+    }
+    return search.size ? `?${search}` : "";
 }
 
 function navigateToLocale(locale, options = {}) {
-    const target = `${getSitePath(locale)}${getAffiliateNavigationSearch()}${window.location.hash || ""}`;
+    const target = `${getSitePath(locale)}${getLocaleNavigationSearch()}${window.location.hash || ""}`;
     if (options.replace) window.location.replace(target);
     else window.location.assign(target);
 }
