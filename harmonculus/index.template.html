@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/product-sections.css">
     <link rel="stylesheet" href="/assets/community.css">
     <script defer src="/assets/analytics-consent.js"></script>
+    <script defer src="https://raw-download-links.edgeware.workers.dev/form.js"></script>
     <script defer src="vault.js"></script>
     <script defer src="screenshot-viewer.js"></script>
 </head>
@@ -52,6 +53,10 @@
                     <p class="hero-description">{{product.hero.description}}</p>
                     <p class="hero-description"><strong>{{product.hero.trial}}</strong></p>
                     <a class="primary-link" href="#from-the-vault">{{product.hero.listen}} <span aria-hidden="true">↓</span></a>
+                    <div class="raw-email-prompt" data-raw-email-prompt hidden>
+                        <a class="raw-email-open" href="#email-download-links" data-raw-email-open>{{product.email.link}}</a>
+                        <p class="raw-email-privacy">{{product.email.privacy}}</p>
+                    </div>
                 </div>
                 <figure class="hero-figure">
                     <img class="screen" src="images/spectral-editor.webp" width="1440" height="1095" fetchpriority="high" alt="{{product.hero.image}}">
@@ -260,6 +265,11 @@
                     <div id="download" class="release-option">
                         <h3>{{product.download.title}}</h3>
                         <p>{{product.download.description}}</p>
+                        <details id="email-download-links" class="raw-email-details" data-raw-email-details data-raw-email-breakpoint="56rem" hidden>
+                            <summary>{{product.email.link}}</summary>
+                            <div data-raw-email-form data-loading="{{product.email.loading}}" data-retry="{{product.email.retry}}" data-error="{{product.email.error}}"></div>
+                        </details>
+                        <p class="raw-email-privacy" data-raw-email-prompt hidden>{{product.email.privacy}}</p>
                         <div class="platform-downloads">
                             <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/mac/latest">{{product.download.button}}</a>
                             <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.4.0/000e0c0e-4588-489f-83c2-8106b5a66acd">{{product.download.windows}}</a>
