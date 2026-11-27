@@ -16,7 +16,7 @@ for the download, compatibility details and installation guide.
 On a phone, choose **On your phone? Email yourself the download links.** on
 either the desktop or MPC product page, then enter your address and choose
 **Send links**. The email includes both versions’ download and setup pages.
-RAW will not store your address or subscribe you to a mailing list. Vintage Vocoder remains free with no trial activation.
+RAW will not store your address or subscribe you to a mailing list. You can request two emails per address per product, followed by a 24-hour cooldown for that product. Vintage Vocoder remains free with no trial activation.
 
 You can also reach it from the Vintage Vocoder button beside Explore TayPE on
 the [Ruminant Audio Works company page](https://taype.ruminantaudioworks.com/ruminant-audio-works/).
