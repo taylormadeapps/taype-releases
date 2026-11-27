@@ -37,11 +37,24 @@
         return url.origin === location.origin ? url.origin + url.pathname : url.origin;
     }
 
-    function startAnalytics() {
+    async function startAnalytics() {
         window[disableAnalytics] = false;
         if (tagStarted) {
             gtag("consent", "update", { analytics_storage: "granted" });
             return;
+        }
+
+        let campaign = null;
+        if (new URL(location.href).searchParams.get("utm_source") === "download_email") {
+            try {
+                const { downloadEmailCampaign } = await import("./download-email-attribution.js");
+                campaign = downloadEmailCampaign(location.href);
+            } catch (error) {
+                console.error("Download email attribution could not be loaded; analytics has not started.", error);
+                return;
+            }
+            // Consent can be withdrawn while the local module loads.
+            if (readChoice() !== "granted" || tagStarted) return;
         }
 
         tagStarted = true;
@@ -55,6 +68,7 @@
             cookie_update: false,
             page_location: location.origin + location.pathname,
             page_referrer: analyticsReferrer(),
+            ...campaign,
         });
         gtag("consent", "update", { analytics_storage: "granted" });
         gtag("js", new Date());
@@ -65,6 +79,9 @@
         tag.referrerPolicy = "origin";
         tag.addEventListener("error", () => console.warn("The Google Analytics container could not be loaded."));
         document.head.append(tag);
+        if (campaign) gtag("event", "download_email_return", {
+            send_to: measurementId, product: campaign.campaign_name, platform_page: "desktop",
+        });
     }
 
     function stopAnalytics() {
