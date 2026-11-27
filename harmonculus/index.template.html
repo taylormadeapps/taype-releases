@@ -34,6 +34,7 @@
             <nav aria-label="{{product.nav.label}}">
                 <a href="/ruminant-audio-works/#products">{{product.nav.products}}</a>
                 <a href="#from-the-vault">{{product.vault.title}}</a>
+                <a href="#kit-mode">{{product.kit.title}}</a>
                 <a href="#buy">{{product.buy.title}}</a>
                 <a href="#download">{{product.download.title}}</a>
                 <a class="account-link" href="https://account.ruminantaudioworks.com/">{{product.nav.account}}</a>
@@ -88,6 +89,7 @@
                     <div>
                         <h2 id="vault-heading">{{product.vault.title}}</h2>
                         <p class="vault-intro">{{product.vault.intro}}</p>
+                        <p class="vault-intro">{{product.vault.demos}}</p>
                     </div>
                     <figure id="preset-browser" class="vault-browser">
                         <figcaption>{{product.vault.browser.caption}}</figcaption>
@@ -158,6 +160,89 @@
             </div>
         </section>
 
+        <section class="instrument kit-mode wrap" id="kit-mode" aria-labelledby="kit-mode-heading">
+            <div class="kit-header">
+                <div class="instrument-intro">
+                    <h2 id="kit-mode-heading">{{product.kit.title}}</h2>
+                    <p>{{product.kit.description}}</p>
+                    <p>{{product.kit.percussion.intro}} <strong>{{product.kit.percussion.sounds}}</strong>, {{product.kit.percussion.examples}}</p>
+                    <p class="vault-intro">{{product.kit.demos}}</p>
+                </div>
+                <figure class="kit-figure">
+                    <a class="screen-link" href="images/kit-editor.webp" data-screenshot aria-labelledby="kit-editor-link">
+                        <img class="screen" src="images/kit-editor.webp" width="1440" height="1095" loading="lazy" decoding="async" alt="{{product.kit.image}}">
+                        <span id="kit-editor-link">{{product.kit.large}}</span>
+                    </a>
+                </figure>
+            </div>
+            <ul class="vault-grid" role="list">
+                <li>
+                    <h3 id="kit-demo-london-studio-funk-pocket">{{product.kit.track.london_studio_funk_pocket}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.london_studio_funk_pocket}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-london-studio-funk-pocket">
+                        <source src="audio/kits/london-studio-funk-pocket.mp3" type="audio/mpeg">
+                        <a href="audio/kits/london-studio-funk-pocket.mp3" aria-describedby="kit-demo-london-studio-funk-pocket">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-dry-machine-house">{{product.kit.track.dry_machine_house}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.dry_machine_house}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-dry-machine-house">
+                        <source src="audio/kits/dry-machine-house.mp3" type="audio/mpeg">
+                        <a href="audio/kits/dry-machine-house.mp3" aria-describedby="kit-demo-dry-machine-house">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-log-drum-amapiano">{{product.kit.track.log_drum_amapiano}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.log_drum_amapiano}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-log-drum-amapiano">
+                        <source src="audio/kits/log-drum-amapiano.mp3" type="audio/mpeg">
+                        <a href="audio/kits/log-drum-amapiano.mp3" aria-describedby="kit-demo-log-drum-amapiano">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-sub-kick-trap">{{product.kit.track.sub_kick_trap}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.sub_kick_trap}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-sub-kick-trap">
+                        <source src="audio/kits/sub-kick-trap.mp3" type="audio/mpeg">
+                        <a href="audio/kits/sub-kick-trap.mp3" aria-describedby="kit-demo-sub-kick-trap">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-hand-drum-samba">{{product.kit.track.hand_drum_samba}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.hand_drum_samba}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-hand-drum-samba">
+                        <source src="audio/kits/hand-drum-samba.mp3" type="audio/mpeg">
+                        <a href="audio/kits/hand-drum-samba.mp3" aria-describedby="kit-demo-hand-drum-samba">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-rhythm-box-bossa">{{product.kit.track.rhythm_box_bossa}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.rhythm_box_bossa}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-rhythm-box-bossa">
+                        <source src="audio/kits/rhythm-box-bossa.mp3" type="audio/mpeg">
+                        <a href="audio/kits/rhythm-box-bossa.mp3" aria-describedby="kit-demo-rhythm-box-bossa">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-dusty-swing">{{product.kit.track.dusty_swing}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.dusty_swing}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-dusty-swing">
+                        <source src="audio/kits/dusty-swing.mp3" type="audio/mpeg">
+                        <a href="audio/kits/dusty-swing.mp3" aria-describedby="kit-demo-dusty-swing">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+                <li>
+                    <h3 id="kit-demo-industrial-metal">{{product.kit.track.industrial_metal}}</h3>
+                    <p class="kit-demo-kit">{{product.kit.source.industrial_metal}}</p>
+                    <audio controls preload="none" aria-labelledby="kit-demo-industrial-metal">
+                        <source src="audio/kits/industrial-metal.mp3" type="audio/mpeg">
+                        <a href="audio/kits/industrial-metal.mp3" aria-describedby="kit-demo-industrial-metal">{{product.vault.fallback}}</a>
+                    </audio>
+                </li>
+            </ul>
+        </section>
+
         <section class="release" aria-labelledby="release-heading">
             <div class="wrap">
                 <div class="release-intro">
@@ -168,27 +253,34 @@
                     <div id="buy" class="release-option">
                         <h3>{{product.buy.title}}</h3>
                         <p>{{product.buy.description}}</p>
-                        <p>{{product.buy.platforms}}</p>
+                        <p>{{product.buy.platforms}} <a href="#activation">{{product.activation.jumpLink}}</a></p>
                         <a class="primary-link" href="https://ruminantaudioworks.moonbase.sh/buy/harmonculus">{{product.buy.button}}</a>
+                        <p><small>{{product.activation.attribution}} <a href="https://moonbase.sh/">{{product.activation.provider}}</a>.</small></p>
                     </div>
                     <div id="download" class="release-option">
                         <h3>{{product.download.title}}</h3>
                         <p>{{product.download.description}}</p>
                         <div class="platform-downloads">
                             <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/mac/latest">{{product.download.button}}</a>
-                            <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/823449c7-7b01-43a3-b7a8-0491e3ec7e42">{{product.download.windows}}</a>
+                            <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.4.0/000e0c0e-4588-489f-83c2-8106b5a66acd">{{product.download.windows}}</a>
                             <div class="linux-downloads">
                                 <div class="linux-download-links">
-                                    <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/b62cd56f-7896-4857-a550-4d7ac062f79c">{{product.download.linuxX64}}</a>
-                                    <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/64f058ae-29cf-4544-a826-9e9d2a6e752f">{{product.download.linuxArm64}}</a>
+                                    <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.4.0/0d6d31ed-03a7-4261-b545-cdfbad012c2a">{{product.download.linuxX64}}</a>
+                                    <a class="download-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.4.0/08832917-f037-4b79-83c8-97c595baebc8">{{product.download.linuxArm64}}</a>
                                 </div>
-                                <a class="linux-verification-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.2.0/6c29521c-9608-4c5e-a7b8-ec154227a721">{{product.download.linuxVerification}}</a>
+                                <a class="linux-verification-link" href="https://ruminantaudioworks.moonbase.sh/api/customer/inventory/products/harmonculus/download/0.4.0/058647e6-e9d6-47a1-aa3c-8f9a6017a1d0">{{product.download.linuxVerification}}</a>
                                 <p>{{product.download.linuxInstall}}</p>
                             </div>
                             <a class="download-link" href="https://mpc.ruminantaudioworks.com/harmonculus/">{{product.download.mpc}}</a>
                         </div>
                     </div>
                 </div>
+                <section id="activation" class="release-intro release-activation" aria-labelledby="activation-heading">
+                    <h3 id="activation-heading">{{product.activation.title}}</h3>
+                    <p>{{product.activation.online}}</p>
+                    <p>{{product.activation.offline}} <a href="https://ruminantaudioworks.moonbase.sh/activate">{{product.activation.offlineLink}}</a></p>
+                    <p><small>{{product.activation.attribution}} <a href="https://moonbase.sh/">{{product.activation.provider}}</a>.</small></p>
+                </section>
             </div>
         </section>
 
