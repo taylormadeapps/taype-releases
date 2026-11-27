@@ -19,6 +19,20 @@ When TayPE finds new or changed plug-ins, the splash screen scans them first, wi
 On the Welcome card, choose **Let's Roll** or click the close icon at the top
 left to continue with the current reel.
 
+## Your user folder
+
+TayPE keeps your reels, prints, presets, NAM profiles and other files in its
+user folder, shown as **TayPE User Folder** in **Preferences > General**. If
+TayPE cannot write to that folder when it starts, it uses a Taype folder inside
+your Music folder instead and tells you so. If it could not save that change to
+its settings, the message says so: TayPE tries again when you quit, and if it
+still cannot, it tries your original folder again the next time it starts.
+
+If TayPE cannot write to either folder, it shows **User Folder Unavailable**
+with the folders it tried. Check that the drive is connected and that you can
+write to it, then restart TayPE, or choose another folder with **Change...** in
+**Preferences > General**.
+
 ## Checking for updates
 
 Choose **Check for Updates** on Welcome or in **About TayPE**. If startup
