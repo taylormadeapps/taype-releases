@@ -335,6 +335,27 @@ footer {
     </tbody>
 </table>
 
+<h2 id="download-email">Emailing download links</h2>
+<p>
+    If you ask us to email you the Harmonculus desktop and MPC download links,
+    we use the address only to send that message. Ruminant Audio Works (RAW)
+    does not save the address in a database, mailing list, analytics event or
+    application log. The form does not subscribe you to marketing emails.
+    Cloudflare Turnstile verifies the request. To prevent abuse, temporary
+    rate limits use keyed hashes of the address and connection IP rather than
+    those values. We retain recipient and request hashes, timing and send status
+    for 24 hours to enforce a two-email allowance and a 24-hour cooldown after
+    the second accepted send. Expired records are removed automatically;
+    Cloudflare recovery copies may retain deleted records for up to 30 days.
+    Resend processes email delivery and may retain recipient and delivery records
+    under its own retention policy. The form loads Turnstile only when opened.
+</p>
+<p>
+    The emailed links contain generic campaign tags, with no email address or
+    personal identifier. With an existing analytics opt-in, the product pages
+    can count successful email requests and visits through those links.
+</p>
+
 <h2>Software update checks</h2>
 <p>
     When you check for updates or enable startup checks, TayPE sends its build
@@ -417,12 +438,12 @@ footer {
         <tr>
             <td>Resend</td>
             <td>Email address</td>
-            <td>Transactional email delivery (licence keys)</td>
+            <td>Transactional email delivery (licence keys and requested download links)</td>
         </tr>
         <tr>
             <td>Cloudflare</td>
             <td>IP address (transient, in server logs)</td>
-            <td>Worker hosting for crash report relay and licence signing</td>
+            <td>Worker hosting for crash report relay, licence signing and requested download emails; Turnstile bot protection</td>
         </tr>
         <tr>
             <td>Cloudflare</td>
