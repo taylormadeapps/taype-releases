@@ -4,6 +4,12 @@ The [TayPE download section](https://taype.ruminantaudioworks.com/product/#downl
 shows the current macOS version beneath **Download now**. Open **Release notes**
 to see what changed in that version.
 
+On a phone, choose **On your phone? Email yourself the download link.** on
+TayPE’s landing or product page. Enter your address and choose **Send links**.
+The email takes you to the macOS download and explains the trustware evaluation.
+No card is required to try TayPE.
+RAW will not store your address or subscribe you to a mailing list. The email option appears only in the mobile layout.
+
 TayPE opens into a working reel with a timeline, a transport, a selected track, and a channel strip. The aim is simple: get audio or MIDI onto tracks, shape it, and keep committing useful takes.
 
 During launch, the splash screen stays in front of TayPE while startup finishes, shows the current build label in full (for example, `v1.2.0 · beta 1`), and leaves the front when you switch to another app.

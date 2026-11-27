@@ -23,6 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/analytics-consent.css">
 <script defer src="/assets/analytics-consent.js"></script>
+<script defer src="https://raw-download-links.edgeware.workers.dev/form.js"></script>
 
 <style>
 /* ============================================================
@@ -1338,6 +1339,10 @@ with a different kind of DAW</p>
             Fewer modes, fewer menus, more music.
         </p>
     </div>
+    <div class="raw-email-prompt " data-raw-email-prompt lang="en-GB" hidden>
+        <a class="raw-email-open" href="#email-download-links" data-raw-email-open id="email-hero-link">On your phone? Email yourself the download link.</a>
+        <p class="raw-email-privacy" id="email-hero-privacy">RAW will not store your email address or add you to a mailing list.</p>
+      </div>
     <p class="gregism" id="gregism"></p>
 </section>
 
@@ -1503,6 +1508,12 @@ with a different kind of DAW</p>
     <p id="download-copy" style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
         Try TayPE with every feature from day one. After 90 days, TayPE stays fully functional and occasionally reminds you to buy a licence.
     </p>
+    <p id="download-no-card" lang="en-GB" style="color: var(--text-muted); margin-bottom: 1rem;">No card required.</p>
+    <details id="email-download-links" class="raw-email-details raw-email-centered" data-raw-email-details data-raw-email-product="taype" data-raw-email-breakpoint="640px" lang="en-GB" hidden>
+        <summary id="email-download-summary">On your phone? Email yourself the download link.</summary>
+        <div data-raw-email-form data-loading="Loading email form…" data-retry="Try again" data-error="The email form couldn’t load. Try again, or use the download links below."></div>
+      </details>
+      <p class="raw-email-privacy" data-raw-email-prompt id="email-download-privacy" lang="en-GB" hidden>RAW will not store your email address or add you to a mailing list.</p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 0.75rem;">
         <a id="download-apply" href="https://github.com/taylormadeapps/taype-releases/releases/download/v1.6.0/Taype-1.6.0.pkg" class="btn-primary" target="_blank" rel="noopener">
             Download now
