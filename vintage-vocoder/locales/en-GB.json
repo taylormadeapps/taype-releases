@@ -101,5 +101,10 @@
   "download.linux.x86_64": "Linux x86-64",
   "download.linux.install": "Extract the archive and copy the complete Vintage Vocoder FX.vst3 bundle into ~/.vst3/. Choose the architecture matching both your Linux system and your DAW.",
   "download.linux.checksums": "Linux SHA-256 checksums",
-  "download.linux.signatures": "OpenPGP signatures & verification"
+  "download.linux.signatures": "OpenPGP signatures & verification",
+  "email.link": "On your phone? Email yourself the download links.",
+  "email.privacy": "RAW will not store your email address or add you to a mailing list.",
+  "email.loading": "Loading email form…",
+  "email.retry": "Try again",
+  "email.error": "The email form couldn’t load. Try again, or use the download links below."
 }

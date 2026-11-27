@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="/assets/analytics-consent.css">
     <script src="/assets/landing-entry.js"></script>
     <script defer src="/assets/analytics-consent.js"></script>
+    <script defer src="https://raw-download-links.edgeware.workers.dev/form.js"></script>
 </head>
 <body>
 <main id="taype-landing">
@@ -46,6 +47,10 @@
     <div class="session-photo">
       <img src="/assets/img/campaign/taype-studio-960.webp" srcset="/assets/img/campaign/taype-studio-640.webp 640w, /assets/img/campaign/taype-studio-960.webp 960w, /assets/img/campaign/taype-studio-1254.webp 1254w" sizes="(min-width: 581px) and (any-hover: hover) min(100vw, 72rem, max(20rem, 100vh)), min(100vw, 72rem)" fetchpriority="high" width="1254" height="1254" alt="Four musicians in a recording studio, with a laughing guitarist in the foreground. Below them are the TayPE tape-reel icon, the TayPE wordmark with “Old Skool. New Tricks.” and the Ruminant Audio Works badge.">
     </div>
+    <div class="raw-email-prompt session-email-prompt" data-raw-email-prompt lang="en-GB" hidden>
+        <a class="raw-email-open" href="#email-download-links" data-raw-email-open>On your phone? Email yourself the download link.</a>
+        <p class="raw-email-privacy">RAW will not store your email address or add you to a mailing list.</p>
+      </div>
   </header>
   <div class="session-content">
     <section class="session-gallery" aria-labelledby="taype-gallery-heading">
@@ -112,13 +117,18 @@
           <li>No phone home</li>
           <li>Nothing locks your sessions</li>
         </ul>
-        <p>Try TayPE on a real session. You get the full app from day one. After 90 days, every feature keeps working and you’ll get the occasional reminder to buy a licence.</p>
+        <p>Try TayPE on a real session. You get the full app from day one. No card required. After 90 days, every feature keeps working and you’ll get the occasional reminder to buy a licence.</p>
         <p>If TayPE earns a place in your studio, buy a perpetual licence to support its development.</p>
       </section>
       <div class="session-actions">
         <a class="session-action session-action-primary" href="/product/#download">Try TayPE now</a>
         <a class="session-action" href="/product/">Explore further</a>
       </div>
+      <details id="email-download-links" class="raw-email-details" data-raw-email-details data-raw-email-product="taype" data-raw-email-breakpoint="580px" lang="en-GB" hidden>
+        <summary>On your phone? Email yourself the download link.</summary>
+        <div data-raw-email-form data-loading="Loading email form…" data-retry="Try again" data-error="The email form couldn’t load. Try again, or use the download links below."></div>
+      </details>
+      <p class="raw-email-privacy" data-raw-email-prompt lang="en-GB" hidden>RAW will not store your email address or add you to a mailing list.</p>
     </div>
   </div>
 </main>

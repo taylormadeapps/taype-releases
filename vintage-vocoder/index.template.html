@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="/assets/community.css">
 <link rel="stylesheet" href="/assets/analytics-consent.css">
 <script defer src="/assets/analytics-consent.js"></script>
+<script defer src="https://raw-download-links.edgeware.workers.dev/form.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">{{skip}}</a>
@@ -53,6 +54,10 @@
                 <p class="hero-copy">{{hero.copy}}</p>
                 <a class="btn btn-primary" href="#download">{{hero.download}} <span aria-hidden="true">↓</span></a>
                 <p class="free-note">{{hero.free}}</p>
+                <div class="raw-email-prompt " data-raw-email-prompt lang="en-GB" hidden>
+        <a class="raw-email-open" href="#email-download-links" data-raw-email-open>{{email.link}}</a>
+        <p class="raw-email-privacy">{{email.privacy}}</p>
+      </div>
             </div>
         </div>
         <p class="platform-note">{{hero.platform}}</p>
@@ -140,6 +145,11 @@
             <p class="micro-heading">{{download.eyebrow}}</p>
             <h2>{{download.title}}</h2>
             <p class="download-copy">{{download.copy}}</p>
+            <details id="email-download-links" class="raw-email-details raw-email-centered" data-raw-email-details data-raw-email-product="vintage-vocoder" data-raw-email-breakpoint="680px" lang="en-GB" hidden>
+        <summary>{{email.link}}</summary>
+        <div data-raw-email-form data-loading="{{email.loading}}" data-retry="{{email.retry}}" data-error="{{email.error}}"></div>
+      </details>
+      <p class="raw-email-privacy" data-raw-email-prompt lang="en-GB" hidden>{{email.privacy}}</p>
             <div class="macos-download" aria-labelledby="macos-download-heading">
                 <h3 id="macos-download-heading">{{download.macos.title}}</h3>
                 <a id="package-download" class="btn btn-primary" href="{{release.download_url}}">{{download.button}} <span aria-hidden="true">↓</span></a>

@@ -76,6 +76,8 @@ body > footer a {
   --hero-copy-size: 100vw;
   background: var(--hero-shadow);
 }
+#taype-landing .session-email-prompt { padding: 0 var(--gutter) 1.25rem; }
+#taype-landing .session-closing .raw-email-details { margin-top: 0; }
 #taype-landing .session-tagline {
   position: relative;
   z-index: 1;
