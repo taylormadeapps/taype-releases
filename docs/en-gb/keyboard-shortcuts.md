@@ -113,6 +113,10 @@ quit process directly.
 
 ### Editing
 
+On a Mac laptop, the key marked Delete is Backspace (`⌫`). Press `Fn+⌫` for
+Forward Delete. The tables below show Default. Industry Standard Bruh uses
+Forward Delete for deletion and Backspace for disable, mute or archive.
+
 Duplicate in the Edit menu follows the same window focus as its shortcut:
 selected notes in the MIDI editor, or selected clips and automation points in
 the arranger. It is available only while that window has something selected.
@@ -125,15 +129,16 @@ front window they act on its notes; otherwise they act in the arranger. Cut,
 Copy, Paste and Split at Head act on the notes even when you last clicked the
 controller lane. Select All, like Cmd+A, selects the notes in the open MIDI
 editor, or the controller lane's points when you last clicked the lane. In the
-MIDI editor, Delete deletes the selected notes and Backspace mutes or unmutes
-them, or whichever keys your profile gives Delete Clip and Toggle Clip Disable.
+MIDI editor, the Default profile uses Backspace to delete selected notes and
+Forward Delete to mute or unmute them. These actions follow the keys your
+profile gives Delete Clip and Toggle Clip Disable.
 When you last clicked the controller lane, both keys delete its selected
 points instead. With nothing selected in the MIDI editor, both keys do
 nothing, so they never touch your arranger clips, and both menu items are
 greyed out. When the arranger is the front window, both keys and both menu
-items act there: Delete deletes the selected automation points in Automation
-View, or the selected clips otherwise, and Backspace disables or enables the
-selected clips. While the MIDI editor shows a clip on an archived track, or
+items act there. In Default, Backspace deletes selected automation points in
+Automation View, or selected clips otherwise. Forward Delete disables or
+enables selected clips. While the MIDI editor shows a clip on an archived track, or
 while TayPE is recording, the editor ignores editing keys, so Cut, Paste,
 Duplicate, Split at Head, Delete Clip and Toggle Clip Disable are greyed out
 there. Copy and Select All still work. While a MIDI editor is open, Undo and
@@ -155,8 +160,8 @@ and Cmd+Shift+Z do.
 | Offline bounce selected clips to stem | B |
 | Bounce selected clips to external WAV | Option+B |
 | Rerender MIDI clips through the current instrument | H |
-| Disable selected clips | Backspace |
-| Delete selected clips | Delete |
+| Disable selected clips | Forward Delete |
+| Delete selected clips | Backspace |
 | Cut / copy / paste selected clips or automation points | Cmd+X / Cmd+C / Cmd+V |
 
 ### Tracks
@@ -169,8 +174,8 @@ and Cmd+Shift+Z do.
 | Duplicate selected track with clips | Option+D |
 | Rerender every MIDI clip on the selected tracks | Cmd+Shift+H |
 | Offline bounce selected tracks to stem | Cmd+B |
-| Archive selected track | Cmd+Backspace |
-| Delete selected track | Cmd+Delete |
+| Archive selected track | Cmd+Forward Delete |
+| Delete selected track | Cmd+Backspace |
 | Move selected track up / down | Cmd+Option+Up / Cmd+Option+Down |
 | Toggle grouped track controls | Cmd+G |
 

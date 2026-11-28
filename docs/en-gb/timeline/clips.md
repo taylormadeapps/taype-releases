@@ -142,6 +142,13 @@ the editor's own Quantise grid. Click it to follow the arranger's grid. The rule
 icon turns yellow, like the Zoom and Follow links. These are view preferences
 that leave the MIDI draft clean.
 
+Press a piano key to audition its pitch. The key lights up while held.
+Right-click a key to select only the notes at that pitch. Cmd-right-click adds
+all notes at that pitch to the selection, or removes them if they're all
+selected. Notes at other pitches keep their selection state. To select only
+notes in a pitch range, right-click the first key, then Shift-right-click the
+other end. Both end pitches are included.
+
 While the MIDI editor is open, playback follows the notes currently shown in
 the piano roll. Starting or seeking into the middle of a held note sounds it
 immediately for its remaining length. At a loop or clip boundary, TayPE ends
@@ -150,23 +157,31 @@ notes cleanly; it does not reset the whole instrument and lose the first note.
 Closing the MIDI editor ends its currently sounding audition and playback
 notes before returning to the rendered clip preview.
 
-In the MIDI editor, click an existing note to select it, or click empty
-piano-roll space to clear any existing note selection and add an unselected
+Click an unselected note to select that note alone. Clicking a selected note
+keeps the selection. Cmd-click adds or removes the clicked note. Click empty
+piano-roll space to clear the selection and add an unselected
 note at the active editing rail at or immediately before the pointer in the
 same gesture; it never jumps to the following rail. That rail comes from the
 selected straight, triplet, or hardware Quantise grid by default, or from the
-arranger grid when Quantise Grid is off. Dragging empty space still marquee-selects.
+arranger grid when Quantise Grid is off. Drag from empty space to select the
+notes the box touches.
 Double-clicking empty space leaves that single new note in place and consumes
 the second click without moving the playhead, while double-clicking an existing
 note deletes it. Right-clicking empty space moves the playhead without changing
-note selection; right-dragging a note still edits velocity.
-Backspace follows the arranger's mute behaviour for selected notes: if the
+note selection. Drag a selected note to move the selection, drag its edge to
+resize the selected notes that can be resized, or right-drag up or down to
+change velocity for the selection. Starting on an unselected note selects
+and edits that note alone. Cmd-scroll zooms time, and Option-scroll zooms pitch.
+In Default, Forward Delete mutes or unmutes selected notes. If the
 selection contains any audible note, it mutes the whole selection; if every
 selected note is already muted, it unmutes them all. Muted notes stay visible,
 selectable, and editable with a dimmed treatment, but do not audition, play, or
-render. The forward Delete key permanently removes selected notes. Both keys
-follow your keybinding profile: if it moves Delete Clip or Toggle Clip Disable
-to other keys, those keys delete and mute notes here instead. With no
+render. Backspace deletes selected notes. Use `\` in Default to split at the
+playhead. It splits selected notes crossing the playhead, or any notes there
+when the selection is empty. The piano-roll help shows the keys for Delete,
+Mute and Split from the active profile, plus `L` for Legato. Legato applies
+to the selection, or to all notes when none are selected. The profile bindings
+come from Delete Clip, Toggle Clip Disable, and Split at Head. With no
 notes selected, Delete and Backspace do nothing in the piano roll and never
 reach your arranger clips. Mute state survives Commit and reopening the editor, and
 is preserved by copy, paste, and duplicate.
