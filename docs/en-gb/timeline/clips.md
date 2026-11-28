@@ -137,9 +137,10 @@ the visible pitch order. **Zoom Link** defaults on, sharing horizontal zoom with
 the arranger; turn it off to keep and remember an independent MIDI zoom.
 **Follow Link** defaults on, using the arranger's Follow setting; detached means
 the MIDI editor stays still while arranger Follow continues normally.
-**Quantise Grid** defaults on; turn it off when ordinary note editing should use
-the arranger's exact current grid instead. These are view preferences and do
-not make the MIDI draft dirty.
+**Quantise Grid** defaults on. The muted cell-grid icon means note editing uses
+the editor's own Quantise grid. Click it to follow the arranger's grid. The ruler
+icon turns yellow, like the Zoom and Follow links. These are view preferences
+that leave the MIDI draft clean.
 
 While the MIDI editor is open, playback follows the notes currently shown in
 the piano roll. Starting or seeking into the middle of a held note sounds it
@@ -239,15 +240,16 @@ the selected Quantise value. With Snap enabled, the grid selected by Quantise
 Grid controls note entry, movement, resizing, nudging, duplicate placement, and
 editor seeks. Turning Quantise Grid off does not change
 the grid used by the explicit Quantise action.
-The crotchet button immediately before the quantise menu switches new-note
-length from that remembered default to the quantise cell beneath the pointer.
-It starts off and remembers its state while TayPE remains open, even if you
-close and reopen the MIDI editor. With the crotchet on and Snap enabled, a new
+The note-length button immediately before the quantise menu shows a note when
+off and a bass drum when on. It switches new-note length from that remembered
+default to the quantise cell beneath the pointer. It starts off and remembers
+its state while TayPE remains open, even if you close and reopen the MIDI
+editor. With the button on and Snap enabled, a new
 note fills the cell from the preceding quantise line to the following line,
 including uneven hardware-groove cells. With Snap off, the note starts exactly
 where you click and uses the selected straight note value. Changing the
-quantise menu still updates the remembered default length whether the crotchet
-is on or off. While arranger-grid editing is selected the crotchet is disabled
+quantise menu still updates the remembered default length whether the button
+is on or off. While arranger-grid editing is selected the button is disabled
 and has no effect, but its requested state is retained and returns when
 Quantise Grid is switched on again.
 Relative snap preserves a moved or resized note edge's original offset from that
@@ -256,7 +258,7 @@ Dragging a note's left or right edge can shorten it to a fixed 1 ms minimum.
 The left edge keeps the end where it is; the right edge keeps the start. This
 safety floor does not change with the quantise value, remembered entry length,
 or Snap setting.
-The footer presents the crotchet, division, Strength, and Capture settings
+The footer presents the note-length toggle, division, Strength, and Capture settings
 before the Quantise action. Capture follows the midpoint between adjacent
 timing lines, so 100% reaches every note even across irregular hardware-groove
 spacing. The wider division menu also offers straight triplets and captured
